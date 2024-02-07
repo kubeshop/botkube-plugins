@@ -3,9 +3,9 @@ package output
 import (
 	"fmt"
 
-	"github.com/kubeshop/botkube/internal/executor/x"
-	"github.com/kubeshop/botkube/internal/executor/x/state"
-	"github.com/kubeshop/botkube/internal/executor/x/template"
+	"github.com/kubeshop/botkube-cloud-plugins/internal/executor/x"
+	"github.com/kubeshop/botkube-cloud-plugins/internal/executor/x/state"
+	"github.com/kubeshop/botkube-cloud-plugins/internal/executor/x/template"
 	"github.com/kubeshop/botkube/pkg/api"
 	"github.com/kubeshop/botkube/pkg/mathx"
 )
