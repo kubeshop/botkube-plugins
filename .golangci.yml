@@ -1,0 +1,41 @@
+run:
+  tests: true
+issues:
+  exclude-use-default: false
+  exclude:
+    # EXC0001 errcheck: source: https://github.com/kubernetes-sigs/controller-runtime/blob/master/.golangci.yml#L94
+    - Error return value of .((os\.)?std(out|err)\..*|.*Close|.*Flush|os\.Remove(All)?|.*print(f|ln)?|os\.(Un)?Setenv). is not checked
+    # G505: Blocklisted import crypto/sha1: weak cryptographic primitive
+    # This is used just for hashing in ArgoCD plugin
+    - G505
+linters:
+  disable-all: true
+  enable:
+    - errcheck
+    - gosimple
+    - govet
+    - ineffassign
+    - staticcheck
+    - typecheck
+    - unused
+    - revive
+    - gofmt
+    - misspell
+    - gochecknoinits
+    - unparam
+    - exportloopref
+    - gosec
+    - goimports
+    - whitespace
+    - bodyclose
+    - gocyclo
+
+  fast: false
+
+linters-settings:
+  revive:
+    rules:
+      # Disable warns about capitalized and ended with punctuation error messages
+      # https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#error-strings
+      - name: error-strings
+        disabled: true
