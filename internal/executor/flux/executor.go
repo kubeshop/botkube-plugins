@@ -7,10 +7,10 @@ import (
 
 	"github.com/allegro/bigcache/v3"
 
-	"github.com/kubeshop/botkube/internal/executor/flux/commands"
-	"github.com/kubeshop/botkube/internal/executor/x"
-	"github.com/kubeshop/botkube/internal/executor/x/output"
-	"github.com/kubeshop/botkube/internal/executor/x/state"
+	"github.com/kubeshop/botkube-cloud-plugins/internal/executor/flux/commands"
+	"github.com/kubeshop/botkube-cloud-plugins/internal/executor/x"
+	"github.com/kubeshop/botkube-cloud-plugins/internal/executor/x/output"
+	"github.com/kubeshop/botkube-cloud-plugins/internal/executor/x/state"
 	"github.com/kubeshop/botkube/pkg/api"
 	"github.com/kubeshop/botkube/pkg/api/executor"
 	"github.com/kubeshop/botkube/pkg/loggerx"

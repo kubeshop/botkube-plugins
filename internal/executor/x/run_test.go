@@ -6,13 +6,14 @@ import (
 	"path/filepath"
 	"testing"
 
+	"github.com/kubeshop/botkube/pkg/pluginx"
+
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/kubeshop/botkube/internal/executor/x/getter"
-	"github.com/kubeshop/botkube/internal/executor/x/state"
-	"github.com/kubeshop/botkube/internal/executor/x/template"
-	"github.com/kubeshop/botkube/internal/plugin"
+	"github.com/kubeshop/botkube-cloud-plugins/internal/executor/x/getter"
+	"github.com/kubeshop/botkube-cloud-plugins/internal/executor/x/state"
+	"github.com/kubeshop/botkube-cloud-plugins/internal/executor/x/template"
 	"github.com/kubeshop/botkube/pkg/api"
 	"github.com/kubeshop/botkube/pkg/config"
 	"github.com/kubeshop/botkube/pkg/loggerx"
@@ -76,7 +77,7 @@ func TestRunnerNoExecuteTemplate(t *testing.T) {
 				Ref: filepath.Join("./testdata/", t.Name()),
 			},
 		},
-		TmpDir: plugin.TmpDir(t.TempDir()),
+		TmpDir: pluginx.TmpDir(t.TempDir()),
 		Logger: config.Logger{},
 	}
 

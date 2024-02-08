@@ -3,8 +3,9 @@ package x
 import (
 	_ "embed"
 
-	"github.com/kubeshop/botkube/internal/executor/x/getter"
-	"github.com/kubeshop/botkube/internal/plugin"
+	"github.com/kubeshop/botkube/pkg/pluginx"
+
+	"github.com/kubeshop/botkube-cloud-plugins/internal/executor/x/getter"
 	"github.com/kubeshop/botkube/pkg/api"
 	"github.com/kubeshop/botkube/pkg/config"
 )
@@ -20,7 +21,7 @@ type Config struct {
 	Logger    config.Logger
 
 	// Fields not exposed to the user in the JSON schema
-	TmpDir plugin.TmpDir `yaml:"tmpDir"`
+	TmpDir pluginx.TmpDir `yaml:"tmpDir"`
 }
 
 // GetPluginDependencies returns exec plugin dependencies.

@@ -5,7 +5,7 @@ import (
 	_ "embed"
 	"fmt"
 
-	"github.com/kubeshop/botkube/internal/source/github_events/gh"
+	"github.com/kubeshop/botkube-cloud-plugins/internal/source/github_events/gh"
 	"github.com/kubeshop/botkube/pkg/api"
 	"github.com/kubeshop/botkube/pkg/api/source"
 	"github.com/kubeshop/botkube/pkg/loggerx"

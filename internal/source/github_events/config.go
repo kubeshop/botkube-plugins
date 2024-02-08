@@ -6,8 +6,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/kubeshop/botkube/internal/source/github_events/gh"
-	"github.com/kubeshop/botkube/internal/source/github_events/templates"
+	"github.com/kubeshop/botkube-cloud-plugins/internal/source/github_events/gh"
+	"github.com/kubeshop/botkube-cloud-plugins/internal/source/github_events/templates"
 	"github.com/kubeshop/botkube/pkg/api/source"
 	"github.com/kubeshop/botkube/pkg/config"
 	"github.com/kubeshop/botkube/pkg/pluginx"
