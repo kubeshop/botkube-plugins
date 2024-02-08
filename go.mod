@@ -23,7 +23,7 @@ require (
 	github.com/hashicorp/go-plugin v1.4.10
 	github.com/huandu/xstrings v1.4.0
 	github.com/keptn/go-utils v0.20.4
-	github.com/kubeshop/botkube v0.0.0-00010101000000-000000000000
+	github.com/kubeshop/botkube v0.13.1-0.20240208094725-f6ec67a58bef
 	github.com/muesli/reflow v0.3.0
 	github.com/olekukonko/tablewriter v0.0.5
 	github.com/prometheus/client_golang v1.16.0
@@ -188,5 +188,3 @@ require (
 	sigs.k8s.io/kustomize/kyaml v0.14.3-0.20230601165947-6ce0bf390ce3 // indirect
 	sigs.k8s.io/structured-merge-diff/v4 v4.2.3 // indirect
 )
-
-replace github.com/kubeshop/botkube => github.com/pkosiec/botkube v0.12.5-0.20240207161755-ff72f98c8f6c
