@@ -4,6 +4,7 @@ import (
 	"context"
 	_ "embed"
 	"fmt"
+	"github.com/kubeshop/botkube-cloud-plugins/internal/executor/authorized"
 	"os"
 
 	"github.com/alexflint/go-arg"
@@ -55,11 +56,12 @@ type Executor struct {
 }
 
 // NewExecutor returns a new Executor instance.
-func NewExecutor(ver string) *Executor {
-	return &Executor{
+func NewExecutor(ver string) executor.Executor {
+	exec := &Executor{
 		pluginVersion:  ver,
 		executeCommand: pluginx.ExecuteCommand,
 	}
+	return authorized.NewExecutor(exec)
 }
 
 // Metadata returns details about Helm plugin.

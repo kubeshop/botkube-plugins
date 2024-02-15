@@ -7,6 +7,8 @@ import (
 
 	"github.com/allegro/bigcache/v3"
 
+	"github.com/kubeshop/botkube-cloud-plugins/internal/executor/authorized"
+
 	"github.com/kubeshop/botkube-cloud-plugins/internal/executor/flux/commands"
 	"github.com/kubeshop/botkube-cloud-plugins/internal/executor/x"
 	"github.com/kubeshop/botkube-cloud-plugins/internal/executor/x/output"
@@ -35,12 +37,13 @@ type Executor struct {
 }
 
 // NewExecutor returns a new Executor instance.
-func NewExecutor(cache *bigcache.BigCache, ver string) *Executor {
+func NewExecutor(cache *bigcache.BigCache, ver string) executor.Executor {
 	x.BuiltinCmdPrefix = "" // we don't need them
-	return &Executor{
+	exec := &Executor{
 		pluginVersion: ver,
 		cache:         cache,
 	}
+	return authorized.NewExecutor(exec)
 }
 
 // Metadata returns details about the Flux plugin.

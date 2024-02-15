@@ -4,6 +4,7 @@ import (
 	"github.com/hashicorp/go-plugin"
 
 	"github.com/kubeshop/botkube-cloud-plugins/internal/executor/helm"
+
 	"github.com/kubeshop/botkube/pkg/api/executor"
 )
 
