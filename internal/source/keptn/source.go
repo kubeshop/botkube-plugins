@@ -8,6 +8,7 @@ import (
 
 	"github.com/sirupsen/logrus"
 
+	"github.com/kubeshop/botkube-cloud-plugins/internal/source/authorized"
 	"github.com/kubeshop/botkube/pkg/api"
 	"github.com/kubeshop/botkube/pkg/api/source"
 	"github.com/kubeshop/botkube/pkg/loggerx"
@@ -37,10 +38,11 @@ type Source struct {
 }
 
 // NewSource returns a new instance of Source.
-func NewSource(version string) *Source {
-	return &Source{
+func NewSource(version string) source.Source {
+	src := &Source{
 		pluginVersion: version,
 	}
+	return authorized.NewSource(src)
 }
 
 // Stream streams Keptn events

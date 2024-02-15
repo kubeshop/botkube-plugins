@@ -5,6 +5,7 @@ import (
 	_ "embed"
 	"fmt"
 
+	"github.com/kubeshop/botkube-cloud-plugins/internal/source/authorized"
 	"github.com/kubeshop/botkube-cloud-plugins/internal/source/github_events/gh"
 	"github.com/kubeshop/botkube/pkg/api"
 	"github.com/kubeshop/botkube/pkg/api/source"
@@ -33,10 +34,11 @@ type Source struct {
 }
 
 // NewSource returns a new instance of Source.
-func NewSource(version string) *Source {
-	return &Source{
+func NewSource(version string) source.Source {
+	src := &Source{
 		pluginVersion: version,
 	}
+	return authorized.NewSource(src)
 }
 
 // Stream streams GitHub events.

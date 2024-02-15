@@ -13,6 +13,7 @@ import (
 	"k8s.io/client-go/dynamic"
 	"k8s.io/client-go/tools/clientcmd"
 
+	"github.com/kubeshop/botkube-cloud-plugins/internal/source/authorized"
 	"github.com/kubeshop/botkube/pkg/api"
 	"github.com/kubeshop/botkube/pkg/api/source"
 	"github.com/kubeshop/botkube/pkg/config"
@@ -56,11 +57,12 @@ type Source struct {
 }
 
 // NewSource returns a new instance of Source.
-func NewSource(version string) *Source {
-	return &Source{
+func NewSource(version string) source.Source {
+	src := &Source{
 		pluginVersion: version,
 		cfgs:          sync.Map{},
 	}
+	return authorized.NewSource(src)
 }
 
 type subscription struct {

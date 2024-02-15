@@ -13,6 +13,8 @@ import (
 	"github.com/sirupsen/logrus"
 	stringsutil "k8s.io/utils/strings"
 
+	"github.com/kubeshop/botkube-cloud-plugins/internal/executor/authorized"
+
 	"github.com/kubeshop/botkube/pkg/api"
 	"github.com/kubeshop/botkube/pkg/api/executor"
 	"github.com/kubeshop/botkube/pkg/config"
@@ -53,10 +55,11 @@ type Executor struct {
 }
 
 // NewExecutor returns a new Executor instance.
-func NewExecutor(ver string) *Executor {
-	return &Executor{
+func NewExecutor(ver string) executor.Executor {
+	exec := &Executor{
 		pluginVersion: ver,
 	}
+	return authorized.NewExecutor(exec)
 }
 
 // Metadata returns details about the Doctor plugin.
