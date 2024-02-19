@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	"github.com/kubeshop/botkube/pkg/formatx"
-	"github.com/kubeshop/botkube/pkg/pluginx"
+	pluginx "github.com/kubeshop/botkube/pkg/plugin"
 )
 
 // deleteConfirmPhase represent a confirmation phase for deletion. Taken from flux: v2.0.1.

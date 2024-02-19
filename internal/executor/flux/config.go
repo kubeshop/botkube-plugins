@@ -2,7 +2,7 @@ package flux
 
 import (
 	"github.com/kubeshop/botkube/pkg/config"
-	"github.com/kubeshop/botkube/pkg/pluginx"
+	pluginx "github.com/kubeshop/botkube/pkg/plugin"
 )
 
 // Config holds Flux executor configuration.

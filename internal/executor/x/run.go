@@ -12,7 +12,7 @@ import (
 	"github.com/kubeshop/botkube-cloud-plugins/internal/executor/x/template"
 	"github.com/kubeshop/botkube/pkg/api"
 	"github.com/kubeshop/botkube/pkg/api/executor"
-	"github.com/kubeshop/botkube/pkg/pluginx"
+	pluginx "github.com/kubeshop/botkube/pkg/plugin"
 )
 
 // Runner runs command and parse its output if needed.

@@ -3,7 +3,7 @@ package x
 import (
 	_ "embed"
 
-	"github.com/kubeshop/botkube/pkg/pluginx"
+	pluginx "github.com/kubeshop/botkube/pkg/plugin"
 
 	"github.com/kubeshop/botkube-cloud-plugins/internal/executor/x/getter"
 	"github.com/kubeshop/botkube/pkg/api"

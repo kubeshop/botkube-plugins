@@ -5,6 +5,21 @@ before:
     - go mod download
 
 builds:
+  - id: ai-face
+    main: cmd/executor/ai-face/main.go
+    binary: executor_ai-face_{{ .Os }}_{{ .Arch }}
+
+    no_unique_dist_dir: true
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    goarm:
+      - 7
   - id: doctor
     main: cmd/executor/doctor/main.go
     binary: executor_doctor_{{ .Os }}_{{ .Arch }}
@@ -95,6 +110,21 @@ builds:
       - arm64
     goarm:
       - 7
+  - id: ai-brain
+    main: cmd/source/ai-brain/main.go
+    binary: source_ai-brain_{{ .Os }}_{{ .Arch }}
+
+    no_unique_dist_dir: true
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    goarm:
+      - 7
   - id: argocd
     main: cmd/source/argocd/main.go
     binary: source_argocd_{{ .Os }}_{{ .Arch }}
@@ -158,6 +188,12 @@ builds:
 
 archives:
       
+  - builds: [ai-face]
+    id: ai-face
+    files:
+      - none*
+    name_template: "{{ .Binary }}"
+      
   - builds: [doctor]
     id: doctor
     files:
@@ -190,6 +226,12 @@ archives:
       
   - builds: [thread-mate]
     id: thread-mate
+    files:
+      - none*
+    name_template: "{{ .Binary }}"
+      
+  - builds: [ai-brain]
+    id: ai-brain
     files:
       - none*
     name_template: "{{ .Binary }}"

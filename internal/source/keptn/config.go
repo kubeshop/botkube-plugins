@@ -5,7 +5,7 @@ import (
 
 	"github.com/kubeshop/botkube/pkg/api/source"
 	"github.com/kubeshop/botkube/pkg/config"
-	"github.com/kubeshop/botkube/pkg/pluginx"
+	pluginx "github.com/kubeshop/botkube/pkg/plugin"
 )
 
 // Config prometheus configuration

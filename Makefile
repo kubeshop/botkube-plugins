@@ -6,11 +6,11 @@ build-plugins: ## Builds all plugins for all defined platforms
 	goreleaser build -f .goreleaser.plugin.yaml --rm-dist --snapshot
 .PHONY: build-plugins
 
-build-plugins-single: ## Builds all plugins only for current GOOS and GOARCH.
-	goreleaser build -f .goreleaser.plugin.yaml --rm-dist --single-target --snapshot
+build-plugins-single: ## Builds specified plugins in binary format only for current GOOS and GOARCH.
+	go run github.com/kubeshop/botkube/hack/target/build-plugins -plugin-targets=$(PLUGIN_TARGETS) -output-mode=binary -single-platform
 .PHONY: build-plugins-single
 
-build-plugins-archives: ## Builds all plugins for all defined platforms in form of arhcives
+build-plugins-archives: ## Builds all plugins for all defined platforms in form of archives
 	goreleaser release -f .goreleaser.plugin.yaml --rm-dist --snapshot
 .PHONY: build-plugins
 
@@ -38,6 +38,10 @@ fix-lint-issues: ## Automatically fix lint issues
 	go mod verify
 	golangci-lint run --fix "./..."
 .PHONY: fix-lint-issues
+
+serve-local-plugins: ## Serve local plugins
+	go run github.com/kubeshop/botkube/hack/target/serve-plugins -plugins-dir=dist
+.PHONY: serve-local-plugins
 
 #############
 # Others    #

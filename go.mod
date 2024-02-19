@@ -23,12 +23,13 @@ require (
 	github.com/hashicorp/go-plugin v1.4.10
 	github.com/huandu/xstrings v1.4.0
 	github.com/keptn/go-utils v0.20.4
-	github.com/kubeshop/botkube v0.13.1-0.20240208094725-f6ec67a58bef
+	github.com/kubeshop/botkube v0.13.1-0.20240219113106-577e1e800cff
 	github.com/muesli/reflow v0.3.0
 	github.com/olekukonko/tablewriter v0.0.5
 	github.com/prometheus/client_golang v1.16.0
 	github.com/sirupsen/logrus v1.9.3
 	github.com/slack-go/slack v0.12.2
+	github.com/sourcegraph/conc v0.3.0
 	github.com/spf13/pflag v1.0.5
 	github.com/stretchr/testify v1.8.4
 	golang.org/x/exp v0.0.0-20230713183714-613f0c0eb8a1
@@ -158,6 +159,7 @@ require (
 	go.opentelemetry.io/otel/metric v1.21.0 // indirect
 	go.opentelemetry.io/otel/trace v1.21.0 // indirect
 	go.starlark.net v0.0.0-20230525235612-a134d8f9ddca // indirect
+	go.uber.org/multierr v1.11.0 // indirect
 	golang.org/x/arch v0.3.0 // indirect
 	golang.org/x/crypto v0.17.0 // indirect
 	golang.org/x/net v0.19.0 // indirect
