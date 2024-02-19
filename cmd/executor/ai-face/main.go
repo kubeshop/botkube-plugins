@@ -35,7 +35,7 @@ const (
 
 // Config holds executor configuration.
 type Config struct {
-	AIBrainSourceName string        `json:"aiBrainSourceName"`
+	AIBrainSourceName string        `yaml:"aiBrainSourceName"`
 	Log               config.Logger `yaml:"log"`
 }
 

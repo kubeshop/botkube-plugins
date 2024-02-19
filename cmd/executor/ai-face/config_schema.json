@@ -1,12 +1,13 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Echo",
-  "description": "Echo is an example Botkube executor plugin used during e2e tests. It's not meant for production usage.",
+  "title": "AI Face",
+  "description": "Proxies incoming prompts into AI engine a.k.a brain that responds with analysis.",
   "type": "object",
   "properties": {
     "aiBrainSourceName": {
       "type": "string",
-      "default": "ai-brain"
+      "default": "ai-brain",
+      "title": "AI Brain configuration source name. It is used to trigger AI brain using incoming webhook payload."
     }
   },
   "required": []
