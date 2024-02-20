@@ -3,7 +3,7 @@
 ############
 
 build-plugins: ## Builds all plugins for all defined platforms
-	goreleaser build -f .goreleaser.plugin.yaml --rm-dist --snapshot
+	goreleaser build -f .goreleaser.plugin.yaml --clean --snapshot
 .PHONY: build-plugins
 
 build-plugins-single: ## Builds specified plugins in binary format only for current GOOS and GOARCH.
@@ -11,7 +11,7 @@ build-plugins-single: ## Builds specified plugins in binary format only for curr
 .PHONY: build-plugins-single
 
 build-plugins-archives: ## Builds all plugins for all defined platforms in form of archives
-	goreleaser release -f .goreleaser.plugin.yaml --rm-dist --snapshot
+	goreleaser release -f .goreleaser.plugin.yaml --clean --snapshot
 .PHONY: build-plugins
 
 ##############
