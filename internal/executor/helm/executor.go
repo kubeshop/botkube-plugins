@@ -4,11 +4,11 @@ import (
 	"context"
 	_ "embed"
 	"fmt"
-	"github.com/kubeshop/botkube-cloud-plugins/internal/executor/authorized"
 	"os"
 
-	"github.com/alexflint/go-arg"
+	"github.com/kubeshop/botkube-cloud-plugins/internal/auth"
 
+	"github.com/alexflint/go-arg"
 	"github.com/kubeshop/botkube/pkg/api"
 	"github.com/kubeshop/botkube/pkg/api/executor"
 	pluginx "github.com/kubeshop/botkube/pkg/plugin"
@@ -61,7 +61,7 @@ func NewExecutor(ver string) executor.Executor {
 		pluginVersion:  ver,
 		executeCommand: pluginx.ExecuteCommand,
 	}
-	return authorized.NewExecutor(exec)
+	return auth.NewProtectedExecutor(exec)
 }
 
 // Metadata returns details about Helm plugin.

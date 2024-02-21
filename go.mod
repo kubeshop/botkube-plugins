@@ -21,6 +21,7 @@ require (
 	github.com/gregjones/httpcache v0.0.0-20190611155906-901d90724c79
 	github.com/hashicorp/go-getter v1.7.1
 	github.com/hashicorp/go-plugin v1.4.10
+	github.com/hasura/go-graphql-client v0.8.1
 	github.com/huandu/xstrings v1.4.0
 	github.com/keptn/go-utils v0.20.4
 	github.com/kubeshop/botkube v0.13.1-0.20240219113106-577e1e800cff
@@ -105,7 +106,6 @@ require (
 	github.com/hashicorp/go-safetemp v1.0.0 // indirect
 	github.com/hashicorp/go-version v1.6.0 // indirect
 	github.com/hashicorp/yamux v0.1.1 // indirect
-	github.com/hasura/go-graphql-client v0.8.1 // indirect
 	github.com/imdario/mergo v0.3.16 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/jmespath/go-jmespath v0.4.0 // indirect

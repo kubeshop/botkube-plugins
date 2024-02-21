@@ -9,17 +9,16 @@ import (
 	"strings"
 	"sync"
 
+	"github.com/kubeshop/botkube-cloud-plugins/internal/auth"
+
 	"github.com/PullRequestInc/go-gpt3"
-	"github.com/sirupsen/logrus"
-	stringsutil "k8s.io/utils/strings"
-
-	"github.com/kubeshop/botkube-cloud-plugins/internal/executor/authorized"
-
 	"github.com/kubeshop/botkube/pkg/api"
 	"github.com/kubeshop/botkube/pkg/api/executor"
 	"github.com/kubeshop/botkube/pkg/config"
 	"github.com/kubeshop/botkube/pkg/loggerx"
 	pluginx "github.com/kubeshop/botkube/pkg/plugin"
+	"github.com/sirupsen/logrus"
+	stringsutil "k8s.io/utils/strings"
 )
 
 const (
@@ -59,7 +58,7 @@ func NewExecutor(ver string) executor.Executor {
 	exec := &Executor{
 		pluginVersion: ver,
 	}
-	return authorized.NewExecutor(exec)
+	return auth.NewProtectedExecutor(exec)
 }
 
 // Metadata returns details about the Doctor plugin.

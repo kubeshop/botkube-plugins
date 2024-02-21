@@ -23,10 +23,14 @@ type Config struct {
 }
 
 // GetConfig returns remote configuration if it is set.
-func GetConfig() Config {
+func GetConfig() (Config, bool) {
+	if os.Getenv(ProviderIdentifierEnvKey) == "" {
+		return Config{}, false
+	}
+
 	return Config{
 		Endpoint:   os.Getenv(ProviderEndpointEnvKey),
 		Identifier: os.Getenv(ProviderIdentifierEnvKey),
 		APIKey:     os.Getenv(ProviderAPIKeyEnvKey),
-	}
+	}, true
 }

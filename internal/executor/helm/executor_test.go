@@ -48,25 +48,27 @@ func TestExecutorHelmInstall(t *testing.T) {
 	for _, tc := range tests {
 		t.Run(tc.name, func(t *testing.T) {
 			// given
-			execOutput := pluginx.ExecuteCommandOutput{
-				Stdout: "mocked",
-			}
-
-			hExec := NewExecutor("testing")
-
 			var (
 				gotCmd  string
 				gotEnvs map[string]string
 			)
-			hExec.executeCommand = func(ctx context.Context, rawCmd string, mutators ...pluginx.ExecuteCommandMutation) (pluginx.ExecuteCommandOutput, error) {
-				gotCmd = rawCmd
-				var opts pluginx.ExecuteCommandOptions
-				for _, mutate := range mutators {
-					mutate(&opts)
-				}
 
-				gotEnvs = opts.Envs
-				return execOutput, nil
+			execOutput := pluginx.ExecuteCommandOutput{
+				Stdout: "mocked",
+			}
+
+			hExec := &Executor{
+				pluginVersion: "testing",
+				executeCommand: func(ctx context.Context, rawCmd string, mutators ...pluginx.ExecuteCommandMutation) (pluginx.ExecuteCommandOutput, error) {
+					gotCmd = rawCmd
+					var opts pluginx.ExecuteCommandOptions
+					for _, mutate := range mutators {
+						mutate(&opts)
+					}
+
+					gotEnvs = opts.Envs
+					return execOutput, nil
+				},
 			}
 
 			// when
@@ -121,8 +123,10 @@ func TestExecutorHelmInstallFlagsErrors(t *testing.T) {
 	for _, tc := range tests {
 		t.Run(tc.name, func(t *testing.T) {
 			// given
-			hExec := NewExecutor("testing")
-			hExec.executeCommand = noopExecuteCommand
+			hExec := &Executor{
+				pluginVersion:  "testing",
+				executeCommand: noopExecuteCommand,
+			}
 
 			// when
 			out, err := hExec.Execute(context.Background(), executor.ExecuteInput{
@@ -161,8 +165,10 @@ func TestExecutorHelmInstallHelp(t *testing.T) {
 	for _, tc := range tests {
 		t.Run(tc.name, func(t *testing.T) {
 			// given
-			hExec := NewExecutor("testing")
-			hExec.executeCommand = noopExecuteCommand
+			hExec := &Executor{
+				pluginVersion:  "testing",
+				executeCommand: noopExecuteCommand,
+			}
 
 			// when
 			out, err := hExec.Execute(context.Background(), executor.ExecuteInput{
@@ -184,16 +190,18 @@ func TestExecutorHelmInstallHelp(t *testing.T) {
 
 func TestExecutorConfigMerging(t *testing.T) {
 	// given
-	hExec := NewExecutor("testing")
 	var gotEnvs map[string]string
-	hExec.executeCommand = func(ctx context.Context, rawCmd string, mutators ...pluginx.ExecuteCommandMutation) (pluginx.ExecuteCommandOutput, error) {
-		var opts pluginx.ExecuteCommandOptions
-		for _, mutate := range mutators {
-			mutate(&opts)
-		}
+	hExec := &Executor{
+		pluginVersion: "testing",
+		executeCommand: func(ctx context.Context, rawCmd string, mutators ...pluginx.ExecuteCommandMutation) (pluginx.ExecuteCommandOutput, error) {
+			var opts pluginx.ExecuteCommandOptions
+			for _, mutate := range mutators {
+				mutate(&opts)
+			}
 
-		gotEnvs = opts.Envs
-		return pluginx.ExecuteCommandOutput{}, nil
+			gotEnvs = opts.Envs
+			return pluginx.ExecuteCommandOutput{}, nil
+		},
 	}
 
 	configA := Config{
@@ -234,8 +242,10 @@ func TestExecutorConfigMerging(t *testing.T) {
 
 func TestExecutorConfigMergingErrors(t *testing.T) {
 	// given
-	hExec := NewExecutor("testing")
-	hExec.executeCommand = noopExecuteCommand
+	hExec := &Executor{
+		pluginVersion:  "testing",
+		executeCommand: noopExecuteCommand,
+	}
 
 	configA := Config{
 		HelmDriver: "unknown-value",
