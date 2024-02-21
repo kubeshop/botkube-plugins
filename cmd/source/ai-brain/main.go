@@ -6,6 +6,8 @@ import (
 	"fmt"
 	"sync"
 
+	"github.com/kubeshop/botkube-cloud-plugins/internal/auth"
+
 	"github.com/hashicorp/go-plugin"
 	aibrain "github.com/kubeshop/botkube-cloud-plugins/internal/source/ai-brain"
 	"github.com/kubeshop/botkube/pkg/api"
@@ -88,9 +90,9 @@ func (a *AI) HandleExternalRequest(_ context.Context, in source.ExternalRequestI
 func main() {
 	source.Serve(map[string]plugin.Plugin{
 		pluginName: &source.Plugin{
-			Source: &AI{
+			Source: auth.NewProtectedSource(&AI{
 				incomingPrompts: sync.Map{},
-			},
+			}),
 		},
 	})
 }

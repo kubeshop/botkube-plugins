@@ -28,6 +28,7 @@ type ThreadMateExecutor struct {
 }
 
 func NewThreadMateExecutor() *ThreadMateExecutor {
+	// It's not protected as we use it only as dev plugin, and we integrate it with the SocketSlack.
 	return &ThreadMateExecutor{}
 }
 

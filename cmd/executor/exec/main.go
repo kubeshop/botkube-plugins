@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/kubeshop/botkube-cloud-plugins/internal/auth"
+
 	"github.com/MakeNowJust/heredoc"
 	"github.com/alexflint/go-arg"
 	"github.com/hashicorp/go-plugin"
@@ -202,7 +204,7 @@ func (i *XExecutor) getKubeconfig(ctx context.Context, log logrus.FieldLogger, i
 func main() {
 	executor.Serve(map[string]plugin.Plugin{
 		pluginName: &executor.Plugin{
-			Executor: &XExecutor{},
+			Executor: auth.NewProtectedExecutor(&XExecutor{}),
 		},
 	})
 }

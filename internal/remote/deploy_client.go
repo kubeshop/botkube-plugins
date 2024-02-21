@@ -2,11 +2,13 @@ package remote
 
 import (
 	"context"
-	"time"
+	"fmt"
 
 	"github.com/avast/retry-go/v4"
 	"github.com/hasura/go-graphql-client"
 )
+
+const maxRetries = 5
 
 // GraphQLClient defines GraphQL client.
 type GraphQLClient interface {
@@ -20,8 +22,8 @@ type DeploymentClient struct {
 }
 
 // NewDeploymentClient initializes GraphQL client.
-func NewDeploymentClient(client GraphQLClient) *DeploymentClient {
-	return &DeploymentClient{client: client}
+func NewDeploymentClient(cfg Config) *DeploymentClient {
+	return &DeploymentClient{client: NewDefaultGqlClient(cfg)}
 }
 
 // Deployment returns deployment with Botkube configuration.
@@ -30,7 +32,7 @@ type Deployment struct {
 }
 
 // IsConnectedWithCould returns whether connected to Botkube Cloud
-func (d *DeploymentClient) IsConnectedWithCould() bool {
+func (d *DeploymentClient) IsConnectedWithCould() error {
 	var query struct {
 		Deployment struct {
 			ID string
@@ -40,25 +42,26 @@ func (d *DeploymentClient) IsConnectedWithCould() bool {
 	variables := map[string]interface{}{
 		"id": graphql.ID(deployID),
 	}
-	err := d.withRetries(context.Background(), 5, func() error {
+	err := d.withRetries(func() error {
 		return d.client.Client().Query(context.Background(), &query, variables)
 	})
+
 	if err != nil {
-		return false
+		return err
 	}
 
-	return query.Deployment.ID == d.client.DeploymentID()
+	if query.Deployment.ID != deployID {
+		return fmt.Errorf("instance with id %q is not recognized by Cloud", deployID)
+	}
+
+	return nil
 }
 
-func (d *DeploymentClient) withRetries(ctx context.Context, maxRetries int, fn func() error) error {
+func (d *DeploymentClient) withRetries(fn func() error) error {
 	return retry.Do(
 		func() error {
 			return fn()
 		},
-		retry.DelayType(func(uint, error, *retry.Config) time.Duration {
-			return 200 * time.Microsecond
-		}),
-		retry.Attempts(uint(maxRetries)), // infinite, we cancel that by our own
-		retry.Context(ctx),
+		retry.Attempts(maxRetries),
 	)
 }

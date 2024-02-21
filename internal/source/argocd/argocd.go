@@ -8,18 +8,18 @@ import (
 	"sync"
 	"time"
 
-	"github.com/avast/retry-go/v4"
-	"github.com/sirupsen/logrus"
-	"k8s.io/client-go/dynamic"
-	"k8s.io/client-go/tools/clientcmd"
+	"github.com/kubeshop/botkube-cloud-plugins/internal/auth"
 
-	"github.com/kubeshop/botkube-cloud-plugins/internal/source/authorized"
+	"github.com/avast/retry-go/v4"
 	"github.com/kubeshop/botkube/pkg/api"
 	"github.com/kubeshop/botkube/pkg/api/source"
 	"github.com/kubeshop/botkube/pkg/config"
 	"github.com/kubeshop/botkube/pkg/formatx"
 	"github.com/kubeshop/botkube/pkg/loggerx"
 	pluginx "github.com/kubeshop/botkube/pkg/plugin"
+	"github.com/sirupsen/logrus"
+	"k8s.io/client-go/dynamic"
+	"k8s.io/client-go/tools/clientcmd"
 )
 
 var _ source.Source = (*Source)(nil)
@@ -62,7 +62,7 @@ func NewSource(version string) source.Source {
 		pluginVersion: version,
 		cfgs:          sync.Map{},
 	}
-	return authorized.NewSource(src)
+	return auth.NewProtectedSource(src)
 }
 
 type subscription struct {

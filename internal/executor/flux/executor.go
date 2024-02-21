@@ -5,14 +5,13 @@ import (
 	_ "embed"
 	"fmt"
 
-	"github.com/allegro/bigcache/v3"
-
-	"github.com/kubeshop/botkube-cloud-plugins/internal/executor/authorized"
-
+	"github.com/kubeshop/botkube-cloud-plugins/internal/auth"
 	"github.com/kubeshop/botkube-cloud-plugins/internal/executor/flux/commands"
 	"github.com/kubeshop/botkube-cloud-plugins/internal/executor/x"
 	"github.com/kubeshop/botkube-cloud-plugins/internal/executor/x/output"
 	"github.com/kubeshop/botkube-cloud-plugins/internal/executor/x/state"
+
+	"github.com/allegro/bigcache/v3"
 	"github.com/kubeshop/botkube/pkg/api"
 	"github.com/kubeshop/botkube/pkg/api/executor"
 	"github.com/kubeshop/botkube/pkg/loggerx"
@@ -43,7 +42,7 @@ func NewExecutor(cache *bigcache.BigCache, ver string) executor.Executor {
 		pluginVersion: ver,
 		cache:         cache,
 	}
-	return authorized.NewExecutor(exec)
+	return auth.NewProtectedExecutor(exec)
 }
 
 // Metadata returns details about the Flux plugin.

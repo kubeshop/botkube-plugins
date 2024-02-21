@@ -9,6 +9,8 @@ import (
 	"io"
 	"net/http"
 
+	"github.com/kubeshop/botkube-cloud-plugins/internal/auth"
+
 	"github.com/hashicorp/go-plugin"
 	aibrain "github.com/kubeshop/botkube-cloud-plugins/internal/source/ai-brain"
 	"github.com/kubeshop/botkube/pkg/api"
@@ -126,9 +128,9 @@ func (*AIFace) Help(context.Context) (api.Message, error) {
 func main() {
 	executor.Serve(map[string]plugin.Plugin{
 		pluginName: &executor.Plugin{
-			Executor: &AIFace{
+			Executor: auth.NewProtectedExecutor(&AIFace{
 				httpClient: httpx.NewHTTPClient(),
-			},
+			}),
 		},
 	})
 }

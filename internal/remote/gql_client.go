@@ -13,63 +13,23 @@ const (
 	apiKeyHeaderName = "X-API-Key"
 )
 
-// Option define GraphQL client option.
-type Option func(*Gql)
-
-// WithEndpoint configures ApiURL for GraphQL endpoint.
-func WithEndpoint(url string) Option {
-	return func(client *Gql) {
-		client.endpoint = url
-	}
-}
-
-// WithAPIKey configures API key for GraphQL endpoint.
-func WithAPIKey(apiKey string) Option {
-	return func(client *Gql) {
-		client.apiKey = apiKey
-	}
-}
-
-// WithDeploymentID configures deployment id for GraphQL endpoint.
-func WithDeploymentID(id string) Option {
-	return func(client *Gql) {
-		client.deployID = id
-	}
-}
-
 // Gql defines GraphQL client data structure.
 type Gql struct {
 	client   *graphql.Client
-	endpoint string
-	apiKey   string
 	deployID string
 }
 
-// NewGqlClient initializes GraphQL client.
-func NewGqlClient(options ...Option) *Gql {
-	c := &Gql{}
-	for _, opt := range options {
-		opt(c)
-	}
-
+// NewDefaultGqlClient initializes GraphQL client with default options.
+func NewDefaultGqlClient(remoteCfg Config) *Gql {
 	httpCli := &http.Client{
-		Transport: newAPIKeySecuredTransport(c.apiKey),
+		Transport: newAPIKeySecuredTransport(remoteCfg.APIKey),
 		Timeout:   defaultTimeout,
 	}
 
-	c.client = graphql.NewClient(c.endpoint, httpCli)
-	return c
-}
-
-// NewDefaultGqlClient initializes GraphQL client with default options.
-func NewDefaultGqlClient() *Gql {
-	remoteCfg := GetConfig()
-
-	return NewGqlClient(
-		WithEndpoint(remoteCfg.Endpoint),
-		WithAPIKey(remoteCfg.APIKey),
-		WithDeploymentID(remoteCfg.Identifier),
-	)
+	return &Gql{
+		client:   graphql.NewClient(remoteCfg.Endpoint, httpCli),
+		deployID: remoteCfg.Identifier,
+	}
 }
 
 // DeploymentID returns deployment ID.
