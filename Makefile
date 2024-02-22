@@ -18,9 +18,16 @@ build-plugins-archives: ## Builds all plugins for all defined platforms in form 
 # Generating #
 ##############
 
+USE_ARCHIVE ?= true
+
 gen-plugin-index: ## Generate plugins YAML index file.
-	go run github.com/kubeshop/botkube/hack -binaries-path "./dist" -use-archive=$(USE_ARCHIVE)
+	go run github.com/kubeshop/botkube/hack -binaries-path "./dist" -plugin-name-filter 'doctor|exec|flux|helm|argocd|github-events|keptn|prometheus' -use-archive=$(USE_ARCHIVE) 
 .PHONY: gen-plugin-index
+
+
+gen-dev-plugin-index: ## Generate plugins YAML index file with all plugins.
+	go run github.com/kubeshop/botkube/hack -binaries-path "./dist" -use-archive=$(USE_ARCHIVE)
+.PHONY: gen-dev-plugin-index
 
 gen-plugins-goreleaser: # Generate Goreleaser config for plugins
 	go run github.com/kubeshop/botkube/hack/target/gen-goreleaser

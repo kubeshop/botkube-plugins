@@ -120,7 +120,7 @@ jobs:
           PLUGIN_DOWNLOAD_URL_BASE_PATH: ""
         run: |
           make build-plugins-archives
-          USE_ARCHIVE=true make gen-plugin-index
+          USE_ARCHIVE=true make gen-dev-plugin-index
 
       - name: Upload plugins to GCS
         uses: google-github-actions/upload-cloud-storage@v2
