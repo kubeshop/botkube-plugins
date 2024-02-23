@@ -8,10 +8,11 @@ import (
 	"fmt"
 	"io"
 	"net/http"
-
-	"github.com/kubeshop/botkube-cloud-plugins/internal/auth"
+	"strings"
 
 	"github.com/hashicorp/go-plugin"
+
+	"github.com/kubeshop/botkube-cloud-plugins/internal/auth"
 	aibrain "github.com/kubeshop/botkube-cloud-plugins/internal/source/ai-brain"
 	"github.com/kubeshop/botkube/pkg/api"
 	"github.com/kubeshop/botkube/pkg/api/executor"
@@ -77,7 +78,7 @@ func (e *AIFace) Execute(_ context.Context, in executor.ExecuteInput) (executor.
 	aiBrainWebhookURL := fmt.Sprintf("%s/%s", in.Context.IncomingWebhook.BaseSourceURL, cfg.AIBrainSourceName)
 
 	body, err := json.Marshal(aibrain.Payload{
-		Prompt:    in.Command,
+		Prompt:    strings.TrimPrefix(in.Command, pluginName),
 		MessageID: in.Context.Message.ParentActivityID,
 	})
 	if err != nil {

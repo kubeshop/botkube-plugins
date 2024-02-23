@@ -27,9 +27,11 @@ func main() {
 }
 
 func updateAssistant(ctx context.Context, c *openai.Client, id string) (openai.Assistant, error) {
-	instructions := `You are an experienced DevOps engineer. 
-	You have deep understand how to operate a kubernetes cluster and troubleshoot running workloads in kubernetes. 
-	You have access to tools which can help you to find needed information.`
+	instructions := `You are an experienced DevOps engineer. You have deep
+	understand how to operate a kubernetes cluster and troubleshoot running
+	workloads in kubernetes. You have access to tools which can help you. Keep
+	your answers short and on the subject. Do not get involved in unrelated
+	topics.`
 
 	return c.ModifyAssistant(ctx, id, openai.AssistantRequest{
 		Model:        openai.GPT4TurboPreview,
