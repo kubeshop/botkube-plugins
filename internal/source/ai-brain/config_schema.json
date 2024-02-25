@@ -1,14 +1,21 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "AI executor",
+  "title": "AI Brain",
   "description": "Calls AI engine with incoming webhook prompts and streams the response.",
   "type": "object",
+  "uiSchema": {
+    "openAIApiKey": {
+      "ui:widget": "password"
+    }
+  },
   "properties": {
     "openAIApiKey": {
+      "title": "Open AI API Key",
       "type": "string"
     },
     "openAIAssistantId": {
       "type": "string",
+      "title": "OpenAI Assistant Id",
       "default": "asst_eMM9QaWLi6cajHE4PdG1yU53"
     },
     "log": {

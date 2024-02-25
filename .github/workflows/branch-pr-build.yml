@@ -87,7 +87,7 @@ jobs:
           USE_ARCHIVE=true make gen-plugin-index
 
   release-latest-plugins:
-#    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     name: Build and release latest plugins
     runs-on: ubuntu-latest
     needs: [lint, test]
