@@ -59,3 +59,32 @@ func msgUnableToHelp(messageID string) api.Message {
 		},
 	}
 }
+
+func msgNoAIAnswer(messageID string) api.Message {
+	return api.Message{
+		ParentActivityID: messageID,
+		Sections: []api.Section{
+			{
+				Base: api.Base{
+					Body: api.Body{Plaintext: "I am sorry, but I don't have a good answer."},
+				},
+			},
+		},
+	}
+}
+
+func msgAIAnswer(messageID, text string) api.Message {
+	return api.Message{
+		ParentActivityID: messageID,
+		Sections: []api.Section{
+			{
+				Base: api.Base{
+					Body: api.Body{Plaintext: text},
+				},
+				Context: []api.ContextItem{
+					{Text: "AI-generated content may be incorrect."},
+				},
+			},
+		},
+	}
+}
