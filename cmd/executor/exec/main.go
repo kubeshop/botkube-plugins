@@ -210,11 +210,8 @@ func main() {
 }
 
 func getDefaultTemplateSource() string {
-	ver := version
-	if ver == "dev" {
-		ver = "main"
-	}
-	return fmt.Sprintf("github.com/kubeshop/botkube//cmd/executor/exec/templates?ref=%s", ver)
+	// Fixed 1.8 public templates for now as they are not changed
+	return "github.com/kubeshop/botkube//cmd/executor/exec/templates?ref=release-1.8"
 }
 
 func Normalize(in string) string {

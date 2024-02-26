@@ -1,3 +1,4 @@
+# TODO: Once this file is modified, ensure the new template is used (e.g. via go embed)
 templates:
   - trigger:
       command:
