@@ -15,9 +15,9 @@ const assistantID = "asst_eMM9QaWLi6cajHE4PdG1yU53"
 
 // Config holds source configuration.
 type Config struct {
-	Log               config.Logger `yaml:"log"`
-	OpenAIAPIKey      string        `yaml:"openAIApiKey"`
-	OpenAIAssistantID string        `yaml:"openAIAssistantId"`
+	Log                   config.Logger `yaml:"log"`
+	OpenAICloudServiceURL string        `yaml:"openAICloudServiceURL"`
+	OpenAIAssistantID     string        `yaml:"openAIAssistantId"`
 }
 
 // Validate validates the configuration.
@@ -26,7 +26,7 @@ func (c *Config) Validate() error {
 	if c.OpenAIAssistantID == "" {
 		issues = multierror.Append(issues, errors.New("the Open AI Assistant ID cannot be empty"))
 	}
-	if c.OpenAIAPIKey == "" {
+	if c.OpenAICloudServiceURL == "" {
 		issues = multierror.Append(issues, errors.New("the Open AI API key cannot be empty"))
 	}
 	return issues.ErrorOrNil()

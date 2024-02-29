@@ -5,7 +5,11 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"net/http"
+	"os"
 	"time"
+
+	"github.com/kubeshop/botkube-cloud-plugins/internal/remote"
 
 	"github.com/kubeshop/botkube/pkg/api"
 	"github.com/kubeshop/botkube/pkg/api/source"
@@ -14,7 +18,12 @@ import (
 	"k8s.io/apimachinery/pkg/util/wait"
 )
 
-const openAIPollInterval = 2 * time.Second
+const (
+	openAIPollInterval      = 2 * time.Second
+	maxToolExecutionRetries = 3
+)
+
+type tool func(ctx context.Context, args []byte) (string, error)
 
 // Payload represents incoming webhook payload.
 type Payload struct {
@@ -34,10 +43,16 @@ type assistant struct {
 func newAssistant(cfg *Config, log logrus.FieldLogger, out chan source.Event, kubeConfigPath string) *assistant {
 	kcRunner := NewKubectlRunner(kubeConfigPath)
 
+	config := openai.DefaultConfig("")
+	config.HTTPClient = &http.Client{
+		Transport: newAPIKeySecuredTransport(),
+	}
+	config.BaseURL = cfg.OpenAICloudServiceURL
+
 	return &assistant{
 		log:           log,
 		out:           out,
-		openaiClient:  openai.NewClient(cfg.OpenAIAPIKey),
+		openaiClient:  openai.NewClientWithConfig(config),
 		assistID:      cfg.OpenAIAssistantID,
 		threadMapping: make(map[string]string),
 		tools: map[string]tool{
@@ -51,6 +66,7 @@ func newAssistant(cfg *Config, log logrus.FieldLogger, out chan source.Event, ku
 
 func (i *assistant) handle(in source.ExternalRequestInput) (api.Message, error) {
 	var p Payload
+
 	err := json.Unmarshal(in.Payload, &p)
 	if err != nil {
 		return api.Message{}, fmt.Errorf("while unmarshalling payload: %w", err)
@@ -81,7 +97,8 @@ func (i *assistant) handleThread(ctx context.Context, p *Payload) error {
 		},
 		Thread: openai.ThreadRequest{
 			Metadata: map[string]any{
-				"messageId": p.MessageID,
+				"messageId":  p.MessageID,
+				"instanceId": os.Getenv(remote.ProviderIdentifierEnvKey),
 			},
 			Messages: []openai.ThreadMessage{
 				{
@@ -95,8 +112,7 @@ func (i *assistant) handleThread(ctx context.Context, p *Payload) error {
 		return fmt.Errorf("while creating thread and run: %w", err)
 	}
 
-	i.threadMapping[p.MessageID] = run.ID
-
+	toolsRetries := 0
 	return wait.PollUntilContextCancel(ctx, openAIPollInterval, false, func(ctx context.Context) (bool, error) {
 		run, err = i.openaiClient.RetrieveRun(ctx, run.ThreadID, run.ID)
 		if err != nil {
@@ -107,7 +123,6 @@ func (i *assistant) handleThread(ctx context.Context, p *Payload) error {
 			"messageId": p.MessageID,
 			"runStatus": run.Status,
 		}).Debug("retrieved assistant thread run")
-
 		switch run.Status {
 		case openai.RunStatusCancelling, openai.RunStatusFailed, openai.RunStatusExpired:
 			return false, fmt.Errorf("got unexpected status: %s", run.Status)
@@ -123,7 +138,8 @@ func (i *assistant) handleThread(ctx context.Context, p *Payload) error {
 
 		case openai.RunStatusRequiresAction:
 			if err = i.handleStatusRequiresAction(ctx, run); err != nil {
-				return false, fmt.Errorf("while handling requires action: %w", err)
+				toolsRetries++
+				return toolsRetries >= maxToolExecutionRetries, fmt.Errorf("while handling requires action: %w", err)
 			}
 		}
 		return false, nil
@@ -163,8 +179,6 @@ func (i *assistant) handleStatusCompleted(ctx context.Context, run openai.Run, p
 	return nil
 }
 
-type tool func(ctx context.Context, args []byte) (string, error)
-
 func (i *assistant) handleStatusRequiresAction(ctx context.Context, run openai.Run) error {
 	// That should never happen, unless there is a bug or something	is wrong with OpenAI APIs.
 	if run.RequiredAction == nil || run.RequiredAction.SubmitToolOutputs == nil {
@@ -201,4 +215,19 @@ func (i *assistant) handleStatusRequiresAction(ctx context.Context, run openai.R
 	}
 
 	return nil
+}
+
+type apiKeySecuredTransport struct {
+	transport *http.Transport
+}
+
+func newAPIKeySecuredTransport() *apiKeySecuredTransport {
+	return &apiKeySecuredTransport{
+		transport: http.DefaultTransport.(*http.Transport).Clone(),
+	}
+}
+
+func (t *apiKeySecuredTransport) RoundTrip(req *http.Request) (*http.Response, error) {
+	req.Header.Set("X-API-Key", os.Getenv(remote.ProviderAPIKeyEnvKey))
+	return t.transport.RoundTrip(req)
 }

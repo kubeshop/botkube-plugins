@@ -3,14 +3,9 @@
   "title": "AI Brain",
   "description": "Calls AI engine with incoming webhook prompts and streams the response.",
   "type": "object",
-  "uiSchema": {
-    "openAIApiKey": {
-      "ui:widget": "password"
-    }
-  },
   "properties": {
-    "openAIApiKey": {
-      "title": "Open AI API Key",
+    "openAICloudServiceURL": {
+      "title": "OpenAI Cloud Service URL",
       "type": "string"
     },
     "openAIAssistantId": {
@@ -69,6 +64,6 @@
     }
   },
   "required": [
-    "openAIApiKey"
+    "openAICloudServiceURL"
   ]
 }
