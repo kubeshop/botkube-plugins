@@ -50,7 +50,6 @@ var (
 	reTeamsItalic        = regexp.MustCompile(`_([^_]+)_`)
 	reTeamsStrikethrough = regexp.MustCompile(`~~([^~]+)~~`)
 	reTeamsHeading       = regexp.MustCompile(`^#+ (.*)$`)
-	reTeamsLink          = regexp.MustCompile(`\[([^\]]+)]\(([^)]+)\)`) // Basic link support
 	reTeamsImageLink     = regexp.MustCompile(`!\[([^\]]+)]\(([^)]+)\)`)
 )
 
