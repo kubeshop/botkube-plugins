@@ -12,7 +12,6 @@ import (
 
 	"github.com/hashicorp/go-plugin"
 
-	"github.com/kubeshop/botkube-cloud-plugins/internal/auth"
 	aibrain "github.com/kubeshop/botkube-cloud-plugins/internal/source/ai-brain"
 	"github.com/kubeshop/botkube/pkg/api"
 	"github.com/kubeshop/botkube/pkg/api/executor"
@@ -31,7 +30,7 @@ var (
 )
 
 const (
-	pluginName      = "ai-face"
+	pluginName      = "ai"
 	description     = "Proxies incoming prompts into AI engine a.k.a brain that responds with analysis."
 	maxRespBodySize = 5 * 1024 * 1024 // 5 MB
 )
@@ -116,10 +115,13 @@ func (*AIFace) Help(context.Context) (api.Message, error) {
 		Sections: []api.Section{
 			{
 				Base: api.Base{
-					Header: "Botkube: An AI-powered plugin for diagnosing your Kubernetes clusters in natural language.",
+					Description: "🤖 I am an AI powered Kubernetes assistant, ask me anything. Like you would ask your favorite Kubernetes expert. I have a set of tools to investigate the cluster(s) connected to this channel, and happy to learn new ones. Few examples:\n" +
+						"`{{BotName}} ai are there any failing pods in the namespace kube-system?`\n" +
+						"`{{BotName}} ai how can I change the number of replicas?`\n" +
+						"`{{BotName}} ai get me the logs for a pod called \"x\"?`",
 				},
 				Buttons: []api.Button{
-					btnBuilder.ForCommandWithDescCmd("Ask a question", "ai are there any failing pods in my cluster?"),
+					btnBuilder.ForURL("Give feedback", "https://feedback.botkube.io", api.ButtonStylePrimary),
 				},
 			},
 		},
@@ -129,9 +131,9 @@ func (*AIFace) Help(context.Context) (api.Message, error) {
 func main() {
 	executor.Serve(map[string]plugin.Plugin{
 		pluginName: &executor.Plugin{
-			Executor: auth.NewProtectedExecutor(&AIFace{
+			Executor: &AIFace{
 				httpClient: httpx.NewHTTPClient(),
-			}),
+			},
 		},
 	})
 }

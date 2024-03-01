@@ -5,9 +5,9 @@ before:
     - go mod download
 
 builds:
-  - id: ai-face
-    main: cmd/executor/ai-face/main.go
-    binary: executor_ai-face_{{ .Os }}_{{ .Arch }}
+  - id: ai
+    main: cmd/executor/ai/main.go
+    binary: executor_ai_{{ .Os }}_{{ .Arch }}
 
     no_unique_dist_dir: true
     env:
@@ -188,8 +188,8 @@ builds:
 
 archives:
       
-  - builds: [ai-face]
-    id: ai-face
+  - builds: [ai]
+    id: ai
     files:
       - none*
     name_template: "{{ .Binary }}"
