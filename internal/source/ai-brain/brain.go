@@ -90,6 +90,10 @@ func (s *Source) Stream(ctx context.Context, in source.StreamInput) (source.Stre
 	instance := newAssistant(cfg, s.log, streamOutput.Event, kubeConfigPath)
 	s.instances.Store(sourceName, instance)
 
+	// Start assistant thread mapping cache cleanup. Technically the cache won't
+	// grow that much because botkube agent will be eventually restarted anyway.
+	go instance.cache.Cleanup()
+
 	s.log.Infof("Setup successful for source configuration %q", sourceName)
 	return streamOutput, nil
 }

@@ -19,6 +19,7 @@ import (
 )
 
 const (
+	cacheTTL                = 8 * time.Hour
 	openAIPollInterval      = 2 * time.Second
 	maxToolExecutionRetries = 3
 )
@@ -32,12 +33,12 @@ type Payload struct {
 }
 
 type assistant struct {
-	log           logrus.FieldLogger
-	out           chan<- source.Event
-	openaiClient  *openai.Client
-	assistID      string
-	tools         map[string]tool
-	threadMapping map[string]string
+	log          logrus.FieldLogger
+	out          chan<- source.Event
+	openaiClient *openai.Client
+	assistID     string
+	tools        map[string]tool
+	cache        *cache
 }
 
 func newAssistant(cfg *Config, log logrus.FieldLogger, out chan source.Event, kubeConfigPath string) *assistant {
@@ -50,11 +51,11 @@ func newAssistant(cfg *Config, log logrus.FieldLogger, out chan source.Event, ku
 	config.BaseURL = cfg.OpenAICloudServiceURL
 
 	return &assistant{
-		log:           log,
-		out:           out,
-		openaiClient:  openai.NewClientWithConfig(config),
-		assistID:      cfg.OpenAIAssistantID,
-		threadMapping: make(map[string]string),
+		log:          log,
+		out:          out,
+		openaiClient: openai.NewClientWithConfig(config),
+		assistID:     cfg.OpenAIAssistantID,
+		cache:        newCache(cacheTTL),
 		tools: map[string]tool{
 			"kubectlGetPods":     kcRunner.GetPods,
 			"kubectlGetSecrets":  kcRunner.GetSecrets,
@@ -91,25 +92,31 @@ func (i *assistant) handle(in source.ExternalRequestInput) (api.Message, error) 
 
 // handleThread creates a new OpenAI assistant thread and handles the conversation.
 func (i *assistant) handleThread(ctx context.Context, p *Payload) error {
-	run, err := i.openaiClient.CreateThreadAndRun(ctx, openai.CreateThreadAndRunRequest{
-		RunRequest: openai.RunRequest{
-			AssistantID: i.assistID,
-		},
-		Thread: openai.ThreadRequest{
-			Metadata: map[string]any{
-				"messageId":  p.MessageID,
-				"instanceId": os.Getenv(remote.ProviderIdentifierEnvKey),
-			},
-			Messages: []openai.ThreadMessage{
-				{
-					Role:    openai.ThreadMessageRoleUser,
-					Content: p.Prompt,
-				},
-			},
-		},
+	var thread openai.Thread
+	var err error
+
+	// First we check if we have a cached thread ID for the given message ID.
+	threadID, ok := i.cache.Get(p.MessageID)
+	if ok {
+		err = i.createNewMessage(ctx, threadID, p)
+		if err != nil {
+			return fmt.Errorf("while creating a new message on a thread: %w", err)
+		}
+	} else {
+		thread, err = i.createNewThread(ctx, p)
+		if err != nil {
+			return fmt.Errorf("while creating a new thread: %w", err)
+		}
+		threadID = thread.ID
+	}
+
+	i.cache.Set(p.MessageID, threadID)
+
+	run, err := i.openaiClient.CreateRun(ctx, threadID, openai.RunRequest{
+		AssistantID: i.assistID,
 	})
 	if err != nil {
-		return fmt.Errorf("while creating thread and run: %w", err)
+		return fmt.Errorf("while creating a thread run: %w", err)
 	}
 
 	toolsRetries := 0
@@ -123,9 +130,14 @@ func (i *assistant) handleThread(ctx context.Context, p *Payload) error {
 			"messageId": p.MessageID,
 			"runStatus": run.Status,
 		}).Debug("retrieved assistant thread run")
+
 		switch run.Status {
-		case openai.RunStatusCancelling, openai.RunStatusFailed, openai.RunStatusExpired:
+		case openai.RunStatusCancelling, openai.RunStatusFailed:
 			return false, fmt.Errorf("got unexpected status: %s", run.Status)
+
+		case openai.RunStatusExpired:
+			i.cache.Delete(p.MessageID)
+			return true, nil
 
 		case openai.RunStatusQueued, openai.RunStatusInProgress:
 			return false, nil // continue
@@ -144,6 +156,29 @@ func (i *assistant) handleThread(ctx context.Context, p *Payload) error {
 		}
 		return false, nil
 	})
+}
+
+func (i *assistant) createNewThread(ctx context.Context, p *Payload) (openai.Thread, error) {
+	return i.openaiClient.CreateThread(ctx, openai.ThreadRequest{
+		Metadata: map[string]any{
+			"messageId":  p.MessageID,
+			"instanceId": os.Getenv(remote.ProviderIdentifierEnvKey),
+		},
+		Messages: []openai.ThreadMessage{
+			{
+				Role:    openai.ThreadMessageRoleUser,
+				Content: p.Prompt,
+			},
+		},
+	})
+}
+
+func (i *assistant) createNewMessage(ctx context.Context, threadID string, p *Payload) error {
+	_, err := i.openaiClient.CreateMessage(ctx, threadID, openai.MessageRequest{
+		Role:    openai.ChatMessageRoleUser,
+		Content: p.Prompt,
+	})
+	return err
 }
 
 func (i *assistant) handleStatusCompleted(ctx context.Context, run openai.Run, p *Payload) error {
