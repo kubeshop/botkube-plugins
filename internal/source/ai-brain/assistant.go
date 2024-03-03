@@ -57,10 +57,11 @@ func newAssistant(cfg *Config, log logrus.FieldLogger, out chan source.Event, ku
 		assistID:     cfg.OpenAIAssistantID,
 		cache:        newCache(cacheTTL),
 		tools: map[string]tool{
-			"kubectlGetPods":     kcRunner.GetPods,
-			"kubectlGetSecrets":  kcRunner.GetSecrets,
-			"kubectlDescribePod": kcRunner.DescribePod,
-			"kubectlLogs":        kcRunner.Logs,
+			"kubectlGetResource":            kcRunner.GetResource,
+			"kubectlDescribeResource":       kcRunner.DescribeResource,
+			"kubectlGetEvents":              kcRunner.GetEvents,
+			"kubectlGetResourceConsumption": kcRunner.GetResourceConsumption,
+			"kubectlLogs":                   kcRunner.Logs,
 		},
 	}
 }
@@ -112,6 +113,11 @@ func (i *assistant) handleThread(ctx context.Context, p *Payload) error {
 
 	i.cache.Set(p.MessageID, threadID)
 
+	i.log.WithFields(logrus.Fields{
+		"messageId": p.MessageID,
+		"threadId":  threadID,
+		"prompt":    p.Prompt,
+	}).Info("created a new assistant run")
 	run, err := i.openaiClient.CreateRun(ctx, threadID, openai.RunRequest{
 		AssistantID: i.assistID,
 	})
@@ -228,6 +234,7 @@ func (i *assistant) handleStatusRequiresAction(ctx context.Context, run openai.R
 
 		doer, found := i.tools[t.Function.Name]
 		if !found {
+			i.log.WithField("toolName", t.Function.Name).Warn("AI tool not found")
 			continue
 		}
 
