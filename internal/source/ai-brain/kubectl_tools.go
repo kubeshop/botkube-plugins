@@ -7,6 +7,8 @@ import (
 
 	"github.com/gookit/color"
 	"github.com/kubeshop/botkube/pkg/plugin"
+	"go.opentelemetry.io/otel/attribute"
+	"go.opentelemetry.io/otel/trace"
 )
 
 const (
@@ -51,16 +53,25 @@ type kubectlLogsArgs struct {
 
 // KubectlRunner is a runner that executes kubectl commands using a specific kubeconfig file.
 type KubectlRunner struct {
+	tracer         trace.Tracer
 	kubeconfigPath string
 }
 
 // NewKubectlRunner creates new runner instance.
-func NewKubectlRunner(kubeconfigPath string) *KubectlRunner {
-	return &KubectlRunner{kubeconfigPath: kubeconfigPath}
+func NewKubectlRunner(kubeconfigPath string, tracer trace.Tracer) *KubectlRunner {
+	return &KubectlRunner{
+		kubeconfigPath: kubeconfigPath,
+		tracer:         tracer,
+	}
 }
 
 // DescribeResource executes kubectl describe resource command.
 func (k *KubectlRunner) DescribeResource(ctx context.Context, rawArgs []byte) (string, error) {
+	ctx, span := k.tracer.Start(ctx, "aibrain.KubectlRunner.DescribeResource")
+	defer span.End()
+
+	span.SetAttributes(attribute.String("kubectlRunner.args", string(rawArgs)))
+
 	var args kubectlDescribeResourceArgs
 	if err := json.Unmarshal(rawArgs, &args); err != nil {
 		return "", fmt.Errorf("invalid arguments: %w", err)
@@ -79,6 +90,11 @@ func allNsIfPresent(namespaces bool) string {
 
 // GetResource executes kubectl get resource command.
 func (k *KubectlRunner) GetResource(ctx context.Context, rawArgs []byte) (string, error) {
+	ctx, span := k.tracer.Start(ctx, "aibrain.KubectlRunner.GetResource")
+	defer span.End()
+
+	span.SetAttributes(attribute.String("kubectlRunner.args", string(rawArgs)))
+
 	var args kubectlGetResourceArgs
 	if err := json.Unmarshal(rawArgs, &args); err != nil {
 		return "", fmt.Errorf("invalid arguments: %w", err)
@@ -89,6 +105,11 @@ func (k *KubectlRunner) GetResource(ctx context.Context, rawArgs []byte) (string
 
 // GetEvents executes kubectl get events command.
 func (k *KubectlRunner) GetEvents(ctx context.Context, rawArgs []byte) (string, error) {
+	ctx, span := k.tracer.Start(ctx, "aibrain.KubectlRunner.GetEvents")
+	defer span.End()
+
+	span.SetAttributes(attribute.String("kubectlRunner.args", string(rawArgs)))
+
 	var args kubectlGetEventsArgs
 	if err := json.Unmarshal(rawArgs, &args); err != nil {
 		return "", fmt.Errorf("invalid arguments: %w", err)
@@ -106,6 +127,11 @@ func (k *KubectlRunner) GetEvents(ctx context.Context, rawArgs []byte) (string, 
 
 // TopPods executes kubectl top pods command.
 func (k *KubectlRunner) TopPods(ctx context.Context, rawArgs []byte) (string, error) {
+	ctx, span := k.tracer.Start(ctx, "aibrain.KubectlRunner.TopPods")
+	defer span.End()
+
+	span.SetAttributes(attribute.String("kubectlRunner.args", string(rawArgs)))
+
 	var args kubectlTopPodsArgs
 	if err := json.Unmarshal(rawArgs, &args); err != nil {
 		return "", fmt.Errorf("invalid arguments: %w", err)
@@ -116,6 +142,11 @@ func (k *KubectlRunner) TopPods(ctx context.Context, rawArgs []byte) (string, er
 
 // TopNodes executes kubectl top nodes command.
 func (k *KubectlRunner) TopNodes(ctx context.Context, rawArgs []byte) (string, error) {
+	ctx, span := k.tracer.Start(ctx, "aibrain.KubectlRunner.TopNodes")
+	defer span.End()
+
+	span.SetAttributes(attribute.String("kubectlRunner.args", string(rawArgs)))
+
 	var args kubectlTopNodesArgs
 	if err := json.Unmarshal(rawArgs, &args); err != nil {
 		return "", fmt.Errorf("invalid arguments: %w", err)
@@ -126,6 +157,11 @@ func (k *KubectlRunner) TopNodes(ctx context.Context, rawArgs []byte) (string, e
 
 // Logs executes kubectl logs command.
 func (k *KubectlRunner) Logs(ctx context.Context, rawArgs []byte) (string, error) {
+	ctx, span := k.tracer.Start(ctx, "aibrain.KubectlRunner.Logs")
+	defer span.End()
+
+	span.SetAttributes(attribute.String("kubectlRunner.args", string(rawArgs)))
+
 	var args kubectlLogsArgs
 	if err := json.Unmarshal(rawArgs, &args); err != nil {
 		return "", fmt.Errorf("invalid arguments: %w", err)
@@ -138,6 +174,9 @@ func (k *KubectlRunner) Logs(ctx context.Context, rawArgs []byte) (string, error
 }
 
 func (k *KubectlRunner) runKubectlCommand(ctx context.Context, cmd, ns string) (string, error) {
+	ctx, span := k.tracer.Start(ctx, "aibrain.KubectlRunner.runKubectlCommand")
+	defer span.End()
+
 	envs := map[string]string{
 		kubeconfigEnvVarName: k.kubeconfigPath,
 	}
@@ -147,6 +186,8 @@ func (k *KubectlRunner) runKubectlCommand(ctx context.Context, cmd, ns string) (
 	}
 
 	cmd = fmt.Sprintf("%s %s", kubectlBinaryName, cmd)
+	span.SetAttributes(attribute.String("kubectlRunner.cmd", cmd))
+
 	out, err := plugin.ExecuteCommand(ctx, cmd, plugin.ExecuteCommandEnvs(envs))
 
 	if out.ExitCode != 0 {

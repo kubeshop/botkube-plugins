@@ -10,6 +10,7 @@ import (
 	"github.com/kubeshop/botkube/pkg/api/source"
 	"github.com/kubeshop/botkube/pkg/loggerx"
 	pluginx "github.com/kubeshop/botkube/pkg/plugin"
+
 	"github.com/sirupsen/logrus"
 )
 
@@ -79,6 +80,7 @@ func (s *Source) Stream(ctx context.Context, in source.StreamInput) (source.Stre
 	if err != nil {
 		return source.StreamOutput{}, fmt.Errorf("while merging input configs: %w", err)
 	}
+	cfg.Version = s.version
 	s.log = loggerx.New(cfg.Log)
 
 	sourceName := in.Context.SourceName
@@ -99,14 +101,14 @@ func (s *Source) Stream(ctx context.Context, in source.StreamInput) (source.Stre
 }
 
 // HandleExternalRequest handles incoming payload and returns an event based on it.
-func (s *Source) HandleExternalRequest(_ context.Context, in source.ExternalRequestInput) (source.ExternalRequestOutput, error) {
+func (s *Source) HandleExternalRequest(ctx context.Context, in source.ExternalRequestInput) (source.ExternalRequestOutput, error) {
 	s.log.Infof("Handling external request for source: %s", in.Context.SourceName)
 	instance, ok := s.instances.Load(in.Context.SourceName)
 	if !ok {
 		return source.ExternalRequestOutput{}, fmt.Errorf("source %q not found", in.Context.SourceName)
 	}
 
-	resp, err := instance.(*assistant).handle(in)
+	resp, err := instance.(*assistant).handle(context.Background(), in)
 	if err != nil {
 		return source.ExternalRequestOutput{}, fmt.Errorf("while processing payload: %w", err)
 	}

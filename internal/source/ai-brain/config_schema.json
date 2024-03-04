@@ -13,6 +13,16 @@
       "title": "OpenAI Assistant Id",
       "default": "asst_eMM9QaWLi6cajHE4PdG1yU53"
     },
+    "honeycombAPIKey": {
+      "type": "string",
+      "title": "Honeycomb API key for opentelemtry",
+      "default": ""
+    },
+    "HoneycombSampleRate": {
+      "type": "integer",
+      "title": "Honeycomb Tracing sample rate",
+      "default": 1
+    },
     "log": {
       "title": "Logging",
       "description": "Logging configuration for the plugin.",

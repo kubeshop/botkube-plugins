@@ -10,7 +10,13 @@ import (
 	"strings"
 	"time"
 
+	"github.com/kubeshop/botkube-cloud-plugins/internal/otelx"
 	"github.com/kubeshop/botkube-cloud-plugins/internal/remote"
+	"go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp"
+	"go.opentelemetry.io/otel"
+	"go.opentelemetry.io/otel/attribute"
+	"go.opentelemetry.io/otel/codes"
+	"go.opentelemetry.io/otel/trace"
 
 	"github.com/kubeshop/botkube/pkg/api"
 	"github.com/kubeshop/botkube/pkg/api/source"
@@ -24,6 +30,8 @@ const (
 	openAIPollInterval      = 2 * time.Second
 	maxToolExecutionRetries = 3
 	quotaExceededErrCode    = "quota_exceeded"
+	tracerName              = "source.aibrain"
+	serviceName             = "botkube-plugins-source-ai-brain"
 )
 
 type tool func(ctx context.Context, args []byte) (string, error)
@@ -41,10 +49,20 @@ type assistant struct {
 	assistID     string
 	tools        map[string]tool
 	cache        *cache
+	tracer       trace.Tracer
 }
 
 func newAssistant(cfg *Config, log logrus.FieldLogger, out chan source.Event, kubeConfigPath string) *assistant {
-	kcRunner := NewKubectlRunner(kubeConfigPath)
+	if cfg.HoneycombAPIKey != "" {
+		log.Debug("Setting up opentelemetry with honeycomb")
+		_, err := otelx.Init(cfg.HoneycombAPIKey, serviceName, cfg.HoneycombSampleRate, cfg.Version)
+		if err != nil {
+			log.WithError(err).Error("failed to initilise otel with honeycomb")
+		}
+	}
+	tracer := otel.Tracer(serviceName)
+
+	kcRunner := NewKubectlRunner(kubeConfigPath, tracer)
 
 	config := openai.DefaultConfig("")
 	config.HTTPClient = &http.Client{
@@ -55,6 +73,7 @@ func newAssistant(cfg *Config, log logrus.FieldLogger, out chan source.Event, ku
 	return &assistant{
 		log:          log,
 		out:          out,
+		tracer:       tracer,
 		openaiClient: openai.NewClientWithConfig(config),
 		assistID:     cfg.OpenAIAssistantID,
 		cache:        newCache(cacheTTL),
@@ -69,7 +88,7 @@ func newAssistant(cfg *Config, log logrus.FieldLogger, out chan source.Event, ku
 	}
 }
 
-func (i *assistant) handle(in source.ExternalRequestInput) (api.Message, error) {
+func (i *assistant) handle(ctx context.Context, in source.ExternalRequestInput) (api.Message, error) {
 	var p Payload
 
 	err := json.Unmarshal(in.Payload, &p)
@@ -82,7 +101,7 @@ func (i *assistant) handle(in source.ExternalRequestInput) (api.Message, error) 
 	}
 
 	go func() {
-		if err := i.handleThread(context.Background(), &p); err != nil {
+		if err := i.handleThread(ctx, &p); err != nil {
 			i.out <- source.Event{Message: i.handleThreadError(p.MessageID, err)}
 		}
 	}()
@@ -107,24 +126,40 @@ func (i *assistant) handleThreadError(messageID string, err error) api.Message {
 }
 
 // handleThread creates a new OpenAI assistant thread and handles the conversation.
-func (i *assistant) handleThread(ctx context.Context, p *Payload) error {
+func (i *assistant) handleThread(ctx context.Context, p *Payload) (err error) {
+	ctx, span := i.tracer.Start(ctx, "aibrain.assistant.handleThread")
+	defer span.End()
+
 	var thread openai.Thread
-	var err error
+
+	defer func() {
+		if err != nil {
+			span.RecordError(err)
+			span.SetStatus(codes.Error, err.Error())
+		}
+	}()
 
 	// First we check if we have a cached thread ID for the given message ID.
 	threadID, ok := i.cache.Get(p.MessageID)
 	if ok {
+		span.AddEvent("Found an existing thread in the internal cache.")
 		err = i.createNewMessage(ctx, threadID, p)
 		if err != nil {
 			return fmt.Errorf("while creating a new message on a thread: %w", err)
 		}
 	} else {
+		span.AddEvent("Existing thread was not found in the internal cache.")
 		thread, err = i.createNewThread(ctx, p)
 		if err != nil {
 			return fmt.Errorf("while creating a new thread: %w", err)
 		}
 		threadID = thread.ID
 	}
+
+	span.SetAttributes(
+		attribute.String("openai.threadId", threadID),
+		attribute.String("payload.messageId", p.MessageID),
+	)
 
 	i.cache.Set(p.MessageID, threadID)
 
@@ -182,6 +217,9 @@ func (i *assistant) handleThread(ctx context.Context, p *Payload) error {
 }
 
 func (i *assistant) createNewThread(ctx context.Context, p *Payload) (openai.Thread, error) {
+	ctx, span := i.tracer.Start(ctx, "aibrain.assistant.createNewThread")
+	defer span.End()
+
 	return i.openaiClient.CreateThread(ctx, openai.ThreadRequest{
 		Metadata: map[string]any{
 			"messageId":  p.MessageID,
@@ -197,6 +235,9 @@ func (i *assistant) createNewThread(ctx context.Context, p *Payload) (openai.Thr
 }
 
 func (i *assistant) createNewMessage(ctx context.Context, threadID string, p *Payload) error {
+	ctx, span := i.tracer.Start(ctx, "aibrain.assistant.createNewMessage")
+	defer span.End()
+
 	_, err := i.openaiClient.CreateMessage(ctx, threadID, openai.MessageRequest{
 		Role:    openai.ChatMessageRoleUser,
 		Content: p.Prompt,
@@ -205,10 +246,16 @@ func (i *assistant) createNewMessage(ctx context.Context, threadID string, p *Pa
 }
 
 func (i *assistant) handleStatusCompleted(ctx context.Context, run openai.Run, p *Payload) error {
+	ctx, span := i.tracer.Start(ctx, "aibrain.assistant.handleStatusCompleted")
+	defer span.End()
+
 	limit := 1
 	msgList, err := i.openaiClient.ListMessage(ctx, run.ThreadID, &limit, nil, nil, nil)
 	if err != nil {
-		return fmt.Errorf("while getting assistant messages response: %w", err)
+		err = fmt.Errorf("while getting assistant messages response: %w", err)
+		span.RecordError(err)
+		span.SetStatus(codes.Error, err.Error())
+		return err
 	}
 
 	// We're listing messages in a thread. They are ordered in desc order. If
@@ -239,6 +286,9 @@ func (i *assistant) handleStatusCompleted(ctx context.Context, run openai.Run, p
 }
 
 func (i *assistant) handleStatusRequiresAction(ctx context.Context, run openai.Run) error {
+	ctx, span := i.tracer.Start(ctx, "aibrain.assistant.handleStatusRequiresAction")
+	defer span.End()
+
 	// That should never happen, unless there is a bug or something	is wrong with OpenAI APIs.
 	if run.RequiredAction == nil || run.RequiredAction.SubmitToolOutputs == nil {
 		return errors.New("run.RequiredAction or run.RequiredAction.SubmitToolOutputs is nil, that should not happen")
@@ -258,6 +308,8 @@ func (i *assistant) handleStatusRequiresAction(ctx context.Context, run openai.R
 
 		out, err := doer(ctx, []byte(t.Function.Arguments))
 		if err != nil {
+			span.RecordError(err)
+			span.SetStatus(codes.Error, err.Error())
 			return err
 		}
 
@@ -271,19 +323,22 @@ func (i *assistant) handleStatusRequiresAction(ctx context.Context, run openai.R
 		ToolOutputs: toolOutputs,
 	})
 	if err != nil {
-		return fmt.Errorf("while submitting tool outputs: %w", err)
+		err = fmt.Errorf("while submitting tool outputs: %w", err)
+		span.RecordError(err)
+		span.SetStatus(codes.Error, err.Error())
+		return err
 	}
 
 	return nil
 }
 
 type apiKeySecuredTransport struct {
-	transport *http.Transport
+	transport http.RoundTripper
 }
 
 func newAPIKeySecuredTransport() *apiKeySecuredTransport {
 	return &apiKeySecuredTransport{
-		transport: http.DefaultTransport.(*http.Transport).Clone(),
+		transport: otelhttp.NewTransport(http.DefaultTransport),
 	}
 }
 
