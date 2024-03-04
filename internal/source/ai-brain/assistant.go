@@ -22,6 +22,7 @@ const (
 	cacheTTL                = 8 * time.Hour
 	openAIPollInterval      = 2 * time.Second
 	maxToolExecutionRetries = 3
+	quotaExceededErrCode    = "quota_exceeded"
 )
 
 type tool func(ctx context.Context, args []byte) (string, error)
@@ -81,6 +82,14 @@ func (i *assistant) handle(in source.ExternalRequestInput) (api.Message, error) 
 
 	go func() {
 		if err := i.handleThread(context.Background(), &p); err != nil {
+			unwrappedErr := errors.Unwrap(err)
+			openAIErr, ok := unwrappedErr.(*openai.APIError)
+			if ok && openAIErr != nil && openAIErr.Code == quotaExceededErrCode && openAIErr.Type == quotaExceededErrCode {
+				i.log.Info("Handling quota exceeded error")
+				i.out <- source.Event{Message: msgQuotaExceeded(p.MessageID)}
+				return
+			}
+
 			// TODO: It would be great to send the user prompt and error message
 			// back to us for analysis and potential fixing, enhancing our prompt.
 			// Our privacy policy allows us to do so.
