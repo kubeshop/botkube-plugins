@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"net/http"
 	"os"
+	"strings"
 	"time"
 
 	"github.com/kubeshop/botkube-cloud-plugins/internal/remote"
@@ -127,11 +128,12 @@ func (i *assistant) handleThread(ctx context.Context, p *Payload) error {
 
 	i.cache.Set(p.MessageID, threadID)
 
-	i.log.WithFields(logrus.Fields{
+	log := i.log.WithFields(logrus.Fields{
 		"messageId": p.MessageID,
 		"threadId":  threadID,
 		"prompt":    p.Prompt,
-	}).Info("created a new assistant run")
+	})
+	log.Info("created a new assistant run")
 	run, err := i.openaiClient.CreateRun(ctx, threadID, openai.RunRequest{
 		AssistantID: i.assistID,
 	})
@@ -143,6 +145,7 @@ func (i *assistant) handleThread(ctx context.Context, p *Payload) error {
 	return wait.PollUntilContextCancel(ctx, openAIPollInterval, false, func(ctx context.Context) (bool, error) {
 		run, err = i.openaiClient.RetrieveRun(ctx, run.ThreadID, run.ID)
 		if err != nil {
+			log.WithError(err).Error("failed to retrieve assistant thread run")
 			return false, fmt.Errorf("while retrieving assistant thread run: %w", err)
 		}
 
@@ -153,7 +156,7 @@ func (i *assistant) handleThread(ctx context.Context, p *Payload) error {
 
 		switch run.Status {
 		case openai.RunStatusCancelling, openai.RunStatusFailed:
-			return false, fmt.Errorf("got unexpected status: %s", run.Status)
+			return true, fmt.Errorf("got unexpected status: %s", run.Status)
 
 		case openai.RunStatusExpired:
 			i.cache.Delete(p.MessageID)
@@ -226,6 +229,7 @@ func (i *assistant) handleStatusCompleted(ctx context.Context, run openai.Run, p
 			continue
 		}
 
+		c.Text.Value = strings.ReplaceAll(c.Text.Value, "%", "%%")
 		i.out <- source.Event{
 			Message: msgAIAnswer(p.MessageID, c.Text.Value),
 		}
