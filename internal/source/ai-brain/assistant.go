@@ -101,7 +101,7 @@ func (i *assistant) handleThreadError(messageID string, err error) api.Message {
 		return msgQuotaExceeded(messageID)
 	}
 
-	log.WithError(err).WithField("messageID", messageID).Error("Failed to handle user prompt")
+	log.Error("Failed to handle user prompt")
 	return msgUnableToHelp(messageID)
 }
 
