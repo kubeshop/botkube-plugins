@@ -22,6 +22,7 @@ const (
 	cacheTTL                = 8 * time.Hour
 	openAIPollInterval      = 2 * time.Second
 	maxToolExecutionRetries = 3
+	quotaExceededErrCode    = "quota_exceeded"
 )
 
 type tool func(ctx context.Context, args []byte) (string, error)
@@ -81,15 +82,27 @@ func (i *assistant) handle(in source.ExternalRequestInput) (api.Message, error) 
 
 	go func() {
 		if err := i.handleThread(context.Background(), &p); err != nil {
-			// TODO: It would be great to send the user prompt and error message
-			// back to us for analysis and potential fixing, enhancing our prompt.
-			// Our privacy policy allows us to do so.
-			i.out <- source.Event{Message: msgUnableToHelp(p.MessageID)}
-			i.log.WithError(err).Error("failed to handle request")
+			i.out <- source.Event{Message: i.handleThreadError(p.MessageID, err)}
 		}
 	}()
 
 	return pickQuickResponse(p.MessageID), nil
+}
+
+// TODO: Send the user prompt and error message back to us for analysis and potential fixing, enhancing our prompt.
+// Our privacy policy allows us to do so.
+func (i *assistant) handleThreadError(messageID string, err error) api.Message {
+	log := i.log.WithError(err).WithField("messageID", messageID)
+
+	var openAIErr *openai.APIError
+	ok := errors.As(err, &openAIErr)
+	if ok && openAIErr != nil && openAIErr.Code == quotaExceededErrCode && openAIErr.Type == quotaExceededErrCode {
+		log.Info("Handling quota exceeded error")
+		return msgQuotaExceeded(messageID)
+	}
+
+	log.Error("Failed to handle user prompt")
+	return msgUnableToHelp(messageID)
 }
 
 // handleThread creates a new OpenAI assistant thread and handles the conversation.
