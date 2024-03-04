@@ -36,7 +36,7 @@ func mergeConfigs(configs []*source.Config) (*Config, error) {
 	defaults := &Config{
 		OpenAIAssistantID: assistantID,
 		Log: config.Logger{
-			Level:     "info",
+			Level:     "debug",
 			Formatter: "json",
 		},
 	}

@@ -148,6 +148,11 @@ func (k *KubectlRunner) runKubectlCommand(ctx context.Context, cmd, ns string) (
 
 	cmd = fmt.Sprintf("%s %s", kubectlBinaryName, cmd)
 	out, err := plugin.ExecuteCommand(ctx, cmd, plugin.ExecuteCommandEnvs(envs))
+
+	if out.ExitCode != 0 {
+		return fmt.Sprintf("kubectl command failed: %s", color.ClearCode(out.CombinedOutput())), nil
+	}
+
 	if err != nil {
 		return "", err
 	}
