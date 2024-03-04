@@ -117,38 +117,50 @@ var openAITools = []openai.AssistantTool{
 	{
 		Type: openai.AssistantToolType(openai.ToolTypeFunction),
 		Function: &openai.FunctionDefinition{
-			Name: "kubectlGetResourceConsumption",
+			Name: "kubectlTopPods",
 			Description: heredoc.Doc(`
-					Returns the CPU and memory usage for nodes or pods. Examples:
+					Returns the CPU and memory usage for Pods. Examples:
 					  # Show metrics for all pods in the default namespace
 					  kubectl top pod
 					  # Show metrics for all pods in the given namespace
 					  kubectl top pod --namespace=NAMESPACE
 					  # Show metrics for a given pod and its containers
-					  kubectl top pod POD_NAME --containers
-					  # Show metrics for all nodes
-					  kubectl top node
-					  # Show metrics for a given node
-					  kubectl top node NODE_NAME`),
+					  kubectl top pod POD_NAME --containers`),
 			Parameters: jsonschema.Definition{
 				Type: jsonschema.Object,
 				Properties: map[string]jsonschema.Definition{
-
 					"namespace": {
 						Type:        jsonschema.String,
 						Description: "Kubernetes namespace, e.g. kube-system. It can be used only for pods.",
-					},
-					"resource_type": {
-						Type:        jsonschema.String,
-						Description: "Kubernetes pod name, e.g. botkube-6c6fd8b4d6-f559q",
-						Enum:        []string{"node", "pod"},
 					},
 					"resource_name": {
 						Type:        jsonschema.String,
 						Description: "The pod or node name, e.g. botkube-api-server.",
 					},
 				},
-				Required: []string{"resource_type"},
+				Required: []string{"namespace"},
+			},
+		},
+	},
+	{
+		Type: openai.AssistantToolType(openai.ToolTypeFunction),
+		Function: &openai.FunctionDefinition{
+			Name: "kubectlTopNodes",
+			Description: heredoc.Doc(`
+					Returns the CPU and memory usage for Nodes. Examples:
+					  # Show metrics for all nodes
+					  kubectl top node
+					
+					  # Show metrics for a given node
+					  kubectl top node NODE_NAME`),
+			Parameters: jsonschema.Definition{
+				Type: jsonschema.Object,
+				Properties: map[string]jsonschema.Definition{
+					"resource_name": {
+						Type:        jsonschema.String,
+						Description: "The pod or node name, e.g. botkube-api-server.",
+					},
+				},
 			},
 		},
 	},

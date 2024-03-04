@@ -57,11 +57,12 @@ func newAssistant(cfg *Config, log logrus.FieldLogger, out chan source.Event, ku
 		assistID:     cfg.OpenAIAssistantID,
 		cache:        newCache(cacheTTL),
 		tools: map[string]tool{
-			"kubectlGetResource":            kcRunner.GetResource,
-			"kubectlDescribeResource":       kcRunner.DescribeResource,
-			"kubectlGetEvents":              kcRunner.GetEvents,
-			"kubectlGetResourceConsumption": kcRunner.GetResourceConsumption,
-			"kubectlLogs":                   kcRunner.Logs,
+			"kubectlGetResource":      kcRunner.GetResource,
+			"kubectlDescribeResource": kcRunner.DescribeResource,
+			"kubectlGetEvents":        kcRunner.GetEvents,
+			"kubectlTopPods":          kcRunner.TopPods,
+			"kubectlTopNodes":         kcRunner.TopNodes,
+			"kubectlLogs":             kcRunner.Logs,
 		},
 	}
 }
@@ -82,7 +83,7 @@ func (i *assistant) handle(in source.ExternalRequestInput) (api.Message, error) 
 		if err := i.handleThread(context.Background(), &p); err != nil {
 			// TODO: It would be great to send the user prompt and error message
 			// back to us for analysis and potential fixing, enhancing our prompt.
-			// can we do that @Blair?
+			// Our privacy policy allows us to do so.
 			i.out <- source.Event{Message: msgUnableToHelp(p.MessageID)}
 			i.log.WithError(err).Error("failed to handle request")
 		}

@@ -4,7 +4,6 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"strings"
 
 	"github.com/gookit/color"
 	"github.com/kubeshop/botkube/pkg/plugin"
@@ -30,10 +29,12 @@ type kubectlGetResourceArgs struct {
 	Namespace     string `json:"namespace,omitempty"`
 }
 
-type kubectlGetResourceConsumptionArgs struct {
-	ResourceType string `json:"resource_type"`
+type kubectlTopPodsArgs struct {
 	ResourceName string `json:"resource_name"`
 	Namespace    string `json:"namespace,omitempty"`
+}
+type kubectlTopNodesArgs struct {
+	ResourceName string `json:"resource_name"`
 }
 type kubectlGetEventsArgs struct {
 	Types         string `json:"types"`
@@ -103,19 +104,23 @@ func (k *KubectlRunner) GetEvents(ctx context.Context, rawArgs []byte) (string, 
 	return k.runKubectlCommand(ctx, cmd, args.Namespace)
 }
 
-// GetResourceConsumption executes kubectl top command.
-func (k *KubectlRunner) GetResourceConsumption(ctx context.Context, rawArgs []byte) (string, error) {
-	var args kubectlGetResourceConsumptionArgs
+// TopPods executes kubectl top pods command.
+func (k *KubectlRunner) TopPods(ctx context.Context, rawArgs []byte) (string, error) {
+	var args kubectlTopPodsArgs
 	if err := json.Unmarshal(rawArgs, &args); err != nil {
 		return "", fmt.Errorf("invalid arguments: %w", err)
 	}
-	cmd := fmt.Sprintf("top %s %s", args.ResourceType, args.ResourceName)
+	cmd := fmt.Sprintf("top pods %s", args.ResourceName)
+	return k.runKubectlCommand(ctx, cmd, args.Namespace)
+}
 
-	resType := strings.TrimSpace(args.ResourceType)
-	resType = strings.ToLower(resType)
-	if resType == "pod" && args.Namespace != "" {
-		cmd = fmt.Sprintf("%s -n %s", cmd, args.Namespace)
+// TopNodes executes kubectl top nodes command.
+func (k *KubectlRunner) TopNodes(ctx context.Context, rawArgs []byte) (string, error) {
+	var args kubectlTopNodesArgs
+	if err := json.Unmarshal(rawArgs, &args); err != nil {
+		return "", fmt.Errorf("invalid arguments: %w", err)
 	}
+	cmd := fmt.Sprintf("top nodes %s", args.ResourceName)
 	return k.runKubectlCommand(ctx, cmd, "")
 }
 
