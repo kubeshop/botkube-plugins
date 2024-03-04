@@ -82,23 +82,27 @@ func (i *assistant) handle(in source.ExternalRequestInput) (api.Message, error) 
 
 	go func() {
 		if err := i.handleThread(context.Background(), &p); err != nil {
-			unwrappedErr := errors.Unwrap(err)
-			openAIErr, ok := unwrappedErr.(*openai.APIError)
-			if ok && openAIErr != nil && openAIErr.Code == quotaExceededErrCode && openAIErr.Type == quotaExceededErrCode {
-				i.log.Info("Handling quota exceeded error")
-				i.out <- source.Event{Message: msgQuotaExceeded(p.MessageID)}
-				return
-			}
-
-			// TODO: It would be great to send the user prompt and error message
-			// back to us for analysis and potential fixing, enhancing our prompt.
-			// Our privacy policy allows us to do so.
-			i.out <- source.Event{Message: msgUnableToHelp(p.MessageID)}
-			i.log.WithError(err).Error("failed to handle request")
+			i.out <- source.Event{Message: i.handleThreadError(p.MessageID, err)}
 		}
 	}()
 
 	return pickQuickResponse(p.MessageID), nil
+}
+
+// TODO: Send the user prompt and error message back to us for analysis and potential fixing, enhancing our prompt.
+// Our privacy policy allows us to do so.
+func (i *assistant) handleThreadError(messageID string, err error) api.Message {
+	log := i.log.WithError(err).WithField("messageID", messageID)
+
+	var openAIErr *openai.APIError
+	ok := errors.As(err, &openAIErr)
+	if ok && openAIErr != nil && openAIErr.Code == quotaExceededErrCode && openAIErr.Type == quotaExceededErrCode {
+		log.Info("Handling quota exceeded error")
+		return msgQuotaExceeded(messageID)
+	}
+
+	log.WithError(err).WithField("messageID", messageID).Error("Failed to handle user prompt")
+	return msgUnableToHelp(messageID)
 }
 
 // handleThread creates a new OpenAI assistant thread and handles the conversation.
