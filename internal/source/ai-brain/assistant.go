@@ -57,10 +57,12 @@ func newAssistant(cfg *Config, log logrus.FieldLogger, out chan source.Event, ku
 		assistID:     cfg.OpenAIAssistantID,
 		cache:        newCache(cacheTTL),
 		tools: map[string]tool{
-			"kubectlGetPods":     kcRunner.GetPods,
-			"kubectlGetSecrets":  kcRunner.GetSecrets,
-			"kubectlDescribePod": kcRunner.DescribePod,
-			"kubectlLogs":        kcRunner.Logs,
+			"kubectlGetResource":      kcRunner.GetResource,
+			"kubectlDescribeResource": kcRunner.DescribeResource,
+			"kubectlGetEvents":        kcRunner.GetEvents,
+			"kubectlTopPods":          kcRunner.TopPods,
+			"kubectlTopNodes":         kcRunner.TopNodes,
+			"kubectlLogs":             kcRunner.Logs,
 		},
 	}
 }
@@ -81,7 +83,7 @@ func (i *assistant) handle(in source.ExternalRequestInput) (api.Message, error) 
 		if err := i.handleThread(context.Background(), &p); err != nil {
 			// TODO: It would be great to send the user prompt and error message
 			// back to us for analysis and potential fixing, enhancing our prompt.
-			// can we do that @Blair?
+			// Our privacy policy allows us to do so.
 			i.out <- source.Event{Message: msgUnableToHelp(p.MessageID)}
 			i.log.WithError(err).Error("failed to handle request")
 		}
@@ -112,6 +114,11 @@ func (i *assistant) handleThread(ctx context.Context, p *Payload) error {
 
 	i.cache.Set(p.MessageID, threadID)
 
+	i.log.WithFields(logrus.Fields{
+		"messageId": p.MessageID,
+		"threadId":  threadID,
+		"prompt":    p.Prompt,
+	}).Info("created a new assistant run")
 	run, err := i.openaiClient.CreateRun(ctx, threadID, openai.RunRequest{
 		AssistantID: i.assistID,
 	})
@@ -228,6 +235,7 @@ func (i *assistant) handleStatusRequiresAction(ctx context.Context, run openai.R
 
 		doer, found := i.tools[t.Function.Name]
 		if !found {
+			i.log.WithField("toolName", t.Function.Name).Warn("AI tool not found")
 			continue
 		}
 

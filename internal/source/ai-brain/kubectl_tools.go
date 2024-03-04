@@ -15,19 +15,32 @@ const (
 	kubeconfigEnvVarName = "KUBECONFIG"
 )
 
-type kubectlDescribePodArgs struct {
-	Namespace string `json:"namespace,omitempty"`
-	PodName   string `json:"pod_name,omitempty"`
+type kubectlDescribeResourceArgs struct {
+	ResourceType  string `json:"resource_type"`
+	ResourceName  string `json:"resource_name"`
+	AllNamespaces bool   `json:"all-namespaces"`
+	Namespace     string `json:"namespace,omitempty"`
 }
 
-type kubectlGetPodsArgs struct {
-	Namespace string `json:"namespace,omitempty"`
-	PodName   string `json:"pod_name,omitempty"`
+type kubectlGetResourceArgs struct {
+	ResourceType  string `json:"resource_type"`
+	ResourceName  string `json:"resource_name"`
+	AllNamespaces bool   `json:"all-namespaces"`
+	Namespace     string `json:"namespace,omitempty"`
 }
 
-type kubectlGetSecretsArgs struct {
-	Namespace  string `json:"namespace,omitempty"`
-	SecretName string `json:"secret_name,omitempty"`
+type kubectlTopPodsArgs struct {
+	ResourceName string `json:"resource_name"`
+	Namespace    string `json:"namespace,omitempty"`
+}
+type kubectlTopNodesArgs struct {
+	ResourceName string `json:"resource_name"`
+}
+type kubectlGetEventsArgs struct {
+	Types         string `json:"types"`
+	For           string `json:"for"`
+	AllNamespaces bool   `json:"all-namespaces"`
+	Namespace     string `json:"namespace,omitempty"`
 }
 
 type kubectlLogsArgs struct {
@@ -46,35 +59,69 @@ func NewKubectlRunner(kubeconfigPath string) *KubectlRunner {
 	return &KubectlRunner{kubeconfigPath: kubeconfigPath}
 }
 
-// DescribePod executes kubectl describe pod command.
-func (k *KubectlRunner) DescribePod(ctx context.Context, rawArgs []byte) (string, error) {
-	var args kubectlDescribePodArgs
+// DescribeResource executes kubectl describe resource command.
+func (k *KubectlRunner) DescribeResource(ctx context.Context, rawArgs []byte) (string, error) {
+	var args kubectlDescribeResourceArgs
 	if err := json.Unmarshal(rawArgs, &args); err != nil {
 		return "", fmt.Errorf("invalid arguments: %w", err)
 	}
 
-	cmd := fmt.Sprintf("describe pod %s", args.PodName)
+	cmd := fmt.Sprintf("describe %s %s %s", args.ResourceType, args.ResourceName, allNsIfPresent(args.AllNamespaces))
 	return k.runKubectlCommand(ctx, cmd, args.Namespace)
 }
 
-// GetPods executes kubectl get pods command.
-func (k *KubectlRunner) GetPods(ctx context.Context, rawArgs []byte) (string, error) {
-	var args kubectlGetPodsArgs
+func allNsIfPresent(namespaces bool) string {
+	if namespaces {
+		return "--all-namespaces"
+	}
+	return ""
+}
+
+// GetResource executes kubectl get resource command.
+func (k *KubectlRunner) GetResource(ctx context.Context, rawArgs []byte) (string, error) {
+	var args kubectlGetResourceArgs
 	if err := json.Unmarshal(rawArgs, &args); err != nil {
 		return "", fmt.Errorf("invalid arguments: %w", err)
 	}
-	cmd := fmt.Sprintf("get pod %s", args.PodName)
+	cmd := fmt.Sprintf("get %s %s %s", args.ResourceType, args.ResourceName, allNsIfPresent(args.AllNamespaces))
 	return k.runKubectlCommand(ctx, cmd, args.Namespace)
 }
 
-// GetSecrets executes kubectl get secrets command.
-func (k *KubectlRunner) GetSecrets(ctx context.Context, rawArgs []byte) (string, error) {
-	var args kubectlGetSecretsArgs
+// GetEvents executes kubectl get events command.
+func (k *KubectlRunner) GetEvents(ctx context.Context, rawArgs []byte) (string, error) {
+	var args kubectlGetEventsArgs
 	if err := json.Unmarshal(rawArgs, &args); err != nil {
 		return "", fmt.Errorf("invalid arguments: %w", err)
 	}
-	cmd := fmt.Sprintf("get secrets %s", args.SecretName)
+	cmd := fmt.Sprintf("events %s", allNsIfPresent(args.AllNamespaces))
+
+	if args.Types != "" {
+		cmd = fmt.Sprintf("%s --type %s", cmd, args.Types)
+	}
+	if args.For != "" {
+		cmd = fmt.Sprintf("%s --for %s", cmd, args.For)
+	}
 	return k.runKubectlCommand(ctx, cmd, args.Namespace)
+}
+
+// TopPods executes kubectl top pods command.
+func (k *KubectlRunner) TopPods(ctx context.Context, rawArgs []byte) (string, error) {
+	var args kubectlTopPodsArgs
+	if err := json.Unmarshal(rawArgs, &args); err != nil {
+		return "", fmt.Errorf("invalid arguments: %w", err)
+	}
+	cmd := fmt.Sprintf("top pods %s", args.ResourceName)
+	return k.runKubectlCommand(ctx, cmd, args.Namespace)
+}
+
+// TopNodes executes kubectl top nodes command.
+func (k *KubectlRunner) TopNodes(ctx context.Context, rawArgs []byte) (string, error) {
+	var args kubectlTopNodesArgs
+	if err := json.Unmarshal(rawArgs, &args); err != nil {
+		return "", fmt.Errorf("invalid arguments: %w", err)
+	}
+	cmd := fmt.Sprintf("top nodes %s", args.ResourceName)
+	return k.runKubectlCommand(ctx, cmd, "")
 }
 
 // Logs executes kubectl logs command.
