@@ -18,6 +18,9 @@ type Config struct {
 	Log                   config.Logger `yaml:"log"`
 	OpenAICloudServiceURL string        `yaml:"openAICloudServiceURL"`
 	OpenAIAssistantID     string        `yaml:"openAIAssistantId"`
+	HoneycombAPIKey       string        `yaml:"honeycombAPIKey"`
+	HoneycombSampleRate   int           `yaml:"HoneycombSampleRate"`
+	Version               string
 }
 
 // Validate validates the configuration.
@@ -27,19 +30,21 @@ func (c *Config) Validate() error {
 		issues = multierror.Append(issues, errors.New("the Open AI Assistant ID cannot be empty"))
 	}
 	if c.OpenAICloudServiceURL == "" {
-		issues = multierror.Append(issues, errors.New("the Open AI API key cannot be empty"))
+		issues = multierror.Append(issues, errors.New("the Open AI Cloud Service URL cannot be empty"))
 	}
 	return issues.ErrorOrNil()
 }
 
 func mergeConfigs(configs []*source.Config) (*Config, error) {
 	defaults := &Config{
-		OpenAIAssistantID: assistantID,
+		OpenAIAssistantID:   assistantID,
+		HoneycombSampleRate: 1,
 		Log: config.Logger{
 			Level:     "debug",
 			Formatter: "json",
 		},
 	}
+
 	var cfg *Config
 	if err := pluginx.MergeSourceConfigsWithDefaults(defaults, configs, &cfg); err != nil {
 		return nil, err
