@@ -38,19 +38,12 @@ var (
 		"I'll get back to you with the best possible answer.",
 	}
 
-	reSlackEscapeCodeBlocks  = regexp.MustCompile("`(.*?)`")
-	reSlackBoldText          = regexp.MustCompile(`\*\*(.*?)\*\*`)
-	reSlackItalicText        = regexp.MustCompile(`_([^_]+)_`)
-	reSlackStrikethroughText = regexp.MustCompile(`~~([^~]+)~~`)
-	reSlackHeadings          = regexp.MustCompile(`^#+ (.*)$`)
-	reSlackLinks             = regexp.MustCompile(`\[([^\]]+)]\(([^)]+)\)`)
-	reSlackImages            = regexp.MustCompile(`!\[([^\]]+)]\(([^)]+)\)`)
-
-	reTeamsBold          = regexp.MustCompile(`\*\*(.*?)\*\*`)
-	reTeamsItalic        = regexp.MustCompile(`_([^_]+)_`)
-	reTeamsStrikethrough = regexp.MustCompile(`~~([^~]+)~~`)
-	reTeamsHeading       = regexp.MustCompile(`^#+ (.*)$`)
-	reTeamsImageLink     = regexp.MustCompile(`!\[([^\]]+)]\(([^)]+)\)`)
+	multiLineCodeBlockWithLang = regexp.MustCompile(`(?m)\x60\x60\x60.*`) // \x60 is the backtick
+	mdBold                     = regexp.MustCompile(`\*\*(.*?)\*\*`)
+	mdStrikethrough            = regexp.MustCompile(`~~([^~]+)~~`)
+	mdHeadings                 = regexp.MustCompile(`(?m)^#+ (.*)$`) // (?m) for multiline, see the "grouping" section at https://pkg.go.dev/regexp/syntax
+	mdLinks                    = regexp.MustCompile(`\[([^\]]+)]\(([^)]+)\)`)
+	mdImages                   = regexp.MustCompile(`!\[([^\]]+)]\(([^)]+)\)`)
 )
 
 func pickQuickResponse(messageID string) api.Message {
@@ -114,18 +107,29 @@ func msgNoAIAnswer(messageID string) api.Message {
 }
 
 func msgAIAnswer(messageID, text string) api.Message {
-	convertedText := markdownToSlack(text)
-
 	if strings.Contains(messageID, teamsMessageIDSubstr) {
-		convertedText = markdownToTeams(text)
+		return api.Message{
+			ParentActivityID: messageID,
+			BaseBody: api.Body{
+				// We use the Plaintext to make sure that Teams renderer will send
+				// as simplified card (https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/format-your-bot-messages#format-text-content)
+				// instead of AdaptiveCard (https://learn.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-format?tabs=adaptive-md%2Cdesktop%2Cconnector-html#format-cards-with-markdown)
+				// which doesn't support most of the markdown elements.
+				Plaintext: markdownToTeams(text),
+			},
+		}
 	}
 
+	// messageID is set only for Teams or Slack, for others like Discord, Mattermost, we keep the original formatting
+	if messageID != "" {
+		text = markdownToSlack(text)
+	}
 	return api.Message{
 		ParentActivityID: messageID,
 		Sections: []api.Section{
 			{
 				Base: api.Base{
-					Body: api.Body{Plaintext: convertedText},
+					Body: api.Body{Plaintext: text},
 				},
 				Context: []api.ContextItem{
 					{Text: "AI-generated content may be incorrect."},
@@ -135,23 +139,20 @@ func msgAIAnswer(messageID, text string) api.Message {
 	}
 }
 
-func markdownToSlack(markdownText string) string {
-	text := reSlackEscapeCodeBlocks.ReplaceAllString(markdownText, "`$1`")
-	text = reSlackBoldText.ReplaceAllString(text, "*$1*")
-	text = reSlackItalicText.ReplaceAllString(text, "_$1_")
-	text = reSlackStrikethroughText.ReplaceAllString(text, "~$1~")
-	text = reSlackHeadings.ReplaceAllString(text, "*$1*")
-	text = reSlackLinks.ReplaceAllString(text, "<$2|$1>")
-	return reSlackImages.ReplaceAllString(text, "<$2|$1>")
+func markdownToSlack(text string) string {
+	text = mdBold.ReplaceAllString(text, "*$1*")
+	// italic not needed
+	// single code not needed
+	text = mdStrikethrough.ReplaceAllString(text, "~$1~")
+	text = mdHeadings.ReplaceAllString(text, "*$1*")
+	text = mdImages.ReplaceAllString(text, "<$2|$1>")               // this needs to be first otherwise we will end up with changing ![]() to  !<>
+	text = multiLineCodeBlockWithLang.ReplaceAllString(text, "```") // drop the syntax name for multi-line code blocks
+	return mdLinks.ReplaceAllString(text, "<$2|$1>")
 }
 
-func markdownToTeams(markdownText string) string {
-	text := reTeamsBold.ReplaceAllString(markdownText, "**$1**")
-	text = reTeamsItalic.ReplaceAllString(text, "_$1_")
-	text = reTeamsStrikethrough.ReplaceAllString(text, "<s>$1</s>")
-	text = reTeamsHeading.ReplaceAllString(text, "**$1**")
-
-	// Images in Teams require specific upload mechanisms;
-	//  here, we'll just preserve the image link
-	return reTeamsImageLink.ReplaceAllString(text, "(Image: $2)")
+func markdownToTeams(text string) string {
+	text = mdHeadings.ReplaceAllString(text, "**$1**")
+	text = mdImages.ReplaceAllString(text, "[$1]($2)")     // get rid of ! to define it as a link instead of image
+	text += "\n~AI-generated content may be incorrect.~\n" // add the warning
+	return text
 }
