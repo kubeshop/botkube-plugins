@@ -142,20 +142,20 @@ var depsDownloadLinks = map[string]api.Dependency{
 		URLs: map[string]string{
 			// Using go-getter syntax to unwrap the underlying directory structure.
 			// Read more on https://github.com/hashicorp/go-getter#subdirectories
-			"darwin/amd64": "https://github.com/cli/cli/releases/download/v2.29.0/gh_2.29.0_macOS_amd64.zip//gh_2.29.0_macOS_amd64/bin",
-			"darwin/arm64": "https://github.com/cli/cli/releases/download/v2.29.0/gh_2.29.0_macOS_arm64.zip//gh_2.29.0_macOS_arm64/bin",
-			"linux/amd64":  "https://github.com/cli/cli/releases/download/v2.29.0/gh_2.29.0_linux_amd64.zip//gh_2.29.0_linux_amd64/bin",
-			"linux/arm64":  "https://github.com/cli/cli/releases/download/v2.29.0/gh_2.29.0_linux_arm64.zip//gh_2.29.0_linux_arm64/bin",
-			"linux/386":    "https://github.com/cli/cli/releases/download/v2.29.0/gh_2.29.0_linux_386.zip//gh_2.29.0_linux_386/bin",
+			"darwin/amd64": "https://github.com/cli/cli/releases/download/v2.45.0/gh_2.45.0_macOS_amd64.zip//gh_2.45.0_macOS_amd64/bin",
+			"darwin/arm64": "https://github.com/cli/cli/releases/download/v2.45.0/gh_2.45.0_macOS_arm64.zip//gh_2.45.0_macOS_arm64/bin",
+			"linux/amd64":  "https://github.com/cli/cli/releases/download/v2.45.0/gh_2.45.0_linux_amd64.tar.gz//gh_2.45.0_linux_amd64/bin",
+			"linux/arm64":  "https://github.com/cli/cli/releases/download/v2.45.0/gh_2.45.0_linux_arm64.tar.gz//gh_2.45.0_linux_arm64/bin",
+			"linux/386":    "https://github.com/cli/cli/releases/download/v2.45.0/gh_2.45.0_linux_386.tar.gz//gh_2.45.0_linux_386/bin",
 		},
 	},
 	"kubectl": {
 		URLs: map[string]string{
-			"darwin/amd64": "https://dl.k8s.io/release/v1.26.0/bin/darwin/amd64/kubectl",
-			"darwin/arm64": "https://dl.k8s.io/release/v1.26.0/bin/darwin/arm64/kubectl",
-			"linux/amd64":  "https://dl.k8s.io/release/v1.26.0/bin/linux/amd64/kubectl",
-			"linux/arm64":  "https://dl.k8s.io/release/v1.26.0/bin/linux/arm64/kubectl",
-			"linux/386":    "https://dl.k8s.io/release/v1.26.0/bin/linux/386/kubectl",
+			"darwin/amd64": "https://dl.k8s.io/release/v1.28.1/bin/darwin/amd64/kubectl",
+			"darwin/arm64": "https://dl.k8s.io/release/v1.28.1/bin/darwin/arm64/kubectl",
+			"linux/amd64":  "https://dl.k8s.io/release/v1.28.1/bin/linux/amd64/kubectl",
+			"linux/arm64":  "https://dl.k8s.io/release/v1.28.1/bin/linux/arm64/kubectl",
+			"linux/386":    "https://dl.k8s.io/release/v1.28.1/bin/linux/386/kubectl",
 		},
 	},
 }
