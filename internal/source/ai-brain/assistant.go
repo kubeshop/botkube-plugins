@@ -7,7 +7,6 @@ import (
 	"fmt"
 	"net/http"
 	"os"
-	"strings"
 	"time"
 
 	"github.com/kubeshop/botkube-cloud-plugins/internal/otelx"
@@ -276,7 +275,6 @@ func (i *assistant) handleStatusCompleted(ctx context.Context, run openai.Run, p
 			continue
 		}
 
-		c.Text.Value = strings.ReplaceAll(c.Text.Value, "%", "%%")
 		i.out <- source.Event{
 			Message: msgAIAnswer(p.MessageID, c.Text.Value),
 		}

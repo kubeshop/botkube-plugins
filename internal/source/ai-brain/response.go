@@ -120,6 +120,10 @@ func msgAIAnswer(messageID, text string) api.Message {
 		}
 	}
 
+	// the Sections.Base.Body is rendered by engine using `fmt.Sprintf` so we need to escape '%' returned
+	// from the AI to prevent it from being interpreted as formatting.
+	text = strings.ReplaceAll(text, "%", "%%")
+
 	// messageID is set only for Teams or Slack, for others like Discord, Mattermost, we keep the original formatting
 	if messageID != "" {
 		text = markdownToSlack(text)
@@ -152,7 +156,9 @@ func markdownToSlack(text string) string {
 
 func markdownToTeams(text string) string {
 	text = mdHeadings.ReplaceAllString(text, "**$1**")
-	text = mdImages.ReplaceAllString(text, "[$1]($2)")     // get rid of ! to define it as a link instead of image
-	text += "\n~AI-generated content may be incorrect.~\n" // add the warning
+	text = mdImages.ReplaceAllString(text, "[$1]($2)") // get rid of ! to define it as a link instead of image
+
+	// https://learn.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-format?tabs=adaptive-md%2Cdesktop%2Cconnector-html#newlines-for-adaptive-cards
+	text += "\n\n~AI-generated content may be incorrect.~\n" // add the warning
 	return text
 }
