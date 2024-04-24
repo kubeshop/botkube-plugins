@@ -347,3 +347,7 @@ func (t *apiKeySecuredTransport) RoundTrip(req *http.Request) (*http.Response, e
 	req.Header.Set("X-API-Key", os.Getenv(remote.ProviderAPIKeyEnvKey))
 	return t.transport.RoundTrip(req)
 }
+
+func instanceID() string {
+	return os.Getenv(remote.ProviderIdentifierEnvKey)
+}

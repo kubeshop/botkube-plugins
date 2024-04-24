@@ -1,6 +1,7 @@
 package aibrain
 
 import (
+	"fmt"
 	"math/rand"
 	"regexp"
 	"strings"
@@ -11,6 +12,7 @@ import (
 
 const (
 	teamsMessageIDSubstr = "thread.tacv2"
+	maxPromptLen         = 50
 )
 
 var (
@@ -106,40 +108,69 @@ func msgNoAIAnswer(messageID string) api.Message {
 	}
 }
 
-func msgAIAnswer(messageID, text string) api.Message {
-	if strings.Contains(messageID, teamsMessageIDSubstr) {
-		return api.Message{
-			ParentActivityID: messageID,
-			BaseBody: api.Body{
-				// We use the Plaintext to make sure that Teams renderer will send
-				// as simplified card (https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/format-your-bot-messages#format-text-content)
-				// instead of AdaptiveCard (https://learn.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-format?tabs=adaptive-md%2Cdesktop%2Cconnector-html#format-cards-with-markdown)
-				// which doesn't support most of the markdown elements.
-				Plaintext: markdownToTeams(text),
+func msgAIAnswer(prompt, messageID, response string) []api.Message {
+	switch {
+	case strings.Contains(messageID, teamsMessageIDSubstr): // teams
+		return []api.Message{
+			{
+				ParentActivityID: messageID,
+				BaseBody: api.Body{
+					// We use the Plaintext to make sure that Teams renderer will send
+					// as simplified card (https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/format-your-bot-messages#format-text-content)
+					// instead of AdaptiveCard (https://learn.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-format?tabs=adaptive-md%2Cdesktop%2Cconnector-html#format-cards-with-markdown)
+					// which doesn't support most of the markdown elements.
+					Plaintext: markdownToTeams(response),
+				},
+			},
+			{
+				ParentActivityID: messageID,
+				Sections: []api.Section{
+					{
+						Buttons: api.Buttons{
+							reportResponseBtn(messageID, prompt),
+						},
+					},
+				},
 			},
 		}
-	}
 
-	// the Sections.Base.Body is rendered by engine using `fmt.Sprintf` so we need to escape '%' returned
-	// from the AI to prevent it from being interpreted as formatting.
-	text = strings.ReplaceAll(text, "%", "%%")
+	case messageID != "": // messageID is set only for Teams or Slack, Teams is handled above, so here is Slack
+		// the Sections.Base.Body is rendered by engine using `fmt.Sprintf` so we need to escape '%' returned
+		// from the AI to prevent it from being interpreted as formatting.
+		response = strings.ReplaceAll(response, "%", "%%")
 
-	// messageID is set only for Teams or Slack, for others like Discord, Mattermost, we keep the original formatting
-	if messageID != "" {
-		text = markdownToSlack(text)
-	}
-	return api.Message{
-		ParentActivityID: messageID,
-		Sections: []api.Section{
-			{
-				Base: api.Base{
-					Body: api.Body{Plaintext: text},
+		return []api.Message{{
+			ParentActivityID: messageID,
+			Sections: []api.Section{
+				{
+					Base: api.Base{
+						Body: api.Body{Plaintext: markdownToSlack(response)},
+					},
+					Context: []api.ContextItem{
+						{Text: "AI-generated content may be incorrect."},
+					},
 				},
-				Context: []api.ContextItem{
-					{Text: "AI-generated content may be incorrect."},
+				{
+					Buttons: api.Buttons{
+						reportResponseBtn(messageID, prompt),
+					},
 				},
 			},
-		},
+		}}
+	default: // others are Discord and Mattermost, they are not interactive, so we do not include "🚩Report response" btn
+		return []api.Message{{
+			ParentActivityID: messageID,
+			Sections: []api.Section{
+				{
+					Base: api.Base{
+						Body: api.Body{Plaintext: response},
+					},
+					Context: []api.ContextItem{
+						{Text: "AI-generated content may be incorrect."},
+					},
+				},
+			},
+		}}
 	}
 }
 
@@ -156,9 +187,26 @@ func markdownToSlack(text string) string {
 
 func markdownToTeams(text string) string {
 	text = mdHeadings.ReplaceAllString(text, "**$1**")
-	text = mdImages.ReplaceAllString(text, "[$1]($2)") // get rid of ! to define it as a link instead of image
-
-	// https://learn.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-format?tabs=adaptive-md%2Cdesktop%2Cconnector-html#newlines-for-adaptive-cards
-	text += "\n\n~AI-generated content may be incorrect.~\n" // add the warning
+	text = mdImages.ReplaceAllString(text, "[$1]($2)")     // get rid of ! to define it as a link instead of image
+	text += "\n~AI-generated content may be incorrect.~\n" // add the warning
 	return text
+}
+
+func reportResponseBtn(messageID, prompt string) api.Button {
+	btnBldr := api.NewMessageButtonBuilder()
+
+	cmd := strings.Builder{}
+	cmd.WriteString("cloud report analytics -t=ai-invalid-response ")
+	cmd.WriteString(fmt.Sprintf("-f=MESSAGE_ID=%s ", messageID))
+	cmd.WriteString(fmt.Sprintf("-f=INSTANCE_ID=%s ", instanceID()))
+	cmd.WriteString(fmt.Sprintf(`-f=PROMPT="%s"`, ellipticalTruncate(prompt, 50)))
+
+	return btnBldr.ForCommandWithoutDesc("🚩Report response", cmd.String(), api.ButtonStyleDanger)
+}
+
+func ellipticalTruncate(s string, max int) string {
+	if len(s) <= max {
+		return s
+	}
+	return s[:max] + "..."
 }
