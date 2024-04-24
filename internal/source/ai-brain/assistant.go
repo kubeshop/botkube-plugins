@@ -279,7 +279,7 @@ func (i *assistant) handleStatusCompleted(ctx context.Context, run openai.Run, p
 		}
 
 		i.out <- source.Event{
-			Message: msgAIAnswer(p.MessageID, c.Text.Value),
+			Message: msgAIAnswer(run, p, c.Text.Value),
 		}
 	}
 

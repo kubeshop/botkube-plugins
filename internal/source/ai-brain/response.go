@@ -8,11 +8,13 @@ import (
 	"time"
 
 	"github.com/kubeshop/botkube/pkg/api"
+	"github.com/sashabaranov/go-openai"
 )
 
 const (
-	teamsMessageIDSubstr = "thread.tacv2"
-	maxPromptLen         = 50
+	teamsMessageIDSubstr  = "thread.tacv2"
+	reportResponseBtnName = "🚩Report response"
+	maxPromptLen          = 50
 )
 
 var (
@@ -53,13 +55,10 @@ func pickQuickResponse(messageID string) api.Message {
 	i := rand.Intn(len(quickResponses))             // #nosec G404
 
 	return api.Message{
+		Type:             api.BasicCardWithButtonsInSeparateMsg,
 		ParentActivityID: messageID,
-		Sections: []api.Section{
-			{
-				Base: api.Base{
-					Body: api.Body{Plaintext: quickResponses[i]},
-				},
-			},
+		BaseBody: api.Body{
+			Plaintext: quickResponses[i],
 		},
 	}
 }
@@ -108,69 +107,60 @@ func msgNoAIAnswer(messageID string) api.Message {
 	}
 }
 
-func msgAIAnswer(prompt, messageID, response string) []api.Message {
-	switch {
-	case strings.Contains(messageID, teamsMessageIDSubstr): // teams
-		return []api.Message{
-			{
-				ParentActivityID: messageID,
-				BaseBody: api.Body{
-					// We use the Plaintext to make sure that Teams renderer will send
-					// as simplified card (https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/format-your-bot-messages#format-text-content)
-					// instead of AdaptiveCard (https://learn.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-format?tabs=adaptive-md%2Cdesktop%2Cconnector-html#format-cards-with-markdown)
-					// which doesn't support most of the markdown elements.
-					Plaintext: markdownToTeams(response),
-				},
+func msgAIAnswer(run openai.Run, payload *Payload, response string) api.Message {
+	var (
+		msgID   = payload.MessageID
+		btnBldr = api.NewMessageButtonBuilder()
+	)
+
+	if strings.Contains(msgID, teamsMessageIDSubstr) { // teams
+		return api.Message{
+			Type:             api.BasicCardWithButtonsInSeparateMsg,
+			ParentActivityID: msgID,
+			BaseBody: api.Body{
+				// We use the Plaintext to make sure that Teams renderer will send
+				// as simplified card (https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/format-your-bot-messages#format-text-content)
+				// instead of AdaptiveCard (https://learn.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-format?tabs=adaptive-md%2Cdesktop%2Cconnector-html#format-cards-with-markdown)
+				// which doesn't support most of the markdown elements.
+				Plaintext: markdownToTeams(response),
 			},
-			{
-				ParentActivityID: messageID,
-				Sections: []api.Section{
-					{
-						Buttons: api.Buttons{
-							reportResponseBtn(messageID, prompt),
-						},
+			Sections: []api.Section{
+				{
+					Buttons: api.Buttons{
+						btnBldr.ForCommandWithoutDesc(reportResponseBtnName, reportCmd(run, payload)),
 					},
 				},
 			},
 		}
+	}
 
-	case messageID != "": // messageID is set only for Teams or Slack, Teams is handled above, so here is Slack
-		// the Sections.Base.Body is rendered by engine using `fmt.Sprintf` so we need to escape '%' returned
-		// from the AI to prevent it from being interpreted as formatting.
-		response = strings.ReplaceAll(response, "%", "%%")
+	// the Sections.Base.Body is rendered by engine using `fmt.Sprintf` so we need to escape '%' returned
+	// from the AI to prevent it from being interpreted as formatting.
+	response = strings.ReplaceAll(response, "%", "%%")
 
-		return []api.Message{{
-			ParentActivityID: messageID,
-			Sections: []api.Section{
-				{
-					Base: api.Base{
-						Body: api.Body{Plaintext: markdownToSlack(response)},
-					},
-					Context: []api.ContextItem{
-						{Text: "AI-generated content may be incorrect."},
-					},
-				},
-				{
-					Buttons: api.Buttons{
-						reportResponseBtn(messageID, prompt),
-					},
-				},
+	sections := []api.Section{
+		{
+			Base: api.Base{
+				Body: api.Body{Plaintext: response},
 			},
-		}}
-	default: // others are Discord and Mattermost, they are not interactive, so we do not include "🚩Report response" btn
-		return []api.Message{{
-			ParentActivityID: messageID,
-			Sections: []api.Section{
-				{
-					Base: api.Base{
-						Body: api.Body{Plaintext: response},
-					},
-					Context: []api.ContextItem{
-						{Text: "AI-generated content may be incorrect."},
-					},
-				},
+			Context: []api.ContextItem{
+				{Text: "AI-generated content may be incorrect."},
 			},
-		}}
+		},
+	}
+
+	if msgID != "" { // msgID is set only for Teams or Slack, Teams is handled above, so here is Slack
+		sections[0].Body.Plaintext = markdownToSlack(sections[0].Body.Plaintext)
+		sections = append(sections, api.Section{
+			Buttons: api.Buttons{
+				btnBldr.ForCommandWithoutDesc(reportResponseBtnName, reportCmd(run, payload), api.ButtonStyleDanger),
+			},
+		})
+	}
+
+	return api.Message{
+		ParentActivityID: msgID,
+		Sections:         sections,
 	}
 }
 
@@ -187,23 +177,24 @@ func markdownToSlack(text string) string {
 
 func markdownToTeams(text string) string {
 	text = mdHeadings.ReplaceAllString(text, "**$1**")
-	text = mdImages.ReplaceAllString(text, "[$1]($2)")     // get rid of ! to define it as a link instead of image
-	text += "\n~AI-generated content may be incorrect.~\n" // add the warning
+	text = mdImages.ReplaceAllString(text, "[$1]($2)") // get rid of ! to define it as a link instead of image
+
+	// https://learn.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-format?tabs=adaptive-md%2Cdesktop%2Cconnector-html#newlines-for-adaptive-cards
+	text += "\n\n~AI-generated content may be incorrect.~\n" // add the warning
 	return text
 }
 
-func reportResponseBtn(messageID, prompt string) api.Button {
-	btnBldr := api.NewMessageButtonBuilder()
-
+func reportCmd(run openai.Run, payload *Payload) string {
 	cmd := strings.Builder{}
-	cmd.WriteString("cloud report analytics -t=ai-invalid-response ")
-	cmd.WriteString(fmt.Sprintf("-f=MESSAGE_ID=%s ", messageID))
-	cmd.WriteString(fmt.Sprintf("-f=INSTANCE_ID=%s ", instanceID()))
-	cmd.WriteString(fmt.Sprintf(`-f=PROMPT="%s"`, ellipticalTruncate(prompt, 50)))
+	cmd.WriteString(`cloud report analytics --bk-cmd-header="Report invalid AI response" -t=ai-invalid-response `)
+	cmd.WriteString(fmt.Sprintf("-f=MESSAGE_ID=%q ", payload.MessageID))
+	cmd.WriteString(fmt.Sprintf("-f=INSTANCE_ID=%q ", instanceID()))
+	cmd.WriteString(fmt.Sprintf("-f=RUN_ID=%q ", run.ID))
+	cmd.WriteString(fmt.Sprintf("-f=THREAD_ID=%q ", run.ThreadID))
+	cmd.WriteString(fmt.Sprintf("-f=PROMPT=%q", ellipticalTruncate(payload.Prompt, maxPromptLen)))
 
-	return btnBldr.ForCommandWithoutDesc("🚩Report response", cmd.String(), api.ButtonStyleDanger)
+	return cmd.String()
 }
-
 func ellipticalTruncate(s string, max int) string {
 	if len(s) <= max {
 		return s

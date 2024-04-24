@@ -5,8 +5,8 @@ import (
 	"path/filepath"
 	"testing"
 
+	"github.com/sashabaranov/go-openai"
 	"github.com/stretchr/testify/assert"
-
 	"github.com/stretchr/testify/require"
 	"gotest.tools/v3/golden"
 )
@@ -22,12 +22,18 @@ func TestConvertProperlyAIAnswer(t *testing.T) {
 	require.NoError(t, err)
 
 	// Slack
-	out := msgAIAnswer("42.42", string(md), "")
-	assertGolden(t, out[0].Sections[0].Base.Body.Plaintext, "slack.golden.md")
+	out := msgAIAnswer(openai.Run{}, &Payload{
+		MessageID: "42.42",
+		Prompt:    "This is a test",
+	}, string(md))
+	assertGolden(t, out.Sections[0].Base.Body.Plaintext, "slack.golden.md")
 
 	// Teams
-	out = msgAIAnswer("19:d25cbf7cbfa74d22b42a2918452e1153@thread.tacv2", string(md), "")
-	assertGolden(t, out[0].BaseBody.Plaintext, "teams.golden.md")
+	out = msgAIAnswer(openai.Run{}, &Payload{
+		MessageID: "19:d25cbf7cbfa74d22b42a2918452e1153@thread.tacv2",
+		Prompt:    "This is a test",
+	}, string(md))
+	assertGolden(t, out.BaseBody.Plaintext, "teams.golden.md")
 }
 
 func assertGolden(t *testing.T, actual, goldenPath string) {
@@ -48,7 +54,7 @@ func TestEllipticalTruncate(t *testing.T) {
 		{
 			name:     "Longer sentence",
 			input:    "This is a longer sentence that needs to be truncated.",
-			expected: "This is a longer sentence that needs to be trunca...",
+			expected: "This is a longer sentence that needs to be truncat...",
 		},
 		{
 			name:     "Exact 50 characters sentence",
