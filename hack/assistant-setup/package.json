@@ -1,0 +1,28 @@
+{
+  "name": "assistant-setup",
+  "version": "1.0.0",
+  "description": "Botkube Assistant setup tool",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsx index.ts",
+    "fetch-content": "go run ./content-fetcher/main.go",
+    "format": "prettier --write ./*.ts"
+  },
+  "author": "Botkube maintainers",
+  "license": "ISC",
+  "engines": {
+    "node": ">=20 <21"
+  },
+  "volta": {
+    "node": "20.10.0"
+  },
+  "dependencies": {
+    "dedent": "^1.5.3",
+    "openai": "^4.38.5"
+  },
+  "devDependencies": {
+    "prettier": "3.2.5",
+    "tsx": "^4.7.3",
+    "typescript": "^5.4.5"
+  }
+}
