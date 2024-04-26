@@ -30,7 +30,7 @@ require (
 	github.com/muesli/reflow v0.3.0
 	github.com/olekukonko/tablewriter v0.0.5
 	github.com/prometheus/client_golang v1.16.0
-	github.com/sashabaranov/go-openai v1.19.4
+	github.com/sashabaranov/go-openai v1.23.0
 	github.com/sirupsen/logrus v1.9.3
 	github.com/slack-go/slack v0.12.2
 	github.com/spf13/pflag v1.0.5
