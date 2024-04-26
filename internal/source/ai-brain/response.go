@@ -14,7 +14,7 @@ import (
 const (
 	teamsMessageIDSubstr  = "thread.tacv2"
 	reportResponseBtnName = "🚩Report response"
-	maxPromptLen          = 50
+	maxPromptLen          = 500
 )
 
 var (

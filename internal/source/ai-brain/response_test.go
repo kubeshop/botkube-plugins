@@ -66,7 +66,7 @@ func TestEllipticalTruncate(t *testing.T) {
 	for _, tc := range tests {
 		t.Run(tc.name, func(t *testing.T) {
 			// when
-			result := ellipticalTruncate(tc.input, maxPromptLen)
+			result := ellipticalTruncate(tc.input, 50)
 
 			// then
 			assert.Equal(t, tc.expected, result)
