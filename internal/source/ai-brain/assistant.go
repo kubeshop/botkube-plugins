@@ -33,6 +33,8 @@ const (
 	serviceName             = "botkube-plugins-source-ai-brain"
 )
 
+var temperature float32 = 0.1
+
 type tool func(ctx context.Context, args []byte) (string, error)
 
 // Payload represents incoming webhook payload.
@@ -170,6 +172,7 @@ func (i *assistant) handleThread(ctx context.Context, p *Payload) (err error) {
 	log.Info("created a new assistant run")
 	run, err := i.openaiClient.CreateRun(ctx, threadID, openai.RunRequest{
 		AssistantID: i.assistID,
+		Temperature: &temperature,
 	})
 	if err != nil {
 		return fmt.Errorf("while creating a thread run: %w", err)
