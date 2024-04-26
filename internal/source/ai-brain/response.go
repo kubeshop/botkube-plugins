@@ -1,16 +1,20 @@
 package aibrain
 
 import (
+	"fmt"
 	"math/rand"
 	"regexp"
 	"strings"
 	"time"
 
 	"github.com/kubeshop/botkube/pkg/api"
+	"github.com/sashabaranov/go-openai"
 )
 
 const (
-	teamsMessageIDSubstr = "thread.tacv2"
+	teamsMessageIDSubstr  = "thread.tacv2"
+	reportResponseBtnName = "🚩Report response"
+	maxPromptLen          = 500
 )
 
 var (
@@ -51,13 +55,10 @@ func pickQuickResponse(messageID string) api.Message {
 	i := rand.Intn(len(quickResponses))             // #nosec G404
 
 	return api.Message{
+		Type:             api.BasicCardWithButtonsInSeparateMsg,
 		ParentActivityID: messageID,
-		Sections: []api.Section{
-			{
-				Base: api.Base{
-					Body: api.Body{Plaintext: quickResponses[i]},
-				},
-			},
+		BaseBody: api.Body{
+			Plaintext: quickResponses[i],
 		},
 	}
 }
@@ -106,40 +107,60 @@ func msgNoAIAnswer(messageID string) api.Message {
 	}
 }
 
-func msgAIAnswer(messageID, text string) api.Message {
-	if strings.Contains(messageID, teamsMessageIDSubstr) {
+func msgAIAnswer(run openai.Run, payload *Payload, response string) api.Message {
+	var (
+		msgID   = payload.MessageID
+		btnBldr = api.NewMessageButtonBuilder()
+	)
+
+	if strings.Contains(msgID, teamsMessageIDSubstr) { // teams
 		return api.Message{
-			ParentActivityID: messageID,
+			Type:             api.BasicCardWithButtonsInSeparateMsg,
+			ParentActivityID: msgID,
 			BaseBody: api.Body{
 				// We use the Plaintext to make sure that Teams renderer will send
 				// as simplified card (https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/format-your-bot-messages#format-text-content)
 				// instead of AdaptiveCard (https://learn.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-format?tabs=adaptive-md%2Cdesktop%2Cconnector-html#format-cards-with-markdown)
 				// which doesn't support most of the markdown elements.
-				Plaintext: markdownToTeams(text),
+				Plaintext: markdownToTeams(response),
+			},
+			Sections: []api.Section{
+				{
+					Buttons: api.Buttons{
+						btnBldr.ForCommandWithoutDesc(reportResponseBtnName, reportCmd(run, payload)),
+					},
+				},
 			},
 		}
 	}
 
 	// the Sections.Base.Body is rendered by engine using `fmt.Sprintf` so we need to escape '%' returned
 	// from the AI to prevent it from being interpreted as formatting.
-	text = strings.ReplaceAll(text, "%", "%%")
+	response = strings.ReplaceAll(response, "%", "%%")
 
-	// messageID is set only for Teams or Slack, for others like Discord, Mattermost, we keep the original formatting
-	if messageID != "" {
-		text = markdownToSlack(text)
-	}
-	return api.Message{
-		ParentActivityID: messageID,
-		Sections: []api.Section{
-			{
-				Base: api.Base{
-					Body: api.Body{Plaintext: text},
-				},
-				Context: []api.ContextItem{
-					{Text: "AI-generated content may be incorrect."},
-				},
+	sections := []api.Section{
+		{
+			Base: api.Base{
+				Body: api.Body{Plaintext: response},
+			},
+			Context: []api.ContextItem{
+				{Text: "AI-generated content may be incorrect."},
 			},
 		},
+	}
+
+	if msgID != "" { // msgID is set only for Teams or Slack, Teams is handled above, so here is Slack
+		sections[0].Body.Plaintext = markdownToSlack(sections[0].Body.Plaintext)
+		sections = append(sections, api.Section{
+			Buttons: api.Buttons{
+				btnBldr.ForCommandWithoutDesc(reportResponseBtnName, reportCmd(run, payload), api.ButtonStyleDanger),
+			},
+		})
+	}
+
+	return api.Message{
+		ParentActivityID: msgID,
+		Sections:         sections,
 	}
 }
 
@@ -161,4 +182,22 @@ func markdownToTeams(text string) string {
 	// https://learn.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-format?tabs=adaptive-md%2Cdesktop%2Cconnector-html#newlines-for-adaptive-cards
 	text += "\n\n~AI-generated content may be incorrect.~\n" // add the warning
 	return text
+}
+
+func reportCmd(run openai.Run, payload *Payload) string {
+	cmd := strings.Builder{}
+	cmd.WriteString(`cloud report analytics --bk-cmd-header="Report invalid AI response" -t=ai-invalid-response `)
+	cmd.WriteString(fmt.Sprintf("-f=MESSAGE_ID=%q ", payload.MessageID))
+	cmd.WriteString(fmt.Sprintf("-f=INSTANCE_ID=%q ", instanceID()))
+	cmd.WriteString(fmt.Sprintf("-f=RUN_ID=%q ", run.ID))
+	cmd.WriteString(fmt.Sprintf("-f=THREAD_ID=%q ", run.ThreadID))
+	cmd.WriteString(fmt.Sprintf("-f=PROMPT=%q", ellipticalTruncate(payload.Prompt, maxPromptLen)))
+
+	return cmd.String()
+}
+func ellipticalTruncate(s string, max int) string {
+	if len(s) <= max {
+		return s
+	}
+	return s[:max] + "..."
 }

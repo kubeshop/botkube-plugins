@@ -279,7 +279,7 @@ func (i *assistant) handleStatusCompleted(ctx context.Context, run openai.Run, p
 		}
 
 		i.out <- source.Event{
-			Message: msgAIAnswer(p.MessageID, c.Text.Value),
+			Message: msgAIAnswer(run, p, c.Text.Value),
 		}
 	}
 
@@ -346,4 +346,8 @@ func newAPIKeySecuredTransport() *apiKeySecuredTransport {
 func (t *apiKeySecuredTransport) RoundTrip(req *http.Request) (*http.Response, error) {
 	req.Header.Set("X-API-Key", os.Getenv(remote.ProviderAPIKeyEnvKey))
 	return t.transport.RoundTrip(req)
+}
+
+func instanceID() string {
+	return os.Getenv(remote.ProviderIdentifierEnvKey)
 }
