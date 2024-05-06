@@ -12,27 +12,23 @@ var openAITools = []openai.AssistantTool{
 		Function: &openai.FunctionDefinition{
 			Name: "botkubeGetStartupAgentConfiguration",
 			Description: heredoc.Doc(`
-			Retrieve the currently used Botkube Agent configuration in YAML format. This includes various details such as the configured communication platform (e.g., Slack or Teams), 
-			aliases, enabled plugins, and their settings like RBAC or plugin-specific configurations.
+			Retrieve the Botkube Agent configuration in YAML format. This includes various details such as the configured communication platform, 
+			aliases, enabled plugins, and their settings like RBAC.
 			
 			Use this tool to answer questions like:
 			- What sources are configured for this channel?
-			- What Kubernetes resources am I watching?
 			- Is the Kubernetes plugin enabled?
-			- Which channels are configured for Botkube?
 			- What Kubernetes alerts are currently configured on my cluster?
 			
-			Avoid using configuration names like 'botkube/kubernetes_6ulLY' in responses unless explicitly requested by the user. 
-			When a user asks about configurations related to "this channel," prompt them to specify the channel name they are referring to. 
-			You can suggest channel names based on the configuration definition.
+			Avoid using configuration names like 'botkube/kubernetes_6ulLY' in responses unless explicitly requested. 
+			When a user asks about "this channel", prompt them to provide the exact channel name.
 			
-			The "loaderValidationWarnings" field contains all the warnings regarding the returned configuration. Use it to recommend possible fixes if the configuration is not valid.
-			The "incomingRequestPrompt" field defines the communicating platform that is used for a given prompt. Use that value to answer questions related with a given platform, such as:
-			- What automations are enabled for #general channel?
+			The "loaderValidationWarnings" field lists all the warnings about the configuration. Use it to suggest fixes.
+			The "incomingRequestPrompt" field defines the communicating platform associated with a prompt. Use this information to address platform-specific questions.
 
-			If the "incomingRequestPrompt" field is not specified, ask about user about the used platform.
+			If the "incomingRequestPrompt" field is not specified, prompt user provide platform name.
 
-			All "cloudSlack" terms in config simply refers to Slack platform. All "cloudTeams" terms in config simply refers to Teams platform.`),
+			Terms "cloudSlack" and "cloudTeams" refer to the Slack and Teams platforms, respectively.`),
 		},
 	},
 	{

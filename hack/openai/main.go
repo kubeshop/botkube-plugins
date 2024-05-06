@@ -28,12 +28,15 @@ func main() {
 		assistantID = devAssistantID
 	case "prod":
 		assistantID = prodAssistantID
-
+	default:
+		log.Fatalf("Invalid environment: %s", *env)
 	}
+
 	// Update assistant with latest tools.
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
 
+	log.Printf("Updating %s assistant with ID %s", *env, assistantID)
 	_, err := updateAssistant(ctx, client, assistantID)
 	if err != nil {
 		log.Fatal(err)
