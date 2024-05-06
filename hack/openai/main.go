@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"flag"
 	"log"
 	"os"
 	"time"
@@ -11,13 +12,24 @@ import (
 )
 
 const (
-	//assistantID = "asst_eMM9QaWLi6cajHE4PdG1yU53" // Botkube
-	assistantID = "asst_ejVrAgjhhvCw6jGFYq5JyBqj" // Botkube
+	prodAssistantID = "asst_eMM9QaWLi6cajHE4PdG1yU53"
+	devAssistantID  = "asst_ejVrAgjhhvCw6jGFYq5JyBqj"
 )
 
 func main() {
 	client := openai.NewClient(os.Getenv("OPENAI_API_KEY"))
 
+	env := flag.String("env", "dev", "Environment to update. Allow values: 'dev' or 'prod'.")
+	flag.Parse()
+
+	var assistantID string
+	switch *env {
+	case "dev":
+		assistantID = devAssistantID
+	case "prod":
+		assistantID = prodAssistantID
+
+	}
 	// Update assistant with latest tools.
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()

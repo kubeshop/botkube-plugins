@@ -27,16 +27,17 @@ type BotkubeRunner struct {
 	httpCli          *http.Client
 	rawStartupConfig string
 	startupConfig    *ConfigWithDetails
-	logGetter        LogGetter
 }
 
-// LogGetter provides ability to get logs.
-type LogGetter interface {
-	Logs(ctx context.Context, rawArgs []byte, _ *Payload) (string, error)
+// ConfigWithDetails represents Botkube configuration with additional details.
+type ConfigWithDetails struct {
+	*config.Config           `yaml:",inline"`
+	LoaderValidationWarnings string `yaml:"loaderValidationWarnings"`
+	IncomingRequestPrompt    string `yaml:"incomingRequestPrompt,omitempty"`
 }
 
 // NewBotkubeRunner creates new runner instance.
-func NewBotkubeRunner(logGetter LogGetter, tracer trace.Tracer) (*BotkubeRunner, error) {
+func NewBotkubeRunner(tracer trace.Tracer) (*BotkubeRunner, error) {
 	cfg, ok := remote.GetConfig()
 	if !ok {
 		return nil, fmt.Errorf("cannot get Botkube cloud related environment variables")
@@ -46,7 +47,6 @@ func NewBotkubeRunner(logGetter LogGetter, tracer trace.Tracer) (*BotkubeRunner,
 		tracer:    tracer,
 		deployCli: remote.NewDeploymentClient(cfg),
 		httpCli:   httpx.NewHTTPClient(),
-		logGetter: logGetter,
 	}
 
 	err := r.initStartupConfig()
@@ -54,18 +54,6 @@ func NewBotkubeRunner(logGetter LogGetter, tracer trace.Tracer) (*BotkubeRunner,
 		return nil, fmt.Errorf("while initializing startup config: %w", err)
 	}
 	return r, nil
-}
-
-type ConfigWithDetails struct {
-	*config.Config           `yaml:",inline"`
-	LoaderValidationWarnings string `yaml:"loaderValidationWarnings"`
-	IncomingRequestPrompt    string `yaml:"incomingRequestPrompt,omitempty"`
-}
-
-// TODO: to remove?
-func (r *BotkubeRunner) GetCloudAgentConfiguration(ctx context.Context, _ []byte, _ *Payload) (string, error) {
-	rawCfg, _, err := r.fetchConfig(ctx)
-	return rawCfg, err
 }
 
 // GetStartupAgentConfiguration returns Botkube startup configuration.
@@ -91,6 +79,7 @@ func (r *BotkubeRunner) GetStartupAgentConfiguration(ctx context.Context, _ []by
 	return string(raw), nil
 }
 
+// GetAgentStatus returns Botkube Agent health status.
 func (r *BotkubeRunner) GetAgentStatus(ctx context.Context, _ []byte, _ *Payload) (string, error) {
 	_, span := r.tracer.Start(ctx, "aibrain.BotkubeRunner.GetAgentStatus")
 	defer span.End()

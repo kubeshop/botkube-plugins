@@ -9,8 +9,6 @@ import (
 	"os"
 	"time"
 
-	"github.com/sanity-io/litter"
-
 	"github.com/kubeshop/botkube-cloud-plugins/internal/otelx"
 	"github.com/kubeshop/botkube-cloud-plugins/internal/remote"
 	"go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp"
@@ -66,7 +64,7 @@ func newAssistant(cfg *Config, log logrus.FieldLogger, out chan source.Event, ku
 	tracer := otel.Tracer(serviceName)
 
 	kcRunner := NewKubectlRunner(kubeConfigPath, tracer)
-	bkRunner, err := NewBotkubeRunner(kcRunner, tracer)
+	bkRunner, err := NewBotkubeRunner(tracer)
 	if err != nil {
 		return nil, fmt.Errorf("while creating Botkube runner: %w", err)
 	}
@@ -92,7 +90,6 @@ func newAssistant(cfg *Config, log logrus.FieldLogger, out chan source.Event, ku
 			"kubectlTopNodes":                     kcRunner.TopNodes,
 			"kubectlLogs":                         kcRunner.Logs,
 			"botkubeGetStartupAgentConfiguration": bkRunner.GetStartupAgentConfiguration,
-			"botkubeGetCloudAgentConfiguration":   bkRunner.GetCloudAgentConfiguration, // TODO: do we need that?
 			"botkubeGetAgentStatus":               bkRunner.GetAgentStatus,
 		},
 	}, nil
@@ -202,7 +199,6 @@ func (i *assistant) handleThread(ctx context.Context, p *Payload) (err error) {
 
 		switch run.Status {
 		case openai.RunStatusCancelling, openai.RunStatusFailed:
-			litter.Dump(run)
 			return true, fmt.Errorf("got unexpected status: %s", run.Status)
 
 		case openai.RunStatusExpired:
