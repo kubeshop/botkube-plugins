@@ -26,11 +26,6 @@ func NewDeploymentClient(cfg Config) *DeploymentClient {
 	return &DeploymentClient{client: NewDefaultGqlClient(cfg)}
 }
 
-// Deployment returns deployment with Botkube configuration.
-type Deployment struct {
-	ID string
-}
-
 // IsConnectedWithCould returns whether connected to Botkube Cloud
 func (d *DeploymentClient) IsConnectedWithCould() error {
 	var query struct {
@@ -55,6 +50,28 @@ func (d *DeploymentClient) IsConnectedWithCould() error {
 	}
 
 	return nil
+}
+
+// GetConfigOutput returns deployment with Botkube configuration.
+type GetConfigOutput struct {
+	ResourceVersion int
+	YAMLConfig      string
+}
+
+// GetConfig retrieves deployment configuration.
+func (d *DeploymentClient) GetConfig(ctx context.Context) (GetConfigOutput, error) {
+	var query struct {
+		Deployment GetConfigOutput `graphql:"deployment(id: $id)"`
+	}
+	deployID := d.client.DeploymentID()
+	variables := map[string]interface{}{
+		"id": graphql.ID(deployID),
+	}
+	err := d.client.Client().Query(ctx, &query, variables)
+	if err != nil {
+		return GetConfigOutput{}, fmt.Errorf("while getting config with resource version for %q: %w", deployID, err)
+	}
+	return query.Deployment, nil
 }
 
 func (d *DeploymentClient) withRetries(fn func() error) error {

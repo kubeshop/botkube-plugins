@@ -89,7 +89,10 @@ func (s *Source) Stream(ctx context.Context, in source.StreamInput) (source.Stre
 		Event: make(chan source.Event),
 	}
 
-	instance := newAssistant(cfg, s.log, streamOutput.Event, kubeConfigPath)
+	instance, err := newAssistant(cfg, s.log, streamOutput.Event, kubeConfigPath)
+	if err != nil {
+		return source.StreamOutput{}, fmt.Errorf("while setting up assistant: %w", err)
+	}
 	s.instances.Store(sourceName, instance)
 
 	// Start assistant thread mapping cache cleanup. Technically the cache won't
