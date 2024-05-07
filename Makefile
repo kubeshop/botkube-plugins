@@ -50,9 +50,6 @@ serve-local-plugins: ## Serve local plugins
 	go run github.com/kubeshop/botkube/hack/target/serve-plugins -plugins-dir=dist
 .PHONY: serve-local-plugins
 
-setup-assistant:
-
-
 #############
 # Others    #
 #############

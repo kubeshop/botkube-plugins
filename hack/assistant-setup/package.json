@@ -6,7 +6,7 @@
   "scripts": {
     "start": "tsx index.ts",
     "fetch-content": "go run ./content-fetcher/main.go",
-    "format": "prettier --write ./*.ts"
+    "format": "prettier --write ./*.{ts,md}"
   },
   "author": "Botkube maintainers",
   "license": "ISC",
