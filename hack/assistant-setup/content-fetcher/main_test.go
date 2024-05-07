@@ -34,7 +34,7 @@ func TestFetcher_preparePageList(t *testing.T) {
 
 func TestFetcher_filePathForURL(t *testing.T) {
 	// given
-	prefix := "hack/assistant-setup/assets/"
+	prefix := "content/"
 	testCases := []struct {
 		URL              string
 		ExpectedFileName string
