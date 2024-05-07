@@ -66,7 +66,7 @@ func NewKubectlRunner(kubeconfigPath string, tracer trace.Tracer) *KubectlRunner
 }
 
 // DescribeResource executes kubectl describe resource command.
-func (k *KubectlRunner) DescribeResource(ctx context.Context, rawArgs []byte) (string, error) {
+func (k *KubectlRunner) DescribeResource(ctx context.Context, rawArgs []byte, _ *Payload) (string, error) {
 	ctx, span := k.tracer.Start(ctx, "aibrain.KubectlRunner.DescribeResource")
 	defer span.End()
 
@@ -89,7 +89,7 @@ func allNsIfPresent(namespaces bool) string {
 }
 
 // GetResource executes kubectl get resource command.
-func (k *KubectlRunner) GetResource(ctx context.Context, rawArgs []byte) (string, error) {
+func (k *KubectlRunner) GetResource(ctx context.Context, rawArgs []byte, _ *Payload) (string, error) {
 	ctx, span := k.tracer.Start(ctx, "aibrain.KubectlRunner.GetResource")
 	defer span.End()
 
@@ -104,7 +104,7 @@ func (k *KubectlRunner) GetResource(ctx context.Context, rawArgs []byte) (string
 }
 
 // GetEvents executes kubectl get events command.
-func (k *KubectlRunner) GetEvents(ctx context.Context, rawArgs []byte) (string, error) {
+func (k *KubectlRunner) GetEvents(ctx context.Context, rawArgs []byte, _ *Payload) (string, error) {
 	ctx, span := k.tracer.Start(ctx, "aibrain.KubectlRunner.GetEvents")
 	defer span.End()
 
@@ -126,7 +126,7 @@ func (k *KubectlRunner) GetEvents(ctx context.Context, rawArgs []byte) (string, 
 }
 
 // TopPods executes kubectl top pods command.
-func (k *KubectlRunner) TopPods(ctx context.Context, rawArgs []byte) (string, error) {
+func (k *KubectlRunner) TopPods(ctx context.Context, rawArgs []byte, _ *Payload) (string, error) {
 	ctx, span := k.tracer.Start(ctx, "aibrain.KubectlRunner.TopPods")
 	defer span.End()
 
@@ -141,7 +141,7 @@ func (k *KubectlRunner) TopPods(ctx context.Context, rawArgs []byte) (string, er
 }
 
 // TopNodes executes kubectl top nodes command.
-func (k *KubectlRunner) TopNodes(ctx context.Context, rawArgs []byte) (string, error) {
+func (k *KubectlRunner) TopNodes(ctx context.Context, rawArgs []byte, _ *Payload) (string, error) {
 	ctx, span := k.tracer.Start(ctx, "aibrain.KubectlRunner.TopNodes")
 	defer span.End()
 
@@ -156,7 +156,7 @@ func (k *KubectlRunner) TopNodes(ctx context.Context, rawArgs []byte) (string, e
 }
 
 // Logs executes kubectl logs command.
-func (k *KubectlRunner) Logs(ctx context.Context, rawArgs []byte) (string, error) {
+func (k *KubectlRunner) Logs(ctx context.Context, rawArgs []byte, _ *Payload) (string, error) {
 	ctx, span := k.tracer.Start(ctx, "aibrain.KubectlRunner.Logs")
 	defer span.End()
 

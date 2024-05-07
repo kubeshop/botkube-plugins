@@ -10,6 +10,47 @@ var openAITools = []openai.AssistantTool{
 	{
 		Type: openai.AssistantToolType(openai.ToolTypeFunction),
 		Function: &openai.FunctionDefinition{
+			Name: "botkubeGetStartupAgentConfiguration",
+			Description: heredoc.Doc(`
+			Retrieve the Botkube Agent configuration in YAML format. This includes various details such as the configured communication platform, 
+			aliases, enabled plugins, and their settings like RBAC.
+			
+			Use this tool to answer questions like:
+			- What sources are configured for this channel?
+			- Is the Kubernetes plugin enabled?
+			- What Kubernetes alerts are currently configured on my cluster?
+			
+			Avoid using configuration names like 'botkube/kubernetes_6ulLY' in responses unless explicitly requested. 
+			When a user asks about "this channel", prompt them to provide the exact channel name.
+			
+			The "loaderValidationWarnings" field lists all the warnings about the configuration. Use it to suggest fixes.
+			The "incomingRequestPrompt" field defines the communicating platform associated with a prompt. Use this information to address platform-specific questions.
+
+			If the "incomingRequestPrompt" field is not specified, prompt user provide platform name.
+
+			Terms "cloudSlack" and "cloudTeams" refer to the Slack and Teams platforms, respectively.`),
+		},
+	},
+	{
+		Type: openai.AssistantToolType(openai.ToolTypeFunction),
+		Function: &openai.FunctionDefinition{
+			Name: "botkubeGetAgentStatus",
+			Description: heredoc.Doc(`
+			Get the current Botkube Agent status in JSON format. 
+            It represents the status of each plugin and communication platform, indicating whether it's enabled, crashing, and if so, with what reason. 
+			If the "enabled" field is not specified, the plugin is disabled.
+
+			Use this tool to answer questions like:
+			- Which sources are enabled for this channel?
+			- Is the Kubernetes plugin enabled?
+			- Is the kubectl plugin disabled?
+			- What is the status of a specific plugin?
+			- Why am I not receiving Kubernetes notifications?`),
+		},
+	},
+	{
+		Type: openai.AssistantToolType(openai.ToolTypeFunction),
+		Function: &openai.FunctionDefinition{
 			Name: "kubectlGetResource",
 			Description: heredoc.Doc(`
 			Get a Kubernetes resources. If resource_name is specified, returns the resource in a YAML definition. 

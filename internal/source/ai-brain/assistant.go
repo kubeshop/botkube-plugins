@@ -35,7 +35,7 @@ const (
 
 var temperature float32 = 0.1
 
-type tool func(ctx context.Context, args []byte) (string, error)
+type tool func(ctx context.Context, args []byte, p *Payload) (string, error)
 
 // Payload represents incoming webhook payload.
 type Payload struct {
@@ -53,7 +53,7 @@ type assistant struct {
 	tracer       trace.Tracer
 }
 
-func newAssistant(cfg *Config, log logrus.FieldLogger, out chan source.Event, kubeConfigPath string) *assistant {
+func newAssistant(cfg *Config, log logrus.FieldLogger, out chan source.Event, kubeConfigPath string) (*assistant, error) {
 	if cfg.HoneycombAPIKey != "" {
 		log.Debug("Setting up opentelemetry with honeycomb")
 		_, err := otelx.Init(cfg.HoneycombAPIKey, serviceName, cfg.HoneycombSampleRate, cfg.Version)
@@ -64,6 +64,10 @@ func newAssistant(cfg *Config, log logrus.FieldLogger, out chan source.Event, ku
 	tracer := otel.Tracer(serviceName)
 
 	kcRunner := NewKubectlRunner(kubeConfigPath, tracer)
+	bkRunner, err := NewBotkubeRunner(tracer)
+	if err != nil {
+		return nil, fmt.Errorf("while creating Botkube runner: %w", err)
+	}
 
 	config := openai.DefaultConfig("")
 	config.HTTPClient = &http.Client{
@@ -79,14 +83,16 @@ func newAssistant(cfg *Config, log logrus.FieldLogger, out chan source.Event, ku
 		assistID:     cfg.OpenAIAssistantID,
 		cache:        newCache(cacheTTL),
 		tools: map[string]tool{
-			"kubectlGetResource":      kcRunner.GetResource,
-			"kubectlDescribeResource": kcRunner.DescribeResource,
-			"kubectlGetEvents":        kcRunner.GetEvents,
-			"kubectlTopPods":          kcRunner.TopPods,
-			"kubectlTopNodes":         kcRunner.TopNodes,
-			"kubectlLogs":             kcRunner.Logs,
+			"kubectlGetResource":                  kcRunner.GetResource,
+			"kubectlDescribeResource":             kcRunner.DescribeResource,
+			"kubectlGetEvents":                    kcRunner.GetEvents,
+			"kubectlTopPods":                      kcRunner.TopPods,
+			"kubectlTopNodes":                     kcRunner.TopNodes,
+			"kubectlLogs":                         kcRunner.Logs,
+			"botkubeGetStartupAgentConfiguration": bkRunner.GetStartupAgentConfiguration,
+			"botkubeGetAgentStatus":               bkRunner.GetAgentStatus,
 		},
-	}
+	}, nil
 }
 
 func (i *assistant) handle(ctx context.Context, in source.ExternalRequestInput) (api.Message, error) {
@@ -209,7 +215,7 @@ func (i *assistant) handleThread(ctx context.Context, p *Payload) (err error) {
 			return true, nil // success
 
 		case openai.RunStatusRequiresAction:
-			if err = i.handleStatusRequiresAction(ctx, run); err != nil {
+			if err = i.handleStatusRequiresAction(ctx, run, p); err != nil {
 				toolsRetries++
 				return toolsRetries >= maxToolExecutionRetries, fmt.Errorf("while handling requires action: %w", err)
 			}
@@ -286,7 +292,7 @@ func (i *assistant) handleStatusCompleted(ctx context.Context, run openai.Run, p
 	return nil
 }
 
-func (i *assistant) handleStatusRequiresAction(ctx context.Context, run openai.Run) error {
+func (i *assistant) handleStatusRequiresAction(ctx context.Context, run openai.Run, p *Payload) error {
 	ctx, span := i.tracer.Start(ctx, "aibrain.assistant.handleStatusRequiresAction")
 	defer span.End()
 
@@ -307,7 +313,7 @@ func (i *assistant) handleStatusRequiresAction(ctx context.Context, run openai.R
 			continue
 		}
 
-		out, err := doer(ctx, []byte(t.Function.Arguments))
+		out, err := doer(ctx, []byte(t.Function.Arguments), p)
 		if err != nil {
 			span.RecordError(err)
 			span.SetStatus(codes.Error, err.Error())
