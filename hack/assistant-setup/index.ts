@@ -24,6 +24,7 @@ const instructions = dedent`
       Use it to answer ALL Botkube questions, for example:
       "What is Botkube?", or "what is X in Botkube?", or "How I configure Y in Botkube Cloud?", or "Where I can read about Z for Botkube?".
       Prefer less content from files with names containing "blog".
+      The files with "docs.botkube.io" prefix have the highest priority when answering Botkube plugin configuration questions.      
       At the end of such Botkube-related response, always print Markdown links to citations.
       To get an URL for the citation, replace "__" with "/" in the file name and prepend with "https://".
     Ensure your explanations are simplified for clarity to non-technical users.
