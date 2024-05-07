@@ -1,9 +1,10 @@
 package main
 
 import (
-	"github.com/stretchr/testify/assert"
 	"path/filepath"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 
 	"github.com/kubeshop/botkube/pkg/loggerx"
 	"github.com/stretchr/testify/require"
