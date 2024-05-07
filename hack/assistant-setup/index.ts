@@ -26,7 +26,6 @@ const instructions = dedent`
       Prefer less content from files with names containing "blog".
       At the end of such Botkube-related response, always print Markdown links to citations.
       To get an URL for the citation, replace "__" with "/" in the file name and prepend with "https://".
-      Always mention that the Botkube response assumes you use the latest Botkube version.
     Ensure your explanations are simplified for clarity to non-technical users.
     Keep responses concise, within 2000 characters. Provide extended answers only upon request.
     Make sure you fetch Botkube Agent configuration to answer questions about Botkube or channel configuration.
