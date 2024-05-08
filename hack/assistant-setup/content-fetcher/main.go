@@ -34,7 +34,7 @@ var excludedDocsPagesRegex = regexp.MustCompile(`^https:\/\/docs\.botkube\.io\/(
 func main() {
 	log := loggerx.New(config.Logger{
 		Level:     "info",
-		Formatter: "json",
+		Formatter: "text",
 	})
 
 	fetcher := &contentFetcher{
