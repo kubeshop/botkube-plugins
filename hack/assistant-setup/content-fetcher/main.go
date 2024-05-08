@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"net/url"
 	"os"
+	"path/filepath"
 	"regexp"
 	"strings"
 	"time"
@@ -27,6 +28,7 @@ const (
 	maxRetries          = 5
 	retryInterval       = 1 * time.Second
 	httpCliTimeout      = 1 * time.Minute
+	purgeAllContentEnv  = "PURGE_ALL_CONTENT"
 )
 
 var excludedDocsPagesRegex = regexp.MustCompile(`^https:\/\/docs\.botkube\.io\/(?:\d+\.\d+|next)\/.*`)
@@ -44,9 +46,17 @@ func main() {
 		},
 	}
 
-	log.Infof("Removing old %q directory...", contentDir)
-	err := os.RemoveAll(contentDir)
-	loggerx.ExitOnError(err, "while removing old directory")
+	shouldPurgeAllContent := os.Getenv(purgeAllContentEnv) == "true"
+
+	if shouldPurgeAllContent {
+		log.Infof("Purging all content as the %s env var is set. Removing old %q directory...", purgeAllContentEnv, contentDir)
+		err := os.RemoveAll(contentDir)
+		loggerx.ExitOnError(err, "while purging old content")
+	} else {
+		log.Infof("Removing some of the content as the %s env var is not set", purgeAllContentEnv)
+		err := removeFrequentlyUpdatedContent(log)
+		loggerx.ExitOnError(err, "while removing old content")
+	}
 
 	log.Info("Fetching Botkube sitemap...")
 	marketingPages, err := fetcher.getURLsToDownloadFromSitemap(marketingSitemapURL)
@@ -71,10 +81,19 @@ func main() {
 			errs = multierror.Append(errs, err)
 			continue
 		}
-		log.WithFields(logrus.Fields{
+
+		fetchLogger := log.WithFields(logrus.Fields{
 			"url":      page,
 			"filePath": filePath,
-		}).Infof("Fetching and saving page %d of %d...", i+1, len(pagesToFetch))
+			"progress": fmt.Sprintf("%d/%d", i+1, len(pagesToFetch)),
+		})
+
+		if _, err := os.Stat(filePath); err == nil {
+			fetchLogger.Info("Skipping as the file already exists")
+			continue
+		}
+
+		fetchLogger.Infof("Downloading page...")
 
 		err = retry.Do(
 			func() error {
@@ -95,6 +114,37 @@ func main() {
 	loggerx.ExitOnError(errs.ErrorOrNil(), "while fetching and saving docs pages")
 
 	log.Infof("Saved %d docs pages", len(pagesToFetch))
+}
+
+var notFrequentlyUpdatedContentPrefixes = []string{
+	"botkube.io__blog__",
+	"botkube.io__learn__",
+}
+
+func removeFrequentlyUpdatedContent(log logrus.FieldLogger) error {
+	return filepath.WalkDir(contentDir, func(path string, d os.DirEntry, err error) error {
+		if err != nil {
+			return err
+		}
+
+		if d.IsDir() {
+			return nil
+		}
+
+		for _, prefix := range notFrequentlyUpdatedContentPrefixes {
+			if strings.HasPrefix(d.Name(), prefix) {
+				log.WithField("path", path).Debug("Skipping removing not frequently updated content")
+				return nil
+			}
+		}
+
+		err = os.Remove(path)
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
 }
 
 type contentFetcher struct {
