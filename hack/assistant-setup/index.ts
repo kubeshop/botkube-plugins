@@ -3,10 +3,8 @@ import { setupFileSearch } from "./file-search";
 import { setupTools } from "./tools";
 import dedent from "dedent";
 
-// const prodAssistantID = "asst_eMM9QaWLi6cajHE4PdG1yU53"
-// const devAssistantID  = "asst_ejVrAgjhhvCw6jGFYq5JyBqj"
-const prodAssistantID = "asst_OlHQp85H7upQi6bDMbacvYKA"; // pkosiec Botkube assistant // FIXME
-const devAssistantID = "asst_OlHQp85H7upQi6bDMbacvYKA"; // pkosiec Botkube assistant // FIXME
+const prodAssistantID = "asst_eMM9QaWLi6cajHE4PdG1yU53";
+const devAssistantID = "asst_ejVrAgjhhvCw6jGFYq5JyBqj";
 
 const model = "gpt-4-turbo";
 const temperature = 0.1;
