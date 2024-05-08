@@ -19,7 +19,15 @@ This section describes [Botkube agent](https://docs.botkube.io/architecture/) re
 
 The easiest way to check the Agent version is to get the Docker image:
 
-kubectl get deploy botkube -n botkube -o=jsonpath="{'Used images\n'}{range .spec.template.spec.containers[*]}{.name}{':\t'}{.image}{'\n'}{end}" You should get an output similar to this: Used imagesbotkube: ghcr.io/kubeshop/botkube:v1.5.0cfg-watcher: ghcr.io/kubeshop/k8s-sidecar:in-cluster-config The `botkube` is the agent image. The container image tag (`v1.5.0`) is the version in which it was deployed on the cluster. ### Agent health[​](#agent-health"DirectlinktoAgenthealth")
+kubectl get deploy botkube -n botkube -o=jsonpath="{'Used images\n'}{range .spec.template.spec.containers[*]}{.name}{':\t'}{.image}{'\n'}{end}"
+
+You should get an output similar to this:
+
+Used imagesbotkube:    ghcr.io/kubeshop/botkube:v1.5.0cfg-watcher:    ghcr.io/kubeshop/k8s-sidecar:in-cluster-config
+
+The `botkube` is the agent image. The container image tag (`v1.5.0`) is the version in which it was deployed on the cluster.
+
+### Agent health[​](#agent-health"DirectlinktoAgenthealth")
 
 To check if the Agent Pods are in the `Running` state, run:
 

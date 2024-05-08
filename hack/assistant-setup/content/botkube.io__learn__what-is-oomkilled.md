@@ -3,6 +3,30 @@ Title: OOMKilled Explained: Unraveling Kubernetes Memory Limit Errors
 URL Source: https://botkube.io/learn/what-is-oomkilled
 
 Markdown Content:
+What is OOMKilled?
+------------------
+
+![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65fa187ca7f5437925b47992_LEARN_TN_Errors%20(2).png)
+
+![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64a86fdda4d8d06ce598598e_evan%20image.jpg)
+
+Evan Witmer
+
+Growth Lead
+
+Botkube
+
+Table of Contents
+-----------------
+
+*   [How to View the Error Message](#how-to-view-the-error-message-2)
+*   [What is Error Code 137?](#what-is-error-code-137--2)
+*   [How to Prevent OOMKilled](#how-to-prevent-oomkilled-2)
+*   [How to Troubleshoot OOMKilled](#how-to-troubleshoot-oomkilled-2)
+*   [Conclusion](#conclusion-2)
+
+#### Get started with Botkube Cloud
+
 OOMKilled is an error that occurs when a container or pod in Kubernetes uses more memory than it is allowed. This can happen for a variety of reasons, such as a memory leak, a bug in the application, or a spike in traffic. When a container or pod is terminated due to OOMKilled, it will not be able to recover and will need to be restarted.
 
 **How to View the Error Message**
@@ -10,7 +34,7 @@ OOMKilled is an error that occurs when a container or pod in Kubernetes uses mor
 
 If you see an OOMKilled error, you can view the error message by running the following command:
 
-`kubectl logs <pod_name>`
+\`kubectl logs <pod\_name>\`
 
 The error message will show you the name of the container that was terminated and the reason for the termination.
 
@@ -19,7 +43,7 @@ The error message will show you the name of the container that was terminated an
 
 Error Code 137 is the exit code that is returned when a container or pod is terminated due to OOMKilled. You can see the error code by running the following command:
 
-`kubectl get pod <pod_name> -o yaml`
+\`kubectl get pod <pod\_name> -o yaml\`
 
 The error code will be listed in the "Status" section of the pod's YAML definition.
 
@@ -51,6 +75,10 @@ Here are some additional tips for troubleshooting OOMKilled errors:
 *   Use a tool like Prometheus to collect metrics about your Kubernetes cluster.
 *   Use a tool like Botkube to see the error messages directly in Slack or Teams and use AI to suggest a troubleshooting action directly from the Slack channel.
 
+### Solving OOMKilled with AI for Kubernetes Pods
+
+Botkube's new AI assistant revolutionizes how you handle OOMKilled errors in your Kubernetes pods. This intelligent feature proactively scans your cluster to pinpoint the exact pod responsible for the error.  It then offers actionable solutions: either tailored guidance on optimizing your workload to reduce memory consumption or the ability to use Botkube's integrated Kubectl commands to increase memory allocation directly.  With this AI-powered tool, you can swiftly resolve OOMKilled errors, saving valuable time and ensuring your Kubernetes applications run smoothly.
+
 ### About Botkube
 
-Botkube is a collaborative troubleshooting tool designed specifically for Kubernetes users. With Botkube, you can seamlessly receive and act on alerts directly within your preferred messaging and collaboration platforms like Slack, Microsoft Teams, Discord, and Mattermost. In addition, Botkube enables you to automate actions based on events, run kubectl and Helm commands, receive recommendations for best practices and much more. [Get started with Botkube for free.](http://app.botkube.io/)
+Botkube is a collaborative troubleshooting tool designed specifically for Kubernetes users. With Botkube, you can seamlessly receive and act on alerts directly within your preferred messaging and collaboration platforms like Slack, Microsoft Teams, Discord, and Mattermost. In addition, Botkube enables you to automate actions based on events, run kubectl and Helm commands, receive recommendations for best practices and much more. [Get started with Botkube for free.](https://app.botkube.io/)

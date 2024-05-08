@@ -7,7 +7,9 @@ Botkube allows you to execute `kubectl` commands on your Kubernetes cluster. By 
 
 To execute the `kubectl` commands, send message in following format in the channel where Botkube is already added:
 
-@Botkube kubectl [verb] [resource] [flags] By default, `k` and `kc` are configured as aliases for the `kubectl` command. You can use them on par with the `kubectl` command. To read more about aliases configuration, see the [Alias](https://docs.botkube.io/configuration/alias) section.
+@Botkube kubectl [verb] [resource] [flags]
+
+By default, `k` and `kc` are configured as aliases for the `kubectl` command. You can use them on par with the `kubectl` command. To read more about aliases configuration, see the [Alias](https://docs.botkube.io/configuration/alias) section.
 
 This command needs to be executed from configured channel.
 

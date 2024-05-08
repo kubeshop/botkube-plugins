@@ -27,7 +27,7 @@ Act on events directly in the collaboration platform (including mobile apps) by 
 
 Actions allow you to automatically run commands based on specific events and see the results in the event message. Gather logs and other details on errors, get descriptions of newly created resources, and even auto-rollback failed deployments and upgrades with simple configuration steps.
 
-[Take a closer look ![Image 4: a screenshot of an error message on a website](https://assets-global.website-files.com/633705de6adaa38599d8e258/64025d7fab04582144112fc7_Screenshot%202023-02-27%20at%2017.42%201.png)](#)
+[Take a closer look ![Image 4](https://assets-global.website-files.com/633705de6adaa38599d8e258/64025d7fab04582144112fc7_Screenshot%202023-02-27%20at%2017.42%201.png)](#)
 
 ![Image 5: Automate K8s maintenance tasks](https://assets-global.website-files.com/633705de6adaa38599d8e258/642da9080827c967a39b0043_automation_new.gif)
 

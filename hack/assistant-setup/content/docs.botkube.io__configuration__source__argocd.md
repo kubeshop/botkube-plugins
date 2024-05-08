@@ -20,7 +20,11 @@ Prerequisite elevated RBAC permissions[​](#prerequisite-elevated-rbac-permissi
 
 ArgoCD plugin requires specific RBAC permissions. First, create RBAC resources on your cluster:
 
-cat > /tmp/argocd-rbac.yaml << ENDOFFILE---apiVersion: rbac.authorization.k8s.io/v1kind: ClusterRolemetadata:  name: argocdrules:  - apiGroups: [""] resources: ["configmaps"] verbs: ["get", "update"] - apiGroups: ["argoproj.io"] resources: ["applications"] verbs: ["get", "patch"]---apiVersion: rbac.authorization.k8s.io/v1kind: ClusterRoleBindingmetadata: name: argocdroleRef: apiGroup: rbac.authorization.k8s.io kind: ClusterRole name: argocdsubjects:- kind: Group name: argocd apiGroup: rbac.authorization.k8s.ioENDOFFILEkubectl apply -f /tmp/argocd-rbac.yaml Next, use the `argocd` static group name in the plugin RBAC configuration: ![Image 1: ArgoCD RBAC](https://docs.botkube.io/assets/images/argocd-rbac-71831f5dfa99aade0bbccbcb140488fd.png)
+cat > /tmp/argocd-rbac.yaml << ENDOFFILE---apiVersion: rbac.authorization.k8s.io/v1kind: ClusterRolemetadata:  name: argocdrules:  - apiGroups: [""]    resources: ["configmaps"]    verbs: ["get", "update"]  - apiGroups: ["argoproj.io"]    resources: ["applications"]    verbs: ["get", "patch"]---apiVersion: rbac.authorization.k8s.io/v1kind: ClusterRoleBindingmetadata:  name: argocdroleRef:  apiGroup: rbac.authorization.k8s.io  kind: ClusterRole  name: argocdsubjects:- kind: Group  name: argocd  apiGroup: rbac.authorization.k8s.ioENDOFFILEkubectl apply -f /tmp/argocd-rbac.yaml
+
+Next, use the `argocd` static group name in the plugin RBAC configuration:
+
+![Image 1: ArgoCD RBAC](https://docs.botkube.io/assets/images/argocd-rbac-71831f5dfa99aade0bbccbcb140488fd.png)
 
 Enabling plugin[​](#enabling-plugin"DirectlinktoEnablingplugin")
 ---------------------------------------------------------------------

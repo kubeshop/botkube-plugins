@@ -9,14 +9,14 @@ Helm charts are a popular way to package and deploy applications on Kubernetes c
 
 Helm charts are a way of packaging and deploying applications on Kubernetes clusters. They are composed of a set of templates that define the Kubernetes manifest files for the application and its dependencies. Helm charts also include metadata, such as the chart name, version, description, and dependencies.
 
-Helm charts can be installed on a Kubernetes cluster using the `helm install` command, which creates a helm release. A Helm release is an instance of a chart running on a cluster. Each release has a unique name and can be managed by Helm commands, such as helm list, helm upgrade, helm uninstall, etc.
+Helm charts can be installed on a Kubernetes cluster using the \`helm install\` command, which creates a helm release. A Helm release is an instance of a chart running on a cluster. Each release has a unique name and can be managed by Helm commands, such as helm list, helm upgrade, helm uninstall, etc.
 
 Helm charts can simplify the deployment and management of complex applications on Kubernetes, but they can also introduce some challenges and errors. In this article, we will discuss some common troubleshooting issues when deploying Helm charts to Kubernetes clusters and how to resolve them.
 
 **Helm Chart Troubleshooting: Failed with Error Message**
 ---------------------------------------------------------
 
-One of the most common issues when deploying helm charts is that the `helm install` command fails with an error message. This can happen for various reasons, such as:
+One of the most common issues when deploying helm charts is that the \`helm install\` command fails with an error message. This can happen for various reasons, such as:
 
 ### **Helm Chart Not Found**
 
@@ -34,11 +34,11 @@ If there is an error in your chart, Helm will not be able to create the Kubernet
 
 ### **Insufficient Permissions**
 
-If you do not have sufficient permissions to create Kubernetes resources, Helm will not be able to create them. You can check your permissions by running `kubectl auth can-i create <resource>`.
+If you do not have sufficient permissions to create Kubernetes resources, Helm will not be able to create them. You can check your permissions by running \`kubectl auth can-i create <resource>\`.
 
 To troubleshoot these issues, you should first check the error message and see if it provides any clues about the cause of the failure.
 
-You can also use the `--debug` flag to get more detailed information about the helm install process. At this point, Helm will show you all of the Kubernetes resources that it is creating. If there is an error, it will be displayed in the output.
+You can also use the \`--debug\` flag to get more detailed information about the helm install process. At this point, Helm will show you all of the Kubernetes resources that it is creating. If there is an error, it will be displayed in the output.
 
 **The Easy Way: Botkube, Your Kubernetes Troubleshooting Assistant**
 --------------------------------------------------------------------
@@ -53,7 +53,7 @@ In addition to finding the solution for Helm errors, Botkube’s ChatOps functio
 
 Believe the hype around ChatGPT troubleshooting code? Botkube thinks it is pretty useful for suggesting solutions to common K8s errors as well. Our new [Doctor plugin](https://botkube.io/blog/use-chatgpt-to-troubleshoot-kubernetes-errors-with-botkubes-doctor) allows operation engineers to bring ChatGPT directly into their cluster!
 
-With Botkube's other powerful chat integrations, you can now prompt the power of ChatGPT directly from your Slack Channel. Between Botkube's helpful suggestions and ChatGPT, you should be able to navigate deploying helm charts in no time. Simply utilize [Botkube's web interface](https://botkube.io/blog/step-by-step-tutorial-leveraging-botkubes-cloud-slack-feature-for-kubernetes-collaborative-troubleshooting) to begin deploying your initial chart today!
+With Botkube's other powerful chat integrations, you can now prompt the power of ChatGPT directly from your Slack Channel. Between Botkube's helpful suggestions and ChatGPT, you should be able to navigate deploying helm charts in no time. Simply utilize [Botkube's web interface](https://botkube.io/blog/step-by-step-tutorial-leveraging-botkubes-cloud-slack-feature-for-kubernetes-collaborative-troubleshooting) to begin deploying your initial chart today!  
 
 See how others are using Botkube with Helm Charts
 -------------------------------------------------

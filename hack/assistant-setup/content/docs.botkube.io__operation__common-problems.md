@@ -14,7 +14,12 @@ Incompatible plugin API version[​](#incompatible-plugin-api-version"Directlink
 
 *   In [Botkube agent logs](https://docs.botkube.io/operation/diagnostics#agent-logs), you see such entry:
 
-while running application: while waiting for goroutines to finish gracefully: 1 error occurred:    * while starting plugins manager: while creating executor plugins: Incompatible API version with plugin. Plugin version: 2, Client versions: [1] **Debugging steps** * [Check Botkube agent version](https://docs.botkube.io/operation/diagnostics#agent-version).
+while running application: while waiting for goroutines to finish gracefully: 1 error occurred:    * while starting plugins manager: while creating executor plugins: Incompatible API version with plugin. Plugin version: 2, Client versions: [1]
+
+
+**Debugging steps**
+
+*   [Check Botkube agent version](https://docs.botkube.io/operation/diagnostics#agent-version).
 
 *   [Check plugin repository version](https://docs.botkube.io/operation/diagnostics#check-configured-plugin-repositories).
 

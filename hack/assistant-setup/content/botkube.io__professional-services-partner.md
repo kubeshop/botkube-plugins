@@ -10,7 +10,7 @@ Markdown Content:
 InfraCloud as our Preferred Professional Services Partner
 ---------------------------------------------------------
 
-![Image 2: a blue cube on a black background](https://assets-global.website-files.com/633705de6adaa38599d8e258/63381eaca918c27a5f1fe111_botkube-wg-pers.png)![Image 3: a speech bubble with the words need help?](https://assets-global.website-files.com/633705de6adaa38599d8e258/633819299841f90bb49b7ba5_kusk-person-bubble.svg)
+![Image 2](https://assets-global.website-files.com/633705de6adaa38599d8e258/63381eaca918c27a5f1fe111_botkube-wg-pers.png)![Image 3](https://assets-global.website-files.com/633705de6adaa38599d8e258/633819299841f90bb49b7ba5_kusk-person-bubble.svg)
 
 Debug and monitor your clusters using Botkube in an interactive way. Want to use it with your own messaging tool? Or want some customizations? Reach out to our experts to get started.
 
@@ -25,7 +25,7 @@ We understand that each deployment is different and hence our experts can help y
 Get in touch for Professional Services Support
 ----------------------------------------------
 
-![Image 4: the logo for infracacloud](https://assets-global.website-files.com/633705de6adaa38599d8e258/63484ada6acf164e4c5ac930_infracloud-logo.svg)
+![Image 4](https://assets-global.website-files.com/633705de6adaa38599d8e258/63484ada6acf164e4c5ac930_infracloud-logo.svg)
 
 InfraCloud unleashes growth by helping companies adopt cloud-native technologies with their products and services.
 

@@ -46,7 +46,9 @@ However, such configuration will generate a kubeconfig with empty impersonation 
 
 During Botkube installation, Botkube generates Kubernetes ClusterRole and ClusterRoleBinding resources with read-only access for the default group `botkube-plugins-default`. This group is used by default across the `values.yaml` for all default plugins.
 
-rbac:  # ...  groups:    "botkube-plugins-default":      create: true      rules:        - apiGroups: ["*"] resources: ["*"] verbs: ["get", "watch", "list"] See the [`values.yaml`](https://github.com/kubeshop/botkube/blob/v1.10.0/helm/botkube/values.yaml) for more details.
+rbac:  # ...  groups:    "botkube-plugins-default":      create: true      rules:        - apiGroups: ["*"]          resources: ["*"]          verbs: ["get", "watch", "list"]
+
+See the [`values.yaml`](https://github.com/kubeshop/botkube/blob/v1.10.0/helm/botkube/values.yaml) for more details.
 
 #### Defaults for user mapping when group mapping is used[​](#defaults-for-user-mapping-when-group-mapping-is-used"DirectlinktoDefaultsforusermappingwhengroupmappingisused")
 
@@ -79,7 +81,19 @@ In this example an executor plugin is defined with static RBAC that maps to grou
 
 1.  Consider the following Botkube config:
 
-# ...executors:  "kubectl-read-only":    botkube/kubectl@v1:      enabled: true      # ...      context:        rbac:          group:            type: Static            static:              values: [read-pods] Let's assume this plugin is bound to at least one channel. 1. Consider the following Kubernetes RBAC configuration: apiVersion: rbac.authorization.k8s.io/v1kind: ClusterRolemetadata: name: kubectl-read-podsrules: - apiGroups: [""] resources: ["pods"] verbs: ["get", "watch", "list"]---apiVersion: rbac.authorization.k8s.io/v1kind: ClusterRoleBindingmetadata: name: kubectl-read-podsroleRef: apiGroup: rbac.authorization.k8s.io kind: ClusterRole name: kubectl-read-podssubjects: - kind: Group name: read-pods # <-- this is the group name used in Botkube config apiGroup: rbac.authorization.k8s.io In a result, when this executor plugin is invoked, Botkube generates a kubeconfig impersonating group `read-pods` and passes it to the plugin. The plugin then can authenticate with the API server with identity of group `read-pods`. In that way, the plugin can use read-only operations on Pods. ### Kubernetes source plugin with read-only access based on static user mapping[​](#kubernetes-source-plugin-with-read-only-access-based-on-static-user-mapping"DirectlinktoKubernetessourcepluginwithread-onlyaccessbasedonstaticusermapping")
+# ...executors:  "kubectl-read-only":    botkube/kubectl@v1:      enabled: true      # ...      context:        rbac:          group:            type: Static            static:              values: [read-pods]
+
+
+Let's assume this plugin is bound to at least one channel.
+
+1.  Consider the following Kubernetes RBAC configuration:
+
+apiVersion: rbac.authorization.k8s.io/v1kind: ClusterRolemetadata:  name: kubectl-read-podsrules:  - apiGroups: [""]    resources: ["pods"]    verbs: ["get", "watch", "list"]---apiVersion: rbac.authorization.k8s.io/v1kind: ClusterRoleBindingmetadata:  name: kubectl-read-podsroleRef:  apiGroup: rbac.authorization.k8s.io  kind: ClusterRole  name: kubectl-read-podssubjects:  - kind: Group    name: read-pods # <-- this is the group name used in Botkube config    apiGroup: rbac.authorization.k8s.io
+
+
+In a result, when this executor plugin is invoked, Botkube generates a kubeconfig impersonating group `read-pods` and passes it to the plugin. The plugin then can authenticate with the API server with identity of group `read-pods`. In that way, the plugin can use read-only operations on Pods.
+
+### Kubernetes source plugin with read-only access based on static user mapping[​](#kubernetes-source-plugin-with-read-only-access-based-on-static-user-mapping"DirectlinktoKubernetessourcepluginwithread-onlyaccessbasedonstaticusermapping")
 
 In this example a single source plugin is defined with static RBAC that maps to user `kubernetes-read-only`.
 
@@ -89,7 +103,12 @@ sources:  "kubernetes":    botkube/kubernetes@v1:      enabled: true      # ... 
 
 2.  Consider the following Kubernetes RBAC configuration:
 
-apiVersion: rbac.authorization.k8s.io/v1kind: ClusterRolemetadata:  name: readerrules:  - apiGroups: ["*"] resources: ["*"] verbs: ["get", "watch", "list"]---apiVersion: rbac.authorization.k8s.io/v1kind: ClusterRoleBindingmetadata: name: readerroleRef: apiGroup: rbac.authorization.k8s.io kind: ClusterRole name: readersubjects: - kind: User name: kubernetes-read-only # <-- this is the username used in Botkube config apiGroup: rbac.authorization.k8s.io In a result, the source plugin can access all Kubernetes resources with read-only permissions. ### Kubectl executor plugin with different permissions based on channel name mapping[​](#kubectl-executor-plugin-with-different-permissions-based-on-channel-name-mapping"DirectlinktoKubectlexecutorpluginwithdifferentpermissionsbasedonchannelnamemapping")
+apiVersion: rbac.authorization.k8s.io/v1kind: ClusterRolemetadata:  name: readerrules:  - apiGroups: ["*"]    resources: ["*"]    verbs: ["get", "watch", "list"]---apiVersion: rbac.authorization.k8s.io/v1kind: ClusterRoleBindingmetadata:  name: readerroleRef:  apiGroup: rbac.authorization.k8s.io  kind: ClusterRole  name: readersubjects:  - kind: User    name: kubernetes-read-only # <-- this is the username used in Botkube config    apiGroup: rbac.authorization.k8s.io
+
+
+In a result, the source plugin can access all Kubernetes resources with read-only permissions.
+
+### Kubectl executor plugin with different permissions based on channel name mapping[​](#kubectl-executor-plugin-with-different-permissions-based-on-channel-name-mapping"DirectlinktoKubectlexecutorpluginwithdifferentpermissionsbasedonchannelnamemapping")
 
 In this example **kubectl** executor plugin is configured with channel name mapping and bound to two channels, `ch-1` and `ch-2`. In Kubernetes RBAC resources, group `ch-1` is given write access, while group `ch-2` is given only read access.
 
@@ -99,7 +118,12 @@ executors:  "kubectl":    botkube/kubectl@v1:      # ...      enabled: true     
 
 2.  Consider the following Kubernetes RBAC configuration:
 
-apiVersion: rbac.authorization.k8s.io/v1kind: ClusterRolemetadata:  name: editorrules:  - apiGroups: ["*"] resources: ["*"] verbs: ["get", "watch", "list", "update", "create", "delete"]---apiVersion: rbac.authorization.k8s.io/v1kind: ClusterRoleBindingmetadata: name: editorroleRef: apiGroup: rbac.authorization.k8s.io kind: ClusterRole name: editorsubjects: - kind: Group name: ch-1 # <-- channel name used in Botkube config apiGroup: rbac.authorization.k8s.io---apiVersion: rbac.authorization.k8s.io/v1kind: ClusterRolemetadata: name: read-onlyrules: - apiGroups: ["*"] resources: ["*"] verbs: ["get", "watch", "list"]---apiVersion: rbac.authorization.k8s.io/v1kind: ClusterRoleBindingmetadata: name: read-onlyroleRef: apiGroup: rbac.authorization.k8s.io kind: ClusterRole name: read-onlysubjects: - kind: Group name: ch-2 # <-- channel name used in Botkube config apiGroup: rbac.authorization.k8s.io In a result, users in channel `ch-1` can execute all kubectl commands, while users in channel `ch-2` can only execute read-only commands. Limitations[​](#limitations"DirectlinktoLimitations")
+apiVersion: rbac.authorization.k8s.io/v1kind: ClusterRolemetadata:  name: editorrules:  - apiGroups: ["*"]    resources: ["*"]    verbs: ["get", "watch", "list", "update", "create", "delete"]---apiVersion: rbac.authorization.k8s.io/v1kind: ClusterRoleBindingmetadata:  name: editorroleRef:  apiGroup: rbac.authorization.k8s.io  kind: ClusterRole  name: editorsubjects:  - kind: Group    name: ch-1 # <-- channel name used in Botkube config    apiGroup: rbac.authorization.k8s.io---apiVersion: rbac.authorization.k8s.io/v1kind: ClusterRolemetadata:  name: read-onlyrules:  - apiGroups: ["*"]    resources: ["*"]    verbs: ["get", "watch", "list"]---apiVersion: rbac.authorization.k8s.io/v1kind: ClusterRoleBindingmetadata:  name: read-onlyroleRef:  apiGroup: rbac.authorization.k8s.io  kind: ClusterRole  name: read-onlysubjects:  - kind: Group    name: ch-2 # <-- channel name used in Botkube config    apiGroup: rbac.authorization.k8s.io
+
+
+In a result, users in channel `ch-1` can execute all kubectl commands, while users in channel `ch-2` can only execute read-only commands.
+
+Limitations[​](#limitations"DirectlinktoLimitations")
 ---------------------------------------------------------
 
 This paragraph contains limitations of the current implementation.

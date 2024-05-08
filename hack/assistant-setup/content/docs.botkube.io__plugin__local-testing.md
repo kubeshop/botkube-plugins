@@ -15,7 +15,18 @@ This document describes steps for running Botkube core locally together with a l
 
 2.  Create a file with your plugins' repository, plugin configuration and bindings for enabled communication platform:
 
-plugins:  repositories:    local-repo:      url: http://localhost:8080/plugins-index.yamlexecutors:  "plugins":    local-repo/executor-name: # Plugin name syntax: <repo>/<plugin>[@<version>]. If version is not provided, the latest version from repository is used. enabled: true config: {} # Plugin's specific configuration.sources: "plugins": local-repo/source-name: # Plugin name syntax: <repo>/<plugin>[@<version>]. If version is not provided, the latest version from repository is used. enabled: true config: {} # Plugin's specific configuration.communications: # Enable a given communication platform and define bindings to a given executor and source plugins. For example, for Slack and example `echo` and `ticker` plugins, provide `appToken` and `botToken` and run the script: Create /tmp/config-values.yaml 3. In your plugin project directory, start a static plugin server: # Use https://github.com/vercel/servenpx serve --listen 8080 note If Botkube runs on external Kubernetes cluster, you can use the tunneling software, for example [`ngrok`](https://ngrok.com/). It creates an externally addressable URL for a port you open locally on your machine.
+plugins:  repositories:    local-repo:      url: http://localhost:8080/plugins-index.yamlexecutors:  "plugins":    local-repo/executor-name: # Plugin name syntax: <repo>/<plugin>[@<version>]. If version is not provided, the latest version from repository is used.      enabled: true      config: {} # Plugin's specific configuration.sources:  "plugins":    local-repo/source-name: # Plugin name syntax: <repo>/<plugin>[@<version>]. If version is not provided, the latest version from repository is used.      enabled: true      config: {} # Plugin's specific configuration.communications:  # Enable a given communication platform and define bindings to a given executor and source plugins.
+
+For example, for Slack and example `echo` and `ticker` plugins, provide `appToken` and `botToken` and run the script:
+
+Create /tmp/config-values.yaml
+3.  In your plugin project directory, start a static plugin server:
+
+# Use https://github.com/vercel/servenpx serve --listen 8080
+
+note
+
+If Botkube runs on external Kubernetes cluster, you can use the tunneling software, for example [`ngrok`](https://ngrok.com/). It creates an externally addressable URL for a port you open locally on your machine.
 
 4.  In your plugin project directory open a new terminal window.
 

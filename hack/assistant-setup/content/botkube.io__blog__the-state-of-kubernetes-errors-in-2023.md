@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/the-state-of-kubernetes-errors-in-2023
 Published Time: Aug 03, 2023
 
 Markdown Content:
-![Image 1: a man in a blue shirt with his arms crossed](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64a86fdda4d8d06ce598598e_evan%20image.jpg)
+![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64a86fdda4d8d06ce598598e_evan%20image.jpg)
 
 Evan Witmer
 
@@ -81,7 +81,7 @@ ChatOps is a method of using chat tools to automate and streamline DevOps workfl
 
 Govardhana Miriyala Kannaiah wrote a great [LinkedIn post](https://www.linkedin.com/posts/govardhana-miriyala-kannaiah_gopuwrites-kubernetes-devops-activity-7076547924205146115-b6le/) where he outlined a chart for effective Kubernetes troubleshooting. The two axis of this chart are ‘ How effective it is’ and ‘How often to do it’. This shows the different troubleshooting techniques like checking logs or verifying pod configuration. We hope you enjoy his graph as much as we did!
 
-![Image 2: a diagram showing the different types of troubleshooting](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64cbf6afb711c416c4939db4_6xCx7eRWFrIzItkWAb9rcnUhWR2ID4us4Lc-1ynN0EHEgkmBQRO78zIdtlvPjq-SKy6ipbxlXLWjsnCsiuyC0WbGGq8svhXY3VOJuC4AKdzzVHpMS3XXzwQ9Izj59OGYUoTP5Eiu6EZv1W9sWpQEd_c.png)
+![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64cbf6afb711c416c4939db4_6xCx7eRWFrIzItkWAb9rcnUhWR2ID4us4Lc-1ynN0EHEgkmBQRO78zIdtlvPjq-SKy6ipbxlXLWjsnCsiuyC0WbGGq8svhXY3VOJuC4AKdzzVHpMS3XXzwQ9Izj59OGYUoTP5Eiu6EZv1W9sWpQEd_c.png)
 
 **Concluding Kubernetes Errors**
 --------------------------------

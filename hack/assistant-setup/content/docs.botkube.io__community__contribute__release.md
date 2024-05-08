@@ -3,7 +3,8 @@ Title: Release instruction | Botkube
 URL Source: https://docs.botkube.io/community/contribute/release
 
 Markdown Content:
-*   [](https://docs.botkube.io/) * [Contribute](https://docs.botkube.io/community/contribute/)
+*   [](https://docs.botkube.io/)
+*   [Contribute](https://docs.botkube.io/community/contribute/)
 *   Release instruction
 
 Release instruction

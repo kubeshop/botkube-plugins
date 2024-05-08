@@ -29,7 +29,9 @@ Simplified Kustomization Diffing Flow[​](#simplified-kustomization-diffing-flo
 
 With the Botkube Flux executor, you can execute a single command to perform a diff between a specific pull request and the cluster state. For instance:
 
-@Botkube flux diff kustomization podinfo --path ./kustomize --github-ref [PR Number| URL | Branch] ![Image 2: flux-diff](https://docs.botkube.io/assets/images/flux-diff-abdd97d5a1b5dd3b64ecf2c1712fa14d.gif)
+@Botkube flux diff kustomization podinfo --path ./kustomize --github-ref [PR Number| URL | Branch]
+
+![Image 2: flux-diff](https://docs.botkube.io/assets/images/flux-diff-abdd97d5a1b5dd3b64ecf2c1712fa14d.gif)
 
 This command automates several tasks:
 

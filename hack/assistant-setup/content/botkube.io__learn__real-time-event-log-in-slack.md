@@ -3,35 +3,6 @@ Title: Streamline Kubernetes Monitoring: Create Event Logs in Slack
 URL Source: https://botkube.io/learn/real-time-event-log-in-slack
 
 Markdown Content:
-[![Image 1: Kusk Kubernetes](https://assets-global.website-files.com/633705de6adaa38599d8e258/6338148fa3f8a509639804fa_botkube-logo.svg)](https://botkube.io/)
-
-Revolutionize Kubernetes Monitoring: Create a Real-Time Event Log in Slack with Botkube
----------------------------------------------------------------------------------------
-
-![Image 2: botkube monitoring kss - screenshot thumbnail](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65fa098d77182cff46cde451_LEARN_TN_Monitoring%20(1).png)
-
-Last updated
-
-April 22, 2024
-
-![Image 3: a man in a blue shirt with his arms crossed](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64a86fdda4d8d06ce598598e_evan%20image.jpg)
-
-Evan Witmer
-
-Growth Lead
-
-Botkube
-
-Table of Contents
------------------
-
-*   [Why a Slack Event Log?](#why-a-slack-event-log-)
-*   [Setting Up Your Slack Kubernetes Log with Botkube](#setting-up-your-slack-kubernetes-log-with-botkube)
-*   [Example: Catching a CrashLoopBackOff Error](#example-catching-a-crashloopbackoff-error)
-*   [Transform Your Kubernetes Workflow](#transform-your-kubernetes-workflow)
-
-#### Get started with Botkube Cloud
-
 Kubernetes environments are dynamic, and keeping track of every change and potential issue can be overwhelming. Botkube offers an elegant solution: a detailed, real-time Kubernetes event log streamed directly into your team's Slack channel, eliminating the need to constantly [switch between tools](https://botkube.io/learn/kubernetes-monitoring-tools).
 
 Why a Slack Event Log?
@@ -72,4 +43,4 @@ Botkube's Slack integration supercharges your Kubernetes operations. Experience 
 
 ### About Botkube
 
-Botkube is a collaborative troubleshooting tool designed specifically for Kubernetes users. With Botkube, you can seamlessly receive and act on alerts directly within your preferred messaging and collaboration platforms like Slack, Microsoft Teams, Discord, and Mattermost. In addition, Botkube enables you to automate actions based on events, run kubectl and Helm commands, receive recommendations for best practices and much more. [Get started with Botkube for free.](http://app.botkube.io/)
+Botkube is a collaborative troubleshooting tool designed specifically for Kubernetes users. With Botkube, you can seamlessly receive and act on alerts directly within your preferred messaging and collaboration platforms like Slack, Microsoft Teams, Discord, and Mattermost. In addition, Botkube enables you to automate actions based on events, run kubectl and Helm commands, receive recommendations for best practices and much more. [Get started with Botkube for free.](https://app.botkube.io/)

@@ -29,9 +29,9 @@ Performing Helm Chart Rollbacks
 To perform a Helm chart rollback, you typically follow these steps:
 
 1.  List the available Helm releases to identify the release you want to rollback to using the helm list command.
-2.  `helm list`
+2.  <code>helm list</code>
 3.  Use the \`helm rollback\` command to perform the rollback, specifying the release name and the revision to which you want to revert.
-4.  `helm rollback`
+4.  <code>helm rollback <RELEASE\_NAME> <REVISION\_NUMBER></code>
 
 Maintaining a proper history of Helm releases is essential for successful rollbacks. Helm automatically records every release, allowing you to easily identify the desired revision.
 
@@ -43,7 +43,7 @@ Running a Helm Roll Back Command using Slack with Botkube
 
 While Helm provides the necessary tools to perform rollbacks, Botkube takes it a step further by simplifying the entire process and making it more accessible to your team. [Botkube offers seamless integration with Helm](https://botkube.io/integration/helm), allowing you to control Helm Chart rollbacks directly from your preferred chat platform, such as Microsoft Teams or Slack.
 
-Imagine you encounter a critical issue in your production environment, and you need to roll back to a stable release promptly. With Botkube's integration, you can initiate the rollback process with a simple chat command, without needing to access the Kubernetes command line, kubectl, directly. This not only streamlines the rollback procedure, but also facilitates collaboration within teams by ensuring that everyone is informed and involved in the decision-making process directly in the chat platform they already use.
+Imagine you encounter a critical issue in your production environment, and you need to roll back to a stable release promptly. With Botkube's integration, you can initiate the rollback process with a simple chat command, without needing to access the Kubernetes command line, kubectl, directly. This not only streamlines the rollback procedure, but also facilitates collaboration within teams by ensuring that everyone is informed and involved in the decision-making process directly in the chat platform they already use.  
 
 Flux Rollbacks Explained
 ------------------------
@@ -82,15 +82,15 @@ While Helm and Flux are powerful tools for managing rollbacks, there might be si
 The kubectl rollback process is a manual manual approach compared to Helm and Flux, but it provides fine-grained control over the rollback of individual Kubernetes resources. Here's a general overview of how a kubectl rollback works:
 
 1.  Inspect Resource History: First, use kubectl to inspect the history of the specific Kubernetes resource you want to rollback. You can do this by running a command like:
-2.  `kubectl rollout history deployment/`
+2.  <code>kubectl rollout history deployment/<DEPLOYMENT\_NAME></code>
 3.  This command shows you the revisions and changes made to the resource over time.
 4.  Perform Rollback: Once you identify the desired revision to which you want to roll back, you can use kubectl to execute the rollback:
-5.  `kubectl rollout undo deployment/ --to-revision=`
+5.  <code>kubectl rollout undo deployment/<DEPLOYMENT\_NAME> --to-revision=<REVISION\_NUMBER> </code>
 6.  This command effectively rolls back the deployment to the specified revision.
 
 Kubectl rollbacks are particularly useful when you need to roll back specific resources within a deployment or make precise adjustments to your cluster.
 
-![Image 2: a screen shot of a web page showing a number of options](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/653aaa45a423d53622d283b7_kubectl_rollback.gif)
+![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/653aaa45a423d53622d283b7_kubectl_rollback.gif)
 
 Kubectl Rollback Command being run from Shared Slack Channel
 

@@ -3,7 +3,8 @@ Title: Quick start | Botkube
 URL Source: https://docs.botkube.io/plugin/quick-start
 
 Markdown Content:
-*   [](https://docs.botkube.io/) * [Plugin Development](https://docs.botkube.io/plugin/)
+*   [](https://docs.botkube.io/)
+*   [Plugin Development](https://docs.botkube.io/plugin/)
 *   Quick start
 
 Version: 1.10

@@ -24,7 +24,11 @@ One of the plugin capabilities is the `flux diff` command. To use it, you need t
 
 First, create RBAC resources on your cluster:
 
-cat > /tmp/flux-rbac.yaml << ENDOFFILE---apiVersion: rbac.authorization.k8s.io/v1kind: ClusterRolemetadata:  name: fluxrules:  - apiGroups: ["*"] resources: ["*"] verbs: ["get", "watch", "list", "patch"]---apiVersion: rbac.authorization.k8s.io/v1kind: ClusterRoleBindingmetadata: name: fluxroleRef: apiGroup: rbac.authorization.k8s.io kind: ClusterRole name: fluxsubjects:- kind: Group name: flux apiGroup: rbac.authorization.k8s.ioENDOFFILEkubectl apply -f /tmp/flux-rbac.yaml Next, use the `flux` group in the plugin RBAC configuration: ![Image 1: Flux RBAC](https://docs.botkube.io/assets/images/flux-rbac-bfe6d7c972bcfd611669afd75a3bab20.png)
+cat > /tmp/flux-rbac.yaml << ENDOFFILE---apiVersion: rbac.authorization.k8s.io/v1kind: ClusterRolemetadata:  name: fluxrules:  - apiGroups: ["*"]    resources: ["*"]    verbs: ["get", "watch", "list", "patch"]---apiVersion: rbac.authorization.k8s.io/v1kind: ClusterRoleBindingmetadata:  name: fluxroleRef:  apiGroup: rbac.authorization.k8s.io  kind: ClusterRole  name: fluxsubjects:- kind: Group  name: flux  apiGroup: rbac.authorization.k8s.ioENDOFFILEkubectl apply -f /tmp/flux-rbac.yaml
+
+Next, use the `flux` group in the plugin RBAC configuration:
+
+![Image 1: Flux RBAC](https://docs.botkube.io/assets/images/flux-rbac-bfe6d7c972bcfd611669afd75a3bab20.png)
 
 Enabling plugin[​](#enabling-plugin"DirectlinktoEnablingplugin")
 ---------------------------------------------------------------------

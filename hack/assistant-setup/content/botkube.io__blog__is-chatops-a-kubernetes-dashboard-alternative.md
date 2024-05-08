@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/is-chatops-a-kubernetes-dashboard-alternativ
 Published Time: Jul 10, 2023
 
 Markdown Content:
-![Image 1: a man in a blue shirt with his arms crossed](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64a86fdda4d8d06ce598598e_evan%20image.jpg)
+![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64a86fdda4d8d06ce598598e_evan%20image.jpg)
 
 Evan Witmer
 

@@ -3,7 +3,8 @@ Title: Outgoing webhook for Botkube Cloud | Botkube
 URL Source: https://docs.botkube.io/installation/webhook/cloud
 
 Markdown Content:
-*   [](https://docs.botkube.io/) * [Installation](https://docs.botkube.io/)
+*   [](https://docs.botkube.io/)
+*   [Installation](https://docs.botkube.io/)
 *   [Outgoing webhook](https://docs.botkube.io/installation/webhook/)
 *   Outgoing webhook for Botkube Cloud
 

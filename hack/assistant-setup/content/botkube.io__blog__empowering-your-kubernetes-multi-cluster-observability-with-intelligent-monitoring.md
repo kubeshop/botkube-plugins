@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/empowering-your-kubernetes-multi-cluster-obs
 Published Time: Feb 08, 2024
 
 Markdown Content:
-![Image 1: a woman wearing headphones on an airplane](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
+![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
 
 Maria Ashby
 
@@ -32,7 +32,7 @@ Organizations of all sizes are increasingly adopting Kubernetes, leading to the 
 Why Kubernetes Multi-Cluster Environments?
 ------------------------------------------
 
-![Image 2: a screenshot of an error message on a website](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64b9697c82dc01bf31f863b1_automation.gif)
+![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64b9697c82dc01bf31f863b1_automation.gif)
 
 Multi-cluster environments offer a variety of benefits, including increased fault tolerance and high availability, geographical workload distribution for reduced latency, and isolation for security, compliance, and resource management. Regional clusters can be customized to meet local user needs, minimizing latency and complying with regional data laws. Dev/Test clusters provide segregated environments for uninterrupted development and testing, while production clusters prioritize high availability and performance for an exceptional customer experience. Moreover, automating alerting and command execution processes further boosts operational efficiency. Tools like Botkube are critical for enabling teams to quickly receive real-time notifications and seamlessly integrate automations for faster command execution.
 
@@ -48,11 +48,11 @@ Additionally, handling network latency and complexity in multi-cluster setups pr
 Optimizing Efficiency in Kubernetes Multi-Cluster Management
 ------------------------------------------------------------
 
-![Image 3: a screenshot of an error message on a website](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a0710c644fa0ebb76293d8_DJDInRt7FR5LTwmVqnG4WM9OBv7o9_FmRKnG5sA9F-UU-kqljSWEtByVtVP37PhGh2wq7eezjjCNzzjlYyIOyqlAfEMDA6UdSCs5AUJLKfcy3qqXg8cEOoJTdi4S-5Z_Otd9bgcKLoeY5gEcWNa0D4U.gif)
+![Image 3](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a0710c644fa0ebb76293d8_DJDInRt7FR5LTwmVqnG4WM9OBv7o9_FmRKnG5sA9F-UU-kqljSWEtByVtVP37PhGh2wq7eezjjCNzzjlYyIOyqlAfEMDA6UdSCs5AUJLKfcy3qqXg8cEOoJTdi4S-5Z_Otd9bgcKLoeY5gEcWNa0D4U.gif)
 
 Navigating and managing multiple clusters can present challenges, but utilizing [observability tools](https://botkube.io/learn/kubernetes-observability-best-practices) can simplify the process by providing insights into cluster performance, resource utilization, and potential issues across the entire multi-cluster environment.In this regard, Botkube offers convenient features for multi-cluster management, allowing users to easily switch between clusters, view connected deployments, and establish default instances for specific workspaces. These capabilities streamline the management of multi-cluster production environments. Efficiency is key when troubleshooting across multiple clusters. Botkube enables users to streamline command execution by executing commands simultaneously across all connected clusters, eliminating the need for manual actions on each cluster.
 
-![Image 4: a screen shot of a screen showing a list of items](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65c535a6fc3e2e7a64e5f1f4_202402081509-ezgif.com-video-to-gif-converter.gif)
+![Image 4](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65c535a6fc3e2e7a64e5f1f4_202402081509-ezgif.com-video-to-gif-converter.gif)
 
 Consider the scenario of managing clusters across a development environment and two production environments in different locations. With Botkube, users can seamlessly connect their clusters to their preferred communication platform and initiate multi-cluster management within minutes. They can set a default instance for the Prod channel, deploy an application in the Dev environment, verify the application's status using kubectl and aliases, troubleshoot and debug issues in the Prod US cluster, review logs and cluster-specific commands, and execute commands for all clusters using the "all clusters'' option. This integrated approach to multi-cluster management with Botkube enhances efficiency and facilitates smoother operations across diverse Kubernetes environments. By providing seamless control and visibility across clusters, Botkube empowers teams to efficiently manage their Kubernetes environments and ensure optimal performance and reliability.
 

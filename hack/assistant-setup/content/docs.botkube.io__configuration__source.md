@@ -19,7 +19,9 @@ plugins:  repositories:    repo-name:      url: https://example.com/plugins-inde
 
 Next, you can configure source from a given repository:
 
-sources:  "plugins":    repo-name/source-name@v1.0.0: # Plugin name syntax: <repo>/<plugin>[@<version>]. If version is not provided, the latest version from repository is used. enabled: true config: {} For all source configuration properties, see the [**syntax**](#syntax) section.
+sources:  "plugins":    repo-name/source-name@v1.0.0: # Plugin name syntax: <repo>/<plugin>[@<version>]. If version is not provided, the latest version from repository is used.      enabled: true      config: {}
+
+For all source configuration properties, see the [**syntax**](#syntax) section.
 
 #### Restart Policy and Health Check Interval[​](#restart-policy-and-health-check-interval"DirectlinktoRestartPolicyandHealthCheckInterval")
 

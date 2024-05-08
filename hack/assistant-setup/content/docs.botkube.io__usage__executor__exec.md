@@ -81,7 +81,7 @@ NAME        NAMESPACE   REVISION    UPDATED                                 STAT
 
 is displayed as:
 
-![Image 2: a screen shot of a gmail account with an email address](https://docs.botkube.io/assets/images/parsed-space-table-06a88b31df0278fe1d0add0a533cad39.png)
+![Image 2](https://docs.botkube.io/assets/images/parsed-space-table-06a88b31df0278fe1d0add0a533cad39.png)
 
 The table output is parsed with the following rules:
 

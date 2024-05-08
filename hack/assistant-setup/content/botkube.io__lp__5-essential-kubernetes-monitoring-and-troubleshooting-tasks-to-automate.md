@@ -27,7 +27,7 @@ Botkube's GitOps plugins bridge the gap between GitOps tools and communication p
 
 ‍
 
-![Image 1: a screenshot of an error message on a website](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a0710c644fa0ebb76293d8_DJDInRt7FR5LTwmVqnG4WM9OBv7o9_FmRKnG5sA9F-UU-kqljSWEtByVtVP37PhGh2wq7eezjjCNzzjlYyIOyqlAfEMDA6UdSCs5AUJLKfcy3qqXg8cEOoJTdi4S-5Z_Otd9bgcKLoeY5gEcWNa0D4U.gif)
+![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a0710c644fa0ebb76293d8_DJDInRt7FR5LTwmVqnG4WM9OBv7o9_FmRKnG5sA9F-UU-kqljSWEtByVtVP37PhGh2wq7eezjjCNzzjlYyIOyqlAfEMDA6UdSCs5AUJLKfcy3qqXg8cEOoJTdi4S-5Z_Otd9bgcKLoeY5gEcWNa0D4U.gif)
 
 ‍
 

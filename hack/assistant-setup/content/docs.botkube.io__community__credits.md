@@ -27,7 +27,13 @@ Markdown Content:
 
 [GitHub](https://github.com/kubeshop/botkube)[Slack](https://join.botkube.io/)
 
-*   [](https://docs.botkube.io/) * Credits Credits ------- Contributors[​](#contributors"DirectlinktoContributors")
+*   [](https://docs.botkube.io/)
+*   Credits
+
+Credits
+-------
+
+Contributors[​](#contributors"DirectlinktoContributors")
 ------------------------------------------------------------
 
 Thanks to all contributors for making Open Source Software a better place! ❤️
@@ -68,7 +74,9 @@ Thanks to all contributors for making Open Source Software a better place! ❤�
 
 22 commits
 
-[![Image 8: dependabot[bot]](https://avatars.githubusercontent.com/in/29110?v=4)](https://github.com/apps/dependabot "dependabot[bot]") [dependabot\[bot\]](https://github.com/apps/dependabot"dependabot[bot]")
+[![Image 8: dependabot[bot]](https://avatars.githubusercontent.com/in/29110?v=4)](https://github.com/apps/dependabot "dependabot[bot]")
+
+[dependabot\[bot\]](https://github.com/apps/dependabot "dependabot[bot]")
 
 16 commits
 

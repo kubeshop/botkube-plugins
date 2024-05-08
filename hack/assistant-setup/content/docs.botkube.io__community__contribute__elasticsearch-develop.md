@@ -3,7 +3,8 @@ Title: Elasticsearch notifier development | Botkube
 URL Source: https://docs.botkube.io/community/contribute/elasticsearch-develop
 
 Markdown Content:
-*   [](https://docs.botkube.io/) * [Contribute](https://docs.botkube.io/community/contribute/)
+*   [](https://docs.botkube.io/)
+*   [Contribute](https://docs.botkube.io/community/contribute/)
 *   Elasticsearch notifier development
 
 Elasticsearch notifier development

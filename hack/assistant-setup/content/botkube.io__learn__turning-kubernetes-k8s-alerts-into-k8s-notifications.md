@@ -60,4 +60,8 @@ If the developer has followed the best practices up until this point, they shoul
 
 Botkube also allows for operations to be run to fix any K8s alert that comes in based on its AI suggested fix. Simply click the button prompts Botkube gives with its troubleshooting suggestions and our software will run the commands directly in your cluster. No more switching back to Command Line Interfaces! Just run everything in your chat group!
 
-‍
+### Solving Kubernetes Alerts with AI
+
+Botkube simplifies Kubernetes troubleshooting by letting you interact with error notifications using everyday language. Spot an OOMKilled error in Slack? Simply ask Botkube AI for a definition and solutions, all through natural conversation.
+
+To see this in action, check out the video where our developer advocate, Maria, demonstrates the power of the Botkube AI Assistant.

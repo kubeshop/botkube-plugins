@@ -14,7 +14,7 @@ Up to 5 nodes in one cluster
 
 GUI-based Centralized Configuration Management
 
-![Image 1: a blue check mark on a black background](https://assets-global.website-files.com/633705de6adaa38599d8e258/640a3934a0f6e0a40562e415_pricing-yes.svg)
+![Image 1](https://assets-global.website-files.com/633705de6adaa38599d8e258/640a3934a0f6e0a40562e415_pricing-yes.svg)
 
 AI Insights: AI-based troubleshooting and operations
 
@@ -22,15 +22,15 @@ AI Insights: AI-based troubleshooting and operations
 
 Event and Audit Logging
 
-![Image 2: a blue check mark on a black background](https://assets-global.website-files.com/633705de6adaa38599d8e258/640a3934a0f6e0a40562e415_pricing-yes.svg)
+![Image 2](https://assets-global.website-files.com/633705de6adaa38599d8e258/640a3934a0f6e0a40562e415_pricing-yes.svg)
 
 Advanced Slack Bot for Multi-cluster Access
 
-![Image 3: a blue cross icon on a black background](https://assets-global.website-files.com/633705de6adaa38599d8e258/640a388c9b10d4675fb225e7_pricing-no.svg)
+![Image 3](https://assets-global.website-files.com/633705de6adaa38599d8e258/640a388c9b10d4675fb225e7_pricing-no.svg)
 
 Advanced Microsoft Teams Multi-cluster Access
 
-![Image 4: a blue cross icon on a black background](https://assets-global.website-files.com/633705de6adaa38599d8e258/640a388c9b10d4675fb225e7_pricing-no.svg)
+![Image 4](https://assets-global.website-files.com/633705de6adaa38599d8e258/640a388c9b10d4675fb225e7_pricing-no.svg)
 
 Node count
 
@@ -38,11 +38,11 @@ $10 / node / month
 
 GUI-based Centralized Configuration Management
 
-![Image 5: a blue check mark on a black background](https://assets-global.website-files.com/633705de6adaa38599d8e258/640a3934a0f6e0a40562e415_pricing-yes.svg)
+![Image 5](https://assets-global.website-files.com/633705de6adaa38599d8e258/640a3934a0f6e0a40562e415_pricing-yes.svg)
 
 Event and Audit Logging
 
-![Image 6: a blue check mark on a black background](https://assets-global.website-files.com/633705de6adaa38599d8e258/640a3934a0f6e0a40562e415_pricing-yes.svg)
+![Image 6](https://assets-global.website-files.com/633705de6adaa38599d8e258/640a3934a0f6e0a40562e415_pricing-yes.svg)
 
 AI Insights: AI-based troubleshooting and operations
 
@@ -50,15 +50,15 @@ AI Insights: AI-based troubleshooting and operations
 
 Advanced Slack Bot for Multi-cluster Access
 
-![Image 7: a blue check mark on a black background](https://assets-global.website-files.com/633705de6adaa38599d8e258/640a3934a0f6e0a40562e415_pricing-yes.svg)
+![Image 7](https://assets-global.website-files.com/633705de6adaa38599d8e258/640a3934a0f6e0a40562e415_pricing-yes.svg)
 
 Advanced Microsoft Teams Multi-cluster Access
 
-![Image 8: a blue check mark on a black background](https://assets-global.website-files.com/633705de6adaa38599d8e258/640a3934a0f6e0a40562e415_pricing-yes.svg)
+![Image 8](https://assets-global.website-files.com/633705de6adaa38599d8e258/640a3934a0f6e0a40562e415_pricing-yes.svg)
 
 GUI-based Centralized Configuration Management
 
-![Image 9: a blue check mark on a black background](https://assets-global.website-files.com/633705de6adaa38599d8e258/640a3934a0f6e0a40562e415_pricing-yes.svg)
+![Image 9](https://assets-global.website-files.com/633705de6adaa38599d8e258/640a3934a0f6e0a40562e415_pricing-yes.svg)
 
 AI Insights: AI-based troubleshooting and operations
 
@@ -66,15 +66,15 @@ Per contract
 
 Event and Audit Logging
 
-![Image 10: a blue check mark on a black background](https://assets-global.website-files.com/633705de6adaa38599d8e258/640a3934a0f6e0a40562e415_pricing-yes.svg)
+![Image 10](https://assets-global.website-files.com/633705de6adaa38599d8e258/640a3934a0f6e0a40562e415_pricing-yes.svg)
 
 Advanced Slack Bot for Multi-cluster Access
 
-![Image 11: a blue check mark on a black background](https://assets-global.website-files.com/633705de6adaa38599d8e258/640a3934a0f6e0a40562e415_pricing-yes.svg)
+![Image 11](https://assets-global.website-files.com/633705de6adaa38599d8e258/640a3934a0f6e0a40562e415_pricing-yes.svg)
 
 Advanced Microsoft Teams Multi-cluster Access
 
-![Image 12: a blue check mark on a black background](https://assets-global.website-files.com/633705de6adaa38599d8e258/640a3934a0f6e0a40562e415_pricing-yes.svg)
+![Image 12](https://assets-global.website-files.com/633705de6adaa38599d8e258/640a3934a0f6e0a40562e415_pricing-yes.svg)
 
 Data retention
 

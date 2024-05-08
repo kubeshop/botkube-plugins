@@ -10,7 +10,9 @@ botkube config get[​](#botkube-config-get"Directlinktobotkubeconfigget")
 
 Displays Botkube configuration
 
-botkube config get [flags] ### Examples[​](#examples"DirectlinktoExamples")
+botkube config get [flags]
+
+### Examples[​](#examples"DirectlinktoExamples")
 
 # Show configuration for currently installed Botkubebotkube config get# Show configuration in JSON formatbotkube config get -ojson# Save configuration in filebotkube config get > config.yaml
 
@@ -20,6 +22,8 @@ botkube config get [flags] ### Examples[​](#examples"DirectlinktoExamples")
 
 ### Options inherited from parent commands[​](#options-inherited-from-parent-commands"DirectlinktoOptionsinheritedfromparentcommands")
 
--v, --verbose int/string[=simple] Prints more verbose output. Allowed values: 0 - disable, 1 - simple, 2 - trace (default 0 - disable) ### SEE ALSO[​](#see-also"DirectlinktoSEEALSO")
+-v, --verbose int/string[=simple]   Prints more verbose output. Allowed values: 0 - disable, 1 - simple, 2 - trace (default 0 - disable)
+
+### SEE ALSO[​](#see-also"DirectlinktoSEEALSO")
 
 *   [botkube config](https://docs.botkube.io/cli/commands/botkube_config) - This command consists of multiple subcommands for working with Botkube configuration

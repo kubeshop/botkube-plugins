@@ -3,7 +3,8 @@ Title: Elasticsearch for Botkube Cloud | Botkube
 URL Source: https://docs.botkube.io/installation/elasticsearch/cloud
 
 Markdown Content:
-*   [](https://docs.botkube.io/) * [Installation](https://docs.botkube.io/)
+*   [](https://docs.botkube.io/)
+*   [Installation](https://docs.botkube.io/)
 *   [Elasticsearch](https://docs.botkube.io/installation/elasticsearch/)
 *   Elasticsearch for Botkube Cloud
 

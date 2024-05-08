@@ -3,7 +3,8 @@ Title: MS Teams Bot development | Botkube
 URL Source: https://docs.botkube.io/community/contribute/ms-teams-develop
 
 Markdown Content:
-*   [](https://docs.botkube.io/) * [Contribute](https://docs.botkube.io/community/contribute/)
+*   [](https://docs.botkube.io/)
+*   [Contribute](https://docs.botkube.io/community/contribute/)
 *   MS Teams Bot development
 
 MS Teams Bot development

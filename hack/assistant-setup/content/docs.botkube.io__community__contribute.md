@@ -3,7 +3,15 @@ Title: Contribute | Botkube
 URL Source: https://docs.botkube.io/community/contribute/
 
 Markdown Content:
-*   [](https://docs.botkube.io/) * Contribute How to Contribute to Botkube ---------------------------- We'd love your help! Botkube is [MIT Licensed](https://github.com/kubeshop/botkube/blob/main/LICENSE) and accepts contributions via GitHub pull requests. This document outlines conventions on development workflow, commit message formatting, contact points and other resources to make it easier to get your contributions accepted.
+*   [](https://docs.botkube.io/)
+*   Contribute
+
+How to Contribute to Botkube
+----------------------------
+
+We'd love your help!
+
+Botkube is [MIT Licensed](https://github.com/kubeshop/botkube/blob/main/LICENSE) and accepts contributions via GitHub pull requests. This document outlines conventions on development workflow, commit message formatting, contact points and other resources to make it easier to get your contributions accepted.
 
 We gratefully welcome improvements to [documentation](https://docs.botkube.io/"Gotodocumentationsite") as well as to code.
 
@@ -171,7 +179,9 @@ Create your Slack account on [Botkube](https://join.botkube.io/) workspace.
 
 To report bug or feature, use [GitHub issues](https://github.com/kubeshop/botkube/issues/new/choose).
 
-[](https://docs.botkube.io/community/contribute/release) * [Contributing to documentation](#contributing-to-documentation)
+[](https://docs.botkube.io/community/contribute/release)
+
+*   [Contributing to documentation](#contributing-to-documentation)
 *   [Build and run Botkube from source code](#build-and-run-botkube-from-source-code)
 *   [Prerequisite](#prerequisite)
 *   [Build and install on Kubernetes](#build-and-install-on-kubernetes)

@@ -3,7 +3,17 @@ Title: Installation | Botkube
 URL Source: https://docs.botkube.io/
 
 Markdown Content:
-*   [](https://docs.botkube.io/) * Installation Version: 1.10 Botkube has two components that need to be installed. 1. Botkube App Integration in your Slack/Mattermost/Microsoft Teams/Discord 2. Botkube agent in your Kubernetes cluster Feature map[​](#feature-map"DirectlinktoFeaturemap")
+*   [](https://docs.botkube.io/)
+*   Installation
+
+Version: 1.10
+
+Botkube has two components that need to be installed.
+
+1.  Botkube App Integration in your Slack/Mattermost/Microsoft Teams/Discord
+2.  Botkube agent in your Kubernetes cluster
+
+Feature map[​](#feature-map"DirectlinktoFeaturemap")
 ---------------------------------------------------------
 
 Learn about Botkube features and their availability in different integrations.

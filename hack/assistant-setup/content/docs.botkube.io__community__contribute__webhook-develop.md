@@ -3,7 +3,8 @@ Title: Outgoing Webhook development | Botkube
 URL Source: https://docs.botkube.io/community/contribute/webhook-develop
 
 Markdown Content:
-*   [](https://docs.botkube.io/) * [Contribute](https://docs.botkube.io/community/contribute/)
+*   [](https://docs.botkube.io/)
+*   [Contribute](https://docs.botkube.io/community/contribute/)
 *   Outgoing Webhook development
 
 Outgoing Webhook development
@@ -27,4 +28,6 @@ kubectl logs -l app.kubernetes.io/name=echo-server -f
 Every incoming request will be logged there.
 
 
-[Elasticsearch notifier development](https://docs.botkube.io/community/contribute/elasticsearch-develop)[](https://docs.botkube.io/community/credits) * [Steps](#steps)
+[Elasticsearch notifier development](https://docs.botkube.io/community/contribute/elasticsearch-develop)[](https://docs.botkube.io/community/credits)
+
+*   [Steps](#steps)

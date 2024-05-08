@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/introducing-botkubes-integration-with-flux
 Published Time: Aug 28, 2023
 
 Markdown Content:
-![Image 1: a woman wearing headphones on an airplane](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
+![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
 
 Maria Ashby
 
@@ -77,7 +77,22 @@ Optimized Flux Workflow
 
 With Botkube's new Flux executor, you can simplify complex tasks using a single command
 
-@BotKube flux diff kustomization podinfo --path ./kustomize --github-ref [PR Number| URL | Branch] This command works right in your preferred chat platform like Slack or Teams, making everything easy. Get ready to experience a world where innovation and user-friendly simplicity come together! ### Auto-discovery of GitHub Repository Seamlessly identifies the associated GitHub repository linked to the provided kustomization. ### Effortless Repository Cloning The git repository is cloned without manual intervention. ### Precision with Pull Requests The specified pull request is accurately reviewed by our [AI assistant](https://botkube.io/integration/chatgpt-botkube-kubernetes-integration) for processing.
+@BotKube flux diff kustomization podinfo --path ./kustomize --github-ref [PR Number| URL | Branch]
+
+
+This command works right in your preferred chat platform like Slack or Teams, making everything easy. Get ready to experience a world where innovation and user-friendly simplicity come together!
+
+### Auto-discovery of GitHub Repository
+
+Seamlessly identifies the associated GitHub repository linked to the provided kustomization.
+
+### Effortless Repository Cloning
+
+The git repository is cloned without manual intervention.
+
+### Precision with Pull Requests
+
+The specified pull request is accurately reviewed by our [AI assistant](https://botkube.io/integration/chatgpt-botkube-kubernetes-integration) for processing.
 
 ### Seamless State Comparison
 
