@@ -15,7 +15,7 @@ import (
 //
 // To update golden files run:
 //
-//	go  test ./internal/source/ai-brain/... -run=TestConvertProperlyAIAnswer -update
+//	go test ./internal/source/ai-brain/... -run=TestConvertProperlyAIAnswer -update
 func TestConvertProperlyAIAnswer(t *testing.T) {
 	// given
 	md, err := os.ReadFile(filepath.Join("testdata", t.Name(), "aiAnswer.md"))

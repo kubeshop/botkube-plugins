@@ -17,3 +17,5 @@
 dist/
 plugins-index.yaml
 /.idea/
+
+node_modules

@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"net/http"
 	"os"
+	"strings"
 	"time"
 
 	"github.com/kubeshop/botkube-cloud-plugins/internal/otelx"
@@ -74,6 +75,7 @@ func newAssistant(cfg *Config, log logrus.FieldLogger, out chan source.Event, ku
 		Transport: newAPIKeySecuredTransport(),
 	}
 	config.BaseURL = cfg.OpenAICloudServiceURL
+	config.AssistantVersion = "v2"
 
 	return &assistant{
 		log:          log,
@@ -175,7 +177,6 @@ func (i *assistant) handleThread(ctx context.Context, p *Payload) (err error) {
 		"threadId":  threadID,
 		"prompt":    p.Prompt,
 	})
-	log.Info("created a new assistant run")
 	run, err := i.openaiClient.CreateRun(ctx, threadID, openai.RunRequest{
 		AssistantID: i.assistID,
 		Temperature: &temperature,
@@ -183,6 +184,9 @@ func (i *assistant) handleThread(ctx context.Context, p *Payload) (err error) {
 	if err != nil {
 		return fmt.Errorf("while creating a thread run: %w", err)
 	}
+
+	log = log.WithField("runId", run.ID)
+	log.Info("created a new assistant run")
 
 	toolsRetries := 0
 	return wait.PollUntilContextCancel(ctx, openAIPollInterval, false, func(ctx context.Context) (bool, error) {
@@ -192,7 +196,7 @@ func (i *assistant) handleThread(ctx context.Context, p *Payload) (err error) {
 			return false, fmt.Errorf("while retrieving assistant thread run: %w", err)
 		}
 
-		i.log.WithFields(logrus.Fields{
+		log.WithFields(logrus.Fields{
 			"messageId": p.MessageID,
 			"runStatus": run.Status,
 		}).Debug("retrieved assistant thread run")
@@ -284,8 +288,10 @@ func (i *assistant) handleStatusCompleted(ctx context.Context, run openai.Run, p
 			continue
 		}
 
+		textValue := i.trimCitationsIfPresent(i.log, c.Text)
+
 		i.out <- source.Event{
-			Message: msgAIAnswer(run, p, c.Text.Value),
+			Message: msgAIAnswer(run, p, textValue),
 		}
 	}
 
@@ -337,6 +343,40 @@ func (i *assistant) handleStatusRequiresAction(ctx context.Context, run openai.R
 	}
 
 	return nil
+}
+
+const fileCitationAnnotation = "file_citation"
+
+func (i *assistant) trimCitationsIfPresent(log logrus.FieldLogger, in *openai.MessageText) string {
+	if in == nil {
+		return ""
+	}
+
+	if len(in.Annotations) == 0 {
+		return in.Value
+	}
+
+	outValue := in.Value
+	for _, a := range in.Annotations {
+		annotation, ok := a.(map[string]interface{})
+		if !ok {
+			continue
+		}
+
+		if annotation["type"] != fileCitationAnnotation {
+			continue
+		}
+
+		text, ok := annotation["text"].(string)
+		if !ok {
+			continue
+		}
+
+		log.Debugf("Citation found. Trimming %q...", text)
+		outValue = strings.Replace(outValue, text, "", 1)
+	}
+
+	return outValue
 }
 
 type apiKeySecuredTransport struct {
