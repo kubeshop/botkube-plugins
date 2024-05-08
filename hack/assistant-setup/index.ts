@@ -51,14 +51,22 @@ async function main() {
       );
   }
 
-  console.log(`Using ${assistantEnv} assistant (ID: ${assistantID})`);
-
+  console.log(`Using ${assistantEnv} assistant`);
   const client = new OpenAI({
     apiKey: process.env["OPENAI_API_KEY"],
   });
 
+  console.log(`Getting assistant data for ID ${assistantID}...`);
+  const assistant = await client.beta.assistants.retrieve(assistantID);
+  console.log(
+    `Successfully retrieved assistant data for '${assistant.name}' (ID: ${assistant.id})`,
+  );
+
   console.log(`Setting up file search...`);
-  const vectorStoreId = await setupFileSearch(client);
+  const vectorStoreId = await setupFileSearch(
+    client,
+    assistant.tool_resources?.file_search,
+  );
 
   console.log("Updating assistant...");
   await client.beta.assistants.update(assistantID, {
