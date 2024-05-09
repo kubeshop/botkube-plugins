@@ -197,7 +197,7 @@ Debugging Botkube
 
 > Most likely, you’ll come across some common errors around slack channel name or botkube not recognizing your slack workspace channels. To resolve this, you can manually edit the botkube YAML configuration file.
 
-\- Configure Botkube by editing the values.yaml file.  
+\- Configure Botkube by editing the values.yaml file.
 
 \`\`\`  
 vi botkube/values.yaml  

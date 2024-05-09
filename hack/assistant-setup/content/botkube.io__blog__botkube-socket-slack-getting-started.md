@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/botkube-socket-slack-getting-started
 Published Time: Dec 05, 2022
 
 Markdown Content:
-The \[new Botkube Slack app\](https://docs.botkube.io/installation/slack/) provides more great interactive features and better security when compared to the \[legacy Botkube Slack app\](https://docs.botkube.io/0.15/installation/slack/). We announced the new socket mode Slack app in the \[Botkube v0.14.0 release notes\](https://botkube.io/blog/botkube-v014-release-notes#new-botkube-slack-app). The new Slack app has some specific requirements and a new installation process, so let's have a look at how to get started with the most modern \[ChatOps tool for Kubernetes!\](http://botkube.io) You can also use the Botkube \[installation documentation\](https://docs.botkube.io/installation/slack/) to get started, but this post is to give you more context about the changes to the new app and some caveats to watch out for. 
+The \[new Botkube Slack app\](https://docs.botkube.io/installation/slack/) provides more great interactive features and better security when compared to the \[legacy Botkube Slack app\](https://docs.botkube.io/0.15/installation/slack/). We announced the new socket mode Slack app in the \[Botkube v0.14.0 release notes\](https://botkube.io/blog/botkube-v014-release-notes#new-botkube-slack-app). The new Slack app has some specific requirements and a new installation process, so let's have a look at how to get started with the most modern \[ChatOps tool for Kubernetes!\](http://botkube.io) You can also use the Botkube \[installation documentation\](https://docs.botkube.io/installation/slack/) to get started, but this post is to give you more context about the changes to the new app and some caveats to watch out for.
 
 This blog post assumes that we're starting a completely new Botkube installation.
 
@@ -13,7 +13,7 @@ Requirements:
 
 \- A Slack workspace where you have permission to install apps and create channels
 
-\- A Kubernetes cluster where you have access to install Botkube 
+\- A Kubernetes cluster where you have access to install Botkube
 
 \- Working kubectl and helm installation
 
@@ -187,7 +187,7 @@ There are several steps in the process to look out for. These are where things c
 
 \- Slack app-level token scope: The app-level token needs to have the \`connections:write\` scope assigned.
 
-\- Multiple clusters: When using Botkube to execute commands in multiple Kubernetes clusters, you need to install a Slack app for each cluster to ensure the commands are routed to the correct one. If you are using Botkube for \*\*notifications only\*\* and have command execution disabled, you can get away with a single app for multiple clusters. If you ever do want to enable command executions though, you will need to revert to the Slack app per cluster model.  
+\- Multiple clusters: When using Botkube to execute commands in multiple Kubernetes clusters, you need to install a Slack app for each cluster to ensure the commands are routed to the correct one. If you are using Botkube for \*\*notifications only\*\* and have command execution disabled, you can get away with a single app for multiple clusters. If you ever do want to enable command executions though, you will need to revert to the Slack app per cluster model.
 
 \- Incorrect tokens: Make sure your bot and app-level tokens are correct and match those in the Slack App Console.
 
@@ -195,6 +195,6 @@ There are several steps in the process to look out for. These are where things c
 
 \## Feedback - We’d Love to Hear From You!
 
-As always, we want to hear your feedback and ideas about Botkube. Help us plan the Botkube roadmap, get the features you’d like implemented, and get bugs fixed quickly. 
+As always, we want to hear your feedback and ideas about Botkube. Help us plan the Botkube roadmap, get the features you’d like implemented, and get bugs fixed quickly.
 
 You can talk to us in the Botkube \[GitHub issues\](https://github.com/kubeshop/botkube/issues), Botkube \[Slack community\](http://join.botkube.io/), or email our Product Leader at \[blair@kubeshop.io\](mailto:blair@kubeshop.io).

@@ -131,9 +131,9 @@ Behind the Scenes: Developing the Botkube Flux Plugin
 The development of the Botkube Flux Executor plugin involved several key aspects:
 
 1.  🕹️ **Interactivity**: We leveraged the [`exec`](https://docs.botkube.io/usage/executor/exec#table-parser) plugin developed in previous release, making adding interactivity almost out-of-the-box. The `exec` plugin allows you to port any CLI into the communication platform window.
-
-In this case, we reused it as Go SDK. Here is the blueprint that describes translation of CLI table output into an interactive message: ‍
-
+    
+    In this case, we reused it as Go SDK. Here is the blueprint that describes translation of CLI table output into an interactive message: ‍
+    
 
 <table data-hpc="" data-tab-size="8" data-paste-markdown-skip="" data-tagsearch-lang="YAML" data-tagsearch-path="blueprint.yaml"><tbody><tr><td id="file-blueprint-yaml-L1" data-line-number="1"></td><td id="file-blueprint-yaml-LC1">- <span>trigger</span>:</td></tr><tr><td id="file-blueprint-yaml-L2" data-line-number="2"></td><td id="file-blueprint-yaml-LC2"><span>command</span>:</td></tr><tr><td id="file-blueprint-yaml-L3" data-line-number="3"></td><td id="file-blueprint-yaml-LC3"><span>regex</span>: <span><span>"</span>flux get sources (buc</span></td></tr><tr><td id="file-blueprint-yaml-L4" data-line-number="4"></td><td id="file-blueprint-yaml-LC4"><span>type: <span>"</span></span><span>parser:table:space"</span></td></tr><tr><td id="file-blueprint-yaml-L5" data-line-number="5"></td><td id="file-blueprint-yaml-LC5"><span>message</span>:</td></tr><tr><td id="file-blueprint-yaml-L6" data-line-number="6"></td><td id="file-blueprint-yaml-LC6"><span>selects</span>:</td></tr><tr><td id="file-blueprint-yaml-L7" data-line-number="7"></td><td id="file-blueprint-yaml-LC7">- <span>name</span>: <span><span>"</span>Item<span>"</span></span></td></tr><tr><td id="file-blueprint-yaml-L8" data-line-number="8"></td><td id="file-blueprint-yaml-LC8"><span>keyTpl</span>: <span><span>"</span>{{ .Name }}<span>"</span></span></td></tr></tbody></table>
 
@@ -148,9 +148,9 @@ Thanks to embedding it, we can distribute it as a single plugin binary, and we d
 ‍
 
 3.  🔍 & 🔐 **Auto-discovering GitHub repos**: In order to discover related GitHub repository, we need to get Flux custom resource. We used the [`controller-runtime`](https://github.com/kubernetes-sigs/controller-runtime/blob/main/pkg/client/client.go) client, which supports Go types natively. This eliminated the need to work with the unstructured type, making things smoother and less error-prone. This is backed by dedicated plugin **RBAC** impersonation that we introduced a couple releases ago.
-
+    
 4.  🔄 **Cloning and checking out PR**: Checking out a pull request can be tricky, especially when dealing with external contributors and their forks. Instead of reinventing the wheel, we integrated the widely-known `gh` CLI. It was easy to add an external dependency just by defining: ‍
-
+    
 
 <table data-hpc="" data-tab-size="8" data-paste-markdown-skip="" data-tagsearch-lang="Go" data-tagsearch-path="deps.go"><tbody><tr><td id="file-deps-go-L1" data-line-number="1"></td><td id="file-deps-go-LC1"><span>"gh"</span>: {</td></tr><tr><td id="file-deps-go-L2" data-line-number="2"></td><td id="file-deps-go-LC2"><span>URLs</span>: <span>map</span>[<span>string</span>]<span>string</span>{</td></tr><tr><td id="file-deps-go-L3" data-line-number="3"></td><td id="file-deps-go-LC3"><span>"darwin/amd64"</span>: <span>"https://github.com/cli/cli/releases/download/v2.32.1/gh_2.32.1_macOS_amd64.zip//gh_2.32.1_macOS_amd64/bin"</span>,</td></tr><tr><td id="file-deps-go-L4" data-line-number="4"></td><td id="file-deps-go-LC4"><span>"linux/amd64"</span>: <span>"https://github.com/cli/cli/releases/download/v2.32.1/gh_2.32.1_linux_amd64.tar.gz//gh_2.32.1_linux_amd64/bin"</span>,</td></tr><tr><td id="file-deps-go-L5" data-line-number="5"></td><td id="file-deps-go-LC5"><span>// etc.</span></td></tr><tr><td id="file-deps-go-L6" data-line-number="6"></td><td id="file-deps-go-LC6">},</td></tr><tr><td id="file-deps-go-L7" data-line-number="7"></td><td id="file-deps-go-LC7">},</td></tr></tbody></table>
 

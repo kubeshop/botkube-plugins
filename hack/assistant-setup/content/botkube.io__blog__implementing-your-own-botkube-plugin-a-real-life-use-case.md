@@ -60,7 +60,6 @@ deploy job executor service in same Kubernetes cluster, it will automatically fi
 
 \## Accessing Keptn Gateway
 
-
 You can visit http://localhost:8080 to access Keptn Gateway by providing user and password which we extracted before.
 
 \## Keptn CLI  

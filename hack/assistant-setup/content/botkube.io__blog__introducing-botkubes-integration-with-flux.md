@@ -77,8 +77,8 @@ Optimized Flux Workflow
 
 With Botkube's new Flux executor, you can simplify complex tasks using a single command
 
-@BotKube flux diff kustomization podinfo --path ./kustomize --github-ref [PR Number| URL | Branch]
-
+    @BotKube flux diff kustomization podinfo --path ./kustomize --github-ref [PR Number| URL | Branch]
+    
 
 This command works right in your preferred chat platform like Slack or Teams, making everything easy. Get ready to experience a world where innovation and user-friendly simplicity come together!
 

@@ -29,7 +29,7 @@ Our most recent release of Botkube Cloud & Open Source brings important features
 
 #### Get started with Botkube Cloud
 
-The Botkube plugin ecosystem is expanding! We are excited to announce the latest release of Botkube, packed with new features and improvements to enhance your Kubernetes collaborative troubleshooting experience. This release introduces: 
+The Botkube plugin ecosystem is expanding! We are excited to announce the latest release of Botkube, packed with new features and improvements to enhance your Kubernetes collaborative troubleshooting experience. This release introduces:
 
 \* GitHub source plugin
 
@@ -39,7 +39,7 @@ The Botkube plugin ecosystem is expanding! We are excited to announce the latest
 
 \* Slack message reactions
 
-As usual, all of these plugins can be easily configured in \[Botkube Cloud\](https://app.botkube.io) or via \[manual YAML configuration\](https://docs.botkube.io/configuration/) for the open source Botkube engine.
+As usual, all of these plugins can be easily configured in \[Botkube Cloud\](https://app.botkube.io) or via \[manual YAML configuration\](https://docs.botkube.io/configuration/) for the open source Botkube engine.
 
 \[Botkube Actions\](https://docs.botkube.io/configuration/action) also allow you to automate any of the Botkube plugins. That means that any source plugin can trigger a command in any executor plugin. Botkube is the automation glue that can tie together all of the tools you use both inside and outside of your Kubernetes cluster. We have more details coming up in future blog posts on how to use Botkube to manage and monitor your GitOps workflows with diverse tools.
 
@@ -89,12 +89,12 @@ Note that if you are using Botkube already, you need to add the \`reactions:writ
 
 \## Bug Fixes
 
-We have also fixed a couple of small bugs in Botkube that were reported to us by users and found by us. You can see the full list of changes in the \[changelog\](https://github.com/kubeshop/botkube/releases/tag/v1.3.0). 
+We have also fixed a couple of small bugs in Botkube that were reported to us by users and found by us. You can see the full list of changes in the \[changelog\](https://github.com/kubeshop/botkube/releases/tag/v1.3.0).
 
 We appreciate your bug reports and pull requests! If you notice a bug in Botkube, please report it as a \[GitHub issue\](https://github.com/kubeshop/botkube/issues) and we are happy to collaborate with you on getting it resolved.
 
 \## Feedback - We’d Love to Hear From You!
 
-As always, we want to hear your feedback and ideas about Botkube. Help us plan the Botkube roadmap, get the features you’d like implemented, and get bugs fixed quickly. 
+As always, we want to hear your feedback and ideas about Botkube. Help us plan the Botkube roadmap, get the features you’d like implemented, and get bugs fixed quickly.
 
 You can talk to us in the Botkube \[GitHub issues\](https://github.com/kubeshop/botkube/issues), Botkube \[Slack community\](http://join.botkube.io/), or email our Product Leader at \[blair@kubeshop.io\](mailto:blair@kubeshop.io).

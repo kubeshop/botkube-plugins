@@ -43,7 +43,7 @@ Running a Helm Roll Back Command using Slack with Botkube
 
 While Helm provides the necessary tools to perform rollbacks, Botkube takes it a step further by simplifying the entire process and making it more accessible to your team. [Botkube offers seamless integration with Helm](https://botkube.io/integration/helm), allowing you to control Helm Chart rollbacks directly from your preferred chat platform, such as Microsoft Teams or Slack.
 
-Imagine you encounter a critical issue in your production environment, and you need to roll back to a stable release promptly. With Botkube's integration, you can initiate the rollback process with a simple chat command, without needing to access the Kubernetes command line, kubectl, directly. This not only streamlines the rollback procedure, but also facilitates collaboration within teams by ensuring that everyone is informed and involved in the decision-making process directly in the chat platform they already use.  
+Imagine you encounter a critical issue in your production environment, and you need to roll back to a stable release promptly. With Botkube's integration, you can initiate the rollback process with a simple chat command, without needing to access the Kubernetes command line, kubectl, directly. This not only streamlines the rollback procedure, but also facilitates collaboration within teams by ensuring that everyone is informed and involved in the decision-making process directly in the chat platform they already use.
 
 Flux Rollbacks Explained
 ------------------------

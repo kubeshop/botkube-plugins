@@ -26,9 +26,9 @@ Discover how to revolutionize Kubernetes management with Botkube's AI Assistant!
 
 #### Start Receiving Kubernetes Notifications Now with Botkube Cloud
 
-Kubernetes management requires lots of expertise. In the era of artificial intelligence, this  complexity has led to the advent of \[AIOps\](https://botkube.io/learn/aiops-tools)—artificial intelligence for IT operations—which aims to enhance operational processes through the use of AI. In addition, Kubernetes Assistant tools like \[Botkube's AI Assistant\](https://botkube.io/blog/real-time-platform-engineer-advice-ai-assistant) have launched in response to the challenge of Kubernetes developer experience. They can simplify the Kubernetes experience through automation, real-time monitoring, and intelligent troubleshooting directly from chat platforms. These new tools are vital for both seasoned DevOps professionals and newcomers to make Kubernetes operations more accessible and efficient.  
+Kubernetes management requires lots of expertise. In the era of artificial intelligence, this  complexity has led to the advent of \[AIOps\](https://botkube.io/learn/aiops-tools)—artificial intelligence for IT operations—which aims to enhance operational processes through the use of AI. In addition, Kubernetes Assistant tools like \[Botkube's AI Assistant\](https://botkube.io/blog/real-time-platform-engineer-advice-ai-assistant) have launched in response to the challenge of Kubernetes developer experience. They can simplify the Kubernetes experience through automation, real-time monitoring, and intelligent troubleshooting directly from chat platforms. These new tools are vital for both seasoned DevOps professionals and newcomers to make Kubernetes operations more accessible and efficient.
 
-This tutorial walks you through how to use Botkube's AI Assistant to modernize, automate, and to enhance your Kubernetes management workflow.  
+This tutorial walks you through how to use Botkube's AI Assistant to modernize, automate, and to enhance your Kubernetes management workflow.
 
 \## **Getting Started with Botkube's AI Assistant**
 
@@ -83,7 +83,7 @@ Botkube's AI Assistant simplifies incident management by analyzing issues and sh
 
 2\. Ask Botkube questions directly in your chat:
 
-  **@Botkube ai are there any failing pods in my default namespace?**
+**@Botkube ai are there any failing pods in my default namespace?**
 
 In two steps, you can get immediate, detailed insights into your cluster's health and kick start your troubleshooting process. It also makes it easy to highlight and escalate critical issues with your team right in the chat.
 

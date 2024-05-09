@@ -40,7 +40,7 @@ ArgoCD has become the standard solution for managing Kubernetes applications. It
 
 ‍
 
-The Botkube engineering team developed a [new plugin that automatically configures ArgoCD notifications](https://docs.botkube.io/usage/source/argocd) for all communication platforms supported by Botkube, such as [Slack, Microsoft Teams, and Discord](https://botkube.io/integrations). This plugin greatly reduces the barrier to entry for ArgoCD users and enhances collaboration and notifications in Kubernetes management. In this article, we'll explore the Botkube engineering team's journey from using ArgoCD to developing their own Botkube ArgoCD plugin. 
+The Botkube engineering team developed a [new plugin that automatically configures ArgoCD notifications](https://docs.botkube.io/usage/source/argocd) for all communication platforms supported by Botkube, such as [Slack, Microsoft Teams, and Discord](https://botkube.io/integrations). This plugin greatly reduces the barrier to entry for ArgoCD users and enhances collaboration and notifications in Kubernetes management. In this article, we'll explore the Botkube engineering team's journey from using ArgoCD to developing their own Botkube ArgoCD plugin.
 
 How Botkube Uses ArgoCD for GitOps Management
 ---------------------------------------------
@@ -61,21 +61,21 @@ As with every new Botkube feature, we were the first users. We wanted to make su
 
 The plugin can be installed either via web UI at [app.botkube.io](http://app.botkube.io/) or with the Botkube CLI.
 
-Botkube install --version v1.5.0 \\
---set sources.argocd.Botkube/argocd.enabled=true \\
---set 'rbac.groups.argocd.create'=true \\
---set 'sources.argocd.Botkube/argocd.config.defaultSubscriptions.applications\[0\].name'=guestbook \\
---set 'sources.argocd.Botkube/argocd.config.defaultSubscriptions.applications\[0\].namespace'=argocd \\
---set communications.default-group.socketSlack.enabled=true \\
---set communications.default-group.socketSlack.channels.default.name=${SLACK\_CHANNEL\_NAME} \\
---set communications.default-group.socketSlack.appToken=${SLACK\_API\_APP\_TOKEN} \\
---set communications.default-group.socketSlack.botToken=${SLACK\_API\_BOT\_TOKEN}
+  Botkube install --version v1.5.0 \\
+  --set sources.argocd.Botkube/argocd.enabled=true \\
+  --set 'rbac.groups.argocd.create'=true \\
+  --set 'sources.argocd.Botkube/argocd.config.defaultSubscriptions.applications\[0\].name'=guestbook \\
+  --set 'sources.argocd.Botkube/argocd.config.defaultSubscriptions.applications\[0\].namespace'=argocd \\
+  --set communications.default-group.socketSlack.enabled=true \\
+  --set communications.default-group.socketSlack.channels.default.name=${SLACK\_CHANNEL\_NAME} \\
+  --set communications.default-group.socketSlack.appToken=${SLACK\_API\_APP\_TOKEN} \\
+  --set communications.default-group.socketSlack.botToken=${SLACK\_API\_BOT\_TOKEN}
 
 ‍
 
 ‍
 
-Of course, the Botkube engineering team uses Botkube in both staging and prod. 
+Of course, the Botkube engineering team uses Botkube in both staging and prod.
 
 We have a dedicated channel for Botkube notifications in our Slack workspace and we have configured the Botkube ArgoCD plugin to send notifications to this channel as well.
 
@@ -100,7 +100,7 @@ Several staging and prod releases have now gone by and the value of the plugin h
 Conclusion
 ----------
 
-As we continue to improve the capabilities of the plugin, we have identified potential improvements, including the implementation of features like simplified onboarding for a large number of ArgoCD Applications through label selectors or regular expressions. 
+As we continue to improve the capabilities of the plugin, we have identified potential improvements, including the implementation of features like simplified onboarding for a large number of ArgoCD Applications through label selectors or regular expressions.
 
 ‍
 
@@ -112,6 +112,6 @@ Get started with Botkube! Whether you’re a seasoned Kubernetes pro or just get
 
 \## Feedback
 
-We welcome developers and Kubernetes enthusiasts to explore the platform and share their valuable feedback. We want to know what you think of Botkube and how we can make it even better. We're doing quick 15-minute interviews to get your feedback, and as a thank you, we'll give you some cool Botkube plushies and t-shirts and enter you into a raffle for a chance to win a $50 Amazon gift card! Just email our Developer Advocate, Maria or use this calendly\[link \](https://calendly.com/maria-botkube)to sign up.You can also talk to us in the Botkube GitHub issues, connect with others and get help in the Botkube \[Slack community\](http://join.botkube.io/), or email our Product Leader at blair@kubeshop.io.
+We welcome developers and Kubernetes enthusiasts to explore the platform and share their valuable feedback. We want to know what you think of Botkube and how we can make it even better. We're doing quick 15-minute interviews to get your feedback, and as a thank you, we'll give you some cool Botkube plushies and t-shirts and enter you into a raffle for a chance to win a $50 Amazon gift card! Just email our Developer Advocate, Maria or use this calendly\[ link \](https://calendly.com/maria-botkube)to sign up.You can also talk to us in the Botkube GitHub issues, connect with others and get help in the Botkube \[Slack community\](http://join.botkube.io/), or email our Product Leader at blair@kubeshop.io.
 
 ‍

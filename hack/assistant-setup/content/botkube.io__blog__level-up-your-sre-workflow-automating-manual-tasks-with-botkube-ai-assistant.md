@@ -74,8 +74,8 @@ Manually creating Kubernetes manifests can be a time-consuming process. By autom
 
 1.  **Ask Botkube: In your chat platform, type:**
 
-@Botkube ai create deployment for inventory-api with 2 replicas and port 8080 using container image company/inventory-api:latest
-
+       @Botkube ai create deployment for inventory-api with 2 replicas and port 8080 using container image company/inventory-api:latest
+    
 
 2.  **Botkube Responds:** It instantly generates a valid Kubernetes deployment manifest. It might even suggest optimizations tailored to your cluster.
 3.  **Deploy with Confidence:** Apply the manifest to your cluster and get back to more important tasks.

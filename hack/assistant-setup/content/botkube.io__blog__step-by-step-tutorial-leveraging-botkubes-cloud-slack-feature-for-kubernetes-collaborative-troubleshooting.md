@@ -52,10 +52,9 @@ Here's a video walkthrough of the installation:
 ![Image 3: Easy one click Kubernetes deployment for cloud](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64a709dfd8e90bc79339fcd0_cQKP0DfzGkbQO4R8kCAnqr54pgSa_IKaPa756N-FFua5n9N1omSH9fg9nGI1JYNjRS6ZmkbNUYrZLK1Z2BmTjPVHBDP0U9jNpidqq7RIqKWJScUJ32pOPryOAp49HR6OoerKN7yJSu6yHr2DU1GDaoo.png)
 
 ‍  
-4\. Next, enter your instance display name.  
+4\. Next, enter your instance display name.
 
 ![Image 4: K8s cluster building GUI](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64a709efd8e90bc7933a1393_nAeC7-04jk70WellyEP2GM4m75jP4jrLhnmbjAkZr3rLlNi7zaD2bMLx8rvebpfqFIrvB8OSIxIqKezCZngk7ooCH6WAOT_1PBSQKz-sAAl9WRSq-GqtR1gmHmwC87Oq443Bzdu_sMKsHw-_g8Jwrfo.png)
-
 
 5\. Select the Official Botkube Slack option. (Note this option requires you to sign up for a 30 day free trial)
 
@@ -72,7 +71,6 @@ Here's a video walkthrough of the installation:
 
 ![Image 7: One click slack sign in](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64a70a1d00209556840fc2aa_qCmpnXKLE-S-5GKx1PijNsYeJOqKsWffvD0NIp708myAL6SynM44bx0khhpKpQCX-LnUoIQ2t5JAbqjdOfxrQSxIJPZWLRKYrX0O1lKJJQQj0hmkIM_5ADswoPXLaRPrMmLwAtVCSAsGEbySEsGW0WY.png)
 
-
 ‍
 
 9\. Select the Plugins you would like to use. Helm, kubectl, and kubernetes source are the botkube default plug-ins.
@@ -82,9 +80,9 @@ Here's a video walkthrough of the installation:
 ‍
 
 10\. Click the create button  
-11\. Copy and paste the helm commands into your terminal and then click next     
+11\. Copy and paste the helm commands into your terminal and then click next
 
-![Image 9: Helm command to copy into command prompt](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64a70a33b3210007e280a92a_kqmlF1iCEr1KDQYsMNCGC83a_ZPx0agVAUb6crdZHQOONeg4BlQbwXSWferYj26OZkxyG2cRZ7jtLoDQtbUdEQ9eriQ-KmQmeBcLGxc7QQTtraL3VOAUQW0rNCWGNjJj5HBdzIv8lbk6HgjLwIJwTNM.png)
+![Image 9: Helm command to copy into command prompt ](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64a70a33b3210007e280a92a_kqmlF1iCEr1KDQYsMNCGC83a_ZPx0agVAUb6crdZHQOONeg4BlQbwXSWferYj26OZkxyG2cRZ7jtLoDQtbUdEQ9eriQ-KmQmeBcLGxc7QQTtraL3VOAUQW0rNCWGNjJj5HBdzIv8lbk6HgjLwIJwTNM.png)
 
 ‍  
 12\. You should see your Botkube instance being created.
@@ -100,7 +98,7 @@ Here's a video walkthrough of the installation:
 The new Botkube Cloud Slack app adds some great features that weren't previously available, particularly around multi-cluster management. With new \*\*@botkube cloud\*\* commands you can easily navigate between instances.  By using \*\*"@botkube cloud list instances\*\*," you can conveniently view your connected deployments. You can also establish a default instance for a specific workspace and easily switch between them using our slack interactivity feature. Increase your team’s efficiency with the ability to run commands across all your connected clusters by simply adding " \*\*--all-clusters.\*\*" This feature saves you valuable time and lets you manage all your resources with a single command.  
 \## Conclusion
 
-Botkube's \[Cloud Slack integration\](https://botkube.io/integration/slack) offers a range of key features and functionalities. From seamless\[incident response\](https://docs.botkube.io/usage/automated-actions) to enhanced \[resource monitoring\](https://docs.botkube.io/usage/source/prometheus/), Botkube empowers teams to troubleshoot and manage Kubernetes clusters effectively. Utilizing Botkube's Cloud Slack feature is crucial for teams seeking to optimize Kubernetes workflows and streamline troubleshooting processes. By leveraging Botkube, teams can improve incident resolution time, collaborate efficiently, and enhance overall operational efficiency in Kubernetes environments.
+Botkube's \[Cloud Slack integration\](https://botkube.io/integration/slack) offers a range of key features and functionalities. From seamless\[ incident response\](https://docs.botkube.io/usage/automated-actions) to enhanced \[resource monitoring\](https://docs.botkube.io/usage/source/prometheus/), Botkube empowers teams to troubleshoot and manage Kubernetes clusters effectively. Utilizing Botkube's Cloud Slack feature is crucial for teams seeking to optimize Kubernetes workflows and streamline troubleshooting processes. By leveraging Botkube, teams can improve incident resolution time, collaborate efficiently, and enhance overall operational efficiency in Kubernetes environments.
 
 ‍  
 Integrate Botkube's Cloud with Slack to enhance your Kubernetes operations and improve incident response and collaboration. By utilizing Botkube's powerful features, you can streamline troubleshooting processes and achieve quicker resolutions for any Kubernetes-related issues.  

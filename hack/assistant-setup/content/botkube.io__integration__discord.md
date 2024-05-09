@@ -1,4 +1,4 @@
-Title: Discord & Botkube Kubernetes Integration
+Title: Botkube.io
 
 URL Source: https://botkube.io/integration/discord
 
@@ -22,3 +22,9 @@ Discord + Botkube K8s Integration
 ---------------------------------
 
 With the Botkube integration into Discord, developers can now receive Kubernetes and Cluster alerts directly in their collaboration tool of choice, including Discord. This integration allows for real-time notifications of Kubernetes cluster events, such as pod failures and autoscaling, to be sent directly to Discord channels. Even Helm deployment alerts can now show up in the channel, providing developers with the option to troubleshoot directly from the Chat. With Botkube's integration into Discord, developers can focus on their work and stay on top of Kubernetes alerts without having to worry about setting up and managing custom webhooks.
+
+‍
+
+### New Kubernetes AI Bot for Discord
+
+After release 1.10 of Botkube, every install now comes with Botkube AI by default. What does that mean? It means that you now can troubleshoot your Kubernetes cluster directly from Discord with the power of AI. If you keep getting a repetitive error, such as the [OOMKILLED](https://botkube.io/learn/what-is-oomkilled) error, you can ask Botkube's AI what pod is causing that error. Once the AI finds the failing pod, it will suggest the fix which can be applied in with click thanks to Botkube's ability to run kubectl commands.

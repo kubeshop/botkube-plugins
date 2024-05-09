@@ -7,19 +7,19 @@ Botkube helps teams monitor and respond to Kubernetes issues by sending intellig
 
 Join us for an office hours session where we'll explore five ways for DevOps teams to automate common Kubernetes tasks to save time each week. This session is useful and informative for those new to Kubernetes or those with years of K8s experience under their belt. We'll talk through:
 
- **- Monitoring and Alerting Kubernetes Clusters**
+**- Monitoring and Alerting Kubernetes Clusters**
 
 Botkube can automate your monitoring setup, transforming how you manage incoming queries and requests. It intelligently categorizes and responds to various types of queries based on their specific channel and frequency.
 
- **- Resource Scaling**
+**- Resource Scaling**
 
 Manually adjusting resources can be time-consuming and error-prone, leading to inefficiencies. Botkube offers a valuable solution for automating resource scaling by simplifying access to Kubernetes clusters by providing actionable notifications and the ability to execute kubectl, helm, and GitOps commands directly from a shared team channel.
 
- **- Kubernetes Log Management**
+**- Kubernetes Log Management**
 
 By automating the collection and analysis of logs, Botkube centralizes these critical data points, making them easily accessible for quick analysis. This centralization offers a comprehensive view of all events and errors within the Kubernetes environment, significantly easing the troubleshooting process for both Ops and Dev teams.
 
- **- GitOps Workflows**
+**- GitOps Workflows**
 
 Botkube's GitOps plugins bridge the gap between GitOps tools and communication platforms, offering an efficient, interactive, and user-friendly approach to managing Kubernetes deployments. We'll show the[**Botkube Flux plugin**](https://botkube.io/blog/introducing-botkubes-integration-with-flux), which streamlines the integration of Kubernetes clusters, GitHub repositories, and the Flux CLI.
 

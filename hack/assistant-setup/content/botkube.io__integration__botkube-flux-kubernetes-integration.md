@@ -1,4 +1,4 @@
-Title: Flux & Botkube Kubernetes Integration
+Title: Botkube.io
 
 URL Source: https://botkube.io/integration/botkube-flux-kubernetes-integration
 

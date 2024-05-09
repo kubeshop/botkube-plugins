@@ -27,7 +27,7 @@ Our most recent realese of Botkube Cloud & Open Source brings important features
 
 #### Manage your Kubernetes Clusters Directly in Slack and Microsoft Teams!
 
-Botkube is introducing the power of AI to Kubernetes troubleshooting! We are excited to announce the latest release of Botkube, packed with new features and improvements to enhance your Kubernetes collaborative troubleshooting experience. This release introduces 
+Botkube is introducing the power of AI to Kubernetes troubleshooting! We are excited to announce the latest release of Botkube, packed with new features and improvements to enhance your Kubernetes collaborative troubleshooting experience. This release introduces
 
 \* Doctor, a ChatGPT plugin for Botkube
 
@@ -65,7 +65,7 @@ The new Botkube CLI still uses Helm in the background. The CLI ensures all of th
 
 Botkube can still be installed using the Helm chart alone if you want to perform automated installations with CI or GitOps tools.
 
-It's easy to get started with the Botkube CLI, check out the \[documentation\](https://docs.botkube.io/cli/getting-started). 
+It's easy to get started with the Botkube CLI, check out the \[documentation\](https://docs.botkube.io/cli/getting-started).
 
 \## Botkube CLI for Easy Cloud Migration
 
@@ -93,12 +93,12 @@ Check out the \[installation\](https://docs.botkube.io/configuration/executor/ex
 
 \## Bug Fixes
 
-We have also fixed a couple of small bugs in Botkube that were reported to us by users and found by us. You can see the full list of changes in the \[changelog\](https://github.com/kubeshop/botkube/releases/tag/v1.2.0). 
+We have also fixed a couple of small bugs in Botkube that were reported to us by users and found by us. You can see the full list of changes in the \[changelog\](https://github.com/kubeshop/botkube/releases/tag/v1.2.0).
 
 We appreciate your bug reports and pull requests! If you notice a bug in Botkube, please report it as a \[GitHub issue\](https://github.com/kubeshop/botkube/issues) and we are happy to collaborate with you on getting it resolved.
 
 \## Feedback - We’d Love to Hear From You!
 
-As always, we want to hear your feedback and ideas about Botkube. Help us plan the Botkube roadmap, get the features you’d like implemented, and get bugs fixed quickly. 
+As always, we want to hear your feedback and ideas about Botkube. Help us plan the Botkube roadmap, get the features you’d like implemented, and get bugs fixed quickly.
 
 You can talk to us in the Botkube \[GitHub issues\](https://github.com/kubeshop/botkube/issues), Botkube \[Slack community\](http://join.botkube.io/), or email our Product Leader at \[blair@kubeshop.io\](mailto:blair@kubeshop.io).

@@ -36,7 +36,6 @@ Managing and troubleshooting multiple Kubernetes clusters comes with many challe
 
 In this blog, we will explore some best practices that can enhance the efficiency and effectiveness of your Kubernetes troubleshooting efforts. I will delve into the benefits of centralizing monitoring, utilizing multi-cluster management features, streamlining command execution, and promoting effective incident response and collaboration. By addressing these challenges and leveraging the right tools, development and operations teams can unlock the full potential of Kubernetes in the cloud-native world.
 
-
 \## What is Kubernetes Troubleshooting?
 
 ![Image 2: learn k8s help article on the process for troubleshooting Kubernetes related issues](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64b968a920dcc2ab5ff83fb7_4QTYY_4jwo5E0DeGgXARbgT_xYK4VyNKjg9OGcMmAMJPlaJFDcozwToB_GSkt5bM3rS5IIAFKBwiGFaLzuOrQMqHQoKHoDisEHGJRyZpMjS7yNHRciYG5KN9omOGrR6_AxCx1hKY5ksNqNLg81P24l8.png)
@@ -45,14 +44,11 @@ A diagram of the K8s troubleshooting process from [LearnK8s](https://learnk8s.io
 
 ‍
 
-
 Kubernetes troubleshooting is the process of identifying and resolving issues that arise within a Kubernetes cluster. It involves diagnosing and resolving problems related to application deployment, networking, resource allocation, configuration errors, and other factors that can impact the stability and performance of a Kubernetes environment. Troubleshooting in Kubernetes is a complex process that often requires a combination of monitoring tools, log analysis, and a knowledge of the Kubernetes architecture.
-
 
 \## How does Kubernetes troubleshooting work?
 
 Kubernetes troubleshooting involves analyzing logs, examining cluster events, optimizing resource utilization, and ensuring network connectivity. Essential commands like \`kubectl logs\`, \`kubectl describe\`, and \`kubectl exec\` are valuable tools for uncovering and resolving problems within the cluster. By analyzing logs and events, Kubernetes Administrators can gain insights into their app behavior. Network connectivity is verified to maintain communication between pods and services. These techniques and commands aid in efficiently diagnosing and resolving issues, ensuring a smooth and efficient Kubernetes environment.
-
 
 \## What makes troubleshooting multiple Kubernetes clusters so difficult?
 
@@ -62,9 +58,7 @@ The complexity of Kubernetes troubleshooting is further compounded by the ambigu
 
 Fortunately, there is a solution to streamline this challenging endeavor: Botkube, a collaborative tool built specifically for Kubernetes users. With Botkube, you can receive and respond to alerts effortlessly within your preferred messaging and collaboration platforms, such as Slack, Microsoft Teams, Mattermost and more. This integration eliminates the need to switch between multiple platforms, granting you immediate visibility and control over your cluster resources.
 
-
 \## Best Practices for Kubernetes Multi-cluster Troubleshooting
-
 
 \### Centralize Monitoring and Observability
 
@@ -74,9 +68,7 @@ Efficient troubleshooting across multiple Kubernetes clusters begins with the cr
 
 ‍
 
-
-Botkube’s high level view of all of your clusters allows you to pinpoint exactly which cluster(s) are in need of help.  
-
+Botkube’s high level view of all of your clusters allows you to pinpoint exactly which cluster(s) are in need of help.
 
 \### Incident Response and Collaboration
 
@@ -86,16 +78,13 @@ By leveraging incident response and collaboration tools that integrate with fami
 
 ![Image 4: AI Kubernetes assistant helps find errors with cluster management or deployment for quick K8s troubleshooting](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64b96a341b5ccb59ffb87637_act-on-events.gif)
 
-
 \### Establish a Feedback Loop
 
 To ensure continuous improvement in troubleshooting Kubernetes-based applications across multiple clusters, it is essential to establish a feedback loop. This feedback loop involves gathering comprehensive data about the application's behavior through tools like observability, performance monitoring, tracing, and logging. By providing developers with access to relevant data, they can gain insights into the application's performance and identify potential issues more effectively. This feedback loop enables prompt issue resolution, allowing for continuous enhancements and optimizations.
 
-
 \### Streamline Command Execution
 
 Efficiency is key when troubleshooting Kubernetes across multiple clusters. Streamline command execution by leveraging tools that enable you to execute commands simultaneously across all connected clusters. This eliminates the need to perform actions individually on each cluster, saving time and effort.
-
 
 \### Automate Observability and Delivery Processes
 
@@ -109,11 +98,9 @@ Automation plays a crucial role in streamlining troubleshooting processes and en
 \* \[CrashLoopBackOff\](https://botkube.io/learn/how-to-debug-crashloopbackoff)  
 \* \[OOMKilled\](https://botkube.io/learn/what-is-oomkilled)
 
-
 \## Conclusion
 
 Troubleshooting Kubernetes-based applications across multiple clusters requires a strategic approach. By centralizing monitoring, utilizing multi-cluster management features, streamlining command execution, and promoting effective incident response and collaboration, teams can streamline troubleshooting processes in multi-cluster environments. Integrating tools and solutions like Botkube can significantly enhance efficiency and ensure reliable performance across all Kubernetes clusters.
-
 
 \## CNCF Islamabad and Botkube Webinar
 

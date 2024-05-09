@@ -32,7 +32,7 @@ Kubernetes has transformed how we deploy and manage applications with unparallel
 
 [Botkube’s AI Assistant](https://botkube.io/blog/real-time-platform-engineer-advice-ai-assistant), for instance, offers an intuitive way to manage Kubernetes by providing AI-powered monitoring and troubleshooting directly through chat platforms. This not only streamlines workflow but also improves system reliability through detailed alerts and automation, making Kubernetes more accessible to both experts and beginners.
 
-In this guide we will explore how AI assistants transform Kubernetes management and troubleshooting, making operations smoother and more efficient for all users. 
+In this guide we will explore how AI assistants transform Kubernetes management and troubleshooting, making operations smoother and more efficient for all users.
 
 Strategy 1: Automated Incident Reporting
 ----------------------------------------
@@ -71,7 +71,7 @@ Bonus Strategy: Simplify Application Lifecycle Management
 
 ![Image 6](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64e6946be4cd9b0c47a55f75_flux-interactivity-1.gif)
 
-The application lifecycle in Kubernetes is a challenging process from development to deployment. This process demands constant vigilance over application performance, resource constraints, and deployment health. Botkube aids in automating deployment strategies, scaling, and updates, responding to real-time system needs. It analyzes performance metrics and user feedback to determine effective deployment strategies, offering a safety net for rollbacks based on historical data. 
+The application lifecycle in Kubernetes is a challenging process from development to deployment. This process demands constant vigilance over application performance, resource constraints, and deployment health. Botkube aids in automating deployment strategies, scaling, and updates, responding to real-time system needs. It analyzes performance metrics and user feedback to determine effective deployment strategies, offering a safety net for rollbacks based on historical data.
 
 Botkube eases the management of application secrets and configurations, automating updates and rotations to enhance both security and operational efficiency. This AI-centric approach simplifies managing the application lifecycle in Kubernetes, ensuring security, performance, and responsiveness to changing demands.
 

@@ -41,17 +41,17 @@ While BotKube is now part of the Kubeshop team, BotKube development is still com
 
 BotKube now supports multiple channels and communication tools using a single BotKube installation in your Kubernetes cluster. You can group and send events to different channels and tools. For example, some events are sent as Slack chat messages for an immediate response and others to ElasticSearch for archiving. You can even have multiple instances of these tools and send specific events to different channels in each of them. This previously required multiple BotKube installations in a cluster or complex annotations. You can also toggle filters and recommendations per-rule now, where filters and recommendation settings were global in previous versions.
 
-In future releases, we plan to streamline this source to channel mapping further and make the configuration even easier. 
+In future releases, we plan to streamline this source to channel mapping further and make the configuration even easier.
 
 It is also possible to configure the executor configuration on a per-channel basis, so that kubectl permissions can be controlled. You can set different kubectl permissions that restrict the commands, resources, and namespaces users in a specified channel can access. This is great for environments with multi-tenant Kubernetes clusters where teams use separate namespaces.
 
-We have simplified and enhanced the BotKube configuration syntax to enable the new multi-channel support. If you are running BotKube v0.12.4 (or earlier) using a default configuration, you can specify an updated configuration when using the helm upgrade command. If you are using a custom configuration, see the \[changelog\](https://github.com/kubeshop/botkube/blob/main/CHANGELOG.md#v0130-2022-08-29) for details on the configuration syntax changes. You can modify your config.yaml file with the new structure and pass that to the helm upgrade -f command. 
+We have simplified and enhanced the BotKube configuration syntax to enable the new multi-channel support. If you are running BotKube v0.12.4 (or earlier) using a default configuration, you can specify an updated configuration when using the helm upgrade command. If you are using a custom configuration, see the \[changelog\](https://github.com/kubeshop/botkube/blob/main/CHANGELOG.md#v0130-2022-08-29) for details on the configuration syntax changes. You can modify your config.yaml file with the new structure and pass that to the helm upgrade -f command.
 
 You can also see the configuration details for \[sources\](https://botkube.io/configuration/source/) and \[executors\](https://botkube.io/configuration/executor/) in the BotKube documentation.
 
 \## Bug Fixes
 
-We have fixed several bugs in BotKube that were reported to us by users. We also spent some time refactoring code and increasing test coverage to improve the quality of BotKube. You can see the list of bug fixes in the \[changelog\](https://github.com/kubeshop/botkube/blob/main/CHANGELOG.md#v0130-2022-08-29). 
+We have fixed several bugs in BotKube that were reported to us by users. We also spent some time refactoring code and increasing test coverage to improve the quality of BotKube. You can see the list of bug fixes in the \[changelog\](https://github.com/kubeshop/botkube/blob/main/CHANGELOG.md#v0130-2022-08-29).
 
 We appreciate your bug reports and pull requests! If you notice a bug in BotKube, please report it as a \[GitHub issue\](https://github.com/kubeshop/botkube/issues) and we are happy to collaborate with you on getting it resolved.
 
@@ -63,7 +63,7 @@ In this release we have cleaned up the overall CI pipeline and automated end-to-
 
 \## Telemetry
 
-BotKube has introduced anonymized telemetry collection in v0.13.  
+BotKube has introduced anonymized telemetry collection in v0.13.
 
 Why: We are collecting this telemetry data in order to focus our development efforts on the communication tools and actions that BotKube users are using the most.
 
@@ -93,11 +93,11 @@ What:All data is anonymized. We use UUIDs in order to aggregate telemetry from i
 
 Opt-out: \*\*You can opt out of telemetry collection by setting the \`analytics.disable: true\` parameter when installing or upgrading the Helm chart.\*\* This prevents all analytics collection and we do not track the installation and opt-out actions.
 
-Please see the BotKube \[Privacy Policy\](https://botkube.io/privacy/) for more details. 
+Please see the BotKube \[Privacy Policy\](https://botkube.io/privacy/) for more details.
 
 \## Feedback - We’d Love to Hear From You!
 
-As always, we want to hear your feedback and ideas about BotKube. Help us plan the BotKube roadmap, get the features you’d like implemented, and get bugs fixed quickly. 
+As always, we want to hear your feedback and ideas about BotKube. Help us plan the BotKube roadmap, get the features you’d like implemented, and get bugs fixed quickly.
 
 You can talk to us in the BotKube \[GitHub issues\](https://github.com/kubeshop/botkube/issues), BotKube \[Slack community\](http://join.botkube.io/), or email our Product Leader at \[blair@kubeshop.io\](mailto:blair@kubeshop.io).
 

@@ -59,13 +59,13 @@ The \[legacy Slack app\](https://botkube.io/docs/installation/slack/) is still a
 
 The @Botkube help command has been enhanced when using the new Botkube Slack app. Run @Botkube help and you will see an interactive help message. You can click any of the buttons in the interactive help to run the commands, change settings, and more.
 
-This new, interactive help will enable new Botkube users to get up and running even faster. You can also send us feedback and access documentation and additional external help resources directly from the interactive help. 
+This new, interactive help will enable new Botkube users to get up and running even faster. You can also send us feedback and access documentation and additional external help resources directly from the interactive help.
 
-![Image 4: Botkube help suggestions for cluster management](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6360eb5b82ec26bf25ce56ed_633ef850e5ef9f0d7d116776_EO0U7RPVKtnFJKGI9P-P-ra7xxTD04eyiGXF_khHkvFL8Age_YGzOa7YM3iTZZ6g9OfTmH_HgJYyJNEN75LDiP5jij3hsQjAF9z0nWw2xJ42aEJlskc_lNSh6XIiwwybgIl0TGxlJRgOSKkUmGbJv9d5NLGOW-x_iVWUj5GyPevaKTWieW5B1QmpCw.png)
+![Image 4: Botkube help suggestions for cluster management ](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6360eb5b82ec26bf25ce56ed_633ef850e5ef9f0d7d116776_EO0U7RPVKtnFJKGI9P-P-ra7xxTD04eyiGXF_khHkvFL8Age_YGzOa7YM3iTZZ6g9OfTmH_HgJYyJNEN75LDiP5jij3hsQjAF9z0nWw2xJ42aEJlskc_lNSh6XIiwwybgIl0TGxlJRgOSKkUmGbJv9d5NLGOW-x_iVWUj5GyPevaKTWieW5B1QmpCw.png)
 
 \## Persistent Settings
 
-Changes to settings made from the Botkube interface, such as notifier start/stop, notification level settings, and filter enable/disable now persist across Botkube restarts. In earlier versions, these settings would reset to the settings in the Botkube configuration file upon restarting the Botkube pod. 
+Changes to settings made from the Botkube interface, such as notifier start/stop, notification level settings, and filter enable/disable now persist across Botkube restarts. In earlier versions, these settings would reset to the settings in the Botkube configuration file upon restarting the Botkube pod.
 
 \## Mattermost v7 Support
 
@@ -73,13 +73,13 @@ Botkube now supports Mattermost version 7.x! See the \[installation guide for Ma
 
 \## Bug Fixes
 
-We have fixed several bugs in BotKube that were reported to us by users. We also spent some time refactoring code and increasing test coverage to improve the quality of BotKube. You can see the list of bug fixes in the \[changelog\](https://github.com/kubeshop/botkube/releases/tag/v0.14.0). 
+We have fixed several bugs in BotKube that were reported to us by users. We also spent some time refactoring code and increasing test coverage to improve the quality of BotKube. You can see the list of bug fixes in the \[changelog\](https://github.com/kubeshop/botkube/releases/tag/v0.14.0).
 
 We appreciate your bug reports and pull requests! If you notice a bug in BotKube, please report it as a \[GitHub issue\](https://github.com/kubeshop/botkube/issues) and we are happy to collaborate with you on getting it resolved.
 
 \## Feedback - We’d Love to Hear From You!
 
-As always, we want to hear your feedback and ideas about BotKube. Help us plan the BotKube roadmap, get the features you’d like implemented, and get bugs fixed quickly. 
+As always, we want to hear your feedback and ideas about BotKube. Help us plan the BotKube roadmap, get the features you’d like implemented, and get bugs fixed quickly.
 
 You can talk to us in the BotKube \[GitHub issues\](https://github.com/kubeshop/botkube/issues), BotKube \[Slack community\](http://join.botkube.io/), or email our Product Leader at \[blair@kubeshop.io\](mailto:blair@kubeshop.io).
 

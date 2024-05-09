@@ -50,7 +50,7 @@ If you're receiving events in the new Slack app, you can now run contextual acti
 
 \## Output Filtering
 
-You can now filter the output of any command you run with Botkube, on any platform. Simply run the command with the \`--filter "string"\` flag and you will only see the matching output. The filter flag does simple linewise string matching. Any line in the output with a matching string will be shown, lines without a match are discarded.  
+You can now filter the output of any command you run with Botkube, on any platform. Simply run the command with the \`--filter "string"\` flag and you will only see the matching output. The filter flag does simple linewise string matching. Any line in the output with a matching string will be shown, lines without a match are discarded.
 
 ![Image 4: Filtering Kubernetes logs for important alerts](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6360eb44701e5f37a18b49db_6356bdf7f7a6792610d5e3ca_kjx3ejlR6Aaq2y9mENfRr81flF6H3HMljZWwFis4-1rkG6jyjEiPmYwfxeMfU-_NoEE0OLtGHkPUxM90PhuFauG-7iPdakZtFEdZcqkbxRXEcnfkQnErMqivmwplsPmem-JQL-2X71Kpmh5-NS8jZJMSkWtfd2hqinQhht64CWwIJxgV4SBI1uwKzQ.png)
 
@@ -62,13 +62,13 @@ Output filtering is even easier if you're using the \[new Slack app\](https://bo
 
 \## Bug Fixes
 
-We have also fixed a couple of small bugs in Botkube that were reported to us by users and found by us. You can see the full list of changes in the \[changelog\](https://github.com/kubeshop/botkube/releases/tag/v0.15.0). 
+We have also fixed a couple of small bugs in Botkube that were reported to us by users and found by us. You can see the full list of changes in the \[changelog\](https://github.com/kubeshop/botkube/releases/tag/v0.15.0).
 
 We appreciate your bug reports and pull requests! If you notice a bug in BotKube, please report it as a \[GitHub issue\](https://github.com/kubeshop/botkube/issues) and we are happy to collaborate with you on getting it resolved.
 
 \## Feedback - We’d Love to Hear From You!
 
-As always, we want to hear your feedback and ideas about Botkube. Help us plan the Botkube roadmap, get the features you’d like implemented, and get bugs fixed quickly. 
+As always, we want to hear your feedback and ideas about Botkube. Help us plan the Botkube roadmap, get the features you’d like implemented, and get bugs fixed quickly.
 
 You can talk to us in the Botkube \[GitHub issues\](https://github.com/kubeshop/botkube/issues), Botkube \[Slack community\](http://join.botkube.io/), or email our Product Leader at \[blair@kubeshop.io\](mailto:blair@kubeshop.io).
 

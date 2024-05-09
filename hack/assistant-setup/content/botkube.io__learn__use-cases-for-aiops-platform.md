@@ -3,7 +3,7 @@ Title: Demystifying AIOps Platforms: Powerful Use Cases
 URL Source: https://botkube.io/learn/use-cases-for-aiops-platform
 
 Markdown Content:
-[![Image 1: Kusk Kubernetes](https://assets-global.website-files.com/633705de6adaa38599d8e258/6338148fa3f8a509639804fa_botkube-logo.svg)](https://botkube.io/)
+[![Image 1: Kusk Kubernetes ](https://assets-global.website-files.com/633705de6adaa38599d8e258/6338148fa3f8a509639804fa_botkube-logo.svg)](https://botkube.io/)
 
 Top Use Cases for AIOps Platform: Empowered DevOps with Chat-Based AI
 ---------------------------------------------------------------------

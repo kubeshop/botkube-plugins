@@ -32,7 +32,7 @@ What causes the "ssl certificate problem unable to get local issuer certificate"
 
 The <code>ssl certificate problem unable to get local issuer certificate</code> error is caused by the misconfiguration of the SSL certificate on the Kubernetes cluster. When a client attempts to connect to the cluster, the client will not be able to verify the certificate because it is not signed by a trusted certificate authority. This will result in the error message <code>ssl certificate problem unable to get local issuer certificate</code>.
 
-**\*Quick Tip:** Sometimes detecting the error message is the hardest part, most of the time requiring sifting through cluster logs using the command line interface. We created Botkube to assist with this labor intensive process. Having Botkube in a cluster will give developers two advantages to troubleshooting this error:  
+**\*Quick Tip:** Sometimes detecting the error message is the hardest part, most of the time requiring sifting through cluster logs using the command line interface. We created Botkube to assist with this labor intensive process. Having Botkube in a cluster will give developers two advantages to troubleshooting this error:
 
 1.  Slack or Teams alert to a shared channel when this error occurs to allow for immediate action.
 2.  Ability to automate the log pulling and filtering all directly from the shared group channel!

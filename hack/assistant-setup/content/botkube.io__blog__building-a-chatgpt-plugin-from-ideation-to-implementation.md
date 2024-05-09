@@ -38,7 +38,7 @@ This blog post aims to document the entire process involved in the creation of t
 
 ‍
 
-## Ideation Phase: The Company-Wide Hackathon  
+## Ideation Phase: The Company-Wide Hackathon
 
 It all started with the internal Kubeshop hackathon. During this intense and collaborative event, team members from diverse backgrounds came together to brainstorm, experiment, and find novel solutions to challenges in the Kubernetes space, as a part of the existing projects in Kubeshop portfolio. The hackathon's theme was to help Developers, Testers, DevOps, SRE’s or their managers with making Kubernetes life easier, simpler, and faster. In 48 hours, the teams had to come up with an idea, build a prototype, and present their proof-of-concept solution to the judges.
 
@@ -56,13 +56,13 @@ The ChatGPT plugin was the most voted idea internally, as we all saw the potenti
 
 ‍
 
-\## Planning and Conceptualization  
+\## Planning and Conceptualization
 
 Once the ChatGPT executor plugin was selected as a part of our hackathon topic, the team started working on the project. The first step was to define the goals and objectives of the plugin.
 
 The main goal was to lower the barrier of entry for new Botkube users. Sometimes it is hard to understand and troubleshoot the Kubernetes errors and their meaning, especially for beginners. That's why the idea was to introduce "Get help" button under incoming error events.
 
-‍  
+‍
 
 ![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64c21a033e2e505f6d63b554_figma.png)
 
@@ -82,7 +82,7 @@ We decided to call it "Doctor", as it would help users to diagnose and fix Kuber
 
 ‍
 
-\## Development Process  
+\## Development Process
 
 The enthusiasm and dedication displayed by the team during the ideation phase laid a strong foundation for the development of the ChatGPT plugin. As we already knew what we wanted to develop, we had to decide on the specific technologies and tools to use.
 
@@ -98,15 +98,15 @@ This way, we were able to render the "Get help" button under each error event. A
 
 ‍
 
-## Result  
+## Result
 
 In 48 hours, Botkube team was able to deliver a fully-working ChatGPT plugin called "Doctor". The plugin is able to help troubleshooting Kubernetes cluster issues based on incoming events. It's best used in combination with Slack integration, as it provides interactive buttons to help users navigate through the troubleshooting process. No typing required!
 
-‍  
+‍
 
 ![Image 3](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64c21a2723cb531baf9f0867_doctor-interactive-help.gif)
 
-‍  
+‍
 
 It also exposes ChatGPT prompt, so you can ask some arbitrary, not necessarily Kubernetes-related questions:
 
@@ -124,9 +124,9 @@ The team was very happy with the result, and we decided to \*\*ship it to all us
 
 How to get started, you ask? \[Install Botkube\](https://docs.botkube.io/), if you haven't already, and enable Doctor plugin following the \[Configuration\](https://docs.botkube.io/configuration/executor/doctor) document. Then, learn how to use it by \[following the tutorial that our DevRel Maria put together\](https://botkube.io/blog/doctor-plug-in-tutorial).
 
-‍  
+‍
 
-\## Conclusion  
+\## Conclusion
 
 The journey from the hackathon ideation to the final ChatGPT plugin has been nothing short of remarkable. It all began with the internal Kubeshop hackathon, where the Botkube team collaborated intensely and passionately to brainstorm ideas for making Kubernetes life easier, simpler, and faster. After carefully evaluating various proposals, the ChatGPT plugin emerged as the most promising idea, driven by its potential to revolutionize the Botkube onboarding experience and provide users with an unparalleled DevOps tool.
 

@@ -40,7 +40,7 @@ Related Content
 Stay in the Loop
 ----------------
 
-![Image 4: Kusk Kubernetes](https://assets-global.website-files.com/633705de6adaa38599d8e258/636d3117b8612105c60e0bd9_botkube-front-right.svg)
+![Image 4: Kusk Kubernetes ](https://assets-global.website-files.com/633705de6adaa38599d8e258/636d3117b8612105c60e0bd9_botkube-front-right.svg)
 
 Join the Botkube Community in one of these channels
 

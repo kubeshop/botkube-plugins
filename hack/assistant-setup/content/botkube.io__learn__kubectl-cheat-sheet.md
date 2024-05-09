@@ -134,7 +134,7 @@ Firstly, Botkube enables users to run `kubectl` commands directly from Slack or 
 
 2.  **Get Kubectl help (Even Chatgpt Kubectl Help)**
 
-As seen in the image below, Botkube even gives an option to get kubectl help directly from Slack. Our AI assistant will bring up helpful Kubectl commands and describe a little what they do. This ability combined with the new [Kubernetes Doctor Plugin](https://botkube.io/blog/use-chatgpt-to-troubleshoot-kubernetes-errors-with-botkubes-doctor), that allows users to further query ChatGPT about the correct Kubectl command to run, should make anyone a Kubectl expert quick!
+As seen in the image below, Botkube even gives an option to get kubectl help directly from Slack. Our AI assistant will bring up helpful Kubectl commands and describe a little what they do. The help button in Slack combined with the new [Botkube AI Assistant](https://botkube.io/blog/ai-for-kubernetes-operations) , that allows users to further query AI about the correct Kubectl command to run, should make anyone a Kubectl expert quick!
 
 ![Image 4: Kubectl commands running in a slack channel](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64d154cb0b2e6541c7bf6681_tJUUtb_nGsLwC-FoHmfUBedMJRKPEdswkO5vIxsKpimjVmU-FGIIoL3vVw29Qf2WXtC6524Js6Id8RWfMkg_rkdUcmCjbQnLgfoZIlJcOroO24iy6sCWlCyYKl3kVhcDP9LvDK6Pm_ZasxgaTU2K5K0.png)
 

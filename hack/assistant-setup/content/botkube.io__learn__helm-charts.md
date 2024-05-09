@@ -53,7 +53,7 @@ In addition to finding the solution for Helm errors, Botkube’s ChatOps functio
 
 Believe the hype around ChatGPT troubleshooting code? Botkube thinks it is pretty useful for suggesting solutions to common K8s errors as well. Our new [Doctor plugin](https://botkube.io/blog/use-chatgpt-to-troubleshoot-kubernetes-errors-with-botkubes-doctor) allows operation engineers to bring ChatGPT directly into their cluster!
 
-With Botkube's other powerful chat integrations, you can now prompt the power of ChatGPT directly from your Slack Channel. Between Botkube's helpful suggestions and ChatGPT, you should be able to navigate deploying helm charts in no time. Simply utilize [Botkube's web interface](https://botkube.io/blog/step-by-step-tutorial-leveraging-botkubes-cloud-slack-feature-for-kubernetes-collaborative-troubleshooting) to begin deploying your initial chart today!  
+With Botkube's other powerful chat integrations, you can now prompt the power of ChatGPT directly from your Slack Channel. Between Botkube's helpful suggestions and ChatGPT, you should be able to navigate deploying helm charts in no time. Simply utilize [Botkube's web interface](https://botkube.io/blog/step-by-step-tutorial-leveraging-botkubes-cloud-slack-feature-for-kubernetes-collaborative-troubleshooting) to begin deploying your initial chart today!
 
 See how others are using Botkube with Helm Charts
 -------------------------------------------------

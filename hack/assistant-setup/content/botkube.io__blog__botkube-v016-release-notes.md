@@ -70,16 +70,16 @@ With the release of the \[new Socket-mode Slack app\](https://docs.botkube.io/in
 
 This change is happening because Botkube requires the socket-mode Slack app for the new \[interactivity features\](https://botkube.io/blog/botkube-v015-release-notes#interactive-kubectl) we introduced in Botkube v0.15.0. We plan to put all of our development efforts into this new app so we can continue to build great interactive features. In addition, Slack is recommending the migration from the legacy app type to socket mode as it introduces more granular permissions for bot users and OAuth tokens. This means you have more control over what Botkube and other Slack apps can do in your Slack workspace.
 
-Slack will be unapproving the legacy Botkube Slack app in their Slack App Directory on December 21, 2022. After this date you will still be able to install the legacy Slack app using the Add to Slack button in the \[legacy Slack installation\](https://docs.botkube.io/0.15/installation/slack/) guide but you will receive a warning that the app is not authorized by the Slack App Directory. You will need to accept this warning to proceed if you want to keep using the legacy Slack app with Botkube v0.16 or earlier. 
+Slack will be unapproving the legacy Botkube Slack app in their Slack App Directory on December 21, 2022. After this date you will still be able to install the legacy Slack app using the Add to Slack button in the \[legacy Slack installation\](https://docs.botkube.io/0.15/installation/slack/) guide but you will receive a warning that the app is not authorized by the Slack App Directory. You will need to accept this warning to proceed if you want to keep using the legacy Slack app with Botkube v0.16 or earlier.
 
 \## Bug Fixes
 
-We have also fixed a couple of small bugs in Botkube that were reported to us by users and found by us. You can see the full list of changes in the \[changelog\](https://github.com/kubeshop/botkube/releases/tag/v0.16.0). 
+We have also fixed a couple of small bugs in Botkube that were reported to us by users and found by us. You can see the full list of changes in the \[changelog\](https://github.com/kubeshop/botkube/releases/tag/v0.16.0).
 
 We appreciate your bug reports and pull requests! If you notice a bug in Botkube, please report it as a \[GitHub issue\](https://github.com/kubeshop/botkube/issues) and we are happy to collaborate with you on getting it resolved.
 
 \## Feedback - We’d Love to Hear From You!
 
-As always, we want to hear your feedback and ideas about Botkube. Help us plan the Botkube roadmap, get the features you’d like implemented, and get bugs fixed quickly. 
+As always, we want to hear your feedback and ideas about Botkube. Help us plan the Botkube roadmap, get the features you’d like implemented, and get bugs fixed quickly.
 
 You can talk to us in the Botkube \[GitHub issues\](https://github.com/kubeshop/botkube/issues), Botkube \[Slack community\](http://join.botkube.io/), or email our Product Leader at \[blair@kubeshop.io\](mailto:blair@kubeshop.io).

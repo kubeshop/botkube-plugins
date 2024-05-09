@@ -12,7 +12,7 @@ CrashLoopBackOff occurs when a pod fails to start for some reason. Kubernetes wi
 
 If you're seeing the CrashLoopBackOff error, there are a few things you can do to troubleshoot the problem. First, check the pod's logs to see if there are any errors that might be causing the pod to fail. You can also use the command kubectl get pods to get more information about the pod, including its status and resources.
 
-![Image 1: CrashLoopBackOff Pod error displayed in the terminal](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/648b4b0e5495d47e6f22704c_gDm4R9_hU-uv1PUi3Xy60rBEJTpyY3c74aMfdtOzxlZfPUj-r8zcknnwL4W7q3P-8yuS2OervhgjCV4-rsSvRm2YGOVW8syS0bv7ECu9xhNPEEhR0dA_TCdgXaoooPHvxYG1evWNKep-yVjvGO1_PEQ.png)
+![Image 1: CrashLoopBackOff Pod error  displayed in the terminal](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/648b4b0e5495d47e6f22704c_gDm4R9_hU-uv1PUi3Xy60rBEJTpyY3c74aMfdtOzxlZfPUj-r8zcknnwL4W7q3P-8yuS2OervhgjCV4-rsSvRm2YGOVW8syS0bv7ECu9xhNPEEhR0dA_TCdgXaoooPHvxYG1evWNKep-yVjvGO1_PEQ.png)
 
 _Image mentioned in a_ [_help forum on Microsoft's site_](https://learn.microsoft.com/en-us/answers/questions/328469/understanding-aks-crashloopbackoff) _about users switching to Kubernetes._
 

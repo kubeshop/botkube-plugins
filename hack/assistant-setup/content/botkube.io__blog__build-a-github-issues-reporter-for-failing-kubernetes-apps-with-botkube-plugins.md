@@ -95,7 +95,7 @@ Voilà! You are already an owner of fully functional Botkube plugins. Now it's t
 
 In this blog post, we use only GitHub releases that work out-of-the-box. Releasing plugins on GitHub Pages requires additional setup. To support them too, see the [use template document](https://docs.botkube.io/plugin/quick-start#use-template)
 
-‍  
+‍
 
 \### Develop GitHub executor
 
@@ -108,7 +108,6 @@ To make the code-snippets more readable, I skipped the error handling. However, 
 <table data-hpc="" data-tab-size="8" data-paste-markdown-skip="" data-tagsearch-lang="Go" data-tagsearch-path="plugin-gh-tpl.go"><tbody><tr><td id="file-plugin-gh-tpl-go-L1" data-line-number="1"></td><td id="file-plugin-gh-tpl-go-LC1"><span>package</span> main</td></tr><tr><td id="file-plugin-gh-tpl-go-L2" data-line-number="2"></td><td id="file-plugin-gh-tpl-go-LC2"></td></tr><tr><td id="file-plugin-gh-tpl-go-L3" data-line-number="3"></td><td id="file-plugin-gh-tpl-go-LC3"><span>import</span> (</td></tr><tr><td id="file-plugin-gh-tpl-go-L4" data-line-number="4"></td><td id="file-plugin-gh-tpl-go-LC4"><span>"context"</span></td></tr><tr><td id="file-plugin-gh-tpl-go-L5" data-line-number="5"></td><td id="file-plugin-gh-tpl-go-LC5"></td></tr><tr><td id="file-plugin-gh-tpl-go-L6" data-line-number="6"></td><td id="file-plugin-gh-tpl-go-LC6"><span>"github.com/hashicorp/go-plugin"</span></td></tr><tr><td id="file-plugin-gh-tpl-go-L7" data-line-number="7"></td><td id="file-plugin-gh-tpl-go-LC7"><span>"github.com/kubeshop/botkube/pkg/api"</span></td></tr><tr><td id="file-plugin-gh-tpl-go-L8" data-line-number="8"></td><td id="file-plugin-gh-tpl-go-LC8"><span>"github.com/kubeshop/botkube/pkg/api/executor"</span></td></tr><tr><td id="file-plugin-gh-tpl-go-L9" data-line-number="9"></td><td id="file-plugin-gh-tpl-go-LC9">)</td></tr><tr><td id="file-plugin-gh-tpl-go-L10" data-line-number="10"></td><td id="file-plugin-gh-tpl-go-LC10"></td></tr><tr><td id="file-plugin-gh-tpl-go-L11" data-line-number="11"></td><td id="file-plugin-gh-tpl-go-LC11"><span>const</span> (</td></tr><tr><td id="file-plugin-gh-tpl-go-L12" data-line-number="12"></td><td id="file-plugin-gh-tpl-go-LC12"><span>pluginName</span> <span>=</span> <span>"gh"</span></td></tr><tr><td id="file-plugin-gh-tpl-go-L13" data-line-number="13"></td><td id="file-plugin-gh-tpl-go-LC13">)</td></tr><tr><td id="file-plugin-gh-tpl-go-L14" data-line-number="14"></td><td id="file-plugin-gh-tpl-go-LC14"></td></tr><tr><td id="file-plugin-gh-tpl-go-L15" data-line-number="15"></td><td id="file-plugin-gh-tpl-go-LC15"><span>// GHExecutor implements the Botkube executor plugin interface.</span></td></tr><tr><td id="file-plugin-gh-tpl-go-L16" data-line-number="16"></td><td id="file-plugin-gh-tpl-go-LC16"><span>type</span> <span>GHExecutor</span> <span>struct</span>{}</td></tr><tr><td id="file-plugin-gh-tpl-go-L17" data-line-number="17"></td><td id="file-plugin-gh-tpl-go-LC17"></td></tr><tr><td id="file-plugin-gh-tpl-go-L18" data-line-number="18"></td><td id="file-plugin-gh-tpl-go-LC18"><span>// Metadata returns details about the GitHub plugin.</span></td></tr><tr><td id="file-plugin-gh-tpl-go-L19" data-line-number="19"></td><td id="file-plugin-gh-tpl-go-LC19"><span>func</span> (<span>*</span><span>GHExecutor</span>) <span>Metadata</span>(context.<span>Context</span>) (api.<span>MetadataOutput</span>, <span>error</span>) {</td></tr><tr><td id="file-plugin-gh-tpl-go-L20" data-line-number="20"></td><td id="file-plugin-gh-tpl-go-LC20"><span>return</span> api.<span>MetadataOutput</span>{</td></tr><tr><td id="file-plugin-gh-tpl-go-L21" data-line-number="21"></td><td id="file-plugin-gh-tpl-go-LC21"><span>Version</span>: <span>"v1.0.0"</span>,</td></tr><tr><td id="file-plugin-gh-tpl-go-L22" data-line-number="22"></td><td id="file-plugin-gh-tpl-go-LC22"><span>Description</span>: <span>"GH creates an issue on GitHub for a related Kubernetes resource."</span>,</td></tr><tr><td id="file-plugin-gh-tpl-go-L23" data-line-number="23"></td><td id="file-plugin-gh-tpl-go-LC23">}, <span>nil</span></td></tr><tr><td id="file-plugin-gh-tpl-go-L24" data-line-number="24"></td><td id="file-plugin-gh-tpl-go-LC24">}</td></tr><tr><td id="file-plugin-gh-tpl-go-L25" data-line-number="25"></td><td id="file-plugin-gh-tpl-go-LC25"></td></tr><tr><td id="file-plugin-gh-tpl-go-L26" data-line-number="26"></td><td id="file-plugin-gh-tpl-go-LC26"><span>// Execute returns a given command as a response.</span></td></tr><tr><td id="file-plugin-gh-tpl-go-L27" data-line-number="27"></td><td id="file-plugin-gh-tpl-go-LC27"><span>func</span> (<span>e</span> <span>*</span><span>GHExecutor</span>) <span>Execute</span>(<span>ctx</span> context.<span>Context</span>, <span>in</span> executor.<span>ExecuteInput</span>) (executor.<span>ExecuteOutput</span>, <span>error</span>) {</td></tr><tr><td id="file-plugin-gh-tpl-go-L28" data-line-number="28"></td><td id="file-plugin-gh-tpl-go-LC28"><span>return</span> executor.<span>ExecuteOutput</span>{</td></tr><tr><td id="file-plugin-gh-tpl-go-L29" data-line-number="29"></td><td id="file-plugin-gh-tpl-go-LC29"><span>Data</span>: <span>"Aloha! 🏄"</span>,</td></tr><tr><td id="file-plugin-gh-tpl-go-L30" data-line-number="30"></td><td id="file-plugin-gh-tpl-go-LC30">}, <span>nil</span></td></tr><tr><td id="file-plugin-gh-tpl-go-L31" data-line-number="31"></td><td id="file-plugin-gh-tpl-go-LC31">}</td></tr><tr><td id="file-plugin-gh-tpl-go-L32" data-line-number="32"></td><td id="file-plugin-gh-tpl-go-LC32"></td></tr><tr><td id="file-plugin-gh-tpl-go-L33" data-line-number="33"></td><td id="file-plugin-gh-tpl-go-LC33"><span>func</span> <span>main</span>() {</td></tr><tr><td id="file-plugin-gh-tpl-go-L34" data-line-number="34"></td><td id="file-plugin-gh-tpl-go-LC34"><span>executor</span>.<span>Serve</span>(<span>map</span>[<span>string</span>]plugin.<span>Plugin</span>{</td></tr><tr><td id="file-plugin-gh-tpl-go-L35" data-line-number="35"></td><td id="file-plugin-gh-tpl-go-LC35"><span>pluginName</span>: <span>&amp;</span>executor.<span>Plugin</span>{</td></tr><tr><td id="file-plugin-gh-tpl-go-L36" data-line-number="36"></td><td id="file-plugin-gh-tpl-go-LC36"><span>Executor</span>: <span>&amp;</span><span>GHExecutor</span>{},</td></tr><tr><td id="file-plugin-gh-tpl-go-L37" data-line-number="37"></td><td id="file-plugin-gh-tpl-go-LC37">},</td></tr><tr><td id="file-plugin-gh-tpl-go-L38" data-line-number="38"></td><td id="file-plugin-gh-tpl-go-LC38">})</td></tr><tr><td id="file-plugin-gh-tpl-go-L39" data-line-number="39"></td><td id="file-plugin-gh-tpl-go-LC39">}</td></tr></tbody></table>
 
 This template code imports required packages and registers `GHExecutor` as the gRPC plugin. Our `GHExecutor` service already implements the required [Protocol Buffers](https://github.com/kubeshop/botkube/blob/main/proto/executor.proto) contract. As you can see, we require **only 2 methods**.
-
 
 \- The `Execute` method is the heart of your executor plugin. This method runs your business logic and returns the output as plaintext. Next, the Botkube core sends back the response to a given communication platform.
 
@@ -147,7 +146,7 @@ There are a lot of great libraries supporting command parsing. The most popular 
 
 Under the hood, the `pluginx.ParseCommand` method uses [go-arg](https://github.com/alexflint/go-arg).
 
-‍  
+‍
 
 6\. We are almost there! Now let's fetch the issue details:
 
@@ -202,13 +201,11 @@ Now, we need to distribute our plugins. As we mentioned earlier, a plugin reposi
 
 2\. The \[.github/workflows/pages-release.yml\](https://github.com/kubeshop/botkube-plugins-template/blob/main/.github/workflows/pages-release.yml) action, which updates GitHub Pages with plugin binaries and index file each time a new tag is pushed.
 
-
 To cut a new release, you need to commit all your work and tag a new commit:
 
 Next, let's push our changes and the new tag:
 
-
-This triggers GitHub Action:  
+This triggers GitHub Action:
 
 ![Image 5](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/63d817a66682780daf595ab4_release-job.png)
 
@@ -224,7 +221,7 @@ This automation:
 
 4\. Generates a release description.
 
-5\. Uses the \[gh\](https://cli.github.com) CLI to create a new GitHub release.  
+5\. Uses the \[gh\](https://cli.github.com) CLI to create a new GitHub release.
 
 \### Use the _gh_ executor
 

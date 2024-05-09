@@ -1,4 +1,4 @@
-Title: ChatGPT & Botkube Kubernetes Integration (K8s Doctor Plugin)
+Title: Botkube.io
 
 URL Source: https://botkube.io/integration/chatgpt-botkube-kubernetes-integration
 

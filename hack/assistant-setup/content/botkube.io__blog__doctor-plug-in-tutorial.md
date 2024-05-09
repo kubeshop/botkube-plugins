@@ -36,12 +36,17 @@ Learn more about Botkube's ChatGPT-powered Doctor plugin in our \[release announ
 
 In this tutorial, we will walk you through the step-by-step process of setting up and utilizing Botkube's new \[Doctor plug-in\](https://docs.botkube.io/usage/executor/doctor), optimizing your team’s performance, and maximizing your Kubernetes productivity.
 
-
 \## Requirements
 
 \* A Slack workspace  
 \* A \[Botkube Cloud\](http://app.botkube.io) account  
-\* \[OpenAI credits \[(https://openai.com/) \## Method 1: Install the Doctor Plug into a new instance \### Creating a Botkube Cloud Account 1\. On the Botkube \[homepage\](https://botkube.io/), locate the “Get Started” button and click on it. This will take you to the account registration page.  
+\* \[OpenAI credits \[(https://openai.com/)
+
+\## Method 1: Install the Doctor Plug into a new instance
+
+\### Creating a Botkube Cloud Account
+
+1\. On the Botkube \[homepage\](https://botkube.io/), locate the “Get Started” button and click on it. This will take you to the account registration page.  
 2\. Fill in the required information in the registration form. You can sign up with your email address or Github account.
 
 \* Click \[here\](https://botkube.io/blog/step-by-step-tutorial-leveraging-botkubes-cloud-slack-feature-for-kubernetes-collaborative-troubleshooting) for a more indepth Botkube installation tutorial
@@ -59,7 +64,7 @@ In this tutorial, we will walk you through the step-by-step process of setting u
 ![Image 3: K8s cluster building GUI](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64a709efd8e90bc7933a1393_nAeC7-04jk70WellyEP2GM4m75jP4jrLhnmbjAkZr3rLlNi7zaD2bMLx8rvebpfqFIrvB8OSIxIqKezCZngk7ooCH6WAOT_1PBSQKz-sAAl9WRSq-GqtR1gmHmwC87Oq443Bzdu_sMKsHw-_g8Jwrfo.png)
 
 ‍  
-3\. Select the \*Official Botkube Slack\* option. (Note this option requires you to sign up for a 30 day free trial)  
+3\. Select the \*Official Botkube Slack\* option. (Note this option requires you to sign up for a 30 day free trial)
 
 ![Image 4: Official Slack Kubernetes bot](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64a709ffd8e90bc7933a2249_3GYyjQn-Uklnp1Bn8T7YmSOdKEaFnl3idDQcYJiD1mx7xeBbr6yvoRgbLI3Fir7TaW4a1N8l4tgB_Zbt6b3XryqzyYff4z1I_nffpWkoS6Hx7yPmmTrk2Z9tnAlXWUoM_VrAm0iBje2a8oaIiaGxRx0.png)
 
@@ -90,26 +95,23 @@ In this tutorial, we will walk you through the step-by-step process of setting u
 
 ![Image 8](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64c821bb26bb53b2ce43074d_I-Jz17f6Ag1ojKmWY0MT8l-IgRvU82Q2Gfwqk9OQVLXHF4Wx_0yQM-iy3GPnmIgQrDm1_Nck_-M2bpccmV2VY9svcoSjN7yylToOVl21vWoeJb6pp_bldS9zT677JvGJ0022oJd5dWlKN06Nph8UAmw.png)
 
-
-10\. On the next page, you will have the option to also enable \[Command Alias\](https://botkube.io/blog/command-line-magic-simplify-your-life-with-custom-kubernetes-kubectrl-aliases-on-botkube)and \[Botkube Actions\](https://docs.botkube.io/usage/automated-actions/). Make your selection and click the Create button.  
+10\. On the next page, you will have the option to also enable \[Command Alias\](https://botkube.io/blog/command-line-magic-simplify-your-life-with-custom-kubernetes-kubectrl-aliases-on-botkube)and \[Botkube Actions\](https://docs.botkube.io/usage/automated-actions/). Make your selection and click the Create button.
 
 ![Image 9](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64c821b95d087e15b6d1ec7d_zoOK3PqJeNz8R8Mgngk-Qssdni9rpMmx6-CMe1cGxvODqzVz-vb4cJ62ZbWeGfeoAudmnhkwKCzY8bb1UwAIoeefzAAFgwHfLKt4VNkU9kX_0Q8UJFhbWcqfLdJoLcmeNHAcluZPXeEA5I0FkkfQ4kA.png)
 
 ‍  
 11\. You are now ready to start utilizing the Botkube Doctor plugin!
 
-
 \## Method 2: Install the Doctor plug-in into an already created Botkubeinstance.
-
 
 \### Creating your New Plug-In
 
-1\. Select the \`Add Plug-in\` button  
+1\. Select the \`Add Plug-in\` button
 
 ![Image 10](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64c821b87c3808d8b8fb048d_fyMnDpgGrvfDOKs6zbiAj1SXGp5deepJ1_uWTLiYuXgcnv7tonGyf-NolV9U2d-IeH0nFMdnSpwX12xtV4355EoQ6kuWd2FmBEpjtpOrIc7UQQ5Mnc6YrB8kxajMO3yfbORKjh6Y6JYunOB5OLTfZAc.png)
 
 ‍  
-2\. Select the option for the Doctor plug-in  
+2\. Select the option for the Doctor plug-in
 
 ![Image 11](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64c821ba302266c000e029ec_FbpyK0RLgMWySuuwKBVfVBtsX-eDAoIuGqze913li_eZyDDjWoOpj7JmmeXKci6M7xzbGddBcqLz17gYRuDN0ISndRLHtc2gvkApV9GJIXUNfn2o7B-J8Zg-lpiNe9UUMKsffwaQ1A_-qImmfhAw1UY.png)
 
@@ -128,7 +130,7 @@ In this tutorial, we will walk you through the step-by-step process of setting u
 When the Doctor AI detects an error or anomaly in the Kubernetes environment, it takes proactive steps to assist users in resolving the issue. Upon detecting an error event, the Doctor AI generates a Slack message with a \`Get Help\` button. Clicking on this button triggers the Doctor AI to provide users with actionable solutions and next steps to tackle the problem. This interactive troubleshooting approach empowers users with the knowledge and confidence to resolve Kubernetes issues swiftly.  
 \## Support for Generic Questions
 
-Beyond its ability to tackle specific errors, the Doctor AI is also well-versed in answering general questions related to Kubernetes. Users can seek guidance on various Kubernetes concepts, best practices, or configurations directly within the Slack channel. This means no more interruptions to access a separate dashboard or documentation, making it easier to gain quick insights and expand Kubernetes expertise.  
+Beyond its ability to tackle specific errors, the Doctor AI is also well-versed in answering general questions related to Kubernetes. Users can seek guidance on various Kubernetes concepts, best practices, or configurations directly within the Slack channel. This means no more interruptions to access a separate dashboard or documentation, making it easier to gain quick insights and expand Kubernetes expertise.
 
 ![Image 13](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64c821bb21a0701673853991__UHn0zhtq5mu4YOnbuJN0vHABCKyUNCqyhsohVmShvTAPqmc8RJo4DQNsiN-QDU2vZ03D-W9N8_x-G9jSQpxGfeErfnxuzMt4YCE7BavU_uuXf0nTRhDDzp3NaIedpaXj0_8ehtKPQdYiynaCK6sunk.png)
 
@@ -139,13 +141,11 @@ The Doctor AI plugin's versatility extends beyond standalone usage. It can be ea
 
 Botkube's new Doctor plug-in brings the future of efficient Kubernetes troubleshooting to your fingertips. With the power of ChatGPT, you can now effortlessly troubleshoot your Kubernetes cluster, saving precious time and streamlining your workflow. Bid farewell to tedious tasks, as ChatGPT automates much of the troubleshooting process, allowing you to focus on critical aspects of your work.
 
-With seamless integration into \[major communication channels\](http://botkube.io/integrations), Botkube empowers you to take swift action on identified errors, ensuring your Kubernetes environment runs smoothly wherever you are.  
-
+With seamless integration into \[major communication channels\](http://botkube.io/integrations), Botkube empowers you to take swift action on identified errors, ensuring your Kubernetes environment runs smoothly wherever you are.
 
 \### Sign up now
 
 Whether you're a seasoned Kubernetes pro or just getting started, Botkube helps make troubleshooting Kubernetes easier and faster. \[Sign up now for free\](http://app.botkube.io) and \[join the community\](https://join.botkube.io/) of users who are already benefiting from the power of Botkube.
-
 
 \## We'd Love Your Feedback
 

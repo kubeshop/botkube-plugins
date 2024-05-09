@@ -27,11 +27,10 @@ Argo CD now integrates with Botkube, allowing users to receive and interact with
 
 #### Get started with Botkube Cloud
 
-Are you dealing with the complexities of scaling operations and collaborative workflows using GitOps tools like ArgoCD? As your organization expands, staying on top of repository and configuration changes, as well as managing pull requests and issues, can become increasingly difficult.  
+Are you dealing with the complexities of scaling operations and collaborative workflows using GitOps tools like ArgoCD? As your organization expands, staying on top of repository and configuration changes, as well as managing pull requests and issues, can become increasingly difficult.
 
 ‍  
 Today, we are happy to announce the new \[Botkube Argo CD integration\](https://docs.botkube.io/configuration/source/argocd/)! This integration enables you and your team to leverage automation to scale and optimize your Argo CD troubleshooting workflow.
-
 
 \## What is Argo CD?
 
@@ -39,9 +38,7 @@ Today, we are happy to announce the new \[Botkube Argo CD integration\](https://
 
 ‍
 
-
 \[Argo CD\](https://botkube.io/integration/argo-cd-botkube-kubernetes-integration) is a Kubernetes controller that oversees the status of all active applications. It can pull updated code from Git repositories and deploy it directly to Kubernetes resources. It enables developers to manage both infrastructure configuration and application updates in one system.
-
 
 \## Why was a Botkube & Argo Connection Necessary?
 
@@ -49,11 +46,9 @@ With the new Botkube ArgoCD plugin, users can significantly enhance their Argo C
 
 Furthermore, the plugin enhances visibility into the Argo deployment process by consolidating GitHub and Argo events and delivering them directly to the user's configured communication platform, ensuring a more informed and responsive workflow.
 
-
 \## What is Botkube?
 
 Botkube is a collaborative troubleshooting tool designed specifically for Kubernetes users. With Botkube, you can seamlessly receive and act on alerts directly within your preferred collaboration platforms like \[Slack, Microsoft Teams, Discord, and Mattermost.\](https://botkube.io/integrations) This means you'll gain instant visibility and control over your cluster resources, all without ever having to leave your messaging platform. In addition, Botkube enables you to automate actions based on events, run kubectl and Helm commands, receive recommendations for best practices and much more.
-
 
 \## Using Argo CD with Botkube
 
@@ -61,13 +56,11 @@ Botkube is a collaborative troubleshooting tool designed specifically for Kubern
 
 ‍
 
-
 The new \[Botkube ArgoCD\](https://docs.botkube.io/configuration/source/argocd/) plugin offers a compelling use case for users seeking seamless integration between Argo CD and their preferred communication platforms. With this plugin, users can effortlessly receive real-time notifications from their Argo CD deployments directly in their communication channels. This feature proves invaluable for teams relying on Argo CD for managing Kubernetes workflows within GitHub. Botkube's ArgoCD plugin harnesses Argo CD's native notification system, expanding its functionality by provinteractive notifications for popular cloud-based services like Slack, as well as support for platforms like Discord, which are not covered by Argo CD's default notifications.
 
 One of the standout benefits of this plugin is its automation of the entire notification system setup, simplifying a traditionally complex process. By configuring the plugin in Botkube, users can save time and effort previously required to define webhooks, triggers, templates, and annotations within Argo CD.
 
 Additionally, the plugin enhances notifications, allowing users to run commands and access application details conveniently in a slack channel, ultimately aiding in debugging and troubleshooting. Overall, the Botkube ArgoCD plugin enhances the user experience by bridging the gap between Argo CD and their communication platforms, offering a streamlined, efficient, and interactive approach to managing Kubernetes deployments.
-
 
 \## Get Started with Botkube’s new Argo CD Plugin
 

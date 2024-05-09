@@ -1,4 +1,4 @@
-Title: Microsoft Teams & Botkube K8s Integration
+Title: Botkube.io
 
 URL Source: https://botkube.io/integration/teams
 
