@@ -1,4 +1,4 @@
-name: Update AI assistant
+name: Reconfigure OpenAI assistant
 
 on:
   push:
@@ -12,7 +12,7 @@ env:
   OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
 
 jobs:
-  update-ai-assistant:
+  reconfigure-ai-assistant:
     name: Reconfigure OpenAI assistant
     runs-on: ubuntu-22.04
     steps:

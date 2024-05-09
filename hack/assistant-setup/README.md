@@ -43,7 +43,7 @@ npm run fetch-content
 
 By default, before refetching content starts:
 
-- downloaded files starting with `https://botkube.io/blog/*` and `https://botkube.io/learn/*` prefixes are kept and won't be updated,
+- downloaded files starting with [package.json](package.json)`https://botkube.io/blog/*` and `https://botkube.io/learn/*` prefixes are kept and won't be updated,
 - all other content is removed.
 
 To refetch all content, run the following command:

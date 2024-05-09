@@ -58,14 +58,21 @@ This repository shows Botkube Cloud plugins.
 
 ## Release
 
-### Fetch Botkube content and update OpenAI assistant
+### Fetch content for OpenAI assistant
+
+The AI plugin uses Botkube content (website, docs, blog posts, etc.). To refresh it, follow the steps:
+
+1. Navigate to the [` Fetch content for OpenAI assistant` GitHub Actions workflow](https://github.com/kubeshop/botkube-cloud-plugins/actions/workflows/ai-assistant-fetch-content.yml).
+1. Optionally check the "Purge all content" checkbox.
+1. Trigger the pipeline.
 
 
+The content is shared between dev and prod AI plugin, and is synchronized during the [plugin relese](#release-plugins-for-botkube-agent).
 
 ### Release plugins for Botkube Agent
 
 The latest plugins from `main` are released automatically to the bucket `botkube-cloud-plugins-latest`.
-To release a new version of the plugins:
+To release a new production version of the plugins:
 
 1. Navigate to the [`Trigger release` GitHub Actions workflow](https://github.com/kubeshop/botkube-cloud-plugins/actions/workflows/release.yml).
 1. Provide the target version in the `version` input. Do not forget about the `v` prefix.
@@ -73,3 +80,5 @@ To release a new version of the plugins:
    For example, if you want to release version `1.2.3`, you should provide `version: v1.2.3`.
 
 1. Trigger the pipeline.
+
+For both latest and production plugins, the OpenAI assistant for AI plugin is reconfigured automatically concurrently to the plugins build.

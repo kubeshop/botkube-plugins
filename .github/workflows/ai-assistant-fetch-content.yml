@@ -1,0 +1,74 @@
+name: Fetch content for OpenAI assistant
+
+on:
+  workflow_dispatch:
+    inputs:
+      purge-all-content:
+        type: boolean
+        description: Purge all content
+        default: false
+
+env:
+  git-user: github-actions[bot]
+  git-email: 41898282+github-actions[bot]@users.noreply.github.com
+
+jobs:
+  update-content:
+    name: Fetch content for OpenAI assistant
+    runs-on: ubuntu-22.04
+    env:
+      PURGE_ALL_CONTENT: ${{inputs.purge-all-content}}
+      BRANCH_NAME: fetch-ai-content-${{ github.run_id }}-${{ github.run_attempt }}
+    steps:
+      - name: "Checkout code"
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.RELEASE_GH_DEV_ACCOUNT_PAT }}
+
+      - name: "Set up Go"
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: 'go.mod'
+          # When the files to be extracted are already present,
+          # tar extraction in Golangci Lint fails with the "File exists"
+          # errors. These files appear to be present because of
+          # cache in setup-go, on disabling the cache we are no more seeing
+          # such error. Cache is to be enabled once the fix is available for
+          # this issue:
+          # https://github.com/golangci/golangci-lint-action/issues/807
+          cache: false
+
+      - name: Setup Node
+        uses: volta-cli/action@v4
+
+      - name: Set git 'user.name' and 'user.email'
+        run: |
+          git config user.name "${{ env.git-user }}"
+          git config user.email ${{ env.git-email }}
+
+      - name: Create a branch branch
+        run: |
+          git checkout -b ${{ env.BRANCH_NAME }}
+
+      - name: Fetch content
+        run: |
+          cd ./hack/assistant-setup
+          npm install
+          npm run fetch-content
+
+      - name: Push changes to remote
+        run: |
+          git add .
+          git commit -m "Refetch content for OpenAI assistant"
+          git push --set-upstream origin ${{ env.BRANCH_NAME }}
+
+      - name: Create a pull request
+        env:
+          GITHUB_TOKEN: ${{ secrets.RELEASE_GH_DEV_ACCOUNT_PAT }}
+        run: |
+          gh pr create \
+            --title "Refetch content for OpenAI assistant"  \
+             --head "${{ env.BRANCH_NAME }}" \
+             --base main \
+             --label release-automation \
+             --body "This Pull Request is created by automation to update the content for OpenAI assistant."
