@@ -7,9 +7,6 @@ on:
         type: boolean
         description: Purge all content
         default: false
-  push: # FIXME: Remove
-    branches:
-      - ai-docs-follow-up
 
 env:
   git-user: github-actions[bot]
@@ -73,5 +70,5 @@ jobs:
             --title "Refetch content for OpenAI assistant"  \
              --head "${{ env.BRANCH_NAME }}" \
              --base main \
-             --label release-automation \
+             --label automation \
              --body "This Pull Request is created by automation to update the content for OpenAI assistant."

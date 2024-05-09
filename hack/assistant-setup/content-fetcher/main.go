@@ -70,7 +70,7 @@ func main() {
 	pagesToFetch := fetcher.preparePageList(docsPages, marketingPages)
 	log.Infof("Found %d pages to fetch", len(pagesToFetch))
 
-	log.Infof("Creating %q directory...", contentDir)
+	log.Infof("Creating %q directory if doesn't exist...", contentDir)
 	err = os.MkdirAll(contentDir, os.ModePerm)
 	loggerx.ExitOnError(err, "while creating directory")
 
