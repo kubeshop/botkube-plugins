@@ -14,7 +14,7 @@ Join us for an exciting session about Botkube's plugin system and how it improve
 
 \- Collaborative troubleshooting techniques
 
-**Special Interview**  
+**Special Interview**
 
 In this session, I will be interviewing Botkube's Product Lead, Blair Rampling, about Botkube's product vision and roadmap.
 

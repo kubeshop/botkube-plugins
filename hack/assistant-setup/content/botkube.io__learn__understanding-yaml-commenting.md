@@ -3,18 +3,16 @@ Title: Understanding YAML Comments in Kubernetes: Improve Collaboration
 URL Source: https://botkube.io/learn/understanding-yaml-commenting
 
 Markdown Content:
-[![Image 1: Kusk Kubernetes](https://assets-global.website-files.com/633705de6adaa38599d8e258/6338148fa3f8a509639804fa_botkube-logo.svg)](https://botkube.io/)
-
 Understanding YAML Commenting for Better Kubernetes Management
 --------------------------------------------------------------
 
-![Image 2: an image of a cloud with the words'botkube definitions'](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65fa0b549adc75e0bdbbd27b_LEARN_TN_Definitions%20(9).png)
+![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65fa0b549adc75e0bdbbd27b_LEARN_TN_Definitions%20(9).png)
 
 Last updated
 
 March 19, 2024
 
-![Image 3: a man in a blue shirt with his arms crossed](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64a86fdda4d8d06ce598598e_evan%20image.jpg)
+![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64a86fdda4d8d06ce598598e_evan%20image.jpg)
 
 Evan Witmer
 
@@ -25,10 +23,10 @@ Botkube
 Table of Contents
 -----------------
 
-*   [What Does YAML Commenting Look Like?](#what-does-yaml-commenting-look-like-)
-*   [Why Use Comments in YAML?](#why-use-comments-in-yaml-)
-*   [Beyond Notes: Botkube for Team-Based Kubernetes Management](#beyond-notes-botkube-for-team-based-kubernetes-management)
-*   [Final Thoughts](#final-thoughts)
+*   [What Does YAML Commenting Look Like?](#what-does-yaml-commenting-look-like--2)
+*   [Why Use Comments in YAML?](#why-use-comments-in-yaml--2)
+*   [Beyond Notes: Botkube for Team-Based Kubernetes Management](#beyond-notes-botkube-for-team-based-kubernetes-management-2)
+*   [Final Thoughts](#final-thoughts-2)
 
 #### Get started with Botkube Cloud
 
@@ -43,29 +41,7 @@ There are two primary types of YAML comments:
 
 *   **Single-line comments:** Used for brief notes or for temporarily deactivating a line of YAML code.
 
-</div>
-<div class="gist-meta">
-<a href="https://gist.github.com/evwitmer/d56f87cb3a80c4252adc2186c13543e7/raw/c0c58bf3402e586ff0d3b4e3be5102921894f0bf/blog-comment-1.yaml" style="float:right" class="Link--inTextBlock">view raw</a>
-<a href="https://gist.github.com/evwitmer/d56f87cb3a80c4252adc2186c13543e7#file-blog-comment-1-yaml" class="Link--inTextBlock">
-blog-comment-1.yaml
-</a>
-hosted with ❤ by <a class="Link--inTextBlock" href="https://github.com">GitHub</a>
-</div>
-</div>
-
-
 *   **Inline comments:** Can be added at the end of a line of code. This lets you insert short explanations alongside the code itself.
-
-</div>
-<div class="gist-meta">
-<a href="https://gist.github.com/evwitmer/03f2d6f9a34d3b13d42bc3c13aa49751/raw/0f3d9beb4b14e8206aa081f4b44526454f75439d/gistfile1.yaml" style="float:right" class="Link--inTextBlock">view raw</a>
-<a href="https://gist.github.com/evwitmer/03f2d6f9a34d3b13d42bc3c13aa49751#file-gistfile1-yaml" class="Link--inTextBlock">
-gistfile1.yaml
-</a>
-hosted with ❤ by <a class="Link--inTextBlock" href="https://github.com">GitHub</a>
-</div>
-</div>
-
 
 **Why Use Comments in YAML?**
 -----------------------------
@@ -96,4 +72,4 @@ Comments may seem like simple additions, but in the world of Kubernetes configur
 
 ### About Botkube
 
-Botkube is a collaborative troubleshooting tool designed specifically for Kubernetes users. With Botkube, you can seamlessly receive and act on alerts directly within your preferred messaging and collaboration platforms like Slack, Microsoft Teams, Discord, and Mattermost. In addition, Botkube enables you to automate actions based on events, run kubectl and Helm commands, receive recommendations for best practices and much more. [Get started with Botkube for free.](http://app.botkube.io/)
+Botkube is a collaborative troubleshooting tool designed specifically for Kubernetes users. With Botkube, you can seamlessly receive and act on alerts directly within your preferred messaging and collaboration platforms like Slack, Microsoft Teams, Discord, and Mattermost. In addition, Botkube enables you to automate actions based on events, run kubectl and Helm commands, receive recommendations for best practices and much more. [Get started with Botkube for free.](https://app.botkube.io/)

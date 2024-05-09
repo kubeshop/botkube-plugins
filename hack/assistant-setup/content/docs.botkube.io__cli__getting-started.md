@@ -7,7 +7,7 @@ Version: 1.10
 
 Botkube includes a command-line interface (CLI) that you can use to interact with Botkube and Botkube Cloud from your terminal, or from a script.
 
-Installation[​](#installation"DirectlinktoInstallation")
+Installation[​](#installation "Direct link to Installation")
 ------------------------------------------------------------
 
 Select tab depending on the system you use:
@@ -20,15 +20,15 @@ Select tab depending on the system you use:
 
 Use [Homebrew](https://brew.sh/) to install the latest Botkube CLI:
 
-brew install kubeshop/botkube/botkube
+    brew install kubeshop/botkube/botkube
 
 * * *
 
 Alternatively, download the Botkube CLI binary and move it to a directory under your `$PATH`:
 
-curl -Lo botkube https://github.com/kubeshop/botkube/releases/download/v1.10.0/botkube-darwin-arm64chmod +x botkube && mv botkube /usr/local/bin/botkube
+    curl -Lo botkube https://github.com/kubeshop/botkube/releases/download/v1.10.0/botkube-darwin-arm64chmod +x botkube && mv botkube /usr/local/bin/botkube
 
-First use[​](#first-use"DirectlinktoFirstuse")
+First use[​](#first-use "Direct link to First use")
 ---------------------------------------------------
 
 For the commands that are nested under `cloud` command you first need to authenticate with Botkube cloud by running:
@@ -37,12 +37,12 @@ If credentials are valid, the output is:
 
 All available commands you can simply discover by running `botkube --help` or `botkube <command> -h` to see the help output which corresponds to a given command.
 
-Autocompletion[​](#autocompletion"DirectlinktoAutocompletion")
+Autocompletion[​](#autocompletion "Direct link to Autocompletion")
 ------------------------------------------------------------------
 
 To learn how to enable autocompletion for your shell, run:
 
-botkube completion --help
+    botkube completion --help
 
 > **NOTE:** Be sure to **restart your shell** after installing autocompletion.
 

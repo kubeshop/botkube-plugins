@@ -1,4 +1,4 @@
-Title: Mattermost & Botkube Kubernetes Integration
+Title: Botkube.io
 
 URL Source: https://botkube.io/integration/mattermost
 
@@ -22,3 +22,7 @@ Mattermost + Botkube K8s Integration
 ------------------------------------
 
 Botkube has become the Kubernetes Integration partner for Mattermost, allowing users to receive Kubernetes-related alerts directly in their Mattermost channels. Botkube provides a seamless integration with Mattermost, which enables teams to collaborate more effectively by providing real-time notifications on Kubernetes cluster events, such as pod failures, deployments, and autoscaling. With Botkube, users can easily share permissions to their Kubernetes cluster through a shared team channel, ensuring that the right people have access to the right resources. Additionally, Botkube provides the ability to perform Kubernetes cluster commands directly from Mattermost, allowing users to restart their cluster or perform general maintenance tasks from their local machine without having to switch between different tools. This integration between Botkube and Mattermost streamlines Kubernetes operations, providing a more efficient and effective way to manage your Kubernetes clusters.
+
+### Now with Botkube's Kuberntes AI Assistant
+
+Botkube's AI assistant is a game-changer for Kubernetes management. It comes standard, empowering you to take your Mattermost alerts to the next level.  Now, Botkube doesn't just notify you of Kubernetes errors – it digs deep to understand _why_ they occurred. Even better, with your permission, the AI assistant can take action to resolve those errors autonomously, saving you precious time and streamlining your incident response.

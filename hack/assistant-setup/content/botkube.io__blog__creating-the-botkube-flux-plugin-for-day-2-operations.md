@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/creating-the-botkube-flux-plugin-for-day-2-o
 Published Time: Sep 07, 2023
 
 Markdown Content:
-![Image 1: a man with his arms crossed in front of a black background](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/636df3ec19d99029e7cfb5bd_n-vUM0Lz3yXA1WLyfxEMUxXQpUDEiKv9EmEe4NnCbCI.png)
+![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/636df3ec19d99029e7cfb5bd_n-vUM0Lz3yXA1WLyfxEMUxXQpUDEiKv9EmEe4NnCbCI.png)
 
 Mateusz Szostok
 
@@ -46,13 +46,13 @@ Now, let's get into the nitty-gritty of this plugin's journey. Picture yourself 
 
 1.  Be able to run Flux CLI commands from any communication platform, just like you do in your terminal:
 
-![Image 2: a screenshot of a web page showing different types of information](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64f9944f5ec10d12756e4d2b_flux-get-source-git.png)
+![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64f9944f5ec10d12756e4d2b_flux-get-source-git.png)
 
 ‍
 
 2.  Next, let's make it mobile friendly. The secret ingredient is interactivity like buttons and select menus. ‍
 
-![Image 3: a screen shot of a chat window with a button on it](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64f9949ad7623bfae8357d71_flux-get-source-git-btns.png)
+![Image 3](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64f9949ad7623bfae8357d71_flux-get-source-git-btns.png)
 
 Typing or copy-pasting a long names doesn't work well. Now, you have a handy Flux client right in your pocket, ready with just a few clicks. And we are just half-way there 😈‍
 
@@ -62,7 +62,7 @@ Typing or copy-pasting a long names doesn't work well. Now, you have a handy Flu
 
 In our case, we stitched together three important parts: Kubernetes cluster, GitHub platform, and Flux CLI. As a result, we've provided a streamlined experience for generating a diff report in the context of GitHub pull requests and the current cluster state.
 
-![Image 4: a screen shot of a screen showing the status of a task](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64f994c33a6f72e35362f50c_flux-diff.png)
+![Image 4](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64f994c33a6f72e35362f50c_flux-diff.png)
 
 🎁 As you may notice, the diff report notification includes some useful actions out-of-the-box:
 
@@ -85,7 +85,7 @@ That's how the GitHub Events source was born. Now we can set up a complete workf
 2.  Get notification on Slack about new pull request.
 3.  Render and embed event-aware button to run a diff report.
 
-![Image 5: a screenshot of a page with the word adexpress on it](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64f994dd9581964e18ef36bd_pr-event.png)
+![Image 5](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64f994dd9581964e18ef36bd_pr-event.png)
 
 ‍
 
@@ -95,10 +95,45 @@ Now, you may think that what we achieve in those 4 steps it's great but will be 
 
 *   GitHub Events workflow:
 
-<table data-hpc="" data-tab-size="8" data-paste-markdown-skip="" data-tagsearch-lang="YAML" data-tagsearch-path="gh-events-cfg.yaml"><tbody><tr><td id="file-gh-events-cfg-yaml-L1" data-line-number="1"></td><td id="file-gh-events-cfg-yaml-LC1"><span>botkube/github-events</span>: <span><span>#</span> GitHub Events</span></td></tr><tr><td id="file-gh-events-cfg-yaml-L2" data-line-number="2"></td><td id="file-gh-events-cfg-yaml-LC2"><span>github</span>:</td></tr><tr><td id="file-gh-events-cfg-yaml-L3" data-line-number="3"></td><td id="file-gh-events-cfg-yaml-LC3"><span>auth</span>:</td></tr><tr><td id="file-gh-events-cfg-yaml-L4" data-line-number="4"></td><td id="file-gh-events-cfg-yaml-LC4"><span>accessToken</span>: <span><span>"</span>ghp_<span>"</span></span></td></tr><tr><td id="file-gh-events-cfg-yaml-L5" data-line-number="5"></td><td id="file-gh-events-cfg-yaml-LC5"><span>repositories</span>:</td></tr><tr><td id="file-gh-events-cfg-yaml-L6" data-line-number="6"></td><td id="file-gh-events-cfg-yaml-LC6">- <span>name</span>: <span>mszostok/podinfo</span></td></tr><tr><td id="file-gh-events-cfg-yaml-L7" data-line-number="7"></td><td id="file-gh-events-cfg-yaml-LC7"><span>on</span>:</td></tr><tr><td id="file-gh-events-cfg-yaml-L8" data-line-number="8"></td><td id="file-gh-events-cfg-yaml-LC8"><span>pullRequests</span>:</td></tr><tr><td id="file-gh-events-cfg-yaml-L9" data-line-number="9"></td><td id="file-gh-events-cfg-yaml-LC9">- <span>types</span>: <span>["open"]</span></td></tr><tr><td id="file-gh-events-cfg-yaml-L10" data-line-number="10"></td><td id="file-gh-events-cfg-yaml-LC10"><span>paths</span>:</td></tr><tr><td id="file-gh-events-cfg-yaml-L11" data-line-number="11"></td><td id="file-gh-events-cfg-yaml-LC11"><span>include</span>: <span>["kustomize/.*"]</span></td></tr><tr><td id="file-gh-events-cfg-yaml-L12" data-line-number="12"></td><td id="file-gh-events-cfg-yaml-LC12"><span>notificationTemplate</span>:</td></tr><tr><td id="file-gh-events-cfg-yaml-L13" data-line-number="13"></td><td id="file-gh-events-cfg-yaml-LC13"><span>extraButtons</span>:</td></tr><tr><td id="file-gh-events-cfg-yaml-L14" data-line-number="14"></td><td id="file-gh-events-cfg-yaml-LC14">- <span>displayName</span>: <span><span>"</span>Flux Diff<span>"</span></span></td></tr><tr><td id="file-gh-events-cfg-yaml-L15" data-line-number="15"></td><td id="file-gh-events-cfg-yaml-LC15"><span>commandTpl</span>: <span><span>"</span>flux diff ks podinfo --path ./kustomize --github-ref {{ .HTMLURL }} <span>"</span></span></td></tr></tbody></table> We've kept the syntax generic, allowing you to configure different command buttons under specific types of events. Interactivity and Decision-Making --------------------------------- Thanks to automated notifications with event-aware buttons, you can easily generate reports and share them with your team or contributors. While posting diff reports can be fully automated, you might want to do it intentionally by clicking a button. Why? Because the report may contain sensitive information that you don't want to fully disclose to external contributors. Using, for example, GitHUb Action, unfortunately, doesn't give us this freedom. We tried to automate the whole workflow while still keeping you as the decision-maker when it comes to sharing the report or directly approving the PR. With that being said, nothing blocks us from adding in the future support for AI assistance. Imagine an AI that reviews the diff report and decides whether to proceed with automated approval. Are you ready for AIOps? Exciting times ahead! Manual Approach vs. Botkube Flux Plugin --------------------------------------- While you were reading the first part of the Flux plugin evolution, did you consider what kind of manual steps would be required without the plugin? Let's break it down: 1. Checking GitHub repository for a new pull requests. 2. **(One-time operation)** Downloading and installing Flux CLI on you localhost. 3. Manually connecting to the related Kubernetes cluster. 4. **(One-time operation)** Cloning the repository. 5. Checking out the pull request. 6. Constructing a Flux command. 7. Sharing the diff report on Slack/GitHub. Even if we exclude the one-time operations, we're left with 5 steps for each new pull request. Lots of manual steps mean lots of room for human errors. Plus, all that jumping between different sites and context switching can impact your productivity. It's much better to focus on the main aspect, which is the review, and let automation handle the rest. Behind the Scenes: Developing the Botkube Flux Plugin ----------------------------------------------------- The development of the Botkube Flux Executor plugin involved several key aspects: 1. 🕹️ **Interactivity**: We leveraged the [`exec`](https://docs.botkube.io/usage/executor/exec#table-parser) plugin developed in previous release, making adding interactivity almost out-of-the-box. The `exec` plugin allows you to port any CLI into the communication platform window.
+<table data-hpc="" data-tab-size="8" data-paste-markdown-skip="" data-tagsearch-lang="YAML" data-tagsearch-path="gh-events-cfg.yaml"><tbody><tr><td id="file-gh-events-cfg-yaml-L1" data-line-number="1"></td><td id="file-gh-events-cfg-yaml-LC1"><span>botkube/github-events</span>: <span><span>#</span> GitHub Events</span></td></tr><tr><td id="file-gh-events-cfg-yaml-L2" data-line-number="2"></td><td id="file-gh-events-cfg-yaml-LC2"><span>github</span>:</td></tr><tr><td id="file-gh-events-cfg-yaml-L3" data-line-number="3"></td><td id="file-gh-events-cfg-yaml-LC3"><span>auth</span>:</td></tr><tr><td id="file-gh-events-cfg-yaml-L4" data-line-number="4"></td><td id="file-gh-events-cfg-yaml-LC4"><span>accessToken</span>: <span><span>"</span>ghp_<span>"</span></span></td></tr><tr><td id="file-gh-events-cfg-yaml-L5" data-line-number="5"></td><td id="file-gh-events-cfg-yaml-LC5"><span>repositories</span>:</td></tr><tr><td id="file-gh-events-cfg-yaml-L6" data-line-number="6"></td><td id="file-gh-events-cfg-yaml-LC6">- <span>name</span>: <span>mszostok/podinfo</span></td></tr><tr><td id="file-gh-events-cfg-yaml-L7" data-line-number="7"></td><td id="file-gh-events-cfg-yaml-LC7"><span>on</span>:</td></tr><tr><td id="file-gh-events-cfg-yaml-L8" data-line-number="8"></td><td id="file-gh-events-cfg-yaml-LC8"><span>pullRequests</span>:</td></tr><tr><td id="file-gh-events-cfg-yaml-L9" data-line-number="9"></td><td id="file-gh-events-cfg-yaml-LC9">- <span>types</span>: <span>["open"]</span></td></tr><tr><td id="file-gh-events-cfg-yaml-L10" data-line-number="10"></td><td id="file-gh-events-cfg-yaml-LC10"><span>paths</span>:</td></tr><tr><td id="file-gh-events-cfg-yaml-L11" data-line-number="11"></td><td id="file-gh-events-cfg-yaml-LC11"><span>include</span>: <span>["kustomize/.*"]</span></td></tr><tr><td id="file-gh-events-cfg-yaml-L12" data-line-number="12"></td><td id="file-gh-events-cfg-yaml-LC12"><span>notificationTemplate</span>:</td></tr><tr><td id="file-gh-events-cfg-yaml-L13" data-line-number="13"></td><td id="file-gh-events-cfg-yaml-LC13"><span>extraButtons</span>:</td></tr><tr><td id="file-gh-events-cfg-yaml-L14" data-line-number="14"></td><td id="file-gh-events-cfg-yaml-LC14">- <span>displayName</span>: <span><span>"</span>Flux Diff<span>"</span></span></td></tr><tr><td id="file-gh-events-cfg-yaml-L15" data-line-number="15"></td><td id="file-gh-events-cfg-yaml-LC15"><span>commandTpl</span>: <span><span>"</span>flux diff ks podinfo --path ./kustomize --github-ref {{ .HTMLURL }} <span>"</span></span></td></tr></tbody></table>
 
-In this case, we reused it as Go SDK. Here is the blueprint that describes translation of CLI table output into an interactive message: ‍
+We've kept the syntax generic, allowing you to configure different command buttons under specific types of events.
 
+Interactivity and Decision-Making
+---------------------------------
+
+Thanks to automated notifications with event-aware buttons, you can easily generate reports and share them with your team or contributors.
+
+While posting diff reports can be fully automated, you might want to do it intentionally by clicking a button. Why? Because the report may contain sensitive information that you don't want to fully disclose to external contributors.
+
+Using, for example, GitHUb Action, unfortunately, doesn't give us this freedom. We tried to automate the whole workflow while still keeping you as the decision-maker when it comes to sharing the report or directly approving the PR.
+
+With that being said, nothing blocks us from adding in the future support for AI assistance. Imagine an AI that reviews the diff report and decides whether to proceed with automated approval. Are you ready for AIOps? Exciting times ahead!
+
+Manual Approach vs. Botkube Flux Plugin
+---------------------------------------
+
+While you were reading the first part of the Flux plugin evolution, did you consider what kind of manual steps would be required without the plugin? Let's break it down:
+
+1.  Checking GitHub repository for a new pull requests.
+2.  **(One-time operation)** Downloading and installing Flux CLI on you localhost.
+3.  Manually connecting to the related Kubernetes cluster.
+4.  **(One-time operation)** Cloning the repository.
+5.  Checking out the pull request.
+6.  Constructing a Flux command.
+7.  Sharing the diff report on Slack/GitHub.
+
+Even if we exclude the one-time operations, we're left with 5 steps for each new pull request. Lots of manual steps mean lots of room for human errors. Plus, all that jumping between different sites and context switching can impact your productivity. It's much better to focus on the main aspect, which is the review, and let automation handle the rest.
+
+Behind the Scenes: Developing the Botkube Flux Plugin
+-----------------------------------------------------
+
+The development of the Botkube Flux Executor plugin involved several key aspects:
+
+1.  🕹️ **Interactivity**: We leveraged the [`exec`](https://docs.botkube.io/usage/executor/exec#table-parser) plugin developed in previous release, making adding interactivity almost out-of-the-box. The `exec` plugin allows you to port any CLI into the communication platform window.
+    
+    In this case, we reused it as Go SDK. Here is the blueprint that describes translation of CLI table output into an interactive message: ‍
+    
 
 <table data-hpc="" data-tab-size="8" data-paste-markdown-skip="" data-tagsearch-lang="YAML" data-tagsearch-path="blueprint.yaml"><tbody><tr><td id="file-blueprint-yaml-L1" data-line-number="1"></td><td id="file-blueprint-yaml-LC1">- <span>trigger</span>:</td></tr><tr><td id="file-blueprint-yaml-L2" data-line-number="2"></td><td id="file-blueprint-yaml-LC2"><span>command</span>:</td></tr><tr><td id="file-blueprint-yaml-L3" data-line-number="3"></td><td id="file-blueprint-yaml-LC3"><span>regex</span>: <span><span>"</span>flux get sources (buc</span></td></tr><tr><td id="file-blueprint-yaml-L4" data-line-number="4"></td><td id="file-blueprint-yaml-LC4"><span>type: <span>"</span></span><span>parser:table:space"</span></td></tr><tr><td id="file-blueprint-yaml-L5" data-line-number="5"></td><td id="file-blueprint-yaml-LC5"><span>message</span>:</td></tr><tr><td id="file-blueprint-yaml-L6" data-line-number="6"></td><td id="file-blueprint-yaml-LC6"><span>selects</span>:</td></tr><tr><td id="file-blueprint-yaml-L7" data-line-number="7"></td><td id="file-blueprint-yaml-LC7">- <span>name</span>: <span><span>"</span>Item<span>"</span></span></td></tr><tr><td id="file-blueprint-yaml-L8" data-line-number="8"></td><td id="file-blueprint-yaml-LC8"><span>keyTpl</span>: <span><span>"</span>{{ .Name }}<span>"</span></span></td></tr></tbody></table>
 
@@ -113,13 +148,21 @@ Thanks to embedding it, we can distribute it as a single plugin binary, and we d
 ‍
 
 3.  🔍 & 🔐 **Auto-discovering GitHub repos**: In order to discover related GitHub repository, we need to get Flux custom resource. We used the [`controller-runtime`](https://github.com/kubernetes-sigs/controller-runtime/blob/main/pkg/client/client.go) client, which supports Go types natively. This eliminated the need to work with the unstructured type, making things smoother and less error-prone. This is backed by dedicated plugin **RBAC** impersonation that we introduced a couple releases ago.
-
+    
 4.  🔄 **Cloning and checking out PR**: Checking out a pull request can be tricky, especially when dealing with external contributors and their forks. Instead of reinventing the wheel, we integrated the widely-known `gh` CLI. It was easy to add an external dependency just by defining: ‍
+    
 
+<table data-hpc="" data-tab-size="8" data-paste-markdown-skip="" data-tagsearch-lang="Go" data-tagsearch-path="deps.go"><tbody><tr><td id="file-deps-go-L1" data-line-number="1"></td><td id="file-deps-go-LC1"><span>"gh"</span>: {</td></tr><tr><td id="file-deps-go-L2" data-line-number="2"></td><td id="file-deps-go-LC2"><span>URLs</span>: <span>map</span>[<span>string</span>]<span>string</span>{</td></tr><tr><td id="file-deps-go-L3" data-line-number="3"></td><td id="file-deps-go-LC3"><span>"darwin/amd64"</span>: <span>"https://github.com/cli/cli/releases/download/v2.32.1/gh_2.32.1_macOS_amd64.zip//gh_2.32.1_macOS_amd64/bin"</span>,</td></tr><tr><td id="file-deps-go-L4" data-line-number="4"></td><td id="file-deps-go-LC4"><span>"linux/amd64"</span>: <span>"https://github.com/cli/cli/releases/download/v2.32.1/gh_2.32.1_linux_amd64.tar.gz//gh_2.32.1_linux_amd64/bin"</span>,</td></tr><tr><td id="file-deps-go-L5" data-line-number="5"></td><td id="file-deps-go-LC5"><span>// etc.</span></td></tr><tr><td id="file-deps-go-L6" data-line-number="6"></td><td id="file-deps-go-LC6">},</td></tr><tr><td id="file-deps-go-L7" data-line-number="7"></td><td id="file-deps-go-LC7">},</td></tr></tbody></table>
 
-<table data-hpc="" data-tab-size="8" data-paste-markdown-skip="" data-tagsearch-lang="Go" data-tagsearch-path="deps.go"><tbody><tr><td id="file-deps-go-L1" data-line-number="1"></td><td id="file-deps-go-LC1"><span>"gh"</span>: {</td></tr><tr><td id="file-deps-go-L2" data-line-number="2"></td><td id="file-deps-go-LC2"><span>URLs</span>: <span>map</span>[<span>string</span>]<span>string</span>{</td></tr><tr><td id="file-deps-go-L3" data-line-number="3"></td><td id="file-deps-go-LC3"><span>"darwin/amd64"</span>: <span>"https://github.com/cli/cli/releases/download/v2.32.1/gh_2.32.1_macOS_amd64.zip//gh_2.32.1_macOS_amd64/bin"</span>,</td></tr><tr><td id="file-deps-go-L4" data-line-number="4"></td><td id="file-deps-go-LC4"><span>"linux/amd64"</span>: <span>"https://github.com/cli/cli/releases/download/v2.32.1/gh_2.32.1_linux_amd64.tar.gz//gh_2.32.1_linux_amd64/bin"</span>,</td></tr><tr><td id="file-deps-go-L5" data-line-number="5"></td><td id="file-deps-go-LC5"><span>// etc.</span></td></tr><tr><td id="file-deps-go-L6" data-line-number="6"></td><td id="file-deps-go-LC6">},</td></tr><tr><td id="file-deps-go-L7" data-line-number="7"></td><td id="file-deps-go-LC7">},</td></tr></tbody></table> Under the hood we use \`go-getter\` library which has a lot of great features. If you need to download assets from different sources, we recommend that library your projects as well. ‍ ‍ The trickiest part was to develop GitHub Events source. The best way is to use GitHub App with the webhook approach. However, we didn't want to require you to have an external endpoint exposed from your cluster. We started with [GitHub repository events endpoint](https://docs.github.com/en/rest/activity/events?apiVersion=2022-11-28#list-repository-events). But it turned out that even though it serves events that we are interested in, it was not meant to be used for the real-time use-cases. We still integrate with the `events` API, but it's recommended for event subscription where time is not that important. For example, getting notification about new stars on your GitHub repositories: ‍
+Under the hood we use \`go-getter\` library which has a lot of great features. If you need to download assets from different sources, we recommend that library your projects as well.
 
-![Image 6: a white background with a number of different logos on it](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64f994ee3a6f72e3536300f4_stars.png)
+‍ ‍
+
+The trickiest part was to develop GitHub Events source. The best way is to use GitHub App with the webhook approach. However, we didn't want to require you to have an external endpoint exposed from your cluster.
+
+We started with [GitHub repository events endpoint](https://docs.github.com/en/rest/activity/events?apiVersion=2022-11-28#list-repository-events). But it turned out that even though it serves events that we are interested in, it was not meant to be used for the real-time use-cases. We still integrate with the `events` API, but it's recommended for event subscription where time is not that important. For example, getting notification about new stars on your GitHub repositories: ‍
+
+![Image 6](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64f994ee3a6f72e3536300f4_stars.png)
 
 ‍ To achieve our e2e goal, we decided to develop a custom polling mechanism that uses [pull request endpoint](https://docs.github.com/en/rest/pulls/pulls?apiVersion=2022-11-28#list-pull-requests). The polling mechanism forces us to be more rational about the number of calls to fit into defined rate limits. We decided on two things:
 

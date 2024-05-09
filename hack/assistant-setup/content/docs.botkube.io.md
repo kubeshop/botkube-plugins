@@ -3,12 +3,22 @@ Title: Installation | Botkube
 URL Source: https://docs.botkube.io/
 
 Markdown Content:
-*   [](https://docs.botkube.io/) * Installation Version: 1.10 Botkube has two components that need to be installed. 1. Botkube App Integration in your Slack/Mattermost/Microsoft Teams/Discord 2. Botkube agent in your Kubernetes cluster Feature map[​](#feature-map"DirectlinktoFeaturemap")
+*   [](https://docs.botkube.io/)
+*   Installation
+
+Version: 1.10
+
+Botkube has two components that need to be installed.
+
+1.  Botkube App Integration in your Slack/Mattermost/Microsoft Teams/Discord
+2.  Botkube agent in your Kubernetes cluster
+
+Feature map[​](#feature-map "Direct link to Feature map")
 ---------------------------------------------------------
 
 Learn about Botkube features and their availability in different integrations.
 
-### Bots[​](#bots"DirectlinktoBots")
+### Bots[​](#bots "Direct link to Bots")
 
 Compare our bidirectional integrations:
 
@@ -22,7 +32,7 @@ Compare our bidirectional integrations:
 | Actionable notifications | ✔️ | ✔️ | ✔️ | ❌ | ❌ |
 | Emoji reactions | ✔️ | ❌ | ❌ | ❌ | ❌ |
 
-### Sinks[​](#sinks"DirectlinktoSinks")
+### Sinks[​](#sinks "Direct link to Sinks")
 
 Compare our unidirectional integrations:
 
@@ -31,7 +41,7 @@ Compare our unidirectional integrations:
 | Source plugins support (e.g. `kubernetes`, `prometheus`, etc.) | ✔️ | ✔️ |
 | Multi-cluster support | ✔️ | ✔️ |
 
-Integrations[​](#integrations"DirectlinktoIntegrations")
+Integrations[​](#integrations "Direct link to Integrations")
 ------------------------------------------------------------
 
 tip

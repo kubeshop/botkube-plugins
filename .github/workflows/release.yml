@@ -12,7 +12,7 @@ permissions:
   contents: write
 
 jobs:
-  trigger-relase:
+  trigger-release:
     name: Trigger release
     runs-on: ubuntu-latest
     steps:

@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/introducing-botkube-v1-0-the-future-of-kuber
 Published Time: May 04, 2023
 
 Markdown Content:
-![Image 1: a woman wearing headphones on an airplane](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
+![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
 
 Maria Ashby
 
@@ -39,7 +39,7 @@ Key Features of Botkube v1.0
 RBAC support
 ------------
 
-![Image 2: a diagram of a business process](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6437222690593713ca726589_botkube-read-only-717ed01cf9fa5e6621f2a09c7b29a32d.svg)
+![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6437222690593713ca726589_botkube-read-only-717ed01cf9fa5e6621f2a09c7b29a32d.svg)
 
 Botkube RBAC Architecture
 
@@ -54,7 +54,7 @@ Interactive Control Plane
 
 Botkube brings an exciting new feature to the table - a [web-based control plane](https://app.botkube.io/) that works across multiple clusters. With this powerful tool, you can create new Botkube instances in a flash, making installation into a K8s cluster a breeze. The control plane also enables you to modify the configuration of communication platforms and plugins, and even synchronize the configuration to Botkube instances automatically.
 
-![Image 3: a screen shot of a web page showing a list of items](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/643728ace69f4305d971ce6f_Screen%20Shot%202023-04-12%20at%202.54.18%20PM.png)
+![Image 3](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/643728ace69f4305d971ce6f_Screen%20Shot%202023-04-12%20at%202.54.18%20PM.png)
 
 Botkube Control Plane
 

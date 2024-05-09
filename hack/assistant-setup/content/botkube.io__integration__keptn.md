@@ -1,4 +1,4 @@
-Title: Keptn & Botkube Kubernetes Integration
+Title: Botkube.io
 
 URL Source: https://botkube.io/integration/keptn
 

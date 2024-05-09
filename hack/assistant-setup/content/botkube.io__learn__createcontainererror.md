@@ -55,4 +55,56 @@ To diagnose and resolve a CreateContainerError, follow these steps:
 
 Retrieve the description of the pod by running the following command and save to a text file:
 
-_kubectl describe pod \[pod\_name\] /tmp/troubleshooting\_describe\_pod.txt_ #### STEP 2: Look into Pod Events Output Search through the text file that you just created for any of the below messages in your Pod Events: _Is waiting to start_ _Starting container process caused_ _Container name \[cont\_name\] is already in use by container_ _No command specified_ #### STEP 3: Troubleshoot the Error When error is **_"is waiting to start_**", it means that an object mounted by the container could not be found or is missing. * \*Be certain it is not related to ConfigMaps or Secrets, as mentioned earlier.\* * Examine the pod's configuration and verify that all items assigned to it or the container are accessible in the same workspace. If not, either generate them or modify the manifest to point to an existing object. When error is **_"starting container process caused"_**, * Observe words following the "container process caused" message to see the error that occurred when the container was started. * Find the error. Then modify the image or the container start command to fix. When the error is **_"container name \[cont\_name\] is already in use by container"_**, it means that the container runtime did not delete a previous container created with a similar name. * To fix this error, sign in with root access on the node and open the kubelet log located at /var/log/kubelet.log. * Find the issue in the kubelet log and solve it by reinstalling the container runtime or the kubelet. Sometimes this requires users to re-register the node with the cluster. When error is **_"no command specified",_** it means that the image configuration and pod configuration did not specify which command to run to start the container. * To fix this error, edit the image and pod configuration and add a valid command to start the container. Please note that these steps will only resolve the most common causes of CreateContainerError. If one of these quick fixes does not work, a more complex diagnosis procedure may be necessary to identify the contributing factors in the Kubernetes environment and resolve the problem. Introducing Botkube for Effortless Kubernetes Error Troubleshooting ------------------------------------------------------------------- Kubernetes troubleshooting can be a daunting task without the right tools. Even with best practices in place, errors can still occur, leading to stressful and time-consuming investigations. That's why we developed Botkube – a tool that simplifies the process of Kubernetes troubleshooting for DevOps teams. Botkube provides the following features to streamline the troubleshooting process: Change Intelligence: Every error in Kubernetes is a result of a change. With Botkube, you can quickly identify who made what changes and when they made them. Effortless Notifications: Botkube integrates seamlessly with existing communication channels like Slack, providing real-time notifications so you can quickly resolve issues as they occur. Comprehensive Visibility: Botkube offers a complete timeline of all code and configuration changes, deployments, alerts, code diffs, pod logs, and more. All this information is presented in a single pane of glass, with simple drill-down options for further investigation. Insight into Service Dependencies: Botkube makes it easy to visualize cross-service changes and the ripple effects of such changes across your entire system. If you're interested in exploring Botkube and its features, sign up for a [free trial using this link](https://docs.botkube.io/installation/). With Botkube, you'll never have to waste precious time and resources looking for needles in haystacks again.
+_kubectl describe pod \[pod\_name\] /tmp/troubleshooting\_describe\_pod.txt_
+
+#### STEP 2: Look into Pod Events Output
+
+Search through the text file that you just created for any of the below messages in your Pod Events:
+
+_Is waiting to start_
+
+_Starting container process caused_
+
+_Container name \[cont\_name\] is already in use by container_
+
+_No command specified_
+
+#### STEP 3: Troubleshoot the Error
+
+When error is **_"is waiting to start_**", it means that an object mounted by the container could not be found or is missing.
+
+*   \*Be certain it is not related to ConfigMaps or Secrets, as mentioned earlier.\*
+*   Examine the pod's configuration and verify that all items assigned to it or the container are accessible in the same workspace. If not, either generate them or modify the manifest to point to an existing object.
+
+When error is **_"starting container process caused"_**,
+
+*   Observe words following the "container process caused" message to see the error that occurred when the container was started.
+*   Find the error. Then modify the image or the container start command to fix.
+
+When the error is **_"container name \[cont\_name\] is already in use by container"_**, it means that the container runtime did not delete a previous container created with a similar name.
+
+*   To fix this error, sign in with root access on the node and open the kubelet log located at /var/log/kubelet.log.
+*   Find the issue in the kubelet log and solve it by reinstalling the container runtime or the kubelet. Sometimes this requires users to re-register the node with the cluster.
+
+When error is **_"no command specified",_** it means that the image configuration and pod configuration did not specify which command to run to start the container.
+
+*   To fix this error, edit the image and pod configuration and add a valid command to start the container.
+
+Please note that these steps will only resolve the most common causes of CreateContainerError. If one of these quick fixes does not work, a more complex diagnosis procedure may be necessary to identify the contributing factors in the Kubernetes environment and resolve the problem.
+
+Introducing Botkube for Effortless Kubernetes Error Troubleshooting
+-------------------------------------------------------------------
+
+Kubernetes troubleshooting can be a daunting task without the right tools. Even with best practices in place, errors can still occur, leading to stressful and time-consuming investigations. That's why we developed Botkube – a tool that simplifies the process of Kubernetes troubleshooting for DevOps teams.
+
+Botkube provides the following features to streamline the troubleshooting process:
+
+Change Intelligence: Every error in Kubernetes is a result of a change. With Botkube, you can quickly identify who made what changes and when they made them.
+
+Effortless Notifications: Botkube integrates seamlessly with existing communication channels like Slack, providing real-time notifications so you can quickly resolve issues as they occur.
+
+Comprehensive Visibility: Botkube offers a complete timeline of all code and configuration changes, deployments, alerts, code diffs, pod logs, and more. All this information is presented in a single pane of glass, with simple drill-down options for further investigation.
+
+Insight into Service Dependencies: Botkube makes it easy to visualize cross-service changes and the ripple effects of such changes across your entire system.
+
+If you're interested in exploring Botkube and its features, sign up for a [free trial using this link](https://docs.botkube.io/installation/). With Botkube, you'll never have to waste precious time and resources looking for needles in haystacks again.

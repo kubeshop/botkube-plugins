@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/simplify-kubernetes-with-botkubes-ai-develop
 Published Time: Apr 04, 2024
 
 Markdown Content:
-![Image 1: a woman wearing headphones on an airplane](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
+![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
 
 Maria Ashby
 
@@ -37,7 +37,7 @@ Kubernetes, while incredibly useful, presents developers with significant challe
 ‍**Solution: Botkube Empowers Developers with Self-Service and Collaboration**
 ------------------------------------------------------------------------------
 
-![Image 2: a screenshot of a chat window on a computer screen](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65ee1a5d521144e87f59161e_Botkube%20AI%20Assistant%20-failing%20GIF.gif)
+![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65ee1a5d521144e87f59161e_Botkube%20AI%20Assistant%20-failing%20GIF.gif)
 
 Botkube revolutionizes the developer experience by seamlessly integrating Kubernetes management into communication platforms like [Slack and Microsoft Teams](https://botkube.io/integrations).We understand how frustrating it can be for DevOps teams dealing with these challenges. Here's how it empowers developers:
 
@@ -56,7 +56,7 @@ By connecting Kubernetes to your team's communication channels, Botkube fosters 
 **How Botkube Simplifies Kubernetes for Developers**
 ----------------------------------------------------
 
-![Image 3: a screenshot of a twitter page showing a message](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65e8a0387271b3eec14634d8_Co_cwk72Ki64q1a3A6OAcxn0qQvCjlhWWlTtBLPzMwhPjvVn6oHn-e2_L4twExmcpGAuis9bZKJXC2JRzuOzxMXg5MsbAugaCwe1xt5GUqWsnbug3CQkm7uGo7GX2g4dgTc-TCK1oScC7aUd82RMlG4.png)
+![Image 3](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65e8a0387271b3eec14634d8_Co_cwk72Ki64q1a3A6OAcxn0qQvCjlhWWlTtBLPzMwhPjvVn6oHn-e2_L4twExmcpGAuis9bZKJXC2JRzuOzxMXg5MsbAugaCwe1xt5GUqWsnbug3CQkm7uGo7GX2g4dgTc-TCK1oScC7aUd82RMlG4.png)
 
 #### Natural Language Interaction
 
@@ -82,7 +82,7 @@ Botkube's AI assistant integrates within team communication platforms, deliverin
 **Conclusion: Transform Your Kubernetes Workflow with Botkube**
 ---------------------------------------------------------------
 
-![Image 4: a screen shot of a conversation between two people](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64b96a341b5ccb59ffb87637_act-on-events.gif)
+![Image 4](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64b96a341b5ccb59ffb87637_act-on-events.gif)
 
 [Botkube's AI Assistant](https://botkube.io/blog/explore-the-new-era-of-aiops-with-botkubes-ai-assistant) signifies a step forward in Kubernetes management, introducing AI-enhanced troubleshooting and operational efficiency to the developer's toolkit. By simplifying Kubernetes operations, Botkube enables developers to self-serve and access data more easily, reducing the workload on Ops teams and making the platform more user-friendly and dependable.Integrating Botkube into your team’s workflow is the first step toward unlocking a more efficient, AI-driven Kubernetes ecosystem, elevating the developer experience to new heights.
 

@@ -12,11 +12,11 @@ Why does the "**Remote Origin Already Exists" Error Happen?**
 
 Imagine you're following an online Git tutorial, and everything has been going smoothly. However, at a certain point, you encounter a command that resembles the following:
 
-`git remote add origin <SOME-URL>/<SOME-REPOSITORY-NAME>.git`
+<code>git remote add origin <SOME-URL>/<SOME-REPOSITORY-NAME>.git</code>
 
 To your dismay, executing this command leads to the dreaded error message:
 
-`fatal: remote origin already exists.`
+<code>fatal: remote origin already exists.</code>
 
 This error message may appear perplexing, but it's relatively straightforward to comprehend. Unlike centralized version control systems (VCSs), Git operates without a central server. Instead, Git employs what we refer to as "remote repositories" or simply "remotes." These remotes represent repositories with which you may have read and/or write access. They are typically located on machines other than your own and are accessible via SSH or HTTP. Interestingly, even though they are named "remotes," they can exist on your local machine, which might sound counterintuitive.
 
@@ -24,17 +24,17 @@ Every remote has a unique name to distinguish it, and within a single repository
 
 To verify whether a remote called "origin" already exists in your repository, you can simply execute the following command:
 
-`git remote`
+<code>git remote</code>
 
 This will prompt Git to display a list of all existing remotes for the current repository. If you desire more comprehensive information, you can use the verbose parameter with the remote command like this:
 
-`git remote -v`
+<code>git remote -v</code>
 
 This will provide not only the names of each remote but also their associated URLs.
 
 Worth noting, the error message might not always contain the term "origin." For instance, if you attempt to add a remote named "remote1," and a remote with that name already exists, the error message would be:
 
-`fatal: remote remote1 already exists.`
+<code>fatal: remote remote1 already exists.</code>
 
 Similarly, just as the default branch in Git is traditionally called "controller" (although this could change in the future), the default remote is named "origin." However, you can freely choose any name for your remotes, provided it complies with the legal naming conventions in Git. So, feel free to explore and experiment with remotes to enhance your Git experience!
 
@@ -56,7 +56,7 @@ Suppose you encounter the error due to an existing remote named "origin" that no
 *   Create a new repository online using GitHub, GitLab, or your preferred platform.
 *   In your local repository, remove the existing "origin" remote:
 
-`git remote remove origin`
+<code> git remote remove origin </code>
 
 *   Add the new online repository as the correct "origin" remote.
 *   Push your code to the new "origin."
@@ -65,7 +65,7 @@ Suppose you encounter the error due to an existing remote named "origin" that no
 
 A faster alternative to removing and re-adding the remote is updating the URL of the existing "origin" remote:
 
-`git remote set-url origin <ANY-URL>`
+<code>git remote set-url origin <ANY-URL></code>
 
 Remember, "origin" is just a name for the remote, and you can use any suitable name.
 
@@ -73,11 +73,11 @@ Remember, "origin" is just a name for the remote, and you can use any suitable n
 
 When you need to keep the old "origin" remote while adding a new one, follow this simple approach:
 
-git remote rename origin
+git remote rename origin <ANY-NAME>
 
 For example, to rename your "origin" remote to "backup," execute:
 
-`git remote rename origin backup`
+<code>git remote rename origin backup</code>
 
 After renaming, you can proceed to add the new "origin" without encountering the error.
 
@@ -85,7 +85,7 @@ After renaming, you can proceed to add the new "origin" without encountering the
 
 Sometimes, the error may arise if you unknowingly executed the "add remote" command in a previous step. To confirm if this is the case, use the Git remote command with the verbose option:
 
-`git remote -v`
+<code>git remote -v</code>
 
 This will display a list of existing remotes along with their associated URLs. If the "origin" remote already points to the URL provided in the tutorial, your repository is ready to go, and no further action is required.
 

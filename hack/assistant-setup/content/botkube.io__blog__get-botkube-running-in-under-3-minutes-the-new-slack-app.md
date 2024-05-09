@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/get-botkube-running-in-under-3-minutes-the-n
 Published Time: Nov 06, 2023
 
 Markdown Content:
-![Image 1: a woman wearing headphones on an airplane](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
+![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
 
 Maria Ashby
 

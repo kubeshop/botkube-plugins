@@ -32,17 +32,28 @@ To use your own assistant, modify the `assistantID` variable in the `index.ts` f
 
 ## Development
 
-## Refetch content for file search
+### Refetch content for file search
 
-> **NOTE:** The process uses [Jina.AI Reader API](https://github.com/jina-ai/reader) and usually takes 10-15 minutes. All files will be removed before the process starts.
-
+The process uses [Jina.AI Reader API](https://github.com/jina-ai/reader) and usually takes a few minutes.
 To scrap the content from the latest Botkube website and Botkube Docs, run the following command:
 
 ```sh
 npm run fetch-content
 ```
 
-## Format code
+By default, before refetching content starts:
+
+- downloaded files starting with [package.json](package.json)`https://botkube.io/blog/*` and `https://botkube.io/learn/*` prefixes are kept and won't be updated,
+- all other content is removed.
+
+To refetch all content, run the following command:
+
+```sh
+export PURGE_ALL_CONTENT=true # default: false
+npm run fetch-content
+```
+
+### Format code
 
 To format code, run:
 

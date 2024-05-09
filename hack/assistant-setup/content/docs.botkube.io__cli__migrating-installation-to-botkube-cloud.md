@@ -3,7 +3,7 @@ Title: Migrating installation to Botkube Cloud | Botkube
 URL Source: https://docs.botkube.io/cli/migrating-installation-to-botkube-cloud
 
 Markdown Content:
-Migrating installation to Botkube Cloud[​](#migrating-installation-to-botkube-cloud"DirectlinktoMigratinginstallationtoBotkubeCloud")
+Migrating installation to Botkube Cloud[​](#migrating-installation-to-botkube-cloud "Direct link to Migrating installation to Botkube Cloud")
 ---------------------------------------------------------------------------------------------------------------------------------------------
 
 If you have started using Botkube with the Open Source installation, you have the option to migrate this instance to be managed using [Botkube Cloud](https://app.botkube.io/).
@@ -16,17 +16,17 @@ Supported Botkube platforms:
 *   Discord
 *   Mattermost
 
-Steps[​](#steps"DirectlinktoSteps")
+Steps[​](#steps "Direct link to Steps")
 ---------------------------------------
 
 1.  [Install Botkube CLI](https://docs.botkube.io/cli/getting-started#installation)
-
+    
 2.  [Login into Botkube Cloud](https://docs.botkube.io/cli/getting-started#first-use)
-
+    
 3.  Run Botkube migrate:
+    
 
-
-Limitations[​](#limitations"DirectlinktoLimitations")
+Limitations[​](#limitations "Direct link to Limitations")
 ---------------------------------------------------------
 
 The following list contains current limitations that we will address in the near future:
@@ -36,7 +36,7 @@ The following list contains current limitations that we will address in the near
 *   All 3rd-party plugins are ignored.
 *   Minimal supported Botkube version is v1.0.0.
 
-See more[​](#see-more"DirectlinktoSeemore")
+See more[​](#see-more "Direct link to See more")
 ------------------------------------------------
 
 To learn more about `botkube cloud migrate` and all supported settings, visit the [Botkube migrate](https://docs.botkube.io/cli/commands/botkube_migrate) document.

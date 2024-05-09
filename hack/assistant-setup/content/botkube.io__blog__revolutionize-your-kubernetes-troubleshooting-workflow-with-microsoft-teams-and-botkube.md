@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/revolutionize-your-kubernetes-troubleshootin
 Published Time: Nov 29, 2023
 
 Markdown Content:
-![Image 1: a woman wearing headphones on an airplane](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
+![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
 
 Maria Ashby
 
@@ -51,7 +51,7 @@ Botkube's integration with Microsoft Teams provides users with direct access to 
 
 ‍
 
-![Image 3: a screenshot of the google analytics dashboard](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6567879667dde77a83a5861b_p-Naa0ZdnovPq_SSVldIS1NhIah6tTIxeofzBX1tOEUJL7dmMubUhdobLqieWsTnIDdatibAbRqNC7dkwN_xYIje3QqjqgDWHO49bMbAkwBIyCtTM2h5gAbhBVBh1OJavuANnxvvOxS4Z5l_OLumnzI.png)
+![Image 3](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6567879667dde77a83a5861b_p-Naa0ZdnovPq_SSVldIS1NhIah6tTIxeofzBX1tOEUJL7dmMubUhdobLqieWsTnIDdatibAbRqNC7dkwN_xYIje3QqjqgDWHO49bMbAkwBIyCtTM2h5gAbhBVBh1OJavuANnxvvOxS4Z5l_OLumnzI.png)
 
 ### Improving Reliability
 
@@ -63,7 +63,7 @@ Botkube's integration with Microsoft Teams streamlines the collaborative process
 
 ‍
 
-![Image 4: a screenshot of a page with a message and a button](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65678794b1beb119ed7c14c8_t7Oj6aNKqMZhSXW1SgyrrWxobf3im5J0ypr0E0_DuJfBxrGmbemFqH02ZCBWIhQiDoPKnmR_UR5VeMNUrf4Fgcn89JSWMLkWZgBBDvR7_iEZ-_UDxC0gvdTlFWpJgeH4Z2ffYMywev5vyMhP3xIkMPg.png)
+![Image 4](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65678794b1beb119ed7c14c8_t7Oj6aNKqMZhSXW1SgyrrWxobf3im5J0ypr0E0_DuJfBxrGmbemFqH02ZCBWIhQiDoPKnmR_UR5VeMNUrf4Fgcn89JSWMLkWZgBBDvR7_iEZ-_UDxC0gvdTlFWpJgeH4Z2ffYMywev5vyMhP3xIkMPg.png)
 
 Getting Started with Botkube’s Microsoft Teams
 ----------------------------------------------

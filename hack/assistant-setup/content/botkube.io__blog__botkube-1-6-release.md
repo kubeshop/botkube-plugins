@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/botkube-1-6-release
 Published Time: Nov 27, 2023
 
 Markdown Content:
-![Image 1: a woman with short hair smiling for the camera](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/636df3fb36b4e60920a3b1b2_hPLC9itV8zp-raGDFmvOZMfn2hV8RFcl237qzT8Wa1g.jpeg)
+![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/636df3fb36b4e60920a3b1b2_hPLC9itV8zp-raGDFmvOZMfn2hV8RFcl237qzT8Wa1g.jpeg)
 
 Kelly Revenaugh
 

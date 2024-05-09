@@ -17,19 +17,21 @@ Botkube offers seamless execution of Flux CLI commands within your Kubernetes cl
 
 To execute the `flux` CLI commands, send a message in the channel where Botkube is present. For example:
 
-Interactive Usage[​](#interactive-usage"DirectlinktoInteractiveUsage")
+Interactive Usage[​](#interactive-usage "Direct link to Interactive Usage")
 ---------------------------------------------------------------------------
 
 We have also incorporated interactivity (tables, etc.) to simplify running Flux CLI commands e.g. from mobile devices.
 
 ![Image 1: flux-interactivity](https://docs.botkube.io/assets/images/flux-interactivity-36eaec2696dd56fe8924ef36f42a7ac1.gif)
 
-Simplified Kustomization Diffing Flow[​](#simplified-kustomization-diffing-flow"DirectlinktoSimplifiedKustomizationDiffingFlow")
+Simplified Kustomization Diffing Flow[​](#simplified-kustomization-diffing-flow "Direct link to Simplified Kustomization Diffing Flow")
 ---------------------------------------------------------------------------------------------------------------------------------------
 
 With the Botkube Flux executor, you can execute a single command to perform a diff between a specific pull request and the cluster state. For instance:
 
-@Botkube flux diff kustomization podinfo --path ./kustomize --github-ref [PR Number| URL | Branch] ![Image 2: flux-diff](https://docs.botkube.io/assets/images/flux-diff-abdd97d5a1b5dd3b64ecf2c1712fa14d.gif)
+    @Botkube flux diff kustomization podinfo --path ./kustomize --github-ref [PR Number| URL | Branch]
+
+![Image 2: flux-diff](https://docs.botkube.io/assets/images/flux-diff-abdd97d5a1b5dd3b64ecf2c1712fa14d.gif)
 
 This command automates several tasks:
 
@@ -45,10 +47,10 @@ The diff results are posted on the Slack channel, making it easy for team member
 *   Approving the pull request.
 *   Viewing the pull request.
 
-### GitHub automation[​](#github-automation"DirectlinktoGitHubautomation")
+### GitHub automation[​](#github-automation "Direct link to GitHub automation")
 
 To enhance your workflow's efficiency, you can use the [GitHub Events](https://docs.botkube.io/configuration/source/github-events) source for automatic notification of pull request events, complete with an integrated `flux diff` button.
 
-github:  auth:    accessToken: "ghp_" # GitHub PATrepositories:  - name: { owner }/{name}    on:      pullRequests:          - types: [ "open" ]            paths:              # Patterns for included file changes in pull requests.              include: [ 'kustomize/.*' ]            notificationTemplate:              extraButtons:                - displayName: "Flux Diff"                  commandTpl: "flux diff ks podinfo --path ./kustomize --github-ref {{ .HTMLURL }} "
+    github:  auth:    accessToken: "ghp_" # GitHub PATrepositories:  - name: { owner }/{name}    on:      pullRequests:          - types: [ "open" ]            paths:              # Patterns for included file changes in pull requests.              include: [ 'kustomize/.*' ]            notificationTemplate:              extraButtons:                - displayName: "Flux Diff"                  commandTpl: "flux diff ks podinfo --path ./kustomize --github-ref {{ .HTMLURL }} "
 
 Don't forget to bind the plugin to one of the channels.

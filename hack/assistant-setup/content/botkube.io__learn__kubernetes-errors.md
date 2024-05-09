@@ -5,7 +5,7 @@ URL Source: https://botkube.io/learn/kubernetes-errors
 Markdown Content:
 Navigating the intricacies of Kubernetes often involves grappling with errors that can impede deployment and performance. Botkube presents a cutting-edge solution by offering an AI-powered ChatOps tool for Kubernetes troubleshooting. With real-time insights and proactive alerts, Botkube assists in identifying and resolving errors swiftly.
 
-![Image 1: debugging - screenshot thumbnail](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/66052475a9b6c818366145a1_Botkube-is-the-Kubernetes-Debugging-%26-Troubleshooting-Champ.png)
+![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/66052475a9b6c818366145a1_Botkube-is-the-Kubernetes-Debugging-%26-Troubleshooting-Champ.png)
 
 Botkube is the Kubernetes Debugging & Troubleshooting Champ!
 
@@ -20,4 +20,4 @@ In a nutshell, Botkube not only acts as an invaluable AI companion for troublesh
 
 ### About Botkube
 
-Botkube is a collaborative troubleshooting tool designed specifically for Kubernetes users. With Botkube, you can seamlessly receive and act on alerts directly within your preferred messaging and collaboration platforms like Slack, Microsoft Teams, Discord, and Mattermost. In addition, Botkube enables you to automate actions based on events, run kubectl and Helm commands, receive recommendations for best practices and much more. [Get started with Botkube for free.](http://app.botkube.io/)
+Botkube is a collaborative troubleshooting tool designed specifically for Kubernetes users. With Botkube, you can seamlessly receive and act on alerts directly within your preferred messaging and collaboration platforms like Slack, Microsoft Teams, Discord, and Mattermost. In addition, Botkube enables you to automate actions based on events, run kubectl and Helm commands, receive recommendations for best practices and much more. [Get started with Botkube for free.](https://app.botkube.io/)

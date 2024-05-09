@@ -1,0 +1,40 @@
+name: Reconfigure OpenAI assistant
+
+on:
+  push:
+    tags:
+      - '*'
+    branches:
+      - main
+
+env:
+  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+
+jobs:
+  reconfigure-ai-assistant:
+    name: Reconfigure OpenAI assistant
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Set environment variables
+        run: |
+          if [[ $GITHUB_REF == refs/tags/* ]]; then
+            # tag push          
+            echo "ASSISTANT_ENV=prod" >> $GITHUB_ENV
+          elif [[ $GITHUB_REF == refs/heads/* ]]; then
+            # branch push
+            echo "ASSISTANT_ENV=dev" >> $GITHUB_ENV
+          fi
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: volta-cli/action@v4
+
+      - name: Reconfigure assistant
+        run: |
+          cd ./hack/assistant-setup
+          npm install
+          npm start
