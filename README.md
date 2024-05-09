@@ -62,7 +62,7 @@ This repository shows Botkube Cloud plugins.
 
 The AI plugin uses Botkube content (website, docs, blog posts, etc.). To refresh it, follow the steps:
 
-1. Navigate to the [` Fetch content for OpenAI assistant` GitHub Actions workflow](https://github.com/kubeshop/botkube-cloud-plugins/actions/workflows/ai-assistant-fetch-content.yml).
+1. Navigate to the [`Fetch content for OpenAI assistant` GitHub Actions workflow](https://github.com/kubeshop/botkube-cloud-plugins/actions/workflows/ai-assistant-fetch-content.yml).
 1. Optionally check the "Purge all content" checkbox.
 1. Trigger the pipeline.
 

@@ -1,5 +1,5 @@
 import { OpenAI } from "openai";
-import { setupFileSearch } from "./file-search";
+import { removePreviousFileSearchSetup, setupFileSearch } from "./file-search";
 import { setupTools } from "./tools";
 import dedent from "dedent";
 
@@ -58,15 +58,13 @@ async function main() {
 
   console.log(`Getting assistant data for ID ${assistantID}...`);
   const assistant = await client.beta.assistants.retrieve(assistantID);
+  const prevFileSearchSetup = assistant.tool_resources?.file_search;
   console.log(
     `Successfully retrieved assistant data for '${assistant.name}' (ID: ${assistant.id})`,
   );
 
   console.log(`Setting up file search...`);
-  const vectorStoreId = await setupFileSearch(
-    client,
-    assistant.tool_resources?.file_search,
-  );
+  const vectorStoreId = await setupFileSearch(client);
 
   console.log("Updating assistant...");
   await client.beta.assistants.update(assistantID, {
@@ -76,6 +74,11 @@ async function main() {
     tools: setupTools(),
     tool_resources: { file_search: { vector_store_ids: [vectorStoreId] } },
   });
+
+  console.log("Removing previous file search setup...");
+  await removePreviousFileSearchSetup(client, prevFileSearchSetup);
+
+  console.log("Done!");
 }
 
 main();

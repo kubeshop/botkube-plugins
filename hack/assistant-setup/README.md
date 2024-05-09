@@ -34,7 +34,7 @@ To use your own assistant, modify the `assistantID` variable in the `index.ts` f
 
 ### Refetch content for file search
 
-The process uses [Jina.AI Reader API](https://github.com/jina-ai/reader) and usually takes a few minutes minutes.
+The process uses [Jina.AI Reader API](https://github.com/jina-ai/reader) and usually takes a few minutes.
 To scrap the content from the latest Botkube website and Botkube Docs, run the following command:
 
 ```sh

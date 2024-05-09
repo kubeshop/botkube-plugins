@@ -7,10 +7,7 @@ const errorStatuses = ["failed", "cancelled"];
 const vectorStoreName =
   "Full Botkube knowledge base: documentation, website, blog posts and other content";
 
-export async function setupFileSearch(
-  client: OpenAI,
-  fileSearch?: Assistant.ToolResources.FileSearch,
-): Promise<string> {
+export async function setupFileSearch(client: OpenAI): Promise<string> {
   console.log(`Reading directory ${contentPath}...`);
   const files = readdirSync(contentPath);
   if (files.length === 0) {
@@ -20,36 +17,6 @@ export async function setupFileSearch(
   const fileStreams = files.map((fileName) =>
     createReadStream(`${contentPath}/${fileName}`),
   );
-
-  const vectorStoreIDs: Array<string> = fileSearch?.vector_store_ids ?? [];
-  if (vectorStoreIDs.length > 0) {
-    console.log(`Deleting existing vector store(s)...`);
-    for (const id of vectorStoreIDs) {
-      while (true) {
-        console.log(`- Fetching vector store files page...`);
-        const files = await client.beta.vectorStores.files.list(id, {
-          limit: 100,
-        }); // 100 is max
-
-        if (files.data.length === 0) {
-          break;
-        }
-
-        console.log(`- Deleting page of ${files.data.length} files...`);
-        for (const file of files.data) {
-          console.log(`-- Deleting file ${file.id}...`);
-          try {
-            await client.files.del(file.id);
-          } catch (err) {
-            console.error(err);
-          }
-        }
-      }
-
-      console.log(`- Deleting vector store ${id}...`);
-      await client.beta.vectorStores.del(id);
-    }
-  }
 
   console.log("Creating vector store...");
   const vectorStore = await client.beta.vectorStores.create({
@@ -72,4 +39,42 @@ export async function setupFileSearch(
   }
 
   return vectorStore.id;
+}
+
+export async function removePreviousFileSearchSetup(
+  client: OpenAI,
+  fileSearch?: Assistant.ToolResources.FileSearch,
+) {
+  const vectorStoreIDs: Array<string> = fileSearch?.vector_store_ids ?? [];
+  if (vectorStoreIDs.length === 0) {
+    console.log("No previous vector store IDs found.");
+    return;
+  }
+
+  console.log(`Deleting previous vector store(s)...`);
+  for (const id of vectorStoreIDs) {
+    while (true) {
+      console.log(`- Fetching vector store files page...`);
+      const files = await client.beta.vectorStores.files.list(id, {
+        limit: 100,
+      }); // 100 is max
+
+      if (files.data.length === 0) {
+        break;
+      }
+
+      console.log(`- Deleting page of ${files.data.length} files...`);
+      for (const file of files.data) {
+        console.log(`-- Deleting file ${file.id}...`);
+        try {
+          await client.files.del(file.id);
+        } catch (err) {
+          console.error(err);
+        }
+      }
+    }
+
+    console.log(`- Deleting vector store ${id}...`);
+    await client.beta.vectorStores.del(id);
+  }
 }
