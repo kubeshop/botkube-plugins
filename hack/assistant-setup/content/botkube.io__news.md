@@ -43,8 +43,6 @@ Kubeshop acquires Botkube, InfraCloud's popular ChatOps platform for K8s trouble
 
 InfraCloud Technologies and Kubeshop.io have signed a definitive agreement whereby Kubeshop.io has acquired a majority stake in BotKube.
 
-<
->
 Stay in the Loop
 
 Join the Botkube Community in one of these channels

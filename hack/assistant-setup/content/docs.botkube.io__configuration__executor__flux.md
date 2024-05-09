@@ -17,20 +17,20 @@ The Botkube Flux executor plugin allows you to run the [`flux`](https://fluxcd.i
 
 The Flux plugin is hosted by the Botkube Cloud plugin repository and requires active Botkube Cloud account.
 
-Prerequisite elevated RBAC permissions[​](#prerequisite-elevated-rbac-permissions"DirectlinktoPrerequisiteelevatedRBACpermissions")
+Prerequisite elevated RBAC permissions[​](#prerequisite-elevated-rbac-permissions "Direct link to Prerequisite elevated RBAC permissions")
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 One of the plugin capabilities is the `flux diff` command. To use it, you need to update the Flux plugin RBAC configuration. This is necessary because the command performs a server-side dry run that requires patch permissions, as specified in the [Kubernetes documentation](https://kubernetes.io/docs/reference/using-api/api-concepts/#dry-run-authorization).
 
 First, create RBAC resources on your cluster:
 
-cat > /tmp/flux-rbac.yaml << ENDOFFILE---apiVersion: rbac.authorization.k8s.io/v1kind: ClusterRolemetadata:  name: fluxrules:  - apiGroups: ["*"]    resources: ["*"]    verbs: ["get", "watch", "list", "patch"]---apiVersion: rbac.authorization.k8s.io/v1kind: ClusterRoleBindingmetadata:  name: fluxroleRef:  apiGroup: rbac.authorization.k8s.io  kind: ClusterRole  name: fluxsubjects:- kind: Group  name: flux  apiGroup: rbac.authorization.k8s.ioENDOFFILEkubectl apply -f /tmp/flux-rbac.yaml
+    cat > /tmp/flux-rbac.yaml << ENDOFFILE---apiVersion: rbac.authorization.k8s.io/v1kind: ClusterRolemetadata:  name: fluxrules:  - apiGroups: ["*"]    resources: ["*"]    verbs: ["get", "watch", "list", "patch"]---apiVersion: rbac.authorization.k8s.io/v1kind: ClusterRoleBindingmetadata:  name: fluxroleRef:  apiGroup: rbac.authorization.k8s.io  kind: ClusterRole  name: fluxsubjects:- kind: Group  name: flux  apiGroup: rbac.authorization.k8s.ioENDOFFILEkubectl apply -f /tmp/flux-rbac.yaml
 
 Next, use the `flux` group in the plugin RBAC configuration:
 
 ![Image 1: Flux RBAC](https://docs.botkube.io/assets/images/flux-rbac-bfe6d7c972bcfd611669afd75a3bab20.png)
 
-Enabling plugin[​](#enabling-plugin"DirectlinktoEnablingplugin")
+Enabling plugin[​](#enabling-plugin "Direct link to Enabling plugin")
 ---------------------------------------------------------------------
 
 You can enable the plugin as a part of Botkube instance configuration.
@@ -45,15 +45,15 @@ You can enable the plugin as a part of Botkube instance configuration.
 
 The Flux plugin comes with integrated GitHub support. To enable it, you'll need a valid [GitHub token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/#creating-a-token). Set the token with the following configuration:
 
-github:  auth:    accessToken: "" # your GitHub access token
+    github:  auth:    accessToken: "" # your GitHub access token
 
 6.  Click **Save** button.
 
 By default, the Flux plugin has read-only access. To perform actions like creating or deleting Flux-related sources, you'll need to customize the [RBAC](https://docs.botkube.io/configuration/rbac#configuration).
 
-Configuration Syntax[​](#configuration-syntax"DirectlinktoConfigurationSyntax")
+Configuration Syntax[​](#configuration-syntax "Direct link to Configuration Syntax")
 ------------------------------------------------------------------------------------
 
 The plugin supports the following configuration:
 
-github:  auth:    # GitHub access token.    # Instructions for token creation: https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/#creating-a-token.    # Lack of token may limit functionality, e.g., adding comments to pull requests or approving them.    accessToken: ""log:  level: "info"
+    github:  auth:    # GitHub access token.    # Instructions for token creation: https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/#creating-a-token.    # Lack of token may limit functionality, e.g., adding comments to pull requests or approving them.    accessToken: ""log:  level: "info"

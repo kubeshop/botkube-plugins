@@ -3,7 +3,7 @@ Title: Enabling Developers | Botkube
 URL Source: https://botkube.io/solutions/enabling-developers
 
 Markdown Content:
-[![Image 1: Kusk Kubernetes](https://assets-global.website-files.com/633705de6adaa38599d8e258/6338148fa3f8a509639804fa_botkube-logo.svg)](https://botkube.io/)
+[![Image 1: Kusk Kubernetes ](https://assets-global.website-files.com/633705de6adaa38599d8e258/6338148fa3f8a509639804fa_botkube-logo.svg)](https://botkube.io/)
 
 ![Image 2](https://assets-global.website-files.com/633705de6adaa38599d8e258/659eb8b9715d644cd037118c_Bird-with-fire-Botkube.png)
 
@@ -36,14 +36,16 @@ User Quotes
 
 The advantages of BotKube are its versatility and efficiency in managing and monitoring Kubernetes clusters. It offers seamless integration with various messaging platforms and provides real-time alerts and notifications. Its appeal is enhanced by Its user-friendly interface, and extensive customization options
 
-![Image 6: automating tests staging cluster](https://assets-global.website-files.com/633705de6adaa38599d8e258/6387ccf6ff66597d5f414815_botkube-quote-sign.svg)
+![Image 6](https://assets-global.website-files.com/633705de6adaa38599d8e258/6387cc6cd11dba9de0d3578f_botkube.gif)
+
+![Image 7: automating tests staging cluster](https://assets-global.website-files.com/633705de6adaa38599d8e258/6387ccf6ff66597d5f414815_botkube-quote-sign.svg)
 
 The advantages of BotKube are its versatility and efficiency in managing and monitoring Kubernetes clusters. It offers seamless integration with various messaging platforms and provides real-time alerts and notifications. Its appeal is enhanced by Its user-friendly interface, and extensive customization options
 
-![Image 7](https://assets-global.website-files.com/633705de6adaa38599d8e258/6387cc6cd11dba9de0d3578f_botkube.gif)
+![Image 8](https://assets-global.website-files.com/633705de6adaa38599d8e258/6387cc6cd11dba9de0d3578f_botkube.gif)
 
-![Image 8: automating tests staging cluster](https://assets-global.website-files.com/633705de6adaa38599d8e258/6387ccf6ff66597d5f414815_botkube-quote-sign.svg)
+![Image 9: automating tests staging cluster](https://assets-global.website-files.com/633705de6adaa38599d8e258/6387ccf6ff66597d5f414815_botkube-quote-sign.svg)
 
 For me, monitoring health and performance of the infrastructure in realtime was done with the help of Botkube. Botkube provided me security features such as unauthorized access attempts.
 
-![Image 9](https://assets-global.website-files.com/633705de6adaa38599d8e258/6387cc6cd11dba9de0d3578f_botkube.gif)
+![Image 10](https://assets-global.website-files.com/633705de6adaa38599d8e258/6387cc6cd11dba9de0d3578f_botkube.gif)

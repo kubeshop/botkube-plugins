@@ -3,7 +3,7 @@ Title: License | Botkube
 URL Source: https://docs.botkube.io/license/
 
 Markdown Content:
-MIT License[​](#mit-license"DirectlinktoMITLicense")
+MIT License[​](#mit-license "Direct link to MIT License")
 ---------------------------------------------------------
 
 Copyright (c) 2022 Kubeshop

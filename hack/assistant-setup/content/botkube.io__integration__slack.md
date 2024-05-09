@@ -1,4 +1,4 @@
-Title: Slack & Botkube Kubernetes Integration
+Title: Botkube.io
 
 URL Source: https://botkube.io/integration/slack
 
@@ -10,7 +10,7 @@ When developers want to receive notifications about the status of their cluster,
 
 ### Now with Kubernetes AI Assistant for Troubleshooting k8s!
 
-![Image 1: Checking Kubernetes Namespaces in Slack with Botkube's AI Assistant](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65ee1a5d521144e87f59161e_Botkube%20AI%20Assistant%20-failing%20GIF.gif)
+![Image 1: Checking Kubernetes Namespaces in Slack with Botkube's AI Assistant ](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65ee1a5d521144e87f59161e_Botkube%20AI%20Assistant%20-failing%20GIF.gif)
 
 Checking Kubernetes Namespaces in Slack with Botkube
 

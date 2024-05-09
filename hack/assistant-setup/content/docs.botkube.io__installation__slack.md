@@ -3,12 +3,12 @@ Title: Slack | Botkube
 URL Source: https://docs.botkube.io/installation/slack/
 
 Markdown Content:
-Botkube Slack App Versions[​](#botkube-slack-app-versions"DirectlinktoBotkubeSlackAppVersions")
+Botkube Slack App Versions[​](#botkube-slack-app-versions "Direct link to Botkube Slack App Versions")
 ------------------------------------------------------------------------------------------------------
 
 In order to connect with Slack, Botkube requires a Slack application. There are two versions of the Botkube Slack App available:
 
-### Botkube Cloud App for Slack[​](#botkube-cloud-app-for-slack"DirectlinktoBotkubeCloudAppforSlack")
+### Botkube Cloud App for Slack[​](#botkube-cloud-app-for-slack "Direct link to Botkube Cloud App for Slack")
 
 The Botkube Cloud App for Slack offers several advanced features:
 
@@ -20,7 +20,7 @@ The Botkube Cloud App for Slack uses Botkube's cloud services to manage channels
 
 You can directly try Botkube Cloud App for Slack for free by creating an account in the [Botkube Web App](https://app.botkube.io/). Follow the [Cloud Slack app tutorial](https://docs.botkube.io/installation/slack/cloud-slack) to learn more.
 
-### Botkube Socket Slack App[​](#botkube-socket-slack-app"DirectlinktoBotkubeSocketSlackApp")
+### Botkube Socket Slack App[​](#botkube-socket-slack-app "Direct link to Botkube Socket Slack App")
 
 The Socket-mode app works with the open-source Botkube Agent. The Botkube Socket-mode Slack App has the following caveats:
 

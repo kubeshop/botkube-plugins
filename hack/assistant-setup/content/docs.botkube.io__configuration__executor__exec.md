@@ -19,4 +19,4 @@ By default, the read-only `KUBECONFIG` is assigned. For enabling commands that r
 
 You can enable the plugin as a part of Botkube instance configuration.
 
-# An array of templates that define how to convert the command output into an interactive message.templates:  # Link to templates source  # It uses the go-getter library, which supports multiple URL formats (such as HTTP, Git repositories, or S3) and is able to unpack archives.  # For more details, see the documentation at https://github.com/hashicorp/go-getter.  - ref: github.com/kubeshop/botkube//cmd/executor/exec/templates?ref=release-1.8
+    # An array of templates that define how to convert the command output into an interactive message.templates:  # Link to templates source  # It uses the go-getter library, which supports multiple URL formats (such as HTTP, Git repositories, or S3) and is able to unpack archives.  # For more details, see the documentation at https://github.com/hashicorp/go-getter.  - ref: github.com/kubeshop/botkube//cmd/executor/exec/templates?ref=release-1.8

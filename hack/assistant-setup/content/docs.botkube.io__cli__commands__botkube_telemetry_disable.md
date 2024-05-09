@@ -5,25 +5,25 @@ URL Source: https://docs.botkube.io/cli/commands/botkube_telemetry_disable
 Markdown Content:
 Version: 1.10
 
-botkube telemetry disable[​](#botkube-telemetry-disable"Directlinktobotkubetelemetrydisable")
+botkube telemetry disable[​](#botkube-telemetry-disable "Direct link to botkube telemetry disable")
 ---------------------------------------------------------------------------------------------------
 
 Disable Botkube telemetry
 
-botkube telemetry disable [flags]
+    botkube telemetry disable [flags]
 
-### Examples[​](#examples"DirectlinktoExamples")
+### Examples[​](#examples "Direct link to Examples")
 
-# To improve the user experience, Botkube collects anonymized data.# It does not collect any identifying information, and all analytics# are used only as aggregated collection of data to improve Botkube# and adjust its roadmap.# Read our privacy policy at https://docs.botkube.io/privacy# The Botkube CLI tool collects anonymous usage analytics.# This data is only available to the Botkube authors and helps us improve the tool.# Disable Botkube telemetrybotkube telemetry disable
+    # To improve the user experience, Botkube collects anonymized data.# It does not collect any identifying information, and all analytics# are used only as aggregated collection of data to improve Botkube# and adjust its roadmap.# Read our privacy policy at https://docs.botkube.io/privacy# The Botkube CLI tool collects anonymous usage analytics.# This data is only available to the Botkube authors and helps us improve the tool.# Disable Botkube telemetrybotkube telemetry disable
 
-### Options[​](#options"DirectlinktoOptions")
+### Options[​](#options "Direct link to Options")
 
--h, --help   help for disable
+      -h, --help   help for disable
 
-### Options inherited from parent commands[​](#options-inherited-from-parent-commands"DirectlinktoOptionsinheritedfromparentcommands")
+### Options inherited from parent commands[​](#options-inherited-from-parent-commands "Direct link to Options inherited from parent commands")
 
--v, --verbose int/string[=simple]   Prints more verbose output. Allowed values: 0 - disable, 1 - simple, 2 - trace (default 0 - disable)
+      -v, --verbose int/string[=simple]   Prints more verbose output. Allowed values: 0 - disable, 1 - simple, 2 - trace (default 0 - disable)
 
-### SEE ALSO[​](#see-also"DirectlinktoSEEALSO")
+### SEE ALSO[​](#see-also "Direct link to SEE ALSO")
 
 *   [botkube telemetry](https://docs.botkube.io/cli/commands/botkube_telemetry) - Configure collection of anonymous analytics
