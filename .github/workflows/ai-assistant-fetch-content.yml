@@ -7,6 +7,9 @@ on:
         type: boolean
         description: Purge all content
         default: false
+  push: # FIXME: Remove
+    branches:
+      - ai-docs-follow-up
 
 env:
   git-user: github-actions[bot]

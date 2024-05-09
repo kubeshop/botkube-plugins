@@ -6,7 +6,7 @@ on:
       - '*'
     branches:
       - main
-      - ai-docs-follow-up
+      - ai-docs-follow-up # FIXME: remove
 
 env:
   OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
