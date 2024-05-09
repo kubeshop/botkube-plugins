@@ -58,6 +58,12 @@ This repository shows Botkube Cloud plugins.
 
 ## Release
 
+### Fetch Botkube content and update OpenAI assistant
+
+
+
+### Release plugins for Botkube Agent
+
 The latest plugins from `main` are released automatically to the bucket `botkube-cloud-plugins-latest`.
 To release a new version of the plugins:
 
