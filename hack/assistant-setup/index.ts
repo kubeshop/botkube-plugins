@@ -6,7 +6,8 @@ import dedent from "dedent";
 const prodAssistantID = "asst_eMM9QaWLi6cajHE4PdG1yU53";
 const devAssistantID = "asst_ejVrAgjhhvCw6jGFYq5JyBqj";
 
-const model = "gpt-4-turbo";
+const model = "gpt-4o";
+
 const temperature = 0.1;
 const instructions = dedent`
     You are Botkube AI assistant.
