@@ -12,6 +12,7 @@ env:
 jobs:
   release:
     name: Release plugins
+    timeout-minutes: 60
     runs-on: ubuntu-latest
     if: startsWith(github.ref, 'refs/tags/v')
 

@@ -14,6 +14,7 @@ jobs:
   reconfigure-ai-assistant:
     name: Reconfigure OpenAI assistant
     runs-on: ubuntu-22.04
+    timeout-minutes: 15
     steps:
       - name: Set environment variables
         run: |

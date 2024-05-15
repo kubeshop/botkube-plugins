@@ -16,6 +16,7 @@ jobs:
   update-content:
     name: Fetch content for OpenAI assistant
     runs-on: ubuntu-22.04
+    timeout-minutes: 30
     env:
       PURGE_ALL_CONTENT: ${{inputs.purge-all-content}}
       BRANCH_NAME: fetch-ai-content-${{ github.run_id }}-${{ github.run_attempt }}
