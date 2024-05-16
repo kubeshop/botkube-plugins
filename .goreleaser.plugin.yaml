@@ -20,21 +20,6 @@ builds:
       - arm64
     goarm:
       - 7
-  - id: doctor
-    main: cmd/executor/doctor/main.go
-    binary: executor_doctor_{{ .Os }}_{{ .Arch }}
-
-    no_unique_dist_dir: true
-    env:
-      - CGO_ENABLED=0
-    goos:
-      - linux
-      - darwin
-    goarch:
-      - amd64
-      - arm64
-    goarm:
-      - 7
   - id: exec
     main: cmd/executor/exec/main.go
     binary: executor_exec_{{ .Os }}_{{ .Arch }}
@@ -190,12 +175,6 @@ archives:
       
   - builds: [ai]
     id: ai
-    files:
-      - none*
-    name_template: "{{ .Binary }}"
-      
-  - builds: [doctor]
-    id: doctor
     files:
       - none*
     name_template: "{{ .Binary }}"
