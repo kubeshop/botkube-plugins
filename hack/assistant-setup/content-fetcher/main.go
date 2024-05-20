@@ -71,7 +71,7 @@ func main() {
 	log.Infof("Found %d pages to fetch", len(pagesToFetch))
 
 	log.Infof("Creating %q directory if doesn't exist...", contentDir)
-	err = os.MkdirAll(contentDir, os.ModePerm)
+	err = os.MkdirAll(contentDir, 0o750)
 	loggerx.ExitOnError(err, "while creating directory")
 
 	errs := multierror.New()
@@ -105,7 +105,6 @@ func main() {
 			}),
 			retry.Delay(retryInterval),
 		)
-
 		if err != nil {
 			errs = multierror.Append(errs, err)
 		}
