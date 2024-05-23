@@ -10,6 +10,8 @@ import (
 	"strings"
 	"time"
 
+	"github.com/kubeshop/botkube/pkg/ptr"
+
 	"github.com/kubeshop/botkube-cloud-plugins/internal/otelx"
 	"github.com/kubeshop/botkube-cloud-plugins/internal/remote"
 	"go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp"
@@ -281,6 +283,14 @@ func (i *assistant) handleStatusCompleted(ctx context.Context, run openai.Run, p
 		return nil
 	}
 
+	toolCalls, err := i.listToolCalls(ctx, run.ThreadID, run.ID)
+	if err != nil {
+		err = fmt.Errorf("while listing tool calls: %w", err)
+		span.RecordError(err)
+		i.log.WithError(err).Error("failed to get tool calls")
+		// not returning as the tool usage is optional
+	}
+
 	// Iterate over text content to build messages. We're only interested in text
 	// context, since the assistant is instructed to return text only.
 	for _, c := range msgList.Messages[0].Content {
@@ -291,7 +301,7 @@ func (i *assistant) handleStatusCompleted(ctx context.Context, run openai.Run, p
 		textValue := i.trimCitationsIfPresent(i.log, c.Text)
 
 		i.out <- source.Event{
-			Message: msgAIAnswer(run, p, textValue),
+			Message: msgAIAnswer(run, p, textValue, toolCalls),
 		}
 	}
 
@@ -377,6 +387,35 @@ func (i *assistant) trimCitationsIfPresent(log logrus.FieldLogger, in *openai.Me
 	}
 
 	return outValue
+}
+
+func (i *assistant) listToolCalls(ctx context.Context, threadID, runID string) (map[string]struct{}, error) {
+	const maxLimit = 100
+	var (
+		runSteps []openai.RunStep
+		after    *string
+	)
+
+	for {
+		res, err := i.openaiClient.ListRunSteps(ctx, threadID, runID, openai.Pagination{Limit: ptr.FromType(maxLimit), After: after})
+		if err != nil {
+			return nil, fmt.Errorf("while getting assistant run steps: %w", err)
+		}
+
+		runSteps = append(runSteps, res.RunSteps...)
+		if !res.HasMore {
+			break
+		}
+
+		after = &res.LastID
+		i.log.WithFields(logrus.Fields{
+			"lastID": res.LastID,
+			"count":  len(runSteps),
+		}).Debug("Paginating assistant run steps...")
+	}
+	i.log.WithField("count", len(runSteps)).Debug("Finished paginating assistant run steps")
+
+	return getFriendlyToolCallsFromRunSteps(runSteps), nil
 }
 
 type apiKeySecuredTransport struct {

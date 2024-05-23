@@ -1,6 +1,7 @@
 package aibrain
 
 import (
+	"encoding/json"
 	"os"
 	"path/filepath"
 	"testing"
@@ -25,15 +26,103 @@ func TestConvertProperlyAIAnswer(t *testing.T) {
 	out := msgAIAnswer(openai.Run{}, &Payload{
 		MessageID: "42.42",
 		Prompt:    "This is a test",
-	}, string(md))
+	}, string(md), nil)
 	assertGolden(t, out.Sections[0].Base.Body.Plaintext, "slack.golden.md")
 
 	// Teams
 	out = msgAIAnswer(openai.Run{}, &Payload{
 		MessageID: "19:d25cbf7cbfa74d22b42a2918452e1153@thread.tacv2",
 		Prompt:    "This is a test",
-	}, string(md))
+	}, string(md), nil)
 	assertGolden(t, out.BaseBody.Plaintext, "teams.golden.md")
+}
+
+// TestConvertProperlyAIAnswerWithTools tests that we can convert proper AI answer to Slack or Teams message format.
+//
+// To update golden files run:
+//
+//	go test ./internal/source/ai-brain/... -run=TestConvertProperlyAIAnswerWithTools -update
+func TestConvertProperlyAIAnswerWithTools(t *testing.T) {
+	// given
+	md, err := os.ReadFile(filepath.Join("testdata", t.Name(), "aiAnswer.md"))
+	require.NoError(t, err)
+
+	toolCalls := []openai.RunStep{
+		{
+			StepDetails: openai.StepDetails{
+				Type: openai.RunStepTypeToolCalls,
+				ToolCalls: []openai.ToolCall{
+					{
+						Type: openai.ToolType("file_search"),
+					},
+					{
+						Type: openai.ToolTypeFunction,
+						Function: openai.FunctionCall{
+							Name:      "botkubeGetStartupAgentConfiguration",
+							Arguments: "foo",
+						},
+					},
+				},
+			},
+		},
+		{
+			StepDetails: openai.StepDetails{
+				Type: openai.RunStepTypeToolCalls,
+				ToolCalls: []openai.ToolCall{
+					{
+						Type: openai.ToolTypeFunction,
+						Function: openai.FunctionCall{
+							Name:      "botkubeGetAgentStatus",
+							Arguments: "foo",
+						},
+					},
+					{
+						Type: openai.ToolTypeFunction,
+						Function: openai.FunctionCall{
+							Name:      "kubectlGetResource",
+							Arguments: "foo",
+						},
+					},
+					{
+						Type: openai.ToolTypeFunction,
+						Function: openai.FunctionCall{
+							Name:      "kubectlLogs",
+							Arguments: "foo",
+						},
+					},
+				},
+			},
+		},
+	}
+	convertedToolCalls := getFriendlyToolCallsFromRunSteps(toolCalls)
+
+	// Slack
+	out := msgAIAnswer(openai.Run{}, &Payload{
+		MessageID: "42.42",
+		Prompt:    "This is a test",
+	}, string(md), convertedToolCalls)
+
+	outBytes, err := json.MarshalIndent(out, "", "  ")
+	require.NoError(t, err)
+	assertGolden(t, string(outBytes), "slack-tools.golden.json")
+
+	// Teams
+	out = msgAIAnswer(openai.Run{}, &Payload{
+		MessageID: "19:d25cbf7cbfa74d22b42a2918452e1153@thread.tacv2",
+		Prompt:    "This is a test",
+	}, string(md), convertedToolCalls)
+	outBytes, err = json.MarshalIndent(out, "", "  ")
+	require.NoError(t, err)
+	assertGolden(t, string(outBytes), "teams-tools.golden.json")
+
+	// Discord and others
+	out = msgAIAnswer(openai.Run{}, &Payload{
+		MessageID: "",
+		Prompt:    "This is a test",
+	}, string(md), convertedToolCalls)
+	outBytes, err = json.MarshalIndent(out, "", "  ")
+	require.NoError(t, err)
+	assertGolden(t, string(outBytes), "discord-tools.golden.json")
 }
 
 func assertGolden(t *testing.T, actual, goldenPath string) {
