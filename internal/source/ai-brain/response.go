@@ -15,6 +15,7 @@ const (
 	teamsMessageIDSubstr  = "thread.tacv2"
 	reportResponseBtnName = "🚩Report response"
 	maxPromptLen          = 500
+	aiContentWarning      = "AI-generated content may be incorrect."
 )
 
 var (
@@ -107,13 +108,15 @@ func msgNoAIAnswer(messageID string) api.Message {
 	}
 }
 
-func msgAIAnswer(run openai.Run, payload *Payload, response string) api.Message {
+func msgAIAnswer(run openai.Run, payload *Payload, response string, toolCalls map[string]struct{}) api.Message {
 	var (
-		msgID   = payload.MessageID
-		btnBldr = api.NewMessageButtonBuilder()
+		msgID        = payload.MessageID
+		btnBldr      = api.NewMessageButtonBuilder()
+		usedToolsMsg = printUsedTools(toolCalls)
 	)
 
-	if strings.Contains(msgID, teamsMessageIDSubstr) { // teams
+	// MS Teams
+	if strings.Contains(msgID, teamsMessageIDSubstr) {
 		return api.Message{
 			Type:             api.BasicCardWithButtonsInSeparateMsg,
 			ParentActivityID: msgID,
@@ -122,7 +125,7 @@ func msgAIAnswer(run openai.Run, payload *Payload, response string) api.Message 
 				// as simplified card (https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/format-your-bot-messages#format-text-content)
 				// instead of AdaptiveCard (https://learn.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-format?tabs=adaptive-md%2Cdesktop%2Cconnector-html#format-cards-with-markdown)
 				// which doesn't support most of the markdown elements.
-				Plaintext: markdownToTeams(response),
+				Plaintext: markdownToTeams(response, usedToolsMsg),
 			},
 			Sections: []api.Section{
 				{
@@ -138,29 +141,45 @@ func msgAIAnswer(run openai.Run, payload *Payload, response string) api.Message 
 	// from the AI to prevent it from being interpreted as formatting.
 	response = strings.ReplaceAll(response, "%", "%%")
 
-	sections := []api.Section{
-		{
-			Base: api.Base{
-				Body: api.Body{Plaintext: response},
+	// Slack (msgID is set only for Teams or Slack, Teams is handled above)
+	if msgID != "" {
+		return api.Message{
+			ParentActivityID: msgID,
+			Sections: []api.Section{
+				{
+					Base: api.Base{
+						Body: api.Body{Plaintext: markdownToSlack(response)},
+					},
+					Context: []api.ContextItem{
+						{Text: markdownToSlack(usedToolsMsg)},
+					},
+				},
+				{
+					Style: api.SectionStyle{
+						Divider: api.DividerStyleTopNone,
+					},
+					Buttons: api.Buttons{
+						btnBldr.ForCommandWithItalicDesc(reportResponseBtnName, aiContentWarning, reportCmd(run, payload)),
+					},
+				},
 			},
-			Context: []api.ContextItem{
-				{Text: "AI-generated content may be incorrect."},
-			},
-		},
+		}
 	}
 
-	if msgID != "" { // msgID is set only for Teams or Slack, Teams is handled above, so here is Slack
-		sections[0].Body.Plaintext = markdownToSlack(sections[0].Body.Plaintext)
-		sections = append(sections, api.Section{
-			Buttons: api.Buttons{
-				btnBldr.ForCommandWithoutDesc(reportResponseBtnName, reportCmd(run, payload), api.ButtonStyleDanger),
-			},
-		})
-	}
-
+	// Other cases (e.g. Discord etc.)
 	return api.Message{
 		ParentActivityID: msgID,
-		Sections:         sections,
+		Sections: []api.Section{
+			{
+				Base: api.Base{
+					Body: api.Body{Plaintext: response},
+				},
+				Context: []api.ContextItem{
+					{Text: usedToolsMsg},
+					{Text: fmt.Sprintf("_%s_", aiContentWarning)},
+				},
+			},
+		},
 	}
 }
 
@@ -175,12 +194,17 @@ func markdownToSlack(text string) string {
 	return mdLinks.ReplaceAllString(text, "<$2|$1>")
 }
 
-func markdownToTeams(text string) string {
+func markdownToTeams(text, additionalFooterMessage string) string {
 	text = mdHeadings.ReplaceAllString(text, "**$1**")
 	text = mdImages.ReplaceAllString(text, "[$1]($2)") // get rid of ! to define it as a link instead of image
 
+	text += "\n\n"
+	if additionalFooterMessage != "" {
+		text += fmt.Sprintf("~%s~\n\n", additionalFooterMessage) // add
+	}
+
 	// https://learn.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-format?tabs=adaptive-md%2Cdesktop%2Cconnector-html#newlines-for-adaptive-cards
-	text += "\n\n~AI-generated content may be incorrect.~\n" // add the warning
+	text += "~AI-generated content may be incorrect.~\n" // add the warning
 	return text
 }
 

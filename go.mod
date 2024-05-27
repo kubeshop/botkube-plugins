@@ -25,7 +25,7 @@ require (
 	github.com/honeycombio/otel-config-go v1.13.1
 	github.com/huandu/xstrings v1.4.0
 	github.com/keptn/go-utils v0.20.4
-	github.com/kubeshop/botkube v0.13.1-0.20240426162820-c3c1bbe3c039
+	github.com/kubeshop/botkube v0.13.1-0.20240527133334-a3f727e2a30f
 	github.com/muesli/reflow v0.3.0
 	github.com/olekukonko/tablewriter v0.0.5
 	github.com/prometheus/client_golang v1.16.0
@@ -74,7 +74,7 @@ require (
 	github.com/evanphx/json-patch v5.7.0+incompatible // indirect
 	github.com/evanphx/json-patch/v5 v5.6.0 // indirect
 	github.com/exponent-io/jsonpath v0.0.0-20151013193312-d6023ce2651d // indirect
-	github.com/fatih/color v1.15.0 // indirect
+	github.com/fatih/color v1.16.0 // indirect
 	github.com/fatih/structs v1.1.0 // indirect
 	github.com/felixge/httpsnoop v1.0.3 // indirect
 	github.com/fluxcd/pkg/apis/kustomize v1.1.1 // indirect
@@ -155,7 +155,7 @@ require (
 	github.com/shirou/gopsutil/v3 v3.23.10 // indirect
 	github.com/shoenig/go-m1cpu v0.1.6 // indirect
 	github.com/shopspring/decimal v1.3.1 // indirect
-	github.com/spf13/cast v1.5.0 // indirect
+	github.com/spf13/cast v1.6.0 // indirect
 	github.com/spf13/cobra v1.8.0 // indirect
 	github.com/spiffe/spire v1.5.6 // indirect
 	github.com/tklauser/go-sysconf v0.3.12 // indirect
