@@ -23,7 +23,7 @@ Discover how Botkube AI's simplifies Kubernetes troubleshooting for devs with na
 *   [Empowering Developers with Automation](#empowering-developers-with-automation)
 *   [Conclusion: Transform Your Kubernetes Workflow with Botkube](#conclusion-transform-your-kubernetes-workflow-with-botkube)
 
-#### Manage your Kubernetes Clusters Directly in Slack and Microsoft Teams!
+#### Start Using Botkube AI Assistant Today!
 
 #### Start Using Botkube AI Assistant Today!
 
@@ -88,8 +88,8 @@ Botkube's AI assistant integrates within team communication platforms, deliverin
 
 ### **Getting Started with Botkube’s AI Assistant**
 
-Activating Botkube’s AI assistant is straightforward, with no extra setup required. [Sign up for Botkube,](http://app.botkube.io/) link your Kubernetes cluster following our [easy instructions](https://botkube.io/blog/get-botkube-running-in-under-3-minutes-the-new-slack-app), and get started with the AI assistant.
+Activating Botkube’s AI assistant is straightforward, with no extra setup required. [Sign up for Botkube,](https://app.botkube.io/) link your Kubernetes cluster following our [easy instructions](https://botkube.io/blog/get-botkube-running-in-under-3-minutes-the-new-slack-app), and get started with the AI assistant.
 
 Use the `@Botkube ai` command for real-time, context-aware advice via your messaging platform, transforming Kubernetes management into an intuitive, efficient process.
 
-Happy Troubleshooting!
+Happy Troubleshooting…

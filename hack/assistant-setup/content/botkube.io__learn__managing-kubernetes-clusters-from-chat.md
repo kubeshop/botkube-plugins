@@ -42,5 +42,3 @@ Conclusion: A New Era of Kubernetes Management
 ----------------------------------------------
 
 Botkube represents a paradigm shift in Kubernetes management. By bringing the power of ChatOps to your fingertips, it fosters collaboration, simplifies workflows, and grants unprecedented visibility into your cluster operations. Say goodbye to the complexities of the terminal and embrace a new era of efficient, collaborative, and enjoyable Kubernetes management with Botkube.
-
-‍

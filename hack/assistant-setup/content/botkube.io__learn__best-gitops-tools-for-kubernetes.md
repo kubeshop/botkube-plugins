@@ -30,6 +30,4 @@ Now, it's no surprise that Botkube finds its way onto our list (a little bias fr
 **Conclusion**
 --------------
 
-As we conclude our whirlwind tour of the best GitOps tools for Kubernetes, we encourage you to dive deeper into these tools to see which ones align with your Kubernetes management dreams. GitOps isn't just a buzzword; it's a revolution that can streamline your operations and make managing Kubernetes clusters a joyous adventure. So, what are you waiting for? Explore these tools and embark on your own Kubernetes journey today!
-
-‍
+As we conclude our whirlwind tour of the best GitOps tools for Kubernetes, we encourage you to dive deeper into these tools to see which ones align with your Kubernetes management dreams. GitOps isn't just a buzzword; it's a revolution that can streamline your operations and make managing Kubernetes clusters a joyous adventure. So, what are you waiting for? Explore these tools and embark on your own Kubernetes journey today.

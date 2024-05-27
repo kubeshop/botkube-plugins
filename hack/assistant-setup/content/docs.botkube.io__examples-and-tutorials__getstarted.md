@@ -13,7 +13,7 @@ Welcome to Botkube! This guide will walk you through the process of setting up B
 Overview[​](#overview "Direct link to Overview")
 ------------------------------------------------
 
-Botkube is a Kubernetes Monitoring and Tool designed to optimize your K8s workflow by providing real-time alerts from and commands within your Kubernetes environment. With Botkube, you can receive alerts, execute commands, and stay informed about your cluster's health and status, all from your preferred communication platform.
+Botkube is an AI-powered troubleshooting tool designed to optimize your K8s workflow by providing real-time alerts from and commands within your Kubernetes environment. With Botkube, you can receive alerts, execute commands, and stay informed about your cluster's health and status, all from your preferred communication platform.
 
 Step 1: Sign up for Botkube[​](#step-1-sign-up-for-botkube "Direct link to Step 1: Sign up for Botkube")
 --------------------------------------------------------------------------------------------------------
@@ -35,7 +35,7 @@ Step 2: Connect Your Kubernetes Cluster[​](#step-2-connect-your-kubernetes-clu
 Step 3: Connect to Your Preferred Communication Platform[​](#step-3-connect-to-your-preferred-communication-platform "Direct link to Step 3: Connect to Your Preferred Communication Platform")
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Follow the instructions provided on the Botkube Cloud Dashboard to connect Botkube to your preferred communication platform, such as [Slack](https://docs.botkube.io/installation/slack/cloud-slack) or [Microsoft Teams](https://docs.botkube.io/installation/teams/).
+Follow the instructions provided on the Botkube Cloud Dashboard to connect Botkube to your preferred communication platform, such as [Slack](https://docs.botkube.io/installation/slack/cloud-slack)or [Microsoft Teams](https://docs.botkube.io/installation/teams/).
 
 Step 4: Setting Up a Botkube Cloud Instance[​](#step-4-setting-up-a-botkube-cloud-instance "Direct link to Step 4: Setting Up a Botkube Cloud Instance")
 --------------------------------------------------------------------------------------------------------------------------------------------------------

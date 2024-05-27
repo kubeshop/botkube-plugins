@@ -52,7 +52,7 @@ Install Botkube in Kubernetes cluster[​](#install-botkube-in-kubernetes-cluste
 
 To deploy Botkube agent in your cluster, run:
 
-    export MATTERMOST_SERVER_URL={mattermost_server_url}export MATTERMOST_TEAM={mattermost_team_name}export CLUSTER_NAME={cluster_name}export ALLOW_KUBECTL={allow_kubectl}botkube install --version v1.10.0 \--set communications.default-group.mattermost.enabled=true \--set communications.default-group.mattermost.url=${MATTERMOST_SERVER_URL} \--set communications.default-group.mattermost.token=${MATTERMOST_TOKEN} \--set communications.default-group.mattermost.team=${MATTERMOST_TEAM} \--set communications.default-group.mattermost.channels.default.name=${MATTERMOST_CHANNEL} \--set communications.default-group.mattermost.botName=${MATTERMOST_BOT_NAME} \--set settings.clusterName=${CLUSTER_NAME} \--set 'executors.k8s-default-tools.botkube/kubectl.enabled'=${ALLOW_KUBECTL}
+    export MATTERMOST_SERVER_URL={mattermost_server_url}export MATTERMOST_TEAM={mattermost_team_name}export CLUSTER_NAME={cluster_name}export ALLOW_KUBECTL={allow_kubectl}botkube install --version v1.11.0 \--set communications.default-group.mattermost.enabled=true \--set communications.default-group.mattermost.url=${MATTERMOST_SERVER_URL} \--set communications.default-group.mattermost.token=${MATTERMOST_TOKEN} \--set communications.default-group.mattermost.team=${MATTERMOST_TEAM} \--set communications.default-group.mattermost.channels.default.name=${MATTERMOST_CHANNEL} \--set communications.default-group.mattermost.botName=${MATTERMOST_BOT_NAME} \--set settings.clusterName=${CLUSTER_NAME} \--set 'executors.k8s-default-tools.botkube/kubectl.enabled'=${ALLOW_KUBECTL}
 
 where:
 
@@ -64,7 +64,7 @@ where:
 *   **CLUSTER\_NAME** is the cluster name set in the incoming messages,
 *   **ALLOW\_KUBECTL** set true to allow `kubectl` command execution by Botkube on the cluster.
 
-Configuration syntax is explained [here](https://docs.botkube.io/configuration). All possible installation parameters are documented [here](https://docs.botkube.io/configuration/helm-chart-parameters).
+Configuration syntax is explained [here](https://docs.botkube.io/self-hosted-configuration). All possible installation parameters are documented [here](https://docs.botkube.io/self-hosted-configuration/helm-chart-parameters).
 
 Send `@Botkube ping` in the channel to see if Botkube is running and responding.
 

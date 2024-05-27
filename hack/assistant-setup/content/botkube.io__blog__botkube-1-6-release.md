@@ -25,7 +25,7 @@ This release marks a milestone in providing a smoother and faster path to Kubern
 *   [Various Bug Fixes and Small Improvements](#various-bug-fixes-and-small-improvements)
 *   [Upgrade Today](#upgrade-today)
 
-#### Manage your Kubernetes Clusters Directly in Slack and Microsoft Teams!
+#### Start Using Botkube AI Assistant Today!
 
 #### Get started with Botkube Cloud
 
@@ -49,6 +49,10 @@ Microsoft Teams App: Elevate Your ChatOps Experience
 One of the standout features in v1.6 is the enhancement of our [Microsoft Teams integration](https://docs.botkube.io/installation/teams/). We’ve overhauled the Teams experience to include all of the well-loved features available in Botkube’s Slack experience – real-time notifications from Kubernetes clusters, interactivity to execute commands, collaborative troubleshooting, and more. Now, you can seamlessly bring Kubernetes into your Microsoft Teams environment, unlocking powerful ChatOps capabilities.
 
 We’ll have more announcements and tutorials this week. In the meantime, [read the thorough documentation](https://docs.botkube.io/installation/teams/) or [reach out to our product leader, Blair](mailto:blair@kubeshop.io), for onboarding assistance or feedback. We’d love to hear about your experience and how we can improve.
+
+### 🎉 May 2024 Microsoft Teams Update
+
+Botkube's Microsoft Teams Kubernetes Integration has officialy been [listed on the Teams App Store](https://botkube.io/blog/botkube-is-now-verified-in-microsoft-appsource)! We have moved from a custom app that needs to be downloaded to Teams & approved to being able to be added to your Teams environment with one click! Microsoft has chosen to include us in a list of helpful Copilots solving DevOps infostructure issues. Ours of course has a heavy focus on Kubernetes infrastructure. So if you run k8s and use Microsoft Teams, try us out now!
 
 Cloud Slack for Everyone: Swift and Effortless
 ----------------------------------------------
@@ -76,4 +80,4 @@ Upgrade Today
 
 The Botkube 1.6 release is a leap forward in simplifying Kubernetes management and collaboration. Embrace the power of ChatOps in Microsoft Teams, enjoy Cloud Slack with ease, and experience the swift onboarding that gets your Kubernetes monitoring up and running in record time.
 
-[Visit our documentation](http://docs.botkube.io/) for detailed instructions on upgrading to Botkube 1.6 and unlocking the full potential of Kubernetes management and monitoring. Your journey to streamlined collaboration starts now!
+[Visit our documentation](https://docs.botkube.io/) for detailed instructions on upgrading to Botkube 1.6 and unlocking the full potential of Kubernetes management and monitoring. Your journey to streamlined collaboration starts now!

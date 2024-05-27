@@ -20,7 +20,7 @@ Learn more about Botkube's new and improved Microsoft Teams support!
 *   [Benefits of the new Microsoft Teams App](#benefits-of-the-new-microsoft-teams-app-)
 *   [Getting Started with Botkube’s Microsoft Teams](#getting-started-with-botkube-s-microsoft-teams)
 
-#### Manage your Kubernetes Clusters Directly in Slack and Microsoft Teams!
+#### Start Using Botkube AI Assistant Today!
 
 #### Get started with Botkube Cloud
 
@@ -68,4 +68,6 @@ Botkube's integration with Microsoft Teams streamlines the collaborative process
 Getting Started with Botkube’s Microsoft Teams
 ----------------------------------------------
 
-Try it for yourself! Follow our [step-by-step tutorial](https://botkube.io/blog/maximize-your-devops-teams-efficiency-with-botkube-and-microsoft-teams) to set up Botkube using our web app or check out our [engineering blog](http://botkube.io/blog/microsoft-teams-integration-for-botkube-a-technical-journey) for a deep dive about how we made the new teams app. We're excited to hear how you use Botkube. Create a support ticket directly in the dashboard, share your stories with us in the [Botkube Slack community](https://join.botkube.io/) or [email our Developer Advocate, Maria](http://maria@kubeshop.io/). We’ll even send you some cool swag as a thank you.
+Try it for yourself. Follow our [step-by-step tutorial](https://botkube.io/blog/maximize-your-devops-teams-efficiency-with-botkube-and-microsoft-teams) to set up Botkube using our web app or check out our [engineering blog](https://botkube.io/blog/microsoft-teams-integration-for-botkube-a-technical-journey) for a deep dive about how we made the new teams app. We're excited to hear how you use Botkube. Create a support ticket directly in the dashboard, share your stories with us in the [Botkube Slack community.](https://join.botkube.io/) We’ll even send you some cool swag as a thank you for your feedback!
+
+Botkube is now a listed member of [Microsoft Teams' App Store](https://appsource.microsoft.com/en-us/product/office/WA200006966?exp=ubp8&tab=Overview)! This allows Microsoft Teams users to download Botkube's [Kubernetes Copilot](https://botkube.io/learn/kubernetes-copilot) directly from Microsoft. Users use to have to download our application and add it as a custom app into your Teams platform. Botkube users can now just simply select add to Teams!

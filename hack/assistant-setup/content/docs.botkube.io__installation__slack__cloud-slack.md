@@ -3,7 +3,7 @@ Title: Botkube Cloud App for Slack | Botkube
 URL Source: https://docs.botkube.io/installation/slack/cloud-slack
 
 Markdown Content:
-The Botkube Cloud App for Slack uses Botkube Cloud services to manage channels and route executor commands. This allows multi-cluster support without a need to create a dedicated Slack application for each cluster. Events and alerts are sent directly from your cluster to your Slack workspace for reliable, fast notifications.
+The Botkube Cloud App for Slack uses Botkube Cloud services to manage channels and route executor commands. This allows multi-cluster support without a need to create a dedicated application for Slack for each cluster. Events and alerts are sent directly from your cluster to your Slack workspace for reliable, fast notifications.
 
 Prerequisites[​](#prerequisites "Direct link to Prerequisites")
 ---------------------------------------------------------------
@@ -36,7 +36,7 @@ Create a Botkube Cloud Instance with Cloud Slack[​](#create-a-botkube-cloud-in
     
     ![Image 5: Cloud Slack Grant](https://docs.botkube.io/assets/images/cloud_slack_grant-891b3b884c149cc8285622770dbdb140.png)
     
-6.  Provide the Slack app details as described follows and click `Next` button.
+6.  Provide the app for Slack details as described follows and click `Next` button.
     
     *   **Connected Slack Workspace:** Slack workspace that you granted permission in the previous step.
     *   **Display Name:** Display name of the Cloud Slack configuration.

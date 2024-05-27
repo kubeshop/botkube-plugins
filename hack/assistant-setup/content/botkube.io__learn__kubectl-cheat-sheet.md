@@ -143,5 +143,3 @@ As seen in the image below, Botkube even gives an option to get kubectl help dir
 Finally, Botkube introduces the ability to create command aliases, allowing users to assign quick phrases or letters to commonly used kubectl commands. This feature eliminates the need to remember long and complex four-word commands, streamlining the Kubectl process for all users. These features make Botkube an essential tool for any team looking to simplify their Kubectl workflow and increase productivity. Read more about [Kubectl aliases on our blog](https://botkube.io/blog/command-line-magic-simplify-your-life-with-custom-kubernetes-kubectrl-aliases-on-botkube).
 
 ![Image 5: creating a kubectl alias with Botkube's web interface](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64d154cb0dca04c16dae44db_fjOpVIQetAJ-b8hhrWV8fqy3H63TJPAW4zdIkRjc5uh0mlK5hvgU_YUAGOq7OJQXjtxzQTDURFH5tx9-JLL2NFvKNMrEQwbOH2oeHjZsrzaPvzD1iY5cJe8L4dF0tIqnpmdW86WyS2KNhrpzV-ouuJw.png)
-
-‍

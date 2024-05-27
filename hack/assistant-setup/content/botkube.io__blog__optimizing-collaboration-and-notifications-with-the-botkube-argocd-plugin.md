@@ -17,13 +17,13 @@ A closer look into the Botkube team's process for developing the ArgoCD plugin
 
 ### Table of Contents
 
-*   [ArgoCD Plugin for Kubernetes Deployment Management](#argocd-plugin-for-kubernetes-deployment-management-2)
-*   [How Botkube Uses ArgoCD for GitOps Management](#how-botkube-uses-argocd-for-gitops-management-2)
-*   [Conclusion](#conclusion-2)
-*   [Sign up now!](#sign-up-now--2)
-*   [Feedback](#feedback-2)
+*   [ArgoCD Plugin for Kubernetes Deployment Management](#argocd-plugin-for-kubernetes-deployment-management)
+*   [How Botkube Uses ArgoCD for GitOps Management](#how-botkube-uses-argocd-for-gitops-management)
+*   [Conclusion](#conclusion)
+*   [Sign up now!](#sign-up-now-)
+*   [Feedback](#feedback)
 
-#### Manage your Kubernetes Clusters Directly in Slack and Microsoft Teams!
+#### Start Using Botkube AI Assistant Today!
 
 #### Get started with Botkube Cloud
 
@@ -47,7 +47,7 @@ How Botkube Uses ArgoCD for GitOps Management
 
 ![Image 3: Diagram of Developer teams use of Argo CD and Git](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/653a912003e50d0ea9eb0c15_Argo%20Sync%20Image%20(1).png)
 
-Diagram trying to show how Botkube uses ArgoCD and Git to manage K8s Clusters
+Diagram trying to show how Botkube uses ArgoCD and Git to manage K8s Clusters
 
 At Botkube, we use two long-lived Kubernetes clusters which both run in Google Kubernetes Engine (GKE). One cluster is used for production and the other one is used for staging. Each cluster runs its own Argo instance, which is created during cluster creation. A majority of development and bug fixing is done in local dev environments, such as Kind or k3d clusters and is only merged into the main branch after passing all tests in CI. This means that the main branch is always in a deployable state and ArgoCD in the staging cluster consumes directly from the main branch with the auto-sync feature on. Releases into production need to be triggered manually and can happen less frequently. Although we incorporate time for changes to be tested during the staging process, we have a short feature development cycle and our team is quite comfortable with releasing to prod on Friday evenings.
 
@@ -87,7 +87,7 @@ We have a dedicated channel for Botkube notifications in our Slack workspace and
 
 First lesson after enabling the plugin was that setting up ArgoCD notifications, in this case for Slack, was really easy. We just had to point Botkube at which ArgoCD Applications it should watch and the plugin took care of the rest. We didn't have to worry about creating new message templates or event triggers. Botkube took care of all of that for us. After a while of using the plugin, we were happy that the defaults we'd gone with were working well for us. We didn't need to change anything.
 
-### Real Use Case: Horizontal Pod Autoscaler 
+### Real Use Case: Horizontal Pod Autoscaler
 
 ‍
 
@@ -106,12 +106,12 @@ As we continue to improve the capabilities of the plugin, we have identified pot
 
 Your feedback, whether you've already used the plugin or are just considering trying it out, is valuable to us. We encourage you to share your insights and suggestions.The Botkube team welcomes [contributions](https://github.com/kubeshop/botkube) from all its users. Together, we can improve and expand the functionality of this tool for the benefit of the entire community.
 
-\## Sign up now!
+Sign up now!
+------------
 
 Get started with Botkube! Whether you’re a seasoned Kubernetes pro or just getting started, Botkube has something to offer. Sign up now for free and join the community of users who are already benefiting from the power of Botkube.
 
-\## Feedback
+Feedback
+--------
 
-We welcome developers and Kubernetes enthusiasts to explore the platform and share their valuable feedback. We want to know what you think of Botkube and how we can make it even better. We're doing quick 15-minute interviews to get your feedback, and as a thank you, we'll give you some cool Botkube plushies and t-shirts and enter you into a raffle for a chance to win a $50 Amazon gift card! Just email our Developer Advocate, Maria or use this calendly\[ link \](https://calendly.com/maria-botkube)to sign up.You can also talk to us in the Botkube GitHub issues, connect with others and get help in the Botkube \[Slack community\](http://join.botkube.io/), or email our Product Leader at blair@kubeshop.io.
-
-‍
+We welcome developers and Kubernetes enthusiasts to explore the platform and share their valuable feedback. We want to know what you think of Botkube and how we can make it even better. We're doing quick 15-minute interviews to get your feedback, and as a thank you, we'll give you some cool Botkube plushies and t-shirts and enter you into a raffle for a chance to win a $50 Amazon gift card! Just email our Developer Advocate, Maria or use this calendly [link](https://calendly.com/maria-botkube) to sign up.You can also talk to us in the Botkube GitHub issues, connect with others and get help in the Botkube [Slack community](http://join.botkube.io/), or email our Product Leader at blair@kubeshop.io.

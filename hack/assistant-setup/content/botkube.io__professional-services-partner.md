@@ -3,7 +3,7 @@ Title: Professional Services for Botkube
 URL Source: https://botkube.io/professional-services-partner
 
 Markdown Content:
-[![Image 1: Kusk Kubernetes ](https://assets-global.website-files.com/633705de6adaa38599d8e258/6338148fa3f8a509639804fa_botkube-logo.svg)](https://botkube.io/)
+[![Image 1](https://assets-global.website-files.com/633705de6adaa38599d8e258/6338148fa3f8a509639804fa_botkube-logo.svg)](https://botkube.io/)
 
 ### Botkube Recommends
 

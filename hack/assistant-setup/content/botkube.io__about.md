@@ -4,7 +4,6 @@ URL Source: https://botkube.io/about
 
 Markdown Content:
 Designed to Connect the Cloud Native Landscape into your Chat Channel
----------------------------------------------------------------------
 
 ![Image 1](https://assets-global.website-files.com/633705de6adaa38599d8e258/65b2a089afca9fd872a83d94_Main-Botkube-5.webp)
 
@@ -70,9 +69,7 @@ Upcoming Events
 
 Livestream
 
-### 90DaysOfDevOps - 2024 Community Edition
-
-![Image 7](https://assets-global.website-files.com/633705de6adaa38599d8e258/645d3896ae52ddf3bd9625c2_event-arrow.svg)
+#### 90DaysOfDevOps - 2024 Community Edition
 
 Join Maria, Developer Advocate for Botkube, in an insightful workshop that leverages the power of Botkube for effortless multi-cluster management in Kubernetes. In this session, we will explore three key areas:
 
@@ -82,27 +79,21 @@ Join Maria, Developer Advocate for Botkube, in an insightful workshop that lever
 
 3\. Simplifying Collaborative Kubernetes Troubleshooting: Three Best Practices with the aid of Botkube
 
-![Image 8](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/647f5b0cb4328c0f07a53397_conference-icon.svg)
+![Image 7](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/647f5b0cb4328c0f07a53397_conference-icon.svg)
 
 Conference
 
-### Developer Week 2024
-
-![Image 9](https://assets-global.website-files.com/633705de6adaa38599d8e258/645d3896ae52ddf3bd9625c2_event-arrow.svg)
-
-San Francisco, CA USA
+#### Developer Week 2024
 
 Each year, 8,000+ developers, engineers, software architects, dev teams, managers, and executives from 70+ countries gather for DeveloperWeek to discover the latest in developer technologies, languages, platforms, and tools.
 
 Botkube DevRel, Maria Ashby, will present **_"Unlocking K8s Troubleshooting Best Practices with Botkube."_** See you there...
 
-![Image 10](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/647f5b651155fb498c472792_livestream-icon.svg)
+![Image 8](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/647f5b651155fb498c472792_livestream-icon.svg)
 
 Livestream
 
-### Office Hours: 5 Essential Kubernetes Monitoring and Troubleshooting Tasks to Automate
-
-![Image 11](https://assets-global.website-files.com/633705de6adaa38599d8e258/645d3896ae52ddf3bd9625c2_event-arrow.svg)
+#### Office Hours: 5 Essential Kubernetes Monitoring and Troubleshooting Tasks to Automate
 
 Join us for an office hours session where we'll explore five ways for DevOps teams to automate common Kubernetes tasks to save time each week.This session is useful and informative for those new to Kubernetes or those with years of K8s experience under their belt. We'll talk through:
 

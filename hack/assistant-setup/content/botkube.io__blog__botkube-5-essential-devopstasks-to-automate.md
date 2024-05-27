@@ -24,7 +24,7 @@ Check out these five key Kubernetes tasks that Botkube can optimize and automate
 *   [Task 5: K8s Configuration Management](#task-5-k8s-configuration-management)
 *   [Conclusion](#conclusion)
 
-#### Manage your Kubernetes Clusters Directly in Slack and Microsoft Teams!
+#### Start Using Botkube AI Assistant Today!
 
 #### Manage your Kubernetes Clusters Directly in Slack and Microsoft Teams!
 
@@ -93,8 +93,6 @@ This scenario illustrates Botkube's log management functionality: when a respons
 
 3.  If the output is too large, Botkube will upload the response as a file in a reply thread. You can view the complete output by expanding this thread.
 
-‍
-
 4.  For more specific log details, such as filtering for log lines containing the word "Configuration," enter "Configuration" into the Filter Output input box and hit enter. Botkube will then present you with the filtered log results.
 
 ![Image 8](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a6ef187b398bc7569516e9_zF_0o6ZVI24nmlcit4DYR0Pi6Pev79rAgvM-RMuxApGnmhBQQLdkb8795ObG5Ez905YtVhUwT5Q3t6g5Jc2I5OQU_E8QB_E9VeGfyT0yiDd21YQuTnwQdPzdOsrg-gcoiq8z2FoxyR0NNq_kobJ-sKE.png)
@@ -110,11 +108,7 @@ Task 4: GitOps Workflows
 
 Implementing [GitOps](https://botkube.io/blog/enhancing-gitops-workflows-with-botkube) practices in Kubernetes is crucial for engineering teams as it automates the management of Kubernetes resources through synchronization with Git repositories. This approach fosters collaboration, facilitates version control, and simplifies issue tracking within the team. Botkube plays a significant role in enhancing GitOps workflows by reducing manual intervention and providing real-time monitoring and collaboration capabilities.
 
-‍
-
 A notable feature is the [Botkube Flux plugin](https://botkube.io/blog/introducing-botkubes-integration-with-flux), which streamlines the integration of Kubernetes clusters, GitHub repositories, and the Flux CLI. This plugin empowers users to execute Flux CLI commands directly from their preferred communication platforms, ensuring mobile-friendly interactivity. It automates tasks like monitoring GitHub pull requests, notifying users about new pull requests, and rendering event-aware buttons for running diff reports. Without the plugin, these tasks would involve multiple manual steps, elevating the risk of errors and hindering productivity.
-
-‍
 
 In summary, Botkube's GitOps plugins bridge the gap between GitOps tools and communication platforms, offering an efficient, interactive, and user-friendly approach to managing Kubernetes deployments.
 
@@ -126,8 +120,6 @@ Task 5: K8s Configuration Management
 ‍
 
 Managing Kubernetes configurations can be challenging, especially when done manually. Traditional methods involve navigating through multiple interfaces and complex command lines, which can be time-consuming and prone to errors. This complexity often poses a significant hurdle in efficiently managing Helm releases.
-
-‍
 
 [Botkube's Helm executor plugin](https://botkube.io/learn/helm-charts) enhances this process.This plugin allows users to run Helm commands directly from their chat interface. This integration streamlines Kubernetes configuration management, making it more accessible and less error-prone compared to manual methods.
 

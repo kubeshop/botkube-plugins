@@ -1,9 +1,9 @@
-Title: Cloud Slack App
+Title: The Botkube Cloud App for Slack
 
 URL Source: https://botkube.io/slack-app
 
 Markdown Content:
-[![Image 1: Kusk Kubernetes ](https://assets-global.website-files.com/633705de6adaa38599d8e258/6338148fa3f8a509639804fa_botkube-logo.svg)](https://botkube.io/)
+[![Image 1](https://assets-global.website-files.com/633705de6adaa38599d8e258/6338148fa3f8a509639804fa_botkube-logo.svg)](https://botkube.io/)
 
 ![Image 2](https://assets-global.website-files.com/633705de6adaa38599d8e258/64e8e512edbae7755379b2fe_bk-slack-logo-hero-bg.webp)
 
@@ -11,7 +11,7 @@ Markdown Content:
 
 #### Cloud App for Slack
 
-The Botkube Cloud App for Slack uses Botkube Cloud services to manage channels and route executor commands. This allows multi-cluster support without a need to create a dedicated Slack application for each cluster. Events and alerts are sent directly from your cluster to your Slack workspace for reliable, fast notifications.
+The Botkube Cloud App for Slack uses Botkube Cloud services to manage channels and route executor commands. This allows multi-cluster support without a need to create a dedicated application for Slack for each cluster. Events and alerts are sent directly from your cluster to your Slack workspace for reliable, fast notifications.
 
 Installing Botkube in Slack
 ---------------------------
@@ -40,7 +40,7 @@ Click Add platform dropdown, and select Slack option.
 
 [![Image 10](https://assets-global.website-files.com/633705de6adaa38599d8e258/6500c191387a00b2b474e1b3_install-5.svg)![Image 11](https://assets-global.website-files.com/633705de6adaa38599d8e258/650214f73dc8a48ae4075f8f_magnifier.svg)](#)
 
-Click Add to Slack button to add Cloud Slack integration to your Slack workspace.
+Click Add to Slack button to add Cloud integration for Slack to your Slack workspace.
 
 5.
 

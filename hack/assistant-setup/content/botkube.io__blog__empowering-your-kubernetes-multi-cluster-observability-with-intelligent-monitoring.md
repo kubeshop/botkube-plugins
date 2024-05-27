@@ -23,7 +23,7 @@ Discover how Botkube optimizes multi-cluster Kubernetes observability with autom
 *   [Conclusion](#conclusion)
 *   [Getting Started with Botkube Today](#getting-started-with-botkube-today)
 
-#### Manage your Kubernetes Clusters Directly in Slack and Microsoft Teams!
+#### Start Using Botkube AI Assistant Today!
 
 #### Manage your Kubernetes Clusters Directly in Slack and Microsoft Teams!
 
@@ -64,6 +64,4 @@ Botkube offers a comprehensive solution for enhancing multi-cluster Kubernetes o
 Getting Started with Botkube Today
 ----------------------------------
 
-[Try it for yourself](https://app.botkube.io/)! Follow our step-by-step [tutorial](https://botkube.io/blog/maximize-your-devops-teams-efficiency-with-botkube-and-microsoft-teams) to set up Botkube using our web app. We're excited to hear how you use Botkube. Create a support ticket directly in the dashboard, share your stories with us in the [Botkube Slack community](https://join.botkube.io/). We’ll even send you some cool swag as a thank you.
-
-‍
+[Try it for yourself](https://app.botkube.io/). Follow our step-by-step [tutorial](https://botkube.io/blog/maximize-your-devops-teams-efficiency-with-botkube-and-microsoft-teams) to set up Botkube using our web app. We're excited to hear how you use Botkube. Create a support ticket directly in the dashboard, share your stories with us in the [Botkube Slack community](https://join.botkube.io/). We’ll even send you some cool swag as a thank you.

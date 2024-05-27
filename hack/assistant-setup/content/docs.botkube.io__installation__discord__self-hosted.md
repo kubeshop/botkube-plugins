@@ -3,7 +3,7 @@ Title: Discord for self-hosted Botkube | Botkube
 URL Source: https://docs.botkube.io/installation/discord/self-hosted
 
 Markdown Content:
-Version: 1.10
+Version: 1.11
 
 Prerequisites[​](#prerequisites "Direct link to Prerequisites")
 ---------------------------------------------------------------
@@ -92,7 +92,7 @@ Follow the first 4 mins of this [Video Tutorial](https://youtu.be/8o25pRbXdFw) t
 
 To deploy Botkube agent in your cluster, run:
 
-    export CLUSTER_NAME={cluster_name}export ALLOW_KUBECTL={allow_kubectl}botkube install --version v1.10.0 \--set communications.default-group.discord.enabled=true \--set communications.default-group.discord.channels.default.id=${DISCORD_CHANNEL_ID} \--set communications.default-group.discord.botID=${DISCORD_BOT_ID} \--set communications.default-group.discord.token=${DISCORD_TOKEN} \--set settings.clusterName=${CLUSTER_NAME} \--set 'executors.k8s-default-tools.botkube/kubectl.enabled'=${ALLOW_KUBECTL}
+    export CLUSTER_NAME={cluster_name}export ALLOW_KUBECTL={allow_kubectl}botkube install --version v1.11.0 \--set communications.default-group.discord.enabled=true \--set communications.default-group.discord.channels.default.id=${DISCORD_CHANNEL_ID} \--set communications.default-group.discord.botID=${DISCORD_BOT_ID} \--set communications.default-group.discord.token=${DISCORD_TOKEN} \--set settings.clusterName=${CLUSTER_NAME} \--set 'executors.k8s-default-tools.botkube/kubectl.enabled'=${ALLOW_KUBECTL}
 
 where:
 
@@ -102,7 +102,7 @@ where:
 *   **CLUSTER\_NAME** is the cluster name set in the incoming messages,
 *   **ALLOW\_KUBECTL** set true to allow `kubectl` command execution by Botkube on the cluster.
 
-Configuration syntax is explained [here](https://docs.botkube.io/configuration). All possible installation parameters are documented [here](https://docs.botkube.io/configuration/helm-chart-parameters).
+Configuration syntax is explained [here](https://docs.botkube.io/self-hosted-configuration). All possible installation parameters are documented [here](https://docs.botkube.io/self-hosted-configuration/helm-chart-parameters).
 
 Send `@Botkube ping` in the channel to see if Botkube is running and responding.
 

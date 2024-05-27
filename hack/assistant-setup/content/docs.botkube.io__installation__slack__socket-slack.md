@@ -1,4 +1,4 @@
-Title: Socket Slack App | Botkube
+Title: App for Socket Slack | Botkube
 
 URL Source: https://docs.botkube.io/installation/slack/socket-slack
 
@@ -12,22 +12,22 @@ Prerequisites[​](#prerequisites "Direct link to Prerequisites")
 *   Access to Kubernetes cluster
 *   Slack Workspace admin access
 
-Install Socket Slack App in Your Slack workspace[​](#install-socket-slack-app-in-your-slack-workspace "Direct link to Install Socket Slack App in Your Slack workspace")
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Install app for Socket Slack in Your Slack workspace[​](#install-app-for-socket-slack-in-your-slack-workspace "Direct link to Install app for Socket Slack in Your Slack workspace")
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Botkube uses interactive messaging to provide better experience. Interactive messaging needs a Slack App with Socket Mode enabled and currently this is not suitable for Slack App Directory listing. For this reason, you need to create a Slack App in your own Slack workspace and use it for Botkube deployment.
+Botkube uses interactive messaging to provide better experience. Interactive messaging needs an app for Slack with Socket Mode enabled and currently this is not suitable for Slack App Directory listing. For this reason, you need to create an app for Slack in your own Slack workspace and use it for Botkube deployment.
 
-danger
+warning
 
-**Multi-cluster caveat:** The architecture of socket-based Slack apps has a limitation on the routing of executor commands. If you would like to use [Botkube executors](https://docs.botkube.io/configuration/executor/) (e.g. kubectl commands) and have multiple Kubernetes clusters, you need to create and install a Botkube Slack app for each cluster. This is required so that the Slack to Botkube connections go to the right place. We recommend you set the name of each app to reflect the cluster it will connect to in the next steps.
+**Multi-cluster caveat:** The architecture of socket-based apps for Slack has a limitation on the routing of executor commands. If you would like to use [Botkube executors](https://docs.botkube.io/plugins/) (e.g. kubectl commands) and have multiple Kubernetes clusters, you need to create and install a Botkube App for Slack for each cluster. This is required so that the Slack to Botkube connections go to the right place. We recommend you set the name of each app to reflect the cluster it will connect to in the next steps.
 
-To learn more about the Slack Socket API limitation, see the [comment](https://github.com/slackapi/bolt-js/issues/1263#issuecomment-1006372826) in the official Slack bot framework repository.
+To learn more about the Slack Socket API limitation, see the [comment](https://github.com/slackapi/bolt-js/issues/1263#issuecomment-1006372826) in the official bot for Slack framework repository.
 
-The [Botkube Cloud App for Slack](#botkube-cloud-slack-app) does not have this limitation.
+The [Botkube Cloud App for Slack](https://docs.botkube.io/installation/slack/cloud-slack) does not have this limitation.
 
-Follow the steps below to create and install Botkube Slack app to your Slack workspace.
+Follow the steps below to create and install Botkube App for Slack to your Slack workspace.
 
-### Create Slack app[​](#create-slack-app "Direct link to Create Slack app")
+### Create app for Slack[​](#create-app-for-slack "Direct link to Create app for Slack")
 
 1.  Go to [Slack App console](https://api.slack.com/apps) to create an application.
     
@@ -52,7 +52,7 @@ Follow the steps below to create and install Botkube Slack app to your Slack wor
 
 Once the application is created, you will be redirected to application details page. Press the **Install your app** button, select the workspace and click **Allow to finish installation**.
 
-![Image 3: Install Slack App](https://docs.botkube.io/assets/images/slack_install_app-0c2fea83804d9a29ffe593d491d699c5.png)
+![Image 3: Install App for Slack](https://docs.botkube.io/assets/images/slack_install_app-0c2fea83804d9a29ffe593d491d699c5.png)
 
 ### Obtain Bot Token[​](#obtain-bot-token "Direct link to Obtain Bot Token")
 
@@ -60,16 +60,16 @@ Follow the steps to obtain the Bot Token:
 
 1.  Select **OAuth & Permissions** section on the left sidebar. On this page you can copy the bot token which starts with `xoxb...`.
     
-    ![Image 4: Retrieve Slack Bot Token](https://docs.botkube.io/assets/images/slack_retrieve_bot_token-98639453c7d18970dca8a4727a1c149e.png)
+    ![Image 4: Retrieve Bot for Slack Token](https://docs.botkube.io/assets/images/slack_retrieve_bot_token-98639453c7d18970dca8a4727a1c149e.png)
     
-2.  Export Slack Bot Token as follows:
+2.  Export Bot for Slack Token as follows:
     
         export SLACK_API_BOT_TOKEN="{botToken}"
     
 
 ### Generate and obtain App-Level Token[​](#generate-and-obtain-app-level-token "Direct link to Generate and obtain App-Level Token")
 
-Slack App with Socket Mode requires an App-Level Token for the websocket connection.
+App for Slack with Socket Mode requires an App-Level Token for the websocket connection.
 
 Follow the steps to generate an App-Level Token:
 
@@ -95,7 +95,7 @@ Install Botkube in Kubernetes cluster[​](#install-botkube-in-kubernetes-cluste
 
 To deploy Botkube agent in your cluster, run:
 
-    export CLUSTER_NAME={cluster_name}export ALLOW_KUBECTL={allow_kubectl}export SLACK_CHANNEL_NAME={channel_name}botkube install --version v1.10.0 \--set communications.default-group.socketSlack.enabled=true \--set communications.default-group.socketSlack.channels.default.name=${SLACK_CHANNEL_NAME} \--set communications.default-group.socketSlack.appToken=${SLACK_API_APP_TOKEN} \--set communications.default-group.socketSlack.botToken=${SLACK_API_BOT_TOKEN} \--set settings.clusterName=${CLUSTER_NAME} \--set 'executors.k8s-default-tools.botkube/kubectl.enabled'=${ALLOW_KUBECTL}
+    export CLUSTER_NAME={cluster_name}export ALLOW_KUBECTL={allow_kubectl}export SLACK_CHANNEL_NAME={channel_name}botkube install --version v1.11.0 \--set communications.default-group.socketSlack.enabled=true \--set communications.default-group.socketSlack.channels.default.name=${SLACK_CHANNEL_NAME} \--set communications.default-group.socketSlack.appToken=${SLACK_API_APP_TOKEN} \--set communications.default-group.socketSlack.botToken=${SLACK_API_BOT_TOKEN} \--set settings.clusterName=${CLUSTER_NAME} \--set 'executors.k8s-default-tools.botkube/kubectl.enabled'=${ALLOW_KUBECTL}
 
 where:
 
@@ -105,7 +105,7 @@ where:
 *   **CLUSTER\_NAME** is the cluster name set in the incoming messages
 *   **ALLOW\_KUBECTL** set true to allow `kubectl` command execution by Botkube on the cluster.
 
-Configuration syntax is explained [here](https://docs.botkube.io/configuration). All possible installation parameters are documented [here](https://docs.botkube.io/configuration/helm-chart-parameters).
+Configuration syntax is explained [here](https://docs.botkube.io/self-hosted-configuration). All possible installation parameters are documented [here](https://docs.botkube.io/self-hosted-configuration/helm-chart-parameters).
 
 Send `@Botkube ping` in the channel to see if Botkube is running and responding.
 

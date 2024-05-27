@@ -1,14 +1,17 @@
-Title: Architecture | Botkube
+Title: Botkube
 
 URL Source: https://docs.botkube.io/architecture/
 
 Markdown Content:
+Architecture
+------------
+
 This document describes high-level Botkube architecture, all components in the system and interactions between them.
 
 Botkube is split into two main parts:
 
 *   Botkube agent: Botkube binary that serves as a bridge between communication platforms (e.g. Slack, Discord) and Botkube plugins (sources and executors).
-*   [Botkube plugins](https://docs.botkube.io/plugin/): The executable binaries that communicate with Botkube agent over an RPC interface. Botkube supports two types of plugins, respectively called Source plugins and Executor plugins.
+*   [Botkube plugins](https://docs.botkube.io/plugins/): The executable binaries that communicate with Botkube agent over an RPC interface. Botkube supports two types of plugins, respectively called Source plugins and Executor plugins.
 
 Components[​](#components "Direct link to Components")
 ------------------------------------------------------

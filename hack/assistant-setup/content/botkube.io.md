@@ -62,25 +62,59 @@ Developer Advocate
 
 Botkube
 
-Latest Blog Post
+![Image 5: Kubeshop developer](https://botkube.io/)
+
+![Image 6: Kubeshop Product manager](https://botkube.io/)
+
+![Image 7: Kubeshop Product manager](https://botkube.io/)
+
+Latest Blogposts
 ----------------
 
-![Image 5](https://assets-global.website-files.com/633705de6adaa38599d8e258/64dbb86f74cb6622225312c2_quote-icon.svg)
+![Image 8](https://assets-global.website-files.com/633705de6adaa38599d8e258/64dbb86f74cb6622225312c2_quote-icon.svg)![Image 9](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/664fa05091368be18015f77e_Kubetoolslogo.jpg)
+
+BotKube: The Ultimate Tool for #Kubernetes Alerts and Notifications
+
+![Image 10: Kubeshop CTO Ole Lensmar](https://botkube.io/)
+
+Kube Tools
+
+Kubernetes Tool Rating Site
+
+![Image 11](https://assets-global.website-files.com/633705de6adaa38599d8e258/64dbb86f74cb6622225312c2_quote-icon.svg)![Image 12](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/664f9effad81585bbb1ac0c1_quadanow_logo.jpg)
+
+I love Botkube! I've used it since I can remember!
+
+![Image 13: Kubeshop CTO Ole Lensmar](https://botkube.io/)
+
+Arton Demaku
+
+DevOps Engineer
+
+American Association for Accreditation of Ambulatory Surgery Facilities (AAAASF)
+
+![Image 14](https://assets-global.website-files.com/633705de6adaa38599d8e258/64dbb86f74cb6622225312c2_quote-icon.svg)![Image 15](https://botkube.io/)
 
 For me, monitoring health and performance of the infrastructure in realtime was done with the help of Botkube. Botkube provided me security features such as unauthorized access attempts.
 
-![Image 6](https://assets-global.website-files.com/633705de6adaa38599d8e258/64dbb86f74cb6622225312c2_quote-icon.svg)
+![Image 16: Kubeshop CTO Ole Lensmar](https://botkube.io/)
+
+![Image 17](https://assets-global.website-files.com/633705de6adaa38599d8e258/64dbb86f74cb6622225312c2_quote-icon.svg)![Image 18](https://botkube.io/)
 
 The advantages of BotKube are its versatility and efficiency in managing and monitoring Kubernetes clusters. It offers seamless integration with various messaging platforms and provides real-time alerts and notifications. Its appeal is enhanced by Its user-friendly interface, and extensive customization options
 
-![Image 7](https://assets-global.website-files.com/633705de6adaa38599d8e258/64dbb86f74cb6622225312c2_quote-icon.svg)
+![Image 19: Kubeshop CTO Ole Lensmar](https://botkube.io/)
+
+![Image 20](https://assets-global.website-files.com/633705de6adaa38599d8e258/64dbb86f74cb6622225312c2_quote-icon.svg)![Image 21](https://botkube.io/)
 
 “Perfect! When i have the repo i will write here, thank you very much for the support! I really like this project!”
+
+![Image 22: Kubeshop CTO Ole Lensmar](https://botkube.io/)
 
 Stay in the Loop
 ----------------
 
-![Image 8: Kusk Kubernetes ](https://assets-global.website-files.com/633705de6adaa38599d8e258/636d3117b8612105c60e0bd9_botkube-front-right.svg)
+![Image 23: Kusk Kubernetes ](https://assets-global.website-files.com/633705de6adaa38599d8e258/636d3117b8612105c60e0bd9_botkube-front-right.svg)
 
 Join the Botkube Community in one of these channels
 

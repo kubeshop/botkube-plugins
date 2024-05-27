@@ -9,16 +9,14 @@ Markdown Content:
 
 [![Image 1: Botkube Logo](https://docs.botkube.io/images/botkube-black.svg) **Botkube**](https://docs.botkube.io/)[Documentation](https://docs.botkube.io/)[Community](https://docs.botkube.io/community/contribute/)
 
-[1.10](https://docs.botkube.io/)
+[1.11](https://docs.botkube.io/)
 
 *   [Unreleased üöß](https://docs.botkube.io/next/)
-*   [1.10](https://docs.botkube.io/)
+*   [1.11](https://docs.botkube.io/)
+*   [1.10](https://docs.botkube.io/1.10/)
 *   [1.9](https://docs.botkube.io/1.9/)
 *   [1.8](https://docs.botkube.io/1.8/)
 *   [1.7](https://docs.botkube.io/1.7/)
-*   [1.6](https://docs.botkube.io/1.6/)
-*   [1.5](https://docs.botkube.io/1.5/)
-*   [1.4](https://docs.botkube.io/1.4/)
 *   * * *
     
 *   [All versions](https://docs.botkube.io/versions)
@@ -46,13 +44,13 @@ Thanks to all contributors for making Open Source Software a better place! ‚ù§Ô∏
 
 [mszostok](https://github.com/mszostok "mszostok")
 
-166 commits
+171 commits
 
 [![Image 4: pkosiec](https://avatars.githubusercontent.com/u/7155799?v=4)](https://github.com/pkosiec "pkosiec")
 
 [pkosiec](https://github.com/pkosiec "pkosiec")
 
-149 commits
+154 commits
 
 [![Image 5: huseyinbabal](https://avatars.githubusercontent.com/u/1237982?v=4)](https://github.com/huseyinbabal "huseyinbabal")
 
@@ -138,45 +136,45 @@ Thanks to all contributors for making Open Source Software a better place! ‚ù§Ô∏
 
 3 commits
 
-[![Image 19: sgandon](https://avatars.githubusercontent.com/u/783286?v=4)](https://github.com/sgandon "sgandon")
+[![Image 19: testwill](https://avatars.githubusercontent.com/u/8717479?v=4)](https://github.com/testwill "testwill")
+
+[testwill](https://github.com/testwill "testwill")
+
+2 commits
+
+[![Image 20: sgandon](https://avatars.githubusercontent.com/u/783286?v=4)](https://github.com/sgandon "sgandon")
 
 [sgandon](https://github.com/sgandon "sgandon")
 
 2 commits
 
-[![Image 20: vaijab](https://avatars.githubusercontent.com/u/1308018?v=4)](https://github.com/vaijab "vaijab")
+[![Image 21: vaijab](https://avatars.githubusercontent.com/u/1308018?v=4)](https://github.com/vaijab "vaijab")
 
 [vaijab](https://github.com/vaijab "vaijab")
 
 2 commits
 
-[![Image 21: slalwani97](https://avatars.githubusercontent.com/u/29499601?v=4)](https://github.com/slalwani97 "slalwani97")
+[![Image 22: slalwani97](https://avatars.githubusercontent.com/u/29499601?v=4)](https://github.com/slalwani97 "slalwani97")
 
 [slalwani97](https://github.com/slalwani97 "slalwani97")
 
 2 commits
 
-[![Image 22: beefcheeks](https://avatars.githubusercontent.com/u/4133158?v=4)](https://github.com/beefcheeks "beefcheeks")
+[![Image 23: beefcheeks](https://avatars.githubusercontent.com/u/4133158?v=4)](https://github.com/beefcheeks "beefcheeks")
 
 [beefcheeks](https://github.com/beefcheeks "beefcheeks")
 
 2 commits
 
-[![Image 23: rajinator](https://avatars.githubusercontent.com/u/26853703?v=4)](https://github.com/rajinator "rajinator")
+[![Image 24: rajinator](https://avatars.githubusercontent.com/u/26853703?v=4)](https://github.com/rajinator "rajinator")
 
 [rajinator](https://github.com/rajinator "rajinator")
 
 2 commits
 
-[![Image 24: Lion916](https://avatars.githubusercontent.com/u/46153551?v=4)](https://github.com/Lion916 "Lion916")
+[![Image 25: Lion916](https://avatars.githubusercontent.com/u/46153551?v=4)](https://github.com/Lion916 "Lion916")
 
 [Lion916](https://github.com/Lion916 "Lion916")
-
-2 commits
-
-[![Image 25: hellozee](https://avatars.githubusercontent.com/u/12135951?v=4)](https://github.com/hellozee "hellozee")
-
-[hellozee](https://github.com/hellozee "hellozee")
 
 2 commits
 
@@ -186,11 +184,11 @@ Thanks to all contributors for making Open Source Software a better place! ‚ù§Ô∏
 
 2 commits
 
-[![Image 27: vinayakshnd](https://avatars.githubusercontent.com/u/4953411?v=4)](https://github.com/vinayakshnd "vinayakshnd")
+[![Image 27: hellozee](https://avatars.githubusercontent.com/u/12135951?v=4)](https://github.com/hellozee "hellozee")
 
-[vinayakshnd](https://github.com/vinayakshnd "vinayakshnd")
+[hellozee](https://github.com/hellozee "hellozee")
 
-1 commits
+2 commits
 
 [![Image 28: vaibhavp](https://avatars.githubusercontent.com/u/12821749?v=4)](https://github.com/vaibhavp "vaibhavp")
 
@@ -276,45 +274,45 @@ Thanks to all contributors for making Open Source Software a better place! ‚ù§Ô∏
 
 1 commits
 
-[![Image 42: kichloo](https://avatars.githubusercontent.com/u/31816531?v=4)](https://github.com/kichloo "kichloo")
+[![Image 42: vinayakshnd](https://avatars.githubusercontent.com/u/4953411?v=4)](https://github.com/vinayakshnd "vinayakshnd")
+
+[vinayakshnd](https://github.com/vinayakshnd "vinayakshnd")
+
+1 commits
+
+[![Image 43: kichloo](https://avatars.githubusercontent.com/u/31816531?v=4)](https://github.com/kichloo "kichloo")
 
 [kichloo](https://github.com/kichloo "kichloo")
 
 1 commits
 
-[![Image 43: voriol](https://avatars.githubusercontent.com/u/6683852?v=4)](https://github.com/voriol "voriol")
+[![Image 44: voriol](https://avatars.githubusercontent.com/u/6683852?v=4)](https://github.com/voriol "voriol")
 
 [voriol](https://github.com/voriol "voriol")
 
 1 commits
 
-[![Image 44: wangyangjun](https://avatars.githubusercontent.com/u/3423330?v=4)](https://github.com/wangyangjun "wangyangjun")
+[![Image 45: wangyangjun](https://avatars.githubusercontent.com/u/3423330?v=4)](https://github.com/wangyangjun "wangyangjun")
 
 [wangyangjun](https://github.com/wangyangjun "wangyangjun")
 
 1 commits
 
-[![Image 45: aslafy-z](https://avatars.githubusercontent.com/u/8191198?v=4)](https://github.com/aslafy-z "aslafy-z")
+[![Image 46: aslafy-z](https://avatars.githubusercontent.com/u/8191198?v=4)](https://github.com/aslafy-z "aslafy-z")
 
 [aslafy-z](https://github.com/aslafy-z "aslafy-z")
 
 1 commits
 
-[![Image 46: atharwa-24](https://avatars.githubusercontent.com/u/54115798?v=4)](https://github.com/atharwa-24 "atharwa-24")
+[![Image 47: atharwa-24](https://avatars.githubusercontent.com/u/54115798?v=4)](https://github.com/atharwa-24 "atharwa-24")
 
 [atharwa-24](https://github.com/atharwa-24 "atharwa-24")
 
 1 commits
 
-[![Image 47: gmkumar2005](https://avatars.githubusercontent.com/u/1712742?v=4)](https://github.com/gmkumar2005 "gmkumar2005")
+[![Image 48: gmkumar2005](https://avatars.githubusercontent.com/u/1712742?v=4)](https://github.com/gmkumar2005 "gmkumar2005")
 
 [gmkumar2005](https://github.com/gmkumar2005 "gmkumar2005")
-
-1 commits
-
-[![Image 48: testwill](https://avatars.githubusercontent.com/u/8717479?v=4)](https://github.com/testwill "testwill")
-
-[testwill](https://github.com/testwill "testwill")
 
 1 commits
 

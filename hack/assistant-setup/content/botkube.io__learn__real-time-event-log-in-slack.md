@@ -37,9 +37,7 @@ Transform Your Kubernetes Workflow
 
 Botkube's Slack integration supercharges your Kubernetes operations. Experience increased transparency, accelerated troubleshooting, and a team that learns together.
 
-**Get started with Botkube today and see the difference!**
-
-‍
+**Get started with Botkube today and see the difference.**
 
 ### About Botkube
 

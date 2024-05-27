@@ -26,7 +26,7 @@ This tutorial will guide you through using Botkube to monitor resource usage and
 *   [Analyzing and Acting on the Data](#analyzing-and-acting-on-the-data)
 *   [Conclusion](#conclusion)
 
-#### Manage your Kubernetes Clusters Directly in Slack and Microsoft Teams!
+#### Start Using Botkube AI Assistant Today!
 
 #### Get started with Botkube Cloud
 

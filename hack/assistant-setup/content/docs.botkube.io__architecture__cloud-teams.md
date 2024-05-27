@@ -1,4 +1,4 @@
-Title: Cloud Teams connections overview | Botkube
+Title: Botkube app for Microsoft Teams | Botkube
 
 URL Source: https://docs.botkube.io/architecture/cloud-teams
 
@@ -29,7 +29,7 @@ Components details
 Agent[​](#agent "Direct link to Agent")
 ---------------------------------------
 
-The Botkube Agent Docker image is hosted on the GitHub Container registry, which uses the package namespace [https://ghcr.io.](https://ghcr.io./) The image format link:
+The Botkube Agent Docker image is hosted on the GitHub Container registry, which uses the package namespace [https://ghcr.io](https://ghcr.io/). The image format link:
 
 *   [`ghcr.io/kubeshop/botkube:{botkube_version}`](https://github.com/kubeshop/botkube/pkgs/container/botkube), e.g., `ghcr.io/kubeshop/botkube:v1.8.0`
 
@@ -49,7 +49,7 @@ During startup, the Botkube Agent downloads plugins index and all enabled plugin
 
 Each plugin may define required external dependencies that are downloaded by the [Plugin manager](#plugin-manager) at Agent startup. For now, those dependencies are taken from the official sources and are not mirrored to the Botkube Cloud registry. Here are the links that describe external dependencies for each officially supported plugin:
 
-*   [`kubectl`](https://docs.botkube.io/configuration/executor/kubectl) executor: [https://github.com/kubeshop/botkube/blob/release-1.9/internal/executor/kubectl/executor.go#L33-L42](https://github.com/kubeshop/botkube/blob/release-1.9/internal/executor/kubectl/executor.go#L33-L42)
+*   [`kubectl`](https://docs.botkube.io/plugins/kubectl) executor: [https://github.com/kubeshop/botkube/blob/release-1.9/internal/executor/kubectl/executor.go#L33-L42](https://github.com/kubeshop/botkube/blob/release-1.9/internal/executor/kubectl/executor.go#L33-L42)
 
 `helm` plugin:
 
@@ -80,7 +80,7 @@ If a plugin is not listed here, then it doesn't have any external dependencies.
 
 ### Analytics[​](#analytics "Direct link to Analytics")
 
-The Agent uses the official [Go SDK](https://github.com/segmentio/analytics-go) to send anonymous analytics to [https://segment.io.](https://segment.io./) This library is sending a POST request on the `https://api.segment.io` endpoint.
+The Agent uses the official [Go SDK](https://github.com/segmentio/analytics-go) to send anonymous analytics to [https://segment.io](https://segment.io/). This library is sending a POST request on the `https://api.segment.io` endpoint.
 
 ### Control-plane connection[​](#control-plane-connection "Direct link to Control-plane connection")
 

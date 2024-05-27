@@ -8,10 +8,6 @@ Understanding YAML Commenting for Better Kubernetes Management
 
 ![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65fa0b549adc75e0bdbbd27b_LEARN_TN_Definitions%20(9).png)
 
-Last updated
-
-March 19, 2024
-
 ![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64a86fdda4d8d06ce598598e_evan%20image.jpg)
 
 Evan Witmer
@@ -67,8 +63,6 @@ While YAML comments aid collaboration, tools like Botkube enhance the way your t
 ------------------
 
 Comments may seem like simple additions, but in the world of Kubernetes configuration, they serve a vital role in ensuring both code clarity and collaboration effectiveness. Using them intelligently—and considering tools like Botkube to maximize their potential—empowers teams to seamlessly manage complex Kubernetes landscapes.
-
-‍
 
 ### About Botkube
 

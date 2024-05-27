@@ -17,82 +17,90 @@ Learn how Botkube can streamline troubleshooting and help overcome common Kubern
 
 ### Table of Contents
 
-*   [What is Kubernetes Pod Security Admission (PSA)?](#what-is-kubernetes-pod-security-admission-psa--2)
-*   [Common Challenges with Pod Security Policies](#common-challenges-with-pod-security-policies-2)
-*   [Getting Started with Kubernetes PSA Troubleshooting Example](#getting-started-with-kubernetes-psa-troubleshooting-example-2)
-*   [Enforce Pod Security Standards with Namespace Labels](#enforce-pod-security-standards-with-namespace-labels-2)
-*   [Summary](#summary-2)
-*   [Try Out Botkube for Kubernetes Security Best Practices Today](#try-out-botkube-for-kubernetes-security-best-practices-today-2)
-
-#### Manage your Kubernetes Clusters Directly in Slack and Microsoft Teams!
+*   [What is Kubernetes Pod Security Admission (PSA)?](#what-is-kubernetes-pod-security-admission-psa-)
+*   [Common Challenges with Pod Security Policies](#common-challenges-with-pod-security-policies)
+*   [Getting Started with Kubernetes PSA Troubleshooting Example](#getting-started-with-kubernetes-psa-troubleshooting-example)
+*   [Enforce Pod Security Standards with Namespace Labels](#enforce-pod-security-standards-with-namespace-labels)
+*   [Summary](#summary)
+*   [Try Out Botkube for Kubernetes Security Best Practices Today](#try-out-botkube-for-kubernetes-security-best-practices-today)
 
 #### Start Using Botkube AI Assistant Today!
 
-Kubernetes is a powerful container orchestration platform, but its complexity can leave even seasoned developers scratching their heads. One particularly tricky area is \[Pod Security Admission (PSA)\](https://kubernetes.io/docs/concepts/security/pod-security-admission/). While PSA plays a crucial role in cluster security, it can also be the source of unexpected deployment failures. That's where the AI-powered Botkube Assistant, specifically designed for Kubernetes, comes to the rescue. Botkube understands the complexities of your cluster and guides you towards solutions in clear, simple language.
+#### Start Using Botkube AI Assistant Today!
+
+Kubernetes is a powerful container orchestration platform, but its complexity can leave even seasoned developers scratching their heads. One particularly tricky area is [Pod Security Admission (PSA)](https://kubernetes.io/docs/concepts/security/pod-security-admission/). While PSA plays a crucial role in cluster security, it can also be the source of unexpected deployment failures. That's where the AI-powered Botkube Assistant, specifically designed for Kubernetes, comes to the rescue. Botkube understands the complexities of your cluster and guides you towards solutions in clear, simple language.
 
 In this blog post, we'll demonstrate how Botkube can streamline troubleshooting and help you overcome common PSA-related issues.
 
-\## What is Kubernetes Pod Security Admission (PSA)?
+What is Kubernetes Pod Security Admission (PSA)?
+------------------------------------------------
 
-\- The Pod Security Admission Controller (PSA) acts as a gatekeeper within your Kubernetes cluster. It evaluates Pod specifications against predefined security policies to ensure your applications adhere to security best practices. Think of PSA as your cluster's security guard, making sure that potentially risky deployments are blocked before they can cause problems.
+*   The Pod Security Admission Controller (PSA) acts as a gatekeeper within your Kubernetes cluster. It evaluates Pod specifications against predefined security policies to ensure your applications adhere to security best practices. Think of PSA as your cluster's security guard, making sure that potentially risky deployments are blocked before they can cause problems.
 
-\## Common Challenges with Pod Security Policies
+Common Challenges with Pod Security Policies
+--------------------------------------------
 
-\- **\*\*Privileged Containers\*\***: Some applications may demand privileged access, but this can expose your cluster to vulnerabilities. Pod Security Admission Controller can enforce strict policies to prevent privileged containers unless absolutely necessary.
+\- ****Privileged Containers****: Some applications may demand privileged access, but this can expose your cluster to vulnerabilities. Pod Security Admission Controller can enforce strict policies to prevent privileged containers unless absolutely necessary.
 
-\- \*\*Host Network/Ports\*\*: Allowing pods direct access to your host network or specific privileged ports increases attack vectors. PSA can restrict this access.
+*   **Host Network/Ports**: Allowing pods direct access to your host network or specific privileged ports increases attack vectors. PSA can restrict this access.
+    
+*   **Root User:** Running containers as the root user is a major security risk. PSA can block or warn about pods attempting to run as root.
+    
+*   **Volume Mounts**: PSA can be used to prevent your containers from accessing sensitive directories on your host system for enhanced protection.
+    
+*   **Capabilities**: Linux capabilities give containers a wide range of permissions. PSA can help you enforce a 'least privilege' model by dropping unnecessary capabilities and minimizing risks.
+    
 
-\- \*\*Root User:\*\* Running containers as the root user is a major security risk. PSA can block or warn about pods attempting to run as root.
+Getting Started with Kubernetes PSA Troubleshooting Example
+-----------------------------------------------------------
 
-\- \*\*Volume Mounts\*\*: PSA can be used to prevent your containers from accessing sensitive directories on your host system for enhanced protection.
+Deploying applications in Kubernetes can sometimes lead to unexpected hiccups when the Pod Security Admission (PSA) controller steps in. Understanding why your Pod fails to launch and how to quickly resolve these security-related errors is crucial for smooth operations. In this tutorial, we'll walk you through a real-world scenario of a deployment blocked by PSA. We'll demonstrate how Botkube’s AI assistant can help you:
 
-\- \*\*Capabilities\*\*: Linux capabilities give containers a wide range of permissions. PSA can help you enforce a 'least privilege' model by dropping unnecessary capabilities and minimizing risks.
-
-\## Getting Started with Kubernetes PSA Troubleshooting Example
-
-Deploying applications in Kubernetes can sometimes lead to unexpected hiccups when the Pod Security Admission (PSA) controller steps in. Understanding why your Pod fails to launch and how to quickly resolve these security-related errors is crucial for smooth operations. In this tutorial, we'll walk you through a real-world scenario of a deployment blocked by PSA.  We'll demonstrate how Botkube’s AI assistant can help you:
-
-\- Pinpoint the exact reasons behind the deployment failure.
-
-\- Understand the relevant k8s security concepts.
-
-\- Guide you through fixing the issues step-by-step.
+*   Pinpoint the exact reasons behind the deployment failure.
+    
+*   Understand the relevant k8s security concepts.
+    
+*   Guide you through fixing the issues step-by-step.
+    
 
 Let's get started!
 
-\### Prerequisites
+### Prerequisites
 
-\- Kubernetes Cluster with PSA: Consult your provider's documentation on enabling the Pod Security Admission Controller.
+*   Kubernetes Cluster with PSA: Consult your provider's documentation on enabling the Pod Security Admission Controller.
+    
+*   [Botkube Instance](http://app.botkube.io/): Follow the installation guide in the [Botkube documentation](https://docs.botkube.io/examples-and-tutorials/getstarted).
+    
 
-\- \[Botkube Instance\](http://app.botkube.io/): Follow the installation guide in the \[Botkube documentation\](https://docs.botkube.io/examples-and-tutorials/getstarted).
-
-\### A Note on Environments
+### A Note on Environments
 
 To fully explore the examples in this tutorial, you'll need a few things in place:
 
-\- \*\*Kubernetes Cluster with PSA:\*\* You'll need a Kubernetes cluster where the Pod Security Admission (PSA) controller is active. If you're using a managed Kubernetes service (like GKE, EKS, or AKS), PSA is likely enabled by default. For self-managed clusters, consult your setup documentation for instructions on enabling PSA.
+*   **Kubernetes Cluster with PSA:** You'll need a Kubernetes cluster where the Pod Security Admission (PSA) controller is active. If you're using a managed Kubernetes service (like GKE, EKS, or AKS), PSA is likely enabled by default. For self-managed clusters, consult your setup documentation for instructions on enabling PSA.
 
-If you're new to Kubernetes or want to experiment without setting up a full production cluster, you can leverage a local Kubernetes environment. The official Kubernetes documentation provides a great tutorial specifically focused on deploying a local cluster with Pod Security Standards enabled: \[https://kubernetes.io/docs/concepts/security/pod-security-standards/\](https://kubernetes.io/docs/concepts/security/pod-security-standards/). This guide walks you through setting up Kind, a popular local Kubernetes tool.
+If you're new to Kubernetes or want to experiment without setting up a full production cluster, you can leverage a local Kubernetes environment. The official Kubernetes documentation provides a great tutorial specifically focused on deploying a local cluster with Pod Security Standards enabled: [https://kubernetes.io/docs/concepts/security/pod-security-standards/](https://kubernetes.io/docs/concepts/security/pod-security-standards/). This guide walks you through setting up Kind, a popular local Kubernetes tool.
 
-\- \*\*Botkube Installation\*\*: You'll want to have \[Botkube installed and connected to your Kubernetes cluster\](https://docs.botkube.io/examples-and-tutorials/getstarted). Botkube provides clear installation guides for different environments. Refer to the installation documentation for the process that best suits your setup.
+*   **Botkube Installation**: You'll want to have [Botkube installed and connected to your Kubernetes cluster](https://docs.botkube.io/examples-and-tutorials/getstarted). Botkube provides clear installation guides for different environments. Refer to the installation documentation for the process that best suits your setup.
 
-_\*Note: While exploring Botkube with a local cluster is a great way to learn, keep in mind that real-world production deployments might require additional considerations.\*_
+__Note: While exploring Botkube with a local cluster is a great way to learn, keep in mind that real-world production deployments might require additional considerations.__
 
-\## Enforce Pod Security Standards with Namespace Labels
+Enforce Pod Security Standards with Namespace Labels
+----------------------------------------------------
 
-\- Create a Namespace Manifest: Define your namespace and include the desired Pod Security Admission (PSA) labels. Here's the annotated version:
+*   Create a Namespace Manifest: Define your namespace and include the desired Pod Security Admission (PSA) labels. Here's the annotated version:
 
 <table data-hpc="" data-tab-size="8" data-paste-markdown-skip="" data-tagsearch-lang="YAML" data-tagsearch-path="NamespaceManifest-PSABotkube.yaml"><tbody><tr><td id="file-namespacemanifest-psabotkube-yaml-L1" data-line-number="1"></td><td id="file-namespacemanifest-psabotkube-yaml-LC1">---</td></tr><tr><td id="file-namespacemanifest-psabotkube-yaml-L2" data-line-number="2"></td><td id="file-namespacemanifest-psabotkube-yaml-LC2"><span>apiVersion</span>: <span>v1</span></td></tr><tr><td id="file-namespacemanifest-psabotkube-yaml-L3" data-line-number="3"></td><td id="file-namespacemanifest-psabotkube-yaml-LC3"><span>kind</span>: <span>Namespace</span></td></tr><tr><td id="file-namespacemanifest-psabotkube-yaml-L4" data-line-number="4"></td><td id="file-namespacemanifest-psabotkube-yaml-LC4"><span>metadata</span>:</td></tr><tr><td id="file-namespacemanifest-psabotkube-yaml-L5" data-line-number="5"></td><td id="file-namespacemanifest-psabotkube-yaml-LC5"><span>labels</span>:</td></tr><tr><td id="file-namespacemanifest-psabotkube-yaml-L6" data-line-number="6"></td><td id="file-namespacemanifest-psabotkube-yaml-LC6"><span>pod-security.kubernetes.io/enforce</span>: <span>restricted</span></td></tr><tr><td id="file-namespacemanifest-psabotkube-yaml-L7" data-line-number="7"></td><td id="file-namespacemanifest-psabotkube-yaml-LC7"><span>pod-security.kubernetes.io/audit</span>: <span>restricted</span></td></tr><tr><td id="file-namespacemanifest-psabotkube-yaml-L8" data-line-number="8"></td><td id="file-namespacemanifest-psabotkube-yaml-LC8"><span>pod-security.kubernetes.io/warn</span>: <span>restricted</span></td></tr><tr><td id="file-namespacemanifest-psabotkube-yaml-L9" data-line-number="9"></td><td id="file-namespacemanifest-psabotkube-yaml-LC9"><span>name</span>: <span>psa</span></td></tr></tbody></table>
 
-\- Apply the Manifest: Use kubectl to create the namespace:
+*   Apply the Manifest: Use kubectl to create the namespace:
 
 `kubectl apply -f namespace.yaml`
 
 Key points:
 
-\- Enforcement: Pods deployed in this namespace must meet the 'restricted' requirements. Violations will block pod creation.
-
-\- Audit and Warning: The 'restricted' profile is used for logging purposes, giving you insights into potential issues.
+*   Enforcement: Pods deployed in this namespace must meet the 'restricted' requirements. Violations will block pod creation.
+    
+*   Audit and Warning: The 'restricted' profile is used for logging purposes, giving you insights into potential issues.
+    
 
 Now, you’ll see that we have a very simple deployment below. It’s a shell one-liner which runs in a loop and prints data every 10 seconds. We'll deploy our simple 'sleeper' service, which is intentionally designed with potential security flaws. This will allow us to see how the Pod Security Admission controller reacts and how Botkube helps us fix it.
 
@@ -102,28 +110,30 @@ Now, you’ll see that we have a very simple deployment below. It’s a shell on
 
 ‍
 
-1\. Our deployment failed! The error messages may not be immediately clear, especially if we're not very familiar with Pod Security Admission policies.
+1.  Our deployment failed! The error messages may not be immediately clear, especially if we're not very familiar with Pod Security Admission policies.
 
 Let's call in our expert assistant, Botkube. We'll ask Botkube to analyze the error output and provide guidance on resolving the issues.
 
-2\. Now that the assistant suggested how we could fix the issue, let’s apply the changes.
-
-3\. Argh, we've fixed one thing, but another issue has cropped up! This is common in troubleshooting scenarios, especially with complex systems like Kubernetes.
+2.  Now that the assistant suggested how we could fix the issue, let’s apply the changes.
+    
+3.  Argh, we've fixed one thing, but another issue has cropped up! This is common in troubleshooting scenarios, especially with complex systems like Kubernetes.
+    
 
 Not to worry, Botkube is still here to help! We'll provide the new error messages to Botkube and get further recommendations.
 
-4\. We'll carefully follow Botkube's instructions to modify the sleeper deployment configuration. This will include adding the missing runAsUser property.
+4.  We'll carefully follow Botkube's instructions to modify the sleeper deployment configuration. This will include adding the missing runAsUser property.
+    
+5.  We've made the necessary changes, and our deployment succeeds! Our 'sleeper' service is now running in compliance with our cluster's security policies.
+    
+6.  Troubleshooting can be tedious, but Botkube made the process much smoother. Its ability to explain the underlying problems and guide us towards solutions saved us valuable time.
+    
 
-5\. We've made the necessary changes, and our deployment succeeds! Our 'sleeper' service is now running in compliance with our cluster's security policies.
-
-6\. Troubleshooting can be tedious, but Botkube made the process much smoother. Its ability to explain the underlying problems and guide us towards solutions saved us valuable time.
-
-\## Summary
+Summary
+-------
 
 The beauty of using an AI assistant like Botkube lies in its ability to streamline troubleshooting through an iterative, conversational process. Instead of poring over complex error messages or Kubernetes documentation, you can engage with Botkube as if you were explaining the problem to a knowledgeable colleague. With each interaction, it pinpoints potential issues, suggests solutions, and helps you verify those fixes. This not only saves you valuable time but also presents a fantastic opportunity to learn about Kubernetes security principles along the way. By seeing how each change addresses specific Pod Security Admission violations, you gain a deeper understanding of how to build secure and compliant deployments from the ground up.
 
-\## Try Out Botkube for Kubernetes Security Best Practices Today
+Try Out Botkube for Kubernetes Security Best Practices Today
+------------------------------------------------------------
 
-Ready to streamline your Kubernetes security practices? \[Sign up for Botkube today\](http://app.botkube.io/)—it's free to get started and can quickly empower your team to proactively monitor, manage, and secure your cluster all within your chat platform like Slack or Microsoft Teams. Join the growing community of users who simplify Kubernetes management easily with just a few clicks.
-
-‍
+Ready to streamline your Kubernetes security practices? [Sign up for Botkube today](https://app.botkube.io/)—it's free to get started and can quickly empower your team to proactively monitor, manage, and secure your cluster all within your chat platform like Slack or Microsoft Teams. Join the growing community of users who simplify Kubernetes management easily with just a few clicks.

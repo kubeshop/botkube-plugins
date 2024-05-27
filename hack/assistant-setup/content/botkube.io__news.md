@@ -6,9 +6,11 @@ Markdown Content:
 Explore the new Era of AIOps: Read the article
 
 Product
-Community
+Pricing
+Support
 Company
 Sign in
+Get Demo
 Get Started
 Thought Leadership and News
 APR 8, 2024
@@ -43,42 +45,40 @@ Kubeshop acquires Botkube, InfraCloud's popular ChatOps platform for K8s trouble
 
 InfraCloud Technologies and Kubeshop.io have signed a definitive agreement whereby Kubeshop.io has acquired a majority stake in BotKube.
 
-<
->
 Stay in the Loop
 
 Join the Botkube Community in one of these channels
 
 Subscribe to our monthly newsletter to stay up to date with all-things Botkube.
 
-Botkube is made by Kubeshop
-— a first of its kind open source accelerator focused on the cloud native ecosystem
-At Kubeshop, our mission is to build a thriving open source ecosystem and pipeline of next-generation Kubernetes products and projects.
-Get to Know Kubeshop
-The Team
-Investors
-Kubeshop Blogs
-Discord community
-Careers
-Kubeshop Github
+Botkube is made by Kubeshop  — a first of its kind open-source accelerator focused on the cloud native ecosystem
+Copyright © 2024 Kubeshop, LLC. All rights reserved.
+Privacy Policy | Terms of Service | End user license
 Botkube
+Product
 Integrations
+Case Studies
+Features
 Pricing
 Support
-Features
-Documentation
-Slack
-Github
+Docs
 Learn
-Status
+Slack
+GitHub
+2.5K
+Company
 About Us
+Events
 Blog
 News
-Events
 Contact Us
-Sign In
+Sign in
 Get Started
-Case Studies
-Copyright © 2024 Kubeshop, LLC. All rights reserved.
-Privacy Policy | Terms and Conditions | End User License Agreement
+Get to Know Kubeshop
+Careers
+The Team
+Investors
+News
+Kubeshop Github
+Kubeshop Blogs
 Explore Kubeshop Projects

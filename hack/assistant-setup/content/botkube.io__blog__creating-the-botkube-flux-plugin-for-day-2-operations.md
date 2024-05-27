@@ -24,7 +24,7 @@ From this deep dive you'll know the Zapier-like aspect of Botkube that connects 
 *   [Behind the Scenes: Developing the Botkube Flux Plugin](#behind-the-scenes-developing-the-botkube-flux-plugin)
 *   [Conclusion](#conclusion)
 
-#### Manage your Kubernetes Clusters Directly in Slack and Microsoft Teams!
+#### Start Using Botkube AI Assistant Today!
 
 #### Get started with Botkube Cloud
 
@@ -48,17 +48,13 @@ Now, let's get into the nitty-gritty of this plugin's journey. Picture yourself 
 
 ![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64f9944f5ec10d12756e4d2b_flux-get-source-git.png)
 
-‍
-
 2.  Next, let's make it mobile friendly. The secret ingredient is interactivity like buttons and select menus. ‍
 
 ![Image 3](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64f9949ad7623bfae8357d71_flux-get-source-git-btns.png)
 
 Typing or copy-pasting a long names doesn't work well. Now, you have a handy Flux client right in your pocket, ready with just a few clicks. And we are just half-way there 😈‍
 
-‍
-
-3.  Here comes the last, but unique, part that makes the difference: **support for Day 2 operations**.
+3\. Here comes the last, but unique, part that makes the difference: **support for Day 2 operations**.
 
 In our case, we stitched together three important parts: Kubernetes cluster, GitHub platform, and Flux CLI. As a result, we've provided a streamlined experience for generating a diff report in the context of GitHub pull requests and the current cluster state.
 
@@ -71,8 +67,6 @@ In our case, we stitched together three important parts: Kubernetes cluster, Git
 *   Viewing the pull request.
 
 4\. Now, when we're happy about the result, we are still missing one more part to **automate our day 2 operation.**
-
-‍
 
 Even though the diffing flow integrates with GitHub, it still requires two manual steps:
 
@@ -116,14 +110,14 @@ Manual Approach vs. Botkube Flux Plugin
 While you were reading the first part of the Flux plugin evolution, did you consider what kind of manual steps would be required without the plugin? Let's break it down:
 
 1.  Checking GitHub repository for a new pull requests.
-2.  **(One-time operation)** Downloading and installing Flux CLI on you localhost.
+2.  \*\*(One-time operation)\*\* Downloading and installing Flux CLI on you localhost.
 3.  Manually connecting to the related Kubernetes cluster.
-4.  **(One-time operation)** Cloning the repository.
+4.  \*\*(One-time operation)\*\* Cloning the repository.
 5.  Checking out the pull request.
 6.  Constructing a Flux command.
 7.  Sharing the diff report on Slack/GitHub.
 
-Even if we exclude the one-time operations, we're left with 5 steps for each new pull request. Lots of manual steps mean lots of room for human errors. Plus, all that jumping between different sites and context switching can impact your productivity. It's much better to focus on the main aspect, which is the review, and let automation handle the rest.
+‍ Even if we exclude the one-time operations, we're left with 5 steps for each new pull request. Lots of manual steps mean lots of room for human errors. Plus, all that jumping between different sites and context switching can impact your productivity. It's much better to focus on the main aspect, which is the review, and let automation handle the rest.
 
 Behind the Scenes: Developing the Botkube Flux Plugin
 -----------------------------------------------------
@@ -156,9 +150,7 @@ Thanks to embedding it, we can distribute it as a single plugin binary, and we d
 
 Under the hood we use \`go-getter\` library which has a lot of great features. If you need to download assets from different sources, we recommend that library your projects as well.
 
-‍ ‍
-
-The trickiest part was to develop GitHub Events source. The best way is to use GitHub App with the webhook approach. However, we didn't want to require you to have an external endpoint exposed from your cluster.
+‍ The trickiest part was to develop GitHub Events source. The best way is to use GitHub App with the webhook approach. However, we didn't want to require you to have an external endpoint exposed from your cluster.
 
 We started with [GitHub repository events endpoint](https://docs.github.com/en/rest/activity/events?apiVersion=2022-11-28#list-repository-events). But it turned out that even though it serves events that we are interested in, it was not meant to be used for the real-time use-cases. We still integrate with the `events` API, but it's recommended for event subscription where time is not that important. For example, getting notification about new stars on your GitHub repositories: ‍
 
@@ -166,10 +158,10 @@ We started with [GitHub repository events endpoint](https://docs.github.com/en/r
 
 ‍ To achieve our e2e goal, we decided to develop a custom polling mechanism that uses [pull request endpoint](https://docs.github.com/en/rest/pulls/pulls?apiVersion=2022-11-28#list-pull-requests). The polling mechanism forces us to be more rational about the number of calls to fit into defined rate limits. We decided on two things:
 
-1.  [Conditional requests](https://docs.github.com/en/rest/overview/resources-in-the-rest-api?apiVersion=2022-11-28#conditional-requests) because receiving a 304 response doesn't count against token rate limit.
+1.  \[Conditional requests\](https://docs.github.com/en/rest/overview/resources-in-the-rest-api?apiVersion=2022-11-28#conditional-requests) because receiving a 304 response doesn't count against token rate limit.
 2.  Adding support for GitHub App tokens. By using GitHub Apps, you can increase your maximum rate limits because multiple GitHub Apps are independent and do not share the rate limits. Where, using multiple Personal Access Tokens (PATs) for the same account will result in sharing the same rate limit.
 
-In the future, we can consider adding a token rotator that automatically switches tokens before hitting the rate limit.
+‍ In the future, we can consider adding a token rotator that automatically switches tokens before hitting the rate limit.
 
 For the [Botkube web app](https://app.botkube.io/) we will consider native integration using GitHub App, to reduce friction with the initial setup for Flux and GitHub Events plugins.
 
@@ -178,6 +170,4 @@ Conclusion
 
 The [Botkube Flux plug-in](https://botkube.io/blog/introducing-botkubes-integration-with-flux) offers valuable solutions for streamlining GitOps workflows. Its capabilities, including mobile-friendly interactivity and automated Day 2 operations support, can significantly enhance your Kubernetes management.
 
-We encourage you to explore the Botkube Flux plugin and consider integrating it into your workflows. Don't hesitate to share your feedback and ideas about Botkube. Feel free to reach out to us on [Slack](https://join.botkube.io/) or [Twitter](http://twitter.com/botkube_io).
-
-Thank you for taking the time to learn about Botkube 🙌
+We encourage you to explore the Botkube Flux plugin and consider integrating it into your workflows. Don't hesitate to share your feedback and ideas about Botkube. Feel free to reach out to us on [Slack](https://join.botkube.io/) or [X](https://twitter.com/botkube_io).
