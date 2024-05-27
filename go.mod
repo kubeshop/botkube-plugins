@@ -25,7 +25,7 @@ require (
 	github.com/honeycombio/otel-config-go v1.13.1
 	github.com/huandu/xstrings v1.4.0
 	github.com/keptn/go-utils v0.20.4
-	github.com/kubeshop/botkube v0.13.1-0.20240520120227-304528f09aeb
+	github.com/kubeshop/botkube v0.13.1-0.20240527133334-a3f727e2a30f
 	github.com/muesli/reflow v0.3.0
 	github.com/olekukonko/tablewriter v0.0.5
 	github.com/prometheus/client_golang v1.16.0
@@ -215,5 +215,3 @@ require (
 	sigs.k8s.io/kustomize/kyaml v0.14.3-0.20230601165947-6ce0bf390ce3 // indirect
 	sigs.k8s.io/structured-merge-diff/v4 v4.4.1 // indirect
 )
-
-replace github.com/kubeshop/botkube => github.com/pkosiec/botkube v0.12.5-0.20240524144006-573a14549bcf
