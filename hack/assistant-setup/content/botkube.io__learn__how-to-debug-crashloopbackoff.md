@@ -94,5 +94,3 @@ You are looking for OOMKilled logs or disconnect logs, something that would have
 At this point you have checked the last 20 lines, and tried to find a back-off restarting failed error. If neither of those show a solution, you will have to pull deployment logs. These can be easily pulled into a file with the <code>kubectl logs -f deploy/ -n </code>command.
 
 These deployment logs may show other issues from within the cluster as well. Log for the file paths of your pod and everything that is being deployed there. Look for any error with deploying messages for numbers or names. Now search that code or name of the issue and try to fix the deployment issues.
-
-‍

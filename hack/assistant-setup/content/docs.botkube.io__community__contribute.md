@@ -179,7 +179,7 @@ Create your Slack account on [Botkube](https://join.botkube.io/) workspace.
 
 To report bug or feature, use [GitHub issues](https://github.com/kubeshop/botkube/issues/new/choose).
 
-[](https://docs.botkube.io/community/contribute/release)
+[Elasticsearch notifier development](https://docs.botkube.io/community/contribute/elasticsearch-develop)
 
 *   [Contributing to documentation](#contributing-to-documentation)
 *   [Build and run Botkube from source code](#build-and-run-botkube-from-source-code)

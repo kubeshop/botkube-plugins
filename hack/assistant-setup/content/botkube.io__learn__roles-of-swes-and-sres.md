@@ -5,8 +5,6 @@ URL Source: https://botkube.io/learn/roles-of-swes-and-sres
 Markdown Content:
 Software engineers (SWEs) and site reliability engineers (SREs) play vital roles in modern software development. SWEs focus on the design, creation, and implementation of software features. On the other hand, SREs ensure the overall reliability, scalability, and performance of the systems that run this software.
 
-‍
-
 \*Just to clear things up, this article is talking about SWE as a software developer, not the SWE Organization. The [SWE Organization](https://swe.org/about-swe/) stands for the Society of Women Engineers, which is another great cause we support, just not the topic of this article. Shout out to the two great women engineers on the Botkube team, [Maria](https://www.linkedin.com/in/maria-ashby/) & [Kelly](https://www.linkedin.com/in/kellyrevenaugh/)!
 
 **Shared Tools and Distinct Focus**

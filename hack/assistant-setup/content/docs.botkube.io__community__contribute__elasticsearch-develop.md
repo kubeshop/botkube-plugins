@@ -104,7 +104,7 @@ To review if the events are properly saved in Elasticsearch, follow these steps:
         curl http://localhost:9200/$INDEX_NAME/_search\?pretty
     
 
-[](https://docs.botkube.io/community/contribute/ms-teams-develop)[Outgoing Webhook development](https://docs.botkube.io/community/contribute/webhook-develop)
+[](https://docs.botkube.io/community/contribute/)[Outgoing Webhook development](https://docs.botkube.io/community/contribute/webhook-develop)
 
 *   [Elasticsearch v8 setup](#elasticsearch-v8-setup)
     *   [Steps](#steps)

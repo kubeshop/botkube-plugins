@@ -3,7 +3,7 @@ Title: Enabling Developers | Botkube
 URL Source: https://botkube.io/solutions/enabling-developers
 
 Markdown Content:
-[![Image 1: Kusk Kubernetes ](https://assets-global.website-files.com/633705de6adaa38599d8e258/6338148fa3f8a509639804fa_botkube-logo.svg)](https://botkube.io/)
+[![Image 1](https://assets-global.website-files.com/633705de6adaa38599d8e258/6338148fa3f8a509639804fa_botkube-logo.svg)](https://botkube.io/)
 
 ![Image 2](https://assets-global.website-files.com/633705de6adaa38599d8e258/659eb8b9715d644cd037118c_Bird-with-fire-Botkube.png)
 
@@ -47,3 +47,15 @@ The advantages of BotKube are its versatility and efficiency in managing and mon
 For me, monitoring health and performance of the infrastructure in realtime was done with the help of Botkube. Botkube provided me security features such as unauthorized access attempts.
 
 ![Image 9](https://assets-global.website-files.com/633705de6adaa38599d8e258/6387cc6cd11dba9de0d3578f_botkube.gif)
+
+![Image 10: automating tests staging cluster](https://assets-global.website-files.com/633705de6adaa38599d8e258/6387ccf6ff66597d5f414815_botkube-quote-sign.svg)
+
+I love Botkube! I've used it since I can remember!
+
+![Image 11](https://assets-global.website-files.com/633705de6adaa38599d8e258/6387cc6cd11dba9de0d3578f_botkube.gif)
+
+![Image 12: automating tests staging cluster](https://assets-global.website-files.com/633705de6adaa38599d8e258/6387ccf6ff66597d5f414815_botkube-quote-sign.svg)
+
+BotKube: The Ultimate Tool for #Kubernetes Alerts and Notifications
+
+![Image 13](https://assets-global.website-files.com/633705de6adaa38599d8e258/6387cc6cd11dba9de0d3578f_botkube.gif)

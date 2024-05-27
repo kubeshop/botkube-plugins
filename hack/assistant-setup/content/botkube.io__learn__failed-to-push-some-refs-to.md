@@ -62,5 +62,3 @@ Beyond the manual troubleshooting steps, Botkube steps in to elevate your Git ex
 When the "Failed to Push Some Refs to" error strikes, Botkube promptly alerts you and your team within those channels. This eliminates the need for constant monitoring and ensures everyone is informed. Your team can then discuss solutions directly within the channel, harnessing the power of collective knowledge to diagnose and resolve the issue. Botkube even empowers you to extend your Git control with [Flux](https://botkube.io/integration/botkube-flux-kubernetes-integration) and [Argo CD](https://botkube.io/integration/argo-cd-botkube-kubernetes-integration) integrations.
 
 With Botkube as your trusty companion, tackling those pesky Git errors becomes a collaborative and efficient endeavor.
-
-‍

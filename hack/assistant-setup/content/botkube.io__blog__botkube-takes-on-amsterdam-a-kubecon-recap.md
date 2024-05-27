@@ -25,10 +25,10 @@ The Kubecon Amsterdam conference was a wild ride, filled with exciting announcem
 *   [Multi-Cloud & Hybrid](#multi-cloud-hybrid)
 *   [GitOps is the New Normal](#gitops-is-the-new-normal)
 *   [Looking to the Future](#looking-to-the-future)
-*   [Sign up now!](#sign-up-now-)
+*   [Sign up now](#sign-up-now)
 *   [Feedback](#feedback)
 
-#### Manage your Kubernetes Clusters Directly in Slack and Microsoft Teams!
+#### Start Using Botkube AI Assistant Today!
 
 Kubecon EU was a wild ride, filled with exciting announcements, insightful talks, and countless networking opportunities. As an attendee and representative of Botkube, I had the privilege of observing the latest trends in the Kubernetes space, and I am thrilled to share my experience and my top five takeaways with you.
 
@@ -88,10 +88,10 @@ While these five trends were certainly the most significant takeaways from Kubec
 
 In conclusion, Kubecon Amsterdam was an incredible experience, and I am grateful to have been a part of it. With so many exciting trends emerging, the future of Kubernetes looks brighter than ever, and I cannot wait to see what the next conference has in store.
 
-Sign up now!
-------------
+Sign up now
+-----------
 
-Get started with Botkube! Whether you're a seasoned Kubernetes pro or just getting started, Botkube has something to offer. Sign up now for free and join the community of users who are already benefiting from the power of Botkube. Don't miss out on this opportunity to streamline your K8s workflow and take your skills to the next level - try Botkube today!
+Get started with Botkube! Whether you're a seasoned Kubernetes pro or just getting started, Botkube has something to offer. Sign up now for free and join the community of users who are already benefiting from the power of Botkube. Don't miss out on this opportunity to streamline your K8s workflow and take your skills to the next level - try Botkube today.
 
 Feedback
 --------

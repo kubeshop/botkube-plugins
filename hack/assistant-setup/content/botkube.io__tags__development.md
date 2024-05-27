@@ -3,42 +3,94 @@ Title: Development | Botkube tags
 URL Source: https://botkube.io/tags/development
 
 Markdown Content:
-Botkube blog
-------------
-
-Thank you! Your submission has been received!
-
-Oops! Something went wrong while submitting the form.
-
-### Open-source tools to help you with Kubernetes-native development & testing
-
-Whether you are a Developer, a Tester, or a DevOps, learn how to streamline your Kubernetes-based projects with Kubeshop tools.
-
+Join Maria for 5 Essential K8s Monitoring & Troubleshooting Tasks to Automate
+Product
+Pricing
+Support
+Company
+Sign in
+Get Demo
+Get Started
 Botkube articles
-----------------
-
-Thank you! Your submission has been received!
-
-Oops! Something went wrong while submitting the form.
-
 Tag:
-----
+Development
+APR 4, 2024
+5 mins
+ read
+Developer Self-Service Made Easy with Botkube AI Assistant
 
-[![Image 1](https://assets-global.website-files.com/61e00b3936e571a4ea7a5a4c/6229e3e36326f53a16e2f2d9_Logo-Kubeshop.svg)](https://kubeshop.io/)
+Discover how Botkube AI's simplifies Kubernetes troubleshooting for devs with natural language interactions, and seamless integration for enhanced productivity.
 
-Botkube is made by Kubeshop  
-— a first of its kind open source accelerator focused on the cloud native ecosystem
+SEP 7, 2023
+8 minutes
+ read
+Creating the Botkube Flux plugin for Day 2 operations
 
-At Kubeshop, our mission is to build a thriving open source ecosystem and pipeline of next-generation Kubernetes products and projects.
+From this deep dive you'll know the Zapier-like aspect of Botkube that connects K8s clusters, GitHub, and the Flux CLI—all of this to make you fall in love with your Day 2 operations.
 
-[![Image 2](https://assets-global.website-files.com/61e00b3936e571a4ea7a5a4c/6229e3e36326f5ad84e2f2da_%EF%82%9B.svg)](https://github.com/kubeshop)[![Image 3](https://assets-global.website-files.com/61e00b3936e571a4ea7a5a4c/6229e3e36326f5e948e2f2dc_%EF%8E%92.svg)](https://discord.com/invite/6zupCZFQbe)[![Image 4](https://assets-global.website-files.com/61e00b3936e571a4ea7a5a4c/6229e3e36326f56100e2f2dd_%EF%82%99.svg)](https://twitter.com/thekubeshop)[![Image 5](https://assets-global.website-files.com/61e00b3936e571a4ea7a5a4c/6229e3e36326f57933e2f2db_%EF%82%8C.svg)](https://www.linkedin.com/company/kubeshop)[![Image 6](https://assets-global.website-files.com/633705de6adaa38599d8e258/639be0ef872f3147b5c8f5a4_youtube.svg)](https://www.youtube.com/@thekubeshop)
+JUL 20, 2023
+10 mins
+ read
+Troubleshooting K8s in Multi-Cluster Environments
 
-#### Get to Know Kubeshop
+As K8s becomes the solution for container orchestration and remote work environments continue to prevail, a new obstacle emerges: remote collaborative troubleshooting. Here are some best practices.
 
-#### Botkube
+JUL 6, 2023
+7 mins
+ read
+Leveraging Our Cloud Slack for K8s Collaborative Troubleshooting
 
-Copyright © 2022 Kubeshop, LLC. All rights reserved.
+This step-by-step tutorial gets you started with Botkube Cloud Slack App, which enables collaborative troubleshooting by seamlessly integrating with your organization's Slack workspace.
 
+MAY 24, 2023
+10 minutes
+ read
+Implementing Your Own Botkube Plugin - Keptn Use Case
+
+Botkube has plugin system that allows you to extend the functionalities of Botkube core to satisfy your requirements. Here is a real-life example using Keptn.
+
+MAR 30, 2023
+6 minutes
+ read
+Beginner's Guide to Botkube Plugin Development: Part 1
+
+This introduction will teach you how Botkube plug-ins can unify your cloud native tools.
+
+MAR 9, 2023
+5 mins
+ read
+Command Line Magic: Simplify Your Life with Custom Aliases
+
+With custom aliases, you can create shortcuts for those long and confusing Kubernetes commands, making it easy to manage your clusters and focus on what really matters - your code.
+
+Botkube is made by Kubeshop  — a first of its kind open-source accelerator focused on the cloud native ecosystem
 Copyright © 2024 Kubeshop, LLC. All rights reserved.
-
-#### Explore Kubeshop Projects
+Privacy Policy | Terms of Service | End user license
+Botkube
+Product
+Integrations
+Case Studies
+Features
+Pricing
+Support
+Docs
+Learn
+Slack
+GitHub
+2.5K
+Company
+About Us
+Events
+Blog
+News
+Contact Us
+Sign in
+Get Started
+Get to Know Kubeshop
+Careers
+The Team
+Investors
+News
+Kubeshop Github
+Kubeshop Blogs
+Explore Kubeshop Projects

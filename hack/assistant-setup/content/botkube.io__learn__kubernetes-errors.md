@@ -16,8 +16,6 @@ Beyond its troubleshooting capabilities, Botkube empowers users through a collec
 
 In a nutshell, Botkube not only acts as an invaluable AI companion for troubleshooting Kubernetes errors through ChatOps but also stands as an educator, arming users with the expertise needed to tackle common challenges effectively.
 
-‍
-
 ### About Botkube
 
 Botkube is a collaborative troubleshooting tool designed specifically for Kubernetes users. With Botkube, you can seamlessly receive and act on alerts directly within your preferred messaging and collaboration platforms like Slack, Microsoft Teams, Discord, and Mattermost. In addition, Botkube enables you to automate actions based on events, run kubectl and Helm commands, receive recommendations for best practices and much more. [Get started with Botkube for free.](https://app.botkube.io/)

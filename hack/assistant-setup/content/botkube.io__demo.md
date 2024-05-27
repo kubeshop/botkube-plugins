@@ -6,7 +6,7 @@ Markdown Content:
 See Botkube in Action
 ---------------------
 
-#### The easiest way to see the best of Botkube is to try it yourself. The DIY installation\* only takes a few minutes to get a fully functional Botkube environment.
+The easiest way to see the best of Botkube is to [try it yourself](https://app.botkube.io/). The DIY installation\* only takes a few minutes to get a fully functional Botkube environment.
 
 \*This requires:
 

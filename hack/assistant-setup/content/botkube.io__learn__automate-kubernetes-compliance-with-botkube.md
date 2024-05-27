@@ -53,5 +53,3 @@ Refer to our [Kubectl Cheatsheet](https://botkube.io/learn/kubectl-cheat-sheet) 
 ### **Helm Charts -**
 
 Botkube can be deployed with a [Helm Chart](https://botkube.io/learn/helm-charts), making it a great option for developers who are already using Helm. It is also a great way for DevOps engineers to get started with Helm, as Botkube can help them easily deploy Helm Charts and offer suggestions on correcting incorrect Helm Chart deployments.
-
-‍

@@ -105,8 +105,8 @@ Keptn's AI assistant, "Keptn Lisa," learns from your infrastructure and automate
 *   Focus on CD: While it monitors, Keptn's primary focus is on automating deliveries, not general cluster health.
 *   Learning curve: Understanding Keptn's AI approach and utilizing its full potential might require initial investment.
 
-**5\. Kubernetes Dashboard**
-----------------------------
+**5) Kubernetes Dashboard**
+---------------------------
 
 ### **Open-source Hub for Visualization:**
 
@@ -153,13 +153,9 @@ Datadog integrates with your Kubernetes cluster, collecting in-depth data on con
 *   Premium pricing: May be costlier than certain open-source alternatives.
 *   Steeper learning curve: Extensive toolset can require initial onboarding effort.
 
-‍
-
 **Conclusion on K8s Monitoring Tools**
 --------------------------------------
 
 This is just a taste of the top 6 Kubernetes monitoring tools, with more detailed introductions and comparisons to follow in the next parts of your article. Stay tuned for insights into other powerful options like Jaeger, Grafana, ELK Stack, and more!
 
 Remember, the ideal tool depends on your specific needs and preferences. Consider factors like ease of use, feature set, community support, and cost when making your choice. By understanding the strengths and weaknesses of each tool, you can confidently ensure your Kubernetes cluster thrives in the dynamic cloud-native world.
-
-‍

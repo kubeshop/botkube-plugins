@@ -25,7 +25,7 @@ const (
 	docsSitemapURL      = "https://docs.botkube.io/sitemap.xml"
 	processingAPIURL    = "https://r.jina.ai"
 	contentDir          = "content"
-	maxRetries          = 5
+	maxRetries          = 10
 	retryInterval       = 1 * time.Second
 	httpCliTimeout      = 1 * time.Minute
 	purgeAllContentEnv  = "PURGE_ALL_CONTENT"

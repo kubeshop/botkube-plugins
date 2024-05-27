@@ -104,5 +104,3 @@ Conclusion to the K8s Rollback Solution
 ---------------------------------------
 
 Botkube, with its powerful integrations, has emerged as an invaluable solution for Kubernetes rollback management. Whether you're dealing with Helm charts, GitOps with Flux, or granular kubectl rollbacks, Botkube simplifies the Kubernetes rollback process, making it accessible from your preferred chat platform. With Botkube, Kubernetes rollbacks become a collaborative and team-friendly processendeavor, ensuring application stability even in the face of unexpected issues. It unifies all these rollback mechanisms into a single, cohesive solution, making Botkube your go-to tool for Kubernetes rollback management.
-
-‍

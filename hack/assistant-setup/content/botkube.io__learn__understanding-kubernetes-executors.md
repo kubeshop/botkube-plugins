@@ -8,10 +8,6 @@ Understanding Kubernetes Executors: A Guide for Platform, DevOps, and SRE Teams
 
 ![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65fdbe5e2b0c291bb5ec0536_Botkube%20BLOG%20Thumbnail%20(6).png)
 
-Last updated
-
-March 25, 2024
-
 ![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64a86fdda4d8d06ce598598e_evan%20image.jpg)
 
 Evan Witmer
@@ -54,8 +50,6 @@ Let's explore some of the most important executors you should be familiar with:
 --------------
 
 By strategically choosing and integrating Kubernetes executors, Platform, DevOps, and SRE teams can significantly enhance the efficiency, reliability, and scalability of their Kubernetes infrastructure. Botkube, along with its AI DevOps Assistant, provides a powerful toolkit to simplify executor usage and optimize your Kubernetes workflows, whether you're leveraging Kubectl, GitOps tools, or other specialized executors.
-
-‍
 
 ### About Botkube
 

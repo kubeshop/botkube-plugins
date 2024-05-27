@@ -3,15 +3,12 @@ Title: Installation | Botkube
 URL Source: https://docs.botkube.io/
 
 Markdown Content:
-*   [](https://docs.botkube.io/)
-*   Installation
+What is Botkube?[​](#what-is-botkube "Direct link to What is Botkube?")
+-----------------------------------------------------------------------
 
-Version: 1.10
+Botkube is a troubleshooting and monitoring solution that empowers DevOps teams to work more efficiently, enables developers to troubleshoot their applications without special Kubernetes access or knowledge, and improves reliability by delivering timely, context-enhanced notifications about events in your Kubernetes environments.
 
-Botkube has two components that need to be installed.
-
-1.  Botkube App Integration in your Slack/Mattermost/Microsoft Teams/Discord
-2.  Botkube agent in your Kubernetes cluster
+It integrates with multiple platforms, such as Slack, Microsoft Teams, Discord and Mattermost. Botkube monitors events from various sources, allows you to securely run commands, and run automated actions triggered by any of the plugins Botkube supports or your own custom plugins.
 
 Feature map[​](#feature-map "Direct link to Feature map")
 ---------------------------------------------------------
@@ -46,8 +43,4 @@ Integrations[​](#integrations "Direct link to Integrations")
 
 tip
 
-You can use a single Botkube agent to serve all the interfaces - Slack, Mattermost, Microsoft Teams, Elasticsearch and Webhook.  
-You just need to enable required mediums through the settings and add a necessary configuration.  
-_see the [configuration](https://docs.botkube.io/configuration) section for more information_
-
-[Next Slack](https://docs.botkube.io/installation/socketslack)
+You can enable multiple platform integrations using a single Botkube agent.

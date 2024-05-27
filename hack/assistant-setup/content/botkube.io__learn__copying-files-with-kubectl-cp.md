@@ -57,5 +57,3 @@ The `kubectl cp` command is a valuable asset in your Kubernetes toolkit. It stre
 To further enhance your Kubernetes experience, consider integrating a tool like Botkube. Not only does Botkube provide other valuable features, but it also allows you to execute `kubectl` commands (including `kubectl cp`) directly from your Slack or Microsoft Teams workspace. Learn more about setting up the `kubectl` executor in Botkube's documentation: [https://docs.botkube.io/configuration/executor/kubectl](https://docs.botkube.io/configuration/executor/kubectl)
 
 Additionally, don't forget to take advantage of Botkube's other helpful resources, such as the [kubectl cheat sheet](https://botkube.io/learn/kubectl-cheat-sheet), to optimize your Kubernetes workflow.
-
-‍

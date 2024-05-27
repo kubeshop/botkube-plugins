@@ -46,8 +46,6 @@ While tools like K8sGPT provide additional AI capabilities for Kubernetes, it's 
 
 AI is rapidly transforming Kubernetes management. By streamlining tasks and proactively identifying issues, AI-driven tools pave the way for greater efficiency and reliability within your clusters. Botkube shines brightly in this field, delivering a user-friendly AI assistant that puts the power of Kubernetes expertise at your fingertips, making it an essential tool for any organization using Kubernetes.
 
-‍
-
 ### About Botkube
 
 Botkube is a collaborative troubleshooting tool designed specifically for Kubernetes users. With Botkube, you can seamlessly receive and act on alerts directly within your preferred messaging and collaboration platforms like Slack, Microsoft Teams, Discord, and Mattermost. In addition, Botkube enables you to automate actions based on events, run kubectl and Helm commands, receive recommendations for best practices and much more. [Get started with Botkube for free.](https://app.botkube.io/)

@@ -21,7 +21,7 @@ Can ChatOps replace the age old monitoring dashboards that DevOps teams still bu
 *   [Use Cases for Chat Operations in Kubernetes](#use-cases-for-chat-operations-in-kubernetes)
 *   [Conclusions](#conclusions)
 
-#### Manage your Kubernetes Clusters Directly in Slack and Microsoft Teams!
+#### Start Using Botkube AI Assistant Today!
 
 Kubernetes is a powerful container orchestration platform that can be used to deploy, manage, and scale containerized applications. However, Kubernetes can be complex to manage, especially for large deployments. This is where ChatOps can come in.
 
@@ -92,6 +92,4 @@ Ultimately, the best way to monitor Kubernetes depends on your specific needs an
 
 In conclusion, ChatOps is a great alternative to Kubernetes Dashboards. It allows you to monitor and troubleshoot your Kubernetes cluster in a collaborative environment, where you can chat with your team members and get help from experts. Botkube is the best solution for ChatOps in Kubernetes. It is easy to set up and use, and it has a wide range of features, including monitoring, troubleshooting, and automation. With Botkube Cloud's new web graphical user interface and live audit log, you can also get a little bit of a dashboard about your cluster, but most of the action is in the Chat Ops functions, which will alert you when something is wrong and suggest the change automatically.
 
-If you are looking for a way to improve your Kubernetes operations, I highly recommend giving [Botkube a try](http://app.botkube.io/).
-
-‍
+If you are looking for a way to improve your Kubernetes operations, I highly recommend giving [Botkube a try](https://app.botkube.io/).

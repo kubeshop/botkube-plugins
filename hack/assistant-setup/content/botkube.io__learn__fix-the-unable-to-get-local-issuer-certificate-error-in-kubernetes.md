@@ -3,23 +3,6 @@ Title: Unable to Get Local Issuer Certificate Solved!
 URL Source: https://botkube.io/learn/fix-the-unable-to-get-local-issuer-certificate-error-in-kubernetes
 
 Markdown Content:
-Fix "SSL Certificate Problem: Unable to Get Local Issuer Certificate" Error
----------------------------------------------------------------------------
-
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65fa18185ef2ff8b0ce59fce_LEARN_TN_Errors%20(4).png)
-
-![Image 2](https://assets-global.website-files.com/plugins/Basic/assets/placeholder.60f9b1840c.svg)
-
-Table of Contents
------------------
-
-*   [What is the "ssl certificate problem unable to get local issuer certificate" error?](#what-is-the-ssl-certificate-problem-unable-to-get-local-issuer-certificate-error--2)
-*   [What causes the "ssl certificate problem unable to get local issuer certificate" error?](#what-causes-the-ssl-certificate-problem-unable-to-get-local-issuer-certificate-error--2)
-*   [How can you fix the "ssl certificate problem unable to get local issuer certificate" errors?](#how-can-you-fix-the-ssl-certificate-problem-unable-to-get-local-issuer-certificate-errors--2)
-*   [How to prevent "ssl certificate problem unable to get local issuer certificate" errors?](#how-to-prevent-ssl-certificate-problem-unable-to-get-local-issuer-certificate-errors--2)
-
-#### Get started with Botkube Cloud
-
 What is the "ssl certificate problem unable to get local issuer certificate" error?
 -----------------------------------------------------------------------------------
 
@@ -69,6 +52,29 @@ I hope this article helps you fix the <code>ssl certificate problem unable to ge
 
 One final tip, **do not be afraid to search for tooling that helps with troubleshooting of common errors**. Botkube's AI assistant is a great example of a tool that helps with K8s specific troubleshooting tasks. [Try out Botkube for free](https://app.botkube.io/) to get started with collaborative troubleshooting directly in your communications platform.
 
-### About Botkube
+Solving the Error using Botkube's AI Troubleshooting Assistant
+--------------------------------------------------------------
 
-Botkube is a collaborative troubleshooting tool designed specifically for Kubernetes users. With Botkube, you can seamlessly receive and act on alerts directly within your preferred messaging and collaboration platforms like Slack, Microsoft Teams, Discord, and Mattermost. In addition, Botkube enables you to automate actions based on events, run kubectl and Helm commands, receive recommendations for best practices and much more. [Get started with Botkube for free.](https://app.botkube.io/)
+If you do end up using Botkube's Kubernetes [AI troubleshooting assistant](https://botkube.io/blog/explore-the-new-era-of-aiops-with-botkubes-ai-assistant), follow the below steps to help troubleshoot the SSL Certificate error:
+
+### Step 1 - Start Prompt
+
+Type in **@botkube ai** into the chat platform to start communicating with our helpful AI assistant
+
+![Image 1: Prompting AI to check Kubernetes related SSL issue](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/663e739b18498714e3ffd411_Botkube%20AI%20prompt.png)
+
+### Step 2 - Find where the Issue Occurs within the Cluster  
+
+Ask the AI which namespace, pod, or service is causing the 'SSL Certificate Problem: Unable to Get Local Issuer Certificate Error' in my cluster to find where the issue is coming from. With Botube being aware of the k8s cluster it is installed in, it allows our AI Assistant to scan all the resources being used in the cluster to find the source.
+
+![Image 2: AI finding the cause of Kubernetes error](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/663e7600646f66c7c3f9ff46_SSL%20AI%20question%201.png)
+
+### Step 3 - Ask How to Fix the Error in that Location
+
+After the AI response tells you where this error is occurring, it is time to ask it how to fix the unable to get certificate error.
+
+![Image 3: Asking how to fix an SSL located in a Kubernetes Pod](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/663e7a1d79a3f8aa5b90904c_AI%20prompt%202.png)
+
+### Step 4 - Solve the Issue in DNS
+
+Now unlike some other issues, such as the [OOMKILLED error](https://botkube.io/learn/what-is-oomkilled), Kubectl commands cannot directly fix this issue. So Botkube's assitant cannot take this one fully to a completed issue solved, but by now you show know exactly which domain is causing the issue and in which part of the cluster. Now you will have to go to your DNS provider and renew, reapply, or correct the SSL certificate tied to the domain of the service. The most common domain name service providers are: GoDaddy, Cloudflare, Namecheap, or Google Domains. You will need admin access to the DNS and simply reverify the certificate of the service causing the issue

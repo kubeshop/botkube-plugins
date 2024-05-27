@@ -22,7 +22,7 @@ What is the state of Kubernetes errors in 2023? What are the most popular errors
 *   [Effective K8s Troubleshooting Chart](#effective-k8s-troubleshooting-chart)
 *   [Concluding Kubernetes Errors](#concluding-kubernetes-errors)
 
-#### Manage your Kubernetes Clusters Directly in Slack and Microsoft Teams!
+#### Start Using Botkube AI Assistant Today!
 
 #### Get started with Botkube Cloud
 
@@ -96,6 +96,4 @@ If a company runs its applications in Kubernetes, they need to consider adding B
 *   Reduce the time it takes to resolve errors.
 *   Prevent future errors from occurring.
 
-If you are looking for a way to improve your Kubernetes error management, then Botkube is a great option. Botkube is easy to use and can help you to save time and money. Thanks for taking the time to read about the state of K8s errors!
-
-‍
+If you are looking for a way to improve your Kubernetes error management, then Botkube is a great option. Botkube is easy to use and can help you to save time and money. Thanks for taking the time to read about the state of K8s errors.

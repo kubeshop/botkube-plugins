@@ -3,7 +3,7 @@ Title: botkube config get | Botkube
 URL Source: https://docs.botkube.io/cli/commands/botkube_config_get
 
 Markdown Content:
-Version: 1.10
+Version: 1.11
 
 botkube config get[​](#botkube-config-get "Direct link to botkube config get")
 ------------------------------------------------------------------------------

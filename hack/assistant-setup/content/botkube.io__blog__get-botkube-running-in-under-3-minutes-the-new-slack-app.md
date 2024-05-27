@@ -20,7 +20,7 @@ Life is short, install quickly - Learn how to get started with Botkube and Slack
 *   [Benefits of Easy Installation](#benefits-of-easy-installation)
 *   [Get Started with Botkube’s new Slack App](#get-started-with-botkube-s-new-slack-app)
 
-#### Manage your Kubernetes Clusters Directly in Slack and Microsoft Teams!
+#### Start Using Botkube AI Assistant Today!
 
 #### Get started with Botkube Cloud
 

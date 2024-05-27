@@ -22,7 +22,7 @@ See how Botkube is optimizing SRE workflows with the new AI assistant
 *   [More Ways Botkube Enhances Your Workflow](#more-ways-botkube-enhances-your-workflow)
 *   [Get Started with Botkube Today](#get-started-with-botkube-today)
 
-#### Manage your Kubernetes Clusters Directly in Slack and Microsoft Teams!
+#### Start Using Botkube AI Assistant Today!
 
 #### Start Using Botkube AI Assistant Today!
 
@@ -102,4 +102,4 @@ Botkube shifts your approach to Kubernetes troubleshooting from reactive to proa
 Get Started with Botkube Today
 ------------------------------
 
-Botkube's AI assistant is pre-installed and ready to go – no extra setup required! [Sign up for Botkube,](http://app.botkube.io/) link your Kubernetes cluster following our [easy instructions](https://botkube.io/blog/get-botkube-running-in-under-3-minutes-the-new-slack-app), and get started with the AI assistant. Use the `@Botkube ai` command for real-time, context-aware advice via your messaging platform, transforming Kubernetes management into an intuitive, efficient process. Join the Botkube community and get additional resources and help with any of your troubleshooting questions.
+Botkube's AI assistant is pre-installed and ready to go – no extra setup required! [Sign up for Botkube,](https://app.botkube.io/) link your Kubernetes cluster following our [easy instructions](https://botkube.io/blog/get-botkube-running-in-under-3-minutes-the-new-slack-app), and get started with the AI assistant. Use the `@Botkube ai` command for real-time, context-aware advice via your messaging platform, transforming Kubernetes management into an intuitive, efficient process. Join the Botkube community and get additional resources and help with any of your troubleshooting questions.

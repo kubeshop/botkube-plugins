@@ -3,16 +3,12 @@ Title: Botkube: Revolutionizing Kubernetes Troubleshooting with AI-Power
 URL Source: https://botkube.io/learn/ai-for-devops
 
 Markdown Content:
-[![Image 1: Kusk Kubernetes ](https://assets-global.website-files.com/633705de6adaa38599d8e258/6338148fa3f8a509639804fa_botkube-logo.svg)](https://botkube.io/)
+[![Image 1](https://assets-global.website-files.com/633705de6adaa38599d8e258/6338148fa3f8a509639804fa_botkube-logo.svg)](https://botkube.io/)
 
 AI for DevOps: How Botkube's Kubernetes AI Assistant Revolutionizes Troubleshooting
 -----------------------------------------------------------------------------------
 
 ![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65fdbe5e2b0c291bb5ec0536_Botkube%20BLOG%20Thumbnail%20(6).png)
-
-Last updated
-
-April 18, 2024
 
 ![Image 3](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64a86fdda4d8d06ce598598e_evan%20image.jpg)
 
@@ -77,10 +73,6 @@ AI for DevOps: How Botkube's Kubernetes AI Assistant Revolutionizes Troubleshoot
 -----------------------------------------------------------------------------------
 
 ![Image 6](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65fdbe5e2b0c291bb5ec0536_Botkube%20BLOG%20Thumbnail%20(6).png)
-
-Last updated
-
-April 18, 2024
 
 ![Image 7](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64a86fdda4d8d06ce598598e_evan%20image.jpg)
 

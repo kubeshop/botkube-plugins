@@ -3,7 +3,7 @@ Title: botkube telemetry disable | Botkube
 URL Source: https://docs.botkube.io/cli/commands/botkube_telemetry_disable
 
 Markdown Content:
-Version: 1.10
+Version: 1.11
 
 botkube telemetry disable[​](#botkube-telemetry-disable "Direct link to botkube telemetry disable")
 ---------------------------------------------------------------------------------------------------

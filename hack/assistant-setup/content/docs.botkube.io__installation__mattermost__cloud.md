@@ -8,7 +8,7 @@ Markdown Content:
 *   [Mattermost](https://docs.botkube.io/installation/mattermost/)
 *   Mattermost for Botkube Cloud
 
-Version: 1.10
+Version: 1.11
 
 Prerequisites[​](#prerequisites "Direct link to Prerequisites")
 ---------------------------------------------------------------

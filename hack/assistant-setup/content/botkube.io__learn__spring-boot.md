@@ -40,15 +40,11 @@ How to Use Botkube with Springboot Kubernetes?
 
 To use Botkube with Spring Boot, you need to do the following steps:
 
-1\. Create a Spring Boot application using [Spring Initializr](https://start.spring.io/). Choose the dependencies you need for your application, such as web, data access, security, etc. Download and unzip the project folder.
-
-2\. Build a container image for your application using [Jib](https://github.com/GoogleContainerTools/jib). Jib is a tool that builds optimized Docker and OCI images for Java applications without a Docker daemon. Add the Jib plugin to your pom.xml file and run \`mvn compile jib:build\` to build and push the image to a registry of your choice.
-
-3\. Deploy your application on Kubernetes using [Skaffold](https://skaffold.dev/). Skaffold is a tool that automates the workflow for building, pushing, and deploying applications on Kubernetes. Create a skaffold.yaml file that defines how to build and deploy your application using Jib and kubectl or helm. Run \`skaffold dev\` to start a continuous development mode that watches for changes in your source code or configuration files and updates your application on the cluster.
-
-4\. Install Botkube on your cluster using [Helm](https://helm.sh/). Helm is a package manager for Kubernetes that lets you install and manage applications using charts. Add the Botkube chart repository and install the botkube chart with the configuration options for your chat platform. Get started with Botkube for free with our new [cloud app](https://botkube.io/blog/introducing-botkube-v1-0-the-future-of-kubernetes-troubleshooting).
-
-5\. Configure Botkube to monitor and manage your application from the Cloud Based Web GUI. At this point Botkube should be connected to your instance and a channel in your messaging platform. Simply select the notifications you want to receive from the services and invite all the needed DevOps & SRE team members.
+1.  Create a Spring Boot application using [Spring Initializr](https://start.spring.io/). Choose the dependencies you need for your application, such as web, data access, security, etc. Download and unzip the project folder.
+2.  Build a container image for your application using [Jib](https://github.com/GoogleContainerTools/jib). Jib is a tool that builds optimized Docker and OCI images for Java applications without a Docker daemon. Add the Jib plugin to your pom.xml file and run \`mvn compile jib:build\` to build and push the image to a registry of your choice.
+3.  Deploy your application on Kubernetes using [Skaffold](https://skaffold.dev/). Skaffold is a tool that automates the workflow for building, pushing, and deploying applications on Kubernetes. Create a skaffold.yaml file that defines how to build and deploy your application using Jib and kubectl or helm. Run \`skaffold dev\` to start a continuous development mode that watches for changes in your source code or configuration files and updates your application on the cluster.
+4.  Install Botkube on your cluster using [Helm](https://helm.sh/). Helm is a package manager for Kubernetes that lets you install and manage applications using charts. Add the Botkube chart repository and install the botkube chart with the configuration options for your chat platform. Get started with Botkube for free with our new [cloud app](https://botkube.io/blog/introducing-botkube-v1-0-the-future-of-kubernetes-troubleshooting).
+5.  Configure Botkube to monitor and manage your application from the Cloud Based Web GUI. At this point Botkube should be connected to your instance and a channel in your messaging platform. Simply select the notifications you want to receive from the services and invite all the needed DevOps & SRE team members.
 
 **Conclusion**
 --------------

@@ -31,8 +31,6 @@ Botkube's vision extends beyond in-chat troubleshooting. Here's what's coming:
 
 By treating bots as team members, Botkube fosters a shared responsibility model for Kubernetes. This translates to faster problem resolution, greater developer autonomy, and a DevOps team freed to focus on proactive improvements instead of constant firefighting.
 
-‍
-
 ### About Botkube
 
 Botkube is a collaborative troubleshooting tool designed specifically for Kubernetes users. With Botkube, you can seamlessly receive and act on alerts directly within your preferred messaging and collaboration platforms like Slack, Microsoft Teams, Discord, and Mattermost. In addition, Botkube enables you to automate actions based on events, run kubectl and Helm commands, receive recommendations for best practices and much more. [Get started with Botkube for free.](https://app.botkube.io/)
