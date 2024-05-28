@@ -28,12 +28,47 @@ import (
 )
 
 const (
-	cacheTTL                = 8 * time.Hour
-	openAIPollInterval      = 2 * time.Second
-	maxToolExecutionRetries = 3
-	quotaExceededErrCode    = "quota_exceeded"
-	tracerName              = "source.aibrain"
-	serviceName             = "botkube-plugins-source-ai-brain"
+	cacheTTL                  = 8 * time.Hour
+	openAIPollInterval        = 2 * time.Second
+	maxToolExecutionRetries   = 3
+	quotaExceededErrCode      = "quota_exceeded"
+	tracerName                = "source.aibrain"
+	serviceName               = "botkube-plugins-source-ai-brain"
+	clusterScanSubcommandName = "scan"
+
+	clusterScanPrompt = `
+Scan the Kubernetes cluster for critical issues that could significantly impact the cluster's health, stability, or security.
+Focus on problems that may not be immediately apparent through events or standard monitoring.
+
+Specific Checks:
+
+Pod Health:
+Identify pods in a crash-loop backoff state with a high restart count.
+Identify pods that have been OOMKilled (Out of Memory Killed) multiple times.
+Look for pods stuck in a pending state for an extended period.
+Resource Utilization:
+Identify nodes or pods with critically high CPU or memory usage (e.g., above 90% of limits).
+Check for critical resource starvation issues affecting multiple pods or namespaces.
+Configuration:
+Look for pods running with very insecure capabilities (e.g., ALL, NET_RAW, SYS_ADMIN).
+Identify pods using deprecated or insecure container images.
+Check for misconfigured network policies that could expose sensitive services.
+Networking:
+Identify pods or services experiencing significant network latency or packet loss.
+Check for network partitions or connectivity issues between critical components.
+
+Provide a concise overview of the scan results, including the total number of
+critical issues found. If there were no issues found for a specific check, do
+not include that section in the report. List the Kubernetes objects directly
+affected by the issue. Make sure that your checks are relevant to the current
+state of the cluster, do not include resources that no longer exist.
+
+Additional Guidance for the LLM Agent:
+
+Prioritize issues that pose the most immediate threat to the cluster's stability, performance, or security.
+Filter out informational or low-severity issues that are unlikely to cause major problems.
+Be as specific as possible in the descriptions. Do not exceed 2000 characters in your response.
+`
 )
 
 var temperature float32 = 0.1
@@ -111,6 +146,10 @@ func (i *assistant) handle(ctx context.Context, in source.ExternalRequestInput) 
 		return api.NewPlaintextMessage("Please clarify your question.", false), nil
 	}
 
+	if strings.ToLower(p.Prompt) == clusterScanSubcommandName {
+		p.Prompt = clusterScanPrompt
+	}
+
 	go func() {
 		if err := i.handleThread(ctx, &p); err != nil {
 			i.out <- source.Event{Message: i.handleThreadError(p.MessageID, err)}
@@ -140,6 +179,8 @@ func (i *assistant) handleThreadError(messageID string, err error) api.Message {
 func (i *assistant) handleThread(ctx context.Context, p *Payload) (err error) {
 	ctx, span := i.tracer.Start(ctx, "aibrain.assistant.handleThread")
 	defer span.End()
+
+	span.SetAttributes(attribute.String("payload.prompt", p.Prompt))
 
 	var thread openai.Thread
 

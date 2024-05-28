@@ -77,7 +77,7 @@ func (e *AIFace) Execute(_ context.Context, in executor.ExecuteInput) (executor.
 	aiBrainWebhookURL := fmt.Sprintf("%s/%s", in.Context.IncomingWebhook.BaseSourceURL, cfg.AIBrainSourceName)
 
 	body, err := json.Marshal(aibrain.Payload{
-		Prompt:    strings.TrimPrefix(in.Command, pluginName),
+		Prompt:    strings.TrimSpace(strings.TrimPrefix(in.Command, pluginName)),
 		MessageID: in.Context.Message.ParentActivityID,
 	})
 	if err != nil {
