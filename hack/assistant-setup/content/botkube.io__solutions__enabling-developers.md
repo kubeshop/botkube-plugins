@@ -36,26 +36,28 @@ User Quotes
 
 The advantages of BotKube are its versatility and efficiency in managing and monitoring Kubernetes clusters. It offers seamless integration with various messaging platforms and provides real-time alerts and notifications. Its appeal is enhanced by Its user-friendly interface, and extensive customization options
 
-![Image 6: automating tests staging cluster](https://assets-global.website-files.com/633705de6adaa38599d8e258/6387ccf6ff66597d5f414815_botkube-quote-sign.svg)
+![Image 6](https://assets-global.website-files.com/633705de6adaa38599d8e258/6387cc6cd11dba9de0d3578f_botkube.gif)
+
+![Image 7: automating tests staging cluster](https://assets-global.website-files.com/633705de6adaa38599d8e258/6387ccf6ff66597d5f414815_botkube-quote-sign.svg)
 
 The advantages of BotKube are its versatility and efficiency in managing and monitoring Kubernetes clusters. It offers seamless integration with various messaging platforms and provides real-time alerts and notifications. Its appeal is enhanced by Its user-friendly interface, and extensive customization options
 
-![Image 7](https://assets-global.website-files.com/633705de6adaa38599d8e258/6387cc6cd11dba9de0d3578f_botkube.gif)
+![Image 8](https://assets-global.website-files.com/633705de6adaa38599d8e258/6387cc6cd11dba9de0d3578f_botkube.gif)
 
-![Image 8: automating tests staging cluster](https://assets-global.website-files.com/633705de6adaa38599d8e258/6387ccf6ff66597d5f414815_botkube-quote-sign.svg)
+![Image 9: automating tests staging cluster](https://assets-global.website-files.com/633705de6adaa38599d8e258/6387ccf6ff66597d5f414815_botkube-quote-sign.svg)
 
 For me, monitoring health and performance of the infrastructure in realtime was done with the help of Botkube. Botkube provided me security features such as unauthorized access attempts.
 
-![Image 9](https://assets-global.website-files.com/633705de6adaa38599d8e258/6387cc6cd11dba9de0d3578f_botkube.gif)
+![Image 10](https://assets-global.website-files.com/633705de6adaa38599d8e258/6387cc6cd11dba9de0d3578f_botkube.gif)
 
-![Image 10: automating tests staging cluster](https://assets-global.website-files.com/633705de6adaa38599d8e258/6387ccf6ff66597d5f414815_botkube-quote-sign.svg)
+![Image 11: automating tests staging cluster](https://assets-global.website-files.com/633705de6adaa38599d8e258/6387ccf6ff66597d5f414815_botkube-quote-sign.svg)
 
 I love Botkube! I've used it since I can remember!
 
-![Image 11](https://assets-global.website-files.com/633705de6adaa38599d8e258/6387cc6cd11dba9de0d3578f_botkube.gif)
+![Image 12](https://assets-global.website-files.com/633705de6adaa38599d8e258/6387cc6cd11dba9de0d3578f_botkube.gif)
 
-![Image 12: automating tests staging cluster](https://assets-global.website-files.com/633705de6adaa38599d8e258/6387ccf6ff66597d5f414815_botkube-quote-sign.svg)
+![Image 13: automating tests staging cluster](https://assets-global.website-files.com/633705de6adaa38599d8e258/6387ccf6ff66597d5f414815_botkube-quote-sign.svg)
 
 BotKube: The Ultimate Tool for #Kubernetes Alerts and Notifications
 
-![Image 13](https://assets-global.website-files.com/633705de6adaa38599d8e258/6387cc6cd11dba9de0d3578f_botkube.gif)
+![Image 14](https://assets-global.website-files.com/633705de6adaa38599d8e258/6387cc6cd11dba9de0d3578f_botkube.gif)
