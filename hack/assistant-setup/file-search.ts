@@ -3,6 +3,7 @@ import OpenAI from "openai";
 import { Assistant } from "openai/resources/beta";
 
 const contentPath = "./content";
+const contentCustomPath = "./content-custom";
 const errorStatuses = ["failed", "cancelled"];
 const vectorStoreName =
   "Full Botkube knowledge base: documentation, website, blog posts and other content";
@@ -24,7 +25,48 @@ export async function setupFileSearch(client: OpenAI): Promise<string> {
   });
 
   console.log(
-    "Uploading files to vector store and waiting for the file batch processing to complete. This might take a few minutes...",
+    `Uploading files to vector store ${vectorStore.id} and waiting for the file batch processing to complete. This might take a few minutes...`,
+  );
+  const batch = await client.beta.vectorStores.fileBatches.uploadAndPoll(
+    vectorStore.id,
+    { files: fileStreams },
+    // {
+    //   maxRetries: 1000,
+    //   pollIntervalMs: 1000,
+    //   maxConcurrency: 5,
+    // }
+  );
+  console.log(
+    `Batch upload completed with status: ${batch.status}; total: ${batch.file_counts.total}, in progress: ${batch.file_counts.in_progress}, completed: ${batch.file_counts.completed}, failed: ${batch.file_counts.failed}`,
+  );
+
+  if (errorStatuses.includes(batch.status)) {
+    throw new Error(`Batch upload failed with status: ${batch.status}`);
+  }
+
+  return vectorStore.id;
+}
+
+export async function setupFileSearchForThread(
+  client: OpenAI,
+): Promise<string> {
+  console.log(`Reading directory ${contentCustomPath}...`);
+  const files = readdirSync(contentCustomPath);
+  if (files.length === 0) {
+    throw new Error(`No files found in ${contentCustomPath}`);
+  }
+  console.log(`Found ${files.length} files.`);
+  const fileStreams = files.map((fileName) =>
+    createReadStream(`${contentCustomPath}/${fileName}`),
+  );
+
+  console.log("Creating vector store...");
+  const vectorStore = await client.beta.vectorStores.create({
+    name: vectorStoreName,
+  });
+
+  console.log(
+    `Uploading files to vector store ${vectorStore.id} and waiting for the file batch processing to complete. This might take a few minutes...`,
   );
   const batch = await client.beta.vectorStores.fileBatches.uploadAndPoll(
     vectorStore.id,
@@ -44,8 +86,14 @@ export async function setupFileSearch(client: OpenAI): Promise<string> {
 export async function removePreviousFileSearchSetup(
   client: OpenAI,
   fileSearch?: Assistant.ToolResources.FileSearch,
+  additionalVectorStoreIds?: string[],
 ) {
   const vectorStoreIDs: Array<string> = fileSearch?.vector_store_ids ?? [];
+
+  if (additionalVectorStoreIds) {
+    vectorStoreIDs.push(...additionalVectorStoreIds);
+  }
+
   if (vectorStoreIDs.length === 0) {
     console.log("No previous vector store IDs found.");
     return;

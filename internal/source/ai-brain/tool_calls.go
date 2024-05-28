@@ -10,7 +10,7 @@ import (
 
 // https://platform.openai.com/docs/api-reference/runs/object#runs/object-tools
 var userFriendlyToolNames = map[string]string{
-	"file_search": "Botkube content search", // for now it is only that, later when we will have the "Bring your own docs" functionality, we should rename it
+	"file_search": "Botkube & custom content search",
 
 	"function/botkubeGetStartupAgentConfiguration": "Botkube agent configuration",
 	"function/botkubeGetAgentStatus":               "Botkube agent status",

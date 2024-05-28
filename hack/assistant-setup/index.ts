@@ -1,10 +1,13 @@
 import { OpenAI } from "openai";
-import { removePreviousFileSearchSetup, setupFileSearch } from "./file-search";
+import {
+  removePreviousFileSearchSetup,
+  setupFileSearch,
+  setupFileSearchForThread,
+} from "./file-search";
 import { setupTools } from "./tools";
 import dedent from "dedent";
 
-const prodAssistantID = "asst_eMM9QaWLi6cajHE4PdG1yU53";
-const devAssistantID = "asst_ejVrAgjhhvCw6jGFYq5JyBqj";
+const devAssistantID = "asst_EOOt8PiAy1boLPMTrFPdalHg"; //pkosiec
 
 const model = "gpt-4o";
 
@@ -16,6 +19,7 @@ const instructions = dedent`
     During troubleshooting, take Kubernetes cluster and namespace configuration, such as security policies, events.
     Employ a Chain of Thought (CoT) process for diagnosing and resolving cluster issues. 
     Utilize available tools for diagnosing the specific cluster in question.
+    The custom user documentation is stored in a vector store.
     Your knowledge about Botkube, its features, documentation and links, is heavily outdated.
       The up-to-date Botkube knowledge is stored in a vector store.
       Always use the latest Botkube knowledge for all responses.
@@ -31,28 +35,16 @@ const instructions = dedent`
     Make sure you fetch Botkube Agent configuration to answer questions about Botkube or channel configuration.
 `;
 
-async function main() {
-  let assistantID = "";
-  const assistantEnv = process.env["ASSISTANT_ENV"];
-  if (!assistantEnv) {
-    throw new Error(
-      `Missing ASSISTANT_ENV environment variable; use 'dev' or 'prod'`,
-    );
-  }
-  switch (assistantEnv) {
-    case "dev":
-      assistantID = devAssistantID;
-      break;
-    case "prod":
-      assistantID = prodAssistantID;
-      break;
-    default:
-      throw new Error(
-        `Unknown ASSISTANT_ENV '${assistantEnv}'; use 'dev' or 'prod'`,
-      );
-  }
+const additionalVectorStoresToRemove = [];
 
-  console.log(`Using ${assistantEnv} assistant`);
+// Already uploaded - to delete after PoC:
+const threadVectorStore = "vs_RrDoGGJ4UVLZxOvNzc5J1Unk"; // mongo-seeding docs
+const assistantVectorStore = "vs_5htzxvNWE6MSA28PjskmLDxE"; // Botkube content
+
+async function main() {
+  let assistantID = devAssistantID;
+
+  console.log(`Using pkosiec assistant`);
   const client = new OpenAI({
     apiKey: process.env["OPENAI_API_KEY"],
   });
@@ -61,11 +53,15 @@ async function main() {
   const assistant = await client.beta.assistants.retrieve(assistantID);
   const prevFileSearchSetup = assistant.tool_resources?.file_search;
   console.log(
-    `Successfully retrieved assistant data for '${assistant.name}' (ID: ${assistant.id})`,
+    `Successfully retrieved assistant data for '${assistant.name}' (ID: ${assistant.id}). Previous file search vector store: ${prevFileSearchSetup?.vector_store_ids}`,
   );
 
   console.log(`Setting up file search...`);
   const vectorStoreId = await setupFileSearch(client);
+  console.log(`Vector store ID for Assistant: ${vectorStoreId}`);
+
+  const vectorStoreId2 = await setupFileSearchForThread(client);
+  console.log(`Vector store ID for Thread: ${vectorStoreId2}`);
 
   console.log("Updating assistant...");
   await client.beta.assistants.update(assistantID, {
@@ -77,7 +73,11 @@ async function main() {
   });
 
   console.log("Removing previous file search setup...");
-  await removePreviousFileSearchSetup(client, prevFileSearchSetup);
+  await removePreviousFileSearchSetup(
+    client,
+    prevFileSearchSetup,
+    additionalVectorStoresToRemove,
+  );
 
   console.log("Done!");
 }

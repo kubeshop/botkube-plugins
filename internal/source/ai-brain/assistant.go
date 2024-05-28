@@ -275,10 +275,19 @@ func (i *assistant) createNewThread(ctx context.Context, p *Payload) (openai.Thr
 	ctx, span := i.tracer.Start(ctx, "aibrain.assistant.createNewThread")
 	defer span.End()
 
+	i.log.Info("Creating a new thread with vector store attached")
+
 	return i.openaiClient.CreateThread(ctx, openai.ThreadRequest{
 		Metadata: map[string]any{
 			"messageId":  p.MessageID,
 			"instanceId": os.Getenv(remote.ProviderIdentifierEnvKey),
+		},
+		ToolResources: openai.ToolResourcesRequest{
+			FileSearch: &openai.FileSearchToolResourcesRequest{
+				VectorStoreIDs: []string{
+					"vs_RrDoGGJ4UVLZxOvNzc5J1Unk", // fixed custom vector store with Mongo Seeding docs
+				},
+			},
 		},
 		Messages: []openai.ThreadMessage{
 			{
