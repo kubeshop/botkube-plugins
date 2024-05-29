@@ -22,9 +22,9 @@ See how Botkube is optimizing SRE workflows with the new AI assistant
 *   [More Ways Botkube Enhances Your Workflow](#more-ways-botkube-enhances-your-workflow)
 *   [Get Started with Botkube Today](#get-started-with-botkube-today)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 Site reliability engineers (SREs) and platform teams face the never-ending challenge of ensuring system reliability and scalability. They must tackle complex system issues and handle time-sensitive alerts. This requires deep knowledge of the whole software delivery process and cloud architecture. Even with a high level of Kubernetes knowledge, manual tasks like generating manifests, analyzing logs, and interpreting metrics can overwhelm platform teams. This repetitive work consumes valuable time.
 

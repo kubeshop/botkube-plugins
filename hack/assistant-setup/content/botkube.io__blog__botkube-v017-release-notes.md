@@ -24,7 +24,7 @@ Botkube v0.17.0 adds a plugin system and the first executor plugin allowing you 
 *   [Bug Fixes](#bug-fixes)
 *   [Feedback - We’d Love to Hear From You](#feedback-we-d-love-to-hear-from-you)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 Botkube v0.17.0 is here, and it's huge! We've introduced a plugin system for sources and executors along with the first plugin for Helm. Botkube is the most modern [ChatOps tool for Kubernetes](http://botkube.io/)!
 

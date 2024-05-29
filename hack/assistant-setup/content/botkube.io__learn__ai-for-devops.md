@@ -26,7 +26,7 @@ Table of Contents
 *   [Real-World Use Cases](#real-world-use-cases)
 *   [Conclusion](#conclusion)
 
-#### Get started with Botkube Cloud
+#### Start Using Botkube AI Assistant Today
 
 DevOps teams are constantly seeking ways to streamline workflows, increase efficiency, and minimize downtime. Artificial intelligence (AI) is rapidly transforming the DevOps landscape, offering innovative solutions to common challenges. Botkube stands out as a pioneer in this domain, leveraging a powerful Kubernetes AI assistant to optimize DevOps processes.
 

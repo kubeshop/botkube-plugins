@@ -22,7 +22,7 @@ Discover how to revolutionize Kubernetes management with Botkube's AI Assistant!
 *   [Conclusion](#conclusion)
 *   [Get Started Today](#get-started-today)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 #### Start Receiving Kubernetes Notifications Now with Botkube Cloud
 

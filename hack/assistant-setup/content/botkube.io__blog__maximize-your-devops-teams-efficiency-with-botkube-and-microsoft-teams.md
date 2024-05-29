@@ -23,7 +23,7 @@ Get Botkube up and running with Microsoft Teams in less than 5 mins with this wa
 *   [Conclusion](#conclusion-)
 *   [Get Started with Botkube](#get-started-with-botkube)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 #### Get started with Botkube Cloud
 

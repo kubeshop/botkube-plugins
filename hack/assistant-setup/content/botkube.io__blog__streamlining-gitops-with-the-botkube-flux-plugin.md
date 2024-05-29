@@ -23,7 +23,7 @@ Learn how to set up Botkube with Flux and GitHub-events plugins in this step-by-
 *   [Sign up now](#sign-up-now)
 *   [Feedback](#feedback)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 #### Get started with Botkube Cloud
 

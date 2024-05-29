@@ -22,7 +22,7 @@ With our new CLI migration tool, current open-source users are able to migrate t
 *   [How to Migrate Your Existing Botkube Account to Cloud](#how-to-migrate-your-existing-botkube-account-to-cloud)
 *   [Give it a try!](#give-it-a-try-)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 #### Get started with Botkube Cloud
 

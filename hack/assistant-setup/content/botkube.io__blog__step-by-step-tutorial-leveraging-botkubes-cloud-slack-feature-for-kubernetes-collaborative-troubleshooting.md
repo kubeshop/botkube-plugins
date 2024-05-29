@@ -22,7 +22,7 @@ This step-by-step tutorial gets you started with Botkube Cloud Slack App, which 
 *   [Conclusion](#conclusion)
 *   [Sign up now](#sign-up-now)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 ![Image 2: Diagram of how Botkube connects K8s Clusters to Slack](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64a709cc5761791c793a83cb_FXqJSS9KtaIOKugq8s7dLxGlnmtLjrwb6L7gurT9lYJdDRz12RFZoLngWUxSDtvrMKpEnhFCEKOroy2rvA9MJiSEZV4DUJwBa58Vl2JiUXfXJ6b3RrHK-sXsLbaqGbijRlnbXXLmuqKB6ckrNR36yFE.png)
 

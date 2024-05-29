@@ -20,7 +20,7 @@ Learn more about Botkube's new and improved Microsoft Teams support!
 *   [Benefits of the new Microsoft Teams App](#benefits-of-the-new-microsoft-teams-app-)
 *   [Getting Started with Botkube’s Microsoft Teams](#getting-started-with-botkube-s-microsoft-teams)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 #### Get started with Botkube Cloud
 

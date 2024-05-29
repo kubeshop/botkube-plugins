@@ -21,7 +21,7 @@ Can ChatOps replace the age old monitoring dashboards that DevOps teams still bu
 *   [Use Cases for Chat Operations in Kubernetes](#use-cases-for-chat-operations-in-kubernetes)
 *   [Conclusions](#conclusions)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 Kubernetes is a powerful container orchestration platform that can be used to deploy, manage, and scale containerized applications. However, Kubernetes can be complex to manage, especially for large deployments. This is where ChatOps can come in.
 

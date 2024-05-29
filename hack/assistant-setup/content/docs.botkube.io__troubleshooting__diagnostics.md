@@ -1,8 +1,11 @@
-Title: Basic diagnostics | Botkube
+Title: Botkube
 
 URL Source: https://docs.botkube.io/troubleshooting/diagnostics
 
 Markdown Content:
+Basic diagnostics
+-----------------
+
 Here you can find the list of basic diagnostic actions that may help you look for bug causes.
 
 In order to run the suggested commands, make sure that you have installed:

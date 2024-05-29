@@ -23,7 +23,7 @@ It's official: Botkube has undergone security and compliance checks by Microsoft
 *   [Microsoft Build Conference](#microsoft-build-conference)
 *   [Botkube + Microsoft Teams](#botkube-microsoft-teams)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 #### Get started with Botkube Cloud
 

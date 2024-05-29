@@ -23,7 +23,7 @@ People have been using ChatGPT and AI for many uses over the past year. But have
 *   [Is ChatGPT Safe to Use in Kubernetes?](#is-chatgpt-safe-to-use-in-kubernetes-)
 *   [Get Started with Botkube’s Doctor Plugin](#get-started-with-botkube-s-doctor-plugin)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 #### Get started with Botkube Cloud
 

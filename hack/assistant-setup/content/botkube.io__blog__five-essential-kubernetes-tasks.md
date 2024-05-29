@@ -24,9 +24,9 @@ Learn how to simplify DevOps tasks directly within your favorite communication p
 *   [Executor Plugin](#executor-plugin-)
 *   [Conclusion](#conclusion)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
-#### Manage your Kubernetes Clusters Directly in Slack and Microsoft Teams!
+#### Manage your Kubernetes Clusters Directly in Slack and Microsoft Teams
 
 If you're curious about the exciting possibilities of using Kubernetes in your chat platform, you've come to the right place. With Botkube you can complete all your collaborative Kubernetes troubleshooting and monitoring tasks right from your chat window! In this blog post, we'll explore five exciting ways to get the most out of Botkube. Whether you're a beginner or an experienced Kubernetes user, you'll learn how to simplify DevOps tasks, empower your teams, and enhance your Kubernetes experience.
 

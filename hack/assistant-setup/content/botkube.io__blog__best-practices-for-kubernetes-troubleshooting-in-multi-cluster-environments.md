@@ -26,7 +26,7 @@ As K8s becomes the solution for container orchestration and remote work environm
 *   [Conclusion](#conclusion)
 *   [CNCF Islamabad and Botkube Webinar](#cncf-islamabad-and-botkube-webinar)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 #### Get started with Botkube Cloud
 

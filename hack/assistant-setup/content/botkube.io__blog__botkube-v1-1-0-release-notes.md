@@ -21,7 +21,7 @@ Our most recent realese of Botkube Cloud & Open Source brings important features
 *   [Botkube Cloud with Cloud Slack Integration](#botkube-cloud-with-cloud-slack-integration)
 *   [Here are the key features of Botkube Cloud:](#here-are-the-key-features-of-botkube-cloud-)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 We are excited to announce the latest release of Botkube, packed with new features and improvements to enhance your Kubernetes collaborative troubleshooting experience. In this release, we focused on two major areas: the introduction of Botkube Cloud with Cloud Slack integration and several bug fixes and enhancements for our open-source version.
 

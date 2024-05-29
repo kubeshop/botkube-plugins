@@ -25,7 +25,7 @@ This release marks a milestone in providing a smoother and faster path to Kubern
 *   [Various Bug Fixes and Small Improvements](#various-bug-fixes-and-small-improvements)
 *   [Upgrade Today](#upgrade-today)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 #### Get started with Botkube Cloud
 

@@ -24,7 +24,7 @@ Optimizing Kubernetes Management with Botkube's AI Insights
 *   [Bonus Strategy: Simplify Application Lifecycle Management](#bonus-strategy-simplify-application-lifecycle-management)
 *   [Getting Started with Botkube’s AI Assistant](#getting-started-with-botkube-s-ai-assistant)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 #### Get started with Botkube Cloud
 

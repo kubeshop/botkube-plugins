@@ -23,9 +23,9 @@ Discover how Botkube AI's simplifies Kubernetes troubleshooting for devs with na
 *   [Empowering Developers with Automation](#empowering-developers-with-automation)
 *   [Conclusion: Transform Your Kubernetes Workflow with Botkube](#conclusion-transform-your-kubernetes-workflow-with-botkube)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 Kubernetes continues to reign supreme as the chosen tool for managing and scaling applications. But its power comes at the price of complexity. Developers are increasingly feeling pressure to master Kubernetes which often leads to communication challenges, often slowing down the engineering process. The industry is flooded with tools promising to effortlessly solve all Kubernetes challenges. However, the need for developer-friendly Kubernetes solutions is not new. Botkube, a Kubernetes Troubleshooting AI assistant, simplifies Kubernetes management and empowers developers to access their Kubernetes resources without relying on their DevOps team.
 

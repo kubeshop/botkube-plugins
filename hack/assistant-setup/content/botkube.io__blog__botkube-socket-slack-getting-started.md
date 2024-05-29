@@ -25,7 +25,7 @@ The new Botkube Slack app provides more great interactive features and better se
 *   [What Could Go Wrong?](#what-could-go-wrong-)
 *   [Feedback - We’d Love to Hear From You](#feedback-we-d-love-to-hear-from-you)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 The [new Botkube Slack app](https://docs.botkube.io/installation/slack/) provides more great interactive features and better security when compared to the [legacy Botkube Slack app](https://docs.botkube.io/0.15/installation/slack/). We announced the new socket mode Slack app in the [Botkube v0.14.0 release notes](https://botkube.io/blog/botkube-v014-release-notes#new-botkube-slack-app). The new Slack app has some specific requirements and a new installation process, so let's have a look at how to get started with the most modern [ChatOps tool for Kubernetes!](http://botkube.io/) You can also use the Botkube [installation documentation](https://docs.botkube.io/installation/slack/) to get started, but this post is to give you more context about the changes to the new app and some caveats to watch out for.
 

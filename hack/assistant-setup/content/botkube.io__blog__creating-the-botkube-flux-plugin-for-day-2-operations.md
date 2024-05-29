@@ -24,7 +24,7 @@ From this deep dive you'll know the Zapier-like aspect of Botkube that connects 
 *   [Behind the Scenes: Developing the Botkube Flux Plugin](#behind-the-scenes-developing-the-botkube-flux-plugin)
 *   [Conclusion](#conclusion)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 #### Get started with Botkube Cloud
 

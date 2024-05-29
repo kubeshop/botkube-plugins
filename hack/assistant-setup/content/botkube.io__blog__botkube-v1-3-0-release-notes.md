@@ -25,7 +25,7 @@ Our most recent release of Botkube Cloud & Open Source brings important features
 *   [Bug Fixes](#bug-fixes)
 *   [Feedback - We’d Love to Hear From You!](#feedback-we-d-love-to-hear-from-you-)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 #### Get started with Botkube Cloud
 

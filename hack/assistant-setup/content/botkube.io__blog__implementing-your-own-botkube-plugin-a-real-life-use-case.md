@@ -33,7 +33,7 @@ Botkube has plugin system that allows you to extend the functionalities of Botku
 *   [Running Botkube](#running-botkube)
 *   [Get Started with Botkube Plugin Development](#get-started-with-botkube-plugin-development)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 [Botkube's plugin system](https://botkube.io/blog/beginners-guide-to-botkube-plugin-development-how-botkube-plug-ins-can-unify-your-cloud-native-tools) allows users to extend the functionalities of Botkube core to enhance the capabilities of cloud native tools already in their tool belt. Whether you're using some of our pre-built plugins like [Helm](https://botkube.io/integration/helm) or [Prometheus](https://botkube.io/integration/prometheus), or want to use tools like Flux, Thanos, or any others on the CNCF landscape, the plugin system will help you and your team with collaborative troubleshooting instantly through your favorite messaging platform.
 

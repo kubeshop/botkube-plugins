@@ -21,7 +21,7 @@ This introduction will teach you how Botkube plug-ins can unify your cloud nativ
 *   [How Botkube Plug-Ins Work:](#how-botkube-plug-ins-work-)
 *   [Conclusion](#conclusion-)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 So you want to make a [Botkube Plug-in](https://botkube.io/integrations), but don't know where to begin? Fear not, because this series has got you covered! In short, Botkube plugins are tools that enhance the Botkube user experience to make it more suited to fit their goals. They provide users with extra features and options to customize their experience. However, to fully utilize Botkube, it is necessary to configure it according to your specific needs. Starting from scratch with only documentation to guide you can be intimidating, which is why I am writing this series to help jumpstart your plug-in development journey regardless of your experience level. With this series, you’ll have everything you need to build your own Botkube Plug-in.
 

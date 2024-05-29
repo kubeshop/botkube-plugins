@@ -25,7 +25,7 @@ Botkube is entering the MS teams world
 *   [Conclusion](#conclusion)
 *   [Get Started with Botkube](#get-started-with-botkube)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 #### Start Receiving Kubernetes Notifications Now with Botkube Cloud
 

@@ -25,7 +25,7 @@ BotKube v0.14.0 addresses a number of community-suggested issues and adds some g
 *   [Bug Fixes](#bug-fixes)
 *   [Feedback - We’d Love to Hear From You](#feedback-we-d-love-to-hear-from-you)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 In the previous release of Botkube we promised to accelerate the pace of development and release. Well, here is another new release of Botkube, the most modern [ChatOps tool for Kubernetes](http://botkube.io/)!
 

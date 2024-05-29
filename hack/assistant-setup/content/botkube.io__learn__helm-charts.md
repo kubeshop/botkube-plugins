@@ -5,7 +5,8 @@ URL Source: https://botkube.io/learn/helm-charts
 Markdown Content:
 Helm charts are a popular way to package and deploy applications on Kubernetes clusters. They are especially useful for developers and platform engineers who are deploying backend infrastructure, such as databases, caching systems, and load balancers.
 
-### What is a Helm Chart?
+What is a Helm Chart?
+---------------------
 
 Helm charts are a way of packaging and deploying applications on Kubernetes clusters. They are composed of a set of templates that define the Kubernetes manifest files for the application and its dependencies. Helm charts also include metadata, such as the chart name, version, description, and dependencies.
 
@@ -24,15 +25,15 @@ One of the most common issues when deploying helm charts is that the \`helm inst
 
 This error occurs when Helm cannot find the chart that you are trying to install. You can fix this error by adding the chart repository to your local Helm client.
 
-### **Invalid YAML**
+### Invalid YAML
 
 If there is an error in your YAML file, Helm will not be able to create the Kubernetes resources. You can use a YAML validator to check your file for errors. Check into Botkube's solution YAML validator.
 
-### **Invalid Chart**
+### Invalid Chart
 
 If there is an error in your chart, Helm will not be able to create the Kubernetes resources. You can use a chart linter to check your chart for errors.
 
-### **Insufficient Permissions**
+### Insufficient Permissions
 
 If you do not have sufficient permissions to create Kubernetes resources, Helm will not be able to create them. You can check your permissions by running \`kubectl auth can-i create <resource>\`.
 
@@ -40,16 +41,16 @@ To troubleshoot these issues, you should first check the error message and see i
 
 You can also use the \`--debug\` flag to get more detailed information about the helm install process. At this point, Helm will show you all of the Kubernetes resources that it is creating. If there is an error, it will be displayed in the output.
 
-**The Easy Way: Botkube, Your Kubernetes Troubleshooting Assistant**
---------------------------------------------------------------------
+The Easy Way: Botkube, Your Kubernetes Troubleshooting Assistant
+----------------------------------------------------------------
 
 Up until this point, troubleshooting Helm has sounded like a very manual process of looking through error messages. Not to mention, most of this is done from within the command line interface. What if troubleshooting didn’t have to be that manual?
 
 If you are having an issue deploying Helm to your cluster, [install Botkube’s Helm Plugin](https://botkube.io/integration/helm) to your cluster and connect it to your preferred productivity tool (Slack, Teams, or Mattermost). Now let Botkube read through all the error messages and give you the solution. Botkube can quickly fix things like wrong Helm version or problem with helm packaging.
 
-In addition to finding the solution for Helm errors, Botkube’s ChatOps functions let you take action directly from your productivity tool. Need to rename the Helm chart to match the version? No problem! Botkube found that solution and lets you fix it in one click!
+In addition to finding the solution for Helm errors, Botkube’s [ChatOps](https://botkube.io/learn/chatops) functions let you take action directly from your productivity tool. Need to rename the Helm chart to match the version? No problem! Botkube found that solution and lets you fix it in one click!
 
-### **Kubernetes ChatOps now with ChatGPT!**
+### Kubernetes ChatOps now with ChatGPT!
 
 Believe the hype around ChatGPT troubleshooting code? Botkube thinks it is pretty useful for suggesting solutions to common K8s errors as well. Our new [Doctor plugin](https://botkube.io/blog/use-chatgpt-to-troubleshoot-kubernetes-errors-with-botkubes-doctor) allows operation engineers to bring ChatGPT directly into their cluster!
 

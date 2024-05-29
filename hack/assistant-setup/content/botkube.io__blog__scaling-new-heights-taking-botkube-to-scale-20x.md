@@ -21,7 +21,7 @@ Botkube had its first DevRel appearance of 2023 at the SoCal Linux Expo. Here's 
 *   [Second Day - Helping the Cloud Native Computing Foundation (CNCF) Booth](#second-day-helping-the-cloud-native-computing-foundation-cncf-booth-)
 *   [Conclusion](#conclusion)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 As I entered the Pasadena Convention Center for the Southern California Linux Expo, I felt a buzz in the air that set this event apart from others I'd attended before. This time, I was there to represent Botkube solo, which brought an added level of excitement.
 

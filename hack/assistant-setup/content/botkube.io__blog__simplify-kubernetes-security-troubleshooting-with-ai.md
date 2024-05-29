@@ -24,9 +24,9 @@ Learn how Botkube can streamline troubleshooting and help overcome common Kubern
 *   [Summary](#summary)
 *   [Try Out Botkube for Kubernetes Security Best Practices Today](#try-out-botkube-for-kubernetes-security-best-practices-today)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 Kubernetes is a powerful container orchestration platform, but its complexity can leave even seasoned developers scratching their heads. One particularly tricky area is [Pod Security Admission (PSA)](https://kubernetes.io/docs/concepts/security/pod-security-admission/). While PSA plays a crucial role in cluster security, it can also be the source of unexpected deployment failures. That's where the AI-powered Botkube Assistant, specifically designed for Kubernetes, comes to the rescue. Botkube understands the complexities of your cluster and guides you towards solutions in clear, simple language.
 

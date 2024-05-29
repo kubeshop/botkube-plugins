@@ -25,7 +25,7 @@ Our most recent realese of Botkube Cloud & Open Source brings important features
 *   [Bug Fixes](#bug-fixes)
 *   [Feedback - We’d Love to Hear From You](#feedback-we-d-love-to-hear-from-you)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 Botkube is introducing the power of AI to Kubernetes troubleshooting! We are excited to announce the latest release of Botkube, packed with new features and improvements to enhance your Kubernetes collaborative troubleshooting experience. This release introduces
 

@@ -24,7 +24,7 @@ Something new is coming to the Botkube universe...
 *   [Sign up now](#sign-up-now)
 *   [Feedback](#feedback)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 We are thrilled to announce the launch of [Botkube v1.0](https://app.botkube.io/) This new version of Botkube introduces a hosted control plane for multi-cluster management and monitoring of all of your Botkube instances.Troubleshooting in the K8s world can be like trying to navigate through a mosh pit - chaotic and unpredictable. With alerts flying in from all directions and collaboration being a somewhat ad hoc process, it's easy to feel like you're drowning in a sea of chaos. Even if developers have access to the K8s cluster, it's often not a smooth process - secret keys can be tough to revoke and retrieving logs is done manually. And let's not forget about security - accessing the cluster to perform operations must be limited to approved networks and devices. Sometimes, remote troubleshooting just isn't an option. It's time for a better way to troubleshoot K8s.That’s where Botkube comes in.
 

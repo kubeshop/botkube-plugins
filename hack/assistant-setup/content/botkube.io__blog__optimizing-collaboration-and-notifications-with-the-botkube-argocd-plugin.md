@@ -23,7 +23,7 @@ A closer look into the Botkube team's process for developing the ArgoCD plugin
 *   [Sign up now!](#sign-up-now-)
 *   [Feedback](#feedback)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 #### Get started with Botkube Cloud
 

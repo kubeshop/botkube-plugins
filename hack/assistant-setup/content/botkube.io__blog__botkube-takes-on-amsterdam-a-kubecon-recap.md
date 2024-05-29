@@ -28,7 +28,7 @@ The Kubecon Amsterdam conference was a wild ride, filled with exciting announcem
 *   [Sign up now](#sign-up-now)
 *   [Feedback](#feedback)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 Kubecon EU was a wild ride, filled with exciting announcements, insightful talks, and countless networking opportunities. As an attendee and representative of Botkube, I had the privilege of observing the latest trends in the Kubernetes space, and I am thrilled to share my experience and my top five takeaways with you.
 

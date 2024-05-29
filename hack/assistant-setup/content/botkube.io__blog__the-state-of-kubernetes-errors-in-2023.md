@@ -22,7 +22,7 @@ What is the state of Kubernetes errors in 2023? What are the most popular errors
 *   [Effective K8s Troubleshooting Chart](#effective-k8s-troubleshooting-chart)
 *   [Concluding Kubernetes Errors](#concluding-kubernetes-errors)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 #### Get started with Botkube Cloud
 

@@ -24,7 +24,7 @@ Chatops is not dead...it's making a comeback. In the fast-paced world of softwar
 *   [Embrace the Future of Collaborative Troubleshooting:](#embrace-the-future-of-collaborative-troubleshooting-)
 *   [Feedback - We’d Love to Hear From You!](#feedback-we-d-love-to-hear-from-you-)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 In the fast-paced world of software development, collaboration and effective communication are extremely important. That's where ChatOps comes in—a game-changing method that has transformed the way development and operations teams collaborate. Despite rumors of its demise, ChatOps is alive and well, and all thanks to an incredible tool called Botkube. In this blog post, we'll show the ways ChatOps has evolved and why every developer should be excited about Botkube's impact on their troubleshooting workflow.
 

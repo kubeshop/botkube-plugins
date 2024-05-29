@@ -24,7 +24,7 @@ Botkube v0.15.0 adds some great interactivity features aimed at application deve
 *   [Bug Fixes](#bug-fixes)
 *   [Feedback - We’d Love to Hear From You](#feedback-we-d-love-to-hear-from-you)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 We have an exciting early release of Botkube, just in time for KubeCon! We've been working as fast as we can to get some great new features ready to release. Here's v0.15.0 of Botkube, the most modern [ChatOps tool for Kubernetes](http://botkube.io/)!
 

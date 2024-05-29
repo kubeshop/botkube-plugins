@@ -23,7 +23,7 @@ Botkube v0.16.0 adds new event filter criteria allowing more granular event tuni
 *   [Bug Fixes](#bug-fixes)
 *   [Feedback - We’d Love to Hear From You](#feedback-we-d-love-to-hear-from-you)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 The latest version of Botkube is here, v0.16.0. Like peanut butter and chocolate, we've brought together two great parts of Botkube to make your life working with Kubernetes even easier. Botkube is the most modern [ChatOps tool for Kubernetes](http://botkube.io/)!
 

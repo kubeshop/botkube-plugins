@@ -26,7 +26,7 @@ This Tutorial is about the new ChatGPT-powered Doctor plugin which allows for ea
 *   [Conclusion](#conclusion)
 *   [We'd Love Your Feedback](#we-d-love-your-feedback)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 #### Get started with Botkube Cloud
 

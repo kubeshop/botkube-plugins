@@ -23,7 +23,7 @@ The latest release of Botkube is here! This release from the new Botkube team in
 *   [Telemetry](#telemetry)
 *   [Feedback - We’d Love to Hear From You](#feedback-we-d-love-to-hear-from-you)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 BotKube, welcome to Kubeshop! We're happy to have the most modern [ChatOps tool for Kubernetes](http://botkube.io/) join the team.
 

@@ -22,7 +22,7 @@ Imagine having K8s experts available, providing help to your team 24/7. Get real
 *   [Kubernetes Expertise Directly in Your Chat Platform](#kubernetes-expertise-directly-in-your-chat-platform)
 *   [Get Started with AIOps for Kubernetes](#get-started-with-aiops-for-kubernetes)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 #### Get started with Botkube Cloud
 

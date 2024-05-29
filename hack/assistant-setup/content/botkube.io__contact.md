@@ -27,7 +27,7 @@ Company
 
 [Sign in](https://app.botkube.io/)
 
-[Get Demo](https://botkube.io/demo)[Get Started](https://app.botkube.io/)
+[Request Demo](https://botkube.io/demo)[Get Started](https://app.botkube.io/)
 
 Use the form to leave us a message or connect with us on social:
 

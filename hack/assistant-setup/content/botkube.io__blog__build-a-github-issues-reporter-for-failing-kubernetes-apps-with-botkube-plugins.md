@@ -24,7 +24,7 @@ Botkube 0.17 introduces plugin support. In this guide you will learn how to crea
 *   [Summary](#summary)
 *   [How can I get involved?](#how-can-i-get-involved-)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 Botkube gives you fast and simple access to your clusters right from your communication platform. It does that by sending [actionable notifications](https://docs.botkube.io/configuration/action) (via [_sources_](https://docs.botkube.io/architecture/#source)) and allowing you to run _kubectl_ and _helm_ commands (via [_executors_](https://docs.botkube.io/architecture/#executor)) straight from the platform (Slack, Discord, Microsoft Teams and Mattermost).
 

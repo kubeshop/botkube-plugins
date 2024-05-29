@@ -24,7 +24,7 @@ As the demand for seamless scalability and efficient teamwork increases, an inno
 *   [Optimized Flux Workflow](#optimized-flux-workflow)
 *   [Get Started with Botkube’s new Flux Plugin](#get-started-with-botkube-s-new-flux-plugin)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 #### Get started with Botkube Cloud
 

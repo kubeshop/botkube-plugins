@@ -23,7 +23,7 @@ Learn about Botkube from Rohit Ghumare, Google Developer Expert – Google Cloud
 *   [Botkube Meets Helm](#botkube-meets-helm)
 *   [Conclusion](#conclusion)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 #### Get started with Botkube Cloud
 

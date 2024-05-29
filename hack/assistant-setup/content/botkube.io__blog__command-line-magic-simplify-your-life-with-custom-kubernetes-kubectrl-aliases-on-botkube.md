@@ -20,7 +20,7 @@ With custom aliases, you can create shortcuts for those long and confusing Kuber
 *   [So how do you do it?](#so-how-do-you-do-it-)
 *   [Syntax](#syntax)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 Are you tired of typing out long and complex Kubernetes commands, only to realize you've made a typo and have to start over? Do you wish there was a way to make managing your Kubernetes clusters easier and more efficient? Fortunately, [custom kubectl aliases](https://docs.botkube.io/usage/executor/#aliases) on Botkube are here to save the day. With custom aliases, you can create shortcuts for those long and confusing Kubernetes commands, making it easy to manage your clusters and focus on what really matters - **your code**.
 

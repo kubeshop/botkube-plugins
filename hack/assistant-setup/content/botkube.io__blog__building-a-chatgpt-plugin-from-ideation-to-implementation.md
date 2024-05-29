@@ -24,7 +24,7 @@ Botkube now includes AI recommendations to help you diagnose and troubleshoot is
 *   [Result](#result)
 *   [Conclusion](#conclusion)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 #### Get started with Botkube Cloud
 

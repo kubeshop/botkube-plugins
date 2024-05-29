@@ -23,7 +23,7 @@ Argo CD now integrates with Botkube, allowing users to receive and interact with
 *   [Using Argo CD with Botkube](#using-argo-cd-with-botkube)
 *   [Get Started with Botkube’s new Argo CD Plugin](#get-started-with-botkube-s-new-argo-cd-plugin)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 #### Get started with Botkube Cloud
 

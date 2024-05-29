@@ -23,9 +23,9 @@ Learn about the latest v1.11 release, including an update to the AI-powered Botk
 *   [What’s next for Botkube?](#what-s-next-for-botkube-)
 *   [Try the Latest Version of Botkube Today](#try-the-latest-version-of-botkube-today)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 Botkube just became smarter! With our latest v1.11 release, Botkube becomes self-aware, requiring less upfront knowledge of specific Botkube commands or your configuration settings. With help from the Botkube Assistant, new and existing users can get up to speed quickly, minimizing time scrolling through help commands or Botkube documentation.
 

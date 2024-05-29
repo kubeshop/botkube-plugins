@@ -24,7 +24,7 @@ Learn how to set up Botkube with ArgoCD plugins in this step-by-step tutorial.
 *   [Sign up now!](#sign-up-now-)
 *   [Feedback](#feedback)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 #### Start Receiving Kubernetes Notifications Now with Botkube Cloud
 

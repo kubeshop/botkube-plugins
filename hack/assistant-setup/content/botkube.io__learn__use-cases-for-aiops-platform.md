@@ -24,7 +24,7 @@ Table of Contents
 *   [AIOps Use Cases](#aiops-use-cases)
 *   [Concluding Thoughts](#concluding-thoughts)
 
-#### Get started with Botkube Cloud
+#### Start Using Botkube AI Assistant Today
 
 The landscape of DevOps is evolving at breakneck speed. With the booming popularity of chatbots and large language models (LLMs), a revolutionary trend is emerging: MLOps, or the application of AI and machine learning to streamline and automate IT operations. This translates to DevOps engineers increasingly leveraging "AIOps tools" and "AIOps solutions" to navigate the complexities of their Kubernetes environments.
 

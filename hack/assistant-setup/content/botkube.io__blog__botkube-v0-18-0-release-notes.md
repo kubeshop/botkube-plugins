@@ -22,7 +22,7 @@ Botkube v0.18.0 adds a Prometheus source plugin and command aliases.
 *   [Bug Fixes](#bug-fixes)
 *   [Feedback - We’d Love to Hear From You](#feedback-we-d-love-to-hear-from-you)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 Botkube v0.18.0 has arrived. We've added our first new source plugin for Prometheus, and customizable command aliases. Botkube is the most modern [ChatOps tool for Kubernetes](http://botkube.io/)!
 

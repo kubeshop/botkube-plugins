@@ -1,4 +1,4 @@
-Title: Overview | Botkube
+Title: Botkube
 
 URL Source: https://docs.botkube.io/examples-and-tutorials/
 

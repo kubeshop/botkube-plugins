@@ -24,7 +24,7 @@ Discover the technical journey behind enhancing Microsoft Teams integration for 
 *   [Setting Up and Configuration](#setting-up-and-configuration-)
 *   [What do you think? Let us know!](#what-do-you-think-let-us-know-)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI Assistant Today
 
 #### Start Receiving Kubernetes Notifications Now with Botkube Cloud
 

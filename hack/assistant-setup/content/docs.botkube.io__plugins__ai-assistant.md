@@ -1,11 +1,8 @@
-Title: Botkube
+Title: AI Assistant | Botkube
 
 URL Source: https://docs.botkube.io/plugins/ai-assistant
 
 Markdown Content:
-AI Assistant
-------------
-
 info
 
 **This plugin is hosted by the [Botkube Cloud](https://app.botkube.io/) plugin repository and requires active Botkube Cloud account.**
@@ -28,6 +25,7 @@ The plugin provides the following features:
     *   Agent status and configuration,
     *   the latest Botkube documentation and other Botkube content.
 *   Keeping conversation context in the message threads.
+*   Kubernetes cluster scan.
 
 Get started[​](#get-started "Direct link to Get started")
 ---------------------------------------------------------
@@ -70,6 +68,10 @@ Here are a few examples to get you started:
 *   `@Botkube ai what's the difference between Botkube sources and executors?`
 *   `@Botkube ai what Botkube plugins are available to install? List all of them with one sentence description and link to the docs.`
 *   `@Botkube ai who's the Botkube maintainer?`
+
+### AI cluster scan[​](#ai-cluster-scan "Direct link to AI cluster scan")
+
+The assistant can help you troubleshoot the Kubernetes cluster by performing a cluster-wide scan for any potential issues, such as failing pods, high resource usage, or any other anomalies. To start the scan, use the `@Botkube ai scan` command.
 
 Configuration[​](#configuration "Direct link to Configuration")
 ---------------------------------------------------------------
