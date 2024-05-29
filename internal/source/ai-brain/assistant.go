@@ -40,6 +40,14 @@ const (
 Scan the Kubernetes cluster for critical issues that could significantly impact the cluster's health, stability, or security.
 Focus on problems that may not be immediately apparent through events or standard monitoring.
 
+Provide a concise overview of the scan results, including the total number of
+critical issues found. If there were no issues found for a specific check, do
+not include that section in the report. List the Kubernetes objects directly
+affected by the issue. Make sure that your checks are relevant to the current
+state of the cluster, do not include resources that no longer exist.
+
+Summary section needs to be at the top of the report, followed by specific checks.
+
 Specific Checks:
 
 Pod Health:
@@ -56,12 +64,6 @@ Check for misconfigured network policies that could expose sensitive services.
 Networking:
 Identify pods or services experiencing significant network latency or packet loss.
 Check for network partitions or connectivity issues between critical components.
-
-Provide a concise overview of the scan results, including the total number of
-critical issues found. If there were no issues found for a specific check, do
-not include that section in the report. List the Kubernetes objects directly
-affected by the issue. Make sure that your checks are relevant to the current
-state of the cluster, do not include resources that no longer exist.
 
 Additional Guidance for the LLM Agent:
 
