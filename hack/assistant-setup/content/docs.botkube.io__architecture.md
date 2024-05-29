@@ -1,11 +1,8 @@
-Title: Botkube
+Title: Architecture | Botkube
 
 URL Source: https://docs.botkube.io/architecture/
 
 Markdown Content:
-Architecture
-------------
-
 This document describes high-level Botkube architecture, all components in the system and interactions between them.
 
 Botkube is split into two main parts:
