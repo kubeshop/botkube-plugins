@@ -7,25 +7,15 @@ on:
     branches:
       - main
 
-env:
-  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-
 jobs:
   reconfigure-ai-assistant:
     name: Reconfigure OpenAI assistant
     runs-on: ubuntu-22.04
     timeout-minutes: 15
+    env:
+      OPENAI_API_KEY: ${{ startsWith(github.ref, 'refs/tags/') && secrets.PROD_OPENAI_API_KEY || secrets.DEV_OPENAI_API_KEY }}
+      ASSISTANT_ENV: ${{ startsWith(github.ref, 'refs/tags/') && 'prod' || 'dev' }}
     steps:
-      - name: Set environment variables
-        run: |
-          if [[ $GITHUB_REF == refs/tags/* ]]; then
-            # tag push          
-            echo "ASSISTANT_ENV=prod" >> $GITHUB_ENV
-          elif [[ $GITHUB_REF == refs/heads/* ]]; then
-            # branch push
-            echo "ASSISTANT_ENV=dev" >> $GITHUB_ENV
-          fi
-
       - name: Checkout repository
         uses: actions/checkout@v4
         with:

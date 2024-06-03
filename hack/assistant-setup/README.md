@@ -28,7 +28,7 @@ export ASSISTANT_ENV=dev # dev or prod
 npm run start
 ```
 
-To use your own assistant, modify the `assistantID` variable in the `index.ts` file.
+To use your own assistant, modify the `devConfig` in the `index.ts` file.
 
 ## Development
 
