@@ -15,12 +15,13 @@ const assistantID = "asst_eMM9QaWLi6cajHE4PdG1yU53"
 
 // Config holds source configuration.
 type Config struct {
-	Log                   config.Logger `yaml:"log"`
-	OpenAICloudServiceURL string        `yaml:"openAICloudServiceURL"`
-	OpenAIAssistantID     string        `yaml:"openAIAssistantId"`
-	HoneycombAPIKey       string        `yaml:"honeycombAPIKey"`
-	HoneycombSampleRate   int           `yaml:"HoneycombSampleRate"`
-	Version               string
+	Log                    config.Logger `yaml:"log"`
+	OpenAICloudServiceURL  string        `yaml:"openAICloudServiceURL"`
+	OpenAIAssistantID      string        `yaml:"openAIAssistantId"`
+	HoneycombAPIKey        string        `yaml:"honeycombAPIKey"`
+	HoneycombSampleRate    int           `yaml:"honeycombSampleRate"`
+	VectorStoreIDForThread string        `yaml:"vectorStoreIDForThread"`
+	Version                string
 }
 
 // Validate validates the configuration.
