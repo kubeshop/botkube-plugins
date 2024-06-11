@@ -206,10 +206,8 @@ func (f *contentFetcher) fetchAndSavePage(inURL, filePath string) error {
 		return fmt.Errorf("while creating request for page %q: %w", pageURL, err)
 	}
 
-	if f.headers != nil {
-		for key, val := range f.headers {
-			req.Header.Set(key, val)
-		}
+	for key, val := range f.headers {
+		req.Header.Set(key, val)
 	}
 
 	res, err := f.httpCli.Do(req)
