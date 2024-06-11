@@ -8,7 +8,7 @@ Markdown Content:
 *   Commands
 *   botkube version
 
-Version: 1.11
+Version: 1.12
 
 botkube version[​](#botkube-version "Direct link to botkube version")
 ---------------------------------------------------------------------

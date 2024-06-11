@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/botkube-v013-release-notes
 Published Time: Sep 01, 2022
 
 Markdown Content:
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/636df3edbf5389368f6bef9c_cYbM1beBC5tQnSPVfaXCg_W9tkHugByZV2TOleN6pTw.jpeg)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/636df3edbf5389368f6bef9c_cYbM1beBC5tQnSPVfaXCg_W9tkHugByZV2TOleN6pTw.jpeg)
 
 Blair Rampling
 
@@ -23,7 +23,7 @@ The latest release of Botkube is here! This release from the new Botkube team in
 *   [Telemetry](#telemetry)
 *   [Feedback - We’d Love to Hear From You](#feedback-we-d-love-to-hear-from-you)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI-Powered Assistant Today
 
 BotKube, welcome to Kubeshop! We're happy to have the most modern [ChatOps tool for Kubernetes](http://botkube.io/) join the team.
 
@@ -36,7 +36,7 @@ In this release, we focused on multi-channel support, bug fixes, and optimizing 
 Multi-Channel Support
 ---------------------
 
-![Image 2: Connecting Multiple Kubernetes Clusters to Multiple Slack Channels](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6360eb6a2fdfd662d24a9ca0_6310c1dc595cf2e50475bc23_2dGs46sYiazq09JJsR0RtJZwNSQPpS_FFV3EcATxfr7Om0vQQgafkiLDUdFNfVg31adYxk0VRVgyPxjr4nFPLENhF8XSeLPmBAAWVS6dDYtRkgat9EqCF5ApyMZyVhDBJX0cW0y9knrOPcDdSQIsRg.png)
+![Image 2: Connecting Multiple Kubernetes Clusters to Multiple Slack Channels](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6360eb6a2fdfd662d24a9ca0_6310c1dc595cf2e50475bc23_2dGs46sYiazq09JJsR0RtJZwNSQPpS_FFV3EcATxfr7Om0vQQgafkiLDUdFNfVg31adYxk0VRVgyPxjr4nFPLENhF8XSeLPmBAAWVS6dDYtRkgat9EqCF5ApyMZyVhDBJX0cW0y9knrOPcDdSQIsRg.png)
 
 While BotKube is now part of the Kubeshop team, BotKube development is still community-driven. Multi-channel support was requested by several users in the BotKube community and the reason why we implemented it in our first release. We also worked with the community to review the [configuration proposal](https://github.com/kubeshop/botkube/issues/628) and will continue this kind of community involvement as we go.
 

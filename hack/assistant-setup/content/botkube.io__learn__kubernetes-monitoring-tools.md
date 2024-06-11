@@ -12,7 +12,7 @@ Keeping your Kubernetes cluster healthy and efficient is crucial for a smooth cl
 
 Originally developed by Infracloud to bridge the gap between Kubernetes and Slack, Botkube found its second life when Kubeshop saw its potential. Under Blair Rampling's leadership, Botkube transformed from a basic notification bot into an [AI-powered monitoring assistant](https://botkube.io/features#Monitoring), residing directly within your Slack or Teams workspace.
 
-![Image 1: Botkube's Chat Monitoring Tool for Kubernetes](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65b81113bc05828acc59f5cf_CfjAHYlDIKJ84qFL_VYqmFsb5E0uZ4aT46UGUQLRI5JaEVMm8I32QjLjc9y1lMoxTdbWWRFa-pPdLR47UD1h5YCCbKLK4BkuXQ0qo-2jjwbX-djotNucpQEKZrQ367IzWln1yEGZZuFdn4MiDc5mAVk.png)
+![Image 1: Botkube's Chat Monitoring Tool for Kubernetes](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65b81113bc05828acc59f5cf_CfjAHYlDIKJ84qFL_VYqmFsb5E0uZ4aT46UGUQLRI5JaEVMm8I32QjLjc9y1lMoxTdbWWRFa-pPdLR47UD1h5YCCbKLK4BkuXQ0qo-2jjwbX-djotNucpQEKZrQ367IzWln1yEGZZuFdn4MiDc5mAVk.png)
 
 ### **Chat-powered Monitoring:**
 
@@ -62,7 +62,7 @@ Prometheus' core strength lies in its flexibility and extensive feature set. Eas
 
 The ELK Stack, comprising Elasticsearch, Logstash, and Kibana, brings enterprise-grade search and visualization capabilities to Kubernetes monitoring. Elasticsearch acts as the data powerhouse, ingesting and storing vast amounts of logs and metrics. Logstash processes and enriches the data, while Kibana transforms it into beautiful and interactive dashboards for insightful analysis.
 
-![Image 2: Elastic Search Kubernetes Monitoring Board](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65b81113b42acfb8671a9233_tbT65ycGZPY4WqSGnrg9vwqwNPJHJieo_1VfKoiDFkRNknM0slegRlEQTDOhzH25bwZV1zeOoiNkHsPxetj4XVB6dvfRd9sNPJ_heEwdgQsjwr8xPeFR31gXoMgZLADaYBWGbooeiHKb1NELjpiDw3A.png)
+![Image 2: Elastic Search Kubernetes Monitoring Board](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65b81113b42acfb8671a9233_tbT65ycGZPY4WqSGnrg9vwqwNPJHJieo_1VfKoiDFkRNknM0slegRlEQTDOhzH25bwZV1zeOoiNkHsPxetj4XVB6dvfRd9sNPJ_heEwdgQsjwr8xPeFR31gXoMgZLADaYBWGbooeiHKb1NELjpiDw3A.png)
 
 ### **Data Detective:**
 
@@ -112,7 +112,7 @@ Keptn's AI assistant, "Keptn Lisa," learns from your infrastructure and automate
 
 The [official Kubernetes Dashboard](https://github.com/kubernetes/dashboard), an open-source project within the Kubernetes ecosystem, emerges as a favorite for its simplicity and ease of use. It provides a centralized view of your cluster's health and performance through intuitive dashboards, making it ideal for quick monitoring and troubleshooting.
 
-![Image 3: Open Source Kubernetes Dashboard](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65b811147a0ebb7626b7c74b_CY588CHxwzGx_LdOaPzDYLA9blBAI35B8kXGy2xmL0s7_Z5hAxT6uIb7IZqb_ZktAT0gm4zwCGrHjVuJiS2CDThEsmQ0elT7qP02OyyEPiaLoSwhwI0_AcUkE8J86X3KRDa_wmJEirS0mVqlyV30R7Y.png)
+![Image 3: Open Source Kubernetes Dashboard](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65b811147a0ebb7626b7c74b_CY588CHxwzGx_LdOaPzDYLA9blBAI35B8kXGy2xmL0s7_Z5hAxT6uIb7IZqb_ZktAT0gm4zwCGrHjVuJiS2CDThEsmQ0elT7qP02OyyEPiaLoSwhwI0_AcUkE8J86X3KRDa_wmJEirS0mVqlyV30R7Y.png)
 
 ### **Visual Insight at a Glance:**
 

@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/command-line-magic-simplify-your-life-with-c
 Published Time: Mar 09, 2023
 
 Markdown Content:
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
 
 Maria Ashby
 
@@ -20,7 +20,7 @@ With custom aliases, you can create shortcuts for those long and confusing Kuber
 *   [So how do you do it?](#so-how-do-you-do-it-)
 *   [Syntax](#syntax)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI-Powered Assistant Today
 
 Are you tired of typing out long and complex Kubernetes commands, only to realize you've made a typo and have to start over? Do you wish there was a way to make managing your Kubernetes clusters easier and more efficient? Fortunately, [custom kubectl aliases](https://docs.botkube.io/usage/executor/#aliases) on Botkube are here to save the day. With custom aliases, you can create shortcuts for those long and confusing Kubernetes commands, making it easy to manage your clusters and focus on what really matters - **your code**.
 
@@ -42,7 +42,7 @@ To save on time, Botkube had implemented the `k` and `kc` aliases for the kubect
 
 In the example shown below, kgp is an alias for the full kubectl get pods command.
 
-![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6408ec7df6773520fc340602_sLERrE-WA2Iv0EldUqYb-eeTU_dmKcSc9eK3k6ryJguJX8MuZyReFo14bHFCWumC846c87NEyVpyjLs3bJBImbK_aF_0iH4k6JCgoQHl0hrLRWzBdnZ5Y8Hg8AMICY4tRhyP06K9v539W8TuW9mTvvY.png)
+![Image 2](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6408ec7df6773520fc340602_sLERrE-WA2Iv0EldUqYb-eeTU_dmKcSc9eK3k6ryJguJX8MuZyReFo14bHFCWumC846c87NEyVpyjLs3bJBImbK_aF_0iH4k6JCgoQHl0hrLRWzBdnZ5Y8Hg8AMICY4tRhyP06K9v539W8TuW9mTvvY.png)
 
 Once you have configured aliases, you can use them interchangeably with a full command. For example:
 
@@ -63,7 +63,7 @@ Aliases are defined globally for the whole Botkube installation. To see which al
 Syntax
 ------
 
-![Image 3](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/642d8fd3d44f31b2f4b28059_Screenshot%202023-04-05%20at%208.11.31%20AM.png)
+![Image 3](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/642d8fd3d44f31b2f4b28059_Screenshot%202023-04-05%20at%208.11.31%20AM.png)
 
 So there you have it- **the power of custom aliases on Botkube**. By creating personalized shortcuts for your most-used commands, you'll be able to work smarter, not harder, and get things done more efficiently than ever before. Plus, with the ability to create aliases for all commands, including built-in Botkube commands and executor plugins, the possibilities are truly endless. So, if you want to streamline your workflow and become a more efficient developer, custom alias feature on Botkube is definitely worth exploring
 

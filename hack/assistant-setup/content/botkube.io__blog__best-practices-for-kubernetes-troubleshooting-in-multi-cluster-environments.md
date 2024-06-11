@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/best-practices-for-kubernetes-troubleshootin
 Published Time: Jul 20, 2023
 
 Markdown Content:
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
 
 Maria Ashby
 
@@ -26,9 +26,9 @@ As K8s becomes the solution for container orchestration and remote work environm
 *   [Conclusion](#conclusion)
 *   [CNCF Islamabad and Botkube Webinar](#cncf-islamabad-and-botkube-webinar)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI-Powered Assistant Today
 
-#### Get started with Botkube Cloud
+#### Get Started with Botkube Today!
 
 Introduction to Troubleshooting Kubernetes
 ------------------------------------------
@@ -40,7 +40,7 @@ In this blog, we will explore some best practices that can enhance the efficienc
 What is Kubernetes Troubleshooting?
 -----------------------------------
 
-![Image 2: learn k8s help article on the process for troubleshooting Kubernetes related issues](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64b968a920dcc2ab5ff83fb7_4QTYY_4jwo5E0DeGgXARbgT_xYK4VyNKjg9OGcMmAMJPlaJFDcozwToB_GSkt5bM3rS5IIAFKBwiGFaLzuOrQMqHQoKHoDisEHGJRyZpMjS7yNHRciYG5KN9omOGrR6_AxCx1hKY5ksNqNLg81P24l8.png)
+![Image 2: learn k8s help article on the process for troubleshooting Kubernetes related issues](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64b968a920dcc2ab5ff83fb7_4QTYY_4jwo5E0DeGgXARbgT_xYK4VyNKjg9OGcMmAMJPlaJFDcozwToB_GSkt5bM3rS5IIAFKBwiGFaLzuOrQMqHQoKHoDisEHGJRyZpMjS7yNHRciYG5KN9omOGrR6_AxCx1hKY5ksNqNLg81P24l8.png)
 
 A diagram of the K8s troubleshooting process from [LearnK8s](https://learnk8s.io/a/fae60444184ca7bd8c3698d866c24617.png)
 
@@ -69,7 +69,7 @@ Best Practices for Kubernetes Multi-cluster Troubleshooting
 
 Efficient troubleshooting across multiple Kubernetes clusters begins with the crucial step of consolidating monitoring and observability information in one centralized location. By doing so, you gain a bird's eye view of your entire infrastructure as data from all clusters is brought together. This comprehensive perspective enables quicker issue identification and streamlined troubleshooting, regardless of the specific cluster involved. Having all the essential information in one place empowers your team to tackle problems more efficiently, saving valuable time and ensuring a smooth troubleshooting process.
 
-![Image 3: Botkube performing Kubernetes error searches from slack interface](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64a70a5bb3210007e280d3f8_Untitled%20design.gif)
+![Image 3: Botkube performing Kubernetes error searches from slack interface](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64a70a5bb3210007e280d3f8_Untitled%20design.gif)
 
 ‍
 
@@ -81,7 +81,7 @@ Effective incident response and collaboration are critical in multi-cluster envi
 
 By leveraging incident response and collaboration tools that integrate with familiar communication platforms, teams can establish a streamlined workflow for incident resolution by consolidating incident reporting to specific channels for teams to troubleshoot together, ensuring that issues are addressed swiftly and effectively. Together, these solutions empower teams to work cohesively, minimizing disruptions and maximizing the reliability and stability of their multi-cluster environments.
 
-![Image 4: AI Kubernetes assistant helps find errors with cluster management or deployment for quick K8s troubleshooting](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64b96a341b5ccb59ffb87637_act-on-events.gif)
+![Image 4: AI Kubernetes assistant helps find errors with cluster management or deployment for quick K8s troubleshooting](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64b96a341b5ccb59ffb87637_act-on-events.gif)
 
 ### Establish a Feedback Loop
 
@@ -95,7 +95,7 @@ Efficiency is key when troubleshooting Kubernetes across multiple clusters. Stre
 
 Automation plays a crucial role in streamlining troubleshooting processes and ensuring the reliability of Kubernetes clusters. By automating the collection, aggregation, and correlation of observability data, such as metrics, logs, events, and traces, teams can significantly reduce the time and effort required for monitoring and managing services. Automated observability processes enable quick identification of anomalies or performance deviations, allowing for proactive troubleshooting and resolution.
 
-![Image 5: Scrolling through kubectl logs in slack](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64b9697c82dc01bf31f863b1_automation.gif)
+![Image 5: Scrolling through kubectl logs in slack](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64b9697c82dc01bf31f863b1_automation.gif)
 
 Some Common Kubernetes Errors
 -----------------------------

@@ -1,12 +1,12 @@
-Title: Kubectl Drain Explained: Safe Node Evacuation in Kubernetes
+Title: Demystifying kubectl drain: Safely Evacuating K8s Nodes
 
 URL Source: https://botkube.io/learn/demystifying-kubectl-drain-safely-evacuating-kubernetes-nodes
 
 Markdown Content:
-In a Kubernetes cluster, it is often necessary to safely evacuate nodes for maintenance or troubleshooting purposes. One of the tools that can help with this process is kubectl drain. However, understanding how to use kubectl drain effectively and safely can be a challenge. In this blog post, we will demystify kubectl drain and explore its various options and best practices for safely evacuating Kubernetes nodes.
+In a Kubernetes cluster, it is often necessary to safely evacuate nodes for maintenance or troubleshooting purposes. One of the tools that can help with this process is kubectl drain. However, understanding how to use the command effectively and safely can be a challenge. In this blog post, we will demystify kubectl drain and explore its various options and best practices for safely evacuating Kubernetes nodes.
 
-**Understanding kubectl drain**
--------------------------------
+**Understanding the kubectl drain command**
+-------------------------------------------
 
 ### **What is kubectl drain?**
 
@@ -18,8 +18,8 @@ In a Kubernetes cluster, it is often necessary to safely evacuate nodes for main
 *   kubectl drain ensures that pods are not abruptly terminated, avoiding any potential data loss or disruption to running applications.
 *   It allows for planned maintenance or troubleshooting of nodes without impacting the availability of applications.
 
-**Using kubectl drain**
------------------------
+**Draining Kubernetes Pods with the Kubectl Command**
+-----------------------------------------------------
 
 ### **Syntax and basic usage**
 
@@ -35,9 +35,15 @@ In a Kubernetes cluster, it is often necessary to safely evacuate nodes for main
 **Best practices for using kubectl drain**
 ------------------------------------------
 
-### **Communicate with the team**
+### **Communicate with the DevOps or SRE team**
 
 *   Before draining a node, communicate with the team to ensure that the planned maintenance or troubleshooting does not impact critical applications.
+    *   Using a [Kubernetes collaboration tool](https://botkube.io/learn/future-of-kubernetes-management), such as Botkube, can help with this communication. Simply send a message to the team in the chat channel that is connected to the cluster and sending alerts about the pod that needs to be emptied. Use Slack or Teams ability to tag teammates to ensure the right people see your message.
+    *   Use the same communication channel to run the command to empty the pod with Botkube's kubectl plugin.
+
+![Image 1: kubectl help directly from Slack](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6658cb6e3dc7864df243e182_kubectl%20help%20with%20botkube.png)
+
+Running a kubectl command from Slack with Botkube
 
 ### **Considerations for DaemonSets**
 
@@ -52,13 +58,13 @@ In a Kubernetes cluster, it is often necessary to safely evacuate nodes for main
 **Conclusion**
 --------------
 
-In this blog post, we have explored the kubectl drain command and its various options and best practices for safely evacuating Kubernetes nodes. By understanding how to use kubectl drain effectively, you can ensure that your maintenance or troubleshooting tasks do not disrupt the availability of your applications.
+In this blog post, we have explored the command to drain pods and its various options and best practices for safely evacuating Kubernetes nodes. By understanding how to use kubectl drain effectively, you can ensure that your maintenance or troubleshooting tasks do not disrupt the availability of your applications. **‍**
 
-### **Further into kubectl commands**
+### **‍** Further into kubectl commands
 
 At Botkube, we have created a toolset that not only assists with other areas of K8s, our tool specifically has executor plugins that allow for kubectl command automations. Our chat platform integration allows users to set [kubectl aliases](https://botkube.io/blog/command-line-magic-simplify-your-life-with-custom-kubernetes-kubectrl-aliases-on-botkube) to run the commands directly from their preferred chat productivity platform such as Sl.ack or Teams.
 
-If you found our above article on kubectl drain, we invite you to check out our [kubectl cheat sheet](https://botkube.io/learn/kubectl-cheat-sheet) where we go further into kubectl commands. It talks about the benefits of running these commands during troubleshooting and how Botkube can help platform engineers run helpful scripts quickly.
+If you found our above article helpful, we invite you to check out our [kubectl cheat sheet](https://botkube.io/learn/kubectl-cheat-sheet) where we go further into kubectl commands. It talks about the benefits of running these commands during troubleshooting and how Botkube can help platform engineers run helpful scripts quickly.
 
 ‍
 

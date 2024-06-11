@@ -3,7 +3,7 @@ Title: botkube uninstall | Botkube
 URL Source: https://docs.botkube.io/cli/commands/botkube_uninstall
 
 Markdown Content:
-Version: 1.11
+Version: 1.12
 
 botkube uninstall[​](#botkube-uninstall "Direct link to botkube uninstall")
 ---------------------------------------------------------------------------

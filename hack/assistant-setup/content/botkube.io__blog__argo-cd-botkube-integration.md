@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/argo-cd-botkube-integration
 Published Time: Sep 22, 2023
 
 Markdown Content:
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
 
 Maria Ashby
 
@@ -23,9 +23,9 @@ Argo CD now integrates with Botkube, allowing users to receive and interact with
 *   [Using Argo CD with Botkube](#using-argo-cd-with-botkube)
 *   [Get Started with Botkube’s new Argo CD Plugin](#get-started-with-botkube-s-new-argo-cd-plugin)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI-Powered Assistant Today
 
-#### Get started with Botkube Cloud
+#### Get Started with Botkube Today!
 
 Are you dealing with the complexities of scaling operations and collaborative workflows using GitOps tools like ArgoCD? As your organization expands, staying on top of repository and configuration changes, as well as managing pull requests and issues, can become increasingly difficult.
 
@@ -34,7 +34,7 @@ Are you dealing with the complexities of scaling operations and collaborative wo
 What is Argo CD?
 ----------------
 
-![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/650e09b69191288d41cf2161_rih56gy96kbqx4UzlDDmVadKW9ieXnfmbXLOwzJiDWgHBDzmW0vG867PZM74YdzH5YkNHY-9F2xaVfJTam8eFpvSgzoB4EX-FxDPzLzqMvKJmSNtSBwIRifp2EctcHW3oeh_ruepqkKpwhfFyDzS5Kc.gif)
+![Image 2](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/650e09b69191288d41cf2161_rih56gy96kbqx4UzlDDmVadKW9ieXnfmbXLOwzJiDWgHBDzmW0vG867PZM74YdzH5YkNHY-9F2xaVfJTam8eFpvSgzoB4EX-FxDPzLzqMvKJmSNtSBwIRifp2EctcHW3oeh_ruepqkKpwhfFyDzS5Kc.gif)
 
 ‍
 
@@ -55,7 +55,7 @@ Botkube is a collaborative troubleshooting tool designed specifically for Kubern
 Using Argo CD with Botkube
 --------------------------
 
-![Image 3](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/650e09c855b42178c42a1d9b_jOhrHB90gwPhqwSU94v3y1Q7Q2Y_1Ltfap5j-mY6XbgieOkVITkVOoOboVTaVHT55onYtmncvcVt_zMrOQehiIOKbM2unJi5NKvWpXhjN222CbEB31JP_oSxT9QowgHWFcKv0YoK2FvZZvJMwGpET4s.png)
+![Image 3](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/650e09c855b42178c42a1d9b_jOhrHB90gwPhqwSU94v3y1Q7Q2Y_1Ltfap5j-mY6XbgieOkVITkVOoOboVTaVHT55onYtmncvcVt_zMrOQehiIOKbM2unJi5NKvWpXhjN222CbEB31JP_oSxT9QowgHWFcKv0YoK2FvZZvJMwGpET4s.png)
 
 ‍
 

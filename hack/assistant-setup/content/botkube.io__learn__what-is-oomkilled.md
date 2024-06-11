@@ -6,9 +6,9 @@ Markdown Content:
 What is OOMKilled?
 ------------------
 
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65fa187ca7f5437925b47992_LEARN_TN_Errors%20(2).png)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65fa187ca7f5437925b47992_LEARN_TN_Errors%20(2).png)
 
-![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64a86fdda4d8d06ce598598e_evan%20image.jpg)
+![Image 2](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64a86fdda4d8d06ce598598e_evan%20image.jpg)
 
 Evan Witmer
 
@@ -25,7 +25,7 @@ Table of Contents
 *   [How to Troubleshoot OOMKilled](#how-to-troubleshoot-oomkilled-2)
 *   [Conclusion](#conclusion-2)
 
-#### Get started with Botkube Cloud
+#### Get Started with Botkube Today!
 
 OOMKilled is an error that occurs when a container or pod in Kubernetes uses more memory than it is allowed. This can happen for a variety of reasons, such as a memory leak, a bug in the application, or a spike in traffic. When a container or pod is terminated due to OOMKilled, it will not be able to recover and will need to be restarted.
 

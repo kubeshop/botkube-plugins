@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/botkube-socket-slack-getting-started
 Published Time: Dec 05, 2022
 
 Markdown Content:
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/636df3edbf5389368f6bef9c_cYbM1beBC5tQnSPVfaXCg_W9tkHugByZV2TOleN6pTw.jpeg)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/636df3edbf5389368f6bef9c_cYbM1beBC5tQnSPVfaXCg_W9tkHugByZV2TOleN6pTw.jpeg)
 
 Blair Rampling
 
@@ -25,7 +25,7 @@ The new Botkube Slack app provides more great interactive features and better se
 *   [What Could Go Wrong?](#what-could-go-wrong-)
 *   [Feedback - We’d Love to Hear From You](#feedback-we-d-love-to-hear-from-you)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI-Powered Assistant Today
 
 The [new Botkube Slack app](https://docs.botkube.io/installation/slack/) provides more great interactive features and better security when compared to the [legacy Botkube Slack app](https://docs.botkube.io/0.15/installation/slack/). We announced the new socket mode Slack app in the [Botkube v0.14.0 release notes](https://botkube.io/blog/botkube-v014-release-notes#new-botkube-slack-app). The new Slack app has some specific requirements and a new installation process, so let's have a look at how to get started with the most modern [ChatOps tool for Kubernetes!](http://botkube.io/) You can also use the Botkube [installation documentation](https://docs.botkube.io/installation/slack/) to get started, but this post is to give you more context about the changes to the new app and some caveats to watch out for.
 
@@ -52,7 +52,7 @@ Let's go through the initial steps for installing the socket-based Slack app its
 2.  Click "From an app manifest" as we will use the Botkube-provided manifest for the new app.
     
 
-![Image 2: Kubernetes Deployment Setup wizard](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/638defd5bd91dbba0faccc21_9xHsAYF1sDUzf92VzItiVmpg6pPfW8mLBma5StF_-j8ZfzyqSgBnPbqpPnTLGLzn2nCGy_wEPBw9E5dpwbZBNXbKm0jSWixj-ufmFk-7JtqPw5TXhXO4a4LpwXLVJgh2pRe2U-bx0KhPJoUCB5EkdhT20QMTg4VVQvty5IqPCG3ITKmfL_f1nNdZQ_hlcQ.png)
+![Image 2: Kubernetes Deployment Setup wizard](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/638defd5bd91dbba0faccc21_9xHsAYF1sDUzf92VzItiVmpg6pPfW8mLBma5StF_-j8ZfzyqSgBnPbqpPnTLGLzn2nCGy_wEPBw9E5dpwbZBNXbKm0jSWixj-ufmFk-7JtqPw5TXhXO4a4LpwXLVJgh2pRe2U-bx0KhPJoUCB5EkdhT20QMTg4VVQvty5IqPCG3ITKmfL_f1nNdZQ_hlcQ.png)
 
 3.  Select the workspace into which you want to install the app and click Next.
     
@@ -87,18 +87,18 @@ Let's go through the initial steps for installing the socket-based Slack app its
 
 If you are using Botkube with multiple Kubernetes clusters as mentioned in the earlier caveat, set the name and description fields to something specific to the cluster this app will manage. This will make it clear in Slack itself which bot maps to which cluster. Paste this YAML into the app manifest dialog and click Next.
 
-![Image 3: Kubernetes Manifest file for Botkube](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/638defd59be2c7f0b4231ab2_rT70Rd59URrbNTS0SF4iTHlKyh9YkqZylD9a_vi_umpJJghbKTkrlq4dc1SUb1JmLa-TvD-Zv0fgQZiAdNgv--_ptj2Jf7vwNDxX20KMin3O80Xrjyl1BzDCM8Sfe2MXizEODQqKb1Cuz-Rlz_69CzhYKRhFr12eYAXezbr5YnRkjw_k6VUft--i1led9Q.png)
+![Image 3: Kubernetes Manifest file for Botkube](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/638defd59be2c7f0b4231ab2_rT70Rd59URrbNTS0SF4iTHlKyh9YkqZylD9a_vi_umpJJghbKTkrlq4dc1SUb1JmLa-TvD-Zv0fgQZiAdNgv--_ptj2Jf7vwNDxX20KMin3O80Xrjyl1BzDCM8Sfe2MXizEODQqKb1Cuz-Rlz_69CzhYKRhFr12eYAXezbr5YnRkjw_k6VUft--i1led9Q.png)
 
 5.  You now have a chance to review the app settings. Click the Create button.
     
 6.  Click the Install to Workspace button to add this newly created app to the Slack Workspace.
     
 
-![Image 4: Slack Webhook API for building Slack Bots](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/638defd53a3620a880c1429d_2lBQzqtvc7o-h5cHB7Hp-qyFgGwlqldNSxf1lHVyYUDUwGBXgpmBEPHOH5xj_bEQnudTJx6d1agQgl6EZoptfPbrgxwWU3hwn-C-0-23ImODUiph_cvEFxMcMPEjewJEeL8Gvj-NNj_ysyTstwz8fFB5jtyGIy6-dmpTM1v8D097Tx6VQ12Q-mumwzFGhA.png)
+![Image 4: Slack Webhook API for building Slack Bots](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/638defd53a3620a880c1429d_2lBQzqtvc7o-h5cHB7Hp-qyFgGwlqldNSxf1lHVyYUDUwGBXgpmBEPHOH5xj_bEQnudTJx6d1agQgl6EZoptfPbrgxwWU3hwn-C-0-23ImODUiph_cvEFxMcMPEjewJEeL8Gvj-NNj_ysyTstwz8fFB5jtyGIy6-dmpTM1v8D097Tx6VQ12Q-mumwzFGhA.png)
 
 7.  Review the permissions and click Allow. The app is now installed in your Slack workspace.
 
-![Image 5: Allow Botkube permissions into Group Channels](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/638defd5d46fe3cc1ec655d1_kR2N0u3ZQlfHarVS2aC5lfyerRXjRmE25noMdLH2yp3l1Rd8gNeplU-JbQ4aak4LlhHk-H7-G3nxO8CXJyD5eH0mhy5-69gJsjwSUJaWeHijGc94iFse5AYCKYEG9-fxZ5Q57C9JUcPTfRsqiiPpBzU4Bc_7MlJo2lzKrnBhtudCygDS0M35okbc39reEg.png)
+![Image 5: Allow Botkube permissions into Group Channels](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/638defd5d46fe3cc1ec655d1_kR2N0u3ZQlfHarVS2aC5lfyerRXjRmE25noMdLH2yp3l1Rd8gNeplU-JbQ4aak4LlhHk-H7-G3nxO8CXJyD5eH0mhy5-69gJsjwSUJaWeHijGc94iFse5AYCKYEG9-fxZ5Q57C9JUcPTfRsqiiPpBzU4Bc_7MlJo2lzKrnBhtudCygDS0M35okbc39reEg.png)
 
 Botkube Slack App Tokens
 ------------------------
@@ -110,7 +110,7 @@ Now that the Slack app is installed in your workspace, you can proceed to instal
 2.  Copy the Bot User OAuth Token shown here.
     
 
-![Image 6: Oauth Tokens for Slack](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/638defd57f6d2658565c2802_EbTpqUY7Kxtxi7pDnIVQREtoVR7lLKJaHYlFSo5Ald7PPzcwWuoNxhTIfjSu5b8on04-YKAtxwuwBPSAlO-MBAGNkM9RsjYLb-D9prje8FoOORshIpi3AUvnyPP9aFj08weq-EjK0bMLtb_II93-zftUqceLGV3SropKhaNaRckmI7UHx3BMPSpyU0JhSQ.png)
+![Image 6: Oauth Tokens for Slack](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/638defd57f6d2658565c2802_EbTpqUY7Kxtxi7pDnIVQREtoVR7lLKJaHYlFSo5Ald7PPzcwWuoNxhTIfjSu5b8on04-YKAtxwuwBPSAlO-MBAGNkM9RsjYLb-D9prje8FoOORshIpi3AUvnyPP9aFj08weq-EjK0bMLtb_II93-zftUqceLGV3SropKhaNaRckmI7UHx3BMPSpyU0JhSQ.png)
 
 3.  Click Basic Information in the left navigation bar.
     
@@ -121,7 +121,7 @@ Now that the Slack app is installed in your workspace, you can proceed to instal
 6.  Select the connections:write scope, then click the Generate button.
     
 
-![Image 7: Generating app token for custom Slack Bot](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/638defd57787389c7b4d6eac_Wl7cvk72vCB_r0giRxWLTQlmew8rmPFkFTZUaj7urPf2C4LM_YaVuO5XrDXOl9Ql58cOrnQT3LiDl4dcY0PjyIUWHivxBlIsTOsWdYX4un0JJaI8DIQfIxOfTHjVxD50Yk9QaLTQ_zlbcmhdZzjZN_1-4FSFZCYzO8k8N1uLxDQRcIXRZZIAMLFQJuG5iw.png)
+![Image 7: Generating app token for custom Slack Bot](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/638defd57787389c7b4d6eac_Wl7cvk72vCB_r0giRxWLTQlmew8rmPFkFTZUaj7urPf2C4LM_YaVuO5XrDXOl9Ql58cOrnQT3LiDl4dcY0PjyIUWHivxBlIsTOsWdYX4un0JJaI8DIQfIxOfTHjVxD50Yk9QaLTQ_zlbcmhdZzjZN_1-4FSFZCYzO8k8N1uLxDQRcIXRZZIAMLFQJuG5iw.png)
 
 7.  Copy the created token and click Done.
 
@@ -134,7 +134,7 @@ You should see a new Slack bot in your workspace under "Apps" with the name that
 
 Invite the bot to the channel. The easiest way to do this is to open the Slack channel and send a message to _@botkube bot name_. You will be prompted to add the bot to the channel, click the Add to Channel button.
 
-![Image 8: Adding Botube to your cluster chat channel](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/638defd5bd91db676aaccc2a_5FVGjg5gJZRQdEsdM2zokGiw_bH5m2tUJm100sy1unbpCAwupyN2hYkXLc21-emgPzST00zRg5srK_eQXKsJ_X8xnBRe4tHcyCnvH97uePNhnRt4TA2B6y0sqr-Um2-V1V9U-mJcpFvuPxo5LzH3kLBMnSbHWnycZ6BTSNb7e9issQ2kcAwLv6oue8ePUg.png)
+![Image 8: Adding Botube to your cluster chat channel](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/638defd5bd91db676aaccc2a_5FVGjg5gJZRQdEsdM2zokGiw_bH5m2tUJm100sy1unbpCAwupyN2hYkXLc21-emgPzST00zRg5srK_eQXKsJ_X8xnBRe4tHcyCnvH97uePNhnRt4TA2B6y0sqr-Um2-V1V9U-mJcpFvuPxo5LzH3kLBMnSbHWnycZ6BTSNb7e9issQ2kcAwLv6oue8ePUg.png)
 
 Installing Botkube
 ------------------
@@ -188,7 +188,7 @@ Now you can simply run the helm install command shown here, or copy from the [do
 
 If everything goes according to plans, you will see Botkube start up in the Slack channel and print the initial interactive help menu.
 
-![Image 9: Kubernetes Alerts now actively alerting Slack](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/638defd53a3620ccfbc1429e_T_WAEBM055UezMigtRJmb49_MhQocCrlbgee7nW_ekbsIKvexG3KzQrjn9gUsJkbOYCGPhanm9mYriXQu0JaDrB4Pr7AsQdg3xQfLqLB6Qi1gLRay8uSRfJGke15DOmfBFWoCL9xGQTjBdi50CRU4z_thYxXVS3mASf-cbxluEV7EezHvV4sill1apGpEw.png)
+![Image 9: Kubernetes Alerts now actively alerting Slack](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/638defd53a3620ccfbc1429e_T_WAEBM055UezMigtRJmb49_MhQocCrlbgee7nW_ekbsIKvexG3KzQrjn9gUsJkbOYCGPhanm9mYriXQu0JaDrB4Pr7AsQdg3xQfLqLB6Qi1gLRay8uSRfJGke15DOmfBFWoCL9xGQTjBdi50CRU4z_thYxXVS3mASf-cbxluEV7EezHvV4sill1apGpEw.png)
 
 Botkube is now ready to go!
 
@@ -199,11 +199,11 @@ The new Botkube Slack app adds some great features that weren't previously avail
 
 Another interactive feature is the Run command option shown with events. Any time an event is sent to the channel, you can select a contextual command from the Run command drop-down box. The list of commands will be only those relevant to the resource type in the event. Selecting a command will use the kubectl executor to run the command against the specific resource in the event. This saves typing out the kubectl commands by hand if you want to quickly get some information about a resource, like `describe` a new resource or get `logs` on a pod with errors.
 
-![Image 10: Run Kubernetes troubleshooting commands](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/638dfeee173eea4859c13681_aeB3oRSq_LvBSkdLujcv2ls4WiN8M1W-Mo6KDzL2MmC7bQ487s0DSqXd5X4iejHKHgtD1abNQn6LEREE-J4U-TR5VEre1aATDi51rzTn2WQVogIE6qV6bFYRZe_2O7o7ZkH_5iUa5j5DcVMbzzo7mXKi3N2n04WcE7cqj5MEly6On-gg-fRNpxsmDAxn9A.png)
+![Image 10: Run Kubernetes troubleshooting commands](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/638dfeee173eea4859c13681_aeB3oRSq_LvBSkdLujcv2ls4WiN8M1W-Mo6KDzL2MmC7bQ487s0DSqXd5X4iejHKHgtD1abNQn6LEREE-J4U-TR5VEre1aATDi51rzTn2WQVogIE6qV6bFYRZe_2O7o7ZkH_5iUa5j5DcVMbzzo7mXKi3N2n04WcE7cqj5MEly6On-gg-fRNpxsmDAxn9A.png)
 
 Another interactive feature can be found by running `@botkube kubectl` with no options. This starts the interactive command generator. This presents you with a list of verbs that you can run and as you make selections, automatically offers the contextually-relevant options in drop-down boxes until you have built a complete command. You can then click the Run command button and see the resulting output. You can also filter the output by specifying a match string in the Filter output box.
 
-![Image 11: Pulling K8s Logs](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/638dfeee5c48734b1151fe69_VBgNCtn62GTB7Ee-xc2z5xMXs92IaE5blN1CZPVNeV18fpAF4dSTi_giYZyoA80T4BBTnajpiBnsl7kX-xlWPKTdjTb1-6zKxNSJCQwjsqA9HyYinugvHNE-B0oQKj0MkV-FsRNbuIvmJe77SdtuFJv6tR5WxKwmvLkMzxDMFlLCA6lCItB8uUtFHS7Lmg.png)
+![Image 11: Pulling K8s Logs](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/638dfeee5c48734b1151fe69_VBgNCtn62GTB7Ee-xc2z5xMXs92IaE5blN1CZPVNeV18fpAF4dSTi_giYZyoA80T4BBTnajpiBnsl7kX-xlWPKTdjTb1-6zKxNSJCQwjsqA9HyYinugvHNE-B0oQKj0MkV-FsRNbuIvmJe77SdtuFJv6tR5WxKwmvLkMzxDMFlLCA6lCItB8uUtFHS7Lmg.png)
 
 What Could Go Wrong?
 --------------------

@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/five-essential-kubernetes-tasks
 Published Time: Jan 11, 2024
 
 Markdown Content:
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
 
 Maria Ashby
 
@@ -24,9 +24,9 @@ Learn how to simplify DevOps tasks directly within your favorite communication p
 *   [Executor Plugin](#executor-plugin-)
 *   [Conclusion](#conclusion)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI-Powered Assistant Today
 
-#### Manage your Kubernetes Clusters Directly in Slack and Microsoft Teams!
+#### Manage your Kubernetes Clusters Directly in Slack and Microsoft Teams
 
 If you're curious about the exciting possibilities of using Kubernetes in your chat platform, you've come to the right place. With Botkube you can complete all your collaborative Kubernetes troubleshooting and monitoring tasks right from your chat window! In this blog post, we'll explore five exciting ways to get the most out of Botkube. Whether you're a beginner or an experienced Kubernetes user, you'll learn how to simplify DevOps tasks, empower your teams, and enhance your Kubernetes experience.
 
@@ -35,7 +35,7 @@ If you're curious about the exciting possibilities of using Kubernetes in your c
 Real-time Kubernetes Monitoring with Prometheus
 -----------------------------------------------
 
-![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65baac094d6cd1122a89f719_Screenshot_Template_Botkube%20(3).png)
+![Image 2](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65baac094d6cd1122a89f719_Screenshot_Template_Botkube%20(3).png)
 
 [Real-time monitoring](https://botkube.io/solutions) of Kubernetes is the foundation of Botkube's features. With this feature, you gain access to a live, dynamic view of your Kubernetes environment. While Botkube has a long-standing history of supporting Kubernetes events, Kubernetes clusters often generate an abundance of state events and metrics. Typically, tools like kube-state-metrics and custom applications are configured to utilize Prometheus as a metrics store. Prometheus' Alertmanager then identifies metrics in anomalous states and triggers corresponding alerts. To seamlessly integrate this functionality into Botkube, we've developed the [Botkube source plugin for Prometheus](https://botkube.io/integration/prometheus).
 
@@ -52,19 +52,19 @@ Botkube's [integration with Argo CD](https://botkube.io/integration/argo-cd-botk
 
 The Botkube ArgoCD plugin simplifies Argo CD notifications by unifying platform secrets and notifications across projects like Kubernetes, Prometheus, and Argo. It enhances visibility by consolidating GitHub and Argo events, so users can now receive real-time notifications from their Argo CD deployments directly in their communication channels, especially valuable for teams managing Kubernetes workflows within GitHub. Setting up ArgoCD notification natively is a complex process that requires installing triggers and templates, adding email credentials to a secret, registering the email notification service with Gmail credentials, and subscribing to notifications for specific applications or projects. To begin receiving notifications with Botkube, simply provide your application name, Argo URL, and namespace, and ensure ArgoCD is enabled in your RBAC permissions. This plugin also allows you to utilize Argo CD's native notification system in chat platforms like MS Teams and Discord which are not supported natively.
 
-![Image 3](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/650e09c855b42178c42a1d9b_jOhrHB90gwPhqwSU94v3y1Q7Q2Y_1Ltfap5j-mY6XbgieOkVITkVOoOboVTaVHT55onYtmncvcVt_zMrOQehiIOKbM2unJi5NKvWpXhjN222CbEB31JP_oSxT9QowgHWFcKv0YoK2FvZZvJMwGpET4s.png)
+![Image 3](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/650e09c855b42178c42a1d9b_jOhrHB90gwPhqwSU94v3y1Q7Q2Y_1Ltfap5j-mY6XbgieOkVITkVOoOboVTaVHT55onYtmncvcVt_zMrOQehiIOKbM2unJi5NKvWpXhjN222CbEB31JP_oSxT9QowgHWFcKv0YoK2FvZZvJMwGpET4s.png)
 
 Botkube sending ArgoCD notifications to Slack
 
 ### Automating Kubernetes Operations
 
-![Image 4](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a0710c644fa0ebb76293d8_DJDInRt7FR5LTwmVqnG4WM9OBv7o9_FmRKnG5sA9F-UU-kqljSWEtByVtVP37PhGh2wq7eezjjCNzzjlYyIOyqlAfEMDA6UdSCs5AUJLKfcy3qqXg8cEOoJTdi4S-5Z_Otd9bgcKLoeY5gEcWNa0D4U.gif)
+![Image 4](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a0710c644fa0ebb76293d8_DJDInRt7FR5LTwmVqnG4WM9OBv7o9_FmRKnG5sA9F-UU-kqljSWEtByVtVP37PhGh2wq7eezjjCNzzjlYyIOyqlAfEMDA6UdSCs5AUJLKfcy3qqXg8cEOoJTdi4S-5Z_Otd9bgcKLoeY5gEcWNa0D4U.gif)
 
 ‍
 
 Botkube excels in fostering collaboration and efficiency through its integration with popular chat platforms. Botkube's [automated action feature](https://docs.botkube.io/configuration/action) transforms Kubernetes management for DevOps teams.It introduces automated commands triggered by events, delivering context to communication channels seamlessly. Some examples of these automations are “get-created-resource”
 
-![Image 5](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a039d1bc5724b39fa1b44d_GXqDS0fufecSqTlSqV-h3ch5pmFTNSdEY7mE5IXYXidytlJBIM8f2EfS2_xpxIhxJqxK23lp5aXMrw6zlD5qK6RaFBh4l9ZZ5PZ5v7ud5JrE65atfkRPW0FdTqzm55LEYKPhvjjDSl8DQYShs_l1GAg.png)
+![Image 5](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a039d1bc5724b39fa1b44d_GXqDS0fufecSqTlSqV-h3ch5pmFTNSdEY7mE5IXYXidytlJBIM8f2EfS2_xpxIhxJqxK23lp5aXMrw6zlD5qK6RaFBh4l9ZZ5PZ5v7ud5JrE65atfkRPW0FdTqzm55LEYKPhvjjDSl8DQYShs_l1GAg.png)
 
 ‍
 
@@ -72,7 +72,7 @@ Actions consist of two components: the command (currently kubectl) and the event
 
 ### Botkube includes two preconfigured actions in the Cloud Dashboard
 
-![Image 6](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a0710b68ad02138d5720ff_v4OOZo5A1CCE3VZToEZfBiIuLviwI71gpu5gWv_erbnK1YfbO1a7oYWiqmNlwJZO-9ZuXEWD50ls3ylgorzhg76Lf6PpXpvjleX-sA3vrhuboF-61-bn37dMqsNd5Q6BvC9FIdMYbJ_KBfDJu3LtIkA.gif)
+![Image 6](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a0710b68ad02138d5720ff_v4OOZo5A1CCE3VZToEZfBiIuLviwI71gpu5gWv_erbnK1YfbO1a7oYWiqmNlwJZO-9ZuXEWD50ls3ylgorzhg76Lf6PpXpvjleX-sA3vrhuboF-61-bn37dMqsNd5Q6BvC9FIdMYbJ_KBfDJu3LtIkA.gif)
 
 #### describe-created resource:
 
@@ -80,7 +80,7 @@ Automatically runs kubectl describe on resource creation events, delivering resu
 
 ‍
 
-![Image 7](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a0710c7946a3e903c20f78_gh7vWb3pXGzzEya6P_SNo6ZdoeJHG1rE2whT7wfwf4-kF9hFunVFf2_O2j2zjJk6zUXCaT62Yw4GxcQCoPpmKaWTIzKXnOQu-fO9niWeypy2nsigHIBM1DyEu4Rr2WLf7KnXK0zlyBk_9I3HN9I8GJM.gif)
+![Image 7](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a0710c7946a3e903c20f78_gh7vWb3pXGzzEya6P_SNo6ZdoeJHG1rE2whT7wfwf4-kF9hFunVFf2_O2j2zjJk6zUXCaT62Yw4GxcQCoPpmKaWTIzKXnOQu-fO9niWeypy2nsigHIBM1DyEu4Rr2WLf7KnXK0zlyBk_9I3HN9I8GJM.gif)
 
 #### Show-logs-on-error
 
@@ -91,7 +91,7 @@ Botkube's automated action feature simplifies Kubernetes management by automatin
 Kubernetes Insights with Botkube’s ChatGPT Assistant
 ----------------------------------------------------
 
-![Image 8](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64c21a2723cb531baf9f0867_doctor-interactive-help.gif)
+![Image 8](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64c21a2723cb531baf9f0867_doctor-interactive-help.gif)
 
 ‍
 
@@ -101,7 +101,7 @@ Botkube doesn't stop at monitoring and alerting; [Botkube’s Doctor Plugin](htt
 
 #### Assistance for Beginner Kubernetes Users
 
-![Image 9](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a039d1b4b8569bc008cf16_d3_gGf91GFWCqjVrQEfoSLImw32RhITxnMPRZVlJg2Ybc5N6JFl5nXM2zJCM4goiFIgIAFe5vEjA5KJd4HIkFM8-ZBtLYvInlk_zYFHYK6ksTvaP1yo32cZf-3TpFnP97sl7WXWZj8SViQXXDA8ZMuo.png)
+![Image 9](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a039d1b4b8569bc008cf16_d3_gGf91GFWCqjVrQEfoSLImw32RhITxnMPRZVlJg2Ybc5N6JFl5nXM2zJCM4goiFIgIAFe5vEjA5KJd4HIkFM8-ZBtLYvInlk_zYFHYK6ksTvaP1yo32cZf-3TpFnP97sl7WXWZj8SViQXXDA8ZMuo.png)
 
 ‍
 
@@ -111,7 +111,7 @@ Users can also ask ChatGPT specific questions directly from the interface. Users
 
 ‍
 
-![Image 10](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a039d0a46841c35338b848_SuBeHwTBNG6pmzxQrBlBPNA4tbpFK17w_DWF3D_xXJK4gcjuMnNhFd5uCuKyjUSdCuplS-JAlksGeGcjil9V94LBJn0ZY2sNJ0RhwYC0UYvEIoHJkBK9c0IygnpLse9jwQmVuj8S6t6dwIvUfrmCtmE.png)
+![Image 10](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a039d0a46841c35338b848_SuBeHwTBNG6pmzxQrBlBPNA4tbpFK17w_DWF3D_xXJK4gcjuMnNhFd5uCuKyjUSdCuplS-JAlksGeGcjil9V94LBJn0ZY2sNJ0RhwYC0UYvEIoHJkBK9c0IygnpLse9jwQmVuj8S6t6dwIvUfrmCtmE.png)
 
 #### ChatGPT Recommendations
 
@@ -119,7 +119,7 @@ The Doctor plugin integrates with Botkube's existing Kubernetes recommendations,
 
 ‍
 
-![Image 11](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a0710b0d200385a983c1f3_I196XuDKfbF_0Tq-brChXFXESPbAuAMK7UVl7oWnbS5TY0DEDg5mK4dOqO5WDIuTdcr9kFtivAoOezeqDYb6AkCWFCwW37jskmlzHgz6FDtz0AQwH9TWUUTCEUOE_yw_2zcBkYqYymnHml4Si8X0Rfw.png)
+![Image 11](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a0710b0d200385a983c1f3_I196XuDKfbF_0Tq-brChXFXESPbAuAMK7UVl7oWnbS5TY0DEDg5mK4dOqO5WDIuTdcr9kFtivAoOezeqDYb6AkCWFCwW37jskmlzHgz6FDtz0AQwH9TWUUTCEUOE_yw_2zcBkYqYymnHml4Si8X0Rfw.png)
 
 Kubernetes Troubleshooting Automations
 --------------------------------------
@@ -131,7 +131,7 @@ This integration is particularly useful for developers and Ops teams seeking to 
 Executor Plugin
 ---------------
 
-![Image 12](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a039d14c51c24d23107d67_be3NRGddT9iSoKYyGzqKfm0vAygUfhC7Tjt1sqpMpSKxIALefMbB_GeBXrxs4-Xy3vlMRz7Dq7vJtts06n1UhgydkWVbJs0WVBoEtZwu_UqM26jLT7u4Dxbh1993ioMwhORJwnbh0F_pcYmpJBm1Mgg.gif)
+![Image 12](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a039d14c51c24d23107d67_be3NRGddT9iSoKYyGzqKfm0vAygUfhC7Tjt1sqpMpSKxIALefMbB_GeBXrxs4-Xy3vlMRz7Dq7vJtts06n1UhgydkWVbJs0WVBoEtZwu_UqM26jLT7u4Dxbh1993ioMwhORJwnbh0F_pcYmpJBm1Mgg.gif)
 
 Last but not least, Botkube's [Executor plugin](https://docs.botkube.io/usage/executor/) plays a pivotal role in allowing users to explore the flexibility within the plugin system. With the Exec plugin, you can seamlessly install and run any command-line interface (CLI) directly from your chosen communication platform through Botkube. It empowers you to create your personalized interactive interface for these CLIs.
 

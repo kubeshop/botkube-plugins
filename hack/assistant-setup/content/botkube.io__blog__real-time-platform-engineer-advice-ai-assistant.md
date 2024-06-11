@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/real-time-platform-engineer-advice-ai-assist
 Published Time: Mar 06, 2024
 
 Markdown Content:
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/636df3fb36b4e60920a3b1b2_hPLC9itV8zp-raGDFmvOZMfn2hV8RFcl237qzT8Wa1g.jpeg)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/636df3fb36b4e60920a3b1b2_hPLC9itV8zp-raGDFmvOZMfn2hV8RFcl237qzT8Wa1g.jpeg)
 
 Kelly Revenaugh
 
@@ -22,9 +22,9 @@ Imagine having K8s experts available, providing help to your team 24/7. Get real
 *   [Kubernetes Expertise Directly in Your Chat Platform](#kubernetes-expertise-directly-in-your-chat-platform)
 *   [Get Started with AIOps for Kubernetes](#get-started-with-aiops-for-kubernetes)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI-Powered Assistant Today
 
-#### Get started with Botkube Cloud
+#### Get Started with Botkube Today!
 
 We’re thrilled to announce our newest Botkube feature, AI Assistant! This game-changing capability makes it easier than ever for teams to identify, diagnose, and troubleshoot issues in any Kubernetes cluster. Powered by a Kubernetes-focused LLM, Botkube provides crucial visibility into Kubernetes events while empowering teams to manage these events through direct communication platforms like Slack or Microsoft Teams.
 
@@ -63,7 +63,7 @@ For novices, navigating through Kubernetes' complexity is simplified through int
 Troubleshoot Kubernetes Errors in Seconds
 -----------------------------------------
 
-![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65ea186bc6cc4a02d07a8679_screens1hot.png)
+![Image 2](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65ea186bc6cc4a02d07a8679_screens1hot.png)
 
 ‍ Integrating AI into Botkube revolutionizes the way users interact with Kubernetes environments, making the debugging and management of Kubernetes clusters more intuitive and efficient.
 

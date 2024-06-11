@@ -10,7 +10,7 @@ Kubernetes, while powerful, is notoriously complex to manage. As clusters grow a
 
 While general-purpose AI chatbots like ChatGPT can be helpful for answering Kubernetes-related questions, they lack the contextual understanding necessary for truly effective assistance. A true Kubernetes Copilot needs to be able to see inside your cluster, to understand its unique configuration and current state.
 
-![Image 1: k8s copilot pulling node count from Slack](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6643ab9c65779fec6769b6bc_GMT_tLZVGPDp6VytaCZVd7mdgatZPMUWX_0MJ4sqRfVcsg7U4JBAuur0YoS1gjcypd2bpFULOBkRrSY8_jlR5ONgY6lQSqKgKEzJxsB8SeSApwf664zVRVmpBToeaNvUtlfIQGGAzsidsY5Fe2d3lNY.gif)
+![Image 1: k8s copilot pulling node count from Slack](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6643ab9c65779fec6769b6bc_GMT_tLZVGPDp6VytaCZVd7mdgatZPMUWX_0MJ4sqRfVcsg7U4JBAuur0YoS1gjcypd2bpFULOBkRrSY8_jlR5ONgY6lQSqKgKEzJxsB8SeSApwf664zVRVmpBToeaNvUtlfIQGGAzsidsY5Fe2d3lNY.gif)
 
 Checking Kubernetes Cluster Node Count & Status from the Slack Mobile App
 
@@ -21,7 +21,7 @@ For example, imagine a scenario where a pod is repeatedly being killed due to ex
 
 Unlike code editors, which are primarily used for creating and editing static files, Kubernetes environments are dynamic and require ongoing attention. This is why a Kubernetes Copilot needs to be more than just a code completion tool; it needs to be an active participant in the cluster management process.
 
-![Image 2: Using the Kubernetes Assistant to troubleshoot errors](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6643ab9c8b10c41b46308ee9_e0bkCiugViZS5ODvUU2lfc5GMS34I_8cGl9IGrUWcOsKzsge88h7EXd3bi5J1-Y8OFfa9PnN8B_XqmTdjLY9i4fHgy4mcn2eQsxkIEAffhbfuFIUv3MDmm2ZNGu2cRwBId7tWpkRSmVDaodBD3zqttA.gif)
+![Image 2: Using the Kubernetes Assistant to troubleshoot errors](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6643ab9c8b10c41b46308ee9_e0bkCiugViZS5ODvUU2lfc5GMS34I_8cGl9IGrUWcOsKzsge88h7EXd3bi5J1-Y8OFfa9PnN8B_XqmTdjLY9i4fHgy4mcn2eQsxkIEAffhbfuFIUv3MDmm2ZNGu2cRwBId7tWpkRSmVDaodBD3zqttA.gif)
 
 Botkube's AI assistant achieves this by integrating with Botkube's monitoring and alerting capabilities. When an alert is triggered, the assistant not only notifies you but also takes proactive steps to address the underlying issue. This might involve anything from restarting a failed pod to scaling a deployment to meet increased demand. And because Botkube integrates with popular communication platforms like Slack, [Microsoft Teams](https://botkube.io/integration/teams), and Discord, you can stay informed and in control wherever you are.
 

@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/introducing-botkubes-integration-with-flux
 Published Time: Aug 28, 2023
 
 Markdown Content:
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
 
 Maria Ashby
 
@@ -24,9 +24,9 @@ As the demand for seamless scalability and efficient teamwork increases, an inno
 *   [Optimized Flux Workflow](#optimized-flux-workflow)
 *   [Get Started with Botkube’s new Flux Plugin](#get-started-with-botkube-s-new-flux-plugin)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI-Powered Assistant Today
 
-#### Get started with Botkube Cloud
+#### Get Started with Botkube Today!
 
 Introduction
 ------------
@@ -43,7 +43,7 @@ Flux continuously monitors your repository for any changes and seamlessly applie
 What is Botkube?
 ----------------
 
-![Image 2: Showing how to run Kubernetes commands from Slack with Botkube](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64b96a341b5ccb59ffb87637_act-on-events.gif)
+![Image 2: Showing how to run Kubernetes commands from Slack with Botkube](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64b96a341b5ccb59ffb87637_act-on-events.gif)
 
 Botkube is a collaborative troubleshooting tool designed specifically for Kubernetes users. With Botkube, you can seamlessly receive and act on alerts directly within your preferred collaboration platforms like [Slack, Microsoft Teams, Discord, and Mattermost.](https://botkube.io/integrations) This means you'll gain instant visibility and control over your cluster resources, all without ever having to leave your messaging platform. In addition, Botkube enables you to automate actions based on events, run kubectl and Helm commands, receive recommendations for best practices and much more. Botkube now works with Flux!
 
@@ -73,7 +73,7 @@ Sharing updates and information requires toggling between platforms like Slack a
 Optimized Flux Workflow
 -----------------------
 
-![Image 3: Optimizing Flux CD workflow for Kubernetes](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64e694bca6bd600e8a7e88dd_flux-diff-1.gif)
+![Image 3: Optimizing Flux CD workflow for Kubernetes](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64e694bca6bd600e8a7e88dd_flux-diff-1.gif)
 
 With Botkube's new Flux executor, you can simplify complex tasks using a single command
 
@@ -105,7 +105,7 @@ The outcome of the comparison is shared conveniently via the designated Slack ch
 Get Started with Botkube’s new Flux Plugin
 ------------------------------------------
 
-![Image 4: Live Kubernetes Cluster connected to slack with Flux CD workflows](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64ecb79001bc7e01e2c88804_flux-interactivity.gif)
+![Image 4: Live Kubernetes Cluster connected to slack with Flux CD workflows](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64ecb79001bc7e01e2c88804_flux-interactivity.gif)
 
 Ready to try it out on your own? The easiest way to configure it is through the [Botkube web app](https://app.botkube.io/) if your cluster is connected. Otherwise you can enable it in your [Botkube YAML configuration](https://docs.botkube.io/configuration/executor/flux).
 

@@ -31,7 +31,7 @@ There are many benefits to using Kubernetes, including:
 Kubernetes Becoming more of a Platform than an Operating System
 ---------------------------------------------------------------
 
-While Kubernetes shares some similarities with an operating system, it goes beyond the functionalities of a traditional OS designed for a single machine. Imagine a Linux server running Mint, but instead of being the foundation for everything, it acts as one of the many applications running within Kubernetes. Kubernetes is the platform that orchestrates and manages all these applications, providing the necessary resources and ensuring everything runs smoothly. This shift in perspective is why DevOps engineers who specialize in Kubernetes have begun to refer to themselves as [platform engineers](http://botkube.io/learn/platform-engineering).
+While Kubernetes shares some similarities with an operating system, it goes beyond the functionalities of a traditional OS designed for a single machine. Imagine a Linux server running Mint, but instead of being the foundation for everything, it acts as one of the many applications running within Kubernetes. Kubernetes is the platform that orchestrates and manages all these applications, providing the necessary resources and ensuring everything runs smoothly. This shift in perspective is why DevOps engineers who specialize in Kubernetes have begun to refer to themselves as [platform engineers](https://botkube.io/learn/platform-engineering).
 
 **Conclusion**
 --------------
@@ -42,6 +42,6 @@ If you or your team are considering moving to Kubernetes, we strongly suggest yo
 
 Setting up Botkube will also make it easy to deploy other helpful platform engineering tools and bring their notifications into that same chat channel. Check out below our easy install wizard for adding k8s tools directly to your cluster with just a click!
 
-![Image 1: Adding Kubernetes Plugins from Setup Wizard](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/663e3cda91525c34d341c40b_Add%20Plugin%20Botkube.png)
+![Image 1: Adding Kubernetes Plugins from Setup Wizard](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/663e3cda91525c34d341c40b_Add%20Plugin%20Botkube.png)
 
 Select all the plugins your Kubernetes cluster will need with one click!

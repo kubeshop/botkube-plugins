@@ -17,7 +17,7 @@ This observability extends to various aspects, including:
 3.  **Traces:** Tracking the flow of requests and transactions as they traverse the microservices within your Kubernetes environment. Distributed tracing helps in understanding the performance and dependencies of services.
 4.  **Alerting:** Setting up proactive alerts based on predefined thresholds or patterns in the data. Alerts notify operators and DevOps teams when anomalies or issues occur, allowing for rapid response.
 
-![Image 1: K8s Observability Solved Graphic](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/652553063ed2e2faeb86a964_K8s%20Observability.gif)
+![Image 1: K8s Observability Solved Graphic](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/652553063ed2e2faeb86a964_K8s%20Observability.gif)
 
 **Why is K8s Observability Even Important?**
 --------------------------------------------

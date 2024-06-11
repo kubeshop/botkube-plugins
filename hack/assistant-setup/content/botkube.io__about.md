@@ -5,7 +5,7 @@ URL Source: https://botkube.io/about
 Markdown Content:
 Designed to Connect the Cloud Native Landscape into your Chat Channel
 
-![Image 1](https://assets-global.website-files.com/633705de6adaa38599d8e258/65b2a089afca9fd872a83d94_Main-Botkube-5.webp)
+![Image 1](https://cdn.prod.website-files.com/633705de6adaa38599d8e258/65b2a089afca9fd872a83d94_Main-Botkube-5.webp)
 
 Started in 2019 Reimagined in 2022
 ----------------------------------
@@ -24,7 +24,7 @@ In 2021, Botkube joined the ranks of other innovative Kubernetes tools like Test
 
 Now, Botkube stands poised to revolutionize the way we interact with Kubernetes, fueled by the passion of its creators and the unwavering support of its community.
 
-![Image 2](https://assets-global.website-files.com/633705de6adaa38599d8e258/65a03662368d2582292298b1_bk_aboutus_ill.webp)
+![Image 2](https://cdn.prod.website-files.com/633705de6adaa38599d8e258/65a03662368d2582292298b1_bk_aboutus_ill.webp)
 
 Botkube is one of the three commercial products from Kubeshop, a first of its kind open source incubator and accelerator, focused on the challenges of Kubernetes and the cloud native ecosystem.
 
@@ -35,15 +35,15 @@ Joining the [Kubeshop accelerator](https://kubeshop.io/) proved a boon for Botku
 
 Access to cutting-edge infrastructure and expertise facilitated rapid development, while close proximity to other top Kubernetes tools fostered cross-pollination of ideas and a vibrant collaborative spirit. The biggest draw, however, was the Kubeshop team's wealth of experience.
 
-![Image 3](https://assets-global.website-files.com/633705de6adaa38599d8e258/65a04ab9c691cc5bf77bca6b_ole-lensmar-2.webp)
+![Image 3](https://cdn.prod.website-files.com/633705de6adaa38599d8e258/65a04ab9c691cc5bf77bca6b_ole-lensmar-2.webp)
 
 Working alongside seasoned veterans like Ole Lensmar—the CTO, and mastermind behind SOAP UI—provided invaluable mentorship and guidance, propelling Botkube's growth.
 
-![Image 4](https://assets-global.website-files.com/633705de6adaa38599d8e258/634ee5c0455ce28d5f1d965c_blair-rampling.jpeg)
+![Image 4](https://cdn.prod.website-files.com/633705de6adaa38599d8e258/634ee5c0455ce28d5f1d965c_blair-rampling.jpeg)
 
 Additionally, the accelerator enabled Botkube to bolster its own team with seasoned professionals like  the product lead, Blair Rampling. His enterprise expertise honed at Red Hat proved instrumental in shaping Botkube for the big leagues.
 
-![Image 5](https://assets-global.website-files.com/633705de6adaa38599d8e258/65a053449bd21c386e00da05_Bird-with-fire-Botkube-right%201.webp)
+![Image 5](https://cdn.prod.website-files.com/633705de6adaa38599d8e258/65a053449bd21c386e00da05_Bird-with-fire-Botkube-right%201.webp)
 
 We believe
 ----------
@@ -65,7 +65,7 @@ Started with Slack, now we're here
 Upcoming Events
 ---------------
 
-![Image 6](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/647f5b651155fb498c472792_livestream-icon.svg)
+![Image 6](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/647f5b651155fb498c472792_livestream-icon.svg)
 
 Livestream
 
@@ -79,7 +79,7 @@ Join Maria, Developer Advocate for Botkube, in an insightful workshop that lever
 
 3\. Simplifying Collaborative Kubernetes Troubleshooting: Three Best Practices with the aid of Botkube
 
-![Image 7](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/647f5b0cb4328c0f07a53397_conference-icon.svg)
+![Image 7](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/647f5b0cb4328c0f07a53397_conference-icon.svg)
 
 Conference
 
@@ -89,7 +89,7 @@ Each year, 8,000+ developers, engineers, software architects, dev teams, manager
 
 Botkube DevRel, Maria Ashby, will present **_"Unlocking K8s Troubleshooting Best Practices with Botkube."_** See you there...
 
-![Image 8](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/647f5b651155fb498c472792_livestream-icon.svg)
+![Image 8](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/647f5b651155fb498c472792_livestream-icon.svg)
 
 Livestream
 

@@ -33,10 +33,10 @@ Compare our bidirectional integrations:
 
 Compare our unidirectional integrations:
 
-| Feature | Elasticsearch | Webhook |
-| --- | --- | --- |
-| Source plugins support (e.g. `kubernetes`, `prometheus`, etc.) | ✔️ | ✔️ |
-| Multi-cluster support | ✔️ | ✔️ |
+| Feature | Elasticsearch | Webhook | PagerDuty |
+| --- | --- | --- | --- |
+| Source plugins support (e.g. `kubernetes`, `prometheus`, etc.) | ✔️ | ✔️ | ✔️ |
+| Multi-cluster support | ✔️ | ✔️ | ✔️ |
 
 Integrations[​](#integrations "Direct link to Integrations")
 ------------------------------------------------------------

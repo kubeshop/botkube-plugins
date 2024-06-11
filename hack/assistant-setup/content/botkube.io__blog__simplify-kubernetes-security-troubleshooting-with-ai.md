@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/simplify-kubernetes-security-troubleshooting
 Published Time: May 08, 2024
 
 Markdown Content:
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/663ad9425dee853429acf422_T01TRG6U4AV-U06CH7HDJTS-34c4e3601ac1-512.jpg)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/663ad9425dee853429acf422_T01TRG6U4AV-U06CH7HDJTS-34c4e3601ac1-512.jpg)
 
 Vaidas Jablonskis
 
@@ -24,9 +24,9 @@ Learn how Botkube can streamline troubleshooting and help overcome common Kubern
 *   [Summary](#summary)
 *   [Try Out Botkube for Kubernetes Security Best Practices Today](#try-out-botkube-for-kubernetes-security-best-practices-today)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI-Powered Assistant Today
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI-Powered Assistant Today
 
 Kubernetes is a powerful container orchestration platform, but its complexity can leave even seasoned developers scratching their heads. One particularly tricky area is [Pod Security Admission (PSA)](https://kubernetes.io/docs/concepts/security/pod-security-admission/). While PSA plays a crucial role in cluster security, it can also be the source of unexpected deployment failures. That's where the AI-powered Botkube Assistant, specifically designed for Kubernetes, comes to the rescue. Botkube understands the complexities of your cluster and guides you towards solutions in clear, simple language.
 

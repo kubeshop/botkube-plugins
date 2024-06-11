@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/build-a-github-issues-reporter-for-failing-k
 Published Time: Feb 01, 2023
 
 Markdown Content:
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/636df3ec19d99029e7cfb5bd_n-vUM0Lz3yXA1WLyfxEMUxXQpUDEiKv9EmEe4NnCbCI.png)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/636df3ec19d99029e7cfb5bd_n-vUM0Lz3yXA1WLyfxEMUxXQpUDEiKv9EmEe4NnCbCI.png)
 
 Mateusz Szostok
 
@@ -24,7 +24,7 @@ Botkube 0.17 introduces plugin support. In this guide you will learn how to crea
 *   [Summary](#summary)
 *   [How can I get involved?](#how-can-i-get-involved-)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI-Powered Assistant Today
 
 Botkube gives you fast and simple access to your clusters right from your communication platform. It does that by sending [actionable notifications](https://docs.botkube.io/configuration/action) (via [_sources_](https://docs.botkube.io/architecture/#source)) and allowing you to run _kubectl_ and _helm_ commands (via [_executors_](https://docs.botkube.io/architecture/#executor)) straight from the platform (Slack, Discord, Microsoft Teams and Mattermost).
 
@@ -37,7 +37,7 @@ Goal
 
 To make it simple but functional, I will show you how to develop an executor that creates an issue for failing Kubernetes resources such as Job, Deployment, StatefulSet, and Pod.
 
-![Image 2: Github reporter bot for updating Slack](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/63d810824fa1ec68968b8ee2_gh-demo.gif)
+![Image 2: Github reporter bot for updating Slack](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/63d810824fa1ec68968b8ee2_gh-demo.gif)
 
 GitHub executor demo
 
@@ -68,7 +68,7 @@ What's under the hood
 
 To understand better what we will develop, I want to give you a bigger picture of the Botkube plugin system. The animation below focuses only on the executor part, but it's almost the same for sources.
 
-![Image 3: Custom built plugin system for Kubernetes tools](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/63d811d4762a4de9804bc215_arch-executor-plugin.gif)
+![Image 3: Custom built plugin system for Kubernetes tools](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/63d811d4762a4de9804bc215_arch-executor-plugin.gif)
 
 Botkube Plugin System
 
@@ -108,7 +108,7 @@ To check out the entire code, visit the [Botkube GitHub repository](https://gith
 
 ‍
 
-![Image 4: github pull request automation](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/63d812e448eb8e82ad2d44d9_tpl-repo.png)
+![Image 4: github pull request automation](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/63d812e448eb8e82ad2d44d9_tpl-repo.png)
 
 By doing so, you will create your own plugin repository with a single commit.
 
@@ -150,7 +150,7 @@ This template code imports required packages and registers `GHExecutor` as the g
 
 3.  Great! At this stage, you already have a functional Botkube executor plugin. However, for now, it only responds with a hard-coded "Aloha!" greeting. But it can do that already on all supported communication platforms. ‍
 
-![Image 5: Getting GitHub reports in Slack about repo](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/63d814cf12ac7e2d4a40d002_demo-gh-aloha.gif)
+![Image 5: Getting GitHub reports in Slack about repo](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/63d814cf12ac7e2d4a40d002_demo-gh-aloha.gif)
 
 Don't worry, in the next steps, we will implement our business logic.
 
@@ -235,7 +235,7 @@ Next, let's push our changes and the new tag:
 
 This triggers GitHub Action:
 
-![Image 6](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/63d817a66682780daf595ab4_release-job.png)
+![Image 6](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/63d817a66682780daf595ab4_release-job.png)
 
 ### What this automation does under the hood
 
@@ -282,7 +282,7 @@ Here's an example of a full command that you should have constructed for Slack i
 2.  On a given channel, run: **@Botkube list executors**
     
 
-![Image 7](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/63d81ba395f87021e5d45685_list-exec.png)
+![Image 7](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/63d81ba395f87021e5d45685_list-exec.png)
 
 It returns information about enabled _gh_ executor
 
@@ -292,7 +292,7 @@ It returns information about enabled _gh_ executor
 
 ‍
 
-![Image 8](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/63d81bb595f870bd6ed45689_alert.png)
+![Image 8](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/63d81bb595f870bd6ed45689_alert.png)
 
 After a few seconds, you should see a new alert on your channel
 

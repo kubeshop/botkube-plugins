@@ -39,7 +39,7 @@ Botkube has been making waves in the Kubernetes community as the go-to ChatOps t
 
 [Botkube’s Doctor plugin](https://botkube.io/blog/use-chatgpt-to-troubleshoot-kubernetes-errors-with-botkubes-doctor), powered by ChatGPT, provides Kubernetes administrators and DevOps teams with an innovative way to troubleshoot issues within their clusters. No more sifting through logs or running complex commands in the terminal—Botkube's Doctor plugin allows users to harness the power of ChatGPT's natural language understanding to quickly diagnose and resolve problems directly from their Slack channels.
 
-![Image 1: AIOps tools connect OpenAI into Slack & Teams](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64ff4ae2ceb6be56bcfd2749_ZEQiRBR8IiMvCUsc962K45bn4fScHoE1ByR-SMm9yPwwCMLgcK5int407jHuSK6CzkbHkox8W6FSizqkhtUnD9Vwmz4UYSl6uIOtiejGTCCvybjr9ZrAuTMkslHBQBSsY0sRL4Vg3T66yu_DLkYYiHY.png)
+![Image 1: AIOps tools connect OpenAI into Slack & Teams](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64ff4ae2ceb6be56bcfd2749_ZEQiRBR8IiMvCUsc962K45bn4fScHoE1ByR-SMm9yPwwCMLgcK5int407jHuSK6CzkbHkox8W6FSizqkhtUnD9Vwmz4UYSl6uIOtiejGTCCvybjr9ZrAuTMkslHBQBSsY0sRL4Vg3T66yu_DLkYYiHY.png)
 
 **Conclusion: The Future of AIOps and ChatOps**
 -----------------------------------------------

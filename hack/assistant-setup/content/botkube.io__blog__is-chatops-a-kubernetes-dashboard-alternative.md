@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/is-chatops-a-kubernetes-dashboard-alternativ
 Published Time: Jul 10, 2023
 
 Markdown Content:
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64a86fdda4d8d06ce598598e_evan%20image.jpg)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64a86fdda4d8d06ce598598e_evan%20image.jpg)
 
 Evan Witmer
 
@@ -21,7 +21,7 @@ Can ChatOps replace the age old monitoring dashboards that DevOps teams still bu
 *   [Use Cases for Chat Operations in Kubernetes](#use-cases-for-chat-operations-in-kubernetes)
 *   [Conclusions](#conclusions)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI-Powered Assistant Today
 
 Kubernetes is a powerful container orchestration platform that can be used to deploy, manage, and scale containerized applications. However, Kubernetes can be complex to manage, especially for large deployments. This is where ChatOps can come in.
 

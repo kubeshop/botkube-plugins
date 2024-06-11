@@ -37,13 +37,13 @@ Before you can integrate Slack with Kubernetes, you'll need to have a Kubernetes
 
 Next, you'll need to install the Botkube Slack Kubernetes app, which will act as the bridge between Slack and Kubernetes. To do this, create a free account at [app.botkube.io](http://docs.google.com/app.botkube.io). Then select the 'Create an Instance' button.
 
-![Image 1: Create a new Slack Instance for K8s cluster](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/655bb2eb3f0a2c0e4740dc59_7VGa3a5lV6LYmuS74DUTOp8xAdAmOsbWbj5NBsGiWkx8fr7XoP5XmsLmKsLlv3ZOM6_8ebrp_bguWThWb4RvM0u6Nfj_lF-e6MiKe7FqK5PgjkQSEMtbs16Z81jideuD1sdqaI7kUUdZNgieMLmiR27hxzY9QQlNr4dalENTZBXUCtJ6uAXXQUqLXS8Izw.png)
+![Image 1: Create a new Slack Instance for K8s cluster](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/655bb2eb3f0a2c0e4740dc59_7VGa3a5lV6LYmuS74DUTOp8xAdAmOsbWbj5NBsGiWkx8fr7XoP5XmsLmKsLlv3ZOM6_8ebrp_bguWThWb4RvM0u6Nfj_lF-e6MiKe7FqK5PgjkQSEMtbs16Z81jideuD1sdqaI7kUUdZNgieMLmiR27hxzY9QQlNr4dalENTZBXUCtJ6uAXXQUqLXS8Izw.png)
 
 ### **Step 3: Configure the Slack Kubernetes App**
 
 Once the app is installed, you'll need to configure it to connect to your Kubernetes cluster. This involves providing the necessary plugins and access to your cluster, which can be done on the Botkube cluster management web GUI.
 
-![Image 2: Adding Prometheus alerts to Kubernetes](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/655bb2eb4e91433fcda304d7_s8PJ96D0QQC8bPZApPzf3SqM3RUUyBALccY1kOTf1yjTW-R5xmRd10FxaIKtGtC9fpjLj3WJ5FIMt_JRNo_DM9PMERTruFcJ9Ppd6JB4q8OdQXfWZ8l0CqcxOUhxy-O-3qY_ZD0893VnDdiyZb8P_yyrMHytznyMwXqCJAuKolGKAME66JewgxqEzxwL4Q.png)
+![Image 2: Adding Prometheus alerts to Kubernetes](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/655bb2eb4e91433fcda304d7_s8PJ96D0QQC8bPZApPzf3SqM3RUUyBALccY1kOTf1yjTW-R5xmRd10FxaIKtGtC9fpjLj3WJ5FIMt_JRNo_DM9PMERTruFcJ9Ppd6JB4q8OdQXfWZ8l0CqcxOUhxy-O-3qY_ZD0893VnDdiyZb8P_yyrMHytznyMwXqCJAuKolGKAME66JewgxqEzxwL4Q.png)
 
 ### **Step 4: Set Up ChatOps Commands**
 
@@ -51,7 +51,7 @@ With the app configured, you can now set up ChatOps commands that will allow you
 
 To set up commands, you'll need to create a Kubernetes deployment that runs a chatbot or script. This deployment will listen for specific keywords or phrases in the chat and execute the corresponding command in Kubernetes. Botkube makes this easy in their cloud user interface seen below.
 
-![Image 3: Adding ChatOps Commands](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/655bb2eb58ada6d8c5353bc9_fCRsNS2AUCBZ6K2M-NtCZk7mKySsJs-lGK4IoFOWXYBNSva_zrw2TkWhz9zT0y8rJGcoYmXqbF-henIjKRIb6nx2GgszKKxBn_hQhK3vLLAlujFfkTwUk6PFGiwTACtqrqS6SvY27ZVn1cLGtDQbwMfva6O_MmTLDBPTDdp0Kfj6CcYFJ4lJw8Bg5Na0lQ.png)
+![Image 3: Adding ChatOps Commands](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/655bb2eb58ada6d8c5353bc9_fCRsNS2AUCBZ6K2M-NtCZk7mKySsJs-lGK4IoFOWXYBNSva_zrw2TkWhz9zT0y8rJGcoYmXqbF-henIjKRIb6nx2GgszKKxBn_hQhK3vLLAlujFfkTwUk6PFGiwTACtqrqS6SvY27ZVn1cLGtDQbwMfva6O_MmTLDBPTDdp0Kfj6CcYFJ4lJw8Bg5Na0lQ.png)
 
 ### **Step 5: Test and Refine**
 

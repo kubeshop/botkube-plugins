@@ -6,9 +6,9 @@ Markdown Content:
 Understanding YAML Commenting for Better Kubernetes Management
 --------------------------------------------------------------
 
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65fa0b549adc75e0bdbbd27b_LEARN_TN_Definitions%20(9).png)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65fa0b549adc75e0bdbbd27b_LEARN_TN_Definitions%20(9).png)
 
-![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64a86fdda4d8d06ce598598e_evan%20image.jpg)
+![Image 2](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64a86fdda4d8d06ce598598e_evan%20image.jpg)
 
 Evan Witmer
 
@@ -24,7 +24,7 @@ Table of Contents
 *   [Beyond Notes: Botkube for Team-Based Kubernetes Management](#beyond-notes-botkube-for-team-based-kubernetes-management-2)
 *   [Final Thoughts](#final-thoughts-2)
 
-#### Get started with Botkube Cloud
+#### Get Started with Botkube Today!
 
 YAML (YAML Ain't Markup Language) is a powerful and human-friendly data serialization format that has become the backbone of Kubernetes configuration. Within YAML files, comments serve a crucial role in explaining code, documenting decisions, and fostering collaboration. Let's explore how to comment in YAML and the benefits of using annotations effectively.
 

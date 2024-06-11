@@ -10,7 +10,7 @@ Platform engineering is a term that has gained popularity in recent years, but w
 
 ### **The Basics**
 
-![Image 1: Platform engineering](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/659c2bb833448eeeb4c66452_1Sk7dcgaUtHVjQg5Ycz5Yj5DQ9LRUq_OdaG_SI19EYkJM18uA2slgFi9CI11rKsPE4_D7NnBf-dlA4JYypb42Frt5_CP27Z7L3uTah68EiQWokGUxh5bBVrmUvjxFBZqdOWloFg4N5ooei8kAEhgd6I.jpeg)
+![Image 1: Platform engineering](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/659c2bb833448eeeb4c66452_1Sk7dcgaUtHVjQg5Ycz5Yj5DQ9LRUq_OdaG_SI19EYkJM18uA2slgFi9CI11rKsPE4_D7NnBf-dlA4JYypb42Frt5_CP27Z7L3uTah68EiQWokGUxh5bBVrmUvjxFBZqdOWloFg4N5ooei8kAEhgd6I.jpeg)
 
 by ThisisEngineering RAEng (https://unsplash.com/@thisisengineering)
 
@@ -31,7 +31,7 @@ In addition to providing the necessary infrastructure and tools, platform engine
 
 ### **Scalability and Flexibility**
 
-![Image 2: Scalability and flexibility](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/659c2bb853de97d6edeb1d44_z4KVNDmVs0Nqb5bHpJd0qH-xmRluGmHDGUX4v677o3RK9LJfzolEIzIITGU8qQlTYrRSHu9PcSKhj_WYU9ZHxUKOdMP1yFmWdMMmhxIvZjKsjtSsCHpfiuovt2vMMxHb5F6jDcJ8ys0i88r4c3Qh-qY.jpeg)
+![Image 2: Scalability and flexibility](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/659c2bb853de97d6edeb1d44_z4KVNDmVs0Nqb5bHpJd0qH-xmRluGmHDGUX4v677o3RK9LJfzolEIzIITGU8qQlTYrRSHu9PcSKhj_WYU9ZHxUKOdMP1yFmWdMMmhxIvZjKsjtSsCHpfiuovt2vMMxHb5F6jDcJ8ys0i88r4c3Qh-qY.jpeg)
 
 by Resume Genius (https://unsplash.com/@resumegenius)
 
@@ -47,7 +47,7 @@ Additionally, platform engineering can help reduce costs by optimizing resource 
 
 ### **Security and Reliability**
 
-![Image 3: Security and reliability](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/659c2bb87eddad49a32fb06b_o1hxp921vCcwmj7-ELyr4rw4HR_bTNhn4v3RZTX_M-DTzbtjZSUnA_3wwOPcujOaH1_lQHZ7S43aC2Eeor87dAie2GamivEjP3pZKUl9vmtV72BABkbyrTNUBm1i8pMYBaJaqI-cm3ckxfrGBqsmy1Y.jpeg)
+![Image 3: Security and reliability](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/659c2bb87eddad49a32fb06b_o1hxp921vCcwmj7-ELyr4rw4HR_bTNhn4v3RZTX_M-DTzbtjZSUnA_3wwOPcujOaH1_lQHZ7S43aC2Eeor87dAie2GamivEjP3pZKUl9vmtV72BABkbyrTNUBm1i8pMYBaJaqI-cm3ckxfrGBqsmy1Y.jpeg)
 
 by Redd F (https://unsplash.com/@raddfilms)
 
@@ -89,7 +89,7 @@ In addition to technical skills, platform engineers also need strong communicati
 
 As a Platform Engineer delves deeper into areas like Kubernetes, microservices, and GitOps, they will likely realize the increased need for tooling. These technologies bring complexity and require specialized tools to effectively manage and deploy applications. Starting with a tool like Botkube can be beneficial as it simplifies the installation of other helpful tools through its setup wizard.
 
-![Image 4: Easy Platform Engineering Set Up Wizard](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64d154ccef984e82336dae1a_UDXteleWUlLJ1h495wr-eU7OqNyx3C-_aON-kSFgRVCK_35_iIzuouiTIHDYyo8ERPM0wCxseEROlkkkkVZVDJNmSJnm1JhA53HDTMGkkUGeDLEl5jKVpVaNciIhllLYqpsYfuza79QwLhH0cp1UE0Q.png)
+![Image 4: Easy Platform Engineering Set Up Wizard](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64d154ccef984e82336dae1a_UDXteleWUlLJ1h495wr-eU7OqNyx3C-_aON-kSFgRVCK_35_iIzuouiTIHDYyo8ERPM0wCxseEROlkkkkVZVDJNmSJnm1JhA53HDTMGkkUGeDLEl5jKVpVaNciIhllLYqpsYfuza79QwLhH0cp1UE0Q.png)
 
 Additionally, Botkube facilitates the management of these tools by allowing most platform engineering tools to be connected to Slack and interact with them. For instance, with Botkube, a Platform Engineer can receive notifications in a shared channel when a new Git request needs approval and even approve it directly from Slack. This integration enables self-service platform engineering to be brought into Slack or Teams and managed in a ChatOps fashion, making the overall process more streamlined and efficient.
 

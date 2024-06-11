@@ -3,6 +3,8 @@ Title: Terms and Conditions
 URL Source: https://botkube.io/terms-and-conditions
 
 Markdown Content:
+Last updated March 8,2023
+
 ### TABLE OF CONTENTS
 
 1.  AGREEMENT TO TERMS

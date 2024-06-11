@@ -24,7 +24,7 @@ It's not a singular tool, but a revolutionary approach that leverages the power 
 *   Reduced Operational Burden: Automation and self-service options free up valuable time for DevOps teams to focus on strategic initiatives.
 *   Handle Kubernetes Alerts Anywhere: Using the Slack Mobile App allows the development team to have access and act on Kubernetes Cluster errors.
 
-![Image 1: SlackOps performed on a mobile phone](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6585f8ca58fa1f00d24a8665_eaeNNA67Ccjxi6rom7fWGHmQoGRMRAcoYgfZdmkv3lAWxxzKcauX_p11A4nVAjrpYZziSXNTHVh_6UTFZRp2-t-xhJTVNAYMS4xGPQClDplLu0K5wvcV5AukTjpz4oyjWbZd_XaLmi8bOjVrSTLHPvI.jpeg)
+![Image 1: SlackOps performed on a mobile phone](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6585f8ca58fa1f00d24a8665_eaeNNA67Ccjxi6rom7fWGHmQoGRMRAcoYgfZdmkv3lAWxxzKcauX_p11A4nVAjrpYZziSXNTHVh_6UTFZRp2-t-xhJTVNAYMS4xGPQClDplLu0K5wvcV5AukTjpz4oyjWbZd_XaLmi8bOjVrSTLHPvI.jpeg)
 
 **Beyond the Horizon: The Extensible Future of SlackOps**
 ---------------------------------------------------------

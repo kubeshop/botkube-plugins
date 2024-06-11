@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/use-chatgpt-to-troubleshoot-kubernetes-error
 Published Time: Jul 31, 2023
 
 Markdown Content:
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/636df3fb36b4e60920a3b1b2_hPLC9itV8zp-raGDFmvOZMfn2hV8RFcl237qzT8Wa1g.jpeg)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/636df3fb36b4e60920a3b1b2_hPLC9itV8zp-raGDFmvOZMfn2hV8RFcl237qzT8Wa1g.jpeg)
 
 Kelly Revenaugh
 
@@ -23,9 +23,9 @@ People have been using ChatGPT and AI for many uses over the past year. But have
 *   [Is ChatGPT Safe to Use in Kubernetes?](#is-chatgpt-safe-to-use-in-kubernetes-)
 *   [Get Started with Botkube’s Doctor Plugin](#get-started-with-botkube-s-doctor-plugin)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI-Powered Assistant Today
 
-#### Get started with Botkube Cloud
+#### Get Started with Botkube Today!
 
 Artificial Intelligence (AI) and its counterpart, GPT (generative pre-trained transformer), have been making incredible progress over the past year. Large Language Models power tools like ChatGPT to answer almost any question using the collective knowledge stored over years on the Internet.
 
@@ -54,7 +54,7 @@ Here's a few use cases as examples:
 
 ### Assistance for Beginner Kubernetes Users
 
-![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64c7f3a7c42051dab4872cab_8hyWVq9NOkFLCQpe-EqzxKczhU5VIqqG_bm2kP876TdzysK0Z3PGJOXCBF3aPo8wIV9w8bC5n77ksg5I62jg7KlzmZpnmxNRmP2yvLTrxWZaHYv2tZFxGfQAo21ky2infXvJraVs4RbpiM4Jiyl1ulA.png)
+![Image 2](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64c7f3a7c42051dab4872cab_8hyWVq9NOkFLCQpe-EqzxKczhU5VIqqG_bm2kP876TdzysK0Z3PGJOXCBF3aPo8wIV9w8bC5n77ksg5I62jg7KlzmZpnmxNRmP2yvLTrxWZaHYv2tZFxGfQAo21ky2infXvJraVs4RbpiM4Jiyl1ulA.png)
 
 After the Doctor plugin is installed, users are able to use the `Get Help` button located under incoming error events, like the one shown above. This helps lower the barrier of entry for new Kubernetes and/or Botkube users.
 
@@ -66,7 +66,7 @@ __Keep in mind that the ChatGPT plugin will only give recommendations and expect
 
 ### ChatGPT Recommendations
 
-![Image 3](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64c7f3b7be2361ae1bb5afd0_LEr5f9Rr-O1pgKD_dYqFRG8GcwopzDWXYkDiVyEL3as3vJF3r1DQhDHa4SZs0sQD2NmW8sHJ3XUVMxUAp5z8WJx-mIuyXanea4788oniZnR0o4m2UrCZXKe-Uj8RZufiLihfB__BQYzgNo3uG2IrIwY.png)
+![Image 3](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64c7f3b7be2361ae1bb5afd0_LEr5f9Rr-O1pgKD_dYqFRG8GcwopzDWXYkDiVyEL3as3vJF3r1DQhDHa4SZs0sQD2NmW8sHJ3XUVMxUAp5z8WJx-mIuyXanea4788oniZnR0o4m2UrCZXKe-Uj8RZufiLihfB__BQYzgNo3uG2IrIwY.png)
 
 The new Doctor plugin allows you to integrate [Botkube's existing Kubernetes recommendations](https://www.youtube.com/watch?v=9D2tASyx7eA) derived from cluster logs to receive personalized suggestions based on the specific information extracted from your Kubernetes cluster.
 

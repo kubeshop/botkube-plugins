@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/explore-the-new-era-of-aiops-with-botkubes-a
 Published Time: Mar 11, 2024
 
 Markdown Content:
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
 
 Maria Ashby
 
@@ -22,9 +22,9 @@ Discover how to revolutionize Kubernetes management with Botkube's AI Assistant!
 *   [Conclusion](#conclusion)
 *   [Get Started Today](#get-started-today)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI-Powered Assistant Today
 
-#### Start Receiving Kubernetes Notifications Now with Botkube Cloud
+#### Start Receiving Kubernetes Notifications Now
 
 Kubernetes management requires lots of expertise. In the era of artificial intelligence, this complexity has led to the advent of [AIOps](https://botkube.io/learn/aiops-tools)—artificial intelligence for IT operations—which aims to enhance operational processes through the use of AI. In addition, Kubernetes Assistant tools like [Botkube's AI Assistant](https://botkube.io/blog/real-time-platform-engineer-advice-ai-assistant) have launched in response to the challenge of Kubernetes developer experience. They can simplify the Kubernetes experience through automation, real-time monitoring, and intelligent troubleshooting directly from chat platforms. These new tools are vital for both seasoned DevOps professionals and newcomers to make Kubernetes operations more accessible and efficient.
 
@@ -52,15 +52,15 @@ Before exploring Botkube's AI Assistant, you’ll need:
 
 *   Follow our [straightforward guide](https://botkube.io/blog/botkube-open-source-to-cloud-migration) to migrate your OSS instances to Botkube.
 
-![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65ecd856e5a6e7c2b404c66d_N1o3vsdP6wCYKbJZGkhQRxDQXG9z_jKjVoZjvGeUH2CddQSNd0IY8Ue1-0CfDX5LWhmtSNYgncFxPntT9j3kr_YuzWezKrZXDmYTB-VAKuU2oXXOZ3UOGq8DrBNckB2ipzta_zpdWMNidFY7lNukoJs.png)
+![Image 2](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65ecd856e5a6e7c2b404c66d_N1o3vsdP6wCYKbJZGkhQRxDQXG9z_jKjVoZjvGeUH2CddQSNd0IY8Ue1-0CfDX5LWhmtSNYgncFxPntT9j3kr_YuzWezKrZXDmYTB-VAKuU2oXXOZ3UOGq8DrBNckB2ipzta_zpdWMNidFY7lNukoJs.png)
 
 2.  ****Cluster Integration:**** Connect your Kubernetes cluster with Botkube by following the straightforward setup guide. This step is essential for enabling the AI Assistant to interact with your cluster.
 
-![Image 3](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65ecd86310dd50a06df954e2_oeh6mJwm7VXV8-qP22EHYCGBGTD3Vkj_oNVMyhDANhHg-oI3h4xHJ2GQ_EMtiqxtwkKTdEsN73su0lsORSgBBuxnd3hL-KNkAyVdwLn5Qeo54tpzPL9Emihf-l1B-YdyvhlN8DJMCvmjtIIBytLwleo.png)
+![Image 3](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65ecd86310dd50a06df954e2_oeh6mJwm7VXV8-qP22EHYCGBGTD3Vkj_oNVMyhDANhHg-oI3h4xHJ2GQ_EMtiqxtwkKTdEsN73su0lsORSgBBuxnd3hL-KNkAyVdwLn5Qeo54tpzPL9Emihf-l1B-YdyvhlN8DJMCvmjtIIBytLwleo.png)
 
 3.  **Initiate AI Assistance:** After connecting your instance, the AI Assistant feature is automatically enabled as part of the installation process. Begin your interaction with the AI Assistant by using: **`@Botkube ai hi`**
 
-![Image 4](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65ecd86f1927490939066d7b_jdK_nbhFbWzCMwC8aCYHZ5o7JZJ4G1LOVwrcWtEoEC1YlFx9oQzja864BYJEf1Ber1UtBcV2nB_y5ZIgf6C1-Sl8z-gbX7Y3jPXGemQc_yT4xeSw9JVTZjyIdqq7wWwmzunejS2Ncep2JV0gN8DgKsQ.png)
+![Image 4](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65ecd86f1927490939066d7b_jdK_nbhFbWzCMwC8aCYHZ5o7JZJ4G1LOVwrcWtEoEC1YlFx9oQzja864BYJEf1Ber1UtBcV2nB_y5ZIgf6C1-Sl8z-gbX7Y3jPXGemQc_yT4xeSw9JVTZjyIdqq7wWwmzunejS2Ncep2JV0gN8DgKsQ.png)
 
 ‍
 
@@ -69,7 +69,7 @@ How to use Botkube's AI Assistant
 
 ### Automated Incident Reporting
 
-![Image 5](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65e8a037ee1160c06c47b0cc_LopU3vbDXwRSiyWbJgwCkZ2vsifEeikrsi9f16OWeJE83BBJGt2tqJn2O-2mq8nTvDlNejOFdH2LyHXcKccnsFcyjeDoccaBZSLLuxm3HZtsE3-TBmPgOEkLEjSr9_K5DcIvpZkd1KVFyN4uly3aImU.png)
+![Image 5](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65e8a037ee1160c06c47b0cc_LopU3vbDXwRSiyWbJgwCkZ2vsifEeikrsi9f16OWeJE83BBJGt2tqJn2O-2mq8nTvDlNejOFdH2LyHXcKccnsFcyjeDoccaBZSLLuxm3HZtsE3-TBmPgOEkLEjSr9_K5DcIvpZkd1KVFyN4uly3aImU.png)
 
 Botkube's AI Assistant simplifies incident management by analyzing issues and sharing detailed reports in your chat platform.
 
@@ -86,13 +86,13 @@ In two steps, you can get immediate, detailed insights into your cluster's healt
 
 ### Cluster Analysis and Automated Runbooks
 
-![Image 6](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65e8a0387271b3eec14634d8_Co_cwk72Ki64q1a3A6OAcxn0qQvCjlhWWlTtBLPzMwhPjvVn6oHn-e2_L4twExmcpGAuis9bZKJXC2JRzuOzxMXg5MsbAugaCwe1xt5GUqWsnbug3CQkm7uGo7GX2g4dgTc-TCK1oScC7aUd82RMlG4.png)
+![Image 6](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65e8a0387271b3eec14634d8_Co_cwk72Ki64q1a3A6OAcxn0qQvCjlhWWlTtBLPzMwhPjvVn6oHn-e2_L4twExmcpGAuis9bZKJXC2JRzuOzxMXg5MsbAugaCwe1xt5GUqWsnbug3CQkm7uGo7GX2g4dgTc-TCK1oScC7aUd82RMlG4.png)
 
 ‍
 
 AI Assistant significantly enhances Kubernetes diagnostics by offering detailed analysis and automated runbooks for issue resolution, simplifying the management process.
 
-![Image 7](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65ee1a5d521144e87f59161e_Botkube%20AI%20Assistant%20-failing%20GIF.gif)
+![Image 7](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65ee1a5d521144e87f59161e_Botkube%20AI%20Assistant%20-failing%20GIF.gif)
 
 When an error occurs, Botkube will offer an in-depth analysis.
 

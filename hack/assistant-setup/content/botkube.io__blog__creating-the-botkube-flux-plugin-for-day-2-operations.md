@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/creating-the-botkube-flux-plugin-for-day-2-o
 Published Time: Sep 07, 2023
 
 Markdown Content:
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/636df3ec19d99029e7cfb5bd_n-vUM0Lz3yXA1WLyfxEMUxXQpUDEiKv9EmEe4NnCbCI.png)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/636df3ec19d99029e7cfb5bd_n-vUM0Lz3yXA1WLyfxEMUxXQpUDEiKv9EmEe4NnCbCI.png)
 
 Mateusz Szostok
 
@@ -24,9 +24,9 @@ From this deep dive you'll know the Zapier-like aspect of Botkube that connects 
 *   [Behind the Scenes: Developing the Botkube Flux Plugin](#behind-the-scenes-developing-the-botkube-flux-plugin)
 *   [Conclusion](#conclusion)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI-Powered Assistant Today
 
-#### Get started with Botkube Cloud
+#### Get Started with Botkube Today!
 
 Hey there, tech enthusiasts! Today we're diving into the world of GitOps with the brand-new Botkube Flux plugin.
 
@@ -46,11 +46,11 @@ Now, let's get into the nitty-gritty of this plugin's journey. Picture yourself 
 
 1.  Be able to run Flux CLI commands from any communication platform, just like you do in your terminal:
 
-![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64f9944f5ec10d12756e4d2b_flux-get-source-git.png)
+![Image 2](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64f9944f5ec10d12756e4d2b_flux-get-source-git.png)
 
 2.  Next, let's make it mobile friendly. The secret ingredient is interactivity like buttons and select menus. ‍
 
-![Image 3](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64f9949ad7623bfae8357d71_flux-get-source-git-btns.png)
+![Image 3](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64f9949ad7623bfae8357d71_flux-get-source-git-btns.png)
 
 Typing or copy-pasting a long names doesn't work well. Now, you have a handy Flux client right in your pocket, ready with just a few clicks. And we are just half-way there 😈‍
 
@@ -58,7 +58,7 @@ Typing or copy-pasting a long names doesn't work well. Now, you have a handy Flu
 
 In our case, we stitched together three important parts: Kubernetes cluster, GitHub platform, and Flux CLI. As a result, we've provided a streamlined experience for generating a diff report in the context of GitHub pull requests and the current cluster state.
 
-![Image 4](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64f994c33a6f72e35362f50c_flux-diff.png)
+![Image 4](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64f994c33a6f72e35362f50c_flux-diff.png)
 
 🎁 As you may notice, the diff report notification includes some useful actions out-of-the-box:
 
@@ -79,7 +79,7 @@ That's how the GitHub Events source was born. Now we can set up a complete workf
 2.  Get notification on Slack about new pull request.
 3.  Render and embed event-aware button to run a diff report.
 
-![Image 5](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64f994dd9581964e18ef36bd_pr-event.png)
+![Image 5](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64f994dd9581964e18ef36bd_pr-event.png)
 
 ‍
 
@@ -154,7 +154,7 @@ Under the hood we use \`go-getter\` library which has a lot of great features. I
 
 We started with [GitHub repository events endpoint](https://docs.github.com/en/rest/activity/events?apiVersion=2022-11-28#list-repository-events). But it turned out that even though it serves events that we are interested in, it was not meant to be used for the real-time use-cases. We still integrate with the `events` API, but it's recommended for event subscription where time is not that important. For example, getting notification about new stars on your GitHub repositories: ‍
 
-![Image 6](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64f994ee3a6f72e3536300f4_stars.png)
+![Image 6](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64f994ee3a6f72e3536300f4_stars.png)
 
 ‍ To achieve our e2e goal, we decided to develop a custom polling mechanism that uses [pull request endpoint](https://docs.github.com/en/rest/pulls/pulls?apiVersion=2022-11-28#list-pull-requests). The polling mechanism forces us to be more rational about the number of calls to fit into defined rate limits. We decided on two things:
 

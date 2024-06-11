@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/botkube-takes-on-amsterdam-a-kubecon-recap
 Published Time: May 04, 2023
 
 Markdown Content:
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
 
 Maria Ashby
 
@@ -28,7 +28,7 @@ The Kubecon Amsterdam conference was a wild ride, filled with exciting announcem
 *   [Sign up now](#sign-up-now)
 *   [Feedback](#feedback)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI-Powered Assistant Today
 
 Kubecon EU was a wild ride, filled with exciting announcements, insightful talks, and countless networking opportunities. As an attendee and representative of Botkube, I had the privilege of observing the latest trends in the Kubernetes space, and I am thrilled to share my experience and my top five takeaways with you.
 

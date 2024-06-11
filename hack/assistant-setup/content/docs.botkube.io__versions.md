@@ -9,10 +9,11 @@ Markdown Content:
 
 [![Image 1: Botkube Logo](https://docs.botkube.io/images/botkube-black.svg) **Botkube**](https://docs.botkube.io/)[Documentation](https://docs.botkube.io/)[Community](https://docs.botkube.io/community/contribute/)
 
-[1.11](https://docs.botkube.io/)
+[1.12](https://docs.botkube.io/)
 
 *   [Unreleased 🚧](https://docs.botkube.io/next/)
-*   [1.11](https://docs.botkube.io/)
+*   [1.12](https://docs.botkube.io/)
+*   [1.11](https://docs.botkube.io/1.11/)
 *   [1.10](https://docs.botkube.io/1.10/)
 *   [1.9](https://docs.botkube.io/1.9/)
 *   [1.8](https://docs.botkube.io/1.8/)
@@ -29,7 +30,7 @@ This page lists all documented versions of Botkube.
 
 The latest stable version.
 
-<table><tbody><tr><th>1.11</th><td><a href="https://docs.botkube.io/">Documentation</a></td><td>⏳ Loading...</td></tr></tbody></table>
+<table><tbody><tr><th>1.12</th><td><a href="https://docs.botkube.io/">Documentation</a></td><td>⏳ Loading...</td></tr></tbody></table>
 
 ### Next version (Unreleased)[​](#unreleased "Direct link to Next version (Unreleased)")
 
@@ -41,7 +42,7 @@ Here you can find the documentation for unreleased version.
 
 Here you can find documentation for previous Botkube versions.
 
-<table><tbody><tr><th>1.10</th><td><a href="https://docs.botkube.io/1.10">Documentation</a></td><td>⏳ Loading...</td></tr><tr><th>1.9</th><td><a href="https://docs.botkube.io/1.9">Documentation</a></td><td>⏳ Loading...</td></tr><tr><th>1.8</th><td><a href="https://docs.botkube.io/1.8">Documentation</a></td><td>⏳ Loading...</td></tr><tr><th>1.7</th><td><a href="https://docs.botkube.io/1.7">Documentation</a></td><td>⏳ Loading...</td></tr></tbody></table>
+<table><tbody><tr><th>1.11</th><td><a href="https://docs.botkube.io/1.11">Documentation</a></td><td>⏳ Loading...</td></tr><tr><th>1.10</th><td><a href="https://docs.botkube.io/1.10">Documentation</a></td><td>⏳ Loading...</td></tr><tr><th>1.9</th><td><a href="https://docs.botkube.io/1.9">Documentation</a></td><td>⏳ Loading...</td></tr><tr><th>1.8</th><td><a href="https://docs.botkube.io/1.8">Documentation</a></td><td>⏳ Loading...</td></tr><tr><th>1.7</th><td><a href="https://docs.botkube.io/1.7">Documentation</a></td><td>⏳ Loading...</td></tr></tbody></table>
 
 ### Archived Versions[​](#archived "Direct link to Archived Versions")
 

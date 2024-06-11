@@ -1,11 +1,8 @@
-Title: Botkube
+Title: License | Botkube
 
 URL Source: https://docs.botkube.io/license/
 
 Markdown Content:
-License
--------
-
 MIT License[​](#mit-license "Direct link to MIT License")
 ---------------------------------------------------------
 

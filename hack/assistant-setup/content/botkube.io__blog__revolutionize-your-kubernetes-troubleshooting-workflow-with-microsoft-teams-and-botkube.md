@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/revolutionize-your-kubernetes-troubleshootin
 Published Time: Nov 29, 2023
 
 Markdown Content:
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
 
 Maria Ashby
 
@@ -20,9 +20,9 @@ Learn more about Botkube's new and improved Microsoft Teams support!
 *   [Benefits of the new Microsoft Teams App](#benefits-of-the-new-microsoft-teams-app-)
 *   [Getting Started with Botkube’s Microsoft Teams](#getting-started-with-botkube-s-microsoft-teams)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI-Powered Assistant Today
 
-#### Get started with Botkube Cloud
+#### Get Started with Botkube Today!
 
 In today's fast-paced, hybrid work environment, Microsoft Teams stands as a leader of enterprise communication tools that boasts a staggering 280 million active users monthly as of January 2023, including 91 of the Fortune 100 companies. The adoption of this tool is parallel to the rapid expansion of Azure Cloud services and Azure Kubernetes Service (AKS), that have helped propel organizations toward scalability and seamless deployment of cloud-native applications.
 
@@ -36,7 +36,7 @@ Botkube's new Microsoft Teams helps address the previously unmet needs of Kubern
 
 The setup process is streamlined, making Kubernetes troubleshooting not only collaborative but also straightforward. Our vision is clear: **to optimize your team's workflow, boosting efficiency at every turn**. The new, simplified installation cuts through the complexity, saving your team invaluable time and effort.
 
-![Image 2: Botkube Cloud MS Teams List Instances](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/656a220f7060426086a6dbd9_cloud_teams_list_instances-0079ca8c5f306a230342b447ef8f31cb.png)
+![Image 2: Botkube Cloud MS Teams List Instances](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/656a220f7060426086a6dbd9_cloud_teams_list_instances-0079ca8c5f306a230342b447ef8f31cb.png)
 
 Benefits of the new Microsoft Teams App
 ---------------------------------------
@@ -51,7 +51,7 @@ Botkube's integration with Microsoft Teams provides users with direct access to 
 
 ‍
 
-![Image 3](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6567879667dde77a83a5861b_p-Naa0ZdnovPq_SSVldIS1NhIah6tTIxeofzBX1tOEUJL7dmMubUhdobLqieWsTnIDdatibAbRqNC7dkwN_xYIje3QqjqgDWHO49bMbAkwBIyCtTM2h5gAbhBVBh1OJavuANnxvvOxS4Z5l_OLumnzI.png)
+![Image 3](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6567879667dde77a83a5861b_p-Naa0ZdnovPq_SSVldIS1NhIah6tTIxeofzBX1tOEUJL7dmMubUhdobLqieWsTnIDdatibAbRqNC7dkwN_xYIje3QqjqgDWHO49bMbAkwBIyCtTM2h5gAbhBVBh1OJavuANnxvvOxS4Z5l_OLumnzI.png)
 
 ### Improving Reliability
 
@@ -63,7 +63,7 @@ Botkube's integration with Microsoft Teams streamlines the collaborative process
 
 ‍
 
-![Image 4](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65678794b1beb119ed7c14c8_t7Oj6aNKqMZhSXW1SgyrrWxobf3im5J0ypr0E0_DuJfBxrGmbemFqH02ZCBWIhQiDoPKnmR_UR5VeMNUrf4Fgcn89JSWMLkWZgBBDvR7_iEZ-_UDxC0gvdTlFWpJgeH4Z2ffYMywev5vyMhP3xIkMPg.png)
+![Image 4](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65678794b1beb119ed7c14c8_t7Oj6aNKqMZhSXW1SgyrrWxobf3im5J0ypr0E0_DuJfBxrGmbemFqH02ZCBWIhQiDoPKnmR_UR5VeMNUrf4Fgcn89JSWMLkWZgBBDvR7_iEZ-_UDxC0gvdTlFWpJgeH4Z2ffYMywev5vyMhP3xIkMPg.png)
 
 Getting Started with Botkube’s Microsoft Teams
 ----------------------------------------------

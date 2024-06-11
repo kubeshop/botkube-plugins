@@ -73,7 +73,7 @@ AI can also detect anomalies and system issues in real time. This can help in pr
 
 Moreover, AI can analyze large volumes of log data to identify patterns and trends. This can provide valuable insights for improving system performance and reliability.
 
-![Image 1: Pulling logs for Kubernetes Cluster from Slack](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/664789d8541102b509a99a81_Pulling%20Logs%20from%20Slack.png)
+![Image 1: Pulling logs for Kubernetes Cluster from Slack](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/664789d8541102b509a99a81_Pulling%20Logs%20from%20Slack.png)
 
 Botkube's Slack integration lets you Pull Event Logs for Kubernetes Alerts
 

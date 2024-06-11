@@ -8,7 +8,7 @@ Markdown Content:
 *   [Elasticsearch](https://docs.botkube.io/installation/elasticsearch/)
 *   Elasticsearch for Botkube Cloud
 
-Version: 1.11
+Version: 1.12
 
 Prerequisites[​](#prerequisites "Direct link to Prerequisites")
 ---------------------------------------------------------------
@@ -67,4 +67,4 @@ Clean up[​](#clean-up "Direct link to Clean up")
     ![Image 7: Delete](https://docs.botkube.io/assets/images/els_instance_delete-27fe3622760a4cbbd7c92d13d7ddcd41.png)
     
 
-[Previous Elasticsearch for self-hosted Botkube](https://docs.botkube.io/installation/elasticsearch/self-hosted)[Next Outgoing webhook](https://docs.botkube.io/installation/webhook/)
+[Previous Elasticsearch for self-hosted Botkube](https://docs.botkube.io/installation/elasticsearch/self-hosted)[Next PagerDuty](https://docs.botkube.io/installation/pagerduty/)

@@ -8,7 +8,7 @@ Markdown Content:
 *   [Outgoing webhook](https://docs.botkube.io/installation/webhook/)
 *   Outgoing webhook for Botkube Cloud
 
-Version: 1.11
+Version: 1.12
 
 Prerequisites[​](#prerequisites "Direct link to Prerequisites")
 ---------------------------------------------------------------

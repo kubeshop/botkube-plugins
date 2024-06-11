@@ -3,7 +3,7 @@ Title: botkube telemetry enable | Botkube
 URL Source: https://docs.botkube.io/cli/commands/botkube_telemetry_enable
 
 Markdown Content:
-Version: 1.11
+Version: 1.12
 
 botkube telemetry enable[​](#botkube-telemetry-enable "Direct link to botkube telemetry enable")
 ------------------------------------------------------------------------------------------------

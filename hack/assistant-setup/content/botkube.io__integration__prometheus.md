@@ -7,7 +7,7 @@ Markdown Content:
 
 There has never been an easier way to get started with alert manager by Prometheus. If it is not already installed into your Kubernetes cluster, just simply go over to Botkube’s setup wizard and select the different K8s plugins you would like to add. No more CLI deployment needed!
 
-![Image 1: Adding Alerts to your Kubernetes Cluster with Prometheus Alert manager ](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6549321f3ab68ce0bef6a1a0_POEEPnLdeD8pzH-pcTbUwkuHvE46ilC2nSw5zPvp4f1DuxdIBV3hbRC-hBnuEAYpCS7UzSU2bpsNdmWXFGIot6nhEtZskDiPOP7K7er6bOy4-1p2AKkjcJYNaYaGHClmW5rrmFsd8rzXLO6MIFJabZg.png)
+![Image 1: Adding Alerts to your Kubernetes Cluster with Prometheus Alert manager ](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6549321f3ab68ce0bef6a1a0_POEEPnLdeD8pzH-pcTbUwkuHvE46ilC2nSw5zPvp4f1DuxdIBV3hbRC-hBnuEAYpCS7UzSU2bpsNdmWXFGIot6nhEtZskDiPOP7K7er6bOy4-1p2AKkjcJYNaYaGHClmW5rrmFsd8rzXLO6MIFJabZg.png)
 
 How does Prometheus work?
 -------------------------

@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/botkube-open-source-to-cloud-migration
 Published Time: Aug 09, 2023
 
 Markdown Content:
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/636df3fb36b4e60920a3b1b2_hPLC9itV8zp-raGDFmvOZMfn2hV8RFcl237qzT8Wa1g.jpeg)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/636df3fb36b4e60920a3b1b2_hPLC9itV8zp-raGDFmvOZMfn2hV8RFcl237qzT8Wa1g.jpeg)
 
 Kelly Revenaugh
 
@@ -22,9 +22,9 @@ With our new CLI migration tool, current open-source users are able to migrate t
 *   [How to Migrate Your Existing Botkube Account to Cloud](#how-to-migrate-your-existing-botkube-account-to-cloud)
 *   [Give it a try!](#give-it-a-try-)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI-Powered Assistant Today
 
-#### Get started with Botkube Cloud
+#### Get Started with Botkube Today!
 
 With our latest release, we’ve made transitioning from the open source version of Botkube to our Cloud version even easier. [Botkube Cloud](http://botkube.io/) is built on top of our open source core and gives users even more benefits – including audit and event logs to track changes in your Kubernetes clusters, an easy-to-use visual dashboard to configure your settings, multi-cluster management, and much more.
 
@@ -45,7 +45,7 @@ Botkube Cloud makes it easy to configure and install Botkube in a new Kubernetes
 
 **Multi-cluster management**
 
-![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64d5072717f5862f1c0ba90e_64385d9ea0e4ca059b5a7a1d_Botkube.png)
+![Image 2](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64d5072717f5862f1c0ba90e_64385d9ea0e4ca059b5a7a1d_Botkube.png)
 
 Botkube Cloud makes it easy to manage Botkube in multiple Kubernetes clusters. Previously, if users wanted to use Botkube executors (e.g. kubectl commands) and have multiple Kubernetes clusters, users needed to create and install a Botkube Slack app for each cluster.
 
@@ -57,7 +57,7 @@ The Botkube Cloud Slack bot can be installed in your Slack workspace with a sing
 
 **Audit and Event logs**
 
-![Image 3](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64d507420a0b1ce9ecb2d0dd_64385e6998cfac2dfc8d887f_Event%20and%20Audit%20Logs.png)
+![Image 3](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64d507420a0b1ce9ecb2d0dd_64385e6998cfac2dfc8d887f_Event%20and%20Audit%20Logs.png)
 
 Botkube Cloud collects and aggregates audit and event logs from all of your Botkube-enabled Kubernetes clusters. All Botkube notifications are stored as events and any Botkube executor commands are stored as audit log entries. Logs can be filtered and sorted and you can see what activity is happening in your clusters, correlate events, and find the root cause of problems that arise.**‍**
 

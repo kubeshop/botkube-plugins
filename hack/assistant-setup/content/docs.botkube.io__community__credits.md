@@ -9,10 +9,11 @@ Markdown Content:
 
 [![Image 1: Botkube Logo](https://docs.botkube.io/images/botkube-black.svg) **Botkube**](https://docs.botkube.io/)[Documentation](https://docs.botkube.io/)[Community](https://docs.botkube.io/community/contribute/)
 
-[1.11](https://docs.botkube.io/)
+[1.12](https://docs.botkube.io/)
 
 *   [Unreleased 🚧](https://docs.botkube.io/next/)
-*   [1.11](https://docs.botkube.io/)
+*   [1.12](https://docs.botkube.io/)
+*   [1.11](https://docs.botkube.io/1.11/)
 *   [1.10](https://docs.botkube.io/1.10/)
 *   [1.9](https://docs.botkube.io/1.9/)
 *   [1.8](https://docs.botkube.io/1.8/)
@@ -124,33 +125,33 @@ Thanks to all contributors for making Open Source Software a better place! ❤�
 
 3 commits
 
-[![Image 17: Surbhidongaonkar](https://avatars.githubusercontent.com/u/55372563?v=4)](https://github.com/Surbhidongaonkar "Surbhidongaonkar")
+[![Image 17: vaijab](https://avatars.githubusercontent.com/u/1308018?v=4)](https://github.com/vaijab "vaijab")
+
+[vaijab](https://github.com/vaijab "vaijab")
+
+3 commits
+
+[![Image 18: Surbhidongaonkar](https://avatars.githubusercontent.com/u/55372563?v=4)](https://github.com/Surbhidongaonkar "Surbhidongaonkar")
 
 [Surbhidongaonkar](https://github.com/Surbhidongaonkar "Surbhidongaonkar")
 
 3 commits
 
-[![Image 18: vishal-biyani](https://avatars.githubusercontent.com/u/1167948?v=4)](https://github.com/vishal-biyani "vishal-biyani")
+[![Image 19: vishal-biyani](https://avatars.githubusercontent.com/u/1167948?v=4)](https://github.com/vishal-biyani "vishal-biyani")
 
 [vishal-biyani](https://github.com/vishal-biyani "vishal-biyani")
 
 3 commits
 
-[![Image 19: testwill](https://avatars.githubusercontent.com/u/8717479?v=4)](https://github.com/testwill "testwill")
+[![Image 20: testwill](https://avatars.githubusercontent.com/u/8717479?v=4)](https://github.com/testwill "testwill")
 
 [testwill](https://github.com/testwill "testwill")
 
 2 commits
 
-[![Image 20: sgandon](https://avatars.githubusercontent.com/u/783286?v=4)](https://github.com/sgandon "sgandon")
+[![Image 21: sgandon](https://avatars.githubusercontent.com/u/783286?v=4)](https://github.com/sgandon "sgandon")
 
 [sgandon](https://github.com/sgandon "sgandon")
-
-2 commits
-
-[![Image 21: vaijab](https://avatars.githubusercontent.com/u/1308018?v=4)](https://github.com/vaijab "vaijab")
-
-[vaijab](https://github.com/vaijab "vaijab")
 
 2 commits
 

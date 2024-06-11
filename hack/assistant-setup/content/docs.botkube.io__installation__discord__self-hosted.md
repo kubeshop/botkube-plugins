@@ -3,7 +3,7 @@ Title: Discord for self-hosted Botkube | Botkube
 URL Source: https://docs.botkube.io/installation/discord/self-hosted
 
 Markdown Content:
-Version: 1.11
+Version: 1.12
 
 Prerequisites[​](#prerequisites "Direct link to Prerequisites")
 ---------------------------------------------------------------
@@ -92,7 +92,7 @@ Follow the first 4 mins of this [Video Tutorial](https://youtu.be/8o25pRbXdFw) t
 
 To deploy Botkube agent in your cluster, run:
 
-    export CLUSTER_NAME={cluster_name}export ALLOW_KUBECTL={allow_kubectl}botkube install --version v1.11.0 \--set communications.default-group.discord.enabled=true \--set communications.default-group.discord.channels.default.id=${DISCORD_CHANNEL_ID} \--set communications.default-group.discord.botID=${DISCORD_BOT_ID} \--set communications.default-group.discord.token=${DISCORD_TOKEN} \--set settings.clusterName=${CLUSTER_NAME} \--set 'executors.k8s-default-tools.botkube/kubectl.enabled'=${ALLOW_KUBECTL}
+    export CLUSTER_NAME={cluster_name}export ALLOW_KUBECTL={allow_kubectl}botkube install --version v1.12.0 \--set communications.default-group.discord.enabled=true \--set communications.default-group.discord.channels.default.id=${DISCORD_CHANNEL_ID} \--set communications.default-group.discord.botID=${DISCORD_BOT_ID} \--set communications.default-group.discord.token=${DISCORD_TOKEN} \--set settings.clusterName=${CLUSTER_NAME} \--set 'executors.k8s-default-tools.botkube/kubectl.enabled'=${ALLOW_KUBECTL}
 
 where:
 

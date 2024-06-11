@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/botkube-v017-release-notes
 Published Time: Jan 09, 2023
 
 Markdown Content:
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/636df3edbf5389368f6bef9c_cYbM1beBC5tQnSPVfaXCg_W9tkHugByZV2TOleN6pTw.jpeg)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/636df3edbf5389368f6bef9c_cYbM1beBC5tQnSPVfaXCg_W9tkHugByZV2TOleN6pTw.jpeg)
 
 Blair Rampling
 
@@ -24,7 +24,7 @@ Botkube v0.17.0 adds a plugin system and the first executor plugin allowing you 
 *   [Bug Fixes](#bug-fixes)
 *   [Feedback - We’d Love to Hear From You](#feedback-we-d-love-to-hear-from-you)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI-Powered Assistant Today
 
 Botkube v0.17.0 is here, and it's huge! We've introduced a plugin system for sources and executors along with the first plugin for Helm. Botkube is the most modern [ChatOps tool for Kubernetes](http://botkube.io/)!
 
@@ -48,7 +48,7 @@ Helm Plugin
 
 Along with the plugin system, we have introduced Helm as the first executor plugin for Botkube. The Helm plugin allows you to run Helm commands right from your communication platform. The Botkube Helm plugin provides a subset of the most useful Helm commands, you can list installed releases, rollback upgrades, and even install charts and uninstall releases.
 
-![Image 2: Helm list in Slack](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/63bc34953fa404bdf9e9b66c_lJAFGnZKp4HY98JtcnteqhObKFnrZ1RoxmMHj8jPZ3XcCk3TWjekXD_hQJNrucD7JANNaYNyHh4E5uIHDl1SS3RWRisuAd8boq7fXK388pca9Tae_CN2k0ZdMy1_QTC9ZGVNmLPwECEzvNKSRai2p3d4CfAMoQjNrV0VJzsfnjkjipqdmCkwT0FkrOr3EA.png)
+![Image 2: Helm list in Slack](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/63bc34953fa404bdf9e9b66c_lJAFGnZKp4HY98JtcnteqhObKFnrZ1RoxmMHj8jPZ3XcCk3TWjekXD_hQJNrucD7JANNaYNyHh4E5uIHDl1SS3RWRisuAd8boq7fXK388pca9Tae_CN2k0ZdMy1_QTC9ZGVNmLPwECEzvNKSRai2p3d4CfAMoQjNrV0VJzsfnjkjipqdmCkwT0FkrOr3EA.png)
 
 Imagine seeing an alert in your communications platform that a deployment was updated but something went wrong and the new release is failing. You can check the application pod logs, the helm release status, then run `@botkube helm rollback <release>` and fix the problem without ever leaving the chat!
 

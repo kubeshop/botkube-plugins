@@ -21,7 +21,7 @@ Either way, installation is quick and easy, and you can find detailed steps for 
 
 This Kubectl cheatsheet would not be complete without showing the new quickest way to install Kubectl commands on your cluster. With Botkube’s setup wizard, simply select that you want to add Kubectl into your cluster on the Step 3 plugin page. Feel free to add any other helpful K8s plugins like Helm. Once the setup wizard is complete, users can access Kubectl commands, such as kubectl restart pod, from their K8s cluster.
 
-![Image 1: Easily install kubectl into kubernetes clusters with one click on the Botkube Cluster setup wizard](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64d154ccef984e82336dae1a_UDXteleWUlLJ1h495wr-eU7OqNyx3C-_aON-kSFgRVCK_35_iIzuouiTIHDYyo8ERPM0wCxseEROlkkkkVZVDJNmSJnm1JhA53HDTMGkkUGeDLEl5jKVpVaNciIhllLYqpsYfuza79QwLhH0cp1UE0Q.png)
+![Image 1: Easily install kubectl into kubernetes clusters with one click on the Botkube Cluster setup wizard](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64d154ccef984e82336dae1a_UDXteleWUlLJ1h495wr-eU7OqNyx3C-_aON-kSFgRVCK_35_iIzuouiTIHDYyo8ERPM0wCxseEROlkkkkVZVDJNmSJnm1JhA53HDTMGkkUGeDLEl5jKVpVaNciIhllLYqpsYfuza79QwLhH0cp1UE0Q.png)
 
 **Tip #1 - How to check kubectl version?**
 ------------------------------------------
@@ -45,7 +45,7 @@ Botkube helps Automate K8s log management in three ways:
 2.  **One-Click Log Management** \- Drop down of Kubectl log commands to run without switching back to the terminal.
 3.  **Multipurpose Log Commands** - Receive log trail in the shared channel for everyone on the team to see and learn from the troubleshooting process.
 
-![Image 2: Running Kubectl Logs command from Slack to describe a pod error](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6540047570b8a1cc0cd1d65c_SpSgE1gwyiRtteaKC-Spqsx8es_eBln7hmaQbAGhoyAG3WHx0lgEDOHghYjdqgXLo7X78d_is5SFVUUwpx4Tg6qFsQd3DP6XUB9Nqcobt-EaYs9TVblIS92-Jg9ZOUKcZaLAlt7PSUJYgZGaP3vyKRM.png)
+![Image 2: Running Kubectl Logs command from Slack to describe a pod error](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6540047570b8a1cc0cd1d65c_SpSgE1gwyiRtteaKC-Spqsx8es_eBln7hmaQbAGhoyAG3WHx0lgEDOHghYjdqgXLo7X78d_is5SFVUUwpx4Tg6qFsQd3DP6XUB9Nqcobt-EaYs9TVblIS92-Jg9ZOUKcZaLAlt7PSUJYgZGaP3vyKRM.png)
 
 If this automated log pulling process is something that your K8s development team may need, [give it a try](https://app.botkube.io/) free of charge today!
 
@@ -130,16 +130,16 @@ Botkube simplifies the use of `kubectl` in many areas, but three stand out as pa
 
 Firstly, Botkube enables users to run `kubectl` commands directly from Slack or Teams, eliminating the need to open a separate command line interface. This feature enables developers, site reliability managers, and other employees in the group chat to run necessary `kubectl` commands with ease.
 
-![Image 3: Ran Kubectl get pods command from slack](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64d154cb1fc2678bcaa56f98_fbbDuo-oKj7sih4vmPrvRSy0yvKRbUtmy9fXEqKJpPOGxymF-frlxtR4oa90ANbmcy6g33uaxLtBYUfk9GGlazqWAZbQXPlo8eAOTWhhTAtBNxYWb51mRwQZRKtzQ1SBorlKAlSbpoOU_W9_EeCSRlc.png)
+![Image 3: Ran Kubectl get pods command from slack](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64d154cb1fc2678bcaa56f98_fbbDuo-oKj7sih4vmPrvRSy0yvKRbUtmy9fXEqKJpPOGxymF-frlxtR4oa90ANbmcy6g33uaxLtBYUfk9GGlazqWAZbQXPlo8eAOTWhhTAtBNxYWb51mRwQZRKtzQ1SBorlKAlSbpoOU_W9_EeCSRlc.png)
 
 2.  **Get Kubectl help (Even Chatgpt Kubectl Help)**
 
 As seen in the image below, Botkube even gives an option to get kubectl help directly from Slack. Our AI assistant will bring up helpful Kubectl commands and describe a little what they do. The help button in Slack combined with the new [Botkube AI Assistant](https://botkube.io/blog/ai-for-kubernetes-operations) , that allows users to further query AI about the correct Kubectl command to run, should make anyone a Kubectl expert quick!
 
-![Image 4: Kubectl commands running in a slack channel](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64d154cb0b2e6541c7bf6681_tJUUtb_nGsLwC-FoHmfUBedMJRKPEdswkO5vIxsKpimjVmU-FGIIoL3vVw29Qf2WXtC6524Js6Id8RWfMkg_rkdUcmCjbQnLgfoZIlJcOroO24iy6sCWlCyYKl3kVhcDP9LvDK6Pm_ZasxgaTU2K5K0.png)
+![Image 4: Kubectl commands running in a slack channel](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64d154cb0b2e6541c7bf6681_tJUUtb_nGsLwC-FoHmfUBedMJRKPEdswkO5vIxsKpimjVmU-FGIIoL3vVw29Qf2WXtC6524Js6Id8RWfMkg_rkdUcmCjbQnLgfoZIlJcOroO24iy6sCWlCyYKl3kVhcDP9LvDK6Pm_ZasxgaTU2K5K0.png)
 
 3.  **Set Kubectl Command Aliases**
 
 Finally, Botkube introduces the ability to create command aliases, allowing users to assign quick phrases or letters to commonly used kubectl commands. This feature eliminates the need to remember long and complex four-word commands, streamlining the Kubectl process for all users. These features make Botkube an essential tool for any team looking to simplify their Kubectl workflow and increase productivity. Read more about [Kubectl aliases on our blog](https://botkube.io/blog/command-line-magic-simplify-your-life-with-custom-kubernetes-kubectrl-aliases-on-botkube).
 
-![Image 5: creating a kubectl alias with Botkube's web interface](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64d154cb0dca04c16dae44db_fjOpVIQetAJ-b8hhrWV8fqy3H63TJPAW4zdIkRjc5uh0mlK5hvgU_YUAGOq7OJQXjtxzQTDURFH5tx9-JLL2NFvKNMrEQwbOH2oeHjZsrzaPvzD1iY5cJe8L4dF0tIqnpmdW86WyS2KNhrpzV-ouuJw.png)
+![Image 5: creating a kubectl alias with Botkube's web interface](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64d154cb0dca04c16dae44db_fjOpVIQetAJ-b8hhrWV8fqy3H63TJPAW4zdIkRjc5uh0mlK5hvgU_YUAGOq7OJQXjtxzQTDURFH5tx9-JLL2NFvKNMrEQwbOH2oeHjZsrzaPvzD1iY5cJe8L4dF0tIqnpmdW86WyS2KNhrpzV-ouuJw.png)

@@ -1,11 +1,11 @@
-Title: Optimizing K8s Management with Botkube: 5 Essential DevOps Tasks to Automate
+Title: 5 Essential DevOps Tasks to Automate Optimize K8s Management
 
 URL Source: https://botkube.io/blog/botkube-5-essential-devopstasks-to-automate
 
 Published Time: Jan 16, 2024
 
 Markdown Content:
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
 
 Maria Ashby
 
@@ -24,9 +24,9 @@ Check out these five key Kubernetes tasks that Botkube can optimize and automate
 *   [Task 5: K8s Configuration Management](#task-5-k8s-configuration-management)
 *   [Conclusion](#conclusion)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI-Powered Assistant Today
 
-#### Manage your Kubernetes Clusters Directly in Slack and Microsoft Teams!
+#### Manage your Kubernetes Clusters Directly in Slack and Microsoft Teams
 
 Kubernetes has greatly changed the DevOps space and how we deploy applications. While it offers many powerful features, it also introduces many complexities around managing Kubernetes clusters. Keeping these clusters running smoothly, securely, and reliably requires constant attention and expertise. To address these challenges and ensure efficient management of clusters, Botkube offers a solution. [Botkube](http://app.botkube.io/) is a collaborative Kubernetes troubleshooting and monitoring tool designed for both DevOps experts and developers who may not be Kubernetes experts. Botkube helps teams quickly respond to issues by sending timely alerts about what's happening in their Kubernetes environments. It's not just about alerts though; Botkube also lets teams automate responses, run Kubernetes commands, and follow Kubernetes best practices. Plus, it integrates with popular communication platforms like Slack, Microsoft Teams, Discord, and Mattermost, making it a valuable asset for any team working with Kubernetes.
 
@@ -35,7 +35,7 @@ In this blog post, we will explore how Botkube improves Kubernetes management. W
 Task 1: Monitoring and Alerting Kubernetes Clusters
 ---------------------------------------------------
 
-![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a0710c644fa0ebb76293d8_DJDInRt7FR5LTwmVqnG4WM9OBv7o9_FmRKnG5sA9F-UU-kqljSWEtByVtVP37PhGh2wq7eezjjCNzzjlYyIOyqlAfEMDA6UdSCs5AUJLKfcy3qqXg8cEOoJTdi4S-5Z_Otd9bgcKLoeY5gEcWNa0D4U.gif)
+![Image 2](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a0710c644fa0ebb76293d8_DJDInRt7FR5LTwmVqnG4WM9OBv7o9_FmRKnG5sA9F-UU-kqljSWEtByVtVP37PhGh2wq7eezjjCNzzjlYyIOyqlAfEMDA6UdSCs5AUJLKfcy3qqXg8cEOoJTdi4S-5Z_Otd9bgcKLoeY5gEcWNa0D4U.gif)
 
 [Monitoring](https://botkube.io/learn/how-botkube-makes-monitoring-kubernetes-easy) is the foundation of Kubernetes management. In a Kubernetes environment, real-time insights into resource utilization, application behavior, and system health are crucial.
 
@@ -51,7 +51,7 @@ Botkube simplifies this process significantly. It allows you to bypass these ste
 
 ‍
 
-![Image 3](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a6ef19dff9832e1e6921af_qoSGg0E14xJDRtOKrTN04Yhis2esc8cZSyYbg7BJR2-DBeeLcV5Ppkj3BtgQ83MDpA0EQEzMni_x4nqyaRpq7eNrKCQtO0JFO1_mQFsqV9i8vMfVfvBN891-Y3ulmFm2K-SYzt7wg4w-oYK7YqGG-x8.png)
+![Image 3](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a6ef19dff9832e1e6921af_qoSGg0E14xJDRtOKrTN04Yhis2esc8cZSyYbg7BJR2-DBeeLcV5Ppkj3BtgQ83MDpA0EQEzMni_x4nqyaRpq7eNrKCQtO0JFO1_mQFsqV9i8vMfVfvBN891-Y3ulmFm2K-SYzt7wg4w-oYK7YqGG-x8.png)
 
 ‍
 
@@ -62,20 +62,20 @@ Task 2: Resource Scaling
 
 Resource scaling in Kubernetes can be a challenging endeavor, especially in response to fluctuating workloads. Manually adjusting resources can be time-consuming and error-prone, leading to inefficiencies. Botkube offers a valuable solution for automating resource scaling within a team. It simplifies access to Kubernetes clusters by providing actionable notifications and the ability to execute kubectl, helm, and GitOps commands directly from a shared team channel.
 
-![Image 4](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a6ef180190c3682238b922_9kalnKKcBw_q5sdluVLbLDy9ch5mY-RxHKxDa6edtIj5fIITzJz8lL3BRAaSMnldHACqcEHteUaFeKIN4RYkB-uGXRCISEMHlvM2crujb2yRfN2_QtNFXUISA3-YfABPLl5_t6LcMKwsO0a39lZXKl4.gif)
+![Image 4](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a6ef180190c3682238b922_9kalnKKcBw_q5sdluVLbLDy9ch5mY-RxHKxDa6edtIj5fIITzJz8lL3BRAaSMnldHACqcEHteUaFeKIN4RYkB-uGXRCISEMHlvM2crujb2yRfN2_QtNFXUISA3-YfABPLl5_t6LcMKwsO0a39lZXKl4.gif)
 
 ‍
 
-One example of this is the ability to [automate the process of creating GitHub issues](https://botkube.io/blog/build-a-github-issues-reporter-for-failing-kubernetes-apps-with-botkube-plugins) for failing Kubernetes resources such as jobs, deployments, statefulsets, and pods. This plugin can create [GitHub issues](https://docs.botkube.io/next/configuration/source/github-events/) that include Kubernetes-specific information, making debugging more efficient. The key advantage is that it eliminates the need to connect to your cluster via a terminal, install and run kubectl commands, or manually copy and paste information into a browser. Botkube offers an efficient and user-friendly solution to the challenges of resource scaling in Kubernetes.
+One example of this is the ability to [automate the process of creating GitHub issues](https://botkube.io/blog/build-a-github-issues-reporter-for-failing-kubernetes-apps-with-botkube-plugins) for failing Kubernetes resources such as jobs, deployments, statefulsets, and pods. This plugin can create [GitHub issues](https://docs.botkube.io/next/plugins/github-events/#configuration) that include Kubernetes-specific information, making debugging more efficient. The key advantage is that it eliminates the need to connect to your cluster via a terminal, install and run kubectl commands, or manually copy and paste information into a browser. Botkube offers an efficient and user-friendly solution to the challenges of resource scaling in Kubernetes.
 
 Task 3: Kubernetes Log Management
 ---------------------------------
 
-![Image 5](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a6ef18dc6fd8090139fc6b_ltpBkuCO8q4U1VzRan20ITCkj1pTWlbAT2BUN4o_sYYHZX7WViTLuhpvPI4LNAoE16dzT8UrUqiTzQQ1D4OnCM9eMV4Vip8dzv9zFVL0SHZRm_GAg0SmmKKZvJxIqFZBkoPMZr6HV7Q1OgpIu9AO8XI.png)
+![Image 5](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a6ef18dc6fd8090139fc6b_ltpBkuCO8q4U1VzRan20ITCkj1pTWlbAT2BUN4o_sYYHZX7WViTLuhpvPI4LNAoE16dzT8UrUqiTzQQ1D4OnCM9eMV4Vip8dzv9zFVL0SHZRm_GAg0SmmKKZvJxIqFZBkoPMZr6HV7Q1OgpIu9AO8XI.png)
 
 ‍
 
-Effective l[og management](https://botkube.io/learn/kubernetes-audit-log-best-practices) is essential to maintaining and troubleshooting Kubernetes clusters. By automating the collection and analysis of logs, Botkube centralizes these critical data points, making them easily accessible for quick analysis. This centralization offers a comprehensive view of all events and errors within the Kubernetes environment, significantly easing the troubleshooting process. With Botkube, you gain enhanced visibility into your cluster's operations, simplifying debugging and accelerating issue resolution. Users can execute `kubectl logs` or `kubectl describe` commands directly from their chat window using simple drop-down menus. This integration not only makes the process more efficient but also halves the time typically spent on log analysis.
+Effective [log management](https://botkube.io/learn/kubernetes-audit-log-best-practices) is essential to maintaining and troubleshooting Kubernetes clusters. By automating the collection and analysis of logs, Botkube centralizes these critical data points, making them easily accessible for quick analysis. This centralization offers a comprehensive view of all events and errors within the Kubernetes environment, significantly easing the troubleshooting process. With Botkube, you gain enhanced visibility into your cluster's operations, simplifying debugging and accelerating issue resolution. Users can execute `kubectl logs` or `kubectl describe` commands directly from their chat window using simple drop-down menus. This integration not only makes the process more efficient but also halves the time typically spent on log analysis.
 
 This scenario illustrates Botkube's log management functionality: when a response message exceeds the messaging platform's size limit, Botkube efficiently handles this by uploading the response as a text file. This is a typical workflow within Botkube, showcasing its adaptability and ease of use in managing extensive data.
 
@@ -83,11 +83,11 @@ This scenario illustrates Botkube's log management functionality: when a respons
 
 1.  Start by listing the pods using the command @Botkube kubectl get pods -n kube-systemget\_pods
 
-![Image 6](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a6ef187b627284d396b7f9_3Y1COCukHpcz9VD42EBi8QyYQOpSdosArtmifHwEUnGSBt_4qUaebUOMUi26jAgczZtLXDr8JQZSZUsGHeOGVBGejyQUF6GbsYzpHTsWoMAxZvyLiIrLcGjbyfl0hrkxh5pLO4nxnlJgbsQYhKKU_hg.png)
+![Image 6](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a6ef187b627284d396b7f9_3Y1COCukHpcz9VD42EBi8QyYQOpSdosArtmifHwEUnGSBt_4qUaebUOMUi26jAgczZtLXDr8JQZSZUsGHeOGVBGejyQUF6GbsYzpHTsWoMAxZvyLiIrLcGjbyfl0hrkxh5pLO4nxnlJgbsQYhKKU_hg.png)
 
 2.  Next, to access the logs for a specific pod, such as Traefik, use the command @Botkube kubectl logs -f traefik-df4ff85d6-f2mkz -n kube-system.
 
-![Image 7](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a6ef1886f49705800e9d7b_daM1ilw9S5iqc3xAC9xmotCzuqcyJhOB9QBW7xDk1DZPy_E05t5U0CZANC-0hQrUIVIUOQYPpIVNUsYak46OEiKjo0JVCrLKbh73xreULqHIpcK5dHc-h3fS9Zp6JOoNGXqUNr_VfO5cglMsPvwGGsI.png)
+![Image 7](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a6ef1886f49705800e9d7b_daM1ilw9S5iqc3xAC9xmotCzuqcyJhOB9QBW7xDk1DZPy_E05t5U0CZANC-0hQrUIVIUOQYPpIVNUsYak46OEiKjo0JVCrLKbh73xreULqHIpcK5dHc-h3fS9Zp6JOoNGXqUNr_VfO5cglMsPvwGGsI.png)
 
 ‍
 
@@ -95,14 +95,14 @@ This scenario illustrates Botkube's log management functionality: when a respons
 
 4.  For more specific log details, such as filtering for log lines containing the word "Configuration," enter "Configuration" into the Filter Output input box and hit enter. Botkube will then present you with the filtered log results.
 
-![Image 8](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a6ef187b398bc7569516e9_zF_0o6ZVI24nmlcit4DYR0Pi6Pev79rAgvM-RMuxApGnmhBQQLdkb8795ObG5Ez905YtVhUwT5Q3t6g5Jc2I5OQU_E8QB_E9VeGfyT0yiDd21YQuTnwQdPzdOsrg-gcoiq8z2FoxyR0NNq_kobJ-sKE.png)
+![Image 8](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a6ef187b398bc7569516e9_zF_0o6ZVI24nmlcit4DYR0Pi6Pev79rAgvM-RMuxApGnmhBQQLdkb8795ObG5Ez905YtVhUwT5Q3t6g5Jc2I5OQU_E8QB_E9VeGfyT0yiDd21YQuTnwQdPzdOsrg-gcoiq8z2FoxyR0NNq_kobJ-sKE.png)
 
 ‍
 
 Task 4: GitOps Workflows
 ------------------------
 
-![Image 9](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64e694bca6bd600e8a7e88dd_flux-diff-1.gif)
+![Image 9](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64e694bca6bd600e8a7e88dd_flux-diff-1.gif)
 
 ‍
 
@@ -115,7 +115,7 @@ In summary, Botkube's GitOps plugins bridge the gap between GitOps tools and com
 Task 5: K8s Configuration Management
 ------------------------------------
 
-![Image 10](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a6ef1841f8fcbf64004e51_0gkwjMX-mrCQfN7REuJLBmEOCIt29ZaMaWUSKcBpvLxMqUjCK88hnlNQDMDHiETnASkpYW9n30pDi-7gOAvkvBAukHSx7IySsAd2av4upfFdN2DbM1hBJQ4torAVEu7Ydc53GxtSrmTBa6I5pFImIUs.png)
+![Image 10](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a6ef1841f8fcbf64004e51_0gkwjMX-mrCQfN7REuJLBmEOCIt29ZaMaWUSKcBpvLxMqUjCK88hnlNQDMDHiETnASkpYW9n30pDi-7gOAvkvBAukHSx7IySsAd2av4upfFdN2DbM1hBJQ4torAVEu7Ydc53GxtSrmTBa6I5pFImIUs.png)
 
 ‍
 
@@ -123,7 +123,7 @@ Managing Kubernetes configurations can be challenging, especially when done manu
 
 [Botkube's Helm executor plugin](https://botkube.io/learn/helm-charts) enhances this process.This plugin allows users to run Helm commands directly from their chat interface. This integration streamlines Kubernetes configuration management, making it more accessible and less error-prone compared to manual methods.
 
-![Image 11](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a6ef185ae0f9b8f277eca9_dMnDLc0lomaKWLSqQX2mtc8ozegyDiwz0vvdpvZRw0Y6BMDIidfU_tYNbb0nsO5JczHDgAyUU_eoOdTsTLAsAVelHY6cWwtdB8OaP9wkIby5oV2pAohoonjFF6y-rCOjyuPrA210xtL6dL97M3aCESM.gif)
+![Image 11](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a6ef185ae0f9b8f277eca9_dMnDLc0lomaKWLSqQX2mtc8ozegyDiwz0vvdpvZRw0Y6BMDIidfU_tYNbb0nsO5JczHDgAyUU_eoOdTsTLAsAVelHY6cWwtdB8OaP9wkIby5oV2pAohoonjFF6y-rCOjyuPrA210xtL6dL97M3aCESM.gif)
 
 ‍
 

@@ -12,7 +12,7 @@ CrashLoopBackOff occurs when a pod fails to start for some reason. Kubernetes wi
 
 If you're seeing the CrashLoopBackOff error, there are a few things you can do to troubleshoot the problem. First, check the pod's logs to see if there are any errors that might be causing the pod to fail. You can also use the command kubectl get pods to get more information about the pod, including its status and resources.
 
-![Image 1: CrashLoopBackOff Pod error  displayed in the terminal](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/648b4b0e5495d47e6f22704c_gDm4R9_hU-uv1PUi3Xy60rBEJTpyY3c74aMfdtOzxlZfPUj-r8zcknnwL4W7q3P-8yuS2OervhgjCV4-rsSvRm2YGOVW8syS0bv7ECu9xhNPEEhR0dA_TCdgXaoooPHvxYG1evWNKep-yVjvGO1_PEQ.png)
+![Image 1: CrashLoopBackOff Pod error  displayed in the terminal](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/648b4b0e5495d47e6f22704c_gDm4R9_hU-uv1PUi3Xy60rBEJTpyY3c74aMfdtOzxlZfPUj-r8zcknnwL4W7q3P-8yuS2OervhgjCV4-rsSvRm2YGOVW8syS0bv7ECu9xhNPEEhR0dA_TCdgXaoooPHvxYG1evWNKep-yVjvGO1_PEQ.png)
 
 _Image mentioned in a_ [_help forum on Microsoft's site_](https://learn.microsoft.com/en-us/answers/questions/328469/understanding-aks-crashloopbackoff) _about users switching to Kubernetes._
 
@@ -70,7 +70,7 @@ So if you truly intend on troubleshooting these pods instead of having them stuc
 2\. Between Botkube's own troubleshooting suggestions and prompting our new [ChatGPT plugin](https://botkube.io/blog/use-chatgpt-to-troubleshoot-kubernetes-errors-with-botkubes-doctor), you receive suggestions of the best solution based on the error messages received.  
 3\. Install executors, like our [Kubectl commands](https://docs.botkube.io/usage/executor/kubectl), to one click run troubleshooting commands solving CrashLoopBackOff error without leaving Slack or Teams.
 
-![Image 2: Executing commands, like Kubectl logs, from within Slack using Botkube](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/648b4b0fb5c403880b1a8a41_1udAXWvJx61eJFClbpPH4tnHH0IZUa-Y3YmL8M-_EBh0V1HVAaUzBuk2-9Y7XCzSG1jJwPauQRaHFNg2yfLeEFZzVjxui4z1-lJkbuQdHSPZF7pa5CMsW6x4wWuWddxSoQr2DXbsFmOvhoKC3EhBxuE.png)
+![Image 2: Executing commands, like Kubectl logs, from within Slack using Botkube](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/648b4b0fb5c403880b1a8a41_1udAXWvJx61eJFClbpPH4tnHH0IZUa-Y3YmL8M-_EBh0V1HVAaUzBuk2-9Y7XCzSG1jJwPauQRaHFNg2yfLeEFZzVjxui4z1-lJkbuQdHSPZF7pa5CMsW6x4wWuWddxSoQr2DXbsFmOvhoKC3EhBxuE.png)
 
 ### **The Manual Way - Get Your Terminal Ready**
 

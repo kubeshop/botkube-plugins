@@ -35,7 +35,7 @@ The AI Assistant now directly integrates with your Kubernetes cluster, actively 
 3.  **Intelligent Troubleshooting:** When a problem is detected, the AI Assistant sends notifications to your chat platform, along with relevant context and actionable recommendations.
 4.  **Interactive Collaboration:** Team members can discuss and resolve issues within the chat platform, leveraging the AI Assistant's expertise and insights.
 
-![Image 1: Controlling Kubernetes Namespaces with AI Assistant](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/664608ed182626a2ce3dba8d_Botkube%20AI%20Assistant%20GIF.gif)
+![Image 1: Controlling Kubernetes Namespaces with AI Assistant](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/664608ed182626a2ce3dba8d_Botkube%20AI%20Assistant%20GIF.gif)
 
 Using the Kubernetes AI Assistant to control Namespaces
 

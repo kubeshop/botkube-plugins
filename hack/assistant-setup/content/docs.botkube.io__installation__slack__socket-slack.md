@@ -95,7 +95,7 @@ Install Botkube in Kubernetes cluster[​](#install-botkube-in-kubernetes-cluste
 
 To deploy Botkube agent in your cluster, run:
 
-    export CLUSTER_NAME={cluster_name}export ALLOW_KUBECTL={allow_kubectl}export SLACK_CHANNEL_NAME={channel_name}botkube install --version v1.11.0 \--set communications.default-group.socketSlack.enabled=true \--set communications.default-group.socketSlack.channels.default.name=${SLACK_CHANNEL_NAME} \--set communications.default-group.socketSlack.appToken=${SLACK_API_APP_TOKEN} \--set communications.default-group.socketSlack.botToken=${SLACK_API_BOT_TOKEN} \--set settings.clusterName=${CLUSTER_NAME} \--set 'executors.k8s-default-tools.botkube/kubectl.enabled'=${ALLOW_KUBECTL}
+    export CLUSTER_NAME={cluster_name}export ALLOW_KUBECTL={allow_kubectl}export SLACK_CHANNEL_NAME={channel_name}botkube install --version v1.12.0 \--set communications.default-group.socketSlack.enabled=true \--set communications.default-group.socketSlack.channels.default.name=${SLACK_CHANNEL_NAME} \--set communications.default-group.socketSlack.appToken=${SLACK_API_APP_TOKEN} \--set communications.default-group.socketSlack.botToken=${SLACK_API_BOT_TOKEN} \--set settings.clusterName=${CLUSTER_NAME} \--set 'executors.k8s-default-tools.botkube/kubectl.enabled'=${ALLOW_KUBECTL}
 
 where:
 

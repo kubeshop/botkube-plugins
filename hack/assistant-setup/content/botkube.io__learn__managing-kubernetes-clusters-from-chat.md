@@ -18,7 +18,7 @@ With Botkube, your chat app transforms into a control center for your Kubernetes
 
 Botkube empowers you with out-of-the-box support for Kubectl commands, complete with built-in guardrails and intuitive permission settings. But for the truly adventurous, Botkube takes ChatOps to the next level.
 
-![Image 1: Run Kubectl log commands from Slack](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6577844d2debf992311cf2d0_Screenshot%20of%20Kubectl%20Command.png)
+![Image 1: Run Kubectl log commands from Slack](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6577844d2debf992311cf2d0_Screenshot%20of%20Kubectl%20Command.png)
 
 Running the Kubectl Logs command from Slack
 

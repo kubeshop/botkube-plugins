@@ -3,14 +3,14 @@ Title: Botkube: Revolutionizing Kubernetes Troubleshooting with AI-Power
 URL Source: https://botkube.io/learn/ai-for-devops
 
 Markdown Content:
-[![Image 1](https://assets-global.website-files.com/633705de6adaa38599d8e258/6338148fa3f8a509639804fa_botkube-logo.svg)](https://botkube.io/)
+[![Image 1](https://cdn.prod.website-files.com/633705de6adaa38599d8e258/6338148fa3f8a509639804fa_botkube-logo.svg)](https://botkube.io/)
 
 AI for DevOps: How Botkube's Kubernetes AI Assistant Revolutionizes Troubleshooting
 -----------------------------------------------------------------------------------
 
-![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65fdbe5e2b0c291bb5ec0536_Botkube%20BLOG%20Thumbnail%20(6).png)
+![Image 2](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65fdbe5e2b0c291bb5ec0536_Botkube%20BLOG%20Thumbnail%20(6).png)
 
-![Image 3](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64a86fdda4d8d06ce598598e_evan%20image.jpg)
+![Image 3](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64a86fdda4d8d06ce598598e_evan%20image.jpg)
 
 Evan Witmer
 
@@ -26,7 +26,7 @@ Table of Contents
 *   [Real-World Use Cases](#real-world-use-cases)
 *   [Conclusion](#conclusion)
 
-#### Get started with Botkube Cloud
+#### Start Using Botkube AI-Powered Assistant Today
 
 DevOps teams are constantly seeking ways to streamline workflows, increase efficiency, and minimize downtime. Artificial intelligence (AI) is rapidly transforming the DevOps landscape, offering innovative solutions to common challenges. Botkube stands out as a pioneer in this domain, leveraging a powerful Kubernetes AI assistant to optimize DevOps processes.
 
@@ -48,7 +48,7 @@ Botkube's Kubernetes AI assistant acts as a virtual member of your DevOps team, 
 **Real-World Use Cases**
 ------------------------
 
-![Image 4: Using AI to solve DevOps Kubernetes problems](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65ee1a5d521144e87f59161e_Botkube%20AI%20Assistant%20-failing%20GIF.gif)
+![Image 4: Using AI to solve DevOps Kubernetes problems](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65ee1a5d521144e87f59161e_Botkube%20AI%20Assistant%20-failing%20GIF.gif)
 
 Maria Using AI for DevOps to solve a Kubernetes Problem
 
@@ -67,14 +67,14 @@ Botkube is a collaborative troubleshooting tool designed specifically for Kubern
 
 ### Dig deeper:
 
-[![Image 5](https://assets-global.website-files.com/633705de6adaa38599d8e258/6338148fa3f8a509639804fa_botkube-logo.svg)](https://botkube.io/)
+[![Image 5](https://cdn.prod.website-files.com/633705de6adaa38599d8e258/6338148fa3f8a509639804fa_botkube-logo.svg)](https://botkube.io/)
 
 AI for DevOps: How Botkube's Kubernetes AI Assistant Revolutionizes Troubleshooting
 -----------------------------------------------------------------------------------
 
-![Image 6](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65fdbe5e2b0c291bb5ec0536_Botkube%20BLOG%20Thumbnail%20(6).png)
+![Image 6](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65fdbe5e2b0c291bb5ec0536_Botkube%20BLOG%20Thumbnail%20(6).png)
 
-![Image 7](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64a86fdda4d8d06ce598598e_evan%20image.jpg)
+![Image 7](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64a86fdda4d8d06ce598598e_evan%20image.jpg)
 
 Evan Witmer
 
@@ -90,7 +90,7 @@ Table of Contents
 *   [Real-World Use Cases](#real-world-use-cases-2)
 *   [Conclusion](#conclusion-2)
 
-#### Get started with Botkube Cloud
+#### Get Started with Botkube Today!
 
 DevOps teams are constantly seeking ways to streamline workflows, increase efficiency, and minimize downtime. Artificial intelligence (AI) is rapidly transforming the DevOps landscape, offering innovative solutions to common challenges. Botkube stands out as a pioneer in this domain, leveraging a powerful Kubernetes AI assistant to optimize DevOps processes.
 
@@ -112,7 +112,7 @@ Botkube's Kubernetes AI assistant acts as a virtual member of your DevOps team, 
 **Real-World Use Cases**
 ------------------------
 
-![Image 8: Using AI to solve DevOps Kubernetes problems](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65ee1a5d521144e87f59161e_Botkube%20AI%20Assistant%20-failing%20GIF.gif)
+![Image 8: Using AI to solve DevOps Kubernetes problems](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65ee1a5d521144e87f59161e_Botkube%20AI%20Assistant%20-failing%20GIF.gif)
 
 Maria Using AI for DevOps to solve a Kubernetes Problem
 
