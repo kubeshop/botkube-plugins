@@ -13,7 +13,7 @@
       "selects": {},
       "context": [
         {
-          "text": "ℹ️ **Sources used:** Botkube agent configuration | Botkube agent status | Botkube content search | kubectl get | kubectl logs"
+          "text": "ℹ️ **Sources used:** Botkube agent configuration | Botkube agent status | Botkube and custom content search | kubectl get | kubectl logs"
         },
         {
           "text": "_AI-generated content may be incorrect._"

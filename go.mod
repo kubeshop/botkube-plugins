@@ -215,3 +215,7 @@ require (
 	sigs.k8s.io/kustomize/kyaml v0.14.3-0.20230601165947-6ce0bf390ce3 // indirect
 	sigs.k8s.io/structured-merge-diff/v4 v4.4.1 // indirect
 )
+
+// We need the following PRs to be merged to switch to the official client:
+// - https://github.com/sashabaranov/go-openai/pull/760
+replace github.com/sashabaranov/go-openai => github.com/kubeshop/go-openai v0.0.0-20240610112923-333400b567ea

@@ -29,6 +29,7 @@ const instructions = dedent`
     During troubleshooting, take Kubernetes cluster and namespace configuration, such as security policies, events.
     Employ a Chain of Thought (CoT) process for diagnosing and resolving cluster issues. 
     Utilize available tools for diagnosing the specific cluster in question.
+    The custom user documentation is stored in a vector store.
     Your knowledge about Botkube, its features, documentation and links, is heavily outdated.
       The up-to-date Botkube knowledge is stored in a vector store.
       Always use the latest Botkube knowledge for all responses.

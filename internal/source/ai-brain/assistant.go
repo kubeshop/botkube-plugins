@@ -84,13 +84,14 @@ type Payload struct {
 }
 
 type assistant struct {
-	log          logrus.FieldLogger
-	out          chan<- source.Event
-	openaiClient *openai.Client
-	assistID     string
-	tools        map[string]tool
-	cache        *cache
-	tracer       trace.Tracer
+	log                    logrus.FieldLogger
+	out                    chan<- source.Event
+	openaiClient           *openai.Client
+	assistID               string
+	tools                  map[string]tool
+	cache                  *cache
+	tracer                 trace.Tracer
+	vectorStoreIDForThread string
 }
 
 func newAssistant(cfg *Config, log logrus.FieldLogger, out chan source.Event, kubeConfigPath string) (*assistant, error) {
@@ -133,6 +134,7 @@ func newAssistant(cfg *Config, log logrus.FieldLogger, out chan source.Event, ku
 			"botkubeGetStartupAgentConfiguration": bkRunner.GetStartupAgentConfiguration,
 			"botkubeGetAgentStatus":               bkRunner.GetAgentStatus,
 		},
+		vectorStoreIDForThread: cfg.VectorStoreIDForThread,
 	}, nil
 }
 
@@ -277,7 +279,7 @@ func (i *assistant) createNewThread(ctx context.Context, p *Payload) (openai.Thr
 	ctx, span := i.tracer.Start(ctx, "aibrain.assistant.createNewThread")
 	defer span.End()
 
-	return i.openaiClient.CreateThread(ctx, openai.ThreadRequest{
+	threadReq := openai.ThreadRequest{
 		Metadata: map[string]any{
 			"messageId":  p.MessageID,
 			"instanceId": os.Getenv(remote.ProviderIdentifierEnvKey),
@@ -288,7 +290,21 @@ func (i *assistant) createNewThread(ctx context.Context, p *Payload) (openai.Thr
 				Content: p.Prompt,
 			},
 		},
-	})
+	}
+
+	log := i.log
+	if i.vectorStoreIDForThread != "" {
+		threadReq.ToolResources = &openai.ToolResourcesRequest{
+			FileSearch: &openai.FileSearchToolResourcesRequest{
+				VectorStoreIDs: []string{i.vectorStoreIDForThread},
+			},
+		}
+		span.SetAttributes(attribute.String("vectorStoreIDForThread", i.vectorStoreIDForThread))
+		log = i.log.WithField("vectorStoreIDForThread", i.vectorStoreIDForThread)
+	}
+
+	log.Debug("Creating a new thread")
+	return i.openaiClient.CreateThread(ctx, threadReq)
 }
 
 func (i *assistant) createNewMessage(ctx context.Context, threadID string, p *Payload) error {
