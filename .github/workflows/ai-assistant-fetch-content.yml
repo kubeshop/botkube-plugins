@@ -52,6 +52,8 @@ jobs:
           git checkout -b ${{ env.BRANCH_NAME }}
 
       - name: Fetch content
+        env:
+          AI_ASSISTANT_FETCH_CONTENT_API_KEY: ${{ secrets.AI_ASSISTANT_FETCH_CONTENT_API_KEY }}
         run: |
           cd ./hack/assistant-setup
           npm install
