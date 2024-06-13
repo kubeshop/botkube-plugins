@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/botkube-v1-3-0-release-notes
 Published Time: Aug 15, 2023
 
 Markdown Content:
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/636df3edbf5389368f6bef9c_cYbM1beBC5tQnSPVfaXCg_W9tkHugByZV2TOleN6pTw.jpeg)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/636df3edbf5389368f6bef9c_cYbM1beBC5tQnSPVfaXCg_W9tkHugByZV2TOleN6pTw.jpeg)
 
 Blair Rampling
 
@@ -25,9 +25,9 @@ Our most recent release of Botkube Cloud & Open Source brings important features
 *   [Bug Fixes](#bug-fixes)
 *   [Feedback - We’d Love to Hear From You!](#feedback-we-d-love-to-hear-from-you-)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI-Powered Assistant Today
 
-#### Get started with Botkube Cloud
+#### Get Started with Botkube Today!
 
 The Botkube plugin ecosystem is expanding! We are excited to announce the latest release of Botkube, packed with new features and improvements to enhance your Kubernetes collaborative troubleshooting experience. This release introduces:
 
@@ -81,7 +81,7 @@ Slack message reactions
 
 Botkube has introduced a lot of new executor plugins to help you troubleshoot and manage your Kubernetes clusters. Some commands take some time to process in the background and until now, you couldn't see if the command had completed, you just had to wait for a response. We have introduced emoji reactions to executor requests that show the state of the command. If you see 👀, the command is still running. Once the command is complete, the reaction automatically changes to ✅.
 
-![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64db6cd0c67e3e749437884e_Screenshot%202023-08-15%20at%2014.17.12.png)
+![Image 2](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64db6cd0c67e3e749437884e_Screenshot%202023-08-15%20at%2014.17.12.png)
 
 Note that if you are using Botkube already, you need to add the `reactions:write` scope to the Bot Token. If you are using the Botkube [Cloud Slack](https://docs.botkube.io/installation/slack/cloud-slack) app, you can update directly from the Botkube Cloud web app. If you are using the Botkube [Socket Slack](https://docs.botkube.io/installation/slack/socket-slack/self-hosted) app, you need to go to the [Slack App console](https://api.slack.com/apps/), select your Botkube app, navigate to OAuth & Permissions, and add the `reactions:write` scope to the Bot Token configuration. You then need to reinstall the Slack app from the console.
 

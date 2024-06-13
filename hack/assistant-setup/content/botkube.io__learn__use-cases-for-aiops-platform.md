@@ -3,14 +3,14 @@ Title: Demystifying AIOps Platforms: Powerful Use Cases
 URL Source: https://botkube.io/learn/use-cases-for-aiops-platform
 
 Markdown Content:
-[![Image 1](https://assets-global.website-files.com/633705de6adaa38599d8e258/6338148fa3f8a509639804fa_botkube-logo.svg)](https://botkube.io/)
+[![Image 1](https://cdn.prod.website-files.com/633705de6adaa38599d8e258/6338148fa3f8a509639804fa_botkube-logo.svg)](https://botkube.io/)
 
 Top Use Cases for AIOps Platform: Empowered DevOps with Chat-Based AI
 ---------------------------------------------------------------------
 
-![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65fa0ba7997da02f4543c915_LEARN_TN_Definitions%20(8).png)
+![Image 2](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65fa0ba7997da02f4543c915_LEARN_TN_Definitions%20(8).png)
 
-![Image 3](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64a86fdda4d8d06ce598598e_evan%20image.jpg)
+![Image 3](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64a86fdda4d8d06ce598598e_evan%20image.jpg)
 
 Evan Witmer
 
@@ -24,7 +24,7 @@ Table of Contents
 *   [AIOps Use Cases](#aiops-use-cases)
 *   [Concluding Thoughts](#concluding-thoughts)
 
-#### Get started with Botkube Cloud
+#### Start Using Botkube AI-Powered Assistant Today
 
 The landscape of DevOps is evolving at breakneck speed. With the booming popularity of chatbots and large language models (LLMs), a revolutionary trend is emerging: MLOps, or the application of AI and machine learning to streamline and automate IT operations. This translates to DevOps engineers increasingly leveraging "AIOps tools" and "AIOps solutions" to navigate the complexities of their Kubernetes environments.
 
@@ -49,14 +49,14 @@ Botkube is a collaborative troubleshooting tool designed specifically for Kubern
 
 ### Dig deeper:
 
-[![Image 4](https://assets-global.website-files.com/633705de6adaa38599d8e258/6338148fa3f8a509639804fa_botkube-logo.svg)](https://botkube.io/)
+[![Image 4](https://cdn.prod.website-files.com/633705de6adaa38599d8e258/6338148fa3f8a509639804fa_botkube-logo.svg)](https://botkube.io/)
 
 Top Use Cases for AIOps Platform: Empowered DevOps with Chat-Based AI
 ---------------------------------------------------------------------
 
-![Image 5](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65fa0ba7997da02f4543c915_LEARN_TN_Definitions%20(8).png)
+![Image 5](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65fa0ba7997da02f4543c915_LEARN_TN_Definitions%20(8).png)
 
-![Image 6](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64a86fdda4d8d06ce598598e_evan%20image.jpg)
+![Image 6](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64a86fdda4d8d06ce598598e_evan%20image.jpg)
 
 Evan Witmer
 
@@ -70,7 +70,7 @@ Table of Contents
 *   [AIOps Use Cases](#aiops-use-cases-2)
 *   [Concluding Thoughts](#concluding-thoughts-2)
 
-#### Get started with Botkube Cloud
+#### Get Started with Botkube Today!
 
 The landscape of DevOps is evolving at breakneck speed. With the booming popularity of chatbots and large language models (LLMs), a revolutionary trend is emerging: MLOps, or the application of AI and machine learning to streamline and automate IT operations. This translates to DevOps engineers increasingly leveraging "AIOps tools" and "AIOps solutions" to navigate the complexities of their Kubernetes environments.
 

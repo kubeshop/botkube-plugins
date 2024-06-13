@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/getting-started-with-botkube-and-argocd
 Published Time: Sep 29, 2023
 
 Markdown Content:
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
 
 Maria Ashby
 
@@ -24,9 +24,9 @@ Learn how to set up Botkube with ArgoCD plugins in this step-by-step tutorial.
 *   [Sign up now!](#sign-up-now-)
 *   [Feedback](#feedback)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI-Powered Assistant Today
 
-#### Start Receiving Kubernetes Notifications Now with Botkube Cloud
+#### Start Receiving Kubernetes Notifications Now
 
 Navigating through the complexity of scaling operations and collaborative workflows with GitOps tools like ArgoCD can pose significant challenges. As teams scale, real-time updates and troubleshooting efficiency become paramount.
 
@@ -77,13 +77,13 @@ Install the ArgoCD Plugin into a new instance
 
 ### Enabling the Argo CD Source Plugin
 
-![Image 2: Botkube Setup Wizard for easy K8s tool deployment](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6516ed34d32d63db102a63d7_OKVRz-x5BxiFYrNR8MaOf7fpyY77Rel8xxgioY5wrTA1HSrT_B9mUrZXxY_BpJ2p71X-Ovr6eN1tHhoVryzsABM3sj8GmHJkY84sQu72IMwDrZieUtJDMvLcYKoLml5oggeDqgtsie5TboIxEDntW2M.png)
+![Image 2: Botkube Setup Wizard for easy K8s tool deployment](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6516ed34d32d63db102a63d7_OKVRz-x5BxiFYrNR8MaOf7fpyY77Rel8xxgioY5wrTA1HSrT_B9mUrZXxY_BpJ2p71X-Ovr6eN1tHhoVryzsABM3sj8GmHJkY84sQu72IMwDrZieUtJDMvLcYKoLml5oggeDqgtsie5TboIxEDntW2M.png)
 
 1.  Select the ArgoCD and kubectl Plugin
 
 2\. Begin by selecting the ArgoCD and kubectl plugins within your Botkube setup
 
-![Image 3: Adding Argo CD API Keys](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6516ed347d480ce1978008ad_ISJShwJ0wGBlQUqSnpW1Zt-9vzEKnLzwFnLMlxGIX0WI25KZ7tWnyapg0LSixCOslONWZfHErb-qmr_MvlqlWTDK3VxGnPKsZfDCnNKGJNAy90orbvT3HHXdkgm-D3JeArzT4pea8mUOExvfS7QY0rY.png)
+![Image 3: Adding Argo CD API Keys](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6516ed347d480ce1978008ad_ISJShwJ0wGBlQUqSnpW1Zt-9vzEKnLzwFnLMlxGIX0WI25KZ7tWnyapg0LSixCOslONWZfHErb-qmr_MvlqlWTDK3VxGnPKsZfDCnNKGJNAy90orbvT3HHXdkgm-D3JeArzT4pea8mUOExvfS7QY0rY.png)
 
       3. Configure the plugin with your Botkube instance
     
@@ -93,7 +93,7 @@ Install the ArgoCD Plugin into a new instance
 *   Fill in your “Name” and “Namespace”
 *   Make sure your BaseURl matches the one found on your ArgoCD UI
 
-![Image 4: Setting Argo CD permissions on deployment](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6516ed337ad79fb0c8bb0436_zRBc4WDwcmJW7sKZjJaItEuxSAKmzxrqxw3C-QhoAPTf7Br_i67Eyk5XN6jYPowsCQ836d4ogBZ3Lh6rC42cbw1Ato5chhbOP9UOxTy6hQy_F0prcvSRmD7IBZtfCFMoKqcjlnUYMYCC9SVqJYl6NJ4.png)
+![Image 4: Setting Argo CD permissions on deployment](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6516ed337ad79fb0c8bb0436_zRBc4WDwcmJW7sKZjJaItEuxSAKmzxrqxw3C-QhoAPTf7Br_i67Eyk5XN6jYPowsCQ836d4ogBZ3Lh6rC42cbw1Ato5chhbOP9UOxTy6hQy_F0prcvSRmD7IBZtfCFMoKqcjlnUYMYCC9SVqJYl6NJ4.png)
 
 4.  Configure Permissions
 
@@ -103,7 +103,7 @@ Install the ArgoCD Plugin into a new instance
 *   Next, update the permissions for RBAC (Role-Based Access Control).
 *   Add "argocd”
 
-![Image 5: RBAC controls for Argo](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6516ed3352cdb1553efc2f21_7bqFl-gQuFLiZqajb4AXF0r0BOJ-_D0SseHOHPGjUQ6DKi6M_YWpc2qNljNslsn7UMMDmAULu_cbURDPd6ilRAbbtKE3sQHURZPpcGMMwzgEIuXq1dm0m0R1LTVkQirBVpOsBWF-ooL1EBd1bb2hogs.png)
+![Image 5: RBAC controls for Argo](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6516ed3352cdb1553efc2f21_7bqFl-gQuFLiZqajb4AXF0r0BOJ-_D0SseHOHPGjUQ6DKi6M_YWpc2qNljNslsn7UMMDmAULu_cbURDPd6ilRAbbtKE3sQHURZPpcGMMwzgEIuXq1dm0m0R1LTVkQirBVpOsBWF-ooL1EBd1bb2hogs.png)
 
 5.  Click "Next" to proceed to the installation step.
 6.  On the next page, you will have the option to also enable [Command Alias](https://botkube.io/blog/command-line-magic-simplify-your-life-with-custom-kubernetes-kubectrl-aliases-on-botkube) and [Botkube Actions](https://docs.botkube.io/usage/automated-actions/).
@@ -118,7 +118,7 @@ Using the ArgoCD Plugin in Action
 
 ### Checking the Health Status of Apps
 
-![Image 6: ArgoCD events](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6509a59c63441b36226ea80d_argocd-events-e6eabb1f581e9822020d55461539bfcd.png)
+![Image 6: ArgoCD events](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6509a59c63441b36226ea80d_argocd-events-e6eabb1f581e9822020d55461539bfcd.png)
 
 ‍
 

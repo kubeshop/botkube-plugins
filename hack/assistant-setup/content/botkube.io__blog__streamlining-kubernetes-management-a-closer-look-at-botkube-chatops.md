@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/streamlining-kubernetes-management-a-closer-
 Published Time: Jan 19, 2024
 
 Markdown Content:
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a9dc3218bb2465f041cea7_1693115200398.jpeg)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a9dc3218bb2465f041cea7_1693115200398.jpeg)
 
 Rohit Ghumare
 
@@ -23,9 +23,9 @@ Learn about Botkube from Rohit Ghumare, Google Developer Expert – Google Cloud
 *   [Botkube Meets Helm](#botkube-meets-helm)
 *   [Conclusion](#conclusion)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI-Powered Assistant Today
 
-#### Get started with Botkube Cloud
+#### Get Started with Botkube Today!
 
 Hey there, Kubernetes enthusiasts! Let's dive into the world of Botkube and its game-changing. Developed by the wizards at KubeShop, Botkube is not just another tool—it's a revolution in Kubernetes management.
 
@@ -44,7 +44,7 @@ Ready to dive into the hands-on demo where we use Botkube for Kubernetes trouble
 *   **Existing Users:** Already part of the Botkube family? Just [log in](https://app.botkube.io/#first-login) with your existing credentials, and you're good to go.
 *   You can expect your dashboard to be like this:
 
-![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a9d4f685f0a8da71eabce5_Screenshot%202024-01-13%20at%2018.33.18.png)
+![Image 2](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a9d4f685f0a8da71eabce5_Screenshot%202024-01-13%20at%2018.33.18.png)
 
 > **Linking Your Kubernetes Cluster to Slack:** Now that you're in, let's connect your Kubernetes cluster to Slack for real-time monitoring magic.
 
@@ -77,7 +77,7 @@ Install or upgrade Botkube and connect it to Botkube Cloud:
 
 Now, Choose a display name for your Botkube instance. This is like giving a cool nickname to your new digital helper.
 
-![Image 3](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a9d575d9deb7aaf9866988_Screenshot%202024-01-13%20at%2020.15.55.png)
+![Image 3](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a9d575d9deb7aaf9866988_Screenshot%202024-01-13%20at%2020.15.55.png)
 
 ### **Step 3: Choosing Your Integration Method**
 
@@ -88,23 +88,23 @@ Now, Choose a display name for your Botkube instance. This is like giving a cool
 
 ### Comparison for Botkube bidirectional communication integrations:
 
-![Image 4](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65aed164c12e1b6851dff536_Screenshot%202024-01-22%20at%203.34.16%20PM.png)
+![Image 4](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65aed164c12e1b6851dff536_Screenshot%202024-01-22%20at%203.34.16%20PM.png)
 
 ### **Step 4: Syncing with Slack**
 
 *   Jump into your Slack app settings. Look for the "Add Slack" button and give it a click. This is where the real magic begins – integrating Botkube with your Slack world.
 
-![Image 5](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a9d5b8de7e130a53622129_Screenshot%202024-01-13%20at%2020.22.38.png)
+![Image 5](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a9d5b8de7e130a53622129_Screenshot%202024-01-13%20at%2020.22.38.png)
 
 ### **Step 5: Selecting Your Slack Workspace**
 
 *   Head on to the Slack console and Create an app from an app manifest.
 
-![Image 6](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a9d5d3de7e130a5362396c_Screenshot%202024-01-13%20at%2021.00.59.png)
+![Image 6](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a9d5d3de7e130a5362396c_Screenshot%202024-01-13%20at%2021.00.59.png)
 
 Pick a workspace of your choice where you want to install the Botkube
 
-![Image 7](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a9d5f1035f985e43bc7225_Screenshot%202024-01-13%20at%2021.02.50.png)
+![Image 7](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a9d5f1035f985e43bc7225_Screenshot%202024-01-13%20at%2021.02.50.png)
 
 You can use the manifest YAML file below for app creation.
 
@@ -112,16 +112,16 @@ You can use the manifest YAML file below for app creation.
 
 Choose the Slack workspace where you want Botkube to be your sidekick. Now you can bridge the gap between Slack and Kubernetes, bringing them together in harmony.
 
-![Image 8](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a9d62aeb09b9191aa90344_Screenshot%202024-01-13%20at%2021.28.43.png)
+![Image 8](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a9d62aeb09b9191aa90344_Screenshot%202024-01-13%20at%2021.28.43.png)
 
 You need to invite Botkube to your Slack workspace first, so click on “invite bot to channel” and add the name of the channel you want to invite Botkube from.
 
-![Image 9](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a9d674bcf59b0f274bfccb_Screenshot%202024-01-13%20at%2021.30.26.png)
+![Image 9](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a9d674bcf59b0f274bfccb_Screenshot%202024-01-13%20at%2021.30.26.png)
 
 *   Refer this [documentation](https://docs.botkube.io/installation/slack/socket-slack) for more details about integrating Slack with Botkube.
 *   Install an App in your workspace
 
-![Image 10](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a9d6a944c186ec25c1d101_Screenshot%202024-01-13%20at%2021.09.44.png)
+![Image 10](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a9d6a944c186ec25c1d101_Screenshot%202024-01-13%20at%2021.09.44.png)
 
 *   Now, We need to copy the **_Bot token and App level token_** from the Slack Console that is required afterward.
 *   Bot Token is directly available on Slack console - [Oauth token](https://www.notion.so/Streamlining-Kubernetes-Management-A-Closer-Look-at-Botkube-ChatOps-d5d0c9761ca449ea84d449aaf8031fa8?pvs=21)
@@ -129,11 +129,11 @@ You need to invite Botkube to your Slack workspace first, so click on “invite 
 
 1.  Select the **Basic Information** link from the left sidebar and scroll down to the **App-Level Token section**. Click on the **Generate Token and Scopes** button.
 
-![Image 11](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a9d6c60f818c7e0fa3d23d_Screenshot%202024-01-13%20at%2021.36.17.png)
+![Image 11](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a9d6c60f818c7e0fa3d23d_Screenshot%202024-01-13%20at%2021.36.17.png)
 
 2.  Enter a **Name**, select `connections:write` scope, and click **Generate**.
 
-![Image 12](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a9d7029fa7ebdd68ebe769_Screenshot%202024-01-13%20at%2021.38.49.png)
+![Image 12](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a9d7029fa7ebdd68ebe769_Screenshot%202024-01-13%20at%2021.38.49.png)
 
 Export slack tokens from your terminal as follows:
 
@@ -144,7 +144,7 @@ Export slack tokens from your terminal as follows:
 *   You need to make sure you’re adding Botkube to your channel where you’ll be using Botkube, as shown below.
 *   After installing the Botkube app to your Slack workspace, you could see a new bot user with the name "Botkube" added to your workspace. Add that bot to a Slack channel you want to receive notifications in. You can add it by inviting @Botkube to a channel.
 
-![Image 13](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a9d76a9e3dce9e6797a30d_Screenshot%202024-01-13%20at%2022.53.41.png)
+![Image 13](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a9d76a9e3dce9e6797a30d_Screenshot%202024-01-13%20at%2022.53.41.png)
 
 We’re going to install Botkube on our Kubernetes cluster now. Run below commands:
 
@@ -152,41 +152,41 @@ We’re going to install Botkube on our Kubernetes cluster now. Run below comman
 
 You should expect the output as given below:
 
-![Image 14](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a9d79c9e3dce9e6797ca20_Screenshot%202024-01-14%20at%2001.13.47.png)
+![Image 14](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a9d79c9e3dce9e6797ca20_Screenshot%202024-01-14%20at%2001.13.47.png)
 
-![Image 15](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a9d7a4e97f05231a340be0_Screenshot%202024-01-14%20at%2001.14.35.png)
+![Image 15](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a9d7a4e97f05231a340be0_Screenshot%202024-01-14%20at%2001.14.35.png)
 
 ### **Step 6: Bringing Botkube to Your Channels**
 
 *   Want Botkube in your private Slack channels? No problem! Just use the "Add to Channel" feature. This way, Botkube becomes part of the conversation, ready to assist in Kubernetes-related discussions and incident management.
 *   It’s time to head on to our web platform for Botkube, where we can now easily select the channels where we’ve already installed Botkube.
 
-![Image 16](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a9d7eb0f818c7e0fa4e848_Screenshot%202024-01-13%20at%2023.12.43.png)
+![Image 16](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a9d7eb0f818c7e0fa4e848_Screenshot%202024-01-13%20at%2023.12.43.png)
 
 ### **Step 7: Customizing Your Plugins**
 
 *   The final touch is selecting the plugins you want to use. This is like picking the right tools for your toolbox. Choose the ones that best fit your Kubernetes monitoring and troubleshooting needs. It's all about making Botkube work for you and your team.
 *   We had already configured Helm and Kubernetes in the above commands. If you have other use-cases, you can explore argocd, flux, keptn, etc. plugins. All the best 🚀
 
-![Image 17](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a9d865ae8cb06de78b6563_Screenshot%202024-01-13%20at%2023.13.41.png)
+![Image 17](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a9d865ae8cb06de78b6563_Screenshot%202024-01-13%20at%2023.13.41.png)
 
 Create Instance by making changes:
 
-![Image 18](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a9d88aae0351187ae818a8_Screenshot%202024-01-13%20at%2023.14.04.png)
+![Image 18](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a9d88aae0351187ae818a8_Screenshot%202024-01-13%20at%2023.14.04.png)
 
 **Congratulations!** You're all set up with Botkube Cloud and Slack. Now you've got a powerful ally in managing your Kubernetes clusters right within your Slack workspace. Go ahead, give it a spin, and see how it transforms your workflow!
 
-![Image 19](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a9d8ae0f818c7e0fa582e7_Screenshot%202024-01-13%20at%2023.15.22.png)
+![Image 19](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a9d8ae0f818c7e0fa582e7_Screenshot%202024-01-13%20at%2023.15.22.png)
 
 Go to your Slack workspace, you can expect below updates automatically!
 
-![Image 20](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a9d8d6e97f05231a350620_Screenshot%202024-01-13%20at%2023.16.31.png)
+![Image 20](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a9d8d6e97f05231a350620_Screenshot%202024-01-13%20at%2023.16.31.png)
 
 ### Verify Botkube Installation
 
 In Slack, try running kubectl commands under the _kubernetes_ channel like this `@SLACK_APP_NAME kubectl get nodes`
 
-![Image 21](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a9d8fcb5f4e48c29b03978_Screenshot%202024-01-14%20at%2000.28.44.png)
+![Image 21](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a9d8fcb5f4e48c29b03978_Screenshot%202024-01-14%20at%2000.28.44.png)
 
 Debugging Botkube
 -----------------

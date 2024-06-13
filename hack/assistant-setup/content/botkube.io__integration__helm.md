@@ -28,13 +28,13 @@ Helm + Botkube Integration
 
 The official Botkube Helm executor plugin allows you to run Helm commands against your Kubernetes cluster directly from your configured chat platforms, including Slack, Discord, Microsoft Teams, and Mattermost. This allows you to view, manage, and even roll back Helm releases, and gives application developers a quick and easy way to see the status of their releases.
 
-![Image 1: User showing how to run Helm commands in Slack with Botkube](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64db7ea3a939c341a10123c0_Helm%20Charts%20in%20Slack%20(2).png)
+![Image 1: User showing how to run Helm commands in Slack with Botkube](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64db7ea3a939c341a10123c0_Helm%20Charts%20in%20Slack%20(2).png)
 
 Get help running Helm commands directly in Slack with Botkube's Helm Plugin
 
 ### Already have Helm Installed? Deploy Botkube with One Helm Chart!
 
-![Image 2: Command to run to deploy Botkube's Helm Charts](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64db7d28dc2649e806376a49_Helm%20Botkube%20Command.png)
+![Image 2: Command to run to deploy Botkube's Helm Charts](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64db7d28dc2649e806376a49_Helm%20Botkube%20Command.png)
 
 helm repo add botkube https://charts.botkube.io
 

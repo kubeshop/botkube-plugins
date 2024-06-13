@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/microsoft-teams-integration-for-botkube-a-te
 Published Time: Dec 14, 2023
 
 Markdown Content:
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/636df3ed2e11a11a3c6d7401_53d6BKOddSnzxKZMBQxx_KPWy4IOk8nhK4eSxM8uKIo.jpeg)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/636df3ed2e11a11a3c6d7401_53d6BKOddSnzxKZMBQxx_KPWy4IOk8nhK4eSxM8uKIo.jpeg)
 
 Paweł Kosiec
 
@@ -24,9 +24,9 @@ Discover the technical journey behind enhancing Microsoft Teams integration for 
 *   [Setting Up and Configuration](#setting-up-and-configuration-)
 *   [What do you think? Let us know!](#what-do-you-think-let-us-know-)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI-Powered Assistant Today
 
-#### Start Receiving Kubernetes Notifications Now with Botkube Cloud
+#### Start Receiving Kubernetes Notifications Now
 
 Introduction
 ------------
@@ -52,7 +52,7 @@ That was the time we were approached by a large enterprise company that was usin
 
 ‍
 
-![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/657956af7d97aef6d1200ecc_lets-do-this.gif)
+![Image 2](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/657956af7d97aef6d1200ecc_lets-do-this.gif)
 
 Source: [tenor.com](https://tenor.com/)
 
@@ -80,7 +80,7 @@ Every single step was crucial to the success of the feature and had it own chall
 
 After our set of investigations, we had a clear picture what we're going to build. We established the following architecture:
 
-![Image 3](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/657956df81f7578f9bec69ec_architecture.png)
+![Image 3](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/657956df81f7578f9bec69ec_architecture.png)
 
 Let me go through the diagram.
 
@@ -98,7 +98,7 @@ Interactivity support for the Microsoft Teams messages was one of the challengin
 
 After a while we were able to achieve similar feeling to the users familiar with our multi-cluster Slack solution. Here's a quick comparison:
 
-![Image 4](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/657957112416eb71be03a4ac_teams-vs-slack-interactivity.png)
+![Image 4](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/657957112416eb71be03a4ac_teams-vs-slack-interactivity.png)
 
 ### Development and testing
 
@@ -126,7 +126,7 @@ Still, every single item listed above weren't available in the previous version 
 
 As the previous integration was so painful to set up, we decided to deprecate it. Worry not, though! The new Microsoft Teams integration is now available to all users as a part of the [Botkube Cloud](https://app.botkube.io/) offering--both Free and Team plans.
 
-![Image 5](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65795734bc6d6051bcdd0d01_new-teams-reaction.gif)
+![Image 5](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65795734bc6d6051bcdd0d01_new-teams-reaction.gif)
 
 Your reaction after trying out the new Microsoft Teams integration (hopefully!) source: [tenor.com](https://tenor.com/)
 

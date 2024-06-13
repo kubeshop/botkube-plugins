@@ -53,7 +53,7 @@ How Botkube Addresses these Challenges
 
 Navigating the realm of GitOps workflows can be more efficient with Botkube. It adeptly addresses various challenges, from scalability concerns to auditing needs. By incorporating features like Automatic Issue Reporting, Implementing Best Practices, Improved Developer Experience, and Efficient Monitoring and Action, Botkube streamlines your team's operations, optimizing their efficiency within the GitOps framework.
 
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64e694bca6bd600e8a7e88dd_flux-diff-1.gif)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64e694bca6bd600e8a7e88dd_flux-diff-1.gif)
 
 ### Automatic Issue Reporting
 
@@ -76,7 +76,7 @@ By incorporating best practices, harnessing Botkube's insights, and aligning wit
 Enter Botkube: A Smoother GitOps Workflow
 -----------------------------------------
 
-![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64e6946be4cd9b0c47a55f75_flux-interactivity-1.gif)
+![Image 2](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64e6946be4cd9b0c47a55f75_flux-interactivity-1.gif)
 
 ‍ Botkube emerges as the solution to these challenges, making the GitOps workflow not just smoother, but remarkably efficient. Here's how Botkube transforms the game:
 
@@ -98,7 +98,7 @@ Be it a single Kubernetes cluster or a sprawling array of them, Botkube adapts e
 
 ### Optimizing Flux
 
-![Image 3](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64e6c1703e7d7fa16f63c0db_ezgif.com-resize.gif)
+![Image 3](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64e6c1703e7d7fa16f63c0db_ezgif.com-resize.gif)
 
 The [Botkube Flux executor](https://botkube.io/blog/botkube-v1-3-0-release-notes) streamlines the diff process by enabling a one-command execution for diffing between a specific pull request and the cluster state. An example command could be:
 

@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/building-a-chatgpt-plugin-from-ideation-to-i
 Published Time: Jul 27, 2023
 
 Markdown Content:
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/636df3ed2e11a11a3c6d7401_53d6BKOddSnzxKZMBQxx_KPWy4IOk8nhK4eSxM8uKIo.jpeg)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/636df3ed2e11a11a3c6d7401_53d6BKOddSnzxKZMBQxx_KPWy4IOk8nhK4eSxM8uKIo.jpeg)
 
 Paweł Kosiec
 
@@ -24,9 +24,9 @@ Botkube now includes AI recommendations to help you diagnose and troubleshoot is
 *   [Result](#result)
 *   [Conclusion](#conclusion)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI-Powered Assistant Today
 
-#### Get started with Botkube Cloud
+#### Get Started with Botkube Today!
 
 Introduction
 ------------
@@ -58,7 +58,7 @@ Once the ChatGPT executor plugin was selected as a part of our hackathon topic, 
 
 The main goal was to lower the barrier of entry for new Botkube users. Sometimes it is hard to understand and troubleshoot the Kubernetes errors and their meaning, especially for beginners. That's why the idea was to introduce "Get help" button under incoming error events.
 
-![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64c21a033e2e505f6d63b554_figma.png)
+![Image 2](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64c21a033e2e505f6d63b554_figma.png)
 
 The button would pass the error data to the ChatGPT plugin, which would use return an AI-generated response with actionable buttons. The user would be able to click on the buttons to execute specific commands, such as `kubectl describe pod` or `kubectl logs pod`. This would help the user to troubleshoot the issue without the need to search for the solution on the Internet.
 
@@ -94,15 +94,15 @@ Result
 
 In 48 hours, Botkube team was able to deliver a fully-working ChatGPT plugin called "Doctor". The plugin is able to help troubleshooting Kubernetes cluster issues based on incoming events. It's best used in combination with Slack integration, as it provides interactive buttons to help users navigate through the troubleshooting process. No typing required.
 
-![Image 3](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64c21a2723cb531baf9f0867_doctor-interactive-help.gif)
+![Image 3](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64c21a2723cb531baf9f0867_doctor-interactive-help.gif)
 
 ‍ It also exposes ChatGPT prompt, so you can ask some arbitrary, not necessarily Kubernetes-related questions:
 
-![Image 4](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64c21a323e2e505f6d63c5a8_common-k8s-service-problems.png)
+![Image 4](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64c21a323e2e505f6d63c5a8_common-k8s-service-problems.png)
 
 ‍
 
-![Image 5](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64c21a491f0e3972e7e5430d_how-to-create-a-pod.png)
+![Image 5](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64c21a491f0e3972e7e5430d_how-to-create-a-pod.png)
 
 The team was very happy with the result, and we decided to **ship it to all users in [Botkube 1.2 release](https://botkube.io/blog/botkube-v1-2-0-release-notes)**! 🎉
 

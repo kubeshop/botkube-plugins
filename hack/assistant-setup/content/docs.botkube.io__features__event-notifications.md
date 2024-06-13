@@ -1,11 +1,8 @@
-Title: Botkube
+Title: Event notifications | Botkube
 
 URL Source: https://docs.botkube.io/features/event-notifications
 
 Markdown Content:
-Event notifications
--------------------
-
 Actionable notifications[​](#actionable-notifications "Direct link to Actionable notifications")
 ------------------------------------------------------------------------------------------------
 

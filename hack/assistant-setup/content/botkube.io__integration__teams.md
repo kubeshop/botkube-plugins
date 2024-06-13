@@ -10,7 +10,7 @@ When developers seek timely notifications regarding their cluster's status, they
 
 Addressing concerns from developer teams using Microsoft, we've diligently optimized Botkube to seamlessly function within Azure's Kubernetes environment. Our dedicated efforts ensure a smooth experience for teams compelled to operate in Azure, Microsoft Teams, and other Microsoft products, guaranteeing a hassle-free setup for Kubernetes ChatOps in the Microsoft ecosystem.
 
-![Image 1: Pulling Kubernetes Logs from Teams](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/664ca624ed57bd2274c840a6_Teams%20AI%20helper.jpg)
+![Image 1: Pulling Kubernetes Logs from Teams](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/664ca624ed57bd2274c840a6_Teams%20AI%20helper.jpg)
 
 Running a Kubectl command in Microsoft Teams with Botkube
 

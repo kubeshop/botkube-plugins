@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/get-botkube-running-in-under-3-minutes-the-n
 Published Time: Nov 06, 2023
 
 Markdown Content:
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
 
 Maria Ashby
 
@@ -20,9 +20,9 @@ Life is short, install quickly - Learn how to get started with Botkube and Slack
 *   [Benefits of Easy Installation](#benefits-of-easy-installation)
 *   [Get Started with Botkube’s new Slack App](#get-started-with-botkube-s-new-slack-app)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI-Powered Assistant Today
 
-#### Get started with Botkube Cloud
+#### Get Started with Botkube Today!
 
 Botkube is engineered to optimize the operational efficiency of DevOps teams.With our new installation process, starting collaborative Kubernetes troubleshooting has never been more straightforward. We're here to make your DevOps team's life easier and more efficient, every step of the way .With our streamlined installation process, you can now get Botkube up and running effortlessly. No more complex setups—just a straightforward installation that saves you valuable time and ensures you're quickly set up to enjoy the benefits of Botkube. In just under three minutes, you can now effortlessly configure and deploy Botkube into your Slack workspace.
 

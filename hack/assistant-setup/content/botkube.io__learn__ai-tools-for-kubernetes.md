@@ -18,7 +18,7 @@ Learn more about Botkube's revolutionary [AI Kubernetes assistant](https://botku
 
 Botkube is emerging as an industry frontrunner in AI Kubernetes management because it is designed exclusively for this purpose.
 
-![Image 1: Botkube's Kubernetes AI Logo](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6613fd154cb1e600ad6af007_rWLJfGtMltX0oTYTp2w8pW4f3Gl451vsl3-1yXogBQZEM4eJBWnHrKCfkSUBWIA7KuC-u9jK03lkmQsuYizn-u8aZJ0iyFwn9zZA8AMMOtKfcfw0WIq19_wmwz1_G73LElOpDsfUEKkMapQurXgaqu4.png)
+![Image 1: Botkube's Kubernetes AI Logo](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6613fd154cb1e600ad6af007_rWLJfGtMltX0oTYTp2w8pW4f3Gl451vsl3-1yXogBQZEM4eJBWnHrKCfkSUBWIA7KuC-u9jK03lkmQsuYizn-u8aZJ0iyFwn9zZA8AMMOtKfcfw0WIq19_wmwz1_G73LElOpDsfUEKkMapQurXgaqu4.png)
 
 **ChatGPT - A More Generic Approach to Kubernetes AI Tooling**
 --------------------------------------------------------------
@@ -30,14 +30,14 @@ ChatGPT, the versatile language model from OpenAI, can also assist with Kubernet
 
 Botkube integrates OpenAI's language model, allowing you to harness the power of ChatGPT-like technology directly within your workflows for even greater ease.
 
-![Image 2: ChatGPT Logo](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6613fd2ee5a66677c1097253_a-JoDZEDQ3PU2keZWt6Ai1NNr4VGmiIOfozoGN3xMCeaKHnR2o0qJkZCNQHOcc4wcts_JBUdUs6gvbpydJYUxQXh9wxcUgJatvw-Ltd1_cN4MfwNUxX5oqljijew1v9NdjvwPsKBzJE-p1yhEIZQ2Ig.png)
+![Image 2: ChatGPT Logo](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6613fd2ee5a66677c1097253_a-JoDZEDQ3PU2keZWt6Ai1NNr4VGmiIOfozoGN3xMCeaKHnR2o0qJkZCNQHOcc4wcts_JBUdUs6gvbpydJYUxQXh9wxcUgJatvw-Ltd1_cN4MfwNUxX5oqljijew1v9NdjvwPsKBzJE-p1yhEIZQ2Ig.png)
 
 **K8sGPT: A Noteworthy Side Project**
 -------------------------------------
 
 While tools like K8sGPT provide additional AI capabilities for Kubernetes, it's important to acknowledge that they are often community-driven side projects. This raises questions about long-term support and future development of an open-source project.
 
-![Image 3: K8sGPT CNCF logo](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/661591d14aa3b800bd2b2465_39aaf890e4a45efcf32567e847633bf1802c438f2aa7cbfb956072e27c80744d.svg)
+![Image 3: K8sGPT CNCF logo](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/661591d14aa3b800bd2b2465_39aaf890e4a45efcf32567e847633bf1802c438f2aa7cbfb956072e27c80744d.svg)
 
 ‍
 

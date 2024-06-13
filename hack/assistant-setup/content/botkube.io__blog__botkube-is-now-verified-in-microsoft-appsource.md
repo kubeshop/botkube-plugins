@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/botkube-is-now-verified-in-microsoft-appsour
 Published Time: May 21, 2024
 
 Markdown Content:
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/636df3fb36b4e60920a3b1b2_hPLC9itV8zp-raGDFmvOZMfn2hV8RFcl237qzT8Wa1g.jpeg)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/636df3fb36b4e60920a3b1b2_hPLC9itV8zp-raGDFmvOZMfn2hV8RFcl237qzT8Wa1g.jpeg)
 
 Kelly Revenaugh
 
@@ -23,11 +23,11 @@ It's official: Botkube has undergone security and compliance checks by Microsoft
 *   [Microsoft Build Conference](#microsoft-build-conference)
 *   [Botkube + Microsoft Teams](#botkube-microsoft-teams)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI-Powered Assistant Today
 
-#### Get started with Botkube Cloud
+#### Get Started with Botkube Today!
 
-![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/664c8d7edeb8841db76de5a6_Screenshot_Template_Botkube%20(2000%20x%201500%20px).png)
+![Image 2](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/664c8d7edeb8841db76de5a6_Screenshot_Template_Botkube%20(2000%20x%201500%20px).png)
 
 Botkube listing in the Microsoft AppSource marketplace
 

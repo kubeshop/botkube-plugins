@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/the-state-of-kubernetes-errors-in-2023
 Published Time: Aug 03, 2023
 
 Markdown Content:
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64a86fdda4d8d06ce598598e_evan%20image.jpg)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64a86fdda4d8d06ce598598e_evan%20image.jpg)
 
 Evan Witmer
 
@@ -22,9 +22,9 @@ What is the state of Kubernetes errors in 2023? What are the most popular errors
 *   [Effective K8s Troubleshooting Chart](#effective-k8s-troubleshooting-chart)
 *   [Concluding Kubernetes Errors](#concluding-kubernetes-errors)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI-Powered Assistant Today
 
-#### Get started with Botkube Cloud
+#### Get Started with Botkube Today!
 
 Kubernetes is a powerful tool for managing containerized applications, but it's not immune to errors. In this blog post, we'll discuss the state of Kubernetes errors in 2023. We'll cover the two most commonly searched errors, trends in troubleshooting, and a graph of error severity.
 
@@ -81,7 +81,7 @@ ChatOps is a method of using chat tools to automate and streamline DevOps workfl
 
 Govardhana Miriyala Kannaiah wrote a great [LinkedIn post](https://www.linkedin.com/posts/govardhana-miriyala-kannaiah_gopuwrites-kubernetes-devops-activity-7076547924205146115-b6le/) where he outlined a chart for effective Kubernetes troubleshooting. The two axis of this chart are ‘ How effective it is’ and ‘How often to do it’. This shows the different troubleshooting techniques like checking logs or verifying pod configuration. We hope you enjoy his graph as much as we did!
 
-![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64cbf6afb711c416c4939db4_6xCx7eRWFrIzItkWAb9rcnUhWR2ID4us4Lc-1ynN0EHEgkmBQRO78zIdtlvPjq-SKy6ipbxlXLWjsnCsiuyC0WbGGq8svhXY3VOJuC4AKdzzVHpMS3XXzwQ9Izj59OGYUoTP5Eiu6EZv1W9sWpQEd_c.png)
+![Image 2](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64cbf6afb711c416c4939db4_6xCx7eRWFrIzItkWAb9rcnUhWR2ID4us4Lc-1ynN0EHEgkmBQRO78zIdtlvPjq-SKy6ipbxlXLWjsnCsiuyC0WbGGq8svhXY3VOJuC4AKdzzVHpMS3XXzwQ9Izj59OGYUoTP5Eiu6EZv1W9sWpQEd_c.png)
 
 **Concluding Kubernetes Errors**
 --------------------------------

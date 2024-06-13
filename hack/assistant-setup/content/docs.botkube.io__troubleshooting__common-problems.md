@@ -62,8 +62,8 @@ Botkube can work in private clusters where inbound connections are limited. Howe
 
 The official Botkube plugin index and binaries are hosted on [GitHub releases](https://github.com/kubeshop/botkube/releases). For instance, for the version `v1.5.0` the following URLs are used:
 
-*   Plugin index URL: [https://github.com/kubeshop/botkube/releases/download/v1.11.0/plugins-index.yaml](https://github.com/kubeshop/botkube/releases/download/v1.11.0/plugins-index.yaml)
-*   Kubectl plugin binary for `linux/amd64`: [https://github.com/kubeshop/botkube/releases/download/v1.11.0/executor\_kubectl\_linux\_amd64.tar.gz](https://github.com/kubeshop/botkube/releases/download/v1.11.0/executor_kubectl_linux_amd64.tar.gz)
+*   Plugin index URL: [https://github.com/kubeshop/botkube/releases/download/v1.12.0/plugins-index.yaml](https://github.com/kubeshop/botkube/releases/download/v1.12.0/plugins-index.yaml)
+*   Kubectl plugin binary for `linux/amd64`: [https://github.com/kubeshop/botkube/releases/download/v1.12.0/executor\_kubectl\_linux\_amd64.tar.gz](https://github.com/kubeshop/botkube/releases/download/v1.12.0/executor_kubectl_linux_amd64.tar.gz)
 
 As a result, you need to allow outbound connections for Botkube to successfully download GitHub assets.
 
@@ -95,7 +95,7 @@ If you experience problems while configuring RBAC (Role-Based Access Control) fo
 Botkube doesn't respond on MS Teams[​](#botkube-doesnt-respond-on-ms-teams "Direct link to Botkube doesn't respond on MS Teams")
 --------------------------------------------------------------------------------------------------------------------------------
 
-Cloud Teams integration communicates via gRPC with the Botkube control-plane. In order to make this integration work, you need to allow access to `api.botkube.io`.
+Microsoft Teams integration communicates via gRPC with the Botkube control-plane. In order to make this integration work, you need to allow access to `api.botkube.io`.
 
 I can't see my Slack private channels in Cloud Dashboard[​](#i-cant-see-my-slack-private-channels-in-cloud-dashboard "Direct link to I can't see my Slack private channels in Cloud Dashboard")
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

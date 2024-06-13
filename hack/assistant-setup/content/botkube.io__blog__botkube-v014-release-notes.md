@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/botkube-v014-release-notes
 Published Time: Oct 06, 2022
 
 Markdown Content:
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/636df3edbf5389368f6bef9c_cYbM1beBC5tQnSPVfaXCg_W9tkHugByZV2TOleN6pTw.jpeg)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/636df3edbf5389368f6bef9c_cYbM1beBC5tQnSPVfaXCg_W9tkHugByZV2TOleN6pTw.jpeg)
 
 Blair Rampling
 
@@ -25,7 +25,7 @@ BotKube v0.14.0 addresses a number of community-suggested issues and adds some g
 *   [Bug Fixes](#bug-fixes)
 *   [Feedback - We’d Love to Hear From You](#feedback-we-d-love-to-hear-from-you)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI-Powered Assistant Today
 
 In the previous release of Botkube we promised to accelerate the pace of development and release. Well, here is another new release of Botkube, the most modern [ChatOps tool for Kubernetes](http://botkube.io/)!
 
@@ -42,7 +42,7 @@ We've received frequent feedback from users about the notification settings in B
 
 You can now also configure notification settings right from the Botkube interface in your communication platform. Using the command @Botkube edit SourceBindings you can select the notifications you want to receive. After choosing the notifications, the configuration is dynamically updated with an automatic brief restart of Botkube.
 
-![Image 2: Monitoring Kubernetes in Slack Channel](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6360eb5b0c5188f8691d6b94_633ef84e656938a0ae571fc0_iRbu4PGydNxlrRVX0s4UpTz9QFyoUzE-l5Onxt_TW2YVakCXmxLkWfqXpgtJ7ecj136UrCZdgJGubxY_hdd2IEsiq8tyanu5ITCqu-fgUB0mP_tPZLGYtghrVHYx5uU3bhAi0H-lW6PKNIE24trMca9NWzPrlqHj-CYGLZqoA2CiKsNrr3i2TeFGfQ.png)
+![Image 2: Monitoring Kubernetes in Slack Channel](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6360eb5b0c5188f8691d6b94_633ef84e656938a0ae571fc0_iRbu4PGydNxlrRVX0s4UpTz9QFyoUzE-l5Onxt_TW2YVakCXmxLkWfqXpgtJ7ecj136UrCZdgJGubxY_hdd2IEsiq8tyanu5ITCqu-fgUB0mP_tPZLGYtghrVHYx5uU3bhAi0H-lW6PKNIE24trMca9NWzPrlqHj-CYGLZqoA2CiKsNrr3i2TeFGfQ.png)
 
 New Botkube Slack App
 ---------------------
@@ -51,7 +51,7 @@ We have created a brand new Botkube Slack app. The new app uses the Slack Socket
 
 You will see many enhancements to Botkube in Slack in this and upcoming releases. For example, you can use the interactive selector to change the notification settings mentioned earlier. Just run @Botkube, edit SourceBindings without specifying the notification level, and you can select the sources from an interactive dialog.
 
-![Image 3: Adding Kubernetes Alerts to Slack](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6360eb5b4e8002657684fc0e_633ef84e908df6431e4dd34d_SelrLZepl_wTwzOgctqA0qtliy6LH3SnfV8l8I2r6iMivCxRNdzhtdo9T5TvjNw9boEGHGD1jqnOcld_4B5MxTLxO01xwGq41cZ_SKhyFJLacFJFK7HMXOJ7lrP93TrM9M6CmhTpauoLdoG1D7bWLXYK-rryjw0SCVi5c-xXTh_eKe9JAB73QHI0Dg.png)
+![Image 3: Adding Kubernetes Alerts to Slack](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6360eb5b4e8002657684fc0e_633ef84e908df6431e4dd34d_SelrLZepl_wTwzOgctqA0qtliy6LH3SnfV8l8I2r6iMivCxRNdzhtdo9T5TvjNw9boEGHGD1jqnOcld_4B5MxTLxO01xwGq41cZ_SKhyFJLacFJFK7HMXOJ7lrP93TrM9M6CmhTpauoLdoG1D7bWLXYK-rryjw0SCVi5c-xXTh_eKe9JAB73QHI0Dg.png)
 
 The installation process has changed for the new Slack app. See the [installation guide](https://botkube.io/docs/installation/socketslack) to get started with the enhanced interactive experience.
 
@@ -64,7 +64,7 @@ The @Botkube help command has been enhanced when using the new Botkube Slack app
 
 This new, interactive help will enable new Botkube users to get up and running even faster. You can also send us feedback and access documentation and additional external help resources directly from the interactive help.
 
-![Image 4: Botkube help suggestions for cluster management ](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6360eb5b82ec26bf25ce56ed_633ef850e5ef9f0d7d116776_EO0U7RPVKtnFJKGI9P-P-ra7xxTD04eyiGXF_khHkvFL8Age_YGzOa7YM3iTZZ6g9OfTmH_HgJYyJNEN75LDiP5jij3hsQjAF9z0nWw2xJ42aEJlskc_lNSh6XIiwwybgIl0TGxlJRgOSKkUmGbJv9d5NLGOW-x_iVWUj5GyPevaKTWieW5B1QmpCw.png)
+![Image 4: Botkube help suggestions for cluster management ](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6360eb5b82ec26bf25ce56ed_633ef850e5ef9f0d7d116776_EO0U7RPVKtnFJKGI9P-P-ra7xxTD04eyiGXF_khHkvFL8Age_YGzOa7YM3iTZZ6g9OfTmH_HgJYyJNEN75LDiP5jij3hsQjAF9z0nWw2xJ42aEJlskc_lNSh6XIiwwybgIl0TGxlJRgOSKkUmGbJv9d5NLGOW-x_iVWUj5GyPevaKTWieW5B1QmpCw.png)
 
 Persistent Settings
 -------------------

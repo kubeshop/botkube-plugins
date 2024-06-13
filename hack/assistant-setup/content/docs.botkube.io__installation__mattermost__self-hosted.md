@@ -52,7 +52,7 @@ Install Botkube in Kubernetes cluster[​](#install-botkube-in-kubernetes-cluste
 
 To deploy Botkube agent in your cluster, run:
 
-    export MATTERMOST_SERVER_URL={mattermost_server_url}export MATTERMOST_TEAM={mattermost_team_name}export CLUSTER_NAME={cluster_name}export ALLOW_KUBECTL={allow_kubectl}botkube install --version v1.11.0 \--set communications.default-group.mattermost.enabled=true \--set communications.default-group.mattermost.url=${MATTERMOST_SERVER_URL} \--set communications.default-group.mattermost.token=${MATTERMOST_TOKEN} \--set communications.default-group.mattermost.team=${MATTERMOST_TEAM} \--set communications.default-group.mattermost.channels.default.name=${MATTERMOST_CHANNEL} \--set communications.default-group.mattermost.botName=${MATTERMOST_BOT_NAME} \--set settings.clusterName=${CLUSTER_NAME} \--set 'executors.k8s-default-tools.botkube/kubectl.enabled'=${ALLOW_KUBECTL}
+    export MATTERMOST_SERVER_URL={mattermost_server_url}export MATTERMOST_TEAM={mattermost_team_name}export CLUSTER_NAME={cluster_name}export ALLOW_KUBECTL={allow_kubectl}botkube install --version v1.12.0 \--set communications.default-group.mattermost.enabled=true \--set communications.default-group.mattermost.url=${MATTERMOST_SERVER_URL} \--set communications.default-group.mattermost.token=${MATTERMOST_TOKEN} \--set communications.default-group.mattermost.team=${MATTERMOST_TEAM} \--set communications.default-group.mattermost.channels.default.name=${MATTERMOST_CHANNEL} \--set communications.default-group.mattermost.botName=${MATTERMOST_BOT_NAME} \--set settings.clusterName=${CLUSTER_NAME} \--set 'executors.k8s-default-tools.botkube/kubectl.enabled'=${ALLOW_KUBECTL}
 
 where:
 

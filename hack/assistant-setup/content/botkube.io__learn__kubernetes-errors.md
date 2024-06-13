@@ -5,7 +5,7 @@ URL Source: https://botkube.io/learn/kubernetes-errors
 Markdown Content:
 Navigating the intricacies of Kubernetes often involves grappling with errors that can impede deployment and performance. Botkube presents a cutting-edge solution by offering an AI-powered ChatOps tool for Kubernetes troubleshooting. With real-time insights and proactive alerts, Botkube assists in identifying and resolving errors swiftly.
 
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/66052475a9b6c818366145a1_Botkube-is-the-Kubernetes-Debugging-%26-Troubleshooting-Champ.png)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/66052475a9b6c818366145a1_Botkube-is-the-Kubernetes-Debugging-%26-Troubleshooting-Champ.png)
 
 Botkube is the Kubernetes Debugging & Troubleshooting Champ!
 

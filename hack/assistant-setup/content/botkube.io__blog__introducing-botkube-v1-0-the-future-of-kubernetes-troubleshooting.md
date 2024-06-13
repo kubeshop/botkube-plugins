@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/introducing-botkube-v1-0-the-future-of-kuber
 Published Time: May 04, 2023
 
 Markdown Content:
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
 
 Maria Ashby
 
@@ -24,7 +24,7 @@ Something new is coming to the Botkube universe...
 *   [Sign up now](#sign-up-now)
 *   [Feedback](#feedback)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI-Powered Assistant Today
 
 We are thrilled to announce the launch of [Botkube v1.0](https://app.botkube.io/) This new version of Botkube introduces a hosted control plane for multi-cluster management and monitoring of all of your Botkube instances.Troubleshooting in the K8s world can be like trying to navigate through a mosh pit - chaotic and unpredictable. With alerts flying in from all directions and collaboration being a somewhat ad hoc process, it's easy to feel like you're drowning in a sea of chaos. Even if developers have access to the K8s cluster, it's often not a smooth process - secret keys can be tough to revoke and retrieving logs is done manually. And let's not forget about security - accessing the cluster to perform operations must be limited to approved networks and devices. Sometimes, remote troubleshooting just isn't an option. It's time for a better way to troubleshoot K8s.That’s where Botkube comes in.
 
@@ -39,7 +39,7 @@ Key Features of Botkube v1.0
 RBAC support
 ------------
 
-![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6437222690593713ca726589_botkube-read-only-717ed01cf9fa5e6621f2a09c7b29a32d.svg)
+![Image 2](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6437222690593713ca726589_botkube-read-only-717ed01cf9fa5e6621f2a09c7b29a32d.svg)
 
 Botkube RBAC Architecture
 
@@ -50,7 +50,7 @@ Interactive Control Plane
 
 Botkube brings an exciting new feature to the table - a [web-based control plane](https://app.botkube.io/) that works across multiple clusters. With this powerful tool, you can create new Botkube instances in a flash, making installation into a K8s cluster a breeze. The control plane also enables you to modify the configuration of communication platforms and plugins, and even synchronize the configuration to Botkube instances automatically.
 
-![Image 3](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/643728ace69f4305d971ce6f_Screen%20Shot%202023-04-12%20at%202.54.18%20PM.png)
+![Image 3](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/643728ace69f4305d971ce6f_Screen%20Shot%202023-04-12%20at%202.54.18%20PM.png)
 
 Botkube Control Plane
 

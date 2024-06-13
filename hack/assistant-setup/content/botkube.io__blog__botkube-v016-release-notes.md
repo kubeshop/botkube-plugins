@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/botkube-v016-release-notes
 Published Time: Nov 28, 2022
 
 Markdown Content:
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/636df3edbf5389368f6bef9c_cYbM1beBC5tQnSPVfaXCg_W9tkHugByZV2TOleN6pTw.jpeg)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/636df3edbf5389368f6bef9c_cYbM1beBC5tQnSPVfaXCg_W9tkHugByZV2TOleN6pTw.jpeg)
 
 Blair Rampling
 
@@ -23,7 +23,7 @@ Botkube v0.16.0 adds new event filter criteria allowing more granular event tuni
 *   [Bug Fixes](#bug-fixes)
 *   [Feedback - We’d Love to Hear From You](#feedback-we-d-love-to-hear-from-you)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI-Powered Assistant Today
 
 The latest version of Botkube is here, v0.16.0. Like peanut butter and chocolate, we've brought together two great parts of Botkube to make your life working with Kubernetes even easier. Botkube is the most modern [ChatOps tool for Kubernetes](http://botkube.io/)!
 
@@ -57,7 +57,7 @@ Actions consist of two parts, the command and the source binding. The command is
 
 When a source is bound to both an action and a communication channel, the results of the action command are delivered to the communication channel along with the original event. Actions can be used to get information using the default read-only kubectl configuration. If you want, you can even configure the executor to allow other actions beyond those that are read-only. You could have Botkube restart a hang pod automatically, for example, and the results will be sent to the communication channel along with the event.
 
-![Image 2: Config Map created in Kubernetes Cluster from Slack](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6384b39243714f0c359b33fb_vpk-kQTm3FfWa0WOV6yI7kl5Zg8Fv4kwQDDPDycWIDWbSbuoapqDwW-z95PUaA8qDINbpb92Z1k-gTtYC-qNf83CLnWJ_1nFQ4BJbniN-gywZtU2siAcyz8jIpvwKuGn90vIGCbnChTj7eIV21j7dGlO8_dAFNhtnOETwIPB4EU7-j5EX8S9G3qw1FQeCw.png)
+![Image 2: Config Map created in Kubernetes Cluster from Slack](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6384b39243714f0c359b33fb_vpk-kQTm3FfWa0WOV6yI7kl5Zg8Fv4kwQDDPDycWIDWbSbuoapqDwW-z95PUaA8qDINbpb92Z1k-gTtYC-qNf83CLnWJ_1nFQ4BJbniN-gywZtU2siAcyz8jIpvwKuGn90vIGCbnChTj7eIV21j7dGlO8_dAFNhtnOETwIPB4EU7-j5EX8S9G3qw1FQeCw.png)
 
 A Botkube action at work
 

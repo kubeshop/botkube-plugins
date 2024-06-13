@@ -25,10 +25,11 @@ const (
 	docsSitemapURL      = "https://docs.botkube.io/sitemap.xml"
 	processingAPIURL    = "https://r.jina.ai"
 	contentDir          = "content"
-	maxRetries          = 10
+	maxRetries          = 15
 	retryInterval       = 1 * time.Second
 	httpCliTimeout      = 1 * time.Minute
 	purgeAllContentEnv  = "PURGE_ALL_CONTENT"
+	apiKeyEnv           = "AI_ASSISTANT_FETCH_CONTENT_API_KEY"
 )
 
 var excludedDocsPagesRegex = regexp.MustCompile(`^https:\/\/docs\.botkube\.io\/(?:\d+\.\d+|next)\/.*`)
@@ -39,11 +40,19 @@ func main() {
 		Formatter: "text",
 	})
 
+	pageFetchHeaders := map[string]string{
+		"Content-Type": "text/event-stream",
+	}
+	if os.Getenv(apiKeyEnv) != "" {
+		pageFetchHeaders["Authorization"] = fmt.Sprintf("Bearer %s", os.Getenv(apiKeyEnv))
+	}
+
 	fetcher := &contentFetcher{
 		log: log,
 		httpCli: &http.Client{
 			Timeout: httpCliTimeout,
 		},
+		headers: pageFetchHeaders,
 	}
 
 	shouldPurgeAllContent := os.Getenv(purgeAllContentEnv) == "true"
@@ -149,6 +158,7 @@ func removeFrequentlyUpdatedContent(log logrus.FieldLogger) error {
 type contentFetcher struct {
 	log     logrus.FieldLogger
 	httpCli *http.Client
+	headers map[string]string
 }
 
 type sitemapURLSet struct {
@@ -195,7 +205,10 @@ func (f *contentFetcher) fetchAndSavePage(inURL, filePath string) error {
 	if err != nil {
 		return fmt.Errorf("while creating request for page %q: %w", pageURL, err)
 	}
-	req.Header.Set("Content-Type", "text/event-stream")
+
+	for key, val := range f.headers {
+		req.Header.Set(key, val)
+	}
 
 	res, err := f.httpCli.Do(req)
 	if err != nil {

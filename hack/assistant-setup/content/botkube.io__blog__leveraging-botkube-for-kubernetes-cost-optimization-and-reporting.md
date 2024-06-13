@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/leveraging-botkube-for-kubernetes-cost-optim
 Published Time: Jan 29, 2024
 
 Markdown Content:
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a9dc3218bb2465f041cea7_1693115200398.jpeg)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a9dc3218bb2465f041cea7_1693115200398.jpeg)
 
 Rohit Ghumare
 
@@ -26,9 +26,9 @@ This tutorial will guide you through using Botkube to monitor resource usage and
 *   [Analyzing and Acting on the Data](#analyzing-and-acting-on-the-data)
 *   [Conclusion](#conclusion)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI-Powered Assistant Today
 
-#### Get started with Botkube Cloud
+#### Get Started with Botkube Today!
 
 **Introduction**
 ----------------
@@ -42,7 +42,7 @@ Botkube stands out as a vital messaging solution for keeping a close eye on and 
 
 ‍
 
-![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65b72fc399ffea33dc180476_botklube_diagram.png)
+![Image 2](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65b72fc399ffea33dc180476_botklube_diagram.png)
 
 botkube architecture diagram
 

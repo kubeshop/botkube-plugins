@@ -8,7 +8,7 @@ Markdown Content:
 *   [Plugin development](https://docs.botkube.io/plugins/development/)
 *   Quick start
 
-Version: 1.11
+Version: 1.12
 
 Botkube provides a quick start repository to start developing Botkube [source](https://docs.botkube.io/architecture/#source) and [executor](https://docs.botkube.io/architecture/#executor) plugins in Go. It has all batteries included; example plugins:
 

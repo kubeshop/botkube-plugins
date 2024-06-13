@@ -3,7 +3,7 @@ Title: Source | Botkube
 URL Source: https://docs.botkube.io/self-hosted-configuration/source
 
 Markdown Content:
-Version: 1.11
+Version: 1.12
 
 info
 
@@ -48,6 +48,6 @@ The health check interval is used to check the health of the source plugins. The
 Syntax[​](#syntax "Direct link to Syntax")
 ------------------------------------------
 
-    # Map of sources. The `sources` property name is an alias for a given configuration.# Key name is used as a binding reference.## Format: sources.{alias}sources:  "k8s-recommendation-events":    # Built-in kubernetes source configuration.    botkube/kubernetes:      enabled: true      config:        # Kubernetes configuration        recommendations:          pod:            noLatestImageTag: true        # ... trimmed ...# Configuration for Botkube executors and sources plugins.plugins:  # Directory, where downloaded plugins are cached.  cacheDir: "/tmp"  # List of plugins repositories.  repositories:    # This repository serves officially supported Botkube plugins.    botkube:      url: https://github.com/kubeshop/botkube/releases/download/v1.11.0/plugins-index.yaml    # Other 3rd party repositories.    repo-name:      url: https://example.com/plugins-index.yaml  # Configure Incoming webhook for source plugins.  incomingWebhook:    enabled: true    port: 2115    targetPort: 2115  # Botkube Restart Policy on plugin failure.  restartPolicy:    # Restart policy type. Allowed values: "RestartAgent", "DeactivatePlugin".    type: "DeactivatePlugin"    # Number of restarts before policy takes into effect.    threshold: 10  healthCheckInterval: 10s
+    # Map of sources. The `sources` property name is an alias for a given configuration.# Key name is used as a binding reference.## Format: sources.{alias}sources:  "k8s-recommendation-events":    # Built-in kubernetes source configuration.    botkube/kubernetes:      enabled: true      config:        # Kubernetes configuration        recommendations:          pod:            noLatestImageTag: true        # ... trimmed ...# Configuration for Botkube executors and sources plugins.plugins:  # Directory, where downloaded plugins are cached.  cacheDir: "/tmp"  # List of plugins repositories.  repositories:    # This repository serves officially supported Botkube plugins.    botkube:      url: https://github.com/kubeshop/botkube/releases/download/v1.12.0/plugins-index.yaml    # Other 3rd party repositories.    repo-name:      url: https://example.com/plugins-index.yaml  # Configure Incoming webhook for source plugins.  incomingWebhook:    enabled: true    port: 2115    targetPort: 2115  # Botkube Restart Policy on plugin failure.  restartPolicy:    # Restart policy type. Allowed values: "RestartAgent", "DeactivatePlugin".    type: "DeactivatePlugin"    # Number of restarts before policy takes into effect.    threshold: 10  healthCheckInterval: 10s
 
 The default configuration for the Botkube Helm chart can be found in the [values.yaml](https://github.com/kubeshop/botkube/blob/main/helm/botkube/values.yaml) file.

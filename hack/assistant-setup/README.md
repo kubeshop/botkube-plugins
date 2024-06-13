@@ -35,9 +35,11 @@ To use your own assistant, modify the `devConfig` in the `index.ts` file.
 ### Refetch content for file search
 
 The process uses [Jina.AI Reader API](https://github.com/jina-ai/reader) and usually takes a few minutes.
+A free API token is recommended, to increase the API rate limits, and, in a result, speed up the process. You can get if from the [Jina.AI website](https://jina.ai/reader/).
 To scrap the content from the latest Botkube website and Botkube Docs, run the following command:
 
 ```sh
+export AI_ASSISTANT_FETCH_CONTENT_API_KEY="jina_..." # get it from https://jina.ai/reader/
 npm run fetch-content
 ```
 

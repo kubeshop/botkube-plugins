@@ -21,7 +21,7 @@ Botkube is already well known for it's [K8s Slack Integration](https://botkube.i
 
 Botkube can be used to automate a variety of tasks related to Kubernetes, including pulling logs from the cluster. Normally to do this, you can use the /logs my-pod command in a terminal. See below in the Gif how Botkube automates these commands to run and pull directly in Slack!
 
-![Image 1: Using Botkube in Slack to pull logs from a Kubernetes Cluster](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64da92f0f73a48636ca0d5f8_9IntyPTR_YQ_RYej4_os-k9COjOssSKCV1ja7o7Y2RQwJNRMEt9zs-LGyxqzhUkkkIrf-TqVnqKQJtShPXT1BXFwTUBdIw1J5zlmP98fHYwDsRr9mJaR6h4gxG1GQxws1bpgT3yvewoEgMgJuQ2r90M.gif)
+![Image 1: Using Botkube in Slack to pull logs from a Kubernetes Cluster](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64da92f0f73a48636ca0d5f8_9IntyPTR_YQ_RYej4_os-k9COjOssSKCV1ja7o7Y2RQwJNRMEt9zs-LGyxqzhUkkkIrf-TqVnqKQJtShPXT1BXFwTUBdIw1J5zlmP98fHYwDsRr9mJaR6h4gxG1GQxws1bpgT3yvewoEgMgJuQ2r90M.gif)
 
 Botkube will then pull the logs for the pod and send them to you in Slack. This is a great way to quickly troubleshoot problems in your Kubernetes cluster without having to SSH into the cluster or use the command line.
 

@@ -25,7 +25,7 @@ You can enable the plugin as a part of Botkube instance configuration.
 
 The Kubernetes plugin is hosted by the official Botkube plugin repository. First, make sure that the `botkube` repository is defined under `plugins` in the [values.yaml](https://github.com/kubeshop/botkube/blob/main/helm/botkube/values.yaml) file.
 
-    plugins:  repositories:    botkube:      url: https://github.com/kubeshop/botkube/releases/download/v1.11.0/plugins-index.yaml
+    plugins:  repositories:    botkube:      url: https://github.com/kubeshop/botkube/releases/download/v1.12.0/plugins-index.yaml
 
 To enable Kubernetes source, add `--set 'sources.{configuration-name}.botkube/kubernetes.enabled=true'` to a given Botkube [`install` command](https://docs.botkube.io/cli/commands/botkube_install).
 

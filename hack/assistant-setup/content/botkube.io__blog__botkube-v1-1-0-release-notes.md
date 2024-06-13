@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/botkube-v1-1-0-release-notes
 Published Time: Jun 21, 2023
 
 Markdown Content:
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
 
 Maria Ashby
 
@@ -21,7 +21,7 @@ Our most recent realese of Botkube Cloud & Open Source brings important features
 *   [Botkube Cloud with Cloud Slack Integration](#botkube-cloud-with-cloud-slack-integration)
 *   [Here are the key features of Botkube Cloud:](#here-are-the-key-features-of-botkube-cloud-)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI-Powered Assistant Today
 
 We are excited to announce the latest release of Botkube, packed with new features and improvements to enhance your Kubernetes collaborative troubleshooting experience. In this release, we focused on two major areas: the introduction of Botkube Cloud with Cloud Slack integration and several bug fixes and enhancements for our open-source version.
 
@@ -42,11 +42,11 @@ Here are the key features of Botkube Cloud:
 
 Setting up Botkube Cloud is a breeze. Simply connect your Slack workspace to the Botkube app with the click of a button.
 
-![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64940fc9213e4ff10a1b4672_jaaGtHC2ScR0Nac7Bts5ZqRHFfLVeeZYeY4oQk6BN3mYKpUVH09FW11MtSqAA7UBZAc-YOWj38D9F54ahYH5xRE0oDlxc9K17hYum4BIp30W64-cZxHWJJZwKrv7mNYV9-yJ46QlBcSWkiiLgIzIt20.png)
+![Image 2](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64940fc9213e4ff10a1b4672_jaaGtHC2ScR0Nac7Bts5ZqRHFfLVeeZYeY4oQk6BN3mYKpUVH09FW11MtSqAA7UBZAc-YOWj38D9F54ahYH5xRE0oDlxc9K17hYum4BIp30W64-cZxHWJJZwKrv7mNYV9-yJ46QlBcSWkiiLgIzIt20.png)
 
 Invite the Botkube bot to the channels you want to use, and continue your configuration. Install Botkube into your Kubernetes clusters, and you're ready to manage your clusters from Slack.
 
-![Image 3](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64940fe3950f20abf76fa3ce_StacAl4VR0BYqGhlJz4HOSii505G8uK8S4WNAptRmeQ0zBU3u_tzqj6Cnwmi5fjYC1aR0ssDiaKbxrrwFatfr0nolxyrFGtBbHKnlNXHpqE2oLA4GwMNU_qc6ufRj-4c71QTo5fDSK0GkHhH31kQjlY.png)
+![Image 3](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64940fe3950f20abf76fa3ce_StacAl4VR0BYqGhlJz4HOSii505G8uK8S4WNAptRmeQ0zBU3u_tzqj6Cnwmi5fjYC1aR0ssDiaKbxrrwFatfr0nolxyrFGtBbHKnlNXHpqE2oLA4GwMNU_qc6ufRj-4c71QTo5fDSK0GkHhH31kQjlY.png)
 
 ‍
 

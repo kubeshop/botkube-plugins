@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/level-up-your-sre-workflow-automating-manual
 Published Time: Apr 18, 2024
 
 Markdown Content:
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
 
 Maria Ashby
 
@@ -22,9 +22,9 @@ See how Botkube is optimizing SRE workflows with the new AI assistant
 *   [More Ways Botkube Enhances Your Workflow](#more-ways-botkube-enhances-your-workflow)
 *   [Get Started with Botkube Today](#get-started-with-botkube-today)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI-Powered Assistant Today
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI-Powered Assistant Today
 
 Site reliability engineers (SREs) and platform teams face the never-ending challenge of ensuring system reliability and scalability. They must tackle complex system issues and handle time-sensitive alerts. This requires deep knowledge of the whole software delivery process and cloud architecture. Even with a high level of Kubernetes knowledge, manual tasks like generating manifests, analyzing logs, and interpreting metrics can overwhelm platform teams. This repetitive work consumes valuable time.
 
@@ -35,7 +35,7 @@ The Challenges of Repetitive SRE Work
 
 ### Manifest Management
 
-![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6620427a1e5102e6a6bed019_generate%20a%20manifest.gif)
+![Image 2](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6620427a1e5102e6a6bed019_generate%20a%20manifest.gif)
 
 Manually generating Kubernetes manifests is a notorious time sink. YAML's simplicity can be deceiving; even minor errors can lead to manifest parsing failures and subsequent deployment issues. Scaling applications increases manifest complexity, demanding precise configurations for resources, secrets, and health checks. Errors here lead to wasted time troubleshooting, misallocated resources, and even application failures. This leads to increased K8s troubleshooting and deployment delays, slowing down Kubernetes workflows and decreasing the efficiency of platform teams.
 
@@ -45,7 +45,7 @@ Generate manifests effortlessly by asking Botkube in either plain English or wit
 
 ### Manual Log retrieval
 
-![Image 3](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65a0710c644fa0ebb76293d8_DJDInRt7FR5LTwmVqnG4WM9OBv7o9_FmRKnG5sA9F-UU-kqljSWEtByVtVP37PhGh2wq7eezjjCNzzjlYyIOyqlAfEMDA6UdSCs5AUJLKfcy3qqXg8cEOoJTdi4S-5Z_Otd9bgcKLoeY5gEcWNa0D4U.gif)
+![Image 3](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a0710c644fa0ebb76293d8_DJDInRt7FR5LTwmVqnG4WM9OBv7o9_FmRKnG5sA9F-UU-kqljSWEtByVtVP37PhGh2wq7eezjjCNzzjlYyIOyqlAfEMDA6UdSCs5AUJLKfcy3qqXg8cEOoJTdi4S-5Z_Otd9bgcKLoeY5gEcWNa0D4U.gif)
 
 While isolating root causes within log data is a critical part of troubleshooting, it is a significant challenge for SREs. Manually sifting through complex and unstructured log streams drains SRE resources, increasing the risk of downtime and service disruptions. This also limits the ability of teams to identify patterns, trends, potential vulnerabilities before they cause major outages.
 
@@ -53,11 +53,11 @@ While isolating root causes within log data is a critical part of troubleshootin
 
 Retrieve logs instantly with simple natural language requests, saving time and receiving the critical information SREs need quicker (e.g., "Show me error logs from the web app in the last hour").
 
-![Image 4](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6620424f69c1630d0e844f62_VjXHCgp2Yv_Ux-63VIn9d_D7cAL52_0UUcsX-2U0HlS1o8x_AOQp0MPSUxZp7yCcCui7FCBy0_xzPdJq0jsB7lf1n7PjdSLXKHFdz5qqhTb03qNptWPPBL7P8tq1SAOIZW4Bv-26RWIiEHcfyIcWyg8.gif)
+![Image 4](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6620424f69c1630d0e844f62_VjXHCgp2Yv_Ux-63VIn9d_D7cAL52_0UUcsX-2U0HlS1o8x_AOQp0MPSUxZp7yCcCui7FCBy0_xzPdJq0jsB7lf1n7PjdSLXKHFdz5qqhTb03qNptWPPBL7P8tq1SAOIZW4Bv-26RWIiEHcfyIcWyg8.gif)
 
 ### Metric Monitoring
 
-![Image 5](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/657c77914d9e2672b3b4f54a_654d07eb1993ada26a1f17b1_Enabling_Developers.gif)
+![Image 5](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/657c77914d9e2672b3b4f54a_654d07eb1993ada26a1f17b1_Enabling_Developers.gif)
 
 Staying on top of key system metrics is an essential part of maintaining safe and reliable systems, but constantly monitoring dashboards takes up valuable time that SREs could spend doing other tasks. These dashboards often target different audiences and have different levels of access, forcing engineers to switch between them, breaking their focus and limiting their productivity.
 
@@ -68,7 +68,7 @@ Botkube's intelligent monitoring goes beyond traditional by employing advanced a
 Generate Your Deployment Manifest Instantly with Botkube
 --------------------------------------------------------
 
-![Image 6](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/66207be4095de29d8a4fa8fd_deploy-serviceyaml-ezgif.com-video-to-gif-converter.gif)
+![Image 6](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/66207be4095de29d8a4fa8fd_deploy-serviceyaml-ezgif.com-video-to-gif-converter.gif)
 
 Manually creating Kubernetes manifests can be a time-consuming process. By automating manifest generation, Botkube eliminates the need for manual configuration and reduces the risk of errors. Simply specify your desired deployment configuration, and Botkube will generate the necessary Kubernetes manifests. In this example:
 
@@ -85,7 +85,7 @@ More Ways Botkube Enhances Your Workflow
 
 ### Work where you work - [Slack, Microsoft Teams, Discord and Mattermost.](https://botkube.io/integrations)
 
-![Image 7](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64b96a341b5ccb59ffb87637_act-on-events.gif)
+![Image 7](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64b96a341b5ccb59ffb87637_act-on-events.gif)
 
 ‍
 

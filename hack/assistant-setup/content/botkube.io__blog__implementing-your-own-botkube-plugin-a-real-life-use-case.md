@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/implementing-your-own-botkube-plugin-a-real-
 Published Time: May 24, 2023
 
 Markdown Content:
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/636df3f055589d08e3e7a3c4_w4WfaGM6LbgXbKSciuiiWfHDQQIN8gQVL0IxF369W1k.jpeg)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/636df3f055589d08e3e7a3c4_w4WfaGM6LbgXbKSciuiiWfHDQQIN8gQVL0IxF369W1k.jpeg)
 
 Huseyin Babal
 
@@ -33,7 +33,7 @@ Botkube has plugin system that allows you to extend the functionalities of Botku
 *   [Running Botkube](#running-botkube)
 *   [Get Started with Botkube Plugin Development](#get-started-with-botkube-plugin-development)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI-Powered Assistant Today
 
 [Botkube's plugin system](https://botkube.io/blog/beginners-guide-to-botkube-plugin-development-how-botkube-plug-ins-can-unify-your-cloud-native-tools) allows users to extend the functionalities of Botkube core to enhance the capabilities of cloud native tools already in their tool belt. Whether you're using some of our pre-built plugins like [Helm](https://botkube.io/integration/helm) or [Prometheus](https://botkube.io/integration/prometheus), or want to use tools like Flux, Thanos, or any others on the CNCF landscape, the plugin system will help you and your team with collaborative troubleshooting instantly through your favorite messaging platform.
 
@@ -71,9 +71,9 @@ In order to access Keptn Gateway, you need to authenticate Keptn CLI with follow
 
 ‍ You can copy this command from Keptn Gateway Dashboard under User icon in top right corner.
 
-![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/646b71df0ddcf082e6d025ff_keptn-user-icon.png)
+![Image 2](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/646b71df0ddcf082e6d025ff_keptn-user-icon.png)
 
-![Image 3](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/646b72186e9e4352b281394a_keptn-auth-command-copy.png)
+![Image 3](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/646b72186e9e4352b281394a_keptn-auth-command-copy.png)
 
 Now we are ready to create resources in Keptn.
 
@@ -108,7 +108,7 @@ We have all the resources ready and now we can trigger a sequence to deploy remo
 
 ‍ You will see the result of the command, but to see everything in detail, you can navigate to Keptn Gateway and see Sequences as follows.
 
-![Image 4](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/646b723533b33f4cb5e03c8a_keptn-sequence.png)
+![Image 4](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/646b723533b33f4cb5e03c8a_keptn-sequence.png)
 
 Now that we understand how to trigger a sequence in Keptn, let's take a look how to access its API to consume events to integrate with Botkube.
 
@@ -117,7 +117,7 @@ Accessing API
 
 You can navigate to http://localhost:8080/api to see Swagger Documentation of Keptn APIs. It contains multiple modules, and to receive events, we can select `mongodb-datastore` from the dropdown.
 
-![Image 5](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/646b724ccd77eb686625a42e_swagger-docs.png)
+![Image 5](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/646b724ccd77eb686625a42e_swagger-docs.png)
 
 Notice we already authorized Keptn CLI in previous sections, and we can reuse the token inside `keptn auth ...` command to use in Swagger Authorize to call endpoints in Swagger UI or construct following curl command.
 
@@ -194,7 +194,7 @@ In order to use the Keptn plugin, we can use following repository config in Botk
 
 ‍ Whenever an event is fired in Keptn, this event will be stored in mongodb-datasource and this will be consumed by Keptn plugin. Finally, with above configuration, it will be sent to platforms which are defined in `communications` section.
 
-![Image 6](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/646b726bb3ed5ff180fca044_keptn-slack-message.png)
+![Image 6](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/646b726bb3ed5ff180fca044_keptn-slack-message.png)
 
 Get Started with Botkube Plugin Development
 -------------------------------------------

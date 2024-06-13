@@ -37,7 +37,7 @@ Maintaining a proper history of Helm releases is essential for successful rollba
 
 ### Botkube's Helm Integration
 
-![Image 1: Running a Helm Rollback in Slack with Botkube](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/65380a2ae699bc95b6523c00_helm%20(1).gif)
+![Image 1: Running a Helm Rollback in Slack with Botkube](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65380a2ae699bc95b6523c00_helm%20(1).gif)
 
 Running a Helm Roll Back Command using Slack with Botkube
 
@@ -90,7 +90,7 @@ The kubectl rollback process is a manual manual approach compared to Helm and Fl
 
 Kubectl rollbacks are particularly useful when you need to roll back specific resources within a deployment or make precise adjustments to your cluster.
 
-![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/653aaa45a423d53622d283b7_kubectl_rollback.gif)
+![Image 2](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/653aaa45a423d53622d283b7_kubectl_rollback.gif)
 
 Kubectl Rollback Command being run from Shared Slack Channel
 
@@ -103,4 +103,4 @@ In the next section, we'll examine how Botkube brings it all together as a compr
 Conclusion to the K8s Rollback Solution
 ---------------------------------------
 
-Botkube, with its powerful integrations, has emerged as an invaluable solution for Kubernetes rollback management. Whether you're dealing with Helm charts, GitOps with Flux, or granular kubectl rollbacks, Botkube simplifies the Kubernetes rollback process, making it accessible from your preferred chat platform. With Botkube, Kubernetes rollbacks become a collaborative and team-friendly processendeavor, ensuring application stability even in the face of unexpected issues. It unifies all these rollback mechanisms into a single, cohesive solution, making Botkube your go-to tool for Kubernetes rollback management.
+Botkube, with its powerful integrations, has emerged as an invaluable solution for Kubernetes rollback management. Whether you're dealing with Helm charts, GitOps with Flux, or granular kubectl rollbacks, Botkube simplifies the Kubernetes rollback process, making it accessible from your preferred chat platform. With Botkube, Kubernetes rollbacks become a collaborative and team-friendly process, ensuring application stability even in the face of unexpected issues. It unifies all these rollback mechanisms into a single, cohesive solution, making Botkube your go-to tool for Kubernetes rollback management.

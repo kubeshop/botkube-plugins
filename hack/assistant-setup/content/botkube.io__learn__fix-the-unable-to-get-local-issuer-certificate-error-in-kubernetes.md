@@ -61,19 +61,19 @@ If you do end up using Botkube's Kubernetes [AI troubleshooting assistant](https
 
 Type in **@botkube ai** into the chat platform to start communicating with our helpful AI assistant
 
-![Image 1: Prompting AI to check Kubernetes related SSL issue](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/663e739b18498714e3ffd411_Botkube%20AI%20prompt.png)
+![Image 1: Prompting AI to check Kubernetes related SSL issue](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/663e739b18498714e3ffd411_Botkube%20AI%20prompt.png)
 
 ### Step 2 - Find where the Issue Occurs within the Cluster  
 
 Ask the AI which namespace, pod, or service is causing the 'SSL Certificate Problem: Unable to Get Local Issuer Certificate Error' in my cluster to find where the issue is coming from. With Botube being aware of the k8s cluster it is installed in, it allows our AI Assistant to scan all the resources being used in the cluster to find the source.
 
-![Image 2: AI finding the cause of Kubernetes error](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/663e7600646f66c7c3f9ff46_SSL%20AI%20question%201.png)
+![Image 2: AI finding the cause of Kubernetes error](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/663e7600646f66c7c3f9ff46_SSL%20AI%20question%201.png)
 
 ### Step 3 - Ask How to Fix the Error in that Location
 
 After the AI response tells you where this error is occurring, it is time to ask it how to fix the unable to get certificate error.
 
-![Image 3: Asking how to fix an SSL located in a Kubernetes Pod](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/663e7a1d79a3f8aa5b90904c_AI%20prompt%202.png)
+![Image 3: Asking how to fix an SSL located in a Kubernetes Pod](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/663e7a1d79a3f8aa5b90904c_AI%20prompt%202.png)
 
 ### Step 4 - Solve the Issue in DNS
 

@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/botkube-v1-2-0-release-notes
 Published Time: Jul 18, 2023
 
 Markdown Content:
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/636df3edbf5389368f6bef9c_cYbM1beBC5tQnSPVfaXCg_W9tkHugByZV2TOleN6pTw.jpeg)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/636df3edbf5389368f6bef9c_cYbM1beBC5tQnSPVfaXCg_W9tkHugByZV2TOleN6pTw.jpeg)
 
 Blair Rampling
 
@@ -25,7 +25,7 @@ Our most recent realese of Botkube Cloud & Open Source brings important features
 *   [Bug Fixes](#bug-fixes)
 *   [Feedback - We’d Love to Hear From You](#feedback-we-d-love-to-hear-from-you)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI-Powered Assistant Today
 
 Botkube is introducing the power of AI to Kubernetes troubleshooting! We are excited to announce the latest release of Botkube, packed with new features and improvements to enhance your Kubernetes collaborative troubleshooting experience. This release introduces
 
@@ -52,7 +52,7 @@ The Doctor plugin only requires an OpenAI API key to configure. The easiest way 
 
 ‍
 
-![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64b6a35168a1227527eb6501_Screenshot%202023-07-18%20at%2016.13.06.png)
+![Image 2](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64b6a35168a1227527eb6501_Screenshot%202023-07-18%20at%2016.13.06.png)
 
 Find out how to use the Doctor plugin in the [documentation](https://docs.botkube.io/usage/executor/doctor).
 
@@ -65,7 +65,7 @@ The new Botkube CLI still uses Helm in the background. The CLI ensures all of th
 
 ‍
 
-![Image 3](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64b6a3374b2b9c3d5500b9c2_Screenshot%202023-07-18%20at%2014.51.10.png)
+![Image 3](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64b6a3374b2b9c3d5500b9c2_Screenshot%202023-07-18%20at%2014.51.10.png)
 
 Botkube can still be installed using the Helm chart alone if you want to perform automated installations with CI or GitOps tools.
 

@@ -13,14 +13,14 @@ Kubernetes Monitoring is essential for ensuring the health and performance of yo
 
 ‍
 
-![Image 1: Kubernetes errors connected to slack to allow K8s Monitoring](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64c8096484766a4822cfe03d_h7KEmGG6uIsB0PrsO44vk6-KidQBbJ32mnVrWJJ33GL6gaqoX_tOr937XzAlk_lyo-SC61_zUoXy_9Dj0Lat2Sckr7j_FttOekh0IKY0nOHaOBqGEgQRBKOW2G9Ba5-j4JA7hSXjFJB3MgfzX4iW720.png)
+![Image 1: Kubernetes errors connected to slack to allow K8s Monitoring](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64c8096484766a4822cfe03d_h7KEmGG6uIsB0PrsO44vk6-KidQBbJ32mnVrWJJ33GL6gaqoX_tOr937XzAlk_lyo-SC61_zUoXy_9Dj0Lat2Sckr7j_FttOekh0IKY0nOHaOBqGEgQRBKOW2G9Ba5-j4JA7hSXjFJB3MgfzX4iW720.png)
 
 **Why Monitor Kubernetes? (Benefits)**
 --------------------------------------
 
 Monitoring Kubernetes is essential for maintaining a healthy and efficient container orchestration environment. With the dynamic nature of Kubernetes clusters, continuous monitoring of key metrics, such as memory usage, is crucial to identify potential issues and ensure smooth operation. By proactively monitoring Kubernetes, organizations can gain valuable insights into their containerized applications' performance and resource utilization, leading to improved overall system management and user experience.
 
-![Image 2: Use Botkube to Troubleshoot Kubernetes from any device](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64c80964b83165eff2333268_1pfB9zUfHYmL9AUPmWaNSI482V6DZoCHo9vdTINtaiCFO6gANmDjCd2gAg8sYBkHVJZpL617B0klql03GIswdWzpFSzqfCB7AAnD27M5Ce_xoreM6391h8iYBV_Y5XD-d8Dr48aHtGvOfYQdxdzn604.jpeg)
+![Image 2: Use Botkube to Troubleshoot Kubernetes from any device](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64c80964b83165eff2333268_1pfB9zUfHYmL9AUPmWaNSI482V6DZoCHo9vdTINtaiCFO6gANmDjCd2gAg8sYBkHVJZpL617B0klql03GIswdWzpFSzqfCB7AAnD27M5Ce_xoreM6391h8iYBV_Y5XD-d8Dr48aHtGvOfYQdxdzn604.jpeg)
 
 ### **Benefits of Kubernetes Monitoring:**
 
@@ -52,7 +52,7 @@ Botkube stands out as the ultimate Kubernetes monitoring tool, offering a seamle
 
 1. **Easy Integration with Other Monitoring Tools:** Botkube simplifies the integration of additional monitoring tools like Prometheus into the Kubernetes environment. Users can effortlessly set up Prometheus alerts to trigger notifications directly to their preferred communication platforms, such as Slack, Teams, or Mattermost. By leveraging the default Kubernetes error alerts, Botkube ensures that users receive immediate notifications about any critical issues happening within their cluster, enabling swift responses to potential problems. This integration is the easiest way how to monitor Kubernetes pods with Prometheus.
 
-![Image 3: Prometheus alerts are some of the most powerful in Kubernetes. Botkube allow users to Automate Prometheus for ease of Monitoring and Troubleshooting Kubernetes ](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/64c80964041699a929ce392f_N2bfxPNt233ldjIRgZ4Jcfkvp5PTU-HVC_uDLJse5nZa5Vh1JrmJhVutT9zLV2GWCHXS6QA_kik0XbJqyfK9_JnuNvQZjKFeOHvkUQPIIl7p6uTYjpTFUUn69cPIM6MCSlONqsmuGauMHcDpo1XnJuE.png)
+![Image 3: Prometheus alerts are some of the most powerful in Kubernetes. Botkube allow users to Automate Prometheus for ease of Monitoring and Troubleshooting Kubernetes ](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64c80964041699a929ce392f_N2bfxPNt233ldjIRgZ4Jcfkvp5PTU-HVC_uDLJse5nZa5Vh1JrmJhVutT9zLV2GWCHXS6QA_kik0XbJqyfK9_JnuNvQZjKFeOHvkUQPIIl7p6uTYjpTFUUn69cPIM6MCSlONqsmuGauMHcDpo1XnJuE.png)
 
 2\. **Real-time Error Tracking and Troubleshooting:** Botkube provides an intuitive interface for monitoring and troubleshooting Kubernetes errors, all within the comfort of Slack or other supported platforms. Users can instantly view and comprehend the errors occurring in their cluster, allowing them to take prompt corrective actions without leaving their preferred communication channel. This real-time monitoring and response capability enhance cluster health and ensure smooth operation of applications.
 

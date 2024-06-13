@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/optimizing-collaboration-and-notifications-w
 Published Time: Oct 26, 2023
 
 Markdown Content:
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/636df3f0810c273feb4b4ad3_VEyGvbbIe6fYlHwidQsOYSS3FvzlHuQsOUjeuZzXWJw.jpeg)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/636df3f0810c273feb4b4ad3_VEyGvbbIe6fYlHwidQsOYSS3FvzlHuQsOUjeuZzXWJw.jpeg)
 
 Josef Karásek
 
@@ -23,16 +23,16 @@ A closer look into the Botkube team's process for developing the ArgoCD plugin
 *   [Sign up now!](#sign-up-now-)
 *   [Feedback](#feedback)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI-Powered Assistant Today
 
-#### Get started with Botkube Cloud
+#### Get Started with Botkube Today!
 
 IT operations have always been very dynamic and rapidly evolving and even more so in the cloud-native world. Insight into the state of the system is crucial for maintaining operational awareness and ensuring that the system is running as expected. This is especially true in Kubernetes where the system is constantly changing and evolving. At Botkube we believe that notifications from Continuous Delivery tools, such as ArgoCD, are a key part of this.
 
 ArgoCD Plugin for Kubernetes Deployment Management
 --------------------------------------------------
 
-![Image 2: Argo CD branches being checked for app health](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/650e09b69191288d41cf2161_rih56gy96kbqx4UzlDDmVadKW9ieXnfmbXLOwzJiDWgHBDzmW0vG867PZM74YdzH5YkNHY-9F2xaVfJTam8eFpvSgzoB4EX-FxDPzLzqMvKJmSNtSBwIRifp2EctcHW3oeh_ruepqkKpwhfFyDzS5Kc.gif)
+![Image 2: Argo CD branches being checked for app health](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/650e09b69191288d41cf2161_rih56gy96kbqx4UzlDDmVadKW9ieXnfmbXLOwzJiDWgHBDzmW0vG867PZM74YdzH5YkNHY-9F2xaVfJTam8eFpvSgzoB4EX-FxDPzLzqMvKJmSNtSBwIRifp2EctcHW3oeh_ruepqkKpwhfFyDzS5Kc.gif)
 
 ‍
 
@@ -45,7 +45,7 @@ The Botkube engineering team developed a [new plugin that automatically configur
 How Botkube Uses ArgoCD for GitOps Management
 ---------------------------------------------
 
-![Image 3: Diagram of Developer teams use of Argo CD and Git](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/653a912003e50d0ea9eb0c15_Argo%20Sync%20Image%20(1).png)
+![Image 3: Diagram of Developer teams use of Argo CD and Git](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/653a912003e50d0ea9eb0c15_Argo%20Sync%20Image%20(1).png)
 
 Diagram trying to show how Botkube uses ArgoCD and Git to manage K8s Clusters
 
@@ -79,7 +79,7 @@ Of course, the Botkube engineering team uses Botkube in both staging and prod.
 
 We have a dedicated channel for Botkube notifications in our Slack workspace and we have configured the Botkube ArgoCD plugin to send notifications to this channel as well.
 
-![Image 4: Showing Kubernetes Cluster created and deleted in Slack with Botkube](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/653a68dff56c4c123324282e_L72F7n2Dmu8c1Ua4Zpyw7FLyLF4LTUh7AjQ8cKUg5u8TguoHXxfwbYBJYMtZjMXCm6PXk3xyEj-dwF83OsRdwoA-RXiMUHSnIQppKb6WnZSim6V8x5_1vp94dlRVuFj7L_fFlwG7Ir_VYrORpIZkzmA.png)
+![Image 4: Showing Kubernetes Cluster created and deleted in Slack with Botkube](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/653a68dff56c4c123324282e_L72F7n2Dmu8c1Ua4Zpyw7FLyLF4LTUh7AjQ8cKUg5u8TguoHXxfwbYBJYMtZjMXCm6PXk3xyEj-dwF83OsRdwoA-RXiMUHSnIQppKb6WnZSim6V8x5_1vp94dlRVuFj7L_fFlwG7Ir_VYrORpIZkzmA.png)
 
 ‍
 

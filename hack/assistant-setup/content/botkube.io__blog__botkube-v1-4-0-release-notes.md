@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/botkube-v1-4-0-release-notes
 Published Time: Sep 19, 2023
 
 Markdown Content:
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/636df3edbf5389368f6bef9c_cYbM1beBC5tQnSPVfaXCg_W9tkHugByZV2TOleN6pTw.jpeg)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/636df3edbf5389368f6bef9c_cYbM1beBC5tQnSPVfaXCg_W9tkHugByZV2TOleN6pTw.jpeg)
 
 Blair Rampling
 
@@ -26,9 +26,9 @@ Our most recent release of Botkube brings important features that help with Kube
 *   [Bug Fixes](#bug-fixes)
 *   [Feedback - We’d Love to Hear From You](#feedback-we-d-love-to-hear-from-you)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI-Powered Assistant Today
 
-#### Get started with Botkube Cloud
+#### Get Started with Botkube Today!
 
 Botkube continues to enhance your GitOps experience by adding support for Argo CD via a new source plugin! We are excited to announce the latest release of Botkube, packed with new features and improvements to enhance your Kubernetes collaborative troubleshooting experience. This release introduces:
 
@@ -59,7 +59,7 @@ Argo CD Source Plugin
 
 The [Argo CD source plugin](https://docs.botkube.io/configuration/source/argocd) is another addition to Botkube's [support for GitOps processes and lifecycles](https://botkube.io/blog/enhancing-gitops-workflows-with-botkube). The Argo CD source plugin allows users to receive and interact with crucial real time notifications when deploying applications in production -- how the deployment is progressing, a health check on the deployment, and more — all directly into communication platforms like Slack, Mattermost, MS Teams, and Discord. While Argo CD does provide a native notification system in some of these platforms, the set-up process can be cumbersome and difficult with many manual steps to get up and running. Botkube’s plug-and-play-style native Argo CD plugin can be configured in minutes directly in [Botkube’s web interface](http://app.botkube.io/).
 
-![Image 2](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6509a59c63441b36226ea80d_argocd-events-e6eabb1f581e9822020d55461539bfcd.png)
+![Image 2](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6509a59c63441b36226ea80d_argocd-events-e6eabb1f581e9822020d55461539bfcd.png)
 
 You can get started with the Argo CD with the [Documentation](https://docs.botkube.io/configuration/source/argocd).
 

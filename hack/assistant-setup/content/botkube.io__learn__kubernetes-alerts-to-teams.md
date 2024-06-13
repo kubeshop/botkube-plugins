@@ -31,13 +31,13 @@ Begin by configuring Botkube and connecting it to Microsoft Teams. This requires
 
 Create a free [Botkube Cloud account](http://app.botkube.io/) to begin. We will connect the K8s cluster in the next step. Account creation is simple with multiple social logins like Google and GitHub. Users must verify their email to activate their account.
 
-![Image 1: Botkube Cloud Signup for K8s Monitoring](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6566137f5fe7417be4f8a6fb_8Xa41Loqa_HXzlMcoEYZ_e2uDlGkXcTbQAAfLafcZCxXv5IbXkl0r_L7PUUDfGK3c05R7fPv8rFcR3d4whLL1Tt57FnkxIGJd77Y8UBIP_vWiBIFPlZ4dTYjN8QR05x71GsKEv-gxvk7i1bbX_vJAuU.png)
+![Image 1: Botkube Cloud Signup for K8s Monitoring](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6566137f5fe7417be4f8a6fb_8Xa41Loqa_HXzlMcoEYZ_e2uDlGkXcTbQAAfLafcZCxXv5IbXkl0r_L7PUUDfGK3c05R7fPv8rFcR3d4whLL1Tt57FnkxIGJd77Y8UBIP_vWiBIFPlZ4dTYjN8QR05x71GsKEv-gxvk7i1bbX_vJAuU.png)
 
 ### **2\. Seamless Kubernetes Event Notifications**
 
 Utilize Botkube's streamlined process to watch Kubernetes events in real-time. The Botkube dashboard ensures a user-friendly interface, allowing for efficient deployment of monitoring tools. Integrating with other common cloud-native tools, like Prometheus Alert Manager, allows for full monitoring of Kubernetes in Teams.
 
-![Image 2: Easily add other Cloud Native tool alerts to Teams](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6566137f6b27a8072723f369_5zfDhXApR4jKKGX-oj0PGxiWBrVbYr0o4Z5cJCFYe92gbk3pKxNel9ytu1T4uQMrMC-Kxok8q3yABjrI5lox7HICXcBIMs4vUhV1t-qUBbprZ5COuys0P7nih9mvQny8ja7KZtXR5wKUvxXiixhZyXY.png)
+![Image 2: Easily add other Cloud Native tool alerts to Teams](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6566137f6b27a8072723f369_5zfDhXApR4jKKGX-oj0PGxiWBrVbYr0o4Z5cJCFYe92gbk3pKxNel9ytu1T4uQMrMC-Kxok8q3yABjrI5lox7HICXcBIMs4vUhV1t-qUBbprZ5COuys0P7nih9mvQny8ja7KZtXR5wKUvxXiixhZyXY.png)
 
 Once users are through the email verification they just need to select the Microsoft Teams connection. This will prompt you to download the Botkube Microsoft Teams application file. Upload that to your Teams account following the [official Microsoft documentation](https://support.microsoft.com/en-us/office/add-an-app-to-microsoft-teams-b2217706-f7ed-4e64-8e96-c413afd02f77) for uploading apps to Teams.
 

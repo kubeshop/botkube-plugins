@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/scaling-new-heights-taking-botkube-to-scale-
 Published Time: Mar 21, 2023
 
 Markdown Content:
-![Image 1](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
 
 Maria Ashby
 
@@ -21,7 +21,7 @@ Botkube had its first DevRel appearance of 2023 at the SoCal Linux Expo. Here's 
 *   [Second Day - Helping the Cloud Native Computing Foundation (CNCF) Booth](#second-day-helping-the-cloud-native-computing-foundation-cncf-booth-)
 *   [Conclusion](#conclusion)
 
-#### Start Using Botkube AI Assistant Today!
+#### Start Using Botkube AI-Powered Assistant Today
 
 As I entered the Pasadena Convention Center for the Southern California Linux Expo, I felt a buzz in the air that set this event apart from others I'd attended before. This time, I was there to represent Botkube solo, which brought an added level of excitement.
 
@@ -37,7 +37,7 @@ Second Day - Helping the Cloud Native Computing Foundation (CNCF) Booth
 
 The following day, I took up my position at the [CNCF](https://www.cncf.io/) booth, armed with stickers, Legos, and a deep passion for open source. While working at the booth, I had the opportunity to observe the state of the community and the latest trends. Unlike other exhibitors, I wasn't there to sell anything, which allowed me to take a step back and analyze the bigger picture. One trend that caught my attention was the continued strength of the Argo and Flux communities. These platforms are helping to make continuous deployment more accessible to developers of all skill levels. This reinforces my belief that GitOps and platform engineering are here to stay and will only become more important in the years to come.
 
-![Image 2: Maria Ashby running the Cloud Native Computing Foundation Booth](https://assets-global.website-files.com/634fabb21508d6c9db9bc46f/641a062c9e98ce9131ed2cc1_botkube-image.jpg)
+![Image 2: Maria Ashby running the Cloud Native Computing Foundation Booth](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/641a062c9e98ce9131ed2cc1_botkube-image.jpg)
 
 I also noticed that security remained at the forefront of everyone's minds. Talks on supply chain security and role-based access control (RBAC) were particularly well-attended. This further emphasizes the importance of cybersecurity in the cloud native space.
 
