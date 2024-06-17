@@ -257,5 +257,3 @@ We take data security seriously, and have implemented appropriate technical and 
 ### Conclusion
 
 At Botkube, we are committed to protecting the privacy and personal data of our users. We will ensure that all data deletion requests are handled in a timely and secure manner, and that personal data is deleted in accordance with applicable data protection regulations.
-
-‍

@@ -24,7 +24,9 @@ $ botkube login # Login into Botkube Cloud $ botkube migrate # Automatically mig
 
 ### Options[​](#options "Direct link to Options")
 
-      -h, --help                          help for botkube  -v, --verbose int/string[=simple]   Prints more verbose output. Allowed values: 0 - disable, 1 - simple, 2 - trace (default 0 - disable)
+```
+  -h, --help                          help for botkube  -v, --verbose int/string[=simple]   Prints more verbose output. Allowed values: 0 - disable, 1 - simple, 2 - trace (default 0 - disable)
+```
 
 ### SEE ALSO[​](#see-also "Direct link to SEE ALSO")
 

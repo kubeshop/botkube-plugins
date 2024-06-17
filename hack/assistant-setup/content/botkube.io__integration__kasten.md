@@ -1,4 +1,4 @@
-Title: Botkube.io
+Title: Kasten & Botkube Kubernetes Integration
 
 URL Source: https://botkube.io/integration/kasten
 

@@ -1,4 +1,4 @@
-Title: Botkube.io
+Title: Argo CD & Botkube Kubernetes Integration
 
 URL Source: https://botkube.io/integration/argo-cd-botkube-kubernetes-integration
 

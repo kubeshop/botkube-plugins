@@ -54,10 +54,10 @@ Tag:
 
 [![Image 2](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6451f12eb912157ceaf7fbb3_bk-amsterdam.png) May 4, 2023 5 minutes read ### Botkube takes on Amsterdam: A Kubecon Recap The Kubecon Amsterdam conference was a wild ride, filled with exciting announcements, insightful talks, and countless networking opportunities.](https://botkube.io/blog/botkube-takes-on-amsterdam-a-kubecon-recap)
 
-<
+[<](#)
 
-1
+[1](#)
 
-\>
+[\>](#)
 
 No items found.

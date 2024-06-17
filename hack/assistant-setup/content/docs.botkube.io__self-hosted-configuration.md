@@ -19,7 +19,9 @@ The configuration settings are read from two sources:
 
 *   the configuration files specified by the `BOTKUBE_CONFIG_PATHS` environment variable or `--config/-c` flag. For example:
     
-        export BOTKUBE_CONFIG_PATHS="global.yaml,team-b-specific.yaml"# or./botkube --config "global.yaml,team-b-specific.yaml"
+    ```
+    export BOTKUBE_CONFIG_PATHS="global.yaml,team-b-specific.yaml"# or./botkube --config "global.yaml,team-b-specific.yaml"
+    ```
     
     You can split individual settings into multiple configuration files. The priority will be given to the last (right-most) file specified. Files with `_` name prefix are always read as the last ones. See the [merging strategy](#merging-strategy) section for more details.
     
@@ -49,7 +51,9 @@ If you wish to change the configuration with Helm, create a `/tmp/values.yaml` f
 *   Botkube CLI
 *   Helm CLI
 
-    botkube install -f /tmp/values.yaml
+```
+botkube install -f /tmp/values.yaml
+```
 
 As both Helm release upgrade and some of the `@Botkube` commands modify the same configuration, it is merged during command execution. Whenever you specify a new value in the `/tmp/values.yaml` file, it will override the existing value in the configuration.
 
@@ -59,19 +63,27 @@ Keep in mind that even if you don't specify custom values in the `/tmp/values.ya
 
 Consider the following config:
 
-    communications:  "default-group":    socketSlack:      enabled: true      botToken: "{botToken}"      appToken: "{appToken}"      channels:        "default":          name: general          notification:            disabled: false # default from the Helm chart          bindings:            sources:              - k8s-all-events # default from the Helm chart# (...)
+```
+communications:  "default-group":    socketSlack:      enabled: true      botToken: "{botToken}"      appToken: "{appToken}"      channels:        "default":          name: general          notification:            disabled: false # default from the Helm chart          bindings:            sources:              - k8s-all-events # default from the Helm chart# (...)
+```
 
 Assume that users ran the following commands:
 
-    @Botkube edit SourceBindings k8s-err-events, k8s-recommendation-events@Botkube disable notifications
+```
+@Botkube edit SourceBindings k8s-err-events, k8s-recommendation-events@Botkube disable notifications
+```
 
 Which effectively result in the following config that Botkube sees:
 
-    communications:  "default-group":    socketSlack:      enabled: true      botToken: "{botToken}"      appToken: "{appToken}"      channels:        "default":          name: general          notification:            disabled: true # set by user command          bindings:            sources:              - k8s-err-events # set by user command              - k8s-recommendation-events # set by user command# (...)
+```
+communications:  "default-group":    socketSlack:      enabled: true      botToken: "{botToken}"      appToken: "{appToken}"      channels:        "default":          name: general          notification:            disabled: true # set by user command          bindings:            sources:              - k8s-err-events # set by user command              - k8s-recommendation-events # set by user command# (...)
+```
 
 To persist the configuration that users provided, and not overwrite notification and source bindings values, run Helm upgrade with:
 
-    communications:  "default-group":    socketSlack:      channels:        "default":          name: general          notification: null # explicitly not use defaults from Helm chart          bindings:            sources: null # explicitly not use defaults from Helm chart# (...) other values
+```
+communications:  "default-group":    socketSlack:      channels:        "default":          name: general          notification: null # explicitly not use defaults from Helm chart          bindings:            sources: null # explicitly not use defaults from Helm chart# (...) other values
+```
 
 The following properties need such `null` value during upgrade, if you want to keep the previous configuration:
 
@@ -90,7 +102,9 @@ To construct the environment variable name, take any property from the configura
 
 For example, such configuration property from YAML:
 
-    settings:  kubectl:    defaultNamespace: "NAMESPACE"
+```
+settings:  kubectl:    defaultNamespace: "NAMESPACE"
+```
 
 is mapped to the `BOTKUBE_SETTINGS_KUBECTL_DEFAULT__NAMESPACE` environment variable.
 
@@ -107,18 +121,32 @@ Botkube allows you to split individual settings into multiple configuration file
     
 *   Objects are merged together and primitive fields are overridden. For example:
     
-        # a.yaml - first filesettings:  clusterName: dev-cluster  kubectl:    enabled: false
+    ```
+    # a.yaml - first filesettings:  clusterName: dev-cluster  kubectl:    enabled: false
+    ```
     
-        # _a.yaml - second file with `_` prefixsettings:  clusterName: demo-cluster
+    ```
+    # _a.yaml - second file with `_` prefixsettings:  clusterName: demo-cluster
+    ```
     
-        # b.yaml - third filesettings:  kubectl:    enabled: true
+    ```
+    # b.yaml - third filesettings:  kubectl:    enabled: true
+    ```
     
-        # resultsettings:  clusterName: demo-cluster  kubectl:    enabled: true
+    ```
+    # resultsettings:  clusterName: demo-cluster  kubectl:    enabled: true
+    ```
     
 *   The arrays items are not merged, they are overridden. For example:
     
-        # a.yamlsettings:  kubectl:    enabled: true    commands:      verbs:        ["api-resources", "api-versions", "cluster-info", "describe", "diff", "explain", "get", "logs", "top", "auth"]
+    ```
+    # a.yamlsettings:  kubectl:    enabled: true    commands:      verbs:        ["api-resources", "api-versions", "cluster-info", "describe", "diff", "explain", "get", "logs", "top", "auth"]
+    ```
     
-        # b.yamlsettings:  kubectl:    commands:      verbs: ["get", "logs", "top", "auth"]
+    ```
+    # b.yamlsettings:  kubectl:    commands:      verbs: ["get", "logs", "top", "auth"]
+    ```
     
-        # resultsettings:  kubectl:    enabled: true    commands:      verbs: ["get", "logs", "top", "auth"]
+    ```
+    # resultsettings:  kubectl:    enabled: true    commands:      verbs: ["get", "logs", "top", "auth"]
+    ```

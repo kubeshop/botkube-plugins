@@ -1,4 +1,4 @@
-Title: Botkube.io
+Title: Slack & Botkube Kubernetes Integration
 
 URL Source: https://botkube.io/integration/slack
 

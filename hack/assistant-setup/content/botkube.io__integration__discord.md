@@ -1,4 +1,4 @@
-Title: Botkube.io
+Title: Discord & Botkube Kubernetes Integration
 
 URL Source: https://botkube.io/integration/discord
 

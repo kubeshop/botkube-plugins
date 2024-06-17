@@ -1,4 +1,4 @@
-Title: Botkube.io
+Title: PagerDuty & Botkube Kubernetes Integration
 
 URL Source: https://botkube.io/integration/pagerduty-kubernetes-integration
 

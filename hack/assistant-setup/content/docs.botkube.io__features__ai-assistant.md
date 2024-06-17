@@ -15,17 +15,18 @@ Features[​](#features "Direct link to Features")
 The plugin provides the following features:
 
 *   "AI Help" button for Kubernetes event analysis.
-*   Answering arbitrary questions or instructions.
 *   Kubernetes cluster troubleshooting based on:
     *   `kubectl` commands,
     *   container logs,
     *   Kubernetes events,
     *   resource usage (CPU/memory).
+*   Kubernetes cluster scan.
+*   Answering arbitrary questions or instructions.
+*   Answering questions based on user-supplied documentation.
 *   Answering Botkube questions or instructions based on:
     *   Agent status and configuration,
     *   the latest Botkube documentation and other Botkube content.
 *   Keeping conversation context in the message threads.
-*   Kubernetes cluster scan.
 
 Get started[​](#get-started "Direct link to Get started")
 ---------------------------------------------------------
@@ -72,6 +73,24 @@ Here are a few examples to get you started:
 ### AI cluster scan[​](#ai-cluster-scan "Direct link to AI cluster scan")
 
 The assistant can help you troubleshoot the Kubernetes cluster by performing a cluster-wide scan for any potential issues, such as failing pods, high resource usage, or any other anomalies. To start the scan, use the `@Botkube ai scan` command.
+
+### User-supplied documentation[​](#user-supplied-documentation "Direct link to User-supplied documentation")
+
+info
+
+This feature is only available for Botkube Cloud paid plans.
+
+Botkube Assistant can use supplied documentation to give better answers, specific to your architecture and processes. For example: architectural documents, onboarding material, runbooks, post-mortems, etc.
+
+The user-supplied documentation is scoped to a given Botkube Cloud organization.
+
+#### Manage uploaded files[​](#manage-uploaded-files "Direct link to Manage uploaded files")
+
+To manage uploaded files, navigate to the ["AI Assistant"](https://app.botkube.io/ai-assistant) tab in Botkube Cloud. From the tab, you can upload files with the **Upload File(s)** button. Supported file formats include: `.doc`, `.docx`, `.md`, `.pdf`, `.txt`. See the [full list](https://platform.openai.com/docs/assistants/tools/file-search/supported-files).
+
+To delete file(s), select the file(s) you want to delete and click **Delete selected file(s)**.
+
+Once the files are uploaded, you can ask Botkube AI Assistant questions related to the uploaded content. To learn more, see the [AI questions and instructions](#ai-questions-and-instructions) section.
 
 Configuration[​](#configuration "Direct link to Configuration")
 ---------------------------------------------------------------

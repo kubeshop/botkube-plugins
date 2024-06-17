@@ -33,6 +33,6 @@ Stay in the Loop
 
 Join the Botkube Community in one of these channels
 
-[](https://github.com/kubeshop/botkube)[](https://twitter.com/botkube_io)[](https://www.linkedin.com/showcase/botkube/)[](https://www.youtube.com/playlist?list=PL2Vye-us8_x_5eqYQTBq7ZywupscaW5yA)[](https://join.botkube.io/)
+[](https://github.com/kubeshop/botkube)[](https://twitter.com/botkube_io)[](https://www.linkedin.com/showcase/botkube/)[](https://www.youtube.com/playlist?list=PL2Vye-us8_x_5eqYQTBq7ZywupscaW5yA)[](https://api.botkube.io/routers/slack/v1/install)
 
 Subscribe to our monthly newsletter to stay up to date with all-things Botkube.

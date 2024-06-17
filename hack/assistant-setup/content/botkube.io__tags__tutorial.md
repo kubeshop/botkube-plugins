@@ -54,7 +54,7 @@ Tag:
 
 [![Image 2](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/66606d276e2694f36bd840eb_K8s-post-mortem%2BRCAs.png) Jun 4, 2024 10 read ### Streamline Kubernetes Post-Mortems with Botkube's AI Assistant One of the most time-consuming yet essential tasks that DevOps teams face is the Root Cause Analysis (RCA) and generation of Post Mortem Reports after incidents.](https://botkube.io/blog/kubernetes-post-mortems)
 
-[![Image 3](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6540077fe681eba27afc9f78_Blog_Thumbnail%20(2).jpg) Nov 29, 2023 10 minutes read ### Maximize Your DevOps Teams Efficiency with Botkube + Microsoft Teams Get Botkube up and running with Microsoft Teams in less than 5 mins with this walk-through tutorial](https://botkube.io/blog/maximize-your-devops-teams-efficiency-with-botkube-and-microsoft-teams)
+[![Image 3](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6540077fe681eba27afc9f78_Blog_Thumbnail%20(2).jpg) May 20, 2024 10 minutes read ### Maximize Your DevOps Teams Efficiency with Botkube + Microsoft Teams Get Botkube up and running with Microsoft Teams in less than 5 mins with this walk-through tutorial](https://botkube.io/blog/maximize-your-devops-teams-efficiency-with-botkube-and-microsoft-teams)
 
 [![Image 4](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6540077fe681eba27afc9f78_Blog_Thumbnail%20(2).jpg) Oct 30, 2023 15 min read ### Integrating Microsoft Teams with Azure for K8s Deployments Botkube is entering the MS teams world](https://botkube.io/blog/integrating-microsoft-teams-with-azure-for-kubernetes-deployments)
 

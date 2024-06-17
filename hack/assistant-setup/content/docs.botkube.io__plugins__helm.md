@@ -30,14 +30,18 @@ Usage[​](#usage "Direct link to Usage")
 
 To execute `helm` commands, send message in the following format in the channel where Botkube is already added:
 
-    @Botkube helm [command] [flags]
+```
+@Botkube helm [command] [flags]
+```
 
 Supported commands[​](#supported-commands "Direct link to Supported commands")
 ------------------------------------------------------------------------------
 
 The Helm executor plugin has the exact same syntax as the Helm CLI. However, not all commands and flags are supported. If an unsupported flag is specified, you will get a dedicated error, e.g:
 
-    The "--wait" flag is not supported by the Botkube Helm plugin. Please remove it.
+```
+The "--wait" flag is not supported by the Botkube Helm plugin. Please remove it.
+```
 
 Additionally, the following flag syntax is not supported:
 
@@ -73,7 +77,9 @@ Configuration[​](#configuration "Direct link to Configuration")
 
 The plugin supports the following configuration:
 
-    # Configures the default Namespace for executing Botkube `helm` commands. If not set, uses 'default'.defaultNamespace: "default"# Allowed values are configmap, secret, memory.helmDriver: "secret"# Location for storing Helm configuration.helmConfigDir: "/tmp/helm/"# Location for storing Helm cache.helmCacheDir: "/tmp/helm/.cache"
+```
+# Configures the default Namespace for executing Botkube `helm` commands. If not set, uses 'default'.defaultNamespace: "default"# Allowed values are configmap, secret, memory.helmDriver: "secret"# Location for storing Helm configuration.helmConfigDir: "/tmp/helm/"# Location for storing Helm cache.helmCacheDir: "/tmp/helm/.cache"
+```
 
 Merging strategy[​](#merging-strategy "Direct link to Merging strategy")
 ------------------------------------------------------------------------

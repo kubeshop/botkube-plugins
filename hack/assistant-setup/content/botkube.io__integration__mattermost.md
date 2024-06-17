@@ -1,4 +1,4 @@
-Title: Botkube.io
+Title: Mattermost & Botkube Kubernetes Integration
 
 URL Source: https://botkube.io/integration/mattermost
 

@@ -15,14 +15,18 @@ This document describes steps for running Botkube core locally together with a l
     
 2.  Create a file with your plugins' repository, plugin configuration and bindings for enabled communication platform:
     
-        plugins:  repositories:    local-repo:      url: http://localhost:8080/plugins-index.yamlexecutors:  "plugins":    local-repo/executor-name: # Plugin name syntax: <repo>/<plugin>[@<version>]. If version is not provided, the latest version from repository is used.      enabled: true      config: {} # Plugin's specific configuration.sources:  "plugins":    local-repo/source-name: # Plugin name syntax: <repo>/<plugin>[@<version>]. If version is not provided, the latest version from repository is used.      enabled: true      config: {} # Plugin's specific configuration.communications:  # Enable a given communication platform and define bindings to a given executor and source plugins.
+    ```
+    plugins:  repositories:    local-repo:      url: http://localhost:8080/plugins-index.yamlexecutors:  "plugins":    local-repo/executor-name: # Plugin name syntax: <repo>/<plugin>[@<version>]. If version is not provided, the latest version from repository is used.      enabled: true      config: {} # Plugin's specific configuration.sources:  "plugins":    local-repo/source-name: # Plugin name syntax: <repo>/<plugin>[@<version>]. If version is not provided, the latest version from repository is used.      enabled: true      config: {} # Plugin's specific configuration.communications:  # Enable a given communication platform and define bindings to a given executor and source plugins.
+    ```
     
     For example, for Slack and example `echo` and `ticker` plugins, provide `appToken` and `botToken` and run the script:
     
     Create /tmp/config-values.yaml
 3.  In your plugin project directory, start a static plugin server:
     
-        # Use https://github.com/vercel/servenpx serve --listen 8080
+    ```
+    # Use https://github.com/vercel/servenpx serve --listen 8080
+    ```
     
     note
     
@@ -32,15 +36,21 @@ This document describes steps for running Botkube core locally together with a l
     
 5.  Export Botkube plugins cache directory:
     
-        export BOTKUBE_PLUGINS_CACHE__DIR="/tmp/plugins"
+    ```
+    export BOTKUBE_PLUGINS_CACHE__DIR="/tmp/plugins"
+    ```
     
 6.  Export Botkube repository path cloned in the first step:
     
-        export BOTKUBE_REPO_PATH={botkube_repo_path}
+    ```
+    export BOTKUBE_REPO_PATH={botkube_repo_path}
+    ```
     
 7.  Export configuration files:
     
-        export BOTKUBE_CONFIG_PATHS="${BOTKUBE_REPO_PATH}/helm/botkube/values.yaml,/tmp/config-values.yaml"
+    ```
+    export BOTKUBE_CONFIG_PATHS="${BOTKUBE_REPO_PATH}/helm/botkube/values.yaml,/tmp/config-values.yaml"
+    ```
     
 8.  Build plugins and start Botkube:
     
@@ -54,8 +64,12 @@ This document describes steps for running Botkube core locally together with a l
 
 1.  Download index builder:
 
-    go get github.com/kubeshop/botkube/hack
+```
+go get github.com/kubeshop/botkube/hack
+```
 
 2.  Build plugins and run Botkube:
 
-    # rebuild plugins only for current GOOS and GOARCHgoreleaser build --rm-dist --snapshot --single-target &&# regenerate indexgo run github.com/kubeshop/botkube/hack -binaries-path "./dist" -url-base-path "http://localhost:8080/dist" -use-archive=false &&# remove cached pluginsrm -rf $BOTKUBE_PLUGINS_CACHE__DIR &&# start Botkube${BOTKUBE_REPO_PATH}/botkube
+```
+# rebuild plugins only for current GOOS and GOARCHgoreleaser build --rm-dist --snapshot --single-target &&# regenerate indexgo run github.com/kubeshop/botkube/hack -binaries-path "./dist" -url-base-path "http://localhost:8080/dist" -use-archive=false &&# remove cached pluginsrm -rf $BOTKUBE_PLUGINS_CACHE__DIR &&# start Botkube${BOTKUBE_REPO_PATH}/botkube
+```

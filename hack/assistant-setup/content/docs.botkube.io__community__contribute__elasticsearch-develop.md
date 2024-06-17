@@ -23,19 +23,27 @@ The easiest way to develop Botkube with Elasticsearch notifier enabled is to ins
     
     1.  Install ECK custom resource definitions:
         
-            kubectl create -f https://download.elastic.co/downloads/eck/2.9.0/crds.yaml
+        ```
+        kubectl create -f https://download.elastic.co/downloads/eck/2.9.0/crds.yaml
+        ```
         
     2.  Install ECK operator:
         
-            kubectl apply -f https://download.elastic.co/downloads/eck/2.9.0/operator.yaml
+        ```
+        kubectl apply -f https://download.elastic.co/downloads/eck/2.9.0/operator.yaml
+        ```
         
     3.  Deploy Elasticsearch:
         
-            cat <<EOF | kubectl apply -f -apiVersion: elasticsearch.k8s.elastic.co/v1kind: Elasticsearchmetadata:  name: elasticsearchspec:  version: 8.9.1  nodeSets:  - name: default    count: 1    config:      node.store.allow_mmap: falseEOF
+        ```
+        cat <<EOF | kubectl apply -f -apiVersion: elasticsearch.k8s.elastic.co/v1kind: Elasticsearchmetadata:  name: elasticsearchspec:  version: 8.9.1  nodeSets:  - name: default    count: 1    config:      node.store.allow_mmap: falseEOF
+        ```
         
 2.  Retrieve password
     
-        PASSWORD=$(kubectl get secret elasticsearch-es-elastic-user -o go-template='{{.data.elastic | base64decode}}')
+    ```
+    PASSWORD=$(kubectl get secret elasticsearch-es-elastic-user -o go-template='{{.data.elastic | base64decode}}')
+    ```
     
 3.  Install Botkube with Elasticsearch, according to the [Elasticsearch installation](https://docs.botkube.io/installation/elasticsearch) instruction, where:
     
@@ -50,19 +58,27 @@ To review if the events are properly saved in Elasticsearch, follow these steps:
 
 1.  Do port forward:
     
-        kubectl port-forward svc/elasticsearch-es-internal-http 9200
+    ```
+    kubectl port-forward svc/elasticsearch-es-internal-http 9200
+    ```
     
 2.  Fetch Elasticsearch indices:
     
-        curl -u "elastic:$PASSWORD" -k https://localhost:9200/_cat/indices
+    ```
+    curl -u "elastic:$PASSWORD" -k https://localhost:9200/_cat/indices
+    ```
     
 3.  Copy the index name with the `botkube-` prefix and export it as environment variable. For example:
     
-        export INDEX_NAME="botkube-2022-06-06"
+    ```
+    export INDEX_NAME="botkube-2022-06-06"
+    ```
     
 4.  See Elasticsearch index details with logged events:
     
-        curl -u "elastic:$PASSWORD" -k https://localhost:9200/$INDEX_NAME/_search\?pretty
+    ```
+    curl -u "elastic:$PASSWORD" -k https://localhost:9200/$INDEX_NAME/_search\?pretty
+    ```
     
 
 Elasticsearch v7 setup[​](#elasticsearch-v7-setup "Direct link to Elasticsearch v7 setup")
@@ -74,7 +90,9 @@ The easiest way to develop Botkube with Elasticsearch notifier enabled is to ins
 
 1.  Install Elasticsearch:
     
-        helm repo add elastic https://helm.elastic.cohelm install elasticsearch elastic/elasticsearch --version 7.17.3  --set replicas=1 --set resources.requests.cpu="100m" --set resources.requests.memory="512M" --wait
+    ```
+    helm repo add elastic https://helm.elastic.cohelm install elasticsearch elastic/elasticsearch --version 7.17.3  --set replicas=1 --set resources.requests.cpu="100m" --set resources.requests.memory="512M" --wait
+    ```
     
 2.  Install Botkube with Elasticsearch, according to the [Elasticsearch installation](https://docs.botkube.io/installation/elasticsearch) instruction, where:
     
@@ -89,19 +107,27 @@ To review if the events are properly saved in Elasticsearch, follow these steps:
 
 1.  Do port forward:
     
-        kubectl port-forward svc/elasticsearch-master 9200
+    ```
+    kubectl port-forward svc/elasticsearch-master 9200
+    ```
     
 2.  Fetch Elasticsearch indices:
     
-        curl http://localhost:9200/_cat/indices
+    ```
+    curl http://localhost:9200/_cat/indices
+    ```
     
 3.  Copy the index name with the `botkube-` prefix and export it as environment variable. For example:
     
-        export INDEX_NAME="botkube-2022-06-06"
+    ```
+    export INDEX_NAME="botkube-2022-06-06"
+    ```
     
 4.  See Elasticsearch index details with logged events:
     
-        curl http://localhost:9200/$INDEX_NAME/_search\?pretty
+    ```
+    curl http://localhost:9200/$INDEX_NAME/_search\?pretty
+    ```
     
 
 [](https://docs.botkube.io/community/contribute/)[Outgoing Webhook development](https://docs.botkube.io/community/contribute/webhook-develop)

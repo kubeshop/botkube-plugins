@@ -17,13 +17,17 @@ Steps[​](#steps "Direct link to Steps")
 
 1.  Install Echo server with Helm:
     
-        helm repo add ealenn https://ealenn.github.io/chartshelm repo update ealennhelm install echo-server ealenn/echo-server --set application.logs.ignore.ping=true --set application.enable.environment=false --wait
+    ```
+    helm repo add ealenn https://ealenn.github.io/chartshelm repo update ealennhelm install echo-server ealenn/echo-server --set application.logs.ignore.ping=true --set application.enable.environment=false --wait
+    ```
     
 2.  Go through the [Outgoing Webhook Botkube installation](https://docs.botkube.io/installation/webhook/) instruction. Provide `http://echo-server.default` as `WEBHOOK_URL`.
     
 3.  Watch the logs:
     
-        kubectl logs -l app.kubernetes.io/name=echo-server -f
+    ```
+    kubectl logs -l app.kubernetes.io/name=echo-server -f
+    ```
     
     Every incoming request will be logged there.
     
