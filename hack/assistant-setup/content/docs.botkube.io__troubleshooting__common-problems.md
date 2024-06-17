@@ -14,7 +14,9 @@ Incompatible plugin API version[​](#incompatible-plugin-api-version "Direct li
     
 *   In [Botkube agent logs](https://docs.botkube.io/troubleshooting/diagnostics#agent-logs), you see such entry:
     
-        while running application: while waiting for goroutines to finish gracefully: 1 error occurred:	* while starting plugins manager: while creating executor plugins: Incompatible API version with plugin. Plugin version: 2, Client versions: [1]
+    ```
+    while running application: while waiting for goroutines to finish gracefully: 1 error occurred:	* while starting plugins manager: while creating executor plugins: Incompatible API version with plugin. Plugin version: 2, Client versions: [1]
+    ```
     
 
 **Debugging steps**
@@ -28,7 +30,9 @@ Incompatible plugin API version[​](#incompatible-plugin-api-version "Direct li
 
 In order to fix the problem, you need to make sure that the agent version is the same as the plugin repository version. For example, for agent image `ghcr.io/kubeshop/botkube:v1.5.0` you need to configure official plugin repository in version `v1.5.0`: `https://github.com/kubeshop/botkube/releases/download/v1.5.0/plugins-index.yaml`. To change the repository URL, run:
 
-    helm upgrade botkube botkube/botkube -n botkube --reuse-values --set plugins.repositories.botkube.url="https://github.com/kubeshop/botkube/releases/download/v1.5.0/plugins-index.yaml"
+```
+helm upgrade botkube botkube/botkube -n botkube --reuse-values --set plugins.repositories.botkube.url="https://github.com/kubeshop/botkube/releases/download/v1.5.0/plugins-index.yaml"
+```
 
 Helm chart loading error[​](#helm-chart-loading-error "Direct link to Helm chart loading error")
 ------------------------------------------------------------------------------------------------
@@ -37,11 +41,15 @@ Helm chart loading error[​](#helm-chart-loading-error "Direct link to Helm cha
 
 *   You encounter the following errors when running the `botkube install` command:
     
-        Error: while loading Helm chart: Chart.yaml file is missing
+    ```
+    Error: while loading Helm chart: Chart.yaml file is missing
+    ```
     
     or
     
-        Error: while loading Helm chart: file 'botkube' does not appear to be a gzipped archive; got 'application/octet-stream'
+    ```
+    Error: while loading Helm chart: file 'botkube' does not appear to be a gzipped archive; got 'application/octet-stream'
+    ```
     
 
 **Solution**

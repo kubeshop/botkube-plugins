@@ -1,4 +1,4 @@
-Title: Botkube.io
+Title: ChatGPT & Botkube Kubernetes Integration
 
 URL Source: https://botkube.io/integration/chatgpt-botkube-kubernetes-integration
 

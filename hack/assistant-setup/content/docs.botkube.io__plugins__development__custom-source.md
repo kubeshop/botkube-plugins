@@ -28,15 +28,21 @@ Prerequisites[​](#prerequisites "Direct link to Prerequisites")
 
 1.  Create a source plugin directory:
     
-        mkdir botkube-plugins && cd botkube-plugins
+    ```
+    mkdir botkube-plugins && cd botkube-plugins
+    ```
     
 2.  Initialize the Go module:
     
-        go mod init botkube-plugins
+    ```
+    go mod init botkube-plugins
+    ```
     
 3.  Create the `main.go` file for the `ticker` source with the following template:
     
-        cat << EOF > main.gopackage mainimport (	"context"	"fmt"	"time"	"github.com/hashicorp/go-plugin"	"github.com/kubeshop/botkube/pkg/api"	"github.com/kubeshop/botkube/pkg/api/source"	"gopkg.in/yaml.v3")// Config holds source configuration.type Config struct {	Interval time.Duration}// Ticker implements the Botkube source plugin interface.type Ticker struct{}func main() {	source.Serve(map[string]plugin.Plugin{		"ticker": &source.Plugin{			Source: &Ticker{},		},	})}EOF
+    ```
+    cat << EOF > main.gopackage mainimport (	"context"	"fmt"	"time"	"github.com/hashicorp/go-plugin"	"github.com/kubeshop/botkube/pkg/api"	"github.com/kubeshop/botkube/pkg/api/source"	"gopkg.in/yaml.v3")// Config holds source configuration.type Config struct {	Interval time.Duration}// Ticker implements the Botkube source plugin interface.type Ticker struct{}func main() {	source.Serve(map[string]plugin.Plugin{		"ticker": &source.Plugin{			Source: &Ticker{},		},	})}EOF
+    ```
     
     This template code imports required packages and registers `Ticker` as the gRPC plugin. At this stage, the `Ticker` service doesn't implement the required [Protocol Buffers](https://github.com/kubeshop/botkube/blob/main/proto/source.proto) contract. We will add the required methods in the next steps.
     
@@ -44,7 +50,9 @@ Prerequisites[​](#prerequisites "Direct link to Prerequisites")
     
 5.  Add the required `Metadata` method:
     
-        // Metadata returns details about the Ticker plugin.func (Ticker) Metadata(_ context.Context) (api.MetadataOutput, error) {	return api.MetadataOutput{		Version:     "0.1.0",		Description: "Emits an event at a specified interval.",	}, nil}
+    ```
+    // Metadata returns details about the Ticker plugin.func (Ticker) Metadata(_ context.Context) (api.MetadataOutput, error) {	return api.MetadataOutput{		Version:     "0.1.0",		Description: "Emits an event at a specified interval.",	}, nil}
+    ```
     
     The `Metadata` method returns basic information about your plugin. This data is used when the plugin index is generated in an automated way. You will learn more about that in the next steps.
     
@@ -52,7 +60,9 @@ Prerequisites[​](#prerequisites "Direct link to Prerequisites")
     
 6.  Add the required `Stream` method:
     
-        // Stream sends an event after configured time duration.func (Ticker) Stream(ctx context.Context, in source.StreamInput) (source.StreamOutput, error) {	cfg, err := mergeConfigs(in.Configs)	if err != nil {		return source.StreamOutput{}, err	}	ticker := time.NewTicker(cfg.Interval)	out := source.StreamOutput{		Event: make(chan source.Event),	}	go func() {		for {			select {			case <-ctx.Done():				ticker.Stop()			case <-ticker.C:				out.Event <- source.Event{                    Message: api.NewPlaintextMessage("Ticker Event", true),                }			}		}	}()	return out, nil}// mergeConfigs merges all input configuration. In our case we don't have complex merge strategy,// the last one that was specified wins :)func mergeConfigs(configs []*source.Config) (Config, error) {	// default config	finalCfg := Config{		Interval: time.Minute,	}	for _, inputCfg := range configs {		var cfg Config		err := yaml.Unmarshal(inputCfg.RawYAML, &cfg)		if err != nil {			return Config{}, fmt.Errorf("while unmarshalling YAML config: %w", err)		}		if cfg.Interval != 0 {			finalCfg.Interval = cfg.Interval		}	}	return finalCfg, nil}
+    ```
+    // Stream sends an event after configured time duration.func (Ticker) Stream(ctx context.Context, in source.StreamInput) (source.StreamOutput, error) {	cfg, err := mergeConfigs(in.Configs)	if err != nil {		return source.StreamOutput{}, err	}	ticker := time.NewTicker(cfg.Interval)	out := source.StreamOutput{		Event: make(chan source.Event),	}	go func() {		for {			select {			case <-ctx.Done():				ticker.Stop()			case <-ticker.C:				out.Event <- source.Event{                    Message: api.NewPlaintextMessage("Ticker Event", true),                }			}		}	}()	return out, nil}// mergeConfigs merges all input configuration. In our case we don't have complex merge strategy,// the last one that was specified wins :)func mergeConfigs(configs []*source.Config) (Config, error) {	// default config	finalCfg := Config{		Interval: time.Minute,	}	for _, inputCfg := range configs {		var cfg Config		err := yaml.Unmarshal(inputCfg.RawYAML, &cfg)		if err != nil {			return Config{}, fmt.Errorf("while unmarshalling YAML config: %w", err)		}		if cfg.Interval != 0 {			finalCfg.Interval = cfg.Interval		}	}	return finalCfg, nil}
+    ```
     
     The `Stream` method is the heart of your source plugin. This method runs your business logic and push events into the `out.Output` channel. Next, the Botkube core sends the event to a given communication platform.
     
@@ -64,12 +74,16 @@ Prerequisites[​](#prerequisites "Direct link to Prerequisites")
     
     *   If you don't want to handle external events from incoming webhook, simply nest the `source.HandleExternalRequestUnimplemented` under your struct:
         
-            // Ticker implements the Botkube executor plugin interface.type Ticker struct {  // specify that the source doesn't handle external requests  source.HandleExternalRequestUnimplemented}
+        ```
+        // Ticker implements the Botkube executor plugin interface.type Ticker struct {  // specify that the source doesn't handle external requests  source.HandleExternalRequestUnimplemented}
+        ```
         
     *   To handle such requests, you need to implement the `HandleExternalRequest` method. In this case, the `message` property from payload is outputted to the bound communication platforms:
         
     
-        // HandleExternalRequest handles incoming payload and returns an event based on it.func (Forwarder) HandleExternalRequest(_ context.Context, in source.ExternalRequestInput) (source.ExternalRequestOutput, error) {  var p payload  err := json.Unmarshal(in.Payload, &p)  if err != nil {    return source.ExternalRequestOutput{}, fmt.Errorf("while unmarshaling payload: %w", err)  }  if p.Message == "" {    return source.ExternalRequestOutput{}, fmt.Errorf("message cannot be empty")  }  msg := fmt.Sprintf("*Incoming webhook event:* %s", p.Message)  return source.ExternalRequestOutput{    Event: source.Event{      Message: api.NewPlaintextMessage(msg, true),    },  }, nil}
+    ```
+    // HandleExternalRequest handles incoming payload and returns an event based on it.func (Forwarder) HandleExternalRequest(_ context.Context, in source.ExternalRequestInput) (source.ExternalRequestOutput, error) {  var p payload  err := json.Unmarshal(in.Payload, &p)  if err != nil {    return source.ExternalRequestOutput{}, fmt.Errorf("while unmarshaling payload: %w", err)  }  if p.Message == "" {    return source.ExternalRequestOutput{}, fmt.Errorf("message cannot be empty")  }  msg := fmt.Sprintf("*Incoming webhook event:* %s", p.Message)  return source.ExternalRequestOutput{    Event: source.Event{      Message: api.NewPlaintextMessage(msg, true),    },  }, nil}
+    ```
     
 
 Build plugin binaries[​](#build-plugin-binaries "Direct link to Build plugin binaries")
@@ -83,11 +97,15 @@ Instead of GoReleaser, you can use another tool of your choice. The important th
 
 1.  Create the GoReleaser configuration file:
     
-        cat << EOF > .goreleaser.yamlproject_name: botkube-pluginsbefore:  hooks:    - go mod downloadbuilds:  - id: ticker    binary: source_ticker_{{ .Os }}_{{ .Arch }}    no_unique_dist_dir: true    env:      - CGO_ENABLED=0    goos:      - linux      - darwin    goarch:      - amd64      - arm64    goarm:      - 7snapshot:  name_template: 'v{{ .Version }}'EOF
+    ```
+    cat << EOF > .goreleaser.yamlproject_name: botkube-pluginsbefore:  hooks:    - go mod downloadbuilds:  - id: ticker    binary: source_ticker_{{ .Os }}_{{ .Arch }}    no_unique_dist_dir: true    env:      - CGO_ENABLED=0    goos:      - linux      - darwin    goarch:      - amd64      - arm64    goarm:      - 7snapshot:  name_template: 'v{{ .Version }}'EOF
+    ```
     
 2.  Build the binaries:
     
-        goreleaser build --rm-dist --snapshot
+    ```
+    goreleaser build --rm-dist --snapshot
+    ```
     
 
 Congrats! You just created your first Botkube source plugin! 🎉
@@ -99,6 +117,8 @@ Passing configuration to your plugin[​](#passing-configuration-to-your-plugin 
 
 Sometimes your source plugin requires a configuration specified by the end-user. Botkube supports such requirement and provides an option to specify plugin configuration under `config`. An example Botkube configuration looks like this:
 
-    communications:  "default-group":    socketSlack:      channels:        "default":          name: "all-teams"          bindings:            sources:              - ticker-team-a              - ticker-team-bsources:  "ticker-team-a":    botkube/ticker:      enabled: true      config:        interval: 1s  "ticker-team-b":    botkube/ticker:      enabled: true      config:        interval: 2m
+```
+communications:  "default-group":    socketSlack:      channels:        "default":          name: "all-teams"          bindings:            sources:              - ticker-team-a              - ticker-team-bsources:  "ticker-team-a":    botkube/ticker:      enabled: true      config:        interval: 1s  "ticker-team-b":    botkube/ticker:      enabled: true      config:        interval: 2m
+```
 
 This means that two different `botkube/ticker` plugin configurations were bound to the `all-teams` Slack channel. For each bound configuration [Botkube source dispatcher](https://docs.botkube.io/architecture/#plugin-source-bridge) calls `Stream` method with the configuration specified under the `bindings.sources` property.

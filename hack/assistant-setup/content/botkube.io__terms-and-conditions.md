@@ -3,7 +3,10 @@ Title: Terms and Conditions
 URL Source: https://botkube.io/terms-and-conditions
 
 Markdown Content:
-Last updated March 8,2023
+Botkube Terms and Conditions
+----------------------------
+
+_Last updated March 8,2023_
 
 ### TABLE OF CONTENTS
 
@@ -187,12 +190,8 @@ You hereby waive any and all defenses You may have based on the electronic form 
 
 In order to resolve a complaint regarding the Services or to receive further information regarding use of the Services, please contact Us at:
 
-Kubernetes Innovation Labs LLC
-
-20 Brynwood Ln, Greenwich, CT 06831, USA
-
-Greenwich, CT 06831
-
-United States
-
-[frontdesk@kubeshop.io](mailto:frontdesk@kubeshop.io)
+Kubernetes Innovation Labs LLC  
+20 Brynwood Ln, Greenwich, CT 06831, USA  
+Greenwich, CT 06831  
+United States  
+‍[frontdesk@kubeshop.io](mailto:frontdesk@kubeshop.io)

@@ -30,11 +30,15 @@ Follow the steps below to install Botkube in your Mattermost instance.
         
 2.  Export the bot name as an environment variable:
     
-        export MATTERMOST_BOT_NAME="{bot_name}"
+    ```
+    export MATTERMOST_BOT_NAME="{bot_name}"
+    ```
     
 3.  Also, export the bot's token as an environment variable:
     
-        export MATTERMOST_TOKEN="{token}"
+    ```
+    export MATTERMOST_TOKEN="{token}"
+    ```
     
 
 ### Add Botkube to a channel[​](#add-botkube-to-a-channel "Direct link to Add Botkube to a channel")
@@ -45,14 +49,18 @@ Make sure that the newly created bot account is added to your Mattermost team by
 
 Next, invite the Botkube bot into the specific channel where you want to receive notifications. Export the channel name as an environment variable:
 
-    export MATTERMOST_CHANNEL="{channel_name}"
+```
+export MATTERMOST_CHANNEL="{channel_name}"
+```
 
 Install Botkube in Kubernetes cluster[​](#install-botkube-in-kubernetes-cluster "Direct link to Install Botkube in Kubernetes cluster")
 ---------------------------------------------------------------------------------------------------------------------------------------
 
 To deploy Botkube agent in your cluster, run:
 
-    export MATTERMOST_SERVER_URL={mattermost_server_url}export MATTERMOST_TEAM={mattermost_team_name}export CLUSTER_NAME={cluster_name}export ALLOW_KUBECTL={allow_kubectl}botkube install --version v1.12.0 \--set communications.default-group.mattermost.enabled=true \--set communications.default-group.mattermost.url=${MATTERMOST_SERVER_URL} \--set communications.default-group.mattermost.token=${MATTERMOST_TOKEN} \--set communications.default-group.mattermost.team=${MATTERMOST_TEAM} \--set communications.default-group.mattermost.channels.default.name=${MATTERMOST_CHANNEL} \--set communications.default-group.mattermost.botName=${MATTERMOST_BOT_NAME} \--set settings.clusterName=${CLUSTER_NAME} \--set 'executors.k8s-default-tools.botkube/kubectl.enabled'=${ALLOW_KUBECTL}
+```
+export MATTERMOST_SERVER_URL={mattermost_server_url}export MATTERMOST_TEAM={mattermost_team_name}export CLUSTER_NAME={cluster_name}export ALLOW_KUBECTL={allow_kubectl}botkube install --version v1.12.0 \--set communications.default-group.mattermost.enabled=true \--set communications.default-group.mattermost.url=${MATTERMOST_SERVER_URL} \--set communications.default-group.mattermost.token=${MATTERMOST_TOKEN} \--set communications.default-group.mattermost.team=${MATTERMOST_TEAM} \--set communications.default-group.mattermost.channels.default.name=${MATTERMOST_CHANNEL} \--set communications.default-group.mattermost.botName=${MATTERMOST_BOT_NAME} \--set settings.clusterName=${CLUSTER_NAME} \--set 'executors.k8s-default-tools.botkube/kubectl.enabled'=${ALLOW_KUBECTL}
+```
 
 where:
 
@@ -88,7 +96,9 @@ Troubleshooting[​](#troubleshooting "Direct link to Troubleshooting")
 
 The Botkube Pod is restarting and the Botkube logs show the following error:
 
-    {  "level": "fatal",  "msg": "while running application: while waiting for goroutines to finish gracefully: 1 error occurred:\n\t* while creating Mattermost bot: while getting team details: team \"Botkube\" not found",  "time": "2023-08-25T14:52:30+02:00"}
+```
+{  "level": "fatal",  "msg": "while running application: while waiting for goroutines to finish gracefully: 1 error occurred:\n\t* while creating Mattermost bot: while getting team details: team \"Botkube\" not found",  "time": "2023-08-25T14:52:30+02:00"}
+```
 
 **Solution**
 
@@ -96,7 +106,9 @@ You need to ensure that the configuration used by Botkube is valid.
 
 1.  Get and decode the communication Secret details:
     
-        kubectl get secret botkube-communication-secret -n botkube --template='{{index .data "comm_config.yaml" | base64decode }}'
+    ```
+    kubectl get secret botkube-communication-secret -n botkube --template='{{index .data "comm_config.yaml" | base64decode }}'
+    ```
     
 2.  Verify the following:
     

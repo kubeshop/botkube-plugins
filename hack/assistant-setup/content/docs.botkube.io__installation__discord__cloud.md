@@ -54,4 +54,6 @@ Markdown Content:
 
 the generated URL contains **YOUR\_CLIENT\_ID**, Scope and permission details.
 
-    https://discord.com/api/oauth2/authorize?client_id={YOUR_CLIENT_ID}&permissions={SET_OF_PERMISSIONS}&scope=bot
+```
+https://discord.com/api/oauth2/authorize?client_id={YOUR_CLIENT_ID}&permissions={SET_OF_PERMISSIONS}&scope=bot
+```

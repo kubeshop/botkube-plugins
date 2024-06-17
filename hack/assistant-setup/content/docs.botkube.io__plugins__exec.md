@@ -43,7 +43,9 @@ Usage[​](#usage "Direct link to Usage")
 
 To install a given CLI binary directly from a chat window, run:
 
-    @Botkube x install {source}
+```
+@Botkube x install {source}
+```
 
 For downloading binaries, the `eget` library is used. It supports multiple URL formats and is able to unpack archives and extract binaries from them. For more details, see the documentation on the [`eget`](https://github.com/zyedidia/eget) GitHub repository.
 
@@ -73,13 +75,17 @@ Configuration[​](#configuration "Direct link to Configuration")
 
 This plugin supports the following configuration:
 
-    # An array of templates that define how to convert the command output into an interactive message.templates:  # Link to templates source  # It uses the go-getter library, which supports multiple URL formats (such as HTTP, Git repositories, or S3) and is able to unpack archives.  # For more details, see the documentation at https://github.com/hashicorp/go-getter.  - ref: github.com/kubeshop/botkube//cmd/executor/exec/templates?ref=release-1.11
+```
+# An array of templates that define how to convert the command output into an interactive message.templates:  # Link to templates source  # It uses the go-getter library, which supports multiple URL formats (such as HTTP, Git repositories, or S3) and is able to unpack archives.  # For more details, see the documentation at https://github.com/hashicorp/go-getter.  - ref: github.com/kubeshop/botkube//cmd/executor/exec/templates?ref=release-1.11
+```
 
 ### Templates[​](#templates "Direct link to Templates")
 
 The `exec` plugin supports defining templates for executed commands. As a result, you can specify how to process the CLI output or define your own message response.
 
-    # An array of templates that define how to convert the command output into an interactive message.templates:  # Link to templates source  # It uses the go-getter library, which supports multiple URL formats (such as HTTP, Git repositories, or S3) and is able to unpack archives.  # For more details, see the documentation at https://github.com/hashicorp/go-getter.  - ref: github.com/kubeshop/botkube//cmd/executor/exec/templates?ref=release-1.11  - trigger:      command:        # Specifies the prefix of the command that triggers the template and the parser used to parse the output.        # If specified, it has higher priority than the regex field.        prefix: "helm list"        # Specifies the regex that should match a given command        # If specified, it has lower priority than the prefix field.        regex: "regex: '^helm list(?:\s+(-A|-a))*\s?$'"    # Specifies the message template type.    type: ""    # Message template depending on the selected type.    message: { }
+```
+# An array of templates that define how to convert the command output into an interactive message.templates:  # Link to templates source  # It uses the go-getter library, which supports multiple URL formats (such as HTTP, Git repositories, or S3) and is able to unpack archives.  # For more details, see the documentation at https://github.com/hashicorp/go-getter.  - ref: github.com/kubeshop/botkube//cmd/executor/exec/templates?ref=release-1.11  - trigger:      command:        # Specifies the prefix of the command that triggers the template and the parser used to parse the output.        # If specified, it has higher priority than the regex field.        prefix: "helm list"        # Specifies the regex that should match a given command        # If specified, it has lower priority than the prefix field.        regex: "regex: '^helm list(?:\s+(-A|-a))*\s?$'"    # Specifies the message template type.    type: ""    # Message template depending on the selected type.    message: { }
+```
 
 Supported template types:
 
@@ -95,7 +101,9 @@ The `parser:table:space` template knows how to convert space-separated tables in
 
 For example, such a table:
 
-    NAME       	NAMESPACE  	REVISION	UPDATED                                	STATUS  	CHART                	APP VERSIONpsql       	default    	1       	2023-04-27 19:30:48.042056 +0200 CEST  	deployed	postgresql-12.2.7    	15.2.0traefik    	kube-system	1       	2023-04-19 20:58:57.709052559 +0000 UTC	deployed	traefik-10.19.300    	2.6.2traefik-crd	kube-system	1       	2023-04-19 20:58:56.564578223 +0000 UTC	deployed	traefik-crd-10.19.300
+```
+NAME       	NAMESPACE  	REVISION	UPDATED                                	STATUS  	CHART                	APP VERSIONpsql       	default    	1       	2023-04-27 19:30:48.042056 +0200 CEST  	deployed	postgresql-12.2.7    	15.2.0traefik    	kube-system	1       	2023-04-19 20:58:57.709052559 +0000 UTC	deployed	traefik-10.19.300    	2.6.2traefik-crd	kube-system	1       	2023-04-19 20:58:56.564578223 +0000 UTC	deployed	traefik-crd-10.19.300
+```
 
 is displayed as:
 
@@ -117,7 +125,9 @@ By default, the first row is selected and displayed in the message. The `actions
 
 Here is an example syntax that converts the `helm list -A` command into an interactive message:
 
-    type: "parser:table:space"message:  # Creates a dropdown menu with a given name, where the items are generated using the `keyTpl` parameter.  selects:    - name: "Release"      keyTpl: "{{ .Namespace }}/{{ .Name }}"  # Defines additional actions that can be performed in the context of the selected item. In this example, the user can view notes, values, or delete the selected release.  # optional  actions:    notes: "helm get notes  {{ .Name }} -n {{ .Namespace }}"    values: "helm get values {{ .Name }} -n {{ .Namespace }}"    delete: "helm delete     {{ .Name }} -n {{ .Namespace }}"  # Displays a preview of the selected item. Fields `Name`, `Namespace`, `Status`, and `Chart` are generated using the output of the command. It's useful to display only important context.  # optional  preview: |    Name:        {{ .Name }}    Namespace:   {{ .Namespace }}    Status:      {{ .Status }}    Chart:       {{ .Chart }}
+```
+type: "parser:table:space"message:  # Creates a dropdown menu with a given name, where the items are generated using the `keyTpl` parameter.  selects:    - name: "Release"      keyTpl: "{{ .Namespace }}/{{ .Name }}"  # Defines additional actions that can be performed in the context of the selected item. In this example, the user can view notes, values, or delete the selected release.  # optional  actions:    notes: "helm get notes  {{ .Name }} -n {{ .Namespace }}"    values: "helm get values {{ .Name }} -n {{ .Namespace }}"    delete: "helm delete     {{ .Name }} -n {{ .Namespace }}"  # Displays a preview of the selected item. Fields `Name`, `Namespace`, `Status`, and `Chart` are generated using the output of the command. It's useful to display only important context.  # optional  preview: |    Name:        {{ .Name }}    Namespace:   {{ .Namespace }}    Status:      {{ .Status }}    Chart:       {{ .Chart }}
+```
 
 ### Wrapper[​](#wrapper "Direct link to Wrapper")
 
@@ -127,7 +137,9 @@ The wrapper template allows adding extra buttons to the CLI output without modif
 
 Here is an example syntax to add two predefined buttons to a given output message:
 
-    type: "wrapper"message:  buttons:    - # Button name      name: "Get Help"      # URL to open on click.      url: "https://example.com/help"    - # Button name      name: "Initialize"      # Button command to run. Use `{{BotName}}` placeholder for commands that should be executed by Botkube      command: "{{BotName}} x run flux install"      # Button style, supported values: primary, danger      style: "primary"
+```
+type: "wrapper"message:  buttons:    - # Button name      name: "Get Help"      # URL to open on click.      url: "https://example.com/help"    - # Button name      name: "Initialize"      # Button command to run. Use `{{BotName}}` placeholder for commands that should be executed by Botkube      command: "{{BotName}} x run flux install"      # Button style, supported values: primary, danger      style: "primary"
+```
 
 ### Tutorial[​](#tutorial "Direct link to Tutorial")
 
@@ -139,4 +151,6 @@ The tutorial template allows you to define a custom response for a given command
 
 Here is an example syntax to return tutorial with two predefined buttons:
 
-    type: "tutorial"message:  # Pagination rules  paginate:    # Maximum number of rendered buttons per page    page: 5  # Message header  header: "Helm Quick Start tutorial"  # Tutorial steps that are rendered in a given order.  buttons:    - # Button name      name: "Global Help"      # Button description to display on the left side of the button.      description: "{{BotName}} helm help"      # Button command to run. Use `{{BotName}}` placeholder for commands that should be executed by Botkube      command: "{{BotName}} x run helm help"    - name: "Version"      description: "{{BotName}} helm version"      command: "{{BotName}} x run helm version"
+```
+type: "tutorial"message:  # Pagination rules  paginate:    # Maximum number of rendered buttons per page    page: 5  # Message header  header: "Helm Quick Start tutorial"  # Tutorial steps that are rendered in a given order.  buttons:    - # Button name      name: "Global Help"      # Button description to display on the left side of the button.      description: "{{BotName}} helm help"      # Button command to run. Use `{{BotName}}` placeholder for commands that should be executed by Botkube      command: "{{BotName}} x run helm help"    - name: "Version"      description: "{{BotName}} helm version"      command: "{{BotName}} x run helm version"
+```

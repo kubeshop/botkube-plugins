@@ -88,7 +88,9 @@ When you invite Botkube to a private channel, a prompt will appear to guide you 
 
 To update an existing alias for a private channel, or if Botkube is already integrated, simply use this command:
 
-    @Botkube cloud set channel-alias <your-public-alias-name>
+```
+@Botkube cloud set channel-alias <your-public-alias-name>
+```
 
 Cleanup[​](#cleanup "Direct link to Cleanup")
 ---------------------------------------------

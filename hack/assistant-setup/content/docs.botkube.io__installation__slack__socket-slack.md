@@ -46,7 +46,9 @@ Follow the steps below to create and install Botkube App for Slack to your Slack
 *   Private channels only
 *   Public and private channels
 
-    display_information:  name: Botkube  description: Botkube  background_color: "#a653a6"features:  bot_user:    display_name: Botkube    always_online: falseoauth_config:  scopes:    bot:      - channels:read      - app_mentions:read      - reactions:write      - chat:write      - files:write      - users:read # Remote configuration only: Used to get Real Name for audit reportingsettings:  event_subscriptions:    bot_events:      - app_mention  interactivity:    is_enabled: true  org_deploy_enabled: false  socket_mode_enabled: true  token_rotation_enabled: false
+```
+display_information:  name: Botkube  description: Botkube  background_color: "#a653a6"features:  bot_user:    display_name: Botkube    always_online: falseoauth_config:  scopes:    bot:      - channels:read      - app_mentions:read      - reactions:write      - chat:write      - files:write      - users:read # Remote configuration only: Used to get Real Name for audit reportingsettings:  event_subscriptions:    bot_events:      - app_mention  interactivity:    is_enabled: true  org_deploy_enabled: false  socket_mode_enabled: true  token_rotation_enabled: false
+```
 
 ### Install Botkube to the Slack workspace[​](#install-botkube-to-the-slack-workspace "Direct link to Install Botkube to the Slack workspace")
 
@@ -64,7 +66,9 @@ Follow the steps to obtain the Bot Token:
     
 2.  Export Bot for Slack Token as follows:
     
-        export SLACK_API_BOT_TOKEN="{botToken}"
+    ```
+    export SLACK_API_BOT_TOKEN="{botToken}"
+    ```
     
 
 ### Generate and obtain App-Level Token[​](#generate-and-obtain-app-level-token "Direct link to Generate and obtain App-Level Token")
@@ -83,7 +87,9 @@ Follow the steps to generate an App-Level Token:
     
 3.  Copy **App-Level Token** and export it as follows:
     
-        export SLACK_API_APP_TOKEN="${appToken}"
+    ```
+    export SLACK_API_APP_TOKEN="${appToken}"
+    ```
     
 
 ### Add Botkube user to a Slack channel[​](#add-botkube-user-to-a-slack-channel "Direct link to Add Botkube user to a Slack channel")
@@ -95,7 +101,9 @@ Install Botkube in Kubernetes cluster[​](#install-botkube-in-kubernetes-cluste
 
 To deploy Botkube agent in your cluster, run:
 
-    export CLUSTER_NAME={cluster_name}export ALLOW_KUBECTL={allow_kubectl}export SLACK_CHANNEL_NAME={channel_name}botkube install --version v1.12.0 \--set communications.default-group.socketSlack.enabled=true \--set communications.default-group.socketSlack.channels.default.name=${SLACK_CHANNEL_NAME} \--set communications.default-group.socketSlack.appToken=${SLACK_API_APP_TOKEN} \--set communications.default-group.socketSlack.botToken=${SLACK_API_BOT_TOKEN} \--set settings.clusterName=${CLUSTER_NAME} \--set 'executors.k8s-default-tools.botkube/kubectl.enabled'=${ALLOW_KUBECTL}
+```
+export CLUSTER_NAME={cluster_name}export ALLOW_KUBECTL={allow_kubectl}export SLACK_CHANNEL_NAME={channel_name}botkube install --version v1.12.0 \--set communications.default-group.socketSlack.enabled=true \--set communications.default-group.socketSlack.channels.default.name=${SLACK_CHANNEL_NAME} \--set communications.default-group.socketSlack.appToken=${SLACK_API_APP_TOKEN} \--set communications.default-group.socketSlack.botToken=${SLACK_API_BOT_TOKEN} \--set settings.clusterName=${CLUSTER_NAME} \--set 'executors.k8s-default-tools.botkube/kubectl.enabled'=${ALLOW_KUBECTL}
+```
 
 where:
 

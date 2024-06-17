@@ -14,7 +14,9 @@ Your plugin repository must contain at least one index file and one plugin binar
 
 In the index file, provide an entry for every plugin from your plugin repository. The index file must have the following syntax:
 
-    entries:  - name: { plugin_name }    type: { plugin_type } # executor or source    description: { plugin_description }    version: { plugin_version }    urls:      - url: { url_to_plugin_binary }        platform:          os: { plugin_operating_system } # darwin or linux          architecture: { plugin_architecture } # amd64 or arm64        dependencies: # optional dependencies          { dependency_name }:            url: { url_to_dependency_binary }
+```
+entries:  - name: { plugin_name }    type: { plugin_type } # executor or source    description: { plugin_description }    version: { plugin_version }    urls:      - url: { url_to_plugin_binary }        platform:          os: { plugin_operating_system } # darwin or linux          architecture: { plugin_architecture } # amd64 or arm64        dependencies: # optional dependencies          { dependency_name }:            url: { url_to_dependency_binary }
+```
 
 It is not required to host a plugin or dependency binary on the same server as the index file.
 
@@ -29,7 +31,9 @@ You can create the index file by yourself our use our tool to generate it automa
 
 1.  In your plugin repository, add `tools.go`:
     
-        cat << EOF > tools.go//go:build toolspackage toolsimport (	 _ "github.com/kubeshop/botkube/hack")EOF
+    ```
+    cat << EOF > tools.go//go:build toolspackage toolsimport (	 _ "github.com/kubeshop/botkube/hack")EOF
+    ```
     
 2.  Refresh dependencies:
     
@@ -37,7 +41,9 @@ You can create the index file by yourself our use our tool to generate it automa
     
 4.  Generate an index file:
     
-        go run github.com/kubeshop/botkube/hack -binaries-path "./dist" -url-base-path "https://example.com"
+    ```
+    go run github.com/kubeshop/botkube/hack -binaries-path "./dist" -url-base-path "https://example.com"
+    ```
     
     info
     
@@ -55,7 +61,9 @@ A GitHub release allows you to upload additional assets that are later accessibl
 
 Once the plugin binaries are built and the index file is generated, you can create a GitHub release using [GitHub CLI](https://cli.github.com/). For example:
 
-    gh release create v1.0.0 \ ./dist/source_* \ ./dist/executor_* \ ./plugins-index.yaml
+```
+gh release create v1.0.0 \ ./dist/source_* \ ./dist/executor_* \ ./plugins-index.yaml
+```
 
 #### Automation[​](#automation "Direct link to Automation")
 
@@ -71,7 +79,9 @@ GitHub allows you to serve static pages via GitHub Pages. When you generate the 
     
 2.  Create the `gh-pages` branch:
     
-        git switch --orphan gh-pagesgit commit --allow-empty -m "Initialization commit"git push -u origin gh-pages
+    ```
+    git switch --orphan gh-pagesgit commit --allow-empty -m "Initialization commit"git push -u origin gh-pages
+    ```
     
 3.  Follow [this](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-from-a-branch) guide to make sure your `gh-pages` branch is set as the source for GitHub Pages.
     
@@ -80,19 +90,27 @@ GitHub allows you to serve static pages via GitHub Pages. When you generate the 
 
 1.  Clone `gh-pages` into `/tmp/botkube-plugins`:
     
-        git clone -b gh-pages "https://github.com/{owner}/{repo}.git" /tmp/botkube-plugins
+    ```
+    git clone -b gh-pages "https://github.com/{owner}/{repo}.git" /tmp/botkube-plugins
+    ```
     
 2.  Move built binaries and generated index file:
     
-        mv dist/executor_* /tmp/botkube-plugins/mv dist/source_* /tmp/botkube-plugins/mv plugins-index.yaml /tmp/botkube-plugins
+    ```
+    mv dist/executor_* /tmp/botkube-plugins/mv dist/source_* /tmp/botkube-plugins/mv plugins-index.yaml /tmp/botkube-plugins
+    ```
     
 3.  Commit and push copied files:
     
-        cd /tmp/botkube-pluginsgit add -Agit commit -m "Release Botkube plugins"git push
+    ```
+    cd /tmp/botkube-pluginsgit add -Agit commit -m "Release Botkube plugins"git push
+    ```
     
 4.  Remove cloned `gh-pages`:
     
-        cd -rm -rf /tmp/botkube-charts
+    ```
+    cd -rm -rf /tmp/botkube-charts
+    ```
     
 
 In such setup, you can use your default branch to store your plugins code, and the `gh-pages` branch as a plugin repository.
@@ -105,8 +123,12 @@ You can use [GitHub Actions](https://docs.github.com/en/actions) to publish Botk
 
 To use the plugins that you published, add your repository under `plugins` in the [values.yaml](https://github.com/kubeshop/botkube/blob/main/helm/botkube/values.yaml) file for a given Botkube deployment. For example:
 
-    plugins:  repositories:    repo-name:      url: https://example.com/plugins-index.yaml
+```
+plugins:  repositories:    repo-name:      url: https://example.com/plugins-index.yaml
+```
 
 Once the plugin repository is added, you can refer to it in the `executor` or `sources` section.
 
-    executors:  "plugins":    repo-name/executor-name@v1.0.0: # Plugin name syntax: {repo}/{plugin}[@{version}]. If version is not provided, the latest version from repository is used.      enabled: true      config: {} # Plugin's specific configuration.sources:  "plugins":    repo-name/source-name@v1.0.0: # Plugin name syntax: {repo}/{plugin}[@{version}]. If version is not provided, the latest version from repository is used.      enabled: true      config: {} # Plugin's specific configuration.
+```
+executors:  "plugins":    repo-name/executor-name@v1.0.0: # Plugin name syntax: {repo}/{plugin}[@{version}]. If version is not provided, the latest version from repository is used.      enabled: true      config: {} # Plugin's specific configuration.sources:  "plugins":    repo-name/source-name@v1.0.0: # Plugin name syntax: {repo}/{plugin}[@{version}]. If version is not provided, the latest version from repository is used.      enabled: true      config: {} # Plugin's specific configuration.
+```

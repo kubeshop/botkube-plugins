@@ -15,4 +15,6 @@ The plugin name is normalized and all characters different from letters, digits,
 
 To change the log level for a given plugin directly in the Botkube deployment, specify `extraEnv` in the [values.yaml](https://github.com/kubeshop/botkube/blob/main/helm/botkube/values.yaml) file. For example:
 
-    extraEnv:  - name: LOG_LEVEL_EXECUTOR_BOTKUBE_KUBECTL    value: "debug"
+```
+extraEnv:  - name: LOG_LEVEL_EXECUTOR_BOTKUBE_KUBECTL    value: "debug"
+```

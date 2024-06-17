@@ -29,7 +29,9 @@ Follow the steps below to install Botkube Discord app to your Discord server.
     
 3.  Copy the Application **APPLICATION ID** and export it as the `DISCORD_BOT_ID` environment variable.
     
-        export DISCORD_BOT_ID={APPLICATION_ID}
+    ```
+    export DISCORD_BOT_ID={APPLICATION_ID}
+    ```
     
     ![Image 3: discord_copy_client_id](https://docs.botkube.io/assets/images/discord_copy_application_id-bf48ff3b0d9dc613c35d92dc287bd305.png)
     
@@ -49,7 +51,9 @@ Follow the steps below to install Botkube Discord app to your Discord server.
     
 7.  Copy the Token and export it as the `DISCORD_TOKEN` environment variable.
     
-        export DISCORD_TOKEN={TOKEN}
+    ```
+    export DISCORD_TOKEN={TOKEN}
+    ```
     
 8.  Go to the **OAuth2** page. Generate the URL with suitable permissions using the **OAuth2 URL Generator** available under the OAuth2 section to add bot to your Discord server.
     
@@ -57,7 +61,9 @@ Follow the steps below to install Botkube Discord app to your Discord server.
     
     the generated URL contains **YOUR\_CLIENT\_ID**, Scope and permission details.
     
-        https://discord.com/api/oauth2/authorize?client_id={YOUR_CLIENT_ID}&permissions={SET_OF_PERMISSIONS}&scope=bot
+    ```
+    https://discord.com/api/oauth2/authorize?client_id={YOUR_CLIENT_ID}&permissions={SET_OF_PERMISSIONS}&scope=bot
+    ```
     
 9.  Copy and Paste the generated URL in a new tab, select the discord server to which you want to add the bot, click Continue and Authorize Bot addition.
     
@@ -79,7 +85,9 @@ Follow the steps below to install Botkube Discord app to your Discord server.
     
     Copy the channel ID and export it as the `DISCORD_CHANNEL_ID` environment variable.
     
-        export DISCORD_CHANNEL_ID={ID}
+    ```
+    export DISCORD_CHANNEL_ID={ID}
+    ```
     
 12.  Now, go ahead and install the Botkube backend on your Kubernetes cluster.
     
@@ -92,7 +100,9 @@ Follow the first 4 mins of this [Video Tutorial](https://youtu.be/8o25pRbXdFw) t
 
 To deploy Botkube agent in your cluster, run:
 
-    export CLUSTER_NAME={cluster_name}export ALLOW_KUBECTL={allow_kubectl}botkube install --version v1.12.0 \--set communications.default-group.discord.enabled=true \--set communications.default-group.discord.channels.default.id=${DISCORD_CHANNEL_ID} \--set communications.default-group.discord.botID=${DISCORD_BOT_ID} \--set communications.default-group.discord.token=${DISCORD_TOKEN} \--set settings.clusterName=${CLUSTER_NAME} \--set 'executors.k8s-default-tools.botkube/kubectl.enabled'=${ALLOW_KUBECTL}
+```
+export CLUSTER_NAME={cluster_name}export ALLOW_KUBECTL={allow_kubectl}botkube install --version v1.12.0 \--set communications.default-group.discord.enabled=true \--set communications.default-group.discord.channels.default.id=${DISCORD_CHANNEL_ID} \--set communications.default-group.discord.botID=${DISCORD_BOT_ID} \--set communications.default-group.discord.token=${DISCORD_TOKEN} \--set settings.clusterName=${CLUSTER_NAME} \--set 'executors.k8s-default-tools.botkube/kubectl.enabled'=${ALLOW_KUBECTL}
+```
 
 where:
 

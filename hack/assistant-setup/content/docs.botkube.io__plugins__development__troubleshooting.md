@@ -15,7 +15,9 @@ You don't get event message on a given communication platform even though the ev
 
 *   [Enable debugging mode for a given plugin](https://docs.botkube.io/plugins/development/debugging). Once enabled, check the Botkube logs. You can filter them by your plugin name. You should see information about downloading and starting your source. For example:
     
-        INFO[2023-01-09T21:21:24+01:00] Starting Plugin Manager for all enabled plugins  component="Plugin Manager" enabledSources=botkube/cm-watcherINFO[2023-01-09T21:21:24+01:00] Downloading plugin.                           binPath=/tmp/plugins/botkube/source_v0.13.0_cm-watcher component="Plugin Manager" url="http://host.k3d.internal:3000/static/source_cm-watcher_darwin_amd64"INFO[2023-01-09T21:21:24+01:00] source plugin registered successfully.        binPath=/tmp/plugins/botkube/source_v0.13.0_cm-watcher component="Plugin Manager" plugin=botkube/cm-watcher version=v0.13.0INFO[2023-01-09T21:21:25+01:00] Start source streaming...                     pluginName=botkube/cm-watcher sources="[plugin-based]"
+    ```
+    INFO[2023-01-09T21:21:24+01:00] Starting Plugin Manager for all enabled plugins  component="Plugin Manager" enabledSources=botkube/cm-watcherINFO[2023-01-09T21:21:24+01:00] Downloading plugin.                           binPath=/tmp/plugins/botkube/source_v0.13.0_cm-watcher component="Plugin Manager" url="http://host.k3d.internal:3000/static/source_cm-watcher_darwin_amd64"INFO[2023-01-09T21:21:24+01:00] source plugin registered successfully.        binPath=/tmp/plugins/botkube/source_v0.13.0_cm-watcher component="Plugin Manager" plugin=botkube/cm-watcher version=v0.13.0INFO[2023-01-09T21:21:25+01:00] Start source streaming...                     pluginName=botkube/cm-watcher sources="[plugin-based]"
+    ```
     
     If you don't see any of the above log messages:
     
@@ -37,7 +39,9 @@ You run a given executor command in a chat window, but you don't get any respons
 
 *   [Enable debugging mode for a given plugin](https://docs.botkube.io/plugins/development/debugging). Once enabled, run a given executor command once again, and check the Botkube logs. You can filter them by your plugin name. You should see information about downloading and registering your executor. For example:
     
-        INFO[2023-01-09T21:21:24+01:00] Starting Plugin Manager for all enabled plugins  component="Plugin Manager" enabledExecutors=botkube/echoINFO[2023-01-09T21:21:24+01:00] Downloading plugin.                           binPath=/tmp/plugins/botkube/executor_v0.13.0_echo component="Plugin Manager" url="http://host.k3d.internal:3000/static/executor_echo_darwin_amd64"INFO[2023-01-09T21:21:24+01:00] executor plugin registered successfully.      binPath=/tmp/plugins/botkube/executor_v0.13.0_echo component="Plugin Manager" plugin=botkube/echo version=v0.13.0
+    ```
+    INFO[2023-01-09T21:21:24+01:00] Starting Plugin Manager for all enabled plugins  component="Plugin Manager" enabledExecutors=botkube/echoINFO[2023-01-09T21:21:24+01:00] Downloading plugin.                           binPath=/tmp/plugins/botkube/executor_v0.13.0_echo component="Plugin Manager" url="http://host.k3d.internal:3000/static/executor_echo_darwin_amd64"INFO[2023-01-09T21:21:24+01:00] executor plugin registered successfully.      binPath=/tmp/plugins/botkube/executor_v0.13.0_echo component="Plugin Manager" plugin=botkube/echo version=v0.13.0
+    ```
     
     If you don't see any of the above log messages:
     
@@ -55,7 +59,9 @@ You run a given executor command in a chat window, but you don't get any respons
 
 In Botkube logs, you see an error similar to:
 
-    ERRO[2023-01-09T21:21:25+01:00] plugin process exited                         error="exit status 1" path=/tmp/plugins/botkube/executor_v0.13.0_echo pid=71127 plugin=botkube/echo
+```
+ERRO[2023-01-09T21:21:25+01:00] plugin process exited                         error="exit status 1" path=/tmp/plugins/botkube/executor_v0.13.0_echo pid=71127 plugin=botkube/echo
+```
 
 **Solution**
 
@@ -67,7 +73,9 @@ It means that your plugin exited once it was started by Botkube [plugin manager]
 
 In Botkube logs, you see an error similar to:
 
-    2023/01/09 21:37:04 while starting plugins manager: not found source plugin called "cm-test" in "botkube" repository
+```
+2023/01/09 21:37:04 while starting plugins manager: not found source plugin called "cm-test" in "botkube" repository
+```
 
 **Debugging steps**
 
@@ -84,4 +92,6 @@ In environments with low internet bandwidth Botkube might get killed by the read
 
 To increase the wait time of the readiness probe, you need to set the `initialDelaySeconds` property in [values.yaml](https://github.com/kubeshop/botkube/blob/9e450fb63666b03118ee51fcf9b7eb6c3b74cbcf/helm/botkube/values.yaml#L794-L821) to a higher value. For example:
 
-    --set deployment.readinessProbe.initialDelaySeconds=180
+```
+--set deployment.readinessProbe.initialDelaySeconds=180
+```

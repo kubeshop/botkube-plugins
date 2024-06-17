@@ -1,9 +1,12 @@
-Title: Getting Started | Botkube
+Title: Botkube
 
 URL Source: https://docs.botkube.io/cli/getting-started
 
 Markdown Content:
 Version: 1.12
+
+Getting Started
+---------------
 
 Botkube includes a command-line interface (CLI) that you can use to interact with Botkube and Botkube Cloud from your terminal, or from a script.
 
@@ -20,13 +23,17 @@ Select tab depending on the system you use:
 
 Use [Homebrew](https://brew.sh/) to install the latest Botkube CLI:
 
-    brew install kubeshop/botkube/botkube
+```
+brew install kubeshop/botkube/botkube
+```
 
 * * *
 
 Alternatively, download the Botkube CLI binary and move it to a directory under your `$PATH`:
 
-    curl -Lo botkube https://github.com/kubeshop/botkube/releases/download/v1.12.0/botkube-darwin-arm64chmod +x botkube && mv botkube /usr/local/bin/botkube
+```
+curl -Lo botkube https://github.com/kubeshop/botkube/releases/download/v1.12.0/botkube-darwin-arm64chmod +x botkube && mv botkube /usr/local/bin/botkube
+```
 
 First use[​](#first-use "Direct link to First use")
 ---------------------------------------------------
@@ -42,7 +49,9 @@ Autocompletion[​](#autocompletion "Direct link to Autocompletion")
 
 To learn how to enable autocompletion for your shell, run:
 
-    botkube completion --help
+```
+botkube completion --help
+```
 
 > **NOTE:** Be sure to **restart your shell** after installing autocompletion.
 

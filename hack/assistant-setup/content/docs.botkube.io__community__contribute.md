@@ -39,7 +39,9 @@ This section describes how to build and run Botkube from source code.
     
     Use the following command to clone it:
     
-        git clone https://github.com/kubeshop/botkube.git
+    ```
+    git clone https://github.com/kubeshop/botkube.git
+    ```
     
 
 ### Build and install on Kubernetes[​](#build-and-install-on-kubernetes "Direct link to Build and install on Kubernetes")
@@ -54,7 +56,9 @@ This section describes how to build and run Botkube from source code.
         
         For example, the command below builds the `linux/arm64` target:
         
-            IMAGE_PLATFORM=linux/arm64 make container-image-singledocker tag ghcr.io/kubeshop/botkube:v9.99.9-dev {your_account}/botkube:v9.99.9-devdocker push {your_account}/botkube:v9.99.9-dev
+        ```
+        IMAGE_PLATFORM=linux/arm64 make container-image-singledocker tag ghcr.io/kubeshop/botkube:v9.99.9-dev {your_account}/botkube:v9.99.9-devdocker push {your_account}/botkube:v9.99.9-dev
+        ```
         
         Where `{your_account}` is Docker hub or any other registry provider account to which you can push the image.
         
@@ -68,13 +72,17 @@ This section describes how to build and run Botkube from source code.
         
         > **Note** This command takes some time to run as it builds the images for multiple architectures.
         
-            make container-imagedocker tag ghcr.io/kubeshop/botkube:v9.99.9-dev-amd64 {your_account}/botkube:v9.99.9-devdocker push {your_account}/botkube:v9.99.9-dev
+        ```
+        make container-imagedocker tag ghcr.io/kubeshop/botkube:v9.99.9-dev-amd64 {your_account}/botkube:v9.99.9-devdocker push {your_account}/botkube:v9.99.9-dev
+        ```
         
         Where `{your_account}` is Docker hub or any other registry provider account to which you can push the image.
         
 2.  Install Botkube with any of communication platform configured, according to [the installation instructions](https://docs.botkube.io/installation/). During the Helm chart installation step, set the following flags:
     
-        export IMAGE_REGISTRY="{imageRegistry}" # e.g. docker.ioexport IMAGE_PULL_POLICY="{pullPolicy}" # e.g. Always or IfNotPresent--set image.registry=${IMAGE_REGISTRY} \--set image.repository={your_account}/botkube \--set image.tag=v9.99.9-dev \--set image.pullPolicy=${IMAGE_PULL_POLICY}
+    ```
+    export IMAGE_REGISTRY="{imageRegistry}" # e.g. docker.ioexport IMAGE_PULL_POLICY="{pullPolicy}" # e.g. Always or IfNotPresent--set image.registry=${IMAGE_REGISTRY} \--set image.repository={your_account}/botkube \--set image.tag=v9.99.9-dev \--set image.pullPolicy=${IMAGE_PULL_POLICY}
+    ```
     
     Check [values.yaml](https://github.com/kubeshop/botkube/blob/main/helm/botkube/values.yaml) for default options.
     
@@ -85,25 +93,35 @@ For faster development, you can also build and run Botkube outside K8s cluster.
 
 1.  Build Botkube local binary:
     
-        # Fetch the dependenciesgo mod download# Build the binarygo build -o botkube-agent ./cmd/botkube-agent/
+    ```
+    # Fetch the dependenciesgo mod download# Build the binarygo build -o botkube-agent ./cmd/botkube-agent/
+    ```
     
 2.  Create a local configuration file to override default values. For example, set communication credentials, specify cluster name, and disable analytics:
     
-        cat <<EOF > local_config.yamlcommunications:  default-group:    socketSlack:      enabled: true      channels:        default:          name: random      appToken: "xapp-xxxx"      botToken: "xoxb-xxxx"configWatcher:   enabled: falsesettings:  clusterName: "labs"analytics:  # -- If true, sending anonymous analytics is disabled. To learn what date we collect,  # see [Privacy Policy](https://botkube.io/privacy#privacy-policy).  disable: trueEOF
+    ```
+    cat <<EOF > local_config.yamlcommunications:  default-group:    socketSlack:      enabled: true      channels:        default:          name: random      appToken: "xapp-xxxx"      botToken: "xoxb-xxxx"configWatcher:   enabled: falsesettings:  clusterName: "labs"analytics:  # -- If true, sending anonymous analytics is disabled. To learn what date we collect,  # see [Privacy Policy](https://botkube.io/privacy#privacy-policy).  disable: trueEOF
+    ```
     
     To learn more about configuration, visit [https://docs.botkube.io/configuration/](https://docs.botkube.io/configuration/).
     
 3.  Export paths to configuration files. The priority will be given to the last (right-most) file specified.
     
-        export BOTKUBE_CONFIG_PATHS="$(pwd)/helm/botkube/values.yaml,$(pwd)/local_config.yaml"
+    ```
+    export BOTKUBE_CONFIG_PATHS="$(pwd)/helm/botkube/values.yaml,$(pwd)/local_config.yaml"
+    ```
     
 4.  Export the path to Kubeconfig:
     
-        export BOTKUBE_SETTINGS_KUBECONFIG=/Users/$USER/.kube/config # set custom path if necessary
+    ```
+    export BOTKUBE_SETTINGS_KUBECONFIG=/Users/$USER/.kube/config # set custom path if necessary
+    ```
     
 5.  Make sure you are able to access your Kubernetes cluster:
     
-        Kubernetes master is running at https://192.168.39.233:8443CoreDNS is running at https://192.168.39.233:8443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy...
+    ```
+    Kubernetes master is running at https://192.168.39.233:8443CoreDNS is running at https://192.168.39.233:8443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy...
+    ```
     
 6.  Run Botkube agent binary:
     
@@ -119,17 +137,23 @@ For faster development, you can also build and run Botkube outside K8s cluster.
 
 1.  Start fake plugins server to serve binaries from `dist` folder:
     
-        go run test/helpers/plugin_server.go
+    ```
+    go run test/helpers/plugin_server.go
+    ```
     
     > **Note** If Botkube runs inside the k3d cluster, export the `PLUGIN_SERVER_HOST=http://host.k3d.internal` environment variable.
     
 2.  Export Botkube plugins cache directory:
     
-        export BOTKUBE_PLUGINS_CACHE__DIR="/tmp/plugins"
+    ```
+    export BOTKUBE_PLUGINS_CACHE__DIR="/tmp/plugins"
+    ```
     
 3.  In other terminal window, run:
     
-        # rebuild plugins only for current GOOS and GOARCHmake build-plugins-single &&# remove cached pluginsrm -rf $BOTKUBE_PLUGINS_CACHE__DIR &&# start botkube to download fresh plugins./botkube-agent
+    ```
+    # rebuild plugins only for current GOOS and GOARCHmake build-plugins-single &&# remove cached pluginsrm -rf $BOTKUBE_PLUGINS_CACHE__DIR &&# start botkube to download fresh plugins./botkube-agent
+    ```
     
     > **Note** Each time you make a change to the [source](https://github.com/kubeshop/botkube/blob/main/cmd/source) or [executors](https://github.com/kubeshop/botkube/blob/main/cmd/executor) plugins re-run the above command.
     
@@ -147,7 +171,9 @@ Making A Change[​](#making-a-change "Direct link to Making A Change")
     
 *   To avoid build failures in CI, install [`golangci-lint`](https://golangci-lint.run/welcome/install/) and run:
     
-        # From project root directorymake lint-fix
+    ```
+    # From project root directorymake lint-fix
+    ```
     
     This will run the `golangci-lint` tool to lint the Go code.
     

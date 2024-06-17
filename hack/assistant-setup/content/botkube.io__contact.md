@@ -31,7 +31,7 @@ Company
 
 Use the form to leave us a message or connect with us on social:
 
-[](https://www.youtube.com/playlist?list=PL2Vye-us8_x_5eqYQTBq7ZywupscaW5yA)[](https://github.com/kubeshop/botkube)[](https://twitter.com/botkube_io)[](https://join.botkube.io/)[](https://www.linkedin.com/showcase/botkube/)
+[](https://www.youtube.com/playlist?list=PL2Vye-us8_x_5eqYQTBq7ZywupscaW5yA)[](https://github.com/kubeshop/botkube)[](https://twitter.com/botkube_io)[](https://api.botkube.io/routers/slack/v1/install)[](https://www.linkedin.com/showcase/botkube/)
 
 ![Image 2](https://cdn.prod.website-files.com/633705de6adaa38599d8e258/64de5389c7d816d1f6530501_botkube-status-icon.svg)
 

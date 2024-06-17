@@ -18,7 +18,9 @@ One of the plugin capabilities is the `flux diff` command. To use it, you need t
 
 First, create RBAC resources on your cluster:
 
-    cat > /tmp/flux-rbac.yaml << ENDOFFILE---apiVersion: rbac.authorization.k8s.io/v1kind: ClusterRolemetadata:  name: fluxrules:  - apiGroups: ["*"]    resources: ["*"]    verbs: ["get", "watch", "list", "patch"]---apiVersion: rbac.authorization.k8s.io/v1kind: ClusterRoleBindingmetadata:  name: fluxroleRef:  apiGroup: rbac.authorization.k8s.io  kind: ClusterRole  name: fluxsubjects:- kind: Group  name: flux  apiGroup: rbac.authorization.k8s.ioENDOFFILEkubectl apply -f /tmp/flux-rbac.yaml
+```
+cat > /tmp/flux-rbac.yaml << ENDOFFILE---apiVersion: rbac.authorization.k8s.io/v1kind: ClusterRolemetadata:  name: fluxrules:  - apiGroups: ["*"]    resources: ["*"]    verbs: ["get", "watch", "list", "patch"]---apiVersion: rbac.authorization.k8s.io/v1kind: ClusterRoleBindingmetadata:  name: fluxroleRef:  apiGroup: rbac.authorization.k8s.io  kind: ClusterRole  name: fluxsubjects:- kind: Group  name: flux  apiGroup: rbac.authorization.k8s.ioENDOFFILEkubectl apply -f /tmp/flux-rbac.yaml
+```
 
 Next, use the `flux` group in the plugin RBAC configuration:
 
@@ -44,7 +46,9 @@ You can enable the plugin as a part of Botkube instance configuration.
     
     The Flux plugin comes with integrated GitHub support. To enable it, you'll need a valid [GitHub token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/#creating-a-token). Set the token with the following configuration:
     
-        github:  auth:    accessToken: "" # your GitHub access token
+    ```
+    github:  auth:    accessToken: "" # your GitHub access token
+    ```
     
 8.  Click **Save** button.
     
@@ -66,7 +70,9 @@ The Flux plugin supports interactivity (tables, etc.) to simplify running Flux C
 
 With the Botkube Flux executor, you can execute a single command to perform a diff between a specific pull request and the cluster state. For instance:
 
-    @Botkube flux diff kustomization podinfo --path ./kustomize --github-ref [PR Number| URL | Branch]
+```
+@Botkube flux diff kustomization podinfo --path ./kustomize --github-ref [PR Number| URL | Branch]
+```
 
 ![Image 3: flux-diff](https://docs.botkube.io/assets/images/flux-diff-abdd97d5a1b5dd3b64ecf2c1712fa14d.gif)
 
@@ -88,7 +94,9 @@ The diff results are posted on the Slack channel, making it easy for team member
 
 To enhance your workflow's efficiency, you can use the [GitHub Events](https://docs.botkube.io/plugins/github-events) source for automatic notification of pull request events, complete with an integrated `flux diff` button.
 
-    github:  auth:    accessToken: "ghp_" # GitHub PATrepositories:  - name: { owner }/{name}    on:      pullRequests:          - types: [ "open" ]            paths:              # Patterns for included file changes in pull requests.              include: [ 'kustomize/.*' ]            notificationTemplate:              extraButtons:                - displayName: "Flux Diff"                  commandTpl: "flux diff ks podinfo --path ./kustomize --github-ref {{ .HTMLURL }} "
+```
+github:  auth:    accessToken: "ghp_" # GitHub PATrepositories:  - name: { owner }/{name}    on:      pullRequests:          - types: [ "open" ]            paths:              # Patterns for included file changes in pull requests.              include: [ 'kustomize/.*' ]            notificationTemplate:              extraButtons:                - displayName: "Flux Diff"                  commandTpl: "flux diff ks podinfo --path ./kustomize --github-ref {{ .HTMLURL }} "
+```
 
 Don't forget to bind the plugin to one of the channels.
 
@@ -97,4 +105,6 @@ Configuration[​](#configuration "Direct link to Configuration")
 
 The plugin supports the following configuration:
 
-    github:  auth:    # GitHub access token.    # Instructions for token creation: https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/#creating-a-token.    # Lack of token may limit functionality, e.g., adding comments to pull requests or approving them.    accessToken: ""log:  level: "info"
+```
+github:  auth:    # GitHub access token.    # Instructions for token creation: https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/#creating-a-token.    # Lack of token may limit functionality, e.g., adding comments to pull requests or approving them.    accessToken: ""log:  level: "info"
+```

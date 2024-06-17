@@ -27,16 +27,20 @@ You can enable the plugin as a part of Botkube instance configuration.
 
 The Kubectl plugin is hosted by the official Botkube plugin repository. First, make sure that the `botkube` repository is defined under `plugins` in the [values.yaml](https://github.com/kubeshop/botkube/blob/main/helm/botkube/values.yaml) file.
 
-    plugins:  repositories:    botkube:      url: https://github.com/kubeshop/botkube/releases/download/v1.12.0/plugins-index.yaml
+```
+plugins:  repositories:    botkube:      url: https://github.com/kubeshop/botkube/releases/download/v1.12.0/plugins-index.yaml
+```
 
-To enable Kubectl executor, add \`\`--set 'executors.k8s-default-tools.botkube/kubectl.enabled=true' `to a given Botkube [`install\` command\](/cli/commands/botkube\_install).
+To enable Kubectl executor, add \`\`--set 'executors.k8s-default-tools.botkube/kubectl.enabled=true'` to a given Botkube [`install\` command\](/cli/commands/botkube\_install).
 
 Usage[​](#usage "Direct link to Usage")
 ---------------------------------------
 
 To execute the `kubectl` commands, send message in following format in the channel where Botkube is already added:
 
-    @Botkube kubectl [verb] [resource] [flags]
+```
+@Botkube kubectl [verb] [resource] [flags]
+```
 
 ### Aliases[​](#aliases "Direct link to Aliases")
 
@@ -81,7 +85,9 @@ Configuration[​](#configuration "Direct link to Configuration")
 
 This plugin supports the following configuration:
 
-    # Configures the default Namespace for executing Botkube `kubectl` commands. If not set, uses the 'default'.defaultNamespace: "default"# Configures the interactive kubectl command builder.interactiveBuilder:  allowed:    # Configures which K8s namespace are displayed in namespace dropdown.    # If not specified, plugin needs to have access to fetch all Namespaces, otherwise Namespace dropdown won't be visible at all.    namespaces: ["default"]    # Configures which `kubectl` methods are displayed in commands dropdown.    verbs: ["api-resources", "api-versions", "cluster-info", "describe", "explain", "get", "logs", "top"]    # Configures which K8s resource are displayed in resources dropdown.    resources: ["deployments", "pods", "namespaces"]
+```
+# Configures the default Namespace for executing Botkube `kubectl` commands. If not set, uses the 'default'.defaultNamespace: "default"# Configures the interactive kubectl command builder.interactiveBuilder:  allowed:    # Configures which K8s namespace are displayed in namespace dropdown.    # If not specified, plugin needs to have access to fetch all Namespaces, otherwise Namespace dropdown won't be visible at all.    namespaces: ["default"]    # Configures which `kubectl` methods are displayed in commands dropdown.    verbs: ["api-resources", "api-versions", "cluster-info", "describe", "explain", "get", "logs", "top"]    # Configures which K8s resource are displayed in resources dropdown.    resources: ["deployments", "pods", "namespaces"]
+```
 
 The default configuration for Helm chart can be found in the [values.yaml](https://github.com/kubeshop/botkube/blob/main/helm/botkube/values.yaml) file.
 
@@ -94,7 +100,9 @@ For all collected `kubectl` executors bindings, configuration properties are ove
 
 Consider such configuration in the Botkube self-hosted installation:
 
-    communications:  "default-group":    socketSlack:      channels:        "default":          name: "random"          bindings:            executors:              - kubectl-one              - kubectl-two              - kubectl-threeexecutors:  "kubectl-one":    kubectl:      enabled: true      config:        defaultNamespace: "default"        interactiveBuilder:          allowed:            verbs: ["api-resources", "api-versions", "cluster-info", "describe", "explain", "get", "logs", "top"]            resources: ["deployments", "pods", "namespaces"]  "kubectl-two":    kubectl:      enabled: true      config:        interactiveBuilder:          allowed:            namespaces: ["default"]            verbs: ["api-resources", "top"]  "kubectl-three":    kubectl:      enabled: false      config:        interactiveBuilder:          allowed:            namespaces: ["kube-system"]
+```
+communications:  "default-group":    socketSlack:      channels:        "default":          name: "random"          bindings:            executors:              - kubectl-one              - kubectl-two              - kubectl-threeexecutors:  "kubectl-one":    kubectl:      enabled: true      config:        defaultNamespace: "default"        interactiveBuilder:          allowed:            verbs: ["api-resources", "api-versions", "cluster-info", "describe", "explain", "get", "logs", "top"]            resources: ["deployments", "pods", "namespaces"]  "kubectl-two":    kubectl:      enabled: true      config:        interactiveBuilder:          allowed:            namespaces: ["default"]            verbs: ["api-resources", "top"]  "kubectl-three":    kubectl:      enabled: false      config:        interactiveBuilder:          allowed:            namespaces: ["kube-system"]
+```
 
 We can see that:
 

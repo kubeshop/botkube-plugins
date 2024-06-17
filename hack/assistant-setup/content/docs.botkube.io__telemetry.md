@@ -44,7 +44,9 @@ To disable sending the anonymous analytics, provide the `analytics.disable: true
 
 To disable sending the anonymous analytics for Botkube CLI, execute the command
 
-    botkube telemetry disable
+```
+botkube telemetry disable
+```
 
 This configuration will be stored locally in `~/.botkube/config.json` file, if this file is deleted, the telemetry will be enabled again.
 

@@ -1,4 +1,4 @@
-Title: Elasticsearch | Botkube
+Title: Botkube
 
 URL Source: https://docs.botkube.io/installation/elasticsearch/
 
