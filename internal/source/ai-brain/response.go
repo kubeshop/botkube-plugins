@@ -108,7 +108,7 @@ func msgNoAIAnswer(messageID string) api.Message {
 	}
 }
 
-func msgAIAnswer(run openai.Run, payload *Payload, response string, toolCalls map[string]struct{}) api.Message {
+func msgAIAnswer(run openai.Run, payload *Payload, response string, toolCalls map[string]struct{}, isLastMessage bool) api.Message {
 	var (
 		msgID        = payload.MessageID
 		btnBldr      = api.NewMessageButtonBuilder()
@@ -117,7 +117,7 @@ func msgAIAnswer(run openai.Run, payload *Payload, response string, toolCalls ma
 
 	// MS Teams
 	if strings.Contains(msgID, teamsMessageIDSubstr) {
-		return api.Message{
+		teamsRes := api.Message{
 			Type:             api.BasicCardWithButtonsInSeparateMsg,
 			ParentActivityID: msgID,
 			BaseBody: api.Body{
@@ -127,14 +127,20 @@ func msgAIAnswer(run openai.Run, payload *Payload, response string, toolCalls ma
 				// which doesn't support most of the markdown elements.
 				Plaintext: markdownToTeams(response, usedToolsMsg),
 			},
-			Sections: []api.Section{
+		}
+
+		if isLastMessage {
+			// add Report button
+			teamsRes.Sections = []api.Section{
 				{
 					Buttons: api.Buttons{
 						btnBldr.ForCommandWithoutDesc(reportResponseBtnName, reportCmd(run, payload)),
 					},
 				},
-			},
+			}
 		}
+
+		return teamsRes
 	}
 
 	// the Sections.Base.Body is rendered by engine using `fmt.Sprintf` so we need to escape '%' returned

@@ -22,6 +22,9 @@ export async function setupFileSearch(client: OpenAI): Promise<string> {
   const vectorStore = await client.beta.vectorStores.create({
     name: vectorStoreName,
   });
+  console.log(
+    `Created vector store '${vectorStore.name}' (ID: ${vectorStore.id})`,
+  );
 
   console.log(
     "Uploading files to vector store and waiting for the file batch processing to complete. This might take a few minutes...",

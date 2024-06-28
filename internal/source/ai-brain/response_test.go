@@ -26,14 +26,14 @@ func TestConvertProperlyAIAnswer(t *testing.T) {
 	out := msgAIAnswer(openai.Run{}, &Payload{
 		MessageID: "42.42",
 		Prompt:    "This is a test",
-	}, string(md), nil)
+	}, string(md), nil, true)
 	assertGolden(t, out.Sections[0].Base.Body.Plaintext, "slack.golden.md")
 
 	// Teams
 	out = msgAIAnswer(openai.Run{}, &Payload{
 		MessageID: "19:d25cbf7cbfa74d22b42a2918452e1153@thread.tacv2",
 		Prompt:    "This is a test",
-	}, string(md), nil)
+	}, string(md), nil, true)
 	assertGolden(t, out.BaseBody.Plaintext, "teams.golden.md")
 }
 
@@ -100,7 +100,7 @@ func TestConvertProperlyAIAnswerWithTools(t *testing.T) {
 	out := msgAIAnswer(openai.Run{}, &Payload{
 		MessageID: "42.42",
 		Prompt:    "This is a test",
-	}, string(md), convertedToolCalls)
+	}, string(md), convertedToolCalls, true)
 
 	outBytes, err := json.MarshalIndent(out, "", "  ")
 	require.NoError(t, err)
@@ -110,16 +110,24 @@ func TestConvertProperlyAIAnswerWithTools(t *testing.T) {
 	out = msgAIAnswer(openai.Run{}, &Payload{
 		MessageID: "19:d25cbf7cbfa74d22b42a2918452e1153@thread.tacv2",
 		Prompt:    "This is a test",
-	}, string(md), convertedToolCalls)
+	}, string(md), convertedToolCalls, true)
 	outBytes, err = json.MarshalIndent(out, "", "  ")
 	require.NoError(t, err)
 	assertGolden(t, string(outBytes), "teams-tools.golden.json")
+
+	out = msgAIAnswer(openai.Run{}, &Payload{
+		MessageID: "19:d25cbf7cbfa74d22b42a2918452e1153@thread.tacv2",
+		Prompt:    "This is a test two",
+	}, string(md), convertedToolCalls, false)
+	outBytes, err = json.MarshalIndent(out, "", "  ")
+	require.NoError(t, err)
+	assertGolden(t, string(outBytes), "teams-tools-no-report.golden.json")
 
 	// Discord and others
 	out = msgAIAnswer(openai.Run{}, &Payload{
 		MessageID: "",
 		Prompt:    "This is a test",
-	}, string(md), convertedToolCalls)
+	}, string(md), convertedToolCalls, true)
 	outBytes, err = json.MarshalIndent(out, "", "  ")
 	require.NoError(t, err)
 	assertGolden(t, string(outBytes), "discord-tools.golden.json")
