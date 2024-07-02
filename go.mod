@@ -29,7 +29,7 @@ require (
 	github.com/muesli/reflow v0.3.0
 	github.com/olekukonko/tablewriter v0.0.5
 	github.com/prometheus/client_golang v1.16.0
-	github.com/sashabaranov/go-openai v1.23.0
+	github.com/sashabaranov/go-openai v1.26.2
 	github.com/sirupsen/logrus v1.9.3
 	github.com/slack-go/slack v0.12.2
 	github.com/spf13/pflag v1.0.5
@@ -216,6 +216,4 @@ require (
 	sigs.k8s.io/structured-merge-diff/v4 v4.4.1 // indirect
 )
 
-// We need the following PRs to be merged to switch to the official client:
-// - https://github.com/sashabaranov/go-openai/pull/760
-replace github.com/sashabaranov/go-openai => github.com/kubeshop/go-openai v0.0.0-20240610112923-333400b567ea
+replace github.com/kubeshop/botkube => github.com/pkosiec/botkube v0.12.5-0.20240702184147-05dc20e21ccc
