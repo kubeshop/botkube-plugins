@@ -774,8 +774,8 @@ github.com/pkg/errors v0.8.0/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINE
 github.com/pkg/errors v0.8.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=
 github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
-github.com/pkosiec/botkube v0.12.5-0.20240702184147-05dc20e21ccc h1:I9MK61+vRP4HbMtr3u/HB2me9qjoXNg/PP7BpK4AQc8=
-github.com/pkosiec/botkube v0.12.5-0.20240702184147-05dc20e21ccc/go.mod h1:OZeY4kLDrVQlaGxCE3XnTX8UUUhSpENIZ41PmBVIePg=
+github.com/pkosiec/botkube v0.12.5-0.20240702210815-3c25f34d2784 h1:gsWZohBmCf73ntpmwiGdjgBwg+kHjIfw4PnGy8txcwY=
+github.com/pkosiec/botkube v0.12.5-0.20240702210815-3c25f34d2784/go.mod h1:OZeY4kLDrVQlaGxCE3XnTX8UUUhSpENIZ41PmBVIePg=
 github.com/pmezard/go-difflib v0.0.0-20151028094244-d8ed2627bdf0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=

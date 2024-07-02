@@ -216,4 +216,4 @@ require (
 	sigs.k8s.io/structured-merge-diff/v4 v4.4.1 // indirect
 )
 
-replace github.com/kubeshop/botkube => github.com/pkosiec/botkube v0.12.5-0.20240702184147-05dc20e21ccc
+replace github.com/kubeshop/botkube => github.com/pkosiec/botkube v0.12.5-0.20240702210815-3c25f34d2784
