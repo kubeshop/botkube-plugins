@@ -16,8 +16,7 @@ import (
 )
 
 const (
-	healthURLFmt      = "http://127.0.0.1:%s/healthz"
-	redactedSecretStr = "*** REDACTED ***"
+	healthURLFmt = "http://127.0.0.1:%s/healthz"
 )
 
 // BotkubeRunner is a runner that executes Botkube related commands.
@@ -133,10 +132,9 @@ func (r *BotkubeRunner) fetchConfig(ctx context.Context) (string, *ConfigWithDet
 		return "", nil, fmt.Errorf("configuration cannot be nil")
 	}
 
-	cfg = r.redactSensitiveInfo(cfg)
-
+	redactedCfg := config.HideSensitiveInfo(*cfg)
 	cfgWithDetails := ConfigWithDetails{
-		Config: cfg,
+		Config: &redactedCfg,
 	}
 	if details.ValidateWarnings != nil {
 		cfgWithDetails.LoaderValidationWarnings = details.ValidateWarnings.Error()
@@ -148,27 +146,6 @@ func (r *BotkubeRunner) fetchConfig(ctx context.Context) (string, *ConfigWithDet
 	}
 
 	return string(rawCfg), &cfgWithDetails, nil
-}
-
-// copied from: https://github.com/kubeshop/botkube/blob/796493b9f8949a038b88de56ab3da90390728ccc/pkg/execute/config.go#L64-L79
-// TODO: avoid printing sensitive data without need to resetting them manually (which is an error-prone approach)
-func (r *BotkubeRunner) redactSensitiveInfo(cfg *config.Config) *config.Config {
-	for key, val := range cfg.Communications {
-		val.SocketSlack.AppToken = redactedSecretStr
-		val.SocketSlack.BotToken = redactedSecretStr
-		val.Elasticsearch.Password = redactedSecretStr
-		val.Discord.Token = redactedSecretStr
-		val.Mattermost.Token = redactedSecretStr
-		val.CloudSlack.Token = redactedSecretStr
-
-		// To keep the printed config readable, we don't print the certificate bytes.
-		val.CloudSlack.Server.TLS.CACertificate = nil
-		val.CloudTeams.Server.TLS.CACertificate = nil
-
-		// maps are not addressable
-		cfg.Communications[key] = val
-	}
-	return cfg
 }
 
 func getPlatform(msgID string) *string {
