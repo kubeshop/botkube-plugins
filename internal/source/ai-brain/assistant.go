@@ -10,6 +10,8 @@ import (
 	"strings"
 	"time"
 
+	"github.com/MakeNowJust/heredoc"
+
 	"github.com/kubeshop/botkube/pkg/ptr"
 
 	"github.com/kubeshop/botkube-cloud-plugins/internal/otelx"
@@ -28,52 +30,61 @@ import (
 )
 
 const (
-	cacheTTL                  = 8 * time.Hour
-	openAIPollInterval        = 2 * time.Second
-	maxToolExecutionRetries   = 3
-	quotaExceededErrCode      = "quota_exceeded"
-	tracerName                = "source.aibrain"
-	serviceName               = "botkube-plugins-source-ai-brain"
-	clusterScanSubcommandName = "scan"
-
-	clusterScanPrompt = `
-Scan the Kubernetes cluster for critical issues that could significantly impact the cluster's health, stability, or security.
-Focus on problems that may not be immediately apparent through events or standard monitoring.
-
-Provide a concise overview of the scan results, including the total number of
-critical issues found. If there were no issues found for a specific check, do
-not include that section in the report. List the Kubernetes objects directly
-affected by the issue. Make sure that your checks are relevant to the current
-state of the cluster, do not include resources that no longer exist.
-
-Summary section needs to be at the top of the report, followed by specific checks.
-
-Specific Checks:
-
-Pod Health:
-Identify pods in a crash-loop backoff state with a high restart count.
-Identify pods that have been OOMKilled (Out of Memory Killed) multiple times.
-Look for pods stuck in a pending state for an extended period.
-Resource Utilization:
-Identify nodes or pods with critically high CPU or memory usage (e.g., above 90% of limits).
-Check for critical resource starvation issues affecting multiple pods or namespaces.
-Configuration:
-Look for pods running with very insecure capabilities (e.g., ALL, NET_RAW, SYS_ADMIN).
-Identify pods using deprecated or insecure container images.
-Check for misconfigured network policies that could expose sensitive services.
-Networking:
-Identify pods or services experiencing significant network latency or packet loss.
-Check for network partitions or connectivity issues between critical components.
-
-Additional Guidance for the LLM Agent:
-
-Prioritize issues that pose the most immediate threat to the cluster's stability, performance, or security.
-Filter out informational or low-severity issues that are unlikely to cause major problems.
-Be as specific as possible in the descriptions. Do not exceed 2000 characters in your response.
-`
+	cacheTTL                          = 8 * time.Hour
+	openAIPollInterval                = 2 * time.Second
+	maxToolExecutionRetries           = 3
+	quotaExceededErrCode              = "quota_exceeded"
+	serviceName                       = "botkube-plugins-source-ai-brain"
+	temperature               float32 = 0.1
+	msgSplitPattern                   = "\n\n---\n\n"
+	clusterScanSubcommandName         = "scan"
+	multipleMessagesDelay             = 500 * time.Millisecond
 )
 
-var temperature float32 = 0.1
+var (
+	clusterScanPrompt = heredoc.Doc(`
+		Scan the Kubernetes cluster for critical issues that could significantly impact the cluster's health, stability, or security.
+		Focus on problems that may not be immediately apparent through events or standard monitoring.
+		Use Kubescape and kubectl tools to scan the cluster, and then aggregate the results based on the instructions.
+		Prioritize Kubescape scan results over the kubectl tools results. Include links for Kubescape controls which you got them from Kubescape scan results.
+		
+		Provide a concise overview of the scan results, including the total number of issues found.
+		If there were no issues found for a specific check, do not include that section in the report.
+		List the Kubernetes objects directly affected by the issue.
+		Make sure that your checks are relevant to the current state of the cluster, do not include resources that no longer exist.
+		
+		Summary section needs to be at the top of the report, followed by specific checks.
+		Summary outlines what are the issues and how many of them were found, and one line sentence about the overall cluster state based on the results.
+		Use emojis for the severity of the issues in the summary (critical/high/medium/low), and also for the headlines of the checks to distinguish them.
+		Use a separator "\n\n---\n\n" to split the message into TWO logical sections, no more.
+
+		Specific checks: 
+		
+		Pod Health:
+		Identify pods in a crash-loop backoff state with a high restart count.
+		Identify pods that have been OOMKilled (Out of Memory Killed) multiple times.
+		Look for pods stuck in a pending state for an extended period.
+		Resource Utilization:
+		Identify nodes or pods with critically high CPU or memory usage. By critically high we mean over 90% or more. 
+		Check for critical resource starvation issues affecting multiple pods or namespaces.
+		Configuration:
+		Look for pods running with very insecure capabilities (e.g., ALL, NET_RAW, SYS_ADMIN).
+		Identify pods using deprecated or insecure container images.
+		Check for misconfigured network policies that could expose sensitive services.
+		Networking:
+		Identify pods or services experiencing significant network latency or packet loss.
+		Check for network partitions or connectivity issues between critical components.
+		Security
+		Under this section, include Security posture from Kubescape scan.
+		
+		Additional Guidance for the LLM Agent:
+		
+		Prioritize issues that pose the most immediate threat to the cluster's stability, performance, or security.
+		Skip the check output if there are no issues found for a given check. Filter out informational issues.
+		Be as specific as possible in the descriptions. Do not exceed 3000 characters in your response.
+		Don't show kubescape commands.
+		At the end of the message, add "Feel free to ask me to provide additional details, or help on how to resolve found issues!", without a separator, in any form you like.`)
+)
 
 type tool func(ctx context.Context, args []byte, p *Payload) (string, error)
 
@@ -105,6 +116,7 @@ func newAssistant(cfg *Config, log logrus.FieldLogger, out chan source.Event, ku
 	tracer := otel.Tracer(serviceName)
 
 	kcRunner := NewKubectlRunner(kubeConfigPath, tracer)
+	ksRunner := NewKubescapeRunner(kubeConfigPath, tracer)
 	bkRunner, err := NewBotkubeRunner(tracer)
 	if err != nil {
 		return nil, fmt.Errorf("while creating Botkube runner: %w", err)
@@ -133,6 +145,10 @@ func newAssistant(cfg *Config, log logrus.FieldLogger, out chan source.Event, ku
 			"kubectlLogs":                         kcRunner.Logs,
 			"botkubeGetStartupAgentConfiguration": bkRunner.GetStartupAgentConfiguration,
 			"botkubeGetAgentStatus":               bkRunner.GetAgentStatus,
+			"kubescapeScanCluster":                ksRunner.ScanCluster,
+			"kubescapeScanWorkload":               ksRunner.ScanWorkload,
+			"kubescapeScanControl":                ksRunner.ScanControl,
+			"kubescapeScanImage":                  ksRunner.ScanImage,
 		},
 		vectorStoreIDForThread: cfg.VectorStoreIDForThread,
 	}, nil
@@ -226,7 +242,7 @@ func (i *assistant) handleThread(ctx context.Context, p *Payload) (err error) {
 	})
 	run, err := i.openaiClient.CreateRun(ctx, threadID, openai.RunRequest{
 		AssistantID: i.assistID,
-		Temperature: &temperature,
+		Temperature: ptr.FromType(temperature),
 	})
 	if err != nil {
 		return fmt.Errorf("while creating a thread run: %w", err)
@@ -359,8 +375,19 @@ func (i *assistant) handleStatusCompleted(ctx context.Context, run openai.Run, p
 
 		textValue := i.trimCitationsIfPresent(i.log, c.Text)
 
-		i.out <- source.Event{
-			Message: msgAIAnswer(run, p, textValue, toolCalls),
+		msgs := strings.Split(textValue, msgSplitPattern)
+		isMultiMessage := len(msgs) > 1
+		for j, msg := range msgs {
+			isLastMessage := j == len(msgs)-1
+			i.out <- source.Event{
+				Message: msgAIAnswer(run, p, msg, toolCalls, isLastMessage),
+			}
+
+			if isMultiMessage {
+				// Ugly workaround to force ordering of messages in the same thread
+				// Probably PubSub related?
+				time.Sleep(multipleMessagesDelay)
+			}
 		}
 	}
 

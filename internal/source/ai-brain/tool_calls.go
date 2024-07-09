@@ -20,6 +20,10 @@ var userFriendlyToolNames = map[string]string{
 	"function/kubectlTopPods":                      "kubectl top pods",
 	"function/kubectlTopNodes":                     "kubectl top nodes",
 	"function/kubectlLogs":                         "kubectl logs",
+	"function/kubescapeScanCluster":                "Kubescape cluster scan",
+	"function/kubescapeScanWorkload":               "Kubescape workload scan",
+	"function/kubescapeScanImage":                  "Kubescape image scan",
+	"function/kubescapeScanControl":                "Kubescape control scan",
 
 	"code_interpreter": "Code Interpreter", // we don't use this one, at least yet
 }

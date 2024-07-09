@@ -237,5 +237,98 @@ export function setupTools(): Array<AssistantTool> {
         },
       },
     },
+    {
+      type: "function",
+      function: {
+        name: "kubescapeScanCluster",
+        description: dedent`
+          It serves as an all-in-one tool for vulnerability and misconfiguration scanning for the whole Kubernetes cluster.
+          Kubescape includes misconfiguration and vulnerability scanning as well as risk analysis and security compliance indicators.
+          All results are presented in context and users get many cues on what to do based on scan results.
+          It saves Kubernetes users and admins precious time, effort, and resources.
+          `,
+      },
+    },
+    {
+      type: "function",
+      function: {
+        name: "kubescapeScanWorkload",
+        description: dedent`
+            Allows you to comprehensively report on the security posture of individual workloads running in a Kubernetes cluster.
+            This includes both misconfiguration and image vulnerability scanning.
+            This scan results in information that gives a 360-degree assessment of your workload's security posture.
+            
+            Usage:
+            # Scan a workload
+            kubescape scan workload {kind}/{name}
+            # Scan a workload in a specific namespace
+            kubescape scan workload {kind}/{name} --namespace {namespace}
+            `,
+        parameters: {
+          type: "object",
+          properties: {
+            namespace: {
+              type: "string",
+              description: "Kubernetes namespace, e.g. kube-system",
+            },
+            resource_kind: {
+              type: "string",
+              description:
+                "Kubernetes workload kind, e.g. Deployment or StatefulSet.",
+            },
+            resource_name: {
+              type: "string",
+              description: "Kubernetes workload name, e.g. botkube-api-server.",
+            },
+          },
+          required: ["resource_kind", "resource_name"],
+        },
+      },
+    },
+    {
+      type: "function",
+      function: {
+        name: "kubescapeScanImage",
+        description: dedent`
+            Scan an image for vulnerabilities.
+            
+            Usage:
+            kubescape scan image "nginx"
+            kubescape scan image "nginx:latest"
+            `,
+        parameters: {
+          type: "object",
+          properties: {
+            image: {
+              type: "string",
+              description: "Image name with tag, e.g. nginx:latest",
+            },
+          },
+          required: ["image"],
+        },
+      },
+    },
+    {
+      type: "function",
+      function: {
+        name: "kubescapeScanControl",
+        description: dedent`
+            Allows you to get details about a given Kubescape issue based on ID like "C-0188" or "C-0007".
+            
+            Usage:
+            kubescape scan control {control ID}
+            `,
+        parameters: {
+          type: "object",
+          properties: {
+            control: {
+              type: "string",
+              description: "Control ID, e.g. C-0188.",
+            },
+          },
+          required: ["control"],
+        },
+      },
+    },
   ];
 }

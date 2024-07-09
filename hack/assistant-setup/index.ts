@@ -47,7 +47,7 @@ const instructions = dedent`
 
 async function main() {
   let cfg: Config = {
-    projectID: "",
+    projectID: undefined,
     assistantID: "",
   };
   const assistantEnv = process.env["ASSISTANT_ENV"];

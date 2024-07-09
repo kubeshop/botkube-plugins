@@ -66,10 +66,16 @@ func binaryDependencies() map[string]api.Dependency {
 				"darwin/amd64":  fmt.Sprintf("https://dl.k8s.io/release/%s/bin/darwin/amd64/kubectl", kubectlVersion),
 				"darwin/arm64":  fmt.Sprintf("https://dl.k8s.io/release/%s/bin/darwin/arm64/kubectl", kubectlVersion),
 				"linux/amd64":   fmt.Sprintf("https://dl.k8s.io/release/%s/bin/linux/amd64/kubectl", kubectlVersion),
-				"linux/s390x":   fmt.Sprintf("https://dl.k8s.io/release/%s/bin/linux/s390x/kubectl", kubectlVersion),
-				"linux/ppc64le": fmt.Sprintf("https://dl.k8s.io/release/%s/bin/linux/ppc64le/kubectl", kubectlVersion),
 				"linux/arm64":   fmt.Sprintf("https://dl.k8s.io/release/%s/bin/linux/arm64/kubectl", kubectlVersion),
-				"linux/386":     fmt.Sprintf("https://dl.k8s.io/release/%s/bin/linux/386/kubectl", kubectlVersion),
+			},
+		},
+		kubescapeBinaryName: {
+			URLs: map[string]string{
+				"windows/amd64": fmt.Sprintf("https://github.com/kubescape/kubescape/releases/download/%s/kubescape-arm64-macos-latest", kubescapeVersion),
+				"darwin/amd64":  fmt.Sprintf("https://github.com/kubescape/kubescape/releases/download/%s/kubescape-macos-latest", kubescapeVersion),
+				"darwin/arm64":  fmt.Sprintf("https://github.com/kubescape/kubescape/releases/download/%s/kubescape-macos-latest", kubescapeVersion),
+				"linux/amd64":   fmt.Sprintf("https://github.com/kubescape/kubescape/releases/download/%s/kubescape-ubuntu-latest", kubescapeVersion),
+				"linux/arm64":   fmt.Sprintf("https://github.com/kubescape/kubescape/releases/download/%s/kubescape-arm64-ubuntu-latest", kubescapeVersion),
 			},
 		},
 	}
