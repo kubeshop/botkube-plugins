@@ -71,9 +71,9 @@ func binaryDependencies() map[string]api.Dependency {
 		},
 		kubescapeBinaryName: {
 			URLs: map[string]string{
-				"windows/amd64": fmt.Sprintf("https://github.com/kubescape/kubescape/releases/download/%s/kubescape-arm64-macos-latest", kubescapeVersion),
+				"windows/amd64": fmt.Sprintf("https://github.com/kubescape/kubescape/releases/download/%s/kubescape-windows-latest.exe", kubescapeVersion),
 				"darwin/amd64":  fmt.Sprintf("https://github.com/kubescape/kubescape/releases/download/%s/kubescape-macos-latest", kubescapeVersion),
-				"darwin/arm64":  fmt.Sprintf("https://github.com/kubescape/kubescape/releases/download/%s/kubescape-macos-latest", kubescapeVersion),
+				"darwin/arm64":  fmt.Sprintf("https://github.com/kubescape/kubescape/releases/download/%s/kubescape-arm64-macos-latest", kubescapeVersion),
 				"linux/amd64":   fmt.Sprintf("https://github.com/kubescape/kubescape/releases/download/%s/kubescape-ubuntu-latest", kubescapeVersion),
 				"linux/arm64":   fmt.Sprintf("https://github.com/kubescape/kubescape/releases/download/%s/kubescape-arm64-ubuntu-latest", kubescapeVersion),
 			},
