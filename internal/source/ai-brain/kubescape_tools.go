@@ -87,7 +87,7 @@ func (k *KubescapeRunner) ScanControl(ctx context.Context, rawArgs []byte, _ *Pa
 	ctx, span := k.tracer.Start(ctx, "aibrain.KubescapeRunner.ScanControl")
 	defer span.End()
 
-	span.SetAttributes(attribute.String("kubescapeRunner.args", string(rawArgs)))
+	span.SetAttributes(attribute.String("KubescapeRunner.args", string(rawArgs)))
 
 	var args scanControlArgs
 	if err := json.Unmarshal(rawArgs, &args); err != nil {
@@ -99,7 +99,7 @@ func (k *KubescapeRunner) ScanControl(ctx context.Context, rawArgs []byte, _ *Pa
 }
 
 func (k *KubescapeRunner) runKubescapeCommand(ctx context.Context, cmd string) (string, error) {
-	ctx, span := k.tracer.Start(ctx, "aibrain.KubectlRunner.runKubescapeCommand")
+	ctx, span := k.tracer.Start(ctx, "aibrain.KubescapeRunner.runKubescapeCommand")
 	defer span.End()
 
 	envs := map[string]string{
@@ -107,12 +107,12 @@ func (k *KubescapeRunner) runKubescapeCommand(ctx context.Context, cmd string) (
 	}
 
 	cmd = fmt.Sprintf("%s %s", kubescapeBinaryName, cmd)
-	span.SetAttributes(attribute.String("kubectlRunner.cmd", cmd))
+	span.SetAttributes(attribute.String("KubescapeRunner.cmd", cmd))
 
 	out, err := plugin.ExecuteCommand(ctx, cmd, plugin.ExecuteCommandEnvs(envs))
 
 	if out.ExitCode != 0 {
-		return fmt.Sprintf("kubectl command failed: %s", color.ClearCode(out.CombinedOutput())), nil
+		return fmt.Sprintf("kubescape command failed: %s", color.ClearCode(out.CombinedOutput())), nil
 	}
 
 	if err != nil {
