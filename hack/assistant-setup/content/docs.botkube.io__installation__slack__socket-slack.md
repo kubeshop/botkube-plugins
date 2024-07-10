@@ -5,15 +5,15 @@ URL Source: https://docs.botkube.io/installation/slack/socket-slack
 Markdown Content:
 The Socket-mode app works with the open-source Botkube Agent and does not require an account or subscription.
 
-Prerequisites[​](#prerequisites "Direct link to Prerequisites")
----------------------------------------------------------------
+Prerequisites[​](https://docs.botkube.io/installation/slack/socket-slack/#prerequisites "Direct link to Prerequisites")
+-----------------------------------------------------------------------------------------------------------------------
 
 *   Botkube CLI installed according to the [Getting Started guide](https://docs.botkube.io/cli/getting-started#installation)
 *   Access to Kubernetes cluster
 *   Slack Workspace admin access
 
-Install app for Socket Slack in Your Slack workspace[​](#install-app-for-socket-slack-in-your-slack-workspace "Direct link to Install app for Socket Slack in Your Slack workspace")
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Install app for Socket Slack in Your Slack workspace[​](https://docs.botkube.io/installation/slack/socket-slack/#install-app-for-socket-slack-in-your-slack-workspace "Direct link to Install app for Socket Slack in Your Slack workspace")
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Botkube uses interactive messaging to provide better experience. Interactive messaging needs an app for Slack with Socket Mode enabled and currently this is not suitable for Slack App Directory listing. For this reason, you need to create an app for Slack in your own Slack workspace and use it for Botkube deployment.
 
@@ -27,7 +27,7 @@ The [Botkube Cloud App for Slack](https://docs.botkube.io/installation/slack/clo
 
 Follow the steps below to create and install Botkube App for Slack to your Slack workspace.
 
-### Create app for Slack[​](#create-app-for-slack "Direct link to Create app for Slack")
+### Create app for Slack[​](https://docs.botkube.io/installation/slack/socket-slack/#create-app-for-slack "Direct link to Create app for Slack")
 
 1.  Go to [Slack App console](https://api.slack.com/apps) to create an application.
     
@@ -50,13 +50,13 @@ Follow the steps below to create and install Botkube App for Slack to your Slack
 display_information:  name: Botkube  description: Botkube  background_color: "#a653a6"features:  bot_user:    display_name: Botkube    always_online: falseoauth_config:  scopes:    bot:      - channels:read      - app_mentions:read      - reactions:write      - chat:write      - files:write      - users:read # Remote configuration only: Used to get Real Name for audit reportingsettings:  event_subscriptions:    bot_events:      - app_mention  interactivity:    is_enabled: true  org_deploy_enabled: false  socket_mode_enabled: true  token_rotation_enabled: false
 ```
 
-### Install Botkube to the Slack workspace[​](#install-botkube-to-the-slack-workspace "Direct link to Install Botkube to the Slack workspace")
+### Install Botkube to the Slack workspace[​](https://docs.botkube.io/installation/slack/socket-slack/#install-botkube-to-the-slack-workspace "Direct link to Install Botkube to the Slack workspace")
 
 Once the application is created, you will be redirected to application details page. Press the **Install your app** button, select the workspace and click **Allow to finish installation**.
 
 ![Image 3: Install App for Slack](https://docs.botkube.io/assets/images/slack_install_app-0c2fea83804d9a29ffe593d491d699c5.png)
 
-### Obtain Bot Token[​](#obtain-bot-token "Direct link to Obtain Bot Token")
+### Obtain Bot Token[​](https://docs.botkube.io/installation/slack/socket-slack/#obtain-bot-token "Direct link to Obtain Bot Token")
 
 Follow the steps to obtain the Bot Token:
 
@@ -71,7 +71,7 @@ Follow the steps to obtain the Bot Token:
     ```
     
 
-### Generate and obtain App-Level Token[​](#generate-and-obtain-app-level-token "Direct link to Generate and obtain App-Level Token")
+### Generate and obtain App-Level Token[​](https://docs.botkube.io/installation/slack/socket-slack/#generate-and-obtain-app-level-token "Direct link to Generate and obtain App-Level Token")
 
 App for Slack with Socket Mode requires an App-Level Token for the websocket connection.
 
@@ -92,12 +92,12 @@ Follow the steps to generate an App-Level Token:
     ```
     
 
-### Add Botkube user to a Slack channel[​](#add-botkube-user-to-a-slack-channel "Direct link to Add Botkube user to a Slack channel")
+### Add Botkube user to a Slack channel[​](https://docs.botkube.io/installation/slack/socket-slack/#add-botkube-user-to-a-slack-channel "Direct link to Add Botkube user to a Slack channel")
 
 After installing Botkube app to your Slack workspace, you could see a new bot user with the name "Botkube" added in your workspace. Add that bot to a Slack channel you want to receive notification in. You can add it by inviting `@Botkube` in a channel.
 
-Install Botkube in Kubernetes cluster[​](#install-botkube-in-kubernetes-cluster "Direct link to Install Botkube in Kubernetes cluster")
----------------------------------------------------------------------------------------------------------------------------------------
+Install Botkube in Kubernetes cluster[​](https://docs.botkube.io/installation/slack/socket-slack/#install-botkube-in-kubernetes-cluster "Direct link to Install Botkube in Kubernetes cluster")
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 To deploy Botkube agent in your cluster, run:
 
@@ -117,12 +117,12 @@ Configuration syntax is explained [here](https://docs.botkube.io/self-hosted-con
 
 Send `@Botkube ping` in the channel to see if Botkube is running and responding.
 
-### Delete Botkube from Slack workspace[​](#delete-botkube-from-slack-workspace "Direct link to Delete Botkube from Slack workspace")
+### Delete Botkube from Slack workspace[​](https://docs.botkube.io/installation/slack/socket-slack/#delete-botkube-from-slack-workspace "Direct link to Delete Botkube from Slack workspace")
 
 *   Go to the [Slack apps](https://api.slack.com/apps) page,
 *   Click on "Botkube", scroll to bottom, and click on "Delete App" button.
 
-Remove Botkube from Kubernetes cluster[​](#remove-botkube-from-kubernetes-cluster "Direct link to Remove Botkube from Kubernetes cluster")
-------------------------------------------------------------------------------------------------------------------------------------------
+Remove Botkube from Kubernetes cluster[​](https://docs.botkube.io/installation/slack/socket-slack/#remove-botkube-from-kubernetes-cluster "Direct link to Remove Botkube from Kubernetes cluster")
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Execute the following command to completely remove Botkube and related resources from your cluster:

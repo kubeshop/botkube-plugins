@@ -17,15 +17,13 @@ A closer look into the Botkube team's process for developing the ArgoCD plugin
 
 ### Table of Contents
 
-*   [ArgoCD Plugin for Kubernetes Deployment Management](#argocd-plugin-for-kubernetes-deployment-management)
-*   [How Botkube Uses ArgoCD for GitOps Management](#how-botkube-uses-argocd-for-gitops-management)
-*   [Conclusion](#conclusion)
-*   [Sign up now!](#sign-up-now-)
-*   [Feedback](#feedback)
+*   [ArgoCD Plugin for Kubernetes Deployment Management](https://botkube.io/blog/optimizing-collaboration-and-notifications-with-the-botkube-argocd-plugin#argocd-plugin-for-kubernetes-deployment-management)
+*   [How Botkube Uses ArgoCD for GitOps Management](https://botkube.io/blog/optimizing-collaboration-and-notifications-with-the-botkube-argocd-plugin#how-botkube-uses-argocd-for-gitops-management)
+*   [Conclusion](https://botkube.io/blog/optimizing-collaboration-and-notifications-with-the-botkube-argocd-plugin#conclusion)
+*   [Sign up now!](https://botkube.io/blog/optimizing-collaboration-and-notifications-with-the-botkube-argocd-plugin#sign-up-now-)
+*   [Feedback](https://botkube.io/blog/optimizing-collaboration-and-notifications-with-the-botkube-argocd-plugin#feedback)
 
 #### Start Using Botkube AI-Powered Assistant Today
-
-#### Get Started with Botkube Today!
 
 IT operations have always been very dynamic and rapidly evolving and even more so in the cloud-native world. Insight into the state of the system is crucial for maintaining operational awareness and ensuring that the system is running as expected. This is especially true in Kubernetes where the system is constantly changing and evolving. At Botkube we believe that notifications from Continuous Delivery tools, such as ArgoCD, are a key part of this.
 
@@ -59,7 +57,7 @@ As with every new Botkube feature, we were the first users. We wanted to make su
 
 [Once the plugin is installed](https://docs.botkube.io/configuration/source/argocd/), it automatically configures ArgoCD notifications for all communication platforms supported by Botkube, such as Slack, Microsoft Teams, and Discord. The plugin also provides real-time updates about ArgoCD events, such as "New Application Version Detected" or "Sync Started", detailed change information, and customizable alerts. This aligns with the GitOps philosophy of declarative configuration and enables users to easily monitor and manage their Kubernetes applications.
 
-The plugin can be installed either via web UI at [app.botkube.io](http://app.botkube.io/) or with the Botkube CLI.
+The plugin can be installed either via web UI at [app.botkube.io](https://app.botkube.io/) or with the Botkube CLI.
 
   Botkube install --version v1.5.0 \\
   --set sources.argocd.Botkube/argocd.enabled=true \\

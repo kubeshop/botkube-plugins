@@ -17,12 +17,12 @@ Chatops is not dead...it's making a comeback. In the fast-paced world of softwar
 
 ### Table of Contents
 
-*   [Unleashing the Power of ChatOps:](#unleashing-the-power-of-chatops-)
-*   [Evolving with the Developer Community:](#evolving-with-the-developer-community-)
-*   [What is Botkube? Is it ChatOps for Kubernetes?](#what-is-botkube-is-it-chatops-for-kubernetes-)
-*   [How Botkube Innovates the Chatops Space](#how-botkube-innovates-the-chatops-space)
-*   [Embrace the Future of Collaborative Troubleshooting:](#embrace-the-future-of-collaborative-troubleshooting-)
-*   [Feedback - We’d Love to Hear From You!](#feedback-we-d-love-to-hear-from-you-)
+*   [Unleashing the Power of ChatOps:](https://botkube.io/blog/supercharging-developer-collaboration-how-chatops-lives-on-with-botkube#unleashing-the-power-of-chatops-)
+*   [Evolving with the Developer Community:](https://botkube.io/blog/supercharging-developer-collaboration-how-chatops-lives-on-with-botkube#evolving-with-the-developer-community-)
+*   [What is Botkube? Is it ChatOps for Kubernetes?](https://botkube.io/blog/supercharging-developer-collaboration-how-chatops-lives-on-with-botkube#what-is-botkube-is-it-chatops-for-kubernetes-)
+*   [How Botkube Innovates the Chatops Space](https://botkube.io/blog/supercharging-developer-collaboration-how-chatops-lives-on-with-botkube#how-botkube-innovates-the-chatops-space)
+*   [Embrace the Future of Collaborative Troubleshooting:](https://botkube.io/blog/supercharging-developer-collaboration-how-chatops-lives-on-with-botkube#embrace-the-future-of-collaborative-troubleshooting-)
+*   [Feedback - We’d Love to Hear From You!](https://botkube.io/blog/supercharging-developer-collaboration-how-chatops-lives-on-with-botkube#feedback-we-d-love-to-hear-from-you-)
 
 #### Start Using Botkube AI-Powered Assistant Today
 

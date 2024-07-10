@@ -1,11 +1,8 @@
-Title: Terms and Conditions
+Title: Terms and Conditions | Botkube
 
 URL Source: https://botkube.io/terms-and-conditions
 
 Markdown Content:
-Botkube Terms and Conditions
-----------------------------
-
 _Last updated March 8,2023_
 
 ### TABLE OF CONTENTS
@@ -57,9 +54,7 @@ We may, at Our sole discretion, offer a free trial to new users who register wit
 4\. CANCELLATION
 ----------------
 
-All purchases are non-refundable. You can cancel Your subscription at any time by logging into Your account or contacting Us using the contact
-
-information provided below. Your cancellation will take effect at the end of the current paid term.
+All purchases are non-refundable. You can cancel Your subscription at any time by logging into Your account or contacting Us using the contact information provided below. Your cancellation will take effect at the end of the current paid term.
 
 If You are unsatisfied with Our services, please email Us at: [frontdesk@kubeshop.io](mailto:frontdesk@kubeshop.io).
 

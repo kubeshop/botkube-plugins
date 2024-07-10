@@ -10,13 +10,13 @@ Markdown Content:
 
 Version: 1.12
 
-Prerequisites[​](#prerequisites "Direct link to Prerequisites")
----------------------------------------------------------------
+Prerequisites[​](https://docs.botkube.io/installation/webhook/cloud/#prerequisites "Direct link to Prerequisites")
+------------------------------------------------------------------------------------------------------------------
 
 *   Botkube Cloud account which you can create [here](https://app.botkube.io/) for free.
 
-Create a Botkube Cloud Instance with Webhook[​](#create-a-botkube-cloud-instance-with-webhook "Direct link to Create a Botkube Cloud Instance with Webhook")
-------------------------------------------------------------------------------------------------------------------------------------------------------------
+Create a Botkube Cloud Instance with Webhook[​](https://docs.botkube.io/installation/webhook/cloud/#create-a-botkube-cloud-instance-with-webhook "Direct link to Create a Botkube Cloud Instance with Webhook")
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 1.  Go to Botkube Cloud [Web App](https://app.botkube.io/) and create a new instance.
     
@@ -51,10 +51,10 @@ Create a Botkube Cloud Instance with Webhook[​](#create-a-botkube-cloud-instan
     ![Image 6: Summary](https://docs.botkube.io/assets/images/webhook_summary-bfdc3ff0af6735b41a17d7219fd6b6f0.png)
     
 
-Clean up[​](#clean-up "Direct link to Clean up")
-------------------------------------------------
+Clean up[​](https://docs.botkube.io/installation/webhook/cloud/#clean-up "Direct link to Clean up")
+---------------------------------------------------------------------------------------------------
 
-### Remove Botkube from Kubernetes cluster[​](#remove-botkube-from-kubernetes-cluster "Direct link to Remove Botkube from Kubernetes cluster")
+### Remove Botkube from Kubernetes cluster[​](https://docs.botkube.io/installation/webhook/cloud/#remove-botkube-from-kubernetes-cluster "Direct link to Remove Botkube from Kubernetes cluster")
 
 1.  Go to Botkube Cloud instances page and click `Manage` button of the instance you want to remove.
     

@@ -17,18 +17,16 @@ As K8s becomes the solution for container orchestration and remote work environm
 
 ### Table of Contents
 
-*   [Introduction to Troubleshooting Kubernetes](#introduction-to-troubleshooting-kubernetes)
-*   [What is Kubernetes Troubleshooting?](#what-is-kubernetes-troubleshooting-)
-*   [How does Kubernetes troubleshooting work?](#how-does-kubernetes-troubleshooting-work-)
-*   [What makes troubleshooting multiple Kubernetes clusters so difficult?](#what-makes-troubleshooting-multiple-kubernetes-clusters-so-difficult-)
-*   [Best Practices for Kubernetes Multi-cluster Troubleshooting](#best-practices-for-kubernetes-multi-cluster-troubleshooting)
-*   [Some Common Kubernetes Errors](#some-common-kubernetes-errors)
-*   [Conclusion](#conclusion)
-*   [CNCF Islamabad and Botkube Webinar](#cncf-islamabad-and-botkube-webinar)
+*   [Introduction to Troubleshooting Kubernetes](https://botkube.io/blog/best-practices-for-kubernetes-troubleshooting-in-multi-cluster-environments#introduction-to-troubleshooting-kubernetes)
+*   [What is Kubernetes Troubleshooting?](https://botkube.io/blog/best-practices-for-kubernetes-troubleshooting-in-multi-cluster-environments#what-is-kubernetes-troubleshooting-)
+*   [How does Kubernetes troubleshooting work?](https://botkube.io/blog/best-practices-for-kubernetes-troubleshooting-in-multi-cluster-environments#how-does-kubernetes-troubleshooting-work-)
+*   [What makes troubleshooting multiple Kubernetes clusters so difficult?](https://botkube.io/blog/best-practices-for-kubernetes-troubleshooting-in-multi-cluster-environments#what-makes-troubleshooting-multiple-kubernetes-clusters-so-difficult-)
+*   [Best Practices for Kubernetes Multi-cluster Troubleshooting](https://botkube.io/blog/best-practices-for-kubernetes-troubleshooting-in-multi-cluster-environments#best-practices-for-kubernetes-multi-cluster-troubleshooting)
+*   [Some Common Kubernetes Errors](https://botkube.io/blog/best-practices-for-kubernetes-troubleshooting-in-multi-cluster-environments#some-common-kubernetes-errors)
+*   [Conclusion](https://botkube.io/blog/best-practices-for-kubernetes-troubleshooting-in-multi-cluster-environments#conclusion)
+*   [CNCF Islamabad and Botkube Webinar](https://botkube.io/blog/best-practices-for-kubernetes-troubleshooting-in-multi-cluster-environments#cncf-islamabad-and-botkube-webinar)
 
 #### Start Using Botkube AI-Powered Assistant Today
-
-#### Get Started with Botkube Today!
 
 Introduction to Troubleshooting Kubernetes
 ------------------------------------------

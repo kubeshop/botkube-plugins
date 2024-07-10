@@ -17,13 +17,11 @@ Learn about the latest v1.11 release, including an update to the AI-powered Botk
 
 ### Table of Contents
 
-*   [What is Botkube?](#what-is-botkube-)
-*   [View Your Configuration Details in Seconds](#view-your-configuration-details-in-seconds)
-*   [Botkube Assistant: Empowering Users From the Start](#botkube-assistant-empowering-users-from-the-start)
-*   [What’s next for Botkube?](#what-s-next-for-botkube-)
-*   [Try the Latest Version of Botkube Today](#try-the-latest-version-of-botkube-today)
-
-#### Start Using Botkube AI-Powered Assistant Today
+*   [What is Botkube?](https://botkube.io/blog/start-troubleshooting-k8s-faster-with-botkubes-latest-improvements#what-is-botkube-)
+*   [View Your Configuration Details in Seconds](https://botkube.io/blog/start-troubleshooting-k8s-faster-with-botkubes-latest-improvements#view-your-configuration-details-in-seconds)
+*   [Botkube Assistant: Empowering Users From the Start](https://botkube.io/blog/start-troubleshooting-k8s-faster-with-botkubes-latest-improvements#botkube-assistant-empowering-users-from-the-start)
+*   [What’s next for Botkube?](https://botkube.io/blog/start-troubleshooting-k8s-faster-with-botkubes-latest-improvements#what-s-next-for-botkube-)
+*   [Try the Latest Version of Botkube Today](https://botkube.io/blog/start-troubleshooting-k8s-faster-with-botkubes-latest-improvements#try-the-latest-version-of-botkube-today)
 
 #### Start Using Botkube AI-Powered Assistant Today
 

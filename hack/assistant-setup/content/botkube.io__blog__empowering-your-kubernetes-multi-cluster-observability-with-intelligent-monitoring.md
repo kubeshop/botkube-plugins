@@ -17,15 +17,13 @@ Discover how Botkube optimizes multi-cluster Kubernetes observability with autom
 
 ### Table of Contents
 
-*   [Why Kubernetes Multi-Cluster Environments?](#why-kubernetes-multi-cluster-environments-)
-*   [Challenges of Multi-Cluster Management](#challenges-of-multi-cluster-management)
-*   [Optimizing Efficiency in Kubernetes Multi-Cluster Management](#optimizing-efficiency-in-kubernetes-multi-cluster-management-)
-*   [Conclusion](#conclusion)
-*   [Getting Started with Botkube Today](#getting-started-with-botkube-today)
+*   [Why Kubernetes Multi-Cluster Environments?](https://botkube.io/blog/empowering-your-kubernetes-multi-cluster-observability-with-intelligent-monitoring#why-kubernetes-multi-cluster-environments-)
+*   [Challenges of Multi-Cluster Management](https://botkube.io/blog/empowering-your-kubernetes-multi-cluster-observability-with-intelligent-monitoring#challenges-of-multi-cluster-management)
+*   [Optimizing Efficiency in Kubernetes Multi-Cluster Management](https://botkube.io/blog/empowering-your-kubernetes-multi-cluster-observability-with-intelligent-monitoring#optimizing-efficiency-in-kubernetes-multi-cluster-management-)
+*   [Conclusion](https://botkube.io/blog/empowering-your-kubernetes-multi-cluster-observability-with-intelligent-monitoring#conclusion)
+*   [Getting Started with Botkube Today](https://botkube.io/blog/empowering-your-kubernetes-multi-cluster-observability-with-intelligent-monitoring#getting-started-with-botkube-today)
 
 #### Start Using Botkube AI-Powered Assistant Today
-
-#### Manage your Kubernetes Clusters Directly in Slack and Microsoft Teams
 
 Organizations of all sizes are increasingly adopting Kubernetes, leading to the introduction of multi-cluster environments. These environments fulfill objectives like workload isolation, resource optimization, and geographical distribution. However, [managing multi-cluster](https://botkube.io/blog/best-practices-for-kubernetes-troubleshooting-in-multi-cluster-environments) setups poses challenges such as complexity and required Kubernetes knowledge. To address these challenges and ensure efficient cluster management, Botkube provides a solution. [Botkube](https://botkube.io/) is a collaborative Kubernetes troubleshooting and monitoring tool tailored for DevOps teams, enhancing their Kubernetes observability workflow by delivering timely alerts about issues within their Kubernetes environments.
 

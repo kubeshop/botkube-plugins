@@ -7,8 +7,8 @@ You can extend Botkube functionality by writing custom source plugin. A source a
 
 Source is a binary that implements the [source](https://github.com/kubeshop/botkube/blob/main/proto/source.proto) Protocol Buffers contract.
 
-Goal[​](#goal "Direct link to Goal")
-------------------------------------
+Goal[​](https://docs.botkube.io/plugins/development/custom-source/#goal "Direct link to Goal")
+----------------------------------------------------------------------------------------------
 
 This tutorial shows you how to build a custom `ticker` source that emits an event at a specified interval.
 
@@ -16,15 +16,15 @@ This tutorial shows you how to build a custom `ticker` source that emits an even
 
 For a final implementation, see the [Botkube template repository](https://docs.botkube.io/plugins/development/quick-start).
 
-Prerequisites[​](#prerequisites "Direct link to Prerequisites")
----------------------------------------------------------------
+Prerequisites[​](https://docs.botkube.io/plugins/development/custom-source/#prerequisites "Direct link to Prerequisites")
+-------------------------------------------------------------------------------------------------------------------------
 
 *   Basic understanding of the Go language.
 *   [Go](https://golang.org/doc/install) at least 1.18.
     *   See [go.mod](https://github.com/kubeshop/botkube/blob/main/go.mod#L1) for the recommended version used by Botkube team.
 *   [GoReleaser](https://goreleaser.com/) at least 1.13.
 
-### Develop plugin business logic[​](#develop-plugin-business-logic "Direct link to Develop plugin business logic")
+### Develop plugin business logic[​](https://docs.botkube.io/plugins/development/custom-source/#develop-plugin-business-logic "Direct link to Develop plugin business logic")
 
 1.  Create a source plugin directory:
     
@@ -66,7 +66,7 @@ Prerequisites[​](#prerequisites "Direct link to Prerequisites")
     
     The `Stream` method is the heart of your source plugin. This method runs your business logic and push events into the `out.Output` channel. Next, the Botkube core sends the event to a given communication platform.
     
-    The `Stream` method is called only once. Botkube attaches the list of associated configurations. You will learn more about that in the [**Passing configuration to your plugin**](#passing-configuration-to-your-plugin) section.
+    The `Stream` method is called only once. Botkube attaches the list of associated configurations. You will learn more about that in the [**Passing configuration to your plugin**](https://docs.botkube.io/plugins/development/custom-source/#passing-configuration-to-your-plugin) section.
     
 7.  Implement `HandleExternalRequest` method:
     
@@ -86,8 +86,8 @@ Prerequisites[​](#prerequisites "Direct link to Prerequisites")
     ```
     
 
-Build plugin binaries[​](#build-plugin-binaries "Direct link to Build plugin binaries")
----------------------------------------------------------------------------------------
+Build plugin binaries[​](https://docs.botkube.io/plugins/development/custom-source/#build-plugin-binaries "Direct link to Build plugin binaries")
+-------------------------------------------------------------------------------------------------------------------------------------------------
 
 Now it's time to build your plugin. For that purpose we will use GoReleaser. It simplifies building Go binaries for different architectures.
 
@@ -112,8 +112,8 @@ Congrats! You just created your first Botkube source plugin! 🎉
 
 Now it's time to [test it locally with Botkube](https://docs.botkube.io/plugins/development/local-testing). Once you're done testing, see how to [distribute it](https://docs.botkube.io/plugins/development/repo).
 
-Passing configuration to your plugin[​](#passing-configuration-to-your-plugin "Direct link to Passing configuration to your plugin")
-------------------------------------------------------------------------------------------------------------------------------------
+Passing configuration to your plugin[​](https://docs.botkube.io/plugins/development/custom-source/#passing-configuration-to-your-plugin "Direct link to Passing configuration to your plugin")
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Sometimes your source plugin requires a configuration specified by the end-user. Botkube supports such requirement and provides an option to specify plugin configuration under `config`. An example Botkube configuration looks like this:
 

@@ -17,11 +17,11 @@ The latest release of Botkube is here! This release from the new Botkube team in
 
 ### Table of Contents
 
-*   [Multi-Channel Support](#multi-channel-support)
-*   [Bug Fixes](#bug-fixes)
-*   [Release Pipeline Enhancements](#release-pipeline-enhancements)
-*   [Telemetry](#telemetry)
-*   [Feedback - We’d Love to Hear From You](#feedback-we-d-love-to-hear-from-you)
+*   [Multi-Channel Support](https://botkube.io/blog/botkube-v013-release-notes#multi-channel-support)
+*   [Bug Fixes](https://botkube.io/blog/botkube-v013-release-notes#bug-fixes)
+*   [Release Pipeline Enhancements](https://botkube.io/blog/botkube-v013-release-notes#release-pipeline-enhancements)
+*   [Telemetry](https://botkube.io/blog/botkube-v013-release-notes#telemetry)
+*   [Feedback - We’d Love to Hear From You](https://botkube.io/blog/botkube-v013-release-notes#feedback-we-d-love-to-hear-from-you)
 
 #### Start Using Botkube AI-Powered Assistant Today
 

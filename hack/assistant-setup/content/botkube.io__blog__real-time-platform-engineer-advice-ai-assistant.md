@@ -17,14 +17,12 @@ Imagine having K8s experts available, providing help to your team 24/7. Get real
 
 ### Table of Contents
 
-*   [Designed for DevOps Teams with All Experience Levels](#designed-for-devops-teams-with-all-experience-levels)
-*   [Troubleshoot Kubernetes Errors in Seconds](#troubleshoot-kubernetes-errors-in-seconds)
-*   [Kubernetes Expertise Directly in Your Chat Platform](#kubernetes-expertise-directly-in-your-chat-platform)
-*   [Get Started with AIOps for Kubernetes](#get-started-with-aiops-for-kubernetes)
+*   [Designed for DevOps Teams with All Experience Levels](https://botkube.io/blog/real-time-platform-engineer-advice-ai-assistant#designed-for-devops-teams-with-all-experience-levels)
+*   [Troubleshoot Kubernetes Errors in Seconds](https://botkube.io/blog/real-time-platform-engineer-advice-ai-assistant#troubleshoot-kubernetes-errors-in-seconds)
+*   [Kubernetes Expertise Directly in Your Chat Platform](https://botkube.io/blog/real-time-platform-engineer-advice-ai-assistant#kubernetes-expertise-directly-in-your-chat-platform)
+*   [Get Started with AIOps for Kubernetes](https://botkube.io/blog/real-time-platform-engineer-advice-ai-assistant#get-started-with-aiops-for-kubernetes)
 
 #### Start Using Botkube AI-Powered Assistant Today
-
-#### Get Started with Botkube Today!
 
 We’re thrilled to announce our newest Botkube feature, AI Assistant! This game-changing capability makes it easier than ever for teams to identify, diagnose, and troubleshoot issues in any Kubernetes cluster. Powered by a Kubernetes-focused LLM, Botkube provides crucial visibility into Kubernetes events while empowering teams to manage these events through direct communication platforms like Slack or Microsoft Teams.
 

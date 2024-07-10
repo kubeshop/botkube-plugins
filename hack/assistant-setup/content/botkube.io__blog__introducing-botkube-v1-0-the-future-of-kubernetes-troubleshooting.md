@@ -17,12 +17,12 @@ Something new is coming to the Botkube universe...
 
 ### Table of Contents
 
-*   [What is Botkube?](#what-is-botkube-)
-*   [RBAC support](#rbac-support-)
-*   [Interactive Control Plane](#interactive-control-plane-)
-*   [Additional Features](#additional-features)
-*   [Sign up now](#sign-up-now)
-*   [Feedback](#feedback)
+*   [What is Botkube?](https://botkube.io/blog/introducing-botkube-v1-0-the-future-of-kubernetes-troubleshooting#what-is-botkube-)
+*   [RBAC support](https://botkube.io/blog/introducing-botkube-v1-0-the-future-of-kubernetes-troubleshooting#rbac-support-)
+*   [Interactive Control Plane](https://botkube.io/blog/introducing-botkube-v1-0-the-future-of-kubernetes-troubleshooting#interactive-control-plane-)
+*   [Additional Features](https://botkube.io/blog/introducing-botkube-v1-0-the-future-of-kubernetes-troubleshooting#additional-features)
+*   [Sign up now](https://botkube.io/blog/introducing-botkube-v1-0-the-future-of-kubernetes-troubleshooting#sign-up-now)
+*   [Feedback](https://botkube.io/blog/introducing-botkube-v1-0-the-future-of-kubernetes-troubleshooting#feedback)
 
 #### Start Using Botkube AI-Powered Assistant Today
 

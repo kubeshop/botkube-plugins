@@ -17,16 +17,14 @@ Discover the technical journey behind enhancing Microsoft Teams integration for 
 
 ### Table of Contents
 
-*   [Introduction](#introduction-)
-*   [Inspiration from the Field](#inspiration-from-the-field-)
-*   [Technical journey](#technical-journey-)
-*   [New Microsoft Teams integration: Key Features](#new-microsoft-teams-integration-key-features-)
-*   [Setting Up and Configuration](#setting-up-and-configuration-)
-*   [What do you think? Let us know!](#what-do-you-think-let-us-know-)
+*   [Introduction](https://botkube.io/blog/microsoft-teams-integration-for-botkube-a-technical-journey#introduction-)
+*   [Inspiration from the Field](https://botkube.io/blog/microsoft-teams-integration-for-botkube-a-technical-journey#inspiration-from-the-field-)
+*   [Technical journey](https://botkube.io/blog/microsoft-teams-integration-for-botkube-a-technical-journey#technical-journey-)
+*   [New Microsoft Teams integration: Key Features](https://botkube.io/blog/microsoft-teams-integration-for-botkube-a-technical-journey#new-microsoft-teams-integration-key-features-)
+*   [Setting Up and Configuration](https://botkube.io/blog/microsoft-teams-integration-for-botkube-a-technical-journey#setting-up-and-configuration-)
+*   [What do you think? Let us know!](https://botkube.io/blog/microsoft-teams-integration-for-botkube-a-technical-journey#what-do-you-think-let-us-know-)
 
 #### Start Using Botkube AI-Powered Assistant Today
-
-#### Start Receiving Kubernetes Notifications Now
 
 Introduction
 ------------

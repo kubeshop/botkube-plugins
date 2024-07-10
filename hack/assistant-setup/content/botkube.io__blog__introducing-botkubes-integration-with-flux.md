@@ -17,16 +17,14 @@ As the demand for seamless scalability and efficient teamwork increases, an inno
 
 ### Table of Contents
 
-*   [Introduction](#introduction)
-*   [What is Flux?](#what-is-flux-)
-*   [What is Botkube?](#what-is-botkube-)
-*   [Why is it important?](#why-is-it-important-)
-*   [Optimized Flux Workflow](#optimized-flux-workflow)
-*   [Get Started with Botkube’s new Flux Plugin](#get-started-with-botkube-s-new-flux-plugin)
+*   [Introduction](https://botkube.io/blog/introducing-botkubes-integration-with-flux#introduction)
+*   [What is Flux?](https://botkube.io/blog/introducing-botkubes-integration-with-flux#what-is-flux-)
+*   [What is Botkube?](https://botkube.io/blog/introducing-botkubes-integration-with-flux#what-is-botkube-)
+*   [Why is it important?](https://botkube.io/blog/introducing-botkubes-integration-with-flux#why-is-it-important-)
+*   [Optimized Flux Workflow](https://botkube.io/blog/introducing-botkubes-integration-with-flux#optimized-flux-workflow)
+*   [Get Started with Botkube’s new Flux Plugin](https://botkube.io/blog/introducing-botkubes-integration-with-flux#get-started-with-botkube-s-new-flux-plugin)
 
 #### Start Using Botkube AI-Powered Assistant Today
-
-#### Get Started with Botkube Today!
 
 Introduction
 ------------
@@ -77,8 +75,9 @@ Optimized Flux Workflow
 
 With Botkube's new Flux executor, you can simplify complex tasks using a single command
 
-    @BotKube flux diff kustomization podinfo --path ./kustomize --github-ref [PR Number| URL | Branch]
-    
+```
+@BotKube flux diff kustomization podinfo --path ./kustomize --github-ref [PR Number| URL | Branch]
+```
 
 This command works right in your preferred chat platform like Slack or Teams, making everything easy. Get ready to experience a world where innovation and user-friendly simplicity come together!
 

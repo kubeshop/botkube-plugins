@@ -17,15 +17,13 @@ Learn how to set up Botkube with Flux and GitHub-events plugins in this step-by-
 
 ### Table of Contents
 
-*   [Prerequisites](#prerequisites)
-*   [Using the Flux Plugin in Action](#using-the-flux-plugin-in-action)
-*   [Conclusion](#conclusion)
-*   [Sign up now](#sign-up-now)
-*   [Feedback](#feedback)
+*   [Prerequisites](https://botkube.io/blog/streamlining-gitops-with-the-botkube-flux-plugin#prerequisites)
+*   [Using the Flux Plugin in Action](https://botkube.io/blog/streamlining-gitops-with-the-botkube-flux-plugin#using-the-flux-plugin-in-action)
+*   [Conclusion](https://botkube.io/blog/streamlining-gitops-with-the-botkube-flux-plugin#conclusion)
+*   [Sign up now](https://botkube.io/blog/streamlining-gitops-with-the-botkube-flux-plugin#sign-up-now)
+*   [Feedback](https://botkube.io/blog/streamlining-gitops-with-the-botkube-flux-plugin#feedback)
 
 #### Start Using Botkube AI-Powered Assistant Today
-
-#### Get Started with Botkube Today!
 
 In today's fast-paced world of Kubernetes management, embracing GitOps is a crucial step towards efficient collaboration and automation. However, it comes with its own set of challenges. Enter [Botkube](https://botkube.io/), a Kubernetes collaborative troubleshooting tool for Kubernetes that seamlessly integrates with popular collaboration platforms like [Slack, Microsoft Teams, Discord, and Mattermost](https://botkube.io/integrations). Botkube not only simplifies alert management but also optimizes GitOps workflows by enhancing automation, real-time collaboration and centralizing knowledge. Learn more about Botkube’s move towards [GitOps](https://botkube.io/blog/enhancing-gitops-workflows-with-botkube) and the new Flux Plugin in our [release announcemen](https://botkube.io/blog/introducing-botkubes-integration-with-flux)t. In this tutorial, we will explore the Botkube Flux plugin, a powerful tool that automates notifications, enhances GitOps practices, and simplifies the interaction between Kubernetes clusters and GitHub repositories. By the end of this tutorial, you'll have a solid understanding of how to create, configure, and leverage the Botkube Flux plugin to streamline your GitOps workflow.
 
@@ -129,8 +127,9 @@ Select either the Wizard or the Block builder method to initiate the setup proce
 
 7\. Click the "Submit" button to save your configurations.
 
-    * If desired, configure any additional plugins you want to use at this stage.
-    
+```
+* If desired, configure any additional plugins you want to use at this stage.
+```
 
 ![Image 13](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64f2195fe9284fa6e17e51d1_9T2t8y3gIhVQPV4qHiXUcKwdYB_vYQ2wV06O1P7wM1zxib3rJlv8h2oTNW25bNehjGHDtQ2qYWwRy_96GYdI-bvl-0yEIKUjmfTqrARjZU4GcgVySZCldUnKHrlA5JjVwEXkxAFnyHu3SFQP4NMbok8.png)
 

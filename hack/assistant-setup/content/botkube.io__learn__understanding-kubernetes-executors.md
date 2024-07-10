@@ -19,10 +19,10 @@ Botkube
 Table of Contents
 -----------------
 
-*   [What is a Kubernetes Executor?](#what-is-a-kubernetes-executor--2)
-*   [Key Kubernetes Executors](#key-kubernetes-executors-2)
-*   [Alternative Industry Names](#alternative-industry-names-2)
-*   [Conclusion](#conclusion-2)
+*   [What is a Kubernetes Executor?](https://botkube.io/learn/understanding-kubernetes-executors#what-is-a-kubernetes-executor-)
+*   [Key Kubernetes Executors](https://botkube.io/learn/understanding-kubernetes-executors#key-kubernetes-executors)
+*   [Alternative Industry Names](https://botkube.io/learn/understanding-kubernetes-executors#alternative-industry-names)
+*   [Conclusion](https://botkube.io/learn/understanding-kubernetes-executors#conclusion)
 
 #### Get Started with Botkube Today!
 
@@ -38,9 +38,6 @@ At its core, a Kubernetes executor is a mechanism that facilitates the execution
 *   **Enhanced Scalability:** They enable you to scale your applications dynamically based on demand, ensuring optimal resource utilization.
 *   **Improved Reliability:** They offer fault tolerance by automatically restarting failed tasks or pods, minimizing downtime.
 *   **Streamlined Workflows:** Executors automate repetitive tasks and provide a structured approach to managing your Kubernetes deployments.
-
-**Key Kubernetes Executors**
-----------------------------
 
 Let's explore some of the most important executors you should be familiar with:
 
@@ -63,6 +60,4 @@ By strategically choosing and integrating Kubernetes executors, Platform, DevOps
 
 ### About Botkube
 
-Botkube is a collaborative troubleshooting tool designed specifically for Kubernetes users. With Botkube, you can seamlessly receive and act on alerts directly within your preferred messaging and collaboration platforms like Slack, Microsoft Teams, Discord, and Mattermost. In addition, Botkube enables you to automate actions based on events, run kubectl and Helm commands, receive recommendations for best practices and much more. [Get started with Botkube for free.](https://app.botkube.io/)
-
-### Dig deeper:
+Botkube is an AI-powered Kubernetes troubleshooting tool for DevOps, SREs, and developers. Botkube harnesses AI to automate troubleshooting, remediation, and administrative tasks— streamlining operations to save teams valuable time and accelerate development cycles. Botkube empowers both Kubernetes experts and non-experts to make complex tasks accessible to all skill levels. [Get started with Botkube for free.](https://app.botkube.io/)

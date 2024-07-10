@@ -3,8 +3,8 @@ Title: Microsoft Teams | Botkube
 URL Source: https://docs.botkube.io/installation/teams/
 
 Markdown Content:
-Botkube app for Microsoft Teams[​](#botkube-app-for-microsoft-teams "Direct link to Botkube app for Microsoft Teams")
----------------------------------------------------------------------------------------------------------------------
+Botkube app for Microsoft Teams[​](https://docs.botkube.io/installation/teams/#botkube-app-for-microsoft-teams "Direct link to Botkube app for Microsoft Teams")
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 The Botkube app for Microsoft Teams offers several advanced features:
 
@@ -16,18 +16,18 @@ The Botkube app for Microsoft Teams uses Botkube's cloud services to manage chan
 
 You can directly try Botkube app for Microsoft Teams for free by creating an account in the [Botkube Web App](https://app.botkube.io/). Follow the steps below to install the app.
 
-Prerequisites[​](#prerequisites "Direct link to Prerequisites")
----------------------------------------------------------------
+Prerequisites[​](https://docs.botkube.io/installation/teams/#prerequisites "Direct link to Prerequisites")
+----------------------------------------------------------------------------------------------------------
 
 *   A Botkube Cloud account.
     
     You can try out the Botkube app for Microsoft Teams for free by creating an account in the [Botkube Cloud app](https://app.botkube.io/).
     
 
-Create a Botkube Cloud Instance with Microsoft Teams[​](#create-a-botkube-cloud-instance-with-microsoft-teams "Direct link to Create a Botkube Cloud Instance with Microsoft Teams")
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Create a Botkube Cloud Instance with Microsoft Teams[​](https://docs.botkube.io/installation/teams/#create-a-botkube-cloud-instance-with-microsoft-teams "Direct link to Create a Botkube Cloud Instance with Microsoft Teams")
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-### Connect Botkube Cloud to your Kubernetes cluster[​](#connect-botkube-cloud-to-your-kubernetes-cluster "Direct link to Connect Botkube Cloud to your Kubernetes cluster")
+### Connect Botkube Cloud to your Kubernetes cluster[​](https://docs.botkube.io/installation/teams/#connect-botkube-cloud-to-your-kubernetes-cluster "Direct link to Connect Botkube Cloud to your Kubernetes cluster")
 
 1.  Go to Botkube Cloud [Web App](https://app.botkube.io/) and click on `New Instance` button.
     
@@ -44,7 +44,7 @@ Create a Botkube Cloud Instance with Microsoft Teams[​](#create-a-botkube-clou
 
 Proceed with the next section.
 
-### Install Botkube app to your team[​](#install-botkube-app-to-your-team "Direct link to Install Botkube app to your team")
+### Install Botkube app to your team[​](https://docs.botkube.io/installation/teams/#install-botkube-app-to-your-team "Direct link to Install Botkube app to your team")
 
 1.  Install Botkube app for Microsoft Teams from the official app catalog by clicking the `Install Botkube App for Teams` button.
     
@@ -73,7 +73,7 @@ Once the Botkube app is added to your team, you'll receive a welcome message.
 
 Proceed with the next section.
 
-### Grant permissions for Botkube app[​](#grant-permissions-for-botkube-app "Direct link to Grant permissions for Botkube app")
+### Grant permissions for Botkube app[​](https://docs.botkube.io/installation/teams/#grant-permissions-for-botkube-app "Direct link to Grant permissions for Botkube app")
 
 info
 
@@ -96,7 +96,7 @@ This step requires administrator permissions on your Microsoft Teams organizatio
 
 Close the page and proceed with the next section.
 
-### Connect your team to Botkube Cloud[​](#connect-your-team-to-botkube-cloud "Direct link to Connect your team to Botkube Cloud")
+### Connect your team to Botkube Cloud[​](https://docs.botkube.io/installation/teams/#connect-your-team-to-botkube-cloud "Direct link to Connect your team to Botkube Cloud")
 
 Go back to the Microsoft Teams app channel, where you received the welcome message.
 
@@ -115,7 +115,7 @@ Go back to the Microsoft Teams app channel, where you received the welcome messa
 
 Close the page and proceed with the next section.
 
-### Finalize Botkube Cloud instance configuration[​](#finalize-botkube-cloud-instance-configuration "Direct link to Finalize Botkube Cloud instance configuration")
+### Finalize Botkube Cloud instance configuration[​](https://docs.botkube.io/installation/teams/#finalize-botkube-cloud-instance-configuration "Direct link to Finalize Botkube Cloud instance configuration")
 
 Go back to the Botkube Cloud instance creation.
 
@@ -136,20 +136,20 @@ Go back to the Botkube Cloud instance creation.
     ![Image 16: Microsoft Teams Create](https://docs.botkube.io/assets/images/cloud_teams_create-c3ff681023bb64d1c92ecf2c85f112a3.png)
     
 
-Using Botkube app for Microsoft Teams[​](#using-botkube-app-for-microsoft-teams "Direct link to Using Botkube app for Microsoft Teams")
----------------------------------------------------------------------------------------------------------------------------------------
+Using Botkube app for Microsoft Teams[​](https://docs.botkube.io/installation/teams/#using-botkube-app-for-microsoft-teams "Direct link to Using Botkube app for Microsoft Teams")
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 You can start using Botkube Cloud Microsoft Teams by typing `@Botkube cloud help` in one of the channels in the team you configured in one of the previous steps.
 
 ![Image 17: Botkube Cloud Microsoft Teams Command Help](https://docs.botkube.io/assets/images/cloud_teams_command_help-7b1a978b74f7bb08c7062b6a80bbea07.png)
 
-### Listing Cloud Instances[​](#listing-cloud-instances "Direct link to Listing Cloud Instances")
+### Listing Cloud Instances[​](https://docs.botkube.io/installation/teams/#listing-cloud-instances "Direct link to Listing Cloud Instances")
 
 You can list all your Botkube Cloud instances by typing `@Botkube cloud list` in the Microsoft Teams channel, or click the button `List connected instances` in the help command response. Besides the instance `name`, `ID`, and `status` in the list response, you can also click the `Get details` button to go to instance details on Botkube Cloud Dashboard.
 
 ![Image 18: Botkube Cloud Microsoft Teams List Instances](https://docs.botkube.io/assets/images/cloud_teams_list_instances-0079ca8c5f306a230342b447ef8f31cb.png)
 
-### Setting Default Instance[​](#setting-default-instance "Direct link to Setting Default Instance")
+### Setting Default Instance[​](https://docs.botkube.io/installation/teams/#setting-default-instance "Direct link to Setting Default Instance")
 
 Once a Botkube command is executed, it will be handled on target Kubernetes cluster specified with `--cluster-name` flag. This is an optional flag, where if you have not specified it, Botkube Cloud will select the first instance. However, you can also achieve setting default instance with command `@Botkube cloud set default-instance`.
 
@@ -159,8 +159,8 @@ After this point, all of your commands will be executed on the default instance.
 
 ![Image 20: Cloud Microsoft Teams All Clusters](https://docs.botkube.io/assets/images/cloud_teams_command_all_clusters-a5c8c474816eb96d277a3dec873d8351.png)
 
-Cleanup[​](#cleanup "Direct link to Cleanup")
----------------------------------------------
+Cleanup[​](https://docs.botkube.io/installation/teams/#cleanup "Direct link to Cleanup")
+----------------------------------------------------------------------------------------
 
 1.  Go to Botkube Cloud instances page and click `Manage` button of the instance you want to remove.
     
@@ -175,15 +175,15 @@ Cleanup[​](#cleanup "Direct link to Cleanup")
     ![Image 22: Cloud Teams Instance Delete](https://docs.botkube.io/assets/images/cloud_instance_delete-27fe3622760a4cbbd7c92d13d7ddcd41.png)
     
 
-Caveats[​](#caveats "Direct link to Caveats")
----------------------------------------------
+Caveats[​](https://docs.botkube.io/installation/teams/#caveats "Direct link to Caveats")
+----------------------------------------------------------------------------------------
 
-### RBAC `ChannelName` mapping[​](#rbac-channelname-mapping "Direct link to rbac-channelname-mapping")
+### RBAC `ChannelName` mapping[​](https://docs.botkube.io/installation/teams/#rbac-channelname-mapping "Direct link to rbac-channelname-mapping")
 
 Same as other communication platforms, Botkube app for Microsoft Teams supports RBAC along with [all mappings](https://docs.botkube.io/features/rbac#mapping-types). However, because of the Microsoft Teams API limitation, for the default team channel the `ChannelName` is always `General`, regardless of the actual localized channel name.
 
-Limitations[​](#limitations "Direct link to Limitations")
----------------------------------------------------------
+Limitations[​](https://docs.botkube.io/installation/teams/#limitations "Direct link to Limitations")
+----------------------------------------------------------------------------------------------------
 
 Botkube app for Microsoft Teams currently doesn't support the following features yet:
 

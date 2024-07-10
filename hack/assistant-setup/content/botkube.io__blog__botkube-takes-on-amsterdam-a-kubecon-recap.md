@@ -17,16 +17,16 @@ The Kubecon Amsterdam conference was a wild ride, filled with exciting announcem
 
 ### Table of Contents
 
-*   [What is Botkube?](#what-is-botkube-)
-*   [The booth experience](#the-booth-experience)
-*   [eBPF is Growing Like Crazy](#ebpf-is-growing-like-crazy)
-*   [Kubernetes Adoption is Through the Roof](#kubernetes-adoption-is-through-the-roof)
-*   [Kubernetes for Developers](#kubernetes-for-developers-)
-*   [Multi-Cloud & Hybrid](#multi-cloud-hybrid)
-*   [GitOps is the New Normal](#gitops-is-the-new-normal)
-*   [Looking to the Future](#looking-to-the-future)
-*   [Sign up now](#sign-up-now)
-*   [Feedback](#feedback)
+*   [What is Botkube?](https://botkube.io/blog/botkube-takes-on-amsterdam-a-kubecon-recap#what-is-botkube-)
+*   [The booth experience](https://botkube.io/blog/botkube-takes-on-amsterdam-a-kubecon-recap#the-booth-experience)
+*   [eBPF is Growing Like Crazy](https://botkube.io/blog/botkube-takes-on-amsterdam-a-kubecon-recap#ebpf-is-growing-like-crazy)
+*   [Kubernetes Adoption is Through the Roof](https://botkube.io/blog/botkube-takes-on-amsterdam-a-kubecon-recap#kubernetes-adoption-is-through-the-roof)
+*   [Kubernetes for Developers](https://botkube.io/blog/botkube-takes-on-amsterdam-a-kubecon-recap#kubernetes-for-developers-)
+*   [Multi-Cloud & Hybrid](https://botkube.io/blog/botkube-takes-on-amsterdam-a-kubecon-recap#multi-cloud-hybrid)
+*   [GitOps is the New Normal](https://botkube.io/blog/botkube-takes-on-amsterdam-a-kubecon-recap#gitops-is-the-new-normal)
+*   [Looking to the Future](https://botkube.io/blog/botkube-takes-on-amsterdam-a-kubecon-recap#looking-to-the-future)
+*   [Sign up now](https://botkube.io/blog/botkube-takes-on-amsterdam-a-kubecon-recap#sign-up-now)
+*   [Feedback](https://botkube.io/blog/botkube-takes-on-amsterdam-a-kubecon-recap#feedback)
 
 #### Start Using Botkube AI-Powered Assistant Today
 

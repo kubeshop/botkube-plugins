@@ -12,8 +12,8 @@ Outgoing Webhook development
 
 To develop the outgoing webhook integration, you can use [Echo-Server](https://github.com/Ealenn/Echo-Server), which logs all incoming requests.
 
-Steps[​](#steps "Direct link to Steps")
----------------------------------------
+Steps[​](https://docs.botkube.io/community/contribute/webhook-develop/#steps "Direct link to Steps")
+----------------------------------------------------------------------------------------------------
 
 1.  Install Echo server with Helm:
     
@@ -34,4 +34,4 @@ Steps[​](#steps "Direct link to Steps")
 
 [Elasticsearch notifier development](https://docs.botkube.io/community/contribute/elasticsearch-develop)[](https://docs.botkube.io/community/credits)
 
-*   [Steps](#steps)
+*   [Steps](https://docs.botkube.io/community/contribute/webhook-develop/#steps)

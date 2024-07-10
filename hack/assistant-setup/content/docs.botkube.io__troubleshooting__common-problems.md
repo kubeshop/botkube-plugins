@@ -5,8 +5,8 @@ URL Source: https://docs.botkube.io/troubleshooting/common-problems
 Markdown Content:
 This document describes how to identify and resolve common Botkube problems that might occur.
 
-Incompatible plugin API version[​](#incompatible-plugin-api-version "Direct link to Incompatible plugin API version")
----------------------------------------------------------------------------------------------------------------------
+Incompatible plugin API version[​](https://docs.botkube.io/troubleshooting/common-problems/#incompatible-plugin-api-version "Direct link to Incompatible plugin API version")
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Symptoms**
 
@@ -34,8 +34,8 @@ In order to fix the problem, you need to make sure that the agent version is the
 helm upgrade botkube botkube/botkube -n botkube --reuse-values --set plugins.repositories.botkube.url="https://github.com/kubeshop/botkube/releases/download/v1.5.0/plugins-index.yaml"
 ```
 
-Helm chart loading error[​](#helm-chart-loading-error "Direct link to Helm chart loading error")
-------------------------------------------------------------------------------------------------
+Helm chart loading error[​](https://docs.botkube.io/troubleshooting/common-problems/#helm-chart-loading-error "Direct link to Helm chart loading error")
+--------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Symptoms**
 
@@ -61,12 +61,12 @@ If you're experiencing these errors, it means that there is a conflict with a fi
 2.  **Change Directory:** Alternatively, you can navigate to a different directory in your command line interface before executing the `botkube install` command. Ensure that the directory where you run the command does not contain any conflicting `botkube` files or directories.
     
 
-Network connections[​](#network-connections "Direct link to Network connections")
----------------------------------------------------------------------------------
+Network connections[​](https://docs.botkube.io/troubleshooting/common-problems/#network-connections "Direct link to Network connections")
+-----------------------------------------------------------------------------------------------------------------------------------------
 
 Botkube can work in private clusters where inbound connections are limited. However, you need to allow outgoing connections to all configured plugin repositories and API endpoints, depending on the communication platform you intend to use.
 
-### Botkube official plugins[​](#botkube-official-plugins "Direct link to Botkube official plugins")
+### Botkube official plugins[​](https://docs.botkube.io/troubleshooting/common-problems/#botkube-official-plugins "Direct link to Botkube official plugins")
 
 The official Botkube plugin index and binaries are hosted on [GitHub releases](https://github.com/kubeshop/botkube/releases). For instance, for the version `v1.5.0` the following URLs are used:
 
@@ -77,7 +77,7 @@ As a result, you need to allow outbound connections for Botkube to successfully 
 
 Additionally, each plugin may define additional dependencies that the [plugin manager](https://docs.botkube.io/architecture/#plugin-manager) downloads on startup. For example, the Helm plugin for `linux/amd64` requires `https://get.helm.sh/helm-v3.6.3-linux-amd64.tar.gz`. To learn more about all URLs that need to be accessible, you can download a plugin index and check all plugin definitions that you want to enable.
 
-### Socket Slack[​](#socket-slack "Direct link to Socket Slack")
+### Socket Slack[​](https://docs.botkube.io/troubleshooting/common-problems/#socket-slack "Direct link to Socket Slack")
 
 For the Slack communication platform, we use the [Socket mode](https://api.slack.com/apis/connections/socket) approach. In order to make this integration work, you need to allow all Slack API URLs defined under [https://my.slack.com/help/urls](https://my.slack.com/help/urls), especially:
 
@@ -91,27 +91,27 @@ For the Slack communication platform, we use the [Socket mode](https://api.slack
 
 Visit [Slack official guide](https://slack.com/help/articles/360001603387-Manage-Slack-connection-issues#network-settings) for troubleshooting your Slack connection.
 
-### Cloud Slack[​](#cloud-slack "Direct link to Cloud Slack")
+### Cloud Slack[​](https://docs.botkube.io/troubleshooting/common-problems/#cloud-slack "Direct link to Cloud Slack")
 
 Cloud Slack integration communicates via gRPC with the Botkube control-plane. In order to make this integration work, you need to allow access to `api.botkube.io`.
 
-Plugin's permissions[​](#plugins-permissions "Direct link to Plugin's permissions")
------------------------------------------------------------------------------------
+Plugin's permissions[​](https://docs.botkube.io/troubleshooting/common-problems/#plugins-permissions "Direct link to Plugin's permissions")
+-------------------------------------------------------------------------------------------------------------------------------------------
 
 If you experience problems while configuring RBAC (Role-Based Access Control) for plugins, you can refer to the [troubleshooting](https://docs.botkube.io/features/rbac#troubleshooting) guide for assistance.
 
-Botkube doesn't respond on MS Teams[​](#botkube-doesnt-respond-on-ms-teams "Direct link to Botkube doesn't respond on MS Teams")
---------------------------------------------------------------------------------------------------------------------------------
+Botkube doesn't respond on MS Teams[​](https://docs.botkube.io/troubleshooting/common-problems/#botkube-doesnt-respond-on-ms-teams "Direct link to Botkube doesn't respond on MS Teams")
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Microsoft Teams integration communicates via gRPC with the Botkube control-plane. In order to make this integration work, you need to allow access to `api.botkube.io`.
 
-I can't see my Slack private channels in Cloud Dashboard[​](#i-cant-see-my-slack-private-channels-in-cloud-dashboard "Direct link to I can't see my Slack private channels in Cloud Dashboard")
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+I can't see my Slack private channels in Cloud Dashboard[​](https://docs.botkube.io/troubleshooting/common-problems/#i-cant-see-my-slack-private-channels-in-cloud-dashboard "Direct link to I can't see my Slack private channels in Cloud Dashboard")
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 To comply with Slack's privacy policy, private channels won't be visible until you create a public alias for the respective channel. Refer to the provided instructions for guidance on completing this process: [Setting Public Alias for Private Channels](https://docs.botkube.io/installation/slack/cloud-slack#setting-public-alias-for-private-channels)
 
-Air-Gap installation[​](#air-gap-installation "Direct link to Air-Gap installation")
-------------------------------------------------------------------------------------
+Air-Gap installation[​](https://docs.botkube.io/troubleshooting/common-problems/#air-gap-installation "Direct link to Air-Gap installation")
+--------------------------------------------------------------------------------------------------------------------------------------------
 
 **Please note that we do not support air-gap installations.** However, here are some suggestions that you may find helpful:
 
@@ -124,8 +124,8 @@ Air-Gap installation[​](#air-gap-installation "Direct link to Air-Gap installa
 *   Select a communication platform that can be installed in the air-gapped environment, such as [Mattermost](https://docs.botkube.io/installation/mattermost/).
     
 
-Others[​](#others "Direct link to Others")
-------------------------------------------
+Others[​](https://docs.botkube.io/troubleshooting/common-problems/#others "Direct link to Others")
+--------------------------------------------------------------------------------------------------
 
 Having trouble finding a solution to your problem? No problem at all! We will help you to get your Botkube up and running. First, follow these steps:
 

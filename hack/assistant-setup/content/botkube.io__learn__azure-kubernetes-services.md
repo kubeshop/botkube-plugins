@@ -3,6 +3,29 @@ Title: Azure Kubernetes & Microsoft Teams: The Botkube Symphony
 URL Source: https://botkube.io/learn/azure-kubernetes-services
 
 Markdown Content:
+Conquer the Cloud with Azure K8s Services and Botkube
+-----------------------------------------------------
+
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65fa0fe350c3ce24c650b56c_LEARN_TN_UseCases%20(9).png)
+
+![Image 2](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64a86fdda4d8d06ce598598e_evan%20image.jpg)
+
+Evan Witmer
+
+Growth Lead
+
+Botkube
+
+Table of Contents
+-----------------
+
+*   [What is Azure Kubernetes Services?](https://botkube.io/learn/azure-kubernetes-services#what-is-azure-kubernetes-services-)
+*   [Connecting Azure Kubernetes Services to Microsoft Teams](https://botkube.io/learn/azure-kubernetes-services#connecting-azure-kubernetes-services-to-microsoft-teams)
+*   [How to Restart Pod in Azure Kubernetes Services from MS Teams](https://botkube.io/learn/azure-kubernetes-services#how-to-restart-pod-in-azure-kubernetes-services-from-ms-teams)
+*   [Conclusion](https://botkube.io/learn/azure-kubernetes-services#conclusion)
+
+#### Get Started with Botkube Today!
+
 **What is Azure Kubernetes Services?**
 --------------------------------------
 
@@ -41,3 +64,7 @@ So, ditch the terminal tango and embrace the ChatOps revolution with Botkube and
 Ready to unleash your inner cloud conductor? Go to our [Microsoft Teams integration docs](https://docs.botkube.io/installation/teams/) to start today!
 
 P.S. Botkube works with other Kubernetes platforms too, so feel free to spread the pod love!
+
+### About Botkube
+
+Botkube is an AI-powered Kubernetes troubleshooting tool for DevOps, SREs, and developers. Botkube harnesses AI to automate troubleshooting, remediation, and administrative tasks— streamlining operations to save teams valuable time and accelerate development cycles. Botkube empowers both Kubernetes experts and non-experts to make complex tasks accessible to all skill levels. [Get started with Botkube for free.](https://app.botkube.io/)

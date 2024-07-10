@@ -3,6 +3,26 @@ Title: Demystifying kubectl drain: Safely Evacuating K8s Nodes
 URL Source: https://botkube.io/learn/demystifying-kubectl-drain-safely-evacuating-kubernetes-nodes
 
 Markdown Content:
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65fa16ef88c0a68da8678d07_LEARN_TN_Definitions%20(5).png)
+
+![Image 2](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64a86fdda4d8d06ce598598e_evan%20image.jpg)
+
+Evan Witmer
+
+Growth Lead
+
+Botkube
+
+Table of Contents
+-----------------
+
+*   [Understanding the kubectl drain command](https://botkube.io/learn/demystifying-kubectl-drain-safely-evacuating-kubernetes-nodes#understanding-the-kubectl-drain-command)
+*   [Draining Kubernetes Pods with the Kubectl Command](https://botkube.io/learn/demystifying-kubectl-drain-safely-evacuating-kubernetes-nodes#draining-kubernetes-pods-with-the-kubectl-command)
+*   [Best practices for using kubectl drain](https://botkube.io/learn/demystifying-kubectl-drain-safely-evacuating-kubernetes-nodes#best-practices-for-using-kubectl-drain)
+*   [Conclusion](https://botkube.io/learn/demystifying-kubectl-drain-safely-evacuating-kubernetes-nodes#conclusion)
+
+#### Get Started with Botkube Today!
+
 In a Kubernetes cluster, it is often necessary to safely evacuate nodes for maintenance or troubleshooting purposes. One of the tools that can help with this process is kubectl drain. However, understanding how to use the command effectively and safely can be a challenge. In this blog post, we will demystify kubectl drain and explore its various options and best practices for safely evacuating Kubernetes nodes.
 
 **Understanding the kubectl drain command**
@@ -41,7 +61,7 @@ In a Kubernetes cluster, it is often necessary to safely evacuate nodes for main
     *   Using a [Kubernetes collaboration tool](https://botkube.io/learn/future-of-kubernetes-management), such as Botkube, can help with this communication. Simply send a message to the team in the chat channel that is connected to the cluster and sending alerts about the pod that needs to be emptied. Use Slack or Teams ability to tag teammates to ensure the right people see your message.
     *   Use the same communication channel to run the command to empty the pod with Botkube's kubectl plugin.
 
-![Image 1: kubectl help directly from Slack](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6658cb6e3dc7864df243e182_kubectl%20help%20with%20botkube.png)
+![Image 3: kubectl help directly from Slack](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6658cb6e3dc7864df243e182_kubectl%20help%20with%20botkube.png)
 
 Running a kubectl command from Slack with Botkube
 
@@ -70,4 +90,4 @@ If you found our above article helpful, we invite you to check out our [kubectl 
 
 ### About Botkube
 
-Botkube is a collaborative troubleshooting tool designed specifically for Kubernetes users. With Botkube, you can seamlessly receive and act on alerts directly within your preferred messaging and collaboration platforms like Slack, Microsoft Teams, Discord, and Mattermost. In addition, Botkube enables you to automate actions based on events, run kubectl and Helm commands, receive recommendations for best practices and much more. [Get started with Botkube for free.](https://app.botkube.io/)
+Botkube is an AI-powered Kubernetes troubleshooting tool for DevOps, SREs, and developers. Botkube harnesses AI to automate troubleshooting, remediation, and administrative tasks— streamlining operations to save teams valuable time and accelerate development cycles. Botkube empowers both Kubernetes experts and non-experts to make complex tasks accessible to all skill levels. [Get started with Botkube for free.](https://app.botkube.io/)

@@ -17,12 +17,12 @@ Botkube v0.17.0 adds a plugin system and the first executor plugin allowing you 
 
 ### Table of Contents
 
-*   [Plugin System](#plugin-system)
-*   [Helm Plugin](#helm-plugin)
-*   [Kubectl Prefix Required](#kubectl-prefix-required)
-*   [Botkube Command Tidying](#botkube-command-tidying)
-*   [Bug Fixes](#bug-fixes)
-*   [Feedback - We’d Love to Hear From You](#feedback-we-d-love-to-hear-from-you)
+*   [Plugin System](https://botkube.io/blog/botkube-v017-release-notes#plugin-system)
+*   [Helm Plugin](https://botkube.io/blog/botkube-v017-release-notes#helm-plugin)
+*   [Kubectl Prefix Required](https://botkube.io/blog/botkube-v017-release-notes#kubectl-prefix-required)
+*   [Botkube Command Tidying](https://botkube.io/blog/botkube-v017-release-notes#botkube-command-tidying)
+*   [Bug Fixes](https://botkube.io/blog/botkube-v017-release-notes#bug-fixes)
+*   [Feedback - We’d Love to Hear From You](https://botkube.io/blog/botkube-v017-release-notes#feedback-we-d-love-to-hear-from-you)
 
 #### Start Using Botkube AI-Powered Assistant Today
 

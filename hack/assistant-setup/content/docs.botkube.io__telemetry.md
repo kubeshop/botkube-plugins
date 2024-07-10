@@ -3,7 +3,7 @@ Title: Telemetry | Botkube
 URL Source: https://docs.botkube.io/telemetry/
 
 Markdown Content:
-### What data we collect[​](#what-data-we-collect "Direct link to What data we collect")
+### What data we collect[​](https://docs.botkube.io/telemetry/#what-data-we-collect "Direct link to What data we collect")
 
 The analytics data we collect is limited to:
 
@@ -38,7 +38,7 @@ Botkube CLI tool collects:
 *   Anonymous machine ID from [machineid](https://github.com/denisbrodbeck/machineid) library,
 *   Executed command names, such as `login`, `install`, etc.
 
-### How to opt out[​](#how-to-opt-out "Direct link to How to opt out")
+### How to opt out[​](https://docs.botkube.io/telemetry/#how-to-opt-out "Direct link to How to opt out")
 
 To disable sending the anonymous analytics, provide the `analytics.disable: true` override during Helm chart installation or upgrade. See the [Helm chart parameters](https://docs.botkube.io/self-hosted-configuration/helm-chart-parameters) for more details about Helm chart configuration.
 
@@ -50,5 +50,5 @@ botkube telemetry disable
 
 This configuration will be stored locally in `~/.botkube/config.json` file, if this file is deleted, the telemetry will be enabled again.
 
-*   [What data we collect](#what-data-we-collect)
-*   [How to opt out](#how-to-opt-out)
+*   [What data we collect](https://docs.botkube.io/telemetry/#what-data-we-collect)
+*   [How to opt out](https://docs.botkube.io/telemetry/#how-to-opt-out)

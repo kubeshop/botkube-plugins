@@ -3,19 +3,19 @@ Title: Installation | Botkube
 URL Source: https://docs.botkube.io/
 
 Markdown Content:
-What is Botkube?[​](#what-is-botkube "Direct link to What is Botkube?")
------------------------------------------------------------------------
+What is Botkube?[​](https://docs.botkube.io/#what-is-botkube "Direct link to What is Botkube?")
+-----------------------------------------------------------------------------------------------
 
 Botkube is a troubleshooting and monitoring solution that empowers DevOps teams to work more efficiently, enables developers to troubleshoot their applications without special Kubernetes access or knowledge, and improves reliability by delivering timely, context-enhanced notifications about events in your Kubernetes environments.
 
 It integrates with multiple platforms, such as Slack, Microsoft Teams, Discord and Mattermost. Botkube monitors events from various sources, allows you to securely run commands, and run automated actions triggered by any of the plugins Botkube supports or your own custom plugins.
 
-Feature map[​](#feature-map "Direct link to Feature map")
----------------------------------------------------------
+Feature map[​](https://docs.botkube.io/#feature-map "Direct link to Feature map")
+---------------------------------------------------------------------------------
 
 Learn about Botkube features and their availability in different integrations.
 
-### Bots[​](#bots "Direct link to Bots")
+### Bots[​](https://docs.botkube.io/#bots "Direct link to Bots")
 
 Compare our bidirectional integrations:
 
@@ -29,7 +29,7 @@ Compare our bidirectional integrations:
 | Actionable notifications | ✔️ | ✔️ | ✔️ | ❌ | ❌ |
 | Emoji reactions | ✔️ | ❌ | ❌ | ❌ | ❌ |
 
-### Sinks[​](#sinks "Direct link to Sinks")
+### Sinks[​](https://docs.botkube.io/#sinks "Direct link to Sinks")
 
 Compare our unidirectional integrations:
 
@@ -38,8 +38,8 @@ Compare our unidirectional integrations:
 | Source plugins support (e.g. `kubernetes`, `prometheus`, etc.) | ✔️ | ✔️ | ✔️ |
 | Multi-cluster support | ✔️ | ✔️ | ✔️ |
 
-Integrations[​](#integrations "Direct link to Integrations")
-------------------------------------------------------------
+Integrations[​](https://docs.botkube.io/#integrations "Direct link to Integrations")
+------------------------------------------------------------------------------------
 
 tip
 

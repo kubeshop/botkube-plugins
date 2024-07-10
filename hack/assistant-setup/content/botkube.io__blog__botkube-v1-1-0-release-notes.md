@@ -17,9 +17,9 @@ Our most recent realese of Botkube Cloud & Open Source brings important features
 
 ### Table of Contents
 
-*   [What is Botkube?](#what-is-botkube-)
-*   [Botkube Cloud with Cloud Slack Integration](#botkube-cloud-with-cloud-slack-integration)
-*   [Here are the key features of Botkube Cloud:](#here-are-the-key-features-of-botkube-cloud-)
+*   [What is Botkube?](https://botkube.io/blog/botkube-v1-1-0-release-notes#what-is-botkube-)
+*   [Botkube Cloud with Cloud Slack Integration](https://botkube.io/blog/botkube-v1-1-0-release-notes#botkube-cloud-with-cloud-slack-integration)
+*   [Here are the key features of Botkube Cloud:](https://botkube.io/blog/botkube-v1-1-0-release-notes#here-are-the-key-features-of-botkube-cloud-)
 
 #### Start Using Botkube AI-Powered Assistant Today
 

@@ -17,9 +17,9 @@ Transform Kubernetes monitoring with Botkube Assistants cluster scan. Get real-t
 
 ### Table of Contents
 
-*   [Why Kubernetes Health Checks Matter](#why-kubernetes-health-checks-matter)
-*   [Unleashing the Power of AI in Kubernetes Monitoring + Troubleshooting](#unleashing-the-power-of-ai-in-kubernetes-monitoring-troubleshooting)
-*   [Get Started with Botkube's AI Cluster Scan](#get-started-with-botkube-s-ai-cluster-scan)
+*   [Why Kubernetes Health Checks Matter](https://botkube.io/blog/improve-your-kubernetes-health-checks-with-botkubes-ai-powered-cluster-scan#why-kubernetes-health-checks-matter)
+*   [Unleashing the Power of AI in Kubernetes Monitoring + Troubleshooting](https://botkube.io/blog/improve-your-kubernetes-health-checks-with-botkubes-ai-powered-cluster-scan#unleashing-the-power-of-ai-in-kubernetes-monitoring-troubleshooting)
+*   [Get Started with Botkube's AI Cluster Scan](https://botkube.io/blog/improve-your-kubernetes-health-checks-with-botkubes-ai-powered-cluster-scan#get-started-with-botkube-s-ai-cluster-scan)
 
 #### Start Using Botkube AI-Powered Assistant Today
 
@@ -58,10 +58,12 @@ Receive actionable steps to address identified problems, optimize resource alloc
 Get Started with Botkube's AI Cluster Scan
 ------------------------------------------
 
-Ready to take your Kubernetes health checks to the next level? Try [Botkube Assistant's cluster scan today](http://botkube.io/) and experience the power of intelligent monitoring. Transform your approach to Kubernetes management, minimize downtime, and maximize the performance of your applications.
+![Image 2](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6672d46d829cbbd756a0a748_Cluster%20Scan%20(1200%20x%201080%20px).gif)
+
+Ready to take your Kubernetes health checks to the next level? Try [Botkube Assistant's cluster scan today](https://botkube.io/) and experience the power of intelligent monitoring. Transform your approach to Kubernetes management, minimize downtime, and maximize the performance of your applications.
 
 When your cluster is connected, use the **@botkube ai scan** command to allow Botkube Assistant to scan your entire cluster for long-standing or potential issues before they arise.
 
-If you’re new to Botkube, [sign up for a free account today](http://app.botkube.io/) to take advantage of the Cluster Scan feature, our AI-powered Kubernetes-knowledgeable Botkube Assistant, multi-cluster management and more.
+If you’re new to Botkube, [sign up for a free account today](https://app.botkube.io/) to take advantage of the Cluster Scan feature, our AI-powered Kubernetes-knowledgeable Botkube Assistant, multi-cluster management and more.
 
 ‍

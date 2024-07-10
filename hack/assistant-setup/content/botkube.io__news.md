@@ -1,4 +1,4 @@
-Title: News
+Title: News | Botkube
 
 URL Source: https://botkube.io/news
 
@@ -6,7 +6,7 @@ Markdown Content:
 Thought Leadership and News
 ---------------------------
 
-Search[clear](#)
+Search[clear](https://botkube.io/news#)
 
 [![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/662677b3a13af173215d9bb4_d428b6a6-ai-changing-kubernetes-troubleshooting-1024x576.jpg) ![Image 2](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64d5126ead1dbbbd857442ba_new-stack-logo-w.svg) Apr 8, 2024 7 min. read ### 2 Ways AI Assistants Are Changing Kubernetes Troubleshooting AI that mimics how humans approach troubleshooting can democratize and improve how people identify and fix Kubernetes issues.](https://thenewstack.io/2-ways-ai-assistants-are-changing-kubernetes-troubleshooting/)
 
@@ -20,11 +20,9 @@ Search[clear](#)
 
 [![Image 11](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/63774e2525531b866f9a1d75_QWCGgXRoM7abzOegImHhX-4TdsuwsfNQfPyTEynlElo.png) ![Image 12](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64d5169b3cd8309fb462d78c_cision-removebg-preview.png) Jul 7, 2022 min. read ### Kubeshop acquires Botkube, InfraCloud's popular ChatOps platform for K8s troubleshooting InfraCloud Technologies and Kubeshop.io have signed a definitive agreement whereby Kubeshop.io has acquired a majority stake in BotKube.](https://www.prnewswire.com/news-releases/infraclouds-botkube---a-popular-chatops-platform-for-kubernetes-troubleshooting-acquired-by-kubeshop-301582410.html)
 
-![Image 13](https://cdn.prod.website-files.com/633705de6adaa38599d8e258/6593f6180893516ae6ff048a_arrow-left-wh.svg)
+[![Image 13](https://cdn.prod.website-files.com/633705de6adaa38599d8e258/6593f6180893516ae6ff048a_arrow-left-wh.svg)](https://botkube.io/news#)
 
-1
-
-![Image 14](https://cdn.prod.website-files.com/633705de6adaa38599d8e258/6593f6180893516ae6ff048a_arrow-left-wh.svg)
+[1](https://botkube.io/news#)[![Image 14](https://cdn.prod.website-files.com/633705de6adaa38599d8e258/6593f6180893516ae6ff048a_arrow-left-wh.svg)](https://botkube.io/news#)
 
 Stay in the Loop
 ----------------

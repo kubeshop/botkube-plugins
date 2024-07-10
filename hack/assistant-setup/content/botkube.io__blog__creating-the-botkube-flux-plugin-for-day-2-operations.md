@@ -17,16 +17,14 @@ From this deep dive you'll know the Zapier-like aspect of Botkube that connects 
 
 ### Table of Contents
 
-*   [Introduction](#introduction)
-*   [The Evolution of Flux Executor Plugin](#the-evolution-of-flux-executor-plugin)
-*   [Interactivity and Decision-Making](#interactivity-and-decision-making)
-*   [Manual Approach vs. Botkube Flux Plugin](#manual-approach-vs-botkube-flux-plugin)
-*   [Behind the Scenes: Developing the Botkube Flux Plugin](#behind-the-scenes-developing-the-botkube-flux-plugin)
-*   [Conclusion](#conclusion)
+*   [Introduction](https://botkube.io/blog/creating-the-botkube-flux-plugin-for-day-2-operations#introduction)
+*   [The Evolution of Flux Executor Plugin](https://botkube.io/blog/creating-the-botkube-flux-plugin-for-day-2-operations#the-evolution-of-flux-executor-plugin)
+*   [Interactivity and Decision-Making](https://botkube.io/blog/creating-the-botkube-flux-plugin-for-day-2-operations#interactivity-and-decision-making)
+*   [Manual Approach vs. Botkube Flux Plugin](https://botkube.io/blog/creating-the-botkube-flux-plugin-for-day-2-operations#manual-approach-vs-botkube-flux-plugin)
+*   [Behind the Scenes: Developing the Botkube Flux Plugin](https://botkube.io/blog/creating-the-botkube-flux-plugin-for-day-2-operations#behind-the-scenes-developing-the-botkube-flux-plugin)
+*   [Conclusion](https://botkube.io/blog/creating-the-botkube-flux-plugin-for-day-2-operations#conclusion)
 
 #### Start Using Botkube AI-Powered Assistant Today
-
-#### Get Started with Botkube Today!
 
 Hey there, tech enthusiasts! Today we're diving into the world of GitOps with the brand-new Botkube Flux plugin.
 

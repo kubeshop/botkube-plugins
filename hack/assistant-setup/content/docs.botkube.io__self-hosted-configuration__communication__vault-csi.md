@@ -9,8 +9,8 @@ This document is applicable only for self-hosted installations. For Botkube Clou
 
 This tutorial shows how to install Botkube which takes the configuration from Vault instance.
 
-Prerequisites[​](#prerequisites "Direct link to Prerequisites")
----------------------------------------------------------------
+Prerequisites[​](https://docs.botkube.io/self-hosted-configuration/communication/vault-csi/#prerequisites "Direct link to Prerequisites")
+-----------------------------------------------------------------------------------------------------------------------------------------
 
 *   Kubernetes Clusters that supports CSI.
     
@@ -27,8 +27,8 @@ Prerequisites[​](#prerequisites "Direct link to Prerequisites")
 *   [`kubectl`](https://kubernetes.io/docs/tasks/tools/#kubectl) installed.
     
 
-Steps[​](#steps "Direct link to Steps")
----------------------------------------
+Steps[​](https://docs.botkube.io/self-hosted-configuration/communication/vault-csi/#steps "Direct link to Steps")
+-----------------------------------------------------------------------------------------------------------------
 
 This instruction guides you through the installation of Botkube and Vault on a Kubernetes cluster and configuring them together.
 

@@ -10,9 +10,7 @@ Platform engineering is a term that has gained popularity in recent years, but w
 
 ### **The Basics**
 
-![Image 1: Platform engineering](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/659c2bb833448eeeb4c66452_1Sk7dcgaUtHVjQg5Ycz5Yj5DQ9LRUq_OdaG_SI19EYkJM18uA2slgFi9CI11rKsPE4_D7NnBf-dlA4JYypb42Frt5_CP27Z7L3uTah68EiQWokGUxh5bBVrmUvjxFBZqdOWloFg4N5ooei8kAEhgd6I.jpeg)
-
-by ThisisEngineering RAEng (https://unsplash.com/@thisisengineering)
+![Image 1: Platform Engineer Welcome Image](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/667f1efbe1b2fc87b31fe065_Platform%20Engineer%20heart.png)
 
 Platform engineering is the process of designing, building, and maintaining the underlying infrastructure and systems that support software applications. It involves creating a stable and scalable foundation for software development, deployment, and maintenance.
 
@@ -31,9 +29,7 @@ In addition to providing the necessary infrastructure and tools, platform engine
 
 ### **Scalability and Flexibility**
 
-![Image 2: Scalability and flexibility](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/659c2bb853de97d6edeb1d44_z4KVNDmVs0Nqb5bHpJd0qH-xmRluGmHDGUX4v677o3RK9LJfzolEIzIITGU8qQlTYrRSHu9PcSKhj_WYU9ZHxUKOdMP1yFmWdMMmhxIvZjKsjtSsCHpfiuovt2vMMxHb5F6jDcJ8ys0i88r4c3Qh-qY.jpeg)
-
-by Resume Genius (https://unsplash.com/@resumegenius)
+![Image 2: Control Kubernetes from Slack](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/667f1dad7a56664ae154f95b_Platform%20Managment%20from%20Slack.png)
 
 One of the primary reasons why platform engineering is essential is its role in scalability and flexibility. As businesses grow and their software needs evolve, the platform must be able to adapt and scale accordingly.
 

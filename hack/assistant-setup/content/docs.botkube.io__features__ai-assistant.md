@@ -3,101 +3,91 @@ Title: AI Assistant | Botkube
 URL Source: https://docs.botkube.io/features/ai-assistant
 
 Markdown Content:
-info
+AI Assistant | Botkube
+===============
+       
 
-**This plugin is hosted by the [Botkube Cloud](https://app.botkube.io/) plugin repository and requires active Botkube Cloud account.**
+[Skip to main content](https://docs.botkube.io/features/ai-assistant#__docusaurus_skipToContent_fallback)
 
-The AI Assistant plugin makes it easier than ever for teams to identify, diagnose, and troubleshoot issues in any Kubernetes cluster. It is powered by the OpenAI's `GPT-4o` large language model with additional Kubernetes-related capabilities.
+**New to Botkube?** Get started fast (and free!) with the [Botkube Cloud Web App](https://app.botkube.io/).
 
-Features[​](#features "Direct link to Features")
-------------------------------------------------
+[![Image 1: Botkube Logo](https://docs.botkube.io/images/botkube-black.svg)![Image 2: Botkube Logo](https://docs.botkube.io/images/botkube-white.svg) **Botkube**](https://docs.botkube.io/)[Documentation](https://docs.botkube.io/)[Community](https://docs.botkube.io/community/contribute/)
 
-The plugin provides the following features:
+[1.12](https://docs.botkube.io/)
 
-*   "AI Help" button for Kubernetes event analysis.
-*   Kubernetes cluster troubleshooting based on:
-    *   `kubectl` commands,
-    *   container logs,
-    *   Kubernetes events,
-    *   resource usage (CPU/memory).
-*   Kubernetes cluster scan.
-*   Answering arbitrary questions or instructions.
-*   Answering questions based on user-supplied documentation.
-*   Answering Botkube questions or instructions based on:
-    *   Agent status and configuration,
-    *   the latest Botkube documentation and other Botkube content.
-*   Keeping conversation context in the message threads.
+*   [Unreleased 🚧](https://docs.botkube.io/next/features/ai-assistant)
+*   [1.12](https://docs.botkube.io/features/ai-assistant)
+*   [1.11](https://docs.botkube.io/1.11/features/ai-assistant)
+*   [1.10](https://docs.botkube.io/1.10/)
+*   [1.9](https://docs.botkube.io/1.9/)
+*   [1.8](https://docs.botkube.io/1.8/)
+*   [1.7](https://docs.botkube.io/1.7/)
+*   * * *
+    
+*   [All versions](https://docs.botkube.io/versions)
 
-Get started[​](#get-started "Direct link to Get started")
----------------------------------------------------------
+[GitHub](https://github.com/kubeshop/botkube)[Slack](https://join.botkube.io/)
 
-Enable the plugin[​](#enable-the-plugin "Direct link to Enable the plugin")
----------------------------------------------------------------------------
+Search
 
-You can enable the plugin as a part of Botkube instance configuration.
+*   [Installation](https://docs.botkube.io/)
+    
+*   [Tutorials and examples](https://docs.botkube.io/examples-and-tutorials/)
+    
+*   [Features](https://docs.botkube.io/features/event-notifications)
+    
+    *   [Event notifications](https://docs.botkube.io/features/event-notifications)
+    *   [Executing commands](https://docs.botkube.io/features/executing-commands)
+    *   [Automated Actions](https://docs.botkube.io/features/actions)
+    *   [AI Assistant](https://docs.botkube.io/features/ai-assistant)
+    *   [RBAC](https://docs.botkube.io/features/rbac)
+*   [Plugins](https://docs.botkube.io/plugins/)
+    
+*   [CLI](https://docs.botkube.io/cli/getting-started)
+    
+*   [Self-hosted Configuration](https://docs.botkube.io/self-hosted-configuration/)
+    
+*   [Troubleshooting](https://docs.botkube.io/troubleshooting/common-problems)
+    
+*   [Architecture](https://docs.botkube.io/architecture/)
+    
 
-1.  If you don't have an existing Botkube instance, create a new one, according to the [Installation](https://docs.botkube.io/) docs.
-2.  From the [Botkube Cloud homepage](https://app.botkube.io/), click on a card of a given Botkube instance.
-3.  Navigate to the platform tab which you want to configure.
-4.  Click **Add plugin** button.
-5.  Select the AI plugin.
-6.  Click **Save** button.
+*   [](https://docs.botkube.io/)
+*   Features
+*   AI Assistant
 
-Usage[​](#usage "Direct link to Usage")
----------------------------------------
+Version: 1.12
 
-### Highlights[​](#highlights "Direct link to Highlights")
+AI Assistant
+============
 
-To see the AI assistant in action, watch the video:
+Botkube AI Assistant capabilities are delivered in a form of a Botkube plugin.
 
-### AI Help for Kubernetes events[​](#ai-help-for-kubernetes-events "Direct link to AI Help for Kubernetes events")
+Redirecting to the Botkube AI Assistant plugin documentation. If you are not redirected automatically, click [here](https://docs.botkube.io/plugins/ai-assistant).
 
-Click on the **AI Help** button to get an analysis of the event.
+[Edit this page](https://github.com/kubeshop/botkube-docs/edit/main/versioned_docs/version-1.12/features/ai-assistant.mdx)
 
-![Image 1: AI Help](https://docs.botkube.io/assets/images/ai-help-usage-f2d200f6e8233c8528366a07763f9aac.png)
+[Previous Automated Actions](https://docs.botkube.io/features/actions)[Next RBAC](https://docs.botkube.io/features/rbac)
 
-### AI questions and instructions[​](#ai-questions-and-instructions "Direct link to AI questions and instructions")
+Community
 
-To ask the Botkube AI Assistant any question, use the `@Botkube ai` command prefix.
+*   [Contribute](https://docs.botkube.io/community/contribute)
+*   [GitHub](https://github.com/kubeshop/botkube)
+*   [Community Slack](https://join.botkube.io/)
+*   [Support](https://docs.botkube.io/support)
 
-Here are a few examples to get you started:
+Legal
 
-*   `@Botkube ai are my pods in default namespace up and running?`
-*   `@Botkube ai how many nodes are there?`
-*   `@Botkube ai output a yaml for Kubernetes pod with nginx image`
-*   `@Botkube what's the current Botkube status?`
-*   `@Botkube ai what's the difference between Botkube sources and executors?`
-*   `@Botkube ai what Botkube plugins are available to install? List all of them with one sentence description and link to the docs.`
-*   `@Botkube ai who's the Botkube maintainer?`
+*   [License](https://docs.botkube.io/license)
+*   [Privacy & Legal](https://botkube.io/privacy-policy)
+*   [Telemetry](https://docs.botkube.io/telemetry)
 
-### AI cluster scan[​](#ai-cluster-scan "Direct link to AI cluster scan")
+Learn
 
-The assistant can help you troubleshoot the Kubernetes cluster by performing a cluster-wide scan for any potential issues, such as failing pods, high resource usage, or any other anomalies. To start the scan, use the `@Botkube ai scan` command.
+*   [Installation](https://docs.botkube.io/)
 
-### User-supplied documentation[​](#user-supplied-documentation "Direct link to User-supplied documentation")
+Social
 
-info
+*   [Twitter](https://twitter.com/Botkube_io)
 
-This feature is only available for Botkube Cloud paid plans.
-
-Botkube Assistant can use supplied documentation to give better answers, specific to your architecture and processes. For example: architectural documents, onboarding material, runbooks, post-mortems, etc.
-
-The user-supplied documentation is scoped to a given Botkube Cloud organization.
-
-#### Manage uploaded files[​](#manage-uploaded-files "Direct link to Manage uploaded files")
-
-To manage uploaded files, navigate to the ["AI Assistant"](https://app.botkube.io/ai-assistant) tab in Botkube Cloud. From the tab, you can upload files with the **Upload File(s)** button. Supported file formats include: `.doc`, `.docx`, `.md`, `.pdf`, `.txt`. See the [full list](https://platform.openai.com/docs/assistants/tools/file-search/supported-files).
-
-To delete file(s), select the file(s) you want to delete and click **Delete selected file(s)**.
-
-Once the files are uploaded, you can ask Botkube AI Assistant questions related to the uploaded content. To learn more, see the [AI questions and instructions](#ai-questions-and-instructions) section.
-
-Configuration[​](#configuration "Direct link to Configuration")
----------------------------------------------------------------
-
-Currently, the AI plugin doesn't have any configuration options.
-
-Limitations[​](#limitations "Direct link to Limitations")
----------------------------------------------------------
-
-*   The conversation context is stored in-memory and will be cleared on Botkube Agent restart.
+Copyright © 2024 Kubeshop, Inc. Built with Docusaurus.

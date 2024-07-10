@@ -17,18 +17,16 @@ This Tutorial is about the new ChatGPT-powered Doctor plugin which allows for ea
 
 ### Table of Contents
 
-*   [Requirements](#requirements)
-*   [Method 1: Install the Doctor Plug into a new instance](#method-1-install-the-doctor-plug-into-a-new-instance)
-*   [Method 2: Install the Doctor plug-in into an already created Botkubeinstance.](#method-2-install-the-doctor-plug-in-into-an-already-created-botkubeinstance-)
-*   [Interactive Troubleshooting](#interactive-troubleshooting)
-*   [Support for Generic Questions](#support-for-generic-questions)
-*   [Scalable Plugin Pipelining](#scalable-plugin-pipelining)
-*   [Conclusion](#conclusion)
-*   [We'd Love Your Feedback](#we-d-love-your-feedback)
+*   [Requirements](https://botkube.io/blog/doctor-plug-in-tutorial#requirements)
+*   [Method 1: Install the Doctor Plug into a new instance](https://botkube.io/blog/doctor-plug-in-tutorial#method-1-install-the-doctor-plug-into-a-new-instance)
+*   [Method 2: Install the Doctor plug-in into an already created Botkubeinstance.](https://botkube.io/blog/doctor-plug-in-tutorial#method-2-install-the-doctor-plug-in-into-an-already-created-botkubeinstance-)
+*   [Interactive Troubleshooting](https://botkube.io/blog/doctor-plug-in-tutorial#interactive-troubleshooting)
+*   [Support for Generic Questions](https://botkube.io/blog/doctor-plug-in-tutorial#support-for-generic-questions)
+*   [Scalable Plugin Pipelining](https://botkube.io/blog/doctor-plug-in-tutorial#scalable-plugin-pipelining)
+*   [Conclusion](https://botkube.io/blog/doctor-plug-in-tutorial#conclusion)
+*   [We'd Love Your Feedback](https://botkube.io/blog/doctor-plug-in-tutorial#we-d-love-your-feedback)
 
 #### Start Using Botkube AI-Powered Assistant Today
-
-#### Get Started with Botkube Today!
 
 Discover the future of efficient Kubernetes troubleshooting with Botkube’s new [Doctor plug-in](https://botkube.io/integration/chatgpt-botkube-kubernetes-integration)! By leveraging ChatGPT's powerful capabilities, you can now troubleshoot your Kubernetes cluster with unparalleled ease and save valuable time in the process. Say goodbye to tedious and time-consuming tasks, as ChatGPT helps to automate much of the troubleshooting process, allowing you to concentrate on more critical aspects of your workflow. Moreover, ChatGPT's comprehensive analysis of your cluster configuration and resource utilization offers invaluable insights to optimize performance and cut down on costs. Real-time errors and recommendations enhance your troubleshooting experience, ensuring you're always up-to-date with the health of your cluster. Seamlessly integrated with major communication channels, Botkube empowers you to act swiftly on identified errors, keeping your Kubernetes environment running smoothly at all times.
 

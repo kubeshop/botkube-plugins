@@ -17,21 +17,21 @@ Botkube has plugin system that allows you to extend the functionalities of Botku
 
 ### Table of Contents
 
-*   [Background](#background)
-*   [Keptn Installation](#keptn-installation)
-*   [Accessing Keptn Gateway](#accessing-keptn-gateway)
-*   [Keptn CLI](#keptn-cli)
-*   [Create Keptn Project](#create-keptn-project)
-*   [Create Keptn Service with Resource](#create-keptn-service-with-resource)
-*   [Trigger Keptn Sequence](#trigger-keptn-sequence)
-*   [Accessing API](#accessing-api)
-*   [Plugin Development](#plugin-development)
-*   [Plugin Configuration Structure](#plugin-configuration-structure)
-*   [Simple Keptn Client Implementation](#simple-keptn-client-implementation)
-*   [Keptn Plugin Core](#keptn-plugin-core)
-*   [Building Plugin](#building-plugin)
-*   [Running Botkube](#running-botkube)
-*   [Get Started with Botkube Plugin Development](#get-started-with-botkube-plugin-development)
+*   [Background](https://botkube.io/blog/implementing-your-own-botkube-plugin-a-real-life-use-case#background)
+*   [Keptn Installation](https://botkube.io/blog/implementing-your-own-botkube-plugin-a-real-life-use-case#keptn-installation)
+*   [Accessing Keptn Gateway](https://botkube.io/blog/implementing-your-own-botkube-plugin-a-real-life-use-case#accessing-keptn-gateway)
+*   [Keptn CLI](https://botkube.io/blog/implementing-your-own-botkube-plugin-a-real-life-use-case#keptn-cli)
+*   [Create Keptn Project](https://botkube.io/blog/implementing-your-own-botkube-plugin-a-real-life-use-case#create-keptn-project)
+*   [Create Keptn Service with Resource](https://botkube.io/blog/implementing-your-own-botkube-plugin-a-real-life-use-case#create-keptn-service-with-resource)
+*   [Trigger Keptn Sequence](https://botkube.io/blog/implementing-your-own-botkube-plugin-a-real-life-use-case#trigger-keptn-sequence)
+*   [Accessing API](https://botkube.io/blog/implementing-your-own-botkube-plugin-a-real-life-use-case#accessing-api)
+*   [Plugin Development](https://botkube.io/blog/implementing-your-own-botkube-plugin-a-real-life-use-case#plugin-development)
+*   [Plugin Configuration Structure](https://botkube.io/blog/implementing-your-own-botkube-plugin-a-real-life-use-case#plugin-configuration-structure)
+*   [Simple Keptn Client Implementation](https://botkube.io/blog/implementing-your-own-botkube-plugin-a-real-life-use-case#simple-keptn-client-implementation)
+*   [Keptn Plugin Core](https://botkube.io/blog/implementing-your-own-botkube-plugin-a-real-life-use-case#keptn-plugin-core)
+*   [Building Plugin](https://botkube.io/blog/implementing-your-own-botkube-plugin-a-real-life-use-case#building-plugin)
+*   [Running Botkube](https://botkube.io/blog/implementing-your-own-botkube-plugin-a-real-life-use-case#running-botkube)
+*   [Get Started with Botkube Plugin Development](https://botkube.io/blog/implementing-your-own-botkube-plugin-a-real-life-use-case#get-started-with-botkube-plugin-development)
 
 #### Start Using Botkube AI-Powered Assistant Today
 

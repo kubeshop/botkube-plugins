@@ -3,18 +3,18 @@ Title: Mattermost for self-hosted Botkube | Botkube
 URL Source: https://docs.botkube.io/installation/mattermost/self-hosted
 
 Markdown Content:
-Prerequisites[​](#prerequisites "Direct link to Prerequisites")
----------------------------------------------------------------
+Prerequisites[​](https://docs.botkube.io/installation/mattermost/self-hosted/#prerequisites "Direct link to Prerequisites")
+---------------------------------------------------------------------------------------------------------------------------
 
 *   Botkube CLI installed according to the [Getting Started guide](https://docs.botkube.io/cli/getting-started#installation)
 *   Access to Kubernetes cluster
 
-Install Botkube to the Mattermost[​](#install-botkube-to-the-mattermost "Direct link to Install Botkube to the Mattermost")
----------------------------------------------------------------------------------------------------------------------------
+Install Botkube to the Mattermost[​](https://docs.botkube.io/installation/mattermost/self-hosted/#install-botkube-to-the-mattermost "Direct link to Install Botkube to the Mattermost")
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Follow the steps below to install Botkube in your Mattermost instance.
 
-### Create the Botkube bot account[​](#create-the-botkube-bot-account "Direct link to Create the Botkube bot account")
+### Create the Botkube bot account[​](https://docs.botkube.io/installation/mattermost/self-hosted/#create-the-botkube-bot-account "Direct link to Create the Botkube bot account")
 
 1.  Follow the [Mattermost instructions](https://developers.mattermost.com/integrate/reference/bot-accounts/) for creating a bot account. When creating the bot account, use the following details:
     
@@ -41,7 +41,7 @@ Follow the steps below to install Botkube in your Mattermost instance.
     ```
     
 
-### Add Botkube to a channel[​](#add-botkube-to-a-channel "Direct link to Add Botkube to a channel")
+### Add Botkube to a channel[​](https://docs.botkube.io/installation/mattermost/self-hosted/#add-botkube-to-a-channel "Direct link to Add Botkube to a channel")
 
 Make sure that the newly created bot account is added to your Mattermost team by following [these instructions](https://developers.mattermost.com/integrate/reference/bot-accounts/#bot-account-creation).
 
@@ -53,8 +53,8 @@ Next, invite the Botkube bot into the specific channel where you want to receive
 export MATTERMOST_CHANNEL="{channel_name}"
 ```
 
-Install Botkube in Kubernetes cluster[​](#install-botkube-in-kubernetes-cluster "Direct link to Install Botkube in Kubernetes cluster")
----------------------------------------------------------------------------------------------------------------------------------------
+Install Botkube in Kubernetes cluster[​](https://docs.botkube.io/installation/mattermost/self-hosted/#install-botkube-in-kubernetes-cluster "Direct link to Install Botkube in Kubernetes cluster")
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 To deploy Botkube agent in your cluster, run:
 
@@ -76,21 +76,21 @@ Configuration syntax is explained [here](https://docs.botkube.io/self-hosted-con
 
 Send `@Botkube ping` in the channel to see if Botkube is running and responding.
 
-Remove Botkube from Mattermost Team[​](#remove-botkube-from-mattermost-team "Direct link to Remove Botkube from Mattermost Team")
----------------------------------------------------------------------------------------------------------------------------------
+Remove Botkube from Mattermost Team[​](https://docs.botkube.io/installation/mattermost/self-hosted/#remove-botkube-from-mattermost-team "Direct link to Remove Botkube from Mattermost Team")
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 *   Deactivate or remove Botkube bot from Mattermost Team.
 *   Archive Channel created for Botkube communication if required.
 
-Remove Botkube from Kubernetes cluster[​](#remove-botkube-from-kubernetes-cluster "Direct link to Remove Botkube from Kubernetes cluster")
-------------------------------------------------------------------------------------------------------------------------------------------
+Remove Botkube from Kubernetes cluster[​](https://docs.botkube.io/installation/mattermost/self-hosted/#remove-botkube-from-kubernetes-cluster "Direct link to Remove Botkube from Kubernetes cluster")
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Execute the following command to completely remove Botkube and related resources from your cluster:
 
-Troubleshooting[​](#troubleshooting "Direct link to Troubleshooting")
----------------------------------------------------------------------
+Troubleshooting[​](https://docs.botkube.io/installation/mattermost/self-hosted/#troubleshooting "Direct link to Troubleshooting")
+---------------------------------------------------------------------------------------------------------------------------------
 
-### Botkube doesn't start[​](#botkube-doesnt-start "Direct link to Botkube doesn't start")
+### Botkube doesn't start[​](https://docs.botkube.io/installation/mattermost/self-hosted/#botkube-doesnt-start "Direct link to Botkube doesn't start")
 
 **Symptoms**
 

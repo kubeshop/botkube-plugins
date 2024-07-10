@@ -17,10 +17,10 @@ Botkube v0.18.0 adds a Prometheus source plugin and command aliases.
 
 ### Table of Contents
 
-*   [Prometheus Plugin](#prometheus-plugin)
-*   [Aliases](#aliases)
-*   [Bug Fixes](#bug-fixes)
-*   [Feedback - We’d Love to Hear From You](#feedback-we-d-love-to-hear-from-you)
+*   [Prometheus Plugin](https://botkube.io/blog/botkube-v0-18-0-release-notes#prometheus-plugin)
+*   [Aliases](https://botkube.io/blog/botkube-v0-18-0-release-notes#aliases)
+*   [Bug Fixes](https://botkube.io/blog/botkube-v0-18-0-release-notes#bug-fixes)
+*   [Feedback - We’d Love to Hear From You](https://botkube.io/blog/botkube-v0-18-0-release-notes#feedback-we-d-love-to-hear-from-you)
 
 #### Start Using Botkube AI-Powered Assistant Today
 

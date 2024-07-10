@@ -17,15 +17,13 @@ It's official: Botkube has undergone security and compliance checks by Microsoft
 
 ### Table of Contents
 
-*   [Meet Botkube: Your AI-Powered Kubernetes Assistant](#meet-botkube-your-ai-powered-kubernetes-assistant)
-*   [What This Means for You](#what-this-means-for-you)
-*   [Strengthened Microsoft Partnership](#strengthened-microsoft-partnership)
-*   [Microsoft Build Conference](#microsoft-build-conference)
-*   [Botkube + Microsoft Teams](#botkube-microsoft-teams)
+*   [Meet Botkube: Your AI-Powered Kubernetes Assistant](https://botkube.io/blog/botkube-is-now-verified-in-microsoft-appsource#meet-botkube-your-ai-powered-kubernetes-assistant)
+*   [What This Means for You](https://botkube.io/blog/botkube-is-now-verified-in-microsoft-appsource#what-this-means-for-you)
+*   [Strengthened Microsoft Partnership](https://botkube.io/blog/botkube-is-now-verified-in-microsoft-appsource#strengthened-microsoft-partnership)
+*   [Microsoft Build Conference](https://botkube.io/blog/botkube-is-now-verified-in-microsoft-appsource#microsoft-build-conference)
+*   [Botkube + Microsoft Teams](https://botkube.io/blog/botkube-is-now-verified-in-microsoft-appsource#botkube-microsoft-teams)
 
 #### Start Using Botkube AI-Powered Assistant Today
-
-#### Get Started with Botkube Today!
 
 ![Image 2](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/664c8d7edeb8841db76de5a6_Screenshot_Template_Botkube%20(2000%20x%201500%20px).png)
 

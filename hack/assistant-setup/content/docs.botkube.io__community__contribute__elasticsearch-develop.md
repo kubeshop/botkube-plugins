@@ -10,14 +10,14 @@ Markdown Content:
 Elasticsearch notifier development
 ----------------------------------
 
-Botkube has stable support for Elasticsearch `v8` and it is backward compatible to Elasticsearch `v7`. If you are using Elasticsearch `v7`, please follow the [Elasticsearch v7 setup](#elasticsearch-v7-setup) section.
+Botkube has stable support for Elasticsearch `v8` and it is backward compatible to Elasticsearch `v7`. If you are using Elasticsearch `v7`, please follow the [Elasticsearch v7 setup](https://docs.botkube.io/community/contribute/elasticsearch-develop/#elasticsearch-v7-setup) section.
 
-Elasticsearch v8 setup[​](#elasticsearch-v8-setup "Direct link to Elasticsearch v8 setup")
-------------------------------------------------------------------------------------------
+Elasticsearch v8 setup[​](https://docs.botkube.io/community/contribute/elasticsearch-develop/#elasticsearch-v8-setup "Direct link to Elasticsearch v8 setup")
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 The easiest way to develop Botkube with Elasticsearch notifier enabled is to install Elasticsearch on your local Kubernetes cluster via [ECK](https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-deploy-eck.html).
 
-### Steps[​](#steps "Direct link to Steps")
+### Steps[​](https://docs.botkube.io/community/contribute/elasticsearch-develop/#steps "Direct link to Steps")
 
 1.  Install Elasticsearch:
     
@@ -81,12 +81,12 @@ To review if the events are properly saved in Elasticsearch, follow these steps:
     ```
     
 
-Elasticsearch v7 setup[​](#elasticsearch-v7-setup "Direct link to Elasticsearch v7 setup")
-------------------------------------------------------------------------------------------
+Elasticsearch v7 setup[​](https://docs.botkube.io/community/contribute/elasticsearch-develop/#elasticsearch-v7-setup "Direct link to Elasticsearch v7 setup")
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 The easiest way to develop Botkube with Elasticsearch notifier enabled is to install Elasticsearch on your local Kubernetes cluster.
 
-### Steps[​](#steps-1 "Direct link to Steps")
+### Steps[​](https://docs.botkube.io/community/contribute/elasticsearch-develop/#steps-1 "Direct link to Steps")
 
 1.  Install Elasticsearch:
     
@@ -132,7 +132,7 @@ To review if the events are properly saved in Elasticsearch, follow these steps:
 
 [](https://docs.botkube.io/community/contribute/)[Outgoing Webhook development](https://docs.botkube.io/community/contribute/webhook-develop)
 
-*   [Elasticsearch v8 setup](#elasticsearch-v8-setup)
-    *   [Steps](#steps)
-*   [Elasticsearch v7 setup](#elasticsearch-v7-setup)
-    *   [Steps](#steps-1)
+*   [Elasticsearch v8 setup](https://docs.botkube.io/community/contribute/elasticsearch-develop/#elasticsearch-v8-setup)
+    *   [Steps](https://docs.botkube.io/community/contribute/elasticsearch-develop/#steps)
+*   [Elasticsearch v7 setup](https://docs.botkube.io/community/contribute/elasticsearch-develop/#elasticsearch-v7-setup)
+    *   [Steps](https://docs.botkube.io/community/contribute/elasticsearch-develop/#steps-1)
