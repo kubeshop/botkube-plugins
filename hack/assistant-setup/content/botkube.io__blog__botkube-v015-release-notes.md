@@ -17,12 +17,12 @@ Botkube v0.15.0 adds some great interactivity features aimed at application deve
 
 ### Table of Contents
 
-*   [Interactive kubectl](#interactive-kubectl)
-*   [Actionable Events](#actionable-events)
-*   [Output Filtering](#output-filtering)
-*   [Interactive Output Filtering](#interactive-output-filtering)
-*   [Bug Fixes](#bug-fixes)
-*   [Feedback - We’d Love to Hear From You](#feedback-we-d-love-to-hear-from-you)
+*   [Interactive kubectl](https://botkube.io/blog/botkube-v015-release-notes#interactive-kubectl)
+*   [Actionable Events](https://botkube.io/blog/botkube-v015-release-notes#actionable-events)
+*   [Output Filtering](https://botkube.io/blog/botkube-v015-release-notes#output-filtering)
+*   [Interactive Output Filtering](https://botkube.io/blog/botkube-v015-release-notes#interactive-output-filtering)
+*   [Bug Fixes](https://botkube.io/blog/botkube-v015-release-notes#bug-fixes)
+*   [Feedback - We’d Love to Hear From You](https://botkube.io/blog/botkube-v015-release-notes#feedback-we-d-love-to-hear-from-you)
 
 #### Start Using Botkube AI-Powered Assistant Today
 

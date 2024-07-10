@@ -7,8 +7,8 @@ The action configuration allows you to automate your workflow by defining comman
 
 The actions can be disabled and enabled using dedicated commands.
 
-Predefined actions[​](#predefined-actions "Direct link to Predefined actions")
-------------------------------------------------------------------------------
+Predefined actions[​](https://docs.botkube.io/features/actions/#predefined-actions "Direct link to Predefined actions")
+-----------------------------------------------------------------------------------------------------------------------
 
 There are two predefined actions available:
 
@@ -17,13 +17,13 @@ There are two predefined actions available:
 
 Both of them are disabled by default.
 
-Action output[​](#action-output "Direct link to Action output")
----------------------------------------------------------------
+Action output[​](https://docs.botkube.io/features/actions/#action-output "Direct link to Action output")
+--------------------------------------------------------------------------------------------------------
 
 The command output is sent to the communication platforms that define the same source bindings. If there is no communication platform defined with the same source bindings, the action is still executed, but the output is ignored.
 
-Command templates[​](#command-templates "Direct link to Command templates")
----------------------------------------------------------------------------
+Command templates[​](https://docs.botkube.io/features/actions/#command-templates "Direct link to Command templates")
+--------------------------------------------------------------------------------------------------------------------
 
 Each action defines the `command` property which defines a command to be executed. It supports [Go template](https://golang.org/pkg/text/template/) syntax. The command template is rendered before actual execution.
 
@@ -33,7 +33,7 @@ The following variables are available:
 
 There are multiple helper functions supported by the templating engine. To learn more, read the documentation on the [`slim-sprig`](https://go-task.github.io/slim-sprig/) library page.
 
-### Examples[​](#examples "Direct link to Examples")
+### Examples[​](https://docs.botkube.io/features/actions/#examples "Direct link to Examples")
 
 *   Run `kubectl describe` for each event:
     
@@ -48,23 +48,23 @@ There are multiple helper functions supported by the templating engine. To learn
     ```
     
 
-RBAC[​](#rbac "Direct link to RBAC")
-------------------------------------
+RBAC[​](https://docs.botkube.io/features/actions/#rbac "Direct link to RBAC")
+-----------------------------------------------------------------------------
 
 The `ChannelName` RBAC policy is not supported for automated actions at this time. Use the `Static` RBAC policy instead. For more information read the [RBAC](https://docs.botkube.io/features/rbac) documentation.
 
-Manage Actions with Botkube commands[​](#manage-actions-with-botkube-commands "Direct link to Manage Actions with Botkube commands")
-------------------------------------------------------------------------------------------------------------------------------------
+Manage Actions with Botkube commands[​](https://docs.botkube.io/features/actions/#manage-actions-with-botkube-commands "Direct link to Manage Actions with Botkube commands")
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Botkube allows you to manage actions using `@Botkube` commands.
 
-### List available actions[​](#list-available-actions "Direct link to List available actions")
+### List available actions[​](https://docs.botkube.io/features/actions/#list-available-actions "Direct link to List available actions")
 
 Run `@Botkube list actions` to get list of configured actions and their running status:
 
 ![Image 1: List available actions](https://docs.botkube.io/assets/images/list-actions-e1d1d86e622d7a10077d5347958a3559.png)
 
-### Disable action[​](#disable-action "Direct link to Disable action")
+### Disable action[​](https://docs.botkube.io/features/actions/#disable-action "Direct link to Disable action")
 
 Run `@Botkube disable action {action-name}` to disable an action named `{action-name}`. The action settings are persisted across Botkube app restarts.
 
@@ -72,7 +72,7 @@ Run `@Botkube disable action {action-name}` to disable an action named `{action-
 
 When you disable an action, changes are applied once the Botkube is restarted. It is an automated process which usually takes a few seconds.
 
-### Enable action[​](#enable-action "Direct link to Enable action")
+### Enable action[​](https://docs.botkube.io/features/actions/#enable-action "Direct link to Enable action")
 
 Run `@Botkube enable action {action-name}` to enable an action named `{action-name}`. The action settings are persisted across Botkube app restarts.
 
@@ -80,8 +80,8 @@ Run `@Botkube enable action {action-name}` to enable an action named `{action-na
 
 When you enable an action, changes are applied once the Botkube is restarted. It is an automated process which usually takes a few seconds.
 
-Self-hosted Configuration Syntax[​](#self-hosted-configuration-syntax "Direct link to Self-hosted Configuration Syntax")
-------------------------------------------------------------------------------------------------------------------------
+Self-hosted Configuration Syntax[​](https://docs.botkube.io/features/actions/#self-hosted-configuration-syntax "Direct link to Self-hosted Configuration Syntax")
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 The following snippet contains an example configuration for self-hosted Botkube installation:
 

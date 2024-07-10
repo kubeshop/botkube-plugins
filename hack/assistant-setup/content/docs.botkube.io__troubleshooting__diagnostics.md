@@ -10,12 +10,12 @@ In order to run the suggested commands, make sure that you have installed:
 *   [`helm`](https://helm.sh/docs/intro/install/)
 *   [`kubectl`](https://kubernetes.io/docs/tasks/tools/)
 
-Agent[​](#agent "Direct link to Agent")
----------------------------------------
+Agent[​](https://docs.botkube.io/troubleshooting/diagnostics/#agent "Direct link to Agent")
+-------------------------------------------------------------------------------------------
 
 This section describes [Botkube agent](https://docs.botkube.io/architecture/) related diagnostic.
 
-### Agent version[​](#agent-version "Direct link to Agent version")
+### Agent version[​](https://docs.botkube.io/troubleshooting/diagnostics/#agent-version "Direct link to Agent version")
 
 The easiest way to check the Agent version is to get the Docker image:
 
@@ -31,7 +31,7 @@ Used imagesbotkube:	ghcr.io/kubeshop/botkube:v1.5.0cfg-watcher:	ghcr.io/kubeshop
 
 The `botkube` is the agent image. The container image tag (`v1.5.0`) is the version in which it was deployed on the cluster.
 
-### Agent health[​](#agent-health "Direct link to Agent health")
+### Agent health[​](https://docs.botkube.io/troubleshooting/diagnostics/#agent-health "Direct link to Agent health")
 
 To check if the Agent Pods are in the `Running` state, run:
 
@@ -41,9 +41,9 @@ kubectl get pod -n botkube -l app=botkube
 
 All the containers from Pods should be in the `Running` status. Restarts' number higher than one may also indicate problems, e.g. not enough resource, lack of permissions, network timeouts, etc.
 
-### Agent logs[​](#agent-logs "Direct link to Agent logs")
+### Agent logs[​](https://docs.botkube.io/troubleshooting/diagnostics/#agent-logs "Direct link to Agent logs")
 
-If the Botkube Agent is [healthy](#agent-health), you should be able to track any bug by checking the logs. To check the logs, run:
+If the Botkube Agent is [healthy](https://docs.botkube.io/troubleshooting/diagnostics/#agent-health), you should be able to track any bug by checking the logs. To check the logs, run:
 
 ```
 kubectl logs -n botkube -l app=botkube -c botkube
@@ -57,7 +57,7 @@ To check the logs since a given time, use the `--since-time` or `--since` flag, 
 --since-time=2020-03-30T10:02:08Z
 ```
 
-### Agent configuration[​](#agent-configuration "Direct link to Agent configuration")
+### Agent configuration[​](https://docs.botkube.io/troubleshooting/diagnostics/#agent-configuration "Direct link to Agent configuration")
 
 Select a tab to use a tool of your choice for getting Botkube configuration:
 
@@ -74,7 +74,7 @@ Install [Botkube CLI](https://docs.botkube.io/cli/getting-started#installation) 
 botkube config get > /tmp/bk-config.yaml
 ```
 
-### Agent restart[​](#agent-restart "Direct link to Agent restart")
+### Agent restart[​](https://docs.botkube.io/troubleshooting/diagnostics/#agent-restart "Direct link to Agent restart")
 
 When Pods are unhealthy, or if the operation processing is stuck, you can restart the Pod using this command:
 
@@ -82,7 +82,7 @@ When Pods are unhealthy, or if the operation processing is stuck, you can restar
 kubectl delete po -n botkube -l app=botkube
 ```
 
-### Agent debug logging[​](#agent-debug-logging "Direct link to Agent debug logging")
+### Agent debug logging[​](https://docs.botkube.io/troubleshooting/diagnostics/#agent-debug-logging "Direct link to Agent debug logging")
 
 In order to change the logging level to `debug`, run:
 
@@ -90,9 +90,9 @@ In order to change the logging level to `debug`, run:
 helm upgrade botkube botkube/botkube -n botkube --set settings.log.level="debug" --reuse-values
 ```
 
-If the Botkube agent Pod isn't restarted automatically, [restart it manually](#agent-restart).
+If the Botkube agent Pod isn't restarted automatically, [restart it manually](https://docs.botkube.io/troubleshooting/diagnostics/#agent-restart).
 
-### Check configured plugin repositories[​](#check-configured-plugin-repositories "Direct link to Check configured plugin repositories")
+### Check configured plugin repositories[​](https://docs.botkube.io/troubleshooting/diagnostics/#check-configured-plugin-repositories "Direct link to Check configured plugin repositories")
 
 Select a tab to use a tool of your choice for checking plugin repository configuration:
 

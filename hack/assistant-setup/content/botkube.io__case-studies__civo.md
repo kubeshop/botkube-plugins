@@ -1,4 +1,4 @@
-Title: Case Study | Streamlining Helm Deployments with Botkube - The Shawn Edition
+Title: Case Study | Streamlining Helm Deployments with Botkube
 
 URL Source: https://botkube.io/case-studies/civo
 

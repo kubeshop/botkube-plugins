@@ -17,9 +17,9 @@ This introduction will teach you how Botkube plug-ins can unify your cloud nativ
 
 ### Table of Contents
 
-*   [Why make a Botkube Plug-in: The Power of CNCF Tools Together](#why-make-a-botkube-plug-in-the-power-of-cncf-tools-together-)
-*   [How Botkube Plug-Ins Work:](#how-botkube-plug-ins-work-)
-*   [Conclusion](#conclusion-)
+*   [Why make a Botkube Plug-in: The Power of CNCF Tools Together](https://botkube.io/blog/beginners-guide-to-botkube-plugin-development-how-botkube-plug-ins-can-unify-your-cloud-native-tools#why-make-a-botkube-plug-in-the-power-of-cncf-tools-together-)
+*   [How Botkube Plug-Ins Work:](https://botkube.io/blog/beginners-guide-to-botkube-plugin-development-how-botkube-plug-ins-can-unify-your-cloud-native-tools#how-botkube-plug-ins-work-)
+*   [Conclusion](https://botkube.io/blog/beginners-guide-to-botkube-plugin-development-how-botkube-plug-ins-can-unify-your-cloud-native-tools#conclusion-)
 
 #### Start Using Botkube AI-Powered Assistant Today
 

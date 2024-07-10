@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/leveraging-botkube-for-kubernetes-cost-optim
 Published Time: Jan 29, 2024
 
 Markdown Content:
-![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a9dc3218bb2465f041cea7_1693115200398.jpeg)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6669d3e5f7e06a9b425573d6_rohit-ghumare-photo.jpg)
 
 Rohit Ghumare
 
@@ -17,18 +17,16 @@ This tutorial will guide you through using Botkube to monitor resource usage and
 
 ### Table of Contents
 
-*   [Introduction](#introduction)
-*   [What is Botkube?](#what-is-botkube-)
-*   [Prerequisites](#prerequisites)
-*   [Setting Up Resource Monitoring in Botkube](#setting-up-resource-monitoring-in-botkube)
-*   [Creating Alerts for Resource Usage Anomalies](#creating-alerts-for-resource-usage-anomalies)
-*   [Generating Cost Reports](#generating-cost-reports)
-*   [Analyzing and Acting on the Data](#analyzing-and-acting-on-the-data)
-*   [Conclusion](#conclusion)
+*   [Introduction](https://botkube.io/blog/leveraging-botkube-for-kubernetes-cost-optimization-and-reporting#introduction)
+*   [What is Botkube?](https://botkube.io/blog/leveraging-botkube-for-kubernetes-cost-optimization-and-reporting#what-is-botkube-)
+*   [Prerequisites](https://botkube.io/blog/leveraging-botkube-for-kubernetes-cost-optimization-and-reporting#prerequisites)
+*   [Setting Up Resource Monitoring in Botkube](https://botkube.io/blog/leveraging-botkube-for-kubernetes-cost-optimization-and-reporting#setting-up-resource-monitoring-in-botkube)
+*   [Creating Alerts for Resource Usage Anomalies](https://botkube.io/blog/leveraging-botkube-for-kubernetes-cost-optimization-and-reporting#creating-alerts-for-resource-usage-anomalies)
+*   [Generating Cost Reports](https://botkube.io/blog/leveraging-botkube-for-kubernetes-cost-optimization-and-reporting#generating-cost-reports)
+*   [Analyzing and Acting on the Data](https://botkube.io/blog/leveraging-botkube-for-kubernetes-cost-optimization-and-reporting#analyzing-and-acting-on-the-data)
+*   [Conclusion](https://botkube.io/blog/leveraging-botkube-for-kubernetes-cost-optimization-and-reporting#conclusion)
 
 #### Start Using Botkube AI-Powered Assistant Today
-
-#### Get Started with Botkube Today!
 
 **Introduction**
 ----------------
@@ -109,7 +107,9 @@ Here's a simple Bash script example to generate a cost report. This script could
 
 <table data-hpc="" data-tab-size="8" data-paste-markdown-skip="" data-tagsearch-lang="Shell" data-tagsearch-path="reporting-script.shell"><tbody><tr><td id="file-reporting-script-shell-L1" data-line-number="1"></td><td id="file-reporting-script-shell-LC1"><span><span>#!</span>/bin/bash</span></td></tr><tr><td id="file-reporting-script-shell-L2" data-line-number="2"></td><td id="file-reporting-script-shell-LC2"></td></tr><tr><td id="file-reporting-script-shell-L3" data-line-number="3"></td><td id="file-reporting-script-shell-LC3"><span><span>#</span> generate_cost_report.sh</span></td></tr><tr><td id="file-reporting-script-shell-L4" data-line-number="4"></td><td id="file-reporting-script-shell-LC4"></td></tr><tr><td id="file-reporting-script-shell-L5" data-line-number="5"></td><td id="file-reporting-script-shell-LC5"><span><span>#</span> Fetch resource usage details</span></td></tr><tr><td id="file-reporting-script-shell-L6" data-line-number="6"></td><td id="file-reporting-script-shell-LC6">pod_usage=<span><span>$(</span>kubectl top pod --all-namespaces --sort-by=<span><span>'</span>cpu<span>'</span></span> <span>|</span> head -5<span>)</span></span></td></tr><tr><td id="file-reporting-script-shell-L7" data-line-number="7"></td><td id="file-reporting-script-shell-LC7">node_usage=<span><span>$(</span>kubectl top node <span>|</span> head -5<span>)</span></span></td></tr><tr><td id="file-reporting-script-shell-L8" data-line-number="8"></td><td id="file-reporting-script-shell-LC8"></td></tr><tr><td id="file-reporting-script-shell-L9" data-line-number="9"></td><td id="file-reporting-script-shell-LC9"><span><span>#</span> Format the report</span></td></tr><tr><td id="file-reporting-script-shell-L10" data-line-number="10"></td><td id="file-reporting-script-shell-LC10">report=<span><span>"</span>Kubernetes Cost Report:\n\n<span>"</span></span></td></tr><tr><td id="file-reporting-script-shell-L11" data-line-number="11"></td><td id="file-reporting-script-shell-LC11">report+=<span><span>"</span>Top 5 CPU Consuming Pods:\n<span>${pod_usage}</span>\n\n<span>"</span></span></td></tr><tr><td id="file-reporting-script-shell-L12" data-line-number="12"></td><td id="file-reporting-script-shell-LC12">report+=<span><span>"</span>Top 5 CPU Consuming Nodes:\n<span>${node_usage}</span><span>"</span></span></td></tr><tr><td id="file-reporting-script-shell-L13" data-line-number="13"></td><td id="file-reporting-script-shell-LC13"></td></tr><tr><td id="file-reporting-script-shell-L14" data-line-number="14"></td><td id="file-reporting-script-shell-LC14"><span><span>#</span> Send the report via BotKube</span></td></tr><tr><td id="file-reporting-script-shell-L15" data-line-number="15"></td><td id="file-reporting-script-shell-LC15"><span>echo</span> <span><span>"</span><span>$report</span><span>"</span></span> <span>|</span> botkube send -n botkube -c botkube-communication-channel</td></tr><tr><td id="file-reporting-script-shell-L16" data-line-number="16"></td><td id="file-reporting-script-shell-LC16"></td></tr></tbody></table>
 
-‍`‍`
+‍```
+‍
+```
 
 **Analyzing and Acting on the Data**
 ------------------------------------

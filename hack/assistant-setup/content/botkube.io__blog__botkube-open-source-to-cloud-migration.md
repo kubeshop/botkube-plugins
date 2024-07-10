@@ -17,14 +17,12 @@ With our new CLI migration tool, current open-source users are able to migrate t
 
 ### Table of Contents
 
-*   [Differences Between Botkube Open Source and Botkube Cloud](#differences-between-botkube-open-source-and-botkube-cloud)
-*   [What is the Botkube CLI?](#what-is-the-botkube-cli-)
-*   [How to Migrate Your Existing Botkube Account to Cloud](#how-to-migrate-your-existing-botkube-account-to-cloud)
-*   [Give it a try!](#give-it-a-try-)
+*   [Differences Between Botkube Open Source and Botkube Cloud](https://botkube.io/blog/botkube-open-source-to-cloud-migration#differences-between-botkube-open-source-and-botkube-cloud)
+*   [What is the Botkube CLI?](https://botkube.io/blog/botkube-open-source-to-cloud-migration#what-is-the-botkube-cli-)
+*   [How to Migrate Your Existing Botkube Account to Cloud](https://botkube.io/blog/botkube-open-source-to-cloud-migration#how-to-migrate-your-existing-botkube-account-to-cloud)
+*   [Give it a try!](https://botkube.io/blog/botkube-open-source-to-cloud-migration#give-it-a-try-)
 
 #### Start Using Botkube AI-Powered Assistant Today
-
-#### Get Started with Botkube Today!
 
 With our latest release, we’ve made transitioning from the open source version of Botkube to our Cloud version even easier. [Botkube Cloud](http://botkube.io/) is built on top of our open source core and gives users even more benefits – including audit and event logs to track changes in your Kubernetes clusters, an easy-to-use visual dashboard to configure your settings, multi-cluster management, and much more.
 

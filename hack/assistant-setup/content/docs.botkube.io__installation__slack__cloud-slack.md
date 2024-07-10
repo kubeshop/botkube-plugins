@@ -5,16 +5,16 @@ URL Source: https://docs.botkube.io/installation/slack/cloud-slack
 Markdown Content:
 The Botkube Cloud App for Slack uses Botkube Cloud services to manage channels and route executor commands. This allows multi-cluster support without a need to create a dedicated application for Slack for each cluster. Events and alerts are sent directly from your cluster to your Slack workspace for reliable, fast notifications.
 
-Prerequisites[​](#prerequisites "Direct link to Prerequisites")
----------------------------------------------------------------
+Prerequisites[​](https://docs.botkube.io/installation/slack/cloud-slack/#prerequisites "Direct link to Prerequisites")
+----------------------------------------------------------------------------------------------------------------------
 
 *   A Botkube Cloud account.
     
     You can try out the Botkube Cloud App for Slack for free by creating an account in the [Botkube Cloud app](https://app.botkube.io/).
     
 
-Create a Botkube Cloud Instance with Cloud Slack[​](#create-a-botkube-cloud-instance-with-cloud-slack "Direct link to Create a Botkube Cloud Instance with Cloud Slack")
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Create a Botkube Cloud Instance with Cloud Slack[​](https://docs.botkube.io/installation/slack/cloud-slack/#create-a-botkube-cloud-instance-with-cloud-slack "Direct link to Create a Botkube Cloud Instance with Cloud Slack")
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 1.  Go to Botkube Cloud [Web App](https://app.botkube.io/) and click on `New Instance` button.
     
@@ -53,20 +53,20 @@ Create a Botkube Cloud Instance with Cloud Slack[​](#create-a-botkube-cloud-in
     ![Image 8: Cloud Slack Create](https://docs.botkube.io/assets/images/cloud_slack_create-e87f2bc4d8da6a31a5c3b18c095735de.png)
     
 
-Using Botkube Cloud App for Slack[​](#using-botkube-cloud-app-for-slack "Direct link to Using Botkube Cloud App for Slack")
----------------------------------------------------------------------------------------------------------------------------
+Using Botkube Cloud App for Slack[​](https://docs.botkube.io/installation/slack/cloud-slack/#using-botkube-cloud-app-for-slack "Direct link to Using Botkube Cloud App for Slack")
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 You can start using Botkube Cloud App for Slack by typing `@Botkube cloud help` in the Slack channel you configured in one of the previous steps.
 
 ![Image 9: Cloud Slack Command Help](https://docs.botkube.io/assets/images/cloud_slack_command_help-806b8a1c8238a93638259241e41741e3.png)
 
-### Listing Cloud Instances[​](#listing-cloud-instances "Direct link to Listing Cloud Instances")
+### Listing Cloud Instances[​](https://docs.botkube.io/installation/slack/cloud-slack/#listing-cloud-instances "Direct link to Listing Cloud Instances")
 
 You can list all the Botkube Cloud instances by typing `@Botkube cloud list instances` in the Slack channel, or click the button `List connected instances` in the help command response. Besides the instance `name`, `ID`, and `status` in the list response, you can also click the `Get details` button to go to instance details on Botkube Cloud Dashboard.
 
 ![Image 10: Cloud Slack List Instances](https://docs.botkube.io/assets/images/cloud_slack_command_list_instances-b9d9661ea10f591eb72f92a79430d9cf.png)
 
-### Setting Default Instances[​](#setting-default-instances "Direct link to Setting Default Instances")
+### Setting Default Instances[​](https://docs.botkube.io/installation/slack/cloud-slack/#setting-default-instances "Direct link to Setting Default Instances")
 
 Once a Botkube command is executed, it will be handled on target Kubernetes cluster specified with `--cluster-name` flag. This is an optional flag, where if you have not specified it, Botkube Cloud will select the first instance. However, you can also achieve setting default instance with command `@Botkube cloud set default-instance {instance-id}`.
 
@@ -76,15 +76,15 @@ After this point, all of your commands will be executed on the default instance.
 
 ![Image 12: Cloud Slack All Clusters](https://docs.botkube.io/assets/images/cloud_slack_command_all_clusters-ff8c8984bb8097d34b419a6cfddb7cd0.png)
 
-### Setting Public Alias for Private Channels[​](#setting-public-alias-for-private-channels "Direct link to Setting Public Alias for Private Channels")
+### Setting Public Alias for Private Channels[​](https://docs.botkube.io/installation/slack/cloud-slack/#setting-public-alias-for-private-channels "Direct link to Setting Public Alias for Private Channels")
 
 In order to maintain your confidentiality while using Botkube's plugins, you need to create a public alias for your private Slack channels. This alias will only be visible to Botkube Cloud administrators.
 
-#### During the Botkube Invitation to Private Channels[​](#during-the-botkube-invitation-to-private-channels "Direct link to During the Botkube Invitation to Private Channels")
+#### During the Botkube Invitation to Private Channels[​](https://docs.botkube.io/installation/slack/cloud-slack/#during-the-botkube-invitation-to-private-channels "Direct link to During the Botkube Invitation to Private Channels")
 
 When you invite Botkube to a private channel, a prompt will appear to guide you through the process of creating a public alias.
 
-#### For Existing Private Channels[​](#for-existing-private-channels "Direct link to For Existing Private Channels")
+#### For Existing Private Channels[​](https://docs.botkube.io/installation/slack/cloud-slack/#for-existing-private-channels "Direct link to For Existing Private Channels")
 
 To update an existing alias for a private channel, or if Botkube is already integrated, simply use this command:
 
@@ -92,8 +92,8 @@ To update an existing alias for a private channel, or if Botkube is already inte
 @Botkube cloud set channel-alias <your-public-alias-name>
 ```
 
-Cleanup[​](#cleanup "Direct link to Cleanup")
----------------------------------------------
+Cleanup[​](https://docs.botkube.io/installation/slack/cloud-slack/#cleanup "Direct link to Cleanup")
+----------------------------------------------------------------------------------------------------
 
 1.  Go to Botkube Cloud instances page and click `Manage` button of the instance you want to remove.
     

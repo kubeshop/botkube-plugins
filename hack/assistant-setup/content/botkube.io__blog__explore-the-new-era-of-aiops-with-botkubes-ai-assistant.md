@@ -17,14 +17,12 @@ Discover how to revolutionize Kubernetes management with Botkube's AI Assistant!
 
 ### Table of Contents
 
-*   [Getting Started with Botkube's AI Assistant](#getting-started-with-botkube-s-ai-assistant)
-*   [How to use Botkube's AI Assistant](#how-to-use-botkube-s-ai-assistant)
-*   [Conclusion](#conclusion)
-*   [Get Started Today](#get-started-today)
+*   [Getting Started with Botkube's AI Assistant](https://botkube.io/blog/explore-the-new-era-of-aiops-with-botkubes-ai-assistant#getting-started-with-botkube-s-ai-assistant)
+*   [How to use Botkube's AI Assistant](https://botkube.io/blog/explore-the-new-era-of-aiops-with-botkubes-ai-assistant#how-to-use-botkube-s-ai-assistant)
+*   [Conclusion](https://botkube.io/blog/explore-the-new-era-of-aiops-with-botkubes-ai-assistant#conclusion)
+*   [Get Started Today](https://botkube.io/blog/explore-the-new-era-of-aiops-with-botkubes-ai-assistant#get-started-today)
 
 #### Start Using Botkube AI-Powered Assistant Today
-
-#### Start Receiving Kubernetes Notifications Now
 
 Kubernetes management requires lots of expertise. In the era of artificial intelligence, this complexity has led to the advent of [AIOps](https://botkube.io/learn/aiops-tools)—artificial intelligence for IT operations—which aims to enhance operational processes through the use of AI. In addition, Kubernetes Assistant tools like [Botkube's AI Assistant](https://botkube.io/blog/real-time-platform-engineer-advice-ai-assistant) have launched in response to the challenge of Kubernetes developer experience. They can simplify the Kubernetes experience through automation, real-time monitoring, and intelligent troubleshooting directly from chat platforms. These new tools are vital for both seasoned DevOps professionals and newcomers to make Kubernetes operations more accessible and efficient.
 
@@ -58,7 +56,7 @@ Before exploring Botkube's AI Assistant, you’ll need:
 
 ![Image 3](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65ecd86310dd50a06df954e2_oeh6mJwm7VXV8-qP22EHYCGBGTD3Vkj_oNVMyhDANhHg-oI3h4xHJ2GQ_EMtiqxtwkKTdEsN73su0lsORSgBBuxnd3hL-KNkAyVdwLn5Qeo54tpzPL9Emihf-l1B-YdyvhlN8DJMCvmjtIIBytLwleo.png)
 
-3.  **Initiate AI Assistance:** After connecting your instance, the AI Assistant feature is automatically enabled as part of the installation process. Begin your interaction with the AI Assistant by using: **`@Botkube ai hi`**
+3.  **Initiate AI Assistance:** After connecting your instance, the AI Assistant feature is automatically enabled as part of the installation process. Begin your interaction with the AI Assistant by using: **` @Botkube ai hi`**
 
 ![Image 4](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65ecd86f1927490939066d7b_jdK_nbhFbWzCMwC8aCYHZ5o7JZJ4G1LOVwrcWtEoEC1YlFx9oQzja864BYJEf1Ber1UtBcV2nB_y5ZIgf6C1-Sl8z-gbX7Y3jPXGemQc_yT4xeSw9JVTZjyIdqq7wWwmzunejS2Ncep2JV0gN8DgKsQ.png)
 

@@ -1,12 +1,9 @@
-Title: Pricing
+Title: Pricing | Botkube
 
 URL Source: https://botkube.io/pricing
 
 Markdown Content:
-[![Image 1](https://cdn.prod.website-files.com/633705de6adaa38599d8e258/6338148fa3f8a509639804fa_botkube-logo.svg)](https://botkube.io/)
-
-Botkube Pricing
----------------
+[![Image 1](https://cdn.prod.website-files.com/633705de6adaa38599d8e258/667961c259ac5b072d1c38ee_bk-logo.svg)](https://botkube.io/)
 
 The Botkube pricing model is in beta. We are working on optimizing the pricing to best fit the needs of our users. We’d love to talk to you about it, please [contact us](https://botkube.io/contact).
 

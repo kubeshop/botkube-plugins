@@ -102,7 +102,9 @@ Be it a single Kubernetes cluster or a sprawling array of them, Botkube adapts e
 
 The [Botkube Flux executor](https://botkube.io/blog/botkube-v1-3-0-release-notes) streamlines the diff process by enabling a one-command execution for diffing between a specific pull request and the cluster state. An example command could be:
 
-`@BotKube flux diff kustomization podinfo --path ./kustomize --github-ref [PR Number| URL | Branch]`
+```
+@BotKube flux diff kustomization podinfo --path ./kustomize --github-ref [PR Number| URL | Branch]
+```
 
 This command automates multiple tasks, including identifying the associated GitHub repository linked to the provided kustomization, repository cloning, pull request checkout, and comparison of pull request changes with the present cluster state. The results of this comparison are shared by posting a diff report on the designated Slack channel, allowing team members to easily review and discuss the alterations. Furthermore, the tool offers users a few additional buttons:
 

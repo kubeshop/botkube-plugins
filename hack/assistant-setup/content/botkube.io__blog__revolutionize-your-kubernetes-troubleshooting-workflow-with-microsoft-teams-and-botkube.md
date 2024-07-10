@@ -2,7 +2,7 @@ Title: Revolutionize Kubernetes Troubleshooting with Microsoft Teams and Botkube
 
 URL Source: https://botkube.io/blog/revolutionize-your-kubernetes-troubleshooting-workflow-with-microsoft-teams-and-botkube
 
-Published Time: Nov 29, 2023
+Published Time: May 20, 2024
 
 Markdown Content:
 ![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
@@ -17,12 +17,10 @@ Learn more about Botkube's new and improved Microsoft Teams support!
 
 ### Table of Contents
 
-*   [Benefits of the new Microsoft Teams App](#benefits-of-the-new-microsoft-teams-app-)
-*   [Getting Started with Botkube’s Microsoft Teams](#getting-started-with-botkube-s-microsoft-teams)
+*   [Benefits of the new Microsoft Teams App](https://botkube.io/blog/revolutionize-your-kubernetes-troubleshooting-workflow-with-microsoft-teams-and-botkube#benefits-of-the-new-microsoft-teams-app-)
+*   [Getting Started with Botkube’s Microsoft Teams](https://botkube.io/blog/revolutionize-your-kubernetes-troubleshooting-workflow-with-microsoft-teams-and-botkube#getting-started-with-botkube-s-microsoft-teams)
 
 #### Start Using Botkube AI-Powered Assistant Today
-
-#### Get Started with Botkube Today!
 
 In today's fast-paced, hybrid work environment, Microsoft Teams stands as a leader of enterprise communication tools that boasts a staggering 280 million active users monthly as of January 2023, including 91 of the Fortune 100 companies. The adoption of this tool is parallel to the rapid expansion of Azure Cloud services and Azure Kubernetes Service (AKS), that have helped propel organizations toward scalability and seamless deployment of cloud-native applications.
 
@@ -47,7 +45,7 @@ Streamlining the installation process saves valuable time that teams would other
 
 ### Broader Accessibility and Adoption of Cloud Native tools
 
-Botkube's integration with Microsoft Teams provides users with direct access to a range of cloud-native tools such as [Prometheus, Helm, Keptn, Flux, and Argo CD](http://botkube.io/integrations), all within a single platform. These tools simplify the process of managing Kubernetes by allowing users to utilize these tools together. The integration enables the automation of various tasks, combining different cloud-native tools for an effective Kubernetes troubleshooting and management experience within the Microsoft Teams environment.
+Botkube's integration with Microsoft Teams provides users with direct access to a range of cloud-native tools such as [Prometheus, Helm, Keptn, Flux, and Argo CD](https://botkube.io/integrations), all within a single platform. These tools simplify the process of managing Kubernetes by allowing users to utilize these tools together. The integration enables the automation of various tasks, combining different cloud-native tools for an effective Kubernetes troubleshooting and management experience within the Microsoft Teams environment.
 
 ‍
 

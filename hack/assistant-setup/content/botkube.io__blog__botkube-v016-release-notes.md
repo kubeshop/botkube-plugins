@@ -17,19 +17,19 @@ Botkube v0.16.0 adds new event filter criteria allowing more granular event tuni
 
 ### Table of Contents
 
-*   [Filters](#filters)
-*   [Actions](#actions)
-*   [Legacy Slack App Deprecation](#legacy-slack-app-deprecation)
-*   [Bug Fixes](#bug-fixes)
-*   [Feedback - We’d Love to Hear From You](#feedback-we-d-love-to-hear-from-you)
+*   [Filters](https://botkube.io/blog/botkube-v016-release-notes#filters)
+*   [Actions](https://botkube.io/blog/botkube-v016-release-notes#actions)
+*   [Legacy Slack App Deprecation](https://botkube.io/blog/botkube-v016-release-notes#legacy-slack-app-deprecation)
+*   [Bug Fixes](https://botkube.io/blog/botkube-v016-release-notes#bug-fixes)
+*   [Feedback - We’d Love to Hear From You](https://botkube.io/blog/botkube-v016-release-notes#feedback-we-d-love-to-hear-from-you)
 
 #### Start Using Botkube AI-Powered Assistant Today
 
-The latest version of Botkube is here, v0.16.0. Like peanut butter and chocolate, we've brought together two great parts of Botkube to make your life working with Kubernetes even easier. Botkube is the most modern [ChatOps tool for Kubernetes](http://botkube.io/)!
+The latest version of Botkube is here, v0.16.0. Like peanut butter and chocolate, we've brought together two great parts of Botkube to make your life working with Kubernetes even easier. Botkube is the most modern [ChatOps tool for Kubernetes](https://botkube.io/)!
 
 We've addressed two things that have been frequently requested by users. First, we've added a more configurable filter system for events, meaning you can better filter what kind of events you want to see. Second, we've added actions, which can be configured to run commands automatically when an event is received and the command output is included with the event. These features work behind the scenes in the Botkube engine and are not specific to any communication platform.
 
-_If you have any feature requests or bug reports, reach out to us on [Slack](http://join.botkube.io/) or submit a [Github issue](https://github.com/kubeshop/botkube/issues)_
+_If you have any feature requests or bug reports, reach out to us on [Slack](https://join.botkube.io/) or submit a [Github issue](https://github.com/kubeshop/botkube/issues)_
 
 Filters
 -------

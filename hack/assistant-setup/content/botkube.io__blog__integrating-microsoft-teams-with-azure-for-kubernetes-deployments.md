@@ -17,23 +17,21 @@ Botkube is entering the MS teams world
 
 ### Table of Contents
 
-*   [Benefits of Using Botkube and MS Teams](#benefits-of-using-botkube-and-ms-teams)
-*   [Tutorial Guide](#tutorial-guide-)
-*   [Prerequisites](#prerequisites)
-*   [Creating Botkube Cloud Account](#creating-botkube-cloud-account)
-*   [Dashboard setup](#dashboard-setup)
-*   [Conclusion](#conclusion)
-*   [Get Started with Botkube](#get-started-with-botkube)
+*   [Benefits of Using Botkube and MS Teams](https://botkube.io/blog/integrating-microsoft-teams-with-azure-for-kubernetes-deployments#benefits-of-using-botkube-and-ms-teams)
+*   [Tutorial Guide](https://botkube.io/blog/integrating-microsoft-teams-with-azure-for-kubernetes-deployments#tutorial-guide-)
+*   [Prerequisites](https://botkube.io/blog/integrating-microsoft-teams-with-azure-for-kubernetes-deployments#prerequisites)
+*   [Creating Botkube Cloud Account](https://botkube.io/blog/integrating-microsoft-teams-with-azure-for-kubernetes-deployments#creating-botkube-cloud-account)
+*   [Dashboard setup](https://botkube.io/blog/integrating-microsoft-teams-with-azure-for-kubernetes-deployments#dashboard-setup)
+*   [Conclusion](https://botkube.io/blog/integrating-microsoft-teams-with-azure-for-kubernetes-deployments#conclusion)
+*   [Get Started with Botkube](https://botkube.io/blog/integrating-microsoft-teams-with-azure-for-kubernetes-deployments#get-started-with-botkube)
 
 #### Start Using Botkube AI-Powered Assistant Today
-
-#### Start Receiving Kubernetes Notifications Now
 
 As Microsoft Teams continues its steady rise as the go to platform for enterprise-level workplace collaboration, it is parallel to the rapid adoption of Azure and Azure Kubernetes Service (AKS). These collective forces drive organizations toward innovation, scalability, and streamlined cloud-native application deployment. However, this highlights a major challenge: as teams begin to incorporate Kubernetes and all of its complexities into their workflows, the need for a collaborative troubleshooting tool becomes essential.
 
 Enter Botkube - a Kubernetes troubleshooting and monitoring tool designed to empower DevOps teams to work more efficiently. Botkube has now expanded its capabilities to seamlessly integrate with Microsoft Teams, fostering collaborative troubleshooting tailored to your organization's Teams workspace.
 
-**_Botkube has a new version of MS Teams. It is easy to install and get up in running in five minutes or less. Click_** [**_here_**](http://botkube.io/blog/revolutionize-your-kubernetes-troubleshooting-workflow-with-microsoft-teams-and-botkube) **_to find out more!_**
+**_Botkube has a new version of MS Teams. It is easy to install and get up in running in five minutes or less. Click_** [**_here_**](https://botkube.io/blog/revolutionize-your-kubernetes-troubleshooting-workflow-with-microsoft-teams-and-botkube) **_to find out more!_**
 
 Benefits of Using Botkube and MS Teams
 --------------------------------------
@@ -50,7 +48,7 @@ In this tutorial, we will guide you through the step-by-step process of configur
 Prerequisites
 -------------
 
-*   [Botkube Cloud](http://app.botkube.io/) account
+*   [Botkube Cloud](https://app.botkube.io/) account
 *   Access to a Kubernetes cluster
 *   MS Teams account
 

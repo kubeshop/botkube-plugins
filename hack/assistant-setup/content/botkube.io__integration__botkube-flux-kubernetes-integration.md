@@ -1,4 +1,4 @@
-Title: Flux & Botkube Kubernetes Integration
+Title: Botkube & Flux Integration for k8s GitOps
 
 URL Source: https://botkube.io/integration/botkube-flux-kubernetes-integration
 

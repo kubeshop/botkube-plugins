@@ -17,13 +17,11 @@ Discover how Botkube AI's simplifies Kubernetes troubleshooting for devs with na
 
 ### Table of Contents
 
-*   [Challenge: Developers struggle with Kubernetes complexity](#challenge-developers-struggle-with-kubernetes-complexity)
-*   [‍Solution: Botkube Empowers Developers with Self-Service and Collaboration](#-solution-botkube-empowers-developers-with-self-service-and-collaboration)
-*   [How Botkube Simplifies Kubernetes for Developers](#how-botkube-simplifies-kubernetes-for-developers)
-*   [Empowering Developers with Automation](#empowering-developers-with-automation)
-*   [Conclusion: Transform Your Kubernetes Workflow with Botkube](#conclusion-transform-your-kubernetes-workflow-with-botkube)
-
-#### Start Using Botkube AI-Powered Assistant Today
+*   [Challenge: Developers struggle with Kubernetes complexity](https://botkube.io/blog/simplify-kubernetes-with-botkubes-ai-developer-self-service-made-easy#challenge-developers-struggle-with-kubernetes-complexity)
+*   [‍Solution: Botkube Empowers Developers with Self-Service and Collaboration](https://botkube.io/blog/simplify-kubernetes-with-botkubes-ai-developer-self-service-made-easy#-solution-botkube-empowers-developers-with-self-service-and-collaboration)
+*   [How Botkube Simplifies Kubernetes for Developers](https://botkube.io/blog/simplify-kubernetes-with-botkubes-ai-developer-self-service-made-easy#how-botkube-simplifies-kubernetes-for-developers)
+*   [Empowering Developers with Automation](https://botkube.io/blog/simplify-kubernetes-with-botkubes-ai-developer-self-service-made-easy#empowering-developers-with-automation)
+*   [Conclusion: Transform Your Kubernetes Workflow with Botkube](https://botkube.io/blog/simplify-kubernetes-with-botkubes-ai-developer-self-service-made-easy#conclusion-transform-your-kubernetes-workflow-with-botkube)
 
 #### Start Using Botkube AI-Powered Assistant Today
 

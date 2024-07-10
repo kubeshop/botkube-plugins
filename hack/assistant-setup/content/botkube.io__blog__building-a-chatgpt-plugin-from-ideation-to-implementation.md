@@ -17,16 +17,14 @@ Botkube now includes AI recommendations to help you diagnose and troubleshoot is
 
 ### Table of Contents
 
-*   [Introduction](#introduction)
-*   [Ideation Phase: The Company-Wide Hackathon](#ideation-phase-the-company-wide-hackathon)
-*   [Planning and Conceptualization](#planning-and-conceptualization)
-*   [Development Process](#development-process)
-*   [Result](#result)
-*   [Conclusion](#conclusion)
+*   [Introduction](https://botkube.io/blog/building-a-chatgpt-plugin-from-ideation-to-implementation#introduction)
+*   [Ideation Phase: The Company-Wide Hackathon](https://botkube.io/blog/building-a-chatgpt-plugin-from-ideation-to-implementation#ideation-phase-the-company-wide-hackathon)
+*   [Planning and Conceptualization](https://botkube.io/blog/building-a-chatgpt-plugin-from-ideation-to-implementation#planning-and-conceptualization)
+*   [Development Process](https://botkube.io/blog/building-a-chatgpt-plugin-from-ideation-to-implementation#development-process)
+*   [Result](https://botkube.io/blog/building-a-chatgpt-plugin-from-ideation-to-implementation#result)
+*   [Conclusion](https://botkube.io/blog/building-a-chatgpt-plugin-from-ideation-to-implementation#conclusion)
 
 #### Start Using Botkube AI-Powered Assistant Today
-
-#### Get Started with Botkube Today!
 
 Introduction
 ------------

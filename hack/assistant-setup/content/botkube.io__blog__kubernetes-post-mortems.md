@@ -1,4 +1,4 @@
-Title: Streamline Kubernetes Post-Mortems with Botkube's AI Assistant
+Title: Streamline Kubernetes Post-Mortems with Botkube Assistant
 
 URL Source: https://botkube.io/blog/kubernetes-post-mortems
 
@@ -17,11 +17,9 @@ One of the most time-consuming yet essential tasks that DevOps teams face is the
 
 ### Table of Contents
 
-*   [The DevOps Post-Mortem: Why RCA Matters for Kubernetes Health](#the-devops-post-mortem-why-rca-matters-for-kubernetes-health)
-*   [Optimizing Your DevOps Post-Mortems: Advanced Botkube Tips](#optimizing-your-devops-post-mortems-advanced-botkube-tips)
-*   [Conclusion](#conclusion)
-
-#### Start Using Botkube AI-Powered Assistant Today
+*   [The DevOps Post-Mortem: Why RCA Matters for Kubernetes Health](https://botkube.io/blog/kubernetes-post-mortems#the-devops-post-mortem-why-rca-matters-for-kubernetes-health)
+*   [Optimizing Your DevOps Post-Mortems: Advanced Botkube Tips](https://botkube.io/blog/kubernetes-post-mortems#optimizing-your-devops-post-mortems-advanced-botkube-tips)
+*   [Conclusion](https://botkube.io/blog/kubernetes-post-mortems#conclusion)
 
 #### Start Using Botkube AI-Powered Assistant Today
 
@@ -58,9 +56,9 @@ These challenges can significantly slow down RCA efforts, prolonging downtime an
 Optimizing Your DevOps Post-Mortems: Advanced Botkube Tips
 ----------------------------------------------------------
 
-Botkube’s AI assists in the creation of post mortem reports for SREs and DevOps teams by attempting to automate the post mortem report process using our AI assistant. Botkube collects comprehensive incident data, tracks remediation steps, captures Mean Time to Recovery (MTTR), and can be prompted to document all relevant actions and steps taken to remediate the issue. This results in a detailed post mortem report, providing a clear timeline of events, root causes, and resolutions. By using AI to keep track of and documenting steps, Botkube saves SRE teams valuable time, allowing them to focus on more strategic initiatives.
+Botkube Assistant creates post mortem reports for SREs and DevOps teams by attempting to automate the post mortem report process. Botkube collects comprehensive incident data, tracks remediation steps, captures Mean Time to Recovery (MTTR), and can be prompted to document all relevant actions and steps taken to remediate the issue. This results in a detailed post mortem report, providing a clear timeline of events, root causes, and resolutions. By using AI to keep track of and documenting steps, Botkube saves SRE teams valuable time, allowing them to focus on more strategic initiatives.
 
-### ‍ Steps to Using Botkube’s AI Assistant for Post-Mortems
+### ‍ Steps to Using Botkube Assistant for Post-Mortems
 
 1.  Receive a notification in Slack, Microsoft Teams, Discord, or Mattermost that there has been an issue with your k8s cluster.
 2.  Use the **@botkube ai** command to ask the assistant the recommended steps to solve any errors that the notification alerted you to.some text
@@ -71,7 +69,7 @@ Botkube’s AI assists in the creation of post mortem reports for SREs and DevOp
 Conclusion
 ----------
 
-Kubernetes post-mortems are no longer a daunting challenge, thanks to Botkube's AI-powered Assistant. By automating data collection, analysis, and report generation, Botkube significantly reduces the time and effort required for thorough root cause analysis. This not only minimizes downtime but also empowers your DevOps teams to learn from incidents and proactively prevent future issues.
+Kubernetes post-mortems are no longer a daunting challenge, thanks to the AI-powered Botkube Assistant. By automating data collection, analysis, and report generation, Botkube significantly reduces the time and effort required for thorough root cause analysis. This not only minimizes downtime but also empowers your DevOps teams to learn from incidents and proactively prevent future issues.
 
 Incorporate Botkube into your incident management workflow and transform how your SRE and DevOps teams handle post mortem report creation. The AI-powered Assistant automates tedious tasks, provides valuable insights, and enhances your infrastructure's reliability and efficiency. Don't let manual processes slow your team down—**try** [**Botkube for free**](https://app.botkube.io/) **today to streamline operations, boost productivity, and drive continuous improvement in your Kubernetes environment.**
 

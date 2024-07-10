@@ -13,17 +13,17 @@ Product Leader
 
 Botkube
 
-Our most recent realese of Botkube Cloud & Open Source brings important features that help with Kubernetes troubleshooting. This update brings quick Slack connection to your cluster!
+This release brings easy Doctor plugin configuration with an OpenAI key; CLI for easy installs and cloud migration; and Exec plugin to install + run any CLI directly from your communication platform.
 
 ### Table of Contents
 
-*   [What is Botkube?](#what-is-botkube-)
-*   [Doctor Plugin](#doctor-plugin)
-*   [Botkube CLI for Installation](#botkube-cli-for-installation)
-*   [Botkube CLI for Easy Cloud Migration](#botkube-cli-for-easy-cloud-migration)
-*   [Exec Plugin](#exec-plugin)
-*   [Bug Fixes](#bug-fixes)
-*   [Feedback - We’d Love to Hear From You](#feedback-we-d-love-to-hear-from-you)
+*   [What is Botkube?](https://botkube.io/blog/botkube-v1-2-0-release-notes#what-is-botkube-)
+*   [Doctor Plugin](https://botkube.io/blog/botkube-v1-2-0-release-notes#doctor-plugin)
+*   [Botkube CLI for Installation](https://botkube.io/blog/botkube-v1-2-0-release-notes#botkube-cli-for-installation)
+*   [Botkube CLI for Easy Cloud Migration](https://botkube.io/blog/botkube-v1-2-0-release-notes#botkube-cli-for-easy-cloud-migration)
+*   [Exec Plugin](https://botkube.io/blog/botkube-v1-2-0-release-notes#exec-plugin)
+*   [Bug Fixes](https://botkube.io/blog/botkube-v1-2-0-release-notes#bug-fixes)
+*   [Feedback - We’d Love to Hear From You](https://botkube.io/blog/botkube-v1-2-0-release-notes#feedback-we-d-love-to-hear-from-you)
 
 #### Start Using Botkube AI-Powered Assistant Today
 

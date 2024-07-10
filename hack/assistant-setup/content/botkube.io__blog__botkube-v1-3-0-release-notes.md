@@ -17,17 +17,15 @@ Our most recent release of Botkube Cloud & Open Source brings important features
 
 ### Table of Contents
 
-*   [What is Botkube?](#what-is-botkube-)
-*   [Keptn Source Plugin](#keptn-source-plugin)
-*   [Flux CD Executor Plugin](#flux-cd-executor-plugin)
-*   [GitHub Events Source Plugin](#github-events-source-plugin)
-*   [Slack message reactions](#slack-message-reactions)
-*   [Bug Fixes](#bug-fixes)
-*   [Feedback - We’d Love to Hear From You!](#feedback-we-d-love-to-hear-from-you-)
+*   [What is Botkube?](https://botkube.io/blog/botkube-v1-3-0-release-notes#what-is-botkube-)
+*   [Keptn Source Plugin](https://botkube.io/blog/botkube-v1-3-0-release-notes#keptn-source-plugin)
+*   [Flux CD Executor Plugin](https://botkube.io/blog/botkube-v1-3-0-release-notes#flux-cd-executor-plugin)
+*   [GitHub Events Source Plugin](https://botkube.io/blog/botkube-v1-3-0-release-notes#github-events-source-plugin)
+*   [Slack message reactions](https://botkube.io/blog/botkube-v1-3-0-release-notes#slack-message-reactions)
+*   [Bug Fixes](https://botkube.io/blog/botkube-v1-3-0-release-notes#bug-fixes)
+*   [Feedback - We’d Love to Hear From You!](https://botkube.io/blog/botkube-v1-3-0-release-notes#feedback-we-d-love-to-hear-from-you-)
 
 #### Start Using Botkube AI-Powered Assistant Today
-
-#### Get Started with Botkube Today!
 
 The Botkube plugin ecosystem is expanding! We are excited to announce the latest release of Botkube, packed with new features and improvements to enhance your Kubernetes collaborative troubleshooting experience. This release introduces:
 

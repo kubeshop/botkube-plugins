@@ -1,11 +1,11 @@
-Title: Contact Us
+Title: Contact Us | Botkube
 
 URL Source: https://botkube.io/contact
 
 Markdown Content:
 Responsive
 
-[![Image 1](https://cdn.prod.website-files.com/633705de6adaa38599d8e258/6338148fa3f8a509639804fa_botkube-logo.svg)](https://botkube.io/)
+[![Image 1](https://cdn.prod.website-files.com/633705de6adaa38599d8e258/667961c259ac5b072d1c38ee_bk-logo.svg)](https://botkube.io/)
 
 Product
 
@@ -23,13 +23,9 @@ Company
 
 [Sign in](https://app.botkube.io/)
 
-[Get started](#)[Get started](https://app.botkube.io/)
-
-[Sign in](https://app.botkube.io/)
-
 [Request Demo](https://botkube.io/demo)[Get Started](https://app.botkube.io/)
 
-Use the form to leave us a message or connect with us on social:
+Use the form to leave us a message or connect to us on social:
 
 [](https://www.youtube.com/playlist?list=PL2Vye-us8_x_5eqYQTBq7ZywupscaW5yA)[](https://github.com/kubeshop/botkube)[](https://twitter.com/botkube_io)[](https://api.botkube.io/routers/slack/v1/install)[](https://www.linkedin.com/showcase/botkube/)
 

@@ -17,18 +17,16 @@ Our most recent release of Botkube brings important features that help with Kube
 
 ### Table of Contents
 
-*   [What is Botkube?](#what-is-botkube-)
-*   [Argo CD Source Plugin](#argo-cd-source-plugin)
-*   [Mattermost Bot Account Support](#mattermost-bot-account-support)
-*   [Custom OpenAI API Parameters for the Doctor Plugin](#custom-openai-api-parameters-for-the-doctor-plugin)
-*   [Elasticsearch V8 Support](#elasticsearch-v8-support)
-*   [Restart Crashed Plugins](#restart-crashed-plugins)
-*   [Bug Fixes](#bug-fixes)
-*   [Feedback - We’d Love to Hear From You](#feedback-we-d-love-to-hear-from-you)
+*   [What is Botkube?](https://botkube.io/blog/botkube-v1-4-0-release-notes#what-is-botkube-)
+*   [Argo CD Source Plugin](https://botkube.io/blog/botkube-v1-4-0-release-notes#argo-cd-source-plugin)
+*   [Mattermost Bot Account Support](https://botkube.io/blog/botkube-v1-4-0-release-notes#mattermost-bot-account-support)
+*   [Custom OpenAI API Parameters for the Doctor Plugin](https://botkube.io/blog/botkube-v1-4-0-release-notes#custom-openai-api-parameters-for-the-doctor-plugin)
+*   [Elasticsearch V8 Support](https://botkube.io/blog/botkube-v1-4-0-release-notes#elasticsearch-v8-support)
+*   [Restart Crashed Plugins](https://botkube.io/blog/botkube-v1-4-0-release-notes#restart-crashed-plugins)
+*   [Bug Fixes](https://botkube.io/blog/botkube-v1-4-0-release-notes#bug-fixes)
+*   [Feedback - We’d Love to Hear From You](https://botkube.io/blog/botkube-v1-4-0-release-notes#feedback-we-d-love-to-hear-from-you)
 
 #### Start Using Botkube AI-Powered Assistant Today
-
-#### Get Started with Botkube Today!
 
 Botkube continues to enhance your GitOps experience by adding support for Argo CD via a new source plugin! We are excited to announce the latest release of Botkube, packed with new features and improvements to enhance your Kubernetes collaborative troubleshooting experience. This release introduces:
 

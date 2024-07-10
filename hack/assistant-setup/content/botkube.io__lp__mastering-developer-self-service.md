@@ -1,4 +1,4 @@
-Title: Mastering Developer Self-Service in Kubernetes
+Title: Mastering Developer Self-Service in Kubernetes | Botkube
 
 URL Source: https://botkube.io/lp/mastering-developer-self-service
 

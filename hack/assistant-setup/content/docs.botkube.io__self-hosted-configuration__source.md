@@ -33,9 +33,9 @@ Next, you can configure source from a given repository:
 sources:  "plugins":    repo-name/source-name@v1.0.0: # Plugin name syntax: <repo>/<plugin>[@<version>]. If version is not provided, the latest version from repository is used.      enabled: true      config: {}
 ```
 
-For all source configuration properties, see the [**syntax**](#syntax) section.
+For all source configuration properties, see the [**syntax**](https://docs.botkube.io/self-hosted-configuration/source/#syntax) section.
 
-#### Restart Policy and Health Check Interval[​](#restart-policy-and-health-check-interval "Direct link to Restart Policy and Health Check Interval")
+#### Restart Policy and Health Check Interval[​](https://docs.botkube.io/self-hosted-configuration/source/#restart-policy-and-health-check-interval "Direct link to Restart Policy and Health Check Interval")
 
 This section of the configuration allows you to configure the restart policy for the Botkube source plugins. The restart policy is used when the source plugin fails to start. The default restart policy is `DeactivatePlugin`, which means that the plugin is deactivated after a given number of restarts. The restart policy can be configured with the following properties:
 
@@ -55,8 +55,8 @@ The health check interval is used to check the health of the source plugins. The
 # Botkube Restart Policy on plugin failure.restartPolicy:  # Restart policy type. Allowed values: "RestartAgent", "DeactivatePlugin".  type: "DeactivatePlugin"  # Number of restarts before policy takes into effect.  threshold: 10healthCheckInterval: 10s
 ```
 
-Syntax[​](#syntax "Direct link to Syntax")
-------------------------------------------
+Syntax[​](https://docs.botkube.io/self-hosted-configuration/source/#syntax "Direct link to Syntax")
+---------------------------------------------------------------------------------------------------
 
 ```
 # Map of sources. The `sources` property name is an alias for a given configuration.# Key name is used as a binding reference.## Format: sources.{alias}sources:  "k8s-recommendation-events":    # Built-in kubernetes source configuration.    botkube/kubernetes:      enabled: true      config:        # Kubernetes configuration        recommendations:          pod:            noLatestImageTag: true        # ... trimmed ...# Configuration for Botkube executors and sources plugins.plugins:  # Directory, where downloaded plugins are cached.  cacheDir: "/tmp"  # List of plugins repositories.  repositories:    # This repository serves officially supported Botkube plugins.    botkube:      url: https://github.com/kubeshop/botkube/releases/download/v1.12.0/plugins-index.yaml    # Other 3rd party repositories.    repo-name:      url: https://example.com/plugins-index.yaml  # Configure Incoming webhook for source plugins.  incomingWebhook:    enabled: true    port: 2115    targetPort: 2115  # Botkube Restart Policy on plugin failure.  restartPolicy:    # Restart policy type. Allowed values: "RestartAgent", "DeactivatePlugin".    type: "DeactivatePlugin"    # Number of restarts before policy takes into effect.    threshold: 10  healthCheckInterval: 10s

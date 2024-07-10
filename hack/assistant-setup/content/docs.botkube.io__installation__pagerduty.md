@@ -12,25 +12,25 @@ Version: 1.12
 PagerDuty
 ---------
 
-Botkube Cloud PagerDuty[​](#botkube-cloud-pagerduty "Direct link to Botkube Cloud PagerDuty")
----------------------------------------------------------------------------------------------
+Botkube Cloud PagerDuty[​](https://docs.botkube.io/installation/pagerduty/#botkube-cloud-pagerduty "Direct link to Botkube Cloud PagerDuty")
+--------------------------------------------------------------------------------------------------------------------------------------------
 
 The Botkube Cloud PagerDuty integration ensure timely reactions to both alerts and changes in your Kubernetes cluster.
 
 You can directly try Botkube Cloud PagerDuty app for free by creating an account in the [Botkube Web App](https://app.botkube.io/). Follow the steps below to install the app.
 
-Prerequisites[​](#prerequisites "Direct link to Prerequisites")
----------------------------------------------------------------
+Prerequisites[​](https://docs.botkube.io/installation/pagerduty/#prerequisites "Direct link to Prerequisites")
+--------------------------------------------------------------------------------------------------------------
 
 *   A Botkube Cloud account.
     
     You can try out the PagerDuty integration for Botkube for free by creating an account in the [Botkube Cloud app](https://app.botkube.io/).
     
 
-Create a Botkube Cloud Instance with PagerDuty[​](#create-a-botkube-cloud-instance-with-pagerduty "Direct link to Create a Botkube Cloud Instance with PagerDuty")
-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Create a Botkube Cloud Instance with PagerDuty[​](https://docs.botkube.io/installation/pagerduty/#create-a-botkube-cloud-instance-with-pagerduty "Direct link to Create a Botkube Cloud Instance with PagerDuty")
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-### Connect Botkube Cloud to your Kubernetes cluster[​](#connect-botkube-cloud-to-your-kubernetes-cluster "Direct link to Connect Botkube Cloud to your Kubernetes cluster")
+### Connect Botkube Cloud to your Kubernetes cluster[​](https://docs.botkube.io/installation/pagerduty/#connect-botkube-cloud-to-your-kubernetes-cluster "Direct link to Connect Botkube Cloud to your Kubernetes cluster")
 
 1.  Go to Botkube Cloud [Web App](https://app.botkube.io/) and click on `New Instance` button.
     
@@ -47,7 +47,7 @@ Create a Botkube Cloud Instance with PagerDuty[​](#create-a-botkube-cloud-inst
 
 Proceed with the next section.
 
-### Create a PagerDuty Service[​](#create-a-pagerduty-service "Direct link to Create a PagerDuty Service")
+### Create a PagerDuty Service[​](https://docs.botkube.io/installation/pagerduty/#create-a-pagerduty-service "Direct link to Create a PagerDuty Service")
 
 To create a service in the PagerDuty web app:
 
@@ -72,7 +72,7 @@ To create a service in the PagerDuty web app:
     ![Image 5: pagerduty_app_event_integration_key.png](https://docs.botkube.io/assets/images/pagerduty_app_event_integration_key-a305026331d9c5207c8d8383164937b9.png)
     
 
-### Finalize Botkube Cloud instance configuration[​](#finalize-botkube-cloud-instance-configuration "Direct link to Finalize Botkube Cloud instance configuration")
+### Finalize Botkube Cloud instance configuration[​](https://docs.botkube.io/installation/pagerduty/#finalize-botkube-cloud-instance-configuration "Direct link to Finalize Botkube Cloud instance configuration")
 
 Go back to the Botkube Cloud instance creation.
 
@@ -91,14 +91,14 @@ Go back to the Botkube Cloud instance creation.
     ![Image 8: Cloud Instance Create](https://docs.botkube.io/assets/images/pagerduty_instance_create-8f9765508b4c65ddfb3b5c0eee1089ed.png)
     
 
-Using Botkube Cloud with PagerDuty Integration[​](#using-botkube-cloud-with-pagerduty-integration "Direct link to Using Botkube Cloud with PagerDuty Integration")
-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Using Botkube Cloud with PagerDuty Integration[​](https://docs.botkube.io/installation/pagerduty/#using-botkube-cloud-with-pagerduty-integration "Direct link to Using Botkube Cloud with PagerDuty Integration")
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 From now on, all events emitted by enabled sources are routed directly to created PagerDuty service using the [Events API v2](https://developer.pagerduty.com/docs/ZG9jOjExMDI5NTgw-events-api-v2-overview). Botkube follows the best practices by recognizing different event types and sending them to PagerDuty accordingly.
 
 ![Image 9: pagerduty_app_alert_and_changes.png](https://docs.botkube.io/assets/images/pagerduty_app_alert_and_changes-2dff037fe330782b1664d71f4229ecd6.png)
 
-### Alerts[​](#alerts "Direct link to Alerts")
+### Alerts[​](https://docs.botkube.io/installation/pagerduty/#alerts "Direct link to Alerts")
 
 An [alert](https://developer.pagerduty.com/docs/ZG9jOjExMDI5NTgx-send-an-alert-event) indicates a problem within a monitored cluster. Botkube forwards the following types of alerts to PagerDuty:
 
@@ -110,7 +110,7 @@ To see the alerts in the PagerDuty web app, click **Incidents** tab and select *
 
 ![Image 10: pagerduty_app_alert.png](https://docs.botkube.io/assets/images/pagerduty_app_alert-fe6bda4882210829b01b9e2e916ff73a.png)
 
-### Changes[​](#changes "Direct link to Changes")
+### Changes[​](https://docs.botkube.io/installation/pagerduty/#changes "Direct link to Changes")
 
 A [change](https://developer.pagerduty.com/docs/ZG9jOjExMDI5NTgy-send-a-change-event) indicates a non-problematic update within a cluster. Botkube forwards the following types of change events to PagerDuty:
 
@@ -121,8 +121,8 @@ To see the changes in the PagerDuty web app, click **Incidents** tab and select 
 
 ![Image 11: pagerduty_app_changes.png](https://docs.botkube.io/assets/images/pagerduty_app_changes-9a240d46482366cae00e4195f0c9c4af.png)
 
-Instance Cleanup[​](#instance-cleanup "Direct link to Instance Cleanup")
-------------------------------------------------------------------------
+Instance Cleanup[​](https://docs.botkube.io/installation/pagerduty/#instance-cleanup "Direct link to Instance Cleanup")
+-----------------------------------------------------------------------------------------------------------------------
 
 1.  Go to Botkube Cloud home page and click `Manage` button of the instance you want to remove.
     
@@ -133,8 +133,8 @@ Instance Cleanup[​](#instance-cleanup "Direct link to Instance Cleanup")
     ![Image 12: Cloud Instance Delete](https://docs.botkube.io/assets/images/cloud_instance_delete-27fe3622760a4cbbd7c92d13d7ddcd41.png)
     
 
-Limitations[​](#limitations "Direct link to Limitations")
----------------------------------------------------------
+Limitations[​](https://docs.botkube.io/installation/pagerduty/#limitations "Direct link to Limitations")
+--------------------------------------------------------------------------------------------------------
 
 Botkube Cloud PagerDuty App currently doesn't support the following features:
 
@@ -142,14 +142,14 @@ Botkube Cloud PagerDuty App currently doesn't support the following features:
 
 [Elasticsearch for Botkube Cloud](https://docs.botkube.io/installation/elasticsearch/cloud)[](https://docs.botkube.io/installation/webhook/)
 
-*   [Botkube Cloud PagerDuty](#botkube-cloud-pagerduty)
-*   [Prerequisites](#prerequisites)
-*   [Create a Botkube Cloud Instance with PagerDuty](#create-a-botkube-cloud-instance-with-pagerduty)
-    *   [Connect Botkube Cloud to your Kubernetes cluster](#connect-botkube-cloud-to-your-kubernetes-cluster)
-    *   [Create a PagerDuty Service](#create-a-pagerduty-service)
-    *   [Finalize Botkube Cloud instance configuration](#finalize-botkube-cloud-instance-configuration)
-*   [Using Botkube Cloud with PagerDuty Integration](#using-botkube-cloud-with-pagerduty-integration)
-    *   [Alerts](#alerts)
-    *   [Changes](#changes)
-*   [Instance Cleanup](#instance-cleanup)
-*   [Limitations](#limitations)
+*   [Botkube Cloud PagerDuty](https://docs.botkube.io/installation/pagerduty/#botkube-cloud-pagerduty)
+*   [Prerequisites](https://docs.botkube.io/installation/pagerduty/#prerequisites)
+*   [Create a Botkube Cloud Instance with PagerDuty](https://docs.botkube.io/installation/pagerduty/#create-a-botkube-cloud-instance-with-pagerduty)
+    *   [Connect Botkube Cloud to your Kubernetes cluster](https://docs.botkube.io/installation/pagerduty/#connect-botkube-cloud-to-your-kubernetes-cluster)
+    *   [Create a PagerDuty Service](https://docs.botkube.io/installation/pagerduty/#create-a-pagerduty-service)
+    *   [Finalize Botkube Cloud instance configuration](https://docs.botkube.io/installation/pagerduty/#finalize-botkube-cloud-instance-configuration)
+*   [Using Botkube Cloud with PagerDuty Integration](https://docs.botkube.io/installation/pagerduty/#using-botkube-cloud-with-pagerduty-integration)
+    *   [Alerts](https://docs.botkube.io/installation/pagerduty/#alerts)
+    *   [Changes](https://docs.botkube.io/installation/pagerduty/#changes)
+*   [Instance Cleanup](https://docs.botkube.io/installation/pagerduty/#instance-cleanup)
+*   [Limitations](https://docs.botkube.io/installation/pagerduty/#limitations)

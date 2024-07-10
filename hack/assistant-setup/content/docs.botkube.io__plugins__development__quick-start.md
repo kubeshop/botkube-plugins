@@ -21,8 +21,8 @@ and two example release jobs:
 *   [GitHub releases](https://github.com/kubeshop/botkube-plugins-template/blob/main/.github/workflows/release.yml)
 *   [GitHub Pages](https://github.com/kubeshop/botkube-plugins-template/blob/main/.github/workflows/pages-release.yml)
 
-Use template[​](#use-template "Direct link to Use template")
-------------------------------------------------------------
+Use template[​](https://docs.botkube.io/plugins/development/quick-start/#use-template "Direct link to Use template")
+--------------------------------------------------------------------------------------------------------------------
 
 1.  Navigate to [`botkube-plugins-template`](https://github.com/kubeshop/botkube-plugins-template).
     

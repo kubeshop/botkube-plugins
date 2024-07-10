@@ -5,19 +5,19 @@ URL Source: https://docs.botkube.io/installation/discord/self-hosted
 Markdown Content:
 Version: 1.12
 
-Prerequisites[​](#prerequisites "Direct link to Prerequisites")
----------------------------------------------------------------
+Prerequisites[​](https://docs.botkube.io/installation/discord/self-hosted/#prerequisites "Direct link to Prerequisites")
+------------------------------------------------------------------------------------------------------------------------
 
 *   Botkube CLI installed according to the [Getting Started guide](https://docs.botkube.io/cli/getting-started#installation)
 *   Access to Kubernetes cluster
 *   Discord server account
 
-Install Botkube to the Discord Server[​](#install-botkube-to-the-discord-server "Direct link to Install Botkube to the Discord Server")
----------------------------------------------------------------------------------------------------------------------------------------
+Install Botkube to the Discord Server[​](https://docs.botkube.io/installation/discord/self-hosted/#install-botkube-to-the-discord-server "Direct link to Install Botkube to the Discord Server")
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Follow the steps below to install Botkube Discord app to your Discord server.
 
-### Create Botkube app at your Discord Server[​](#create-botkube-app-at-your-discord-server "Direct link to Create Botkube app at your Discord Server")
+### Create Botkube app at your Discord Server[​](https://docs.botkube.io/installation/discord/self-hosted/#create-botkube-app-at-your-discord-server "Direct link to Create Botkube app at your Discord Server")
 
 1.  Reach [https://discordapp.com/developers/applications](https://discordapp.com/developers/applications).
     
@@ -96,7 +96,7 @@ note
 
 Follow the first 4 mins of this [Video Tutorial](https://youtu.be/8o25pRbXdFw) to understand the process visually.
 
-### Install Botkube in Kubernetes cluster[​](#install-botkube-in-kubernetes-cluster "Direct link to Install Botkube in Kubernetes cluster")
+### Install Botkube in Kubernetes cluster[​](https://docs.botkube.io/installation/discord/self-hosted/#install-botkube-in-kubernetes-cluster "Direct link to Install Botkube in Kubernetes cluster")
 
 To deploy Botkube agent in your cluster, run:
 
@@ -116,12 +116,12 @@ Configuration syntax is explained [here](https://docs.botkube.io/self-hosted-con
 
 Send `@Botkube ping` in the channel to see if Botkube is running and responding.
 
-### Remove Botkube from Discord Server[​](#remove-botkube-from-discord-server "Direct link to Remove Botkube from Discord Server")
+### Remove Botkube from Discord Server[​](https://docs.botkube.io/installation/discord/self-hosted/#remove-botkube-from-discord-server "Direct link to Remove Botkube from Discord Server")
 
 *   Go to Discord Developers Portal [Applications](https://discord.com/developers/applications) page,
 *   Click on "Botkube" and click on "Delete App" button.
 
-Remove Botkube from Kubernetes cluster[​](#remove-botkube-from-kubernetes-cluster "Direct link to Remove Botkube from Kubernetes cluster")
-------------------------------------------------------------------------------------------------------------------------------------------
+Remove Botkube from Kubernetes cluster[​](https://docs.botkube.io/installation/discord/self-hosted/#remove-botkube-from-kubernetes-cluster "Direct link to Remove Botkube from Kubernetes cluster")
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Execute the following command to completely remove Botkube and related resources from your cluster:

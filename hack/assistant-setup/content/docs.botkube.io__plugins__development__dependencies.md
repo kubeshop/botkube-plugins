@@ -17,7 +17,7 @@ const (	kubectlVersion   = "v1.28.1")// Metadata returns details about kubectl p
 
 Such a definition will result in the following `dependencies` section in the plugin index:
 
-During Botkube startup, Botkube plugin manager fetches the plugin binaries along with all dependencies. Each dependency binary is named exactly as specified in the [plugin index](#define-dependencies-for-plugin-index-generation). The dependency is fetched to a directory specified in the `PLUGIN_DEPENDENCY_DIR` environment variable passed to the plugin.
+During Botkube startup, Botkube plugin manager fetches the plugin binaries along with all dependencies. Each dependency binary is named exactly as specified in the [plugin index](https://docs.botkube.io/plugins/development/dependencies/#define-dependencies-for-plugin-index-generation). The dependency is fetched to a directory specified in the `PLUGIN_DEPENDENCY_DIR` environment variable passed to the plugin.
 
 To make it easier, there's a helper function `plugin.ExecuteCommand` in the `github.com/kubeshop/botkube/pkg/plugin` package, which does all of the above. For example, the kubectl plugin uses the following code:
 

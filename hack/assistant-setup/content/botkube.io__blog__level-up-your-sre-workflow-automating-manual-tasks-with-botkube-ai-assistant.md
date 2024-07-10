@@ -17,12 +17,10 @@ See how Botkube is optimizing SRE workflows with the new AI assistant
 
 ### Table of Contents
 
-*   [The Challenges of Repetitive SRE Work](#the-challenges-of-repetitive-sre-work)
-*   [Generate Your Deployment Manifest Instantly with Botkube](#generate-your-deployment-manifest-instantly-with-botkube)
-*   [More Ways Botkube Enhances Your Workflow](#more-ways-botkube-enhances-your-workflow)
-*   [Get Started with Botkube Today](#get-started-with-botkube-today)
-
-#### Start Using Botkube AI-Powered Assistant Today
+*   [The Challenges of Repetitive SRE Work](https://botkube.io/blog/level-up-your-sre-workflow-automating-manual-tasks-with-botkube-ai-assistant#the-challenges-of-repetitive-sre-work)
+*   [Generate Your Deployment Manifest Instantly with Botkube](https://botkube.io/blog/level-up-your-sre-workflow-automating-manual-tasks-with-botkube-ai-assistant#generate-your-deployment-manifest-instantly-with-botkube)
+*   [More Ways Botkube Enhances Your Workflow](https://botkube.io/blog/level-up-your-sre-workflow-automating-manual-tasks-with-botkube-ai-assistant#more-ways-botkube-enhances-your-workflow)
+*   [Get Started with Botkube Today](https://botkube.io/blog/level-up-your-sre-workflow-automating-manual-tasks-with-botkube-ai-assistant#get-started-with-botkube-today)
 
 #### Start Using Botkube AI-Powered Assistant Today
 
@@ -74,8 +72,9 @@ Manually creating Kubernetes manifests can be a time-consuming process. By autom
 
 1.  **Ask Botkube: In your chat platform, type:**
 
-       @Botkube ai create deployment for inventory-api with 2 replicas and port 8080 using container image company/inventory-api:latest
-    
+```
+   @Botkube ai create deployment for inventory-api with 2 replicas and port 8080 using container image company/inventory-api:latest
+```
 
 2.  **Botkube Responds:** It instantly generates a valid Kubernetes deployment manifest. It might even suggest optimizations tailored to your cluster.
 3.  **Deploy with Confidence:** Apply the manifest to your cluster and get back to more important tasks.

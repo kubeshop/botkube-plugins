@@ -62,8 +62,8 @@ Started with Slack, now we're here
 
 #### Executors for the most popular cluster maintenance: Kubectl, Helm, Argo CD, Flux...
 
-Upcoming Events
----------------
+Recent & Upcoming Events
+------------------------
 
 ![Image 6](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/647f5b651155fb498c472792_livestream-icon.svg)
 

@@ -7,8 +7,8 @@ You can extend Botkube functionality by writing custom executor plugin. An execu
 
 Plugin executor is a binary that implements the [executor](https://github.com/kubeshop/botkube/blob/main/proto/executor.proto) Protocol Buffers contract.
 
-Goal[​](#goal "Direct link to Goal")
-------------------------------------
+Goal[​](https://docs.botkube.io/plugins/development/custom-executor/#goal "Direct link to Goal")
+------------------------------------------------------------------------------------------------
 
 This tutorial shows you how to build a custom `echo` executor that responds with a command that was specified by the user in a chat window.
 
@@ -16,15 +16,15 @@ This tutorial shows you how to build a custom `echo` executor that responds with
 
 For a final implementation, see the [Botkube template repository](https://docs.botkube.io/plugins/development/quick-start).
 
-Prerequisites[​](#prerequisites "Direct link to Prerequisites")
----------------------------------------------------------------
+Prerequisites[​](https://docs.botkube.io/plugins/development/custom-executor/#prerequisites "Direct link to Prerequisites")
+---------------------------------------------------------------------------------------------------------------------------
 
 *   Basic understanding of the Go language.
 *   [Go](https://golang.org/doc/install) at least 1.18.
     *   See [go.mod](https://github.com/kubeshop/botkube/blob/main/go.mod#L1) for the recommended version used by Botkube team.
 *   [GoReleaser](https://goreleaser.com/) at least 1.13.
 
-### Develop plugin business logic[​](#develop-plugin-business-logic "Direct link to Develop plugin business logic")
+### Develop plugin business logic[​](https://docs.botkube.io/plugins/development/custom-executor/#develop-plugin-business-logic "Direct link to Develop plugin business logic")
 
 1.  Create an executor plugin directory:
     
@@ -66,7 +66,7 @@ Prerequisites[​](#prerequisites "Direct link to Prerequisites")
     
     The `Execute` method is the heart of your executor plugin. This method runs your business logic and returns the execution output. Next, the Botkube core sends back the response to a given communication platform. If the communication platform supports interactivity, you can construct and return interactive messages containing buttons, dropdowns, input text, and more complex formatting. To learn more about it, see the [Interactive Messages](https://docs.botkube.io/plugins/development/interactive-messages) guide.
     
-    For each `Execute` method call, Botkube attaches the list of associated configurations. You will learn more about that in the [**Passing configuration to your plugin**](#passing-configuration-to-your-plugin) section.
+    For each `Execute` method call, Botkube attaches the list of associated configurations. You will learn more about that in the [**Passing configuration to your plugin**](https://docs.botkube.io/plugins/development/custom-executor/#passing-configuration-to-your-plugin) section.
     
 7.  Add the required `Help` method:
     
@@ -77,8 +77,8 @@ Prerequisites[​](#prerequisites "Direct link to Prerequisites")
     You can use `api.NewCodeBlockMessage` or `api.NewPlaintextMessage` helper functions, or construct your own message.
     
 
-Build plugin binaries[​](#build-plugin-binaries "Direct link to Build plugin binaries")
----------------------------------------------------------------------------------------
+Build plugin binaries[​](https://docs.botkube.io/plugins/development/custom-executor/#build-plugin-binaries "Direct link to Build plugin binaries")
+---------------------------------------------------------------------------------------------------------------------------------------------------
 
 Now it's time to build your plugin. For that purpose, we will use GoReleaser. It simplifies building Go binaries for different architectures. The important thing is to produce the binaries for the architecture of the host platform where Botkube is running. Adjust the `goos`, `goarch`, and `goarm` properties based on your needs.
 
@@ -103,8 +103,8 @@ Congrats! You just created your first Botkube executor plugin! 🎉
 
 Now it's time to [test it locally with Botkube](https://docs.botkube.io/plugins/development/local-testing). Once you're done testing, see how to [distribute it](https://docs.botkube.io/plugins/development/repo).
 
-Passing configuration to your plugin[​](#passing-configuration-to-your-plugin "Direct link to Passing configuration to your plugin")
-------------------------------------------------------------------------------------------------------------------------------------
+Passing configuration to your plugin[​](https://docs.botkube.io/plugins/development/custom-executor/#passing-configuration-to-your-plugin "Direct link to Passing configuration to your plugin")
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Sometimes your executor plugin requires a configuration specified by the end-user. Botkube supports such requirement and provides an option to specify plugin configuration under `config`. An example Botkube configuration looks like this:
 
@@ -122,8 +122,8 @@ caution
 
 Botkube starts only one process of a given executor plugin, and the list of configuration YAMLs can be different per gRPC call, so you shouldn't cache the merged configuration.
 
-Notes[​](#notes "Direct link to Notes")
----------------------------------------
+Notes[​](https://docs.botkube.io/plugins/development/custom-executor/#notes "Direct link to Notes")
+---------------------------------------------------------------------------------------------------
 
 *   Streaming command response is not supported. As a result, commands like `helm install --wait` doesn't work well, as the response won't be sent until the command finishes. It's recommended to return the response as soon as possible.
 *   The interactive message is not yet supported.

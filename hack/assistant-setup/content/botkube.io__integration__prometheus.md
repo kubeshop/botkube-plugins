@@ -1,4 +1,4 @@
-Title: Botkube.io
+Title: BotKube + Prometheus Integration
 
 URL Source: https://botkube.io/integration/prometheus
 

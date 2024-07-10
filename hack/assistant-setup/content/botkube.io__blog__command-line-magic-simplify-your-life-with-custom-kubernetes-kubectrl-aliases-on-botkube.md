@@ -17,8 +17,8 @@ With custom aliases, you can create shortcuts for those long and confusing Kuber
 
 ### Table of Contents
 
-*   [So how do you do it?](#so-how-do-you-do-it-)
-*   [Syntax](#syntax)
+*   [So how do you do it?](https://botkube.io/blog/command-line-magic-simplify-your-life-with-custom-kubernetes-kubectrl-aliases-on-botkube#so-how-do-you-do-it-)
+*   [Syntax](https://botkube.io/blog/command-line-magic-simplify-your-life-with-custom-kubernetes-kubectrl-aliases-on-botkube#syntax)
 
 #### Start Using Botkube AI-Powered Assistant Today
 

@@ -19,6 +19,10 @@ We do not want to bury the easiest way to get a status check on Kubernetes. Botk
 
 After Botkube is setup, type **'@botkube ai scan'** to start the process.
 
+![Image 1: GIF of Cluster Scan being performed in Slack](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6674417ebdc2ddafd3c5eb13_Cluster%20Scan%20GIF%20(2).gif)
+
+Preforming A Kubernetes Cluster Scan from Slack
+
 ### What Does the k8s Cluster Scan Do?
 
 Botkube's AI assistant takes cluster scanning to a new level, going beyond simply prompting a generic LLM with raw cluster data. It utilizes a sophisticated process that combines in-depth analysis with intelligent interpretation to provide actionable insights. Here's how it works:
@@ -39,7 +43,7 @@ To provide the most actionable and valuable insights, we've distilled the cluste
 
 As you can see in the screenshot below, the first part of the scan results focuses on summarizing issues. It also gives statistics related to Pod status. Below we see that the readiness probe fails on some of my pods with the [CrashLoopBackOff](https://botkube.io/learn/how-to-debug-crashloopbackoff) state. This is a very common issue that the AI will suggest fixes to later on in the message.
 
-![Image 1: Summary and Pod Health Section in Slack Message](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/66699475f1156384c7304236_AD_4nXeHgfJCM4se2T97EoCIAa_sxk27yAq7B3bc6236NAcXgnhBOMIQwNc8H7uQMvdu_2BIKVTRYnl04l1MVRSW4Iai1C7ep6SnA6j0S4aa4oO40iLNzGc2AKifMXWU2O7GG26h5NKM3oaA3qsORjmf2W2Zh4g.png)
+![Image 2: Summary and Pod Health Section in Slack Message](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/66699475f1156384c7304236_AD_4nXeHgfJCM4se2T97EoCIAa_sxk27yAq7B3bc6236NAcXgnhBOMIQwNc8H7uQMvdu_2BIKVTRYnl04l1MVRSW4Iai1C7ep6SnA6j0S4aa4oO40iLNzGc2AKifMXWU2O7GG26h5NKM3oaA3qsORjmf2W2Zh4g.png)
 
 ### 2- Resource Utilization, Configuration, and Networking
 
@@ -47,19 +51,19 @@ The next section of the report dives into the heart of your cluster's performanc
 
 In the screenshot below, you can see a clean bill of health, indicating no major issues were detected during this scan.
 
-![Image 2: k8s cluster status coming from Slack](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/66699475b7b8aa05723a2d89_AD_4nXdRF7Sfm3_bX7R6UeRajeAMlt8A2ZBsnNuLepsDtsYZNYKjHhENuMmycBwbSnog5ZoA3EyGr7aPC4nhRqGWZstJP3HPLEvoPtngWAZd32OBHI7BrGCMTVr8O9SPQehUYwkCjOhpw4c3oRCmUmgxnLYp-W8Y.png)
+![Image 3: k8s cluster status coming from Slack](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/66699475b7b8aa05723a2d89_AD_4nXdRF7Sfm3_bX7R6UeRajeAMlt8A2ZBsnNuLepsDtsYZNYKjHhENuMmycBwbSnog5ZoA3EyGr7aPC4nhRqGWZstJP3HPLEvoPtngWAZd32OBHI7BrGCMTVr8O9SPQehUYwkCjOhpw4c3oRCmUmgxnLYp-W8Y.png)
 
 ### 3- Detailed Checks
 
 Next, the report shows you more detailed reports on some of the issues it found during the process. You can see from the screenshot from our example scan that it gives us more detail on the pods that were in the crashbackloop state.
 
-![Image 3: Detailed checks for Pod readiness](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/666994754c364089e35b6d1d_AD_4nXc6JGxQuYPfVZyduDPZpDn73fqY-pUdztT2-MwzIMd77NVrl7d-JmFXhYpBC5uy_ZAPaXbOabgiJb6fdkC9w2DPBw0TMnLD-Y70IvbcfwbzGqfIg_Rnllv6wMSLdDT5M7ZfFE0AZHL-an8UnGgxxsCo99o.png)
+![Image 4: Detailed checks for Pod readiness](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/666994754c364089e35b6d1d_AD_4nXc6JGxQuYPfVZyduDPZpDn73fqY-pUdztT2-MwzIMd77NVrl7d-JmFXhYpBC5uy_ZAPaXbOabgiJb6fdkC9w2DPBw0TMnLD-Y70IvbcfwbzGqfIg_Rnllv6wMSLdDT5M7ZfFE0AZHL-an8UnGgxxsCo99o.png)
 
 ### 4 - Recommendations
 
 Finally, the most actionable section of the cluster review, the recommendations. This section should take into account all the previous sections/issues and give actionable steps to improve your Kubernetes cluster.
 
-![Image 4: k8s Health Checkup recommendations ](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/66699475e801b788a58574ba_AD_4nXeujLJDl-jVw3T_NBoPUTv0ARArCN8oZJtNLtfhMZLmtlHdy8c7rNTfuhuN66MD8RYiFQZ1Ura5AizPG5k3sRfKd8z50OQrQLlzB1UWhaQQs64IvaTYeRr20lVfC1S94YoBz9Yn1lo5zelB1tp-icpqSEjZ.png)
+![Image 5: k8s Health Checkup recommendations ](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/66699475e801b788a58574ba_AD_4nXeujLJDl-jVw3T_NBoPUTv0ARArCN8oZJtNLtfhMZLmtlHdy8c7rNTfuhuN66MD8RYiFQZ1Ura5AizPG5k3sRfKd8z50OQrQLlzB1UWhaQQs64IvaTYeRr20lVfC1S94YoBz9Yn1lo5zelB1tp-icpqSEjZ.png)
 
 Conclusion
 ----------

@@ -17,15 +17,13 @@ Argo CD now integrates with Botkube, allowing users to receive and interact with
 
 ### Table of Contents
 
-*   [What is Argo CD?](#what-is-argo-cd-)
-*   [Why was a Botkube & Argo Connection Necessary?](#why-was-a-botkube-argo-connection-necessary-)
-*   [What is Botkube?](#what-is-botkube-)
-*   [Using Argo CD with Botkube](#using-argo-cd-with-botkube)
-*   [Get Started with Botkube’s new Argo CD Plugin](#get-started-with-botkube-s-new-argo-cd-plugin)
+*   [What is Argo CD?](https://botkube.io/blog/argo-cd-botkube-integration#what-is-argo-cd-)
+*   [Why was a Botkube & Argo Connection Necessary?](https://botkube.io/blog/argo-cd-botkube-integration#why-was-a-botkube-argo-connection-necessary-)
+*   [What is Botkube?](https://botkube.io/blog/argo-cd-botkube-integration#what-is-botkube-)
+*   [Using Argo CD with Botkube](https://botkube.io/blog/argo-cd-botkube-integration#using-argo-cd-with-botkube)
+*   [Get Started with Botkube’s new Argo CD Plugin](https://botkube.io/blog/argo-cd-botkube-integration#get-started-with-botkube-s-new-argo-cd-plugin)
 
 #### Start Using Botkube AI-Powered Assistant Today
-
-#### Get Started with Botkube Today!
 
 Are you dealing with the complexities of scaling operations and collaborative workflows using GitOps tools like ArgoCD? As your organization expands, staying on top of repository and configuration changes, as well as managing pull requests and issues, can become increasingly difficult.
 

@@ -17,10 +17,10 @@ This step-by-step tutorial gets you started with Botkube Cloud Slack App, which 
 
 ### Table of Contents
 
-*   [Creating Botkube Cloud Account](#creating-botkube-cloud-account)
-*   [Connecting Kubernetes Cluster to Slack](#connecting-kubernetes-cluster-to-slack)
-*   [Conclusion](#conclusion)
-*   [Sign up now](#sign-up-now)
+*   [Creating Botkube Cloud Account](https://botkube.io/blog/step-by-step-tutorial-leveraging-botkubes-cloud-slack-feature-for-kubernetes-collaborative-troubleshooting#creating-botkube-cloud-account)
+*   [Connecting Kubernetes Cluster to Slack](https://botkube.io/blog/step-by-step-tutorial-leveraging-botkubes-cloud-slack-feature-for-kubernetes-collaborative-troubleshooting#connecting-kubernetes-cluster-to-slack)
+*   [Conclusion](https://botkube.io/blog/step-by-step-tutorial-leveraging-botkubes-cloud-slack-feature-for-kubernetes-collaborative-troubleshooting#conclusion)
+*   [Sign up now](https://botkube.io/blog/step-by-step-tutorial-leveraging-botkubes-cloud-slack-feature-for-kubernetes-collaborative-troubleshooting#sign-up-now)
 
 #### Start Using Botkube AI-Powered Assistant Today
 

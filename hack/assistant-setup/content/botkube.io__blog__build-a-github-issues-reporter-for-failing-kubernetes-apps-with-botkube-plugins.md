@@ -17,12 +17,12 @@ Botkube 0.17 introduces plugin support. In this guide you will learn how to crea
 
 ### Table of Contents
 
-*   [Goal](#goal)
-*   [Prerequisites](#prerequisites)
-*   [What's under the hood](#what-s-under-the-hood)
-*   [Step-By-Step Instructions](#step-by-step-instructions)
-*   [Summary](#summary)
-*   [How can I get involved?](#how-can-i-get-involved-)
+*   [Goal](https://botkube.io/blog/build-a-github-issues-reporter-for-failing-kubernetes-apps-with-botkube-plugins#goal)
+*   [Prerequisites](https://botkube.io/blog/build-a-github-issues-reporter-for-failing-kubernetes-apps-with-botkube-plugins#prerequisites)
+*   [What's under the hood](https://botkube.io/blog/build-a-github-issues-reporter-for-failing-kubernetes-apps-with-botkube-plugins#what-s-under-the-hood)
+*   [Step-By-Step Instructions](https://botkube.io/blog/build-a-github-issues-reporter-for-failing-kubernetes-apps-with-botkube-plugins#step-by-step-instructions)
+*   [Summary](https://botkube.io/blog/build-a-github-issues-reporter-for-failing-kubernetes-apps-with-botkube-plugins#summary)
+*   [How can I get involved?](https://botkube.io/blog/build-a-github-issues-reporter-for-failing-kubernetes-apps-with-botkube-plugins#how-can-i-get-involved-)
 
 #### Start Using Botkube AI-Powered Assistant Today
 
@@ -54,7 +54,7 @@ Prerequisites
 
 To create a local cluster for testing purposes using [`k3d`](https://k3d.io/v5.0.1/#installation), run:
 
-*   [Botkube installed and configured](https://docs.botkube.io/)[](https://docs.botkube.io/installation/)
+*   [Botkube installed and configured](https://docs.botkube.io/)
     
 *   Basic understanding of the Go language[‍](https://go.dev/doc/install)
     
@@ -208,7 +208,7 @@ The `gh` CLI doesn't accept fine-grained access tokens. As a workaround, you can
 
 <table data-hpc="" data-tab-size="8" data-paste-markdown-skip="" data-tagsearch-lang="Go" data-tagsearch-path="download-deps.go"><tbody><tr><td id="file-download-deps-go-L1" data-line-number="1"></td><td id="file-download-deps-go-LC1"><span>var</span> <span>depsDownloadLinks</span> <span>=</span> <span>map</span>[<span>string</span>]api.<span>Dependency</span>{</td></tr><tr><td id="file-download-deps-go-L2" data-line-number="2"></td><td id="file-download-deps-go-LC2"><span>"gh"</span>: {</td></tr><tr><td id="file-download-deps-go-L3" data-line-number="3"></td><td id="file-download-deps-go-LC3"><span>URLs</span>: <span>map</span>[<span>string</span>]<span>string</span>{</td></tr><tr><td id="file-download-deps-go-L4" data-line-number="4"></td><td id="file-download-deps-go-LC4"><span>"darwin/amd64"</span>: <span>"https://github.com/cli/cli/releases/download/v2.21.2/gh_2.21.2_macOS_amd64.tar.gz//gh_2.21.2_macOS_amd64/bin"</span>,</td></tr><tr><td id="file-download-deps-go-L5" data-line-number="5"></td><td id="file-download-deps-go-LC5"><span>"linux/amd64"</span>: <span>"https://github.com/cli/cli/releases/download/v2.21.2/gh_2.21.2_linux_amd64.tar.gz//gh_2.21.2_linux_amd64/bin"</span>,</td></tr><tr><td id="file-download-deps-go-L6" data-line-number="6"></td><td id="file-download-deps-go-LC6"><span>"linux/arm64"</span>: <span>"https://github.com/cli/cli/releases/download/v2.21.2/gh_2.21.2_linux_arm64.tar.gz//gh_2.21.2_linux_arm64/bin"</span>,</td></tr><tr><td id="file-download-deps-go-L7" data-line-number="7"></td><td id="file-download-deps-go-LC7"><span>"linux/386"</span>: <span>"https://github.com/cli/cli/releases/download/v2.21.2/gh_2.21.2_linux_386.tar.gz//gh_2.21.2_linux_386/bin"</span>,</td></tr><tr><td id="file-download-deps-go-L8" data-line-number="8"></td><td id="file-download-deps-go-LC8">},</td></tr><tr><td id="file-download-deps-go-L9" data-line-number="9"></td><td id="file-download-deps-go-LC9">},</td></tr><tr><td id="file-download-deps-go-L10" data-line-number="10"></td><td id="file-download-deps-go-LC10"><span>"kubectl"</span>: {</td></tr><tr><td id="file-download-deps-go-L11" data-line-number="11"></td><td id="file-download-deps-go-LC11"><span>URLs</span>: <span>map</span>[<span>string</span>]<span>string</span>{</td></tr><tr><td id="file-download-deps-go-L12" data-line-number="12"></td><td id="file-download-deps-go-LC12"><span>"darwin/amd64"</span>: <span>"https://dl.k8s.io/release/v1.26.0/bin/darwin/amd64/kubectl"</span>,</td></tr><tr><td id="file-download-deps-go-L13" data-line-number="13"></td><td id="file-download-deps-go-LC13"><span>"linux/amd64"</span>: <span>"https://dl.k8s.io/release/v1.26.0/bin/linux/amd64/kubectl"</span>,</td></tr><tr><td id="file-download-deps-go-L14" data-line-number="14"></td><td id="file-download-deps-go-LC14"><span>"linux/arm64"</span>: <span>"https://dl.k8s.io/release/v1.26.0/bin/linux/arm64/kubectl"</span>,</td></tr><tr><td id="file-download-deps-go-L15" data-line-number="15"></td><td id="file-download-deps-go-LC15"><span>"linux/386"</span>: <span>"https://dl.k8s.io/release/v1.26.0/bin/linux/386/kubectl"</span>,</td></tr><tr><td id="file-download-deps-go-L16" data-line-number="16"></td><td id="file-download-deps-go-LC16">},</td></tr><tr><td id="file-download-deps-go-L17" data-line-number="17"></td><td id="file-download-deps-go-LC17">},</td></tr><tr><td id="file-download-deps-go-L18" data-line-number="18"></td><td id="file-download-deps-go-LC18">}</td></tr><tr><td id="file-download-deps-go-L19" data-line-number="19"></td><td id="file-download-deps-go-LC19"></td></tr><tr><td id="file-download-deps-go-L20" data-line-number="20"></td><td id="file-download-deps-go-LC20"><span>func</span> <span>main</span>() {</td></tr><tr><td id="file-download-deps-go-L21" data-line-number="21"></td><td id="file-download-deps-go-LC21"><span>pluginx</span>.<span>DownloadDependencies</span>(<span>depsDownloadLinks</span>)</td></tr><tr><td id="file-download-deps-go-L22" data-line-number="22"></td><td id="file-download-deps-go-LC22"><span>//...</span></td></tr><tr><td id="file-download-deps-go-L23" data-line-number="23"></td><td id="file-download-deps-go-LC23">}</td></tr></tbody></table>
 
-We already improved this step and in the 0.18 version Botkube will download defined [dependencies automatically](https://docs.botkube.io/next/plugin/dependencies). For now, you can use the `pluginx.DownloadDependencies` function to call our downloader explicitly. The syntax will remain the same.
+We already improved this step and in the 0.18 version Botkube will download defined [dependencies automatically](https://docs.botkube.io/plugins/development/dependencies/). For now, you can use the `pluginx.DownloadDependencies` function to call our downloader explicitly. The syntax will remain the same.
 
 ‍
 
@@ -320,8 +320,6 @@ As always, we want to hear your feedback and ideas about Botkube. Help us plan t
 
 There are plenty of options to contact us:
 
-*   [GitHub issues](https://github.com/kubeshop/botkube/issues)
-    
 *   [Slack](https://join.botkube.io/)
     
 *   or email our Product Leader at blair@kubeshop.io.

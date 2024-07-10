@@ -3,43 +3,48 @@ Title: Collaborative Kubernetes AI Assistant | Botkube
 URL Source: https://botkube.io/
 
 Markdown Content:
-A virtual SRE, powered by AI
-----------------------------
+Your Virtual Kubernetes SRE
+---------------------------
 
-Botkube, the AI-Powered Kubernetes Troubleshooting Platform
-
-Botkube Helps Teams From Error to Resolution
---------------------------------------------
+The AI-Powered Kubernetes Troubleshooting Platform for Everybody Running K8s Clusters
 
 ### Alert
 
-#### Respond faster with AI-Enhanced Kubernetes Alerts
+#### _Get Kubernetes alerts direct to your chat platform_
 
-DevOps teams can easily set up Kubernetes alerts and notifications in your chat platforms. The Kubernetes AI Assistant gives context with each alert and through customizable automated actions. Teams receive prompt alerts and can swiftly address issues. Customize alert rules based on specific criteria — cutting the noise and ensuring the right people receive the right alerts to react immediately.
+Real-time alerts keep your team ahead of critical issues, with AI-powered Botkube Assistant providing extra context.
+
+Customized alert rules cut down background noise and alert the right developers to the right issues.
 
 ### Investigate
 
-#### Accelerate investigations with Botkube Assistant’s AI-powered troubleshooting
+#### _Investigate errors with one click_
 
-Investigate errors with a click of a button. The AI-powered Botkube Assistant uses your tools to find the cause of issues and gather information about your resources automatically.  The Kubernetes AI Assistant also provides troubleshooting suggestions in natural language, identifies root causes, and suggests advanced commands for complex issues. Developers can easily troubleshoot their own applications without needing CLI access or involving DevOps/SREs for simple issues. No more need  to make application developers into Kubernetes experts.
+Botkube Assistant uses your tools and documentation to find the root causes of issues, provides troubleshooting suggestions in natural language, and generates advanced commands for complex issues.
+
+Troubleshoot without CLI access or involving DevOps for simple issues.
 
 ### Remediate
 
-#### Get recommended fixes and generate post-mortem documentation effortlessly
+#### _Get recommended fixes and generate post-mortem documentation effortlessly_
 
-Botkube provides precise remediation steps and can even create suggested K8s manifests to resolve issues. Set up automated runbooks for guided troubleshooting and run health checks  to confirm fixes. After resolving incidents,  use Botkube Assistant to automatically compile relevant data—incident timelines, actions taken, and impact analysis—into comprehensive Root Cause Analysis or post mortem reports. Botkube Assistant save hours of tedious labour.
+Botkube provides precise remediation steps, including generating  Kubernetes manifests, automated runbooks for guided troubleshooting and performing health checks to confirm fixes.
+
+Botkube Assistant automatically compiles relevant data—incident timelines, actions taken, and impact analysis—into comprehensive Root Cause Analysis or post mortem reports.
 
 [![Image 1: Monitoring Kubernetes notifications in chat platforms](https://cdn.prod.website-files.com/633705de6adaa38599d8e258/6658ae107c0a774c694ed7e8_Screenshot_Template_Botkube%20(1).webp)](https://botkube.io/solutions/enabling-developers)
 
 ### Centralize alerting and troubleshooting
 
-Botkube integrates essential notifications, with context,  and troubleshooting tools directly into your chat platform.  Powered by artificial intelligence and automation, it allows teams  to tackle common issues without wasting time on repetitive tasks.
+Receive essential contextual alerts and troubleshooting tools directly into your chat platform. With powerful filtering and automations, Botkube gets the right notifications to the right teams.
 
-[Learn more](#)
+[Learn more](https://botkube.io/#)
 
 ### Developers aren’t Kubernetes experts, and they don’t have to be
 
-Botkube integrates essential notifications, with context,  and troubleshooting tools directly into your chat platform.  Powered by artificial intelligence and automation, it allows teams  to tackle common issues without wasting time on repetitive tasks.
+With Botkube, application developers can manage their own Kubernetes troubleshooting independent from DevOps, and without requiring CLI access.
+
+Meanwhile DevOps practitioners can focus on building and maintaining infrastructure wherever they are, with Botkube’s infrastructure troubleshooting capabilities available in all chat platforms.
 
 [Learn more](https://botkube.io/solutions/enabling-developers)
 
@@ -49,9 +54,9 @@ Botkube integrates essential notifications, with context,  and troubleshooting
 
 ### Botkube gives you reliable Kubernetes monitoring in minutes, not days
 
-Botkube integrates essential notifications, with context,  and troubleshooting tools directly into your chat platform.  Powered by artificial intelligence and automation, it allows teams  to tackle common issues without wasting time on repetitive tasks.
+Monitoring your Kubernetes clusters is as easy as a few clicks. Simply install Botkube, configure your alerts, and start receiving real-time notifications on critical events. Focus your time on what matters—ensuring your clusters run smoothly—while Botkube handles the rest, effortlessly keeping you informed and in control.
 
-[Learn more](#)
+[Learn more](https://botkube.io/#)
 
 Integrate & automate with an growing list of Kubernetes tools
 -------------------------------------------------------------
@@ -59,7 +64,7 @@ Integrate & automate with an growing list of Kubernetes tools
 Botkube for Teams & Enterprises
 -------------------------------
 
-#### Simplify Multi-Cluster with Botkube
+#### Simplify Multi-Cluster Complexity with Botkube
 
 #### Tailored plans to manage and tame multiple cluster environments at scale
 
@@ -106,7 +111,7 @@ What Others Are Saying
 
 ![Image 10](https://cdn.prod.website-files.com/633705de6adaa38599d8e258/64dbb86f74cb6622225312c2_quote-icon.svg)
 
-Botkube: Because DevOPS are not Kubernetes expert and also because OPS have to work!
+Botkube: Because DevOPS are not Kubernetes experts and also because OPS have to work!
 
 ![Image 11: John-Phillip Reignier](https://cdn.prod.website-files.com/plugins/Basic/assets/placeholder.60f9b1840c.svg)
 
@@ -224,16 +229,10 @@ The advantages of BotKube are its versatility & efficiency in managing & monitor
 
 ![Image 31: Aaditya S](https://cdn.prod.website-files.com/plugins/Basic/assets/placeholder.60f9b1840c.svg)
 
-![Image 32](https://cdn.prod.website-files.com/633705de6adaa38599d8e258/64dbb86f74cb6622225312c2_quote-icon.svg)
-
-Perfect! When i have the repo i will write here, thank you very much for the support! I really like this project!
-
-![Image 33: I.A.](https://cdn.prod.website-files.com/plugins/Basic/assets/placeholder.60f9b1840c.svg)
-
 Stay in the Loop
 ----------------
 
-![Image 34: Kusk Kubernetes ](https://cdn.prod.website-files.com/633705de6adaa38599d8e258/636d3117b8612105c60e0bd9_botkube-front-right.svg)
+![Image 32: Kusk Kubernetes ](https://cdn.prod.website-files.com/633705de6adaa38599d8e258/636d3117b8612105c60e0bd9_botkube-front-right.svg)
 
 Join the Botkube Community in one of these channels
 
