@@ -1,11 +1,11 @@
-Title: Integrations
+Title: Integrations | Botkube
 
 URL Source: https://botkube.io/integrations
 
 Markdown Content:
 Responsive
 
-[![Image 1](https://cdn.prod.website-files.com/633705de6adaa38599d8e258/6338148fa3f8a509639804fa_botkube-logo.svg)](https://botkube.io/)
+[![Image 1](https://cdn.prod.website-files.com/633705de6adaa38599d8e258/667961c259ac5b072d1c38ee_bk-logo.svg)](https://botkube.io/)
 
 Product
 
@@ -23,26 +23,19 @@ Company
 
 [Sign in](https://app.botkube.io/)
 
-[Get started](#)[Get started](https://app.botkube.io/)
-
-[Sign in](https://app.botkube.io/)
-
 [Request Demo](https://botkube.io/demo)[Get Started](https://app.botkube.io/)
 
 ![Image 2](https://cdn.prod.website-files.com/633705de6adaa38599d8e258/63d3f1f94ceb7a745da5f865_bk-star_01.svg)![Image 3](https://cdn.prod.website-files.com/633705de6adaa38599d8e258/63d3f1f94ceb7a745da5f865_bk-star_01.svg)![Image 4](https://cdn.prod.website-files.com/633705de6adaa38599d8e258/63d3f1f94ceb7a745da5f865_bk-star_01.svg)![Image 5](https://cdn.prod.website-files.com/633705de6adaa38599d8e258/63d3f1f94ceb7a745da5f865_bk-star_01.svg)![Image 6](https://cdn.prod.website-files.com/633705de6adaa38599d8e258/63d3f1f94ceb7a745da5f865_bk-star_01.svg)![Image 7](https://cdn.prod.website-files.com/633705de6adaa38599d8e258/63d3f1f94ceb7a745da5f865_bk-star_01.svg)![Image 8](https://cdn.prod.website-files.com/633705de6adaa38599d8e258/664485364876eef5ad8da0f0_BK_Mountain_Transparent.webp)
 
-Botkube Integrations
---------------------
-
 An app that helps you monitor your Kubernetes cluster, debug critical deployments & gives recommendations for standard practices
 
-[All integrations](#)
+[All integrations](https://botkube.io/integrations#)
 
-[Executors](#)
+[Executors](https://botkube.io/integrations#)
 
-[Communication Platforms](#)
+[Communication Platforms](https://botkube.io/integrations#)
 
-[CI/CD](#)
+[CI/CD](https://botkube.io/integrations#)
 
 [### Microsoft Teams ![Image 9: Microsoft Teams](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6566556e0b8319198abb4cb1_ms-teams_logo_white.svg)](https://botkube.io/integration/teams)
 

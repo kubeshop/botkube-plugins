@@ -1,4 +1,4 @@
-Title: Kasten & Botkube Kubernetes Integration
+Title: k8s Disaster Recovery Platform Integration
 
 URL Source: https://botkube.io/integration/kasten
 

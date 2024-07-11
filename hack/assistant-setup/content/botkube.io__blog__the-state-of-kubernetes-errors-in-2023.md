@@ -17,14 +17,12 @@ What is the state of Kubernetes errors in 2023? What are the most popular errors
 
 ### Table of Contents
 
-*   [Two Commonly Seen K8s Errors](#two-commonly-seen-k8s-errors)
-*   [Trends for Troubleshooting K8s Issues](#trends-for-troubleshooting-k8s-issues)
-*   [Effective K8s Troubleshooting Chart](#effective-k8s-troubleshooting-chart)
-*   [Concluding Kubernetes Errors](#concluding-kubernetes-errors)
+*   [Two Commonly Seen K8s Errors](https://botkube.io/blog/the-state-of-kubernetes-errors-in-2023#two-commonly-seen-k8s-errors)
+*   [Trends for Troubleshooting K8s Issues](https://botkube.io/blog/the-state-of-kubernetes-errors-in-2023#trends-for-troubleshooting-k8s-issues)
+*   [Effective K8s Troubleshooting Chart](https://botkube.io/blog/the-state-of-kubernetes-errors-in-2023#effective-k8s-troubleshooting-chart)
+*   [Concluding Kubernetes Errors](https://botkube.io/blog/the-state-of-kubernetes-errors-in-2023#concluding-kubernetes-errors)
 
 #### Start Using Botkube AI-Powered Assistant Today
-
-#### Get Started with Botkube Today!
 
 Kubernetes is a powerful tool for managing containerized applications, but it's not immune to errors. In this blog post, we'll discuss the state of Kubernetes errors in 2023. We'll cover the two most commonly searched errors, trends in troubleshooting, and a graph of error severity.
 

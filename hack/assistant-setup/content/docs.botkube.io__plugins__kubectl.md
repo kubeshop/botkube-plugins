@@ -5,14 +5,14 @@ URL Source: https://docs.botkube.io/plugins/kubectl
 Markdown Content:
 The Kubectl executor plugin allows you to run the `kubectl` command directly in the communication platform.
 
-Get started[​](#get-started "Direct link to Get started")
----------------------------------------------------------
+Get started[​](https://docs.botkube.io/plugins/kubectl/#get-started "Direct link to Get started")
+-------------------------------------------------------------------------------------------------
 
 By default, just the read-only `kubectl` commands are supported. For enabling commands that require create, update or delete rules, you need to create specific (Cluster)Role and (Cluster)RoleBinding and reference it in the RBAC configuration. To learn more, refer to the [RBAC section](https://docs.botkube.io/features/rbac).
 
-### Enable the plugin[​](#enable-the-plugin "Direct link to Enable the plugin")
+### Enable the plugin[​](https://docs.botkube.io/plugins/kubectl/#enable-the-plugin "Direct link to Enable the plugin")
 
-#### Botkube Cloud[​](#botkube-cloud "Direct link to Botkube Cloud")
+#### Botkube Cloud[​](https://docs.botkube.io/plugins/kubectl/#botkube-cloud "Direct link to Botkube Cloud")
 
 You can enable the plugin as a part of Botkube instance configuration.
 
@@ -23,7 +23,7 @@ You can enable the plugin as a part of Botkube instance configuration.
 5.  Select the Kubectl plugin.
 6.  Click **Save** button.
 
-#### Self-hosted Botkube installation[​](#self-hosted-botkube-installation "Direct link to Self-hosted Botkube installation")
+#### Self-hosted Botkube installation[​](https://docs.botkube.io/plugins/kubectl/#self-hosted-botkube-installation "Direct link to Self-hosted Botkube installation")
 
 The Kubectl plugin is hosted by the official Botkube plugin repository. First, make sure that the `botkube` repository is defined under `plugins` in the [values.yaml](https://github.com/kubeshop/botkube/blob/main/helm/botkube/values.yaml) file.
 
@@ -33,8 +33,8 @@ plugins:  repositories:    botkube:      url: https://github.com/kubeshop/botkub
 
 To enable Kubectl executor, add \`\`--set 'executors.k8s-default-tools.botkube/kubectl.enabled=true'` to a given Botkube [`install\` command\](/cli/commands/botkube\_install).
 
-Usage[​](#usage "Direct link to Usage")
----------------------------------------
+Usage[​](https://docs.botkube.io/plugins/kubectl/#usage "Direct link to Usage")
+-------------------------------------------------------------------------------
 
 To execute the `kubectl` commands, send message in following format in the channel where Botkube is already added:
 
@@ -42,11 +42,15 @@ To execute the `kubectl` commands, send message in following format in the chann
 @Botkube kubectl [verb] [resource] [flags]
 ```
 
-### Aliases[​](#aliases "Direct link to Aliases")
+### Aliases[​](https://docs.botkube.io/plugins/kubectl/#aliases "Direct link to Aliases")
 
 By default, `k` and `kc` are configured as aliases for the `kubectl` command, for both Botkube Cloud and self-hosted Botkube installations. You can use them on par with the `kubectl` command. To read more about aliases configuration, see the [Alias](https://docs.botkube.io/features/executing-commands#command-aliases) section.
 
-### Interactive kubectl commands builder[​](#interactive-kubectl-commands-builder "Direct link to Interactive kubectl commands builder")
+### Interactive kubectl command builder[​](https://docs.botkube.io/plugins/kubectl/#interactive-kubectl-command-builder "Direct link to Interactive kubectl command builder")
+
+info
+
+Interactive kubectl command builder is only available for the [Slack](https://docs.botkube.io/installation/slack/). For other platforms, as an alternative, you can try the [AI Assistant](https://docs.botkube.io/plugins/ai-assistant) plugin which can execute `kubectl` commands based on prompts in natural language.
 
 Use the interactive `kubectl` command builder to construct a `kubectl` command just by selecting items from dropdowns. This is especially useful on mobile when typing the command is harder.
 
@@ -56,8 +60,8 @@ To start the interactive `kubectl` command builder, run `@Botkube kubectl` from 
 
 ![Image 1: kubectl command builder](https://docs.botkube.io/assets/images/kc-cmd-builder-90ea740becbf2c0f126436c4a6c013bd.gif)
 
-Limitations[​](#limitations "Direct link to Limitations")
----------------------------------------------------------
+Limitations[​](https://docs.botkube.io/plugins/kubectl/#limitations "Direct link to Limitations")
+-------------------------------------------------------------------------------------------------
 
 Keep in mind that the interactive command builder may not support all the commands that you can run just by typing them directly in a chat window. The following policies are applied:
 
@@ -65,7 +69,7 @@ Keep in mind that the interactive command builder may not support all the comman
     
     tip
     
-    The default verbs for the `kubectl` plugin found in the [values.yaml](https://github.com/kubeshop/botkube/blob/main/helm/botkube/values.yaml) file. If you ServiceAccount allow running other actions such as `delete`, you can add them directly under [`interactiveBuilder.allowed.verbs`](#configuration).
+    The default verbs for the `kubectl` plugin found in the [values.yaml](https://github.com/kubeshop/botkube/blob/main/helm/botkube/values.yaml) file. If you ServiceAccount allow running other actions such as `delete`, you can add them directly under [`interactiveBuilder.allowed.verbs`](https://docs.botkube.io/plugins/kubectl/#configuration).
     
 *   Under resources' dropdown, we display resources that are defined under the `interactiveBuilder.allowed.resources` configuration and are allowed for already selected verb. For example, for the `logs` verb we display only `pods`, `statefulsets`, `deployments`, and `daemonsets`.
     
@@ -73,15 +77,15 @@ Keep in mind that the interactive command builder may not support all the comman
     
     The default resources for the `kubectl` plugin found in the [values.yaml](https://github.com/kubeshop/botkube/blob/main/helm/botkube/values.yaml) file.
     
-    If you ServiceAccount allow access to more resources, you can add them directly under [`interactiveBuilder.allowed.resources`](#configuration).
+    If you ServiceAccount allow access to more resources, you can add them directly under [`interactiveBuilder.allowed.resources`](https://docs.botkube.io/plugins/kubectl/#configuration).
     
 *   For resources that are namespace-scoped, under namespaces' dropdown, we display `interactiveBuilder.allowed.namespaces` if defined. If static namespaces are not specified, plugin needs to have access to fetch all Namespaces, otherwise Namespace dropdown won't be visible at all.
     
 *   The `kubectl` command preview is displayed only if the command that you built is valid, and you have permission to run it.
     
 
-Configuration[​](#configuration "Direct link to Configuration")
----------------------------------------------------------------
+Configuration[​](https://docs.botkube.io/plugins/kubectl/#configuration "Direct link to Configuration")
+-------------------------------------------------------------------------------------------------------
 
 This plugin supports the following configuration:
 
@@ -91,12 +95,12 @@ This plugin supports the following configuration:
 
 The default configuration for Helm chart can be found in the [values.yaml](https://github.com/kubeshop/botkube/blob/main/helm/botkube/values.yaml) file.
 
-Merging strategy[​](#merging-strategy "Direct link to Merging strategy")
-------------------------------------------------------------------------
+Merging strategy[​](https://docs.botkube.io/plugins/kubectl/#merging-strategy "Direct link to Merging strategy")
+----------------------------------------------------------------------------------------------------------------
 
 For all collected `kubectl` executors bindings, configuration properties are overridden based on the order of the binding list for a given channel. The priority is given to the last binding specified on the list. Empty properties are omitted.
 
-### Example[​](#example "Direct link to Example")
+### Example[​](https://docs.botkube.io/plugins/kubectl/#example "Direct link to Example")
 
 Consider such configuration in the Botkube self-hosted installation:
 

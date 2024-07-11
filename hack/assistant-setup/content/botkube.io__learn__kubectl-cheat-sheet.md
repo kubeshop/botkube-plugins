@@ -15,11 +15,11 @@ Markdown Content:
 
 If you want to use kubectl, the command-line tool for Kubernetes, you need to install it on your machine. Depending on your operating system, there are different ways to do that. Some operating systems, such as Windows, Linux, and Mac, have local specific options that let you download and install kubectl directly. Other solutions, such as Minikube, allow you to install the tool set into your Kubernetes cluster without needing a local installation.
 
-Either way, installation is quick and easy, and you can find detailed steps for each option on the \[official Kubernetes documentation\]([https://kubernetes.io/docs/tasks/tools/install-kubectl/](https://kubernetes.io/docs/tasks/tools/install-kubectl/)).
+Either way, installation happens in the terminal, and you can find detailed steps for each option on the \[official Kubernetes documentation\]([https://kubernetes.io/docs/tasks/tools/install-kubectl/](https://kubernetes.io/docs/tasks/tools/install-kubectl/)).
 
 ### **Botkube’s Setup Wizard for Kubectl Easy Installation**
 
-This Kubectl cheatsheet would not be complete without showing the new quickest way to install Kubectl commands on your cluster. With Botkube’s setup wizard, simply select that you want to add Kubectl into your cluster on the Step 3 plugin page. Feel free to add any other helpful K8s plugins like Helm. Once the setup wizard is complete, users can access Kubectl commands, such as kubectl restart pod, from their K8s cluster.
+This Kubectl cheatsheet would not be complete without showing the new quickest way to install Kubectl commands on your cluster. With Botkube’s setup wizard, simply select that you want to add the Kubectl plugin into your cluster on the Step 3 plugin page. Feel free to add any other helpful K8s plugins like Helm. Once the setup wizard is complete, users can access Kubectl commands, such as kubectl restart pod, from their K8s cluster.
 
 ![Image 1: Easily install kubectl into kubernetes clusters with one click on the Botkube Cluster setup wizard](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/64d154ccef984e82336dae1a_UDXteleWUlLJ1h495wr-eU7OqNyx3C-_aON-kSFgRVCK_35_iIzuouiTIHDYyo8ERPM0wCxseEROlkkkkVZVDJNmSJnm1JhA53HDTMGkkUGeDLEl5jKVpVaNciIhllLYqpsYfuza79QwLhH0cp1UE0Q.png)
 
@@ -31,6 +31,10 @@ To check the version of `kubectl`, run the following command:
 `kubectl version`
 
 This will display the version information for both the client and server components of `kubectl`.
+
+### 🤖AI Tip🤖
+
+You can also simply ask Botkube's AI assistant to check the version of the connected cluster. Simply type '**@Botkube** ai what version of kubectl am I running?" and the assistant will check the connected cluster. It will display the version in an easy to understand chat message.
 
 **Tip #2 - What are kubectl logs?**
 -----------------------------------
@@ -52,17 +56,21 @@ If this automated log pulling process is something that your K8s development tea
 **Tip # 3 - Deleting with kubectl delete pod**
 ----------------------------------------------
 
-`kubectl delete pod` is a command used to delete a pod. When you delete a pod, Kubernetes will create a new one to replace it. This is useful for updating pods with new configurations or images. If you want to delete the pod and prevent Kubernetes from creating a new one, you can use the --force flag.
+`kubectl delete pod` is a command used to delete a pod. When you delete a pod, Kubernetes will create a new one to replace it. This is useful for updating pods with new configurations or images. If you want to delete the pod and prevent Kubernetes from creating a new one, you can use the --force flag. This is also a common way to restart pods as Kubernetes self healing capabilities bring back the pod based on the specifications of the manifest file. We have another article that talks more about using this as a sort of [kubectl restart pod command](https://botkube.io/learn/kubectl-pod-restart) solution.
 
 **Tip #4 - Running kubectl -k to Deploy Kustomization File**
 ------------------------------------------------------------
 
 `kubectl -k` is a command used to deploy Kubernetes resources using a kustomization file. A kustomization file is a YAML file that defines a set of Kubernetes resources and how they should be deployed. It allows you to customize your deployments without modifying the original YAML files.
 
+### 🤖AI Tip🤖
+
+If your file has any issues with deployment you can ask Botkube's assistant to correct the file for future deployment. Either select the **ask ai** button on the error produced when deploying the file or paste your file into a Slack or Microsoft Teams channel connected to the cluster you want to deploy and ask AI to fix any issues with the file.
+
 **Tip #5 - Copying Files with kubectl cp**
 ------------------------------------------
 
-`kubectl cp` is a command used to copy files and directories between a container and the user's local file system. This is useful for transferring files to and from a container for debugging purposes or to extract data from a container.
+`kubectl cp` is a [command used to copy files](https://botkube.io/learn/copying-files-with-kubectl-cp) and directories between a container and the user's local file system. This is useful for transferring files to and from a container for debugging purposes or to extract data from a container.
 
 To copy a file from a container to the local file system, use the following command:
 
@@ -76,6 +84,10 @@ To copy a file from the local file system to a container, use the following comm
 -----------------------------------------------------
 
 `kubectl exec` is a command used to run a command inside a container in a pod. This is useful for debugging purposes or for running commands that are not included in the container image. By default, it will run the command in the first container of the specified pod. You can also specify a container name to run the command in a specific container within the pod.
+
+### 🤖AI Tip🤖
+
+If you want to know what executing a file will do to your cluster before running this command, ask the assistant. Type '**@Botkube** ai what will happen if I run kubectl exec in ?'
 
 **Tip #7 - Port Forwarding with kubectl Port Forward**
 ------------------------------------------------------

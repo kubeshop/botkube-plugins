@@ -17,9 +17,9 @@ Botkube had its first DevRel appearance of 2023 at the SoCal Linux Expo. Here's 
 
 ### Table of Contents
 
-*   [First Day - GitOps Workshops](#first-day-gitops-workshops-)
-*   [Second Day - Helping the Cloud Native Computing Foundation (CNCF) Booth](#second-day-helping-the-cloud-native-computing-foundation-cncf-booth-)
-*   [Conclusion](#conclusion)
+*   [First Day - GitOps Workshops](https://botkube.io/blog/scaling-new-heights-taking-botkube-to-scale-20x#first-day-gitops-workshops-)
+*   [Second Day - Helping the Cloud Native Computing Foundation (CNCF) Booth](https://botkube.io/blog/scaling-new-heights-taking-botkube-to-scale-20x#second-day-helping-the-cloud-native-computing-foundation-cncf-booth-)
+*   [Conclusion](https://botkube.io/blog/scaling-new-heights-taking-botkube-to-scale-20x#conclusion)
 
 #### Start Using Botkube AI-Powered Assistant Today
 

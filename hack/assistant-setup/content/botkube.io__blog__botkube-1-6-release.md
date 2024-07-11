@@ -17,17 +17,15 @@ This release marks a milestone in providing a smoother and faster path to Kubern
 
 ### Table of Contents
 
-*   [🚀 Botkube 1.6 Release](#-botkube-1-6-release)
-*   [What is Botkube?](#what-is-botkube-)
-*   [Microsoft Teams App: Elevate Your ChatOps Experience](#microsoft-teams-app-elevate-your-chatops-experience)
-*   [Cloud Slack for Everyone: Swift and Effortless](#cloud-slack-for-everyone-swift-and-effortless)
-*   [New Onboarding: Lightning-Fast Kubernetes Monitoring Setup](#new-onboarding-lightning-fast-kubernetes-monitoring-setup)
-*   [Various Bug Fixes and Small Improvements](#various-bug-fixes-and-small-improvements)
-*   [Upgrade Today](#upgrade-today)
+*   [🚀 Botkube 1.6 Release](https://botkube.io/blog/botkube-1-6-release#-botkube-1-6-release)
+*   [What is Botkube?](https://botkube.io/blog/botkube-1-6-release#what-is-botkube-)
+*   [Microsoft Teams App: Elevate Your ChatOps Experience](https://botkube.io/blog/botkube-1-6-release#microsoft-teams-app-elevate-your-chatops-experience)
+*   [Cloud Slack for Everyone: Swift and Effortless](https://botkube.io/blog/botkube-1-6-release#cloud-slack-for-everyone-swift-and-effortless)
+*   [New Onboarding: Lightning-Fast Kubernetes Monitoring Setup](https://botkube.io/blog/botkube-1-6-release#new-onboarding-lightning-fast-kubernetes-monitoring-setup)
+*   [Various Bug Fixes and Small Improvements](https://botkube.io/blog/botkube-1-6-release#various-bug-fixes-and-small-improvements)
+*   [Upgrade Today](https://botkube.io/blog/botkube-1-6-release#upgrade-today)
 
 #### Start Using Botkube AI-Powered Assistant Today
-
-#### Get Started with Botkube Today!
 
 🚀 Botkube 1.6 Release
 ----------------------

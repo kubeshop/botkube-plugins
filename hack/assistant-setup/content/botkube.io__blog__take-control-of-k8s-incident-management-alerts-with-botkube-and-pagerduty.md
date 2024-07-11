@@ -19,8 +19,6 @@ Customize Botkube alerts to automatically create PagerDuty tickets, streamline i
 
 #### Start Using Botkube AI-Powered Assistant Today
 
-#### Start Receiving Kubernetes Notifications Now
-
 In the fast-paced world of DevOps and Site Reliability Engineering (SRE), staying on top of incidents and managing them efficiently is crucial. We are thrilled to announce the new integration between [Botkube and PagerDuty](https://botkube.io/integration/pagerduty-kubernetes-integration), designed to enhance your incident management workflow by automating the creation of tickets in PagerDuty based on customized monitoring alerts from Botkube.
 
 Managing incidents quickly and effectively can be the difference between minor disruptions and major outages. Botkube is already a powerful tool for monitoring Kubernetes clusters and sending real-time alerts to your communication channels like [Slack](https://botkube.io/integration/slack) or [Microsoft Teams](https://botkube.io/integration/teams). PagerDuty, on the other hand, is a robust platform for managing and responding to incidents. By integrating these two tools, you can are providing a seamless way to ensure that critical alerts are not just seen but acted upon promptly.

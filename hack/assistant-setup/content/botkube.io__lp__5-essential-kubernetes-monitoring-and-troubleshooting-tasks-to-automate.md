@@ -1,4 +1,4 @@
-Title: 5 Kubernetes Monitoring and Troubleshooting Tasks to Automate
+Title: 5 Kubernetes Monitoring and Troubleshooting Tasks to Automate | Botkube
 
 URL Source: https://botkube.io/lp/5-essential-kubernetes-monitoring-and-troubleshooting-tasks-to-automate
 

@@ -9,9 +9,6 @@ That's where ChatOps comes in. ChatOps is a collaboration model that brings toge
 
 In this article, we'll explore how Botkube makes Slack talk Kubernetes through ChatOps. We will also explore how it can benefit your team's Kubernetes deployment and monitoring processes. The ultimate goal should be a developer self service portal for Slack ChatOps.
 
-**Why Use Slack ChatOps for Kubernetes?**
------------------------------------------
-
 ### **Streamlined Communication and Collaboration**
 
 One of the main benefits of using ChatOps for K8s is the streamlined communication and collaboration it offers. With ChatOps, all team members can access and interact with Kubernetes through a single chat interface, eliminating the need for multiple tools and platforms.

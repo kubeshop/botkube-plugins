@@ -14,18 +14,18 @@ The communication settings contain:
 
 The settings are applicable only for self-hosted Botkube installation. Cloud Slack and Microsoft Teams platforms are exclusive to Botkube Cloud.
 
-Communication groups[​](#communication-groups "Direct link to Communication groups")
-------------------------------------------------------------------------------------
+Communication groups[​](https://docs.botkube.io/self-hosted-configuration/communication/#communication-groups "Direct link to Communication groups")
+----------------------------------------------------------------------------------------------------------------------------------------------------
 
 Communication group is a way to aggregate separate configurations for a set of communication platforms. You can specify multiple communication groups, and, in a result, support multiple Slack or Mattermost workspaces, Discord servers, or Elasticsearch server instances.
 
-Also, most platforms also support another level of multiple configurations within a workspace. For example, Slack supports multichannel configuration. To learn more about platform-specific options, see the [Syntax](#syntax) section.
+Also, most platforms also support another level of multiple configurations within a workspace. For example, Slack supports multichannel configuration. To learn more about platform-specific options, see the [Syntax](https://docs.botkube.io/self-hosted-configuration/communication/#syntax) section.
 
 note
 
 The purpose of the communication group is to allow using multiple workspaces, e.g. for Slack or Mattermost. To use multiple channels inside the same workspace, don't define separate communication groups, but use `channels` property under a given communication platform instead.
 
-### Example[​](#example "Direct link to Example")
+### Example[​](https://docs.botkube.io/self-hosted-configuration/communication/#example "Direct link to Example")
 
 Consider the following configuration:
 
@@ -45,8 +45,8 @@ For Slack **Workspace 2**, as defined by the second communication group (`second
 *   Notifications are configured to be sent from the `k8s-events` source to the `general` channel. They are disabled by default, and can be enabled with `@Botkube` command or during Botkube upgrade.
 *   Commands from the `k8s-default-tools` configuration can be executed in the `general` channel.
 
-Source and Executor Bindings[​](#source-and-executor-bindings "Direct link to Source and Executor Bindings")
-------------------------------------------------------------------------------------------------------------
+Source and Executor Bindings[​](https://docs.botkube.io/self-hosted-configuration/communication/#source-and-executor-bindings "Direct link to Source and Executor Bindings")
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Most of the communication platforms support executor and source bindings, which allows fine-tuning the notifications and allowed Botkube commands inside a given channel.
 
@@ -54,8 +54,8 @@ With executor bindings you can configure which executors are allowed in a given 
 
 With source bindings, you can specify which events are sent to a given channel (or, in case of Elasticsearch, index). To read more about source configuration, see the [Source](https://docs.botkube.io/self-hosted-configuration/source) document.
 
-Syntax[​](#syntax "Direct link to Syntax")
-------------------------------------------
+Syntax[​](https://docs.botkube.io/self-hosted-configuration/communication/#syntax "Direct link to Syntax")
+----------------------------------------------------------------------------------------------------------
 
 Each communication platform has specific options, however they share a similar syntax for consistency. For example, bot integrations such as Slack, Mattermost or Discord have multichannel support, that is you can configure multiple channels with separate bindings. Same with Elasticsearch - you can forward notifications to multiple Elasticsearch indices, according to the sources configuration.
 

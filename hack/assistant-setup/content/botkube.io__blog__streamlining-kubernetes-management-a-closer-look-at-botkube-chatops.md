@@ -5,7 +5,7 @@ URL Source: https://botkube.io/blog/streamlining-kubernetes-management-a-closer-
 Published Time: Jan 19, 2024
 
 Markdown Content:
-![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65a9dc3218bb2465f041cea7_1693115200398.jpeg)
+![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6669d3e5f7e06a9b425573d6_rohit-ghumare-photo.jpg)
 
 Rohit Ghumare
 
@@ -17,15 +17,13 @@ Learn about Botkube from Rohit Ghumare, Google Developer Expert – Google Cloud
 
 ### Table of Contents
 
-*   [Step 1: Signing Up for Botkube](#step-1-signing-up-for-botkube)
-*   [Step 2: Setting Your Instance](#step-2-setting-your-instance-)
-*   [Debugging Botkube](#debugging-botkube-)
-*   [Botkube Meets Helm](#botkube-meets-helm)
-*   [Conclusion](#conclusion)
+*   [Step 1: Signing Up for Botkube](https://botkube.io/blog/streamlining-kubernetes-management-a-closer-look-at-botkube-chatops#step-1-signing-up-for-botkube)
+*   [Step 2: Setting Your Instance](https://botkube.io/blog/streamlining-kubernetes-management-a-closer-look-at-botkube-chatops#step-2-setting-your-instance-)
+*   [Debugging Botkube](https://botkube.io/blog/streamlining-kubernetes-management-a-closer-look-at-botkube-chatops#debugging-botkube-)
+*   [Botkube Meets Helm](https://botkube.io/blog/streamlining-kubernetes-management-a-closer-look-at-botkube-chatops#botkube-meets-helm)
+*   [Conclusion](https://botkube.io/blog/streamlining-kubernetes-management-a-closer-look-at-botkube-chatops#conclusion)
 
 #### Start Using Botkube AI-Powered Assistant Today
-
-#### Get Started with Botkube Today!
 
 Hey there, Kubernetes enthusiasts! Let's dive into the world of Botkube and its game-changing. Developed by the wizards at KubeShop, Botkube is not just another tool—it's a revolution in Kubernetes management.
 
@@ -62,18 +60,20 @@ Use [Homebrew](https://brew.sh/) to install the latest Botkube CLI:
 
 Alternatively, download the Botkube CLI binary and move it to a directory under your `$PATH:`
 
-    curl -Lo botkube https://github.com/kubeshop/botkube/releases/download/v1.7.0/botkube-darwin-arm64chmod +x botkube &amp;&amp; mv botkube /usr/local/bin/botkube
-    
+```
+curl -Lo botkube https://github.com/kubeshop/botkube/releases/download/v1.7.0/botkube-darwin-arm64chmod +x botkube &amp;&amp; mv botkube /usr/local/bin/botkube
+```
 
 ### **2\. Install Botkube on your cluster**
 
 Install or upgrade Botkube and connect it to Botkube Cloud:
 
-    botkube install --version=v1.7.0 \ 
-    --set config.provider.endpoint=https://api.botkube.io/graphql \  
-    --set config.provider.identifier=b2b56b7d-392a-4614-b1ba-93eb0e92f424 \  
-    --set config.provider.apiKey=key:1d4ffcee-9df8-489c-bcd2-f288eb781dde
-    
+```
+botkube install --version=v1.7.0 \ 
+--set config.provider.endpoint=https://api.botkube.io/graphql \  
+--set config.provider.identifier=b2b56b7d-392a-4614-b1ba-93eb0e92f424 \  
+--set config.provider.apiKey=key:1d4ffcee-9df8-489c-bcd2-f288eb781dde
+```
 
 Now, Choose a display name for your Botkube instance. This is like giving a cool nickname to your new digital helper.
 
@@ -137,9 +137,10 @@ You need to invite Botkube to your Slack workspace first, so click on “invite 
 
 Export slack tokens from your terminal as follows:
 
-    export SLACK_API_BOT_TOKEN="botToken"
-    export SLACK_API_APP_TOKEN="appToken"
-    
+```
+export SLACK_API_BOT_TOKEN="botToken"
+export SLACK_API_APP_TOKEN="appToken"
+```
 
 *   You need to make sure you’re adding Botkube to your channel where you’ll be using Botkube, as shown below.
 *   After installing the Botkube app to your Slack workspace, you could see a new bot user with the name "Botkube" added to your workspace. Add that bot to a Slack channel you want to receive notifications in. You can add it by inviting @Botkube to a channel.
@@ -197,37 +198,40 @@ Debugging Botkube
 
 *   Configure Botkube by editing the values.yaml file.
 
-    vi botkube/values.yaml
-    
+```
+vi botkube/values.yaml
+```
 
 Enable **_socketSlack_**_:_ under ”_communications:”_ and set the name of the default channel to match the name of your actual Slack channel. Set the **botToken** and **appToken** values to the tokens you retrieved from above.
 
-    communications:
-      'default-group':
-        socketSlack:
-          enabled: true
-          channels:
-            'default':
-              name: 'kubernetes'  ...
-                                                               ...
-          botToken: 'BOT_TOKEN'
-          appToken: 'APP_TOKEN'
-    
+```
+communications:
+  'default-group':
+    socketSlack:
+      enabled: true
+      channels:
+        'default':
+          name: 'kubernetes'  ...
+                                                           ...
+      botToken: 'BOT_TOKEN'
+      appToken: 'APP_TOKEN'
+```
 
 Enable the Helm and Kubectl executors
 
-    executors:
-      k8s-default-tools:
-        botkube/helm:
-          enabled: true
-            ...
-         ...
-            ...
-        botkube/kubectl:
-          enabled: true
-            ...
+```
+executors:
+  k8s-default-tools:
+    botkube/helm:
+      enabled: true
         ...
-    
+     ...
+        ...
+    botkube/kubectl:
+      enabled: true
+        ...
+    ...
+```
 
 Alternatively, You can also use **helm** for the Installation process for efficient Kubernetes application management.
 
@@ -250,22 +254,23 @@ A standout feature of Botkube? It's a [Helm executor plugin](https://botkube.io/
 
 **Setting Up Botkube with Helm: A Step-by-Step Guide**
 
-    # Adding Botkube to helm
-    helm repo add botkube <a href="https://charts.botkube.io">https://charts.botkube.io</a>.
-    helm search repo botkube
-    
-    # Reveals all available charts
-    helm search repo botkube 
-    
-    # Botkube Installation
-    helm install botkube --namespace botkube --create-namespace botkube/botkube
-    
-    # Verifying Installation
-    kubectl get pods -n botkube
-    
-    # If you're using Slack, try this
-    @Botkube helm list
-    
+```
+# Adding Botkube to helm
+helm repo add botkube <a href="https://charts.botkube.io">https://charts.botkube.io</a>.
+helm search repo botkube
+
+# Reveals all available charts
+helm search repo botkube 
+
+# Botkube Installation
+helm install botkube --namespace botkube --create-namespace botkube/botkube
+
+# Verifying Installation
+kubectl get pods -n botkube
+
+# If you're using Slack, try this
+@Botkube helm list
+```
 
 Conclusion
 ----------

@@ -17,18 +17,16 @@ Check out these five key Kubernetes tasks that Botkube can optimize and automate
 
 ### Table of Contents
 
-*   [Task 1: Monitoring and Alerting Kubernetes Clusters](#task-1-monitoring-and-alerting-kubernetes-clusters)
-*   [Task 2: Resource Scaling](#task-2-resource-scaling)
-*   [Task 3: Kubernetes Log Management](#task-3-kubernetes-log-management)
-*   [Task 4: GitOps Workflows](#task-4-gitops-workflows)
-*   [Task 5: K8s Configuration Management](#task-5-k8s-configuration-management)
-*   [Conclusion](#conclusion)
+*   [Task 1: Monitoring and Alerting Kubernetes Clusters](https://botkube.io/blog/botkube-5-essential-devopstasks-to-automate#task-1-monitoring-and-alerting-kubernetes-clusters)
+*   [Task 2: Resource Scaling](https://botkube.io/blog/botkube-5-essential-devopstasks-to-automate#task-2-resource-scaling)
+*   [Task 3: Kubernetes Log Management](https://botkube.io/blog/botkube-5-essential-devopstasks-to-automate#task-3-kubernetes-log-management)
+*   [Task 4: GitOps Workflows](https://botkube.io/blog/botkube-5-essential-devopstasks-to-automate#task-4-gitops-workflows)
+*   [Task 5: K8s Configuration Management](https://botkube.io/blog/botkube-5-essential-devopstasks-to-automate#task-5-k8s-configuration-management)
+*   [Conclusion](https://botkube.io/blog/botkube-5-essential-devopstasks-to-automate#conclusion)
 
 #### Start Using Botkube AI-Powered Assistant Today
 
-#### Manage your Kubernetes Clusters Directly in Slack and Microsoft Teams
-
-Kubernetes has greatly changed the DevOps space and how we deploy applications. While it offers many powerful features, it also introduces many complexities around managing Kubernetes clusters. Keeping these clusters running smoothly, securely, and reliably requires constant attention and expertise. To address these challenges and ensure efficient management of clusters, Botkube offers a solution. [Botkube](http://app.botkube.io/) is a collaborative Kubernetes troubleshooting and monitoring tool designed for both DevOps experts and developers who may not be Kubernetes experts. Botkube helps teams quickly respond to issues by sending timely alerts about what's happening in their Kubernetes environments. It's not just about alerts though; Botkube also lets teams automate responses, run Kubernetes commands, and follow Kubernetes best practices. Plus, it integrates with popular communication platforms like Slack, Microsoft Teams, Discord, and Mattermost, making it a valuable asset for any team working with Kubernetes.
+Kubernetes has greatly changed the DevOps space and how we deploy applications. While it offers many powerful features, it also introduces many complexities around managing Kubernetes clusters. Keeping these clusters running smoothly, securely, and reliably requires constant attention and expertise. To address these challenges and ensure efficient management of clusters, Botkube offers a solution. [Botkube](https://app.botkube.io/) is a collaborative Kubernetes troubleshooting and monitoring tool designed for both DevOps experts and developers who may not be Kubernetes experts. Botkube helps teams quickly respond to issues by sending timely alerts about what's happening in their Kubernetes environments. It's not just about alerts though; Botkube also lets teams automate responses, run Kubernetes commands, and follow Kubernetes best practices. Plus, it integrates with popular communication platforms like Slack, Microsoft Teams, Discord, and Mattermost, making it a valuable asset for any team working with Kubernetes.
 
 In this blog post, we will explore how Botkube improves Kubernetes management. We will dive into five key Kubernetes tasks that Botkube can optimize and automate.
 
@@ -66,7 +64,7 @@ Resource scaling in Kubernetes can be a challenging endeavor, especially in resp
 
 ‍
 
-One example of this is the ability to [automate the process of creating GitHub issues](https://botkube.io/blog/build-a-github-issues-reporter-for-failing-kubernetes-apps-with-botkube-plugins) for failing Kubernetes resources such as jobs, deployments, statefulsets, and pods. This plugin can create [GitHub issues](https://docs.botkube.io/next/plugins/github-events/#configuration) that include Kubernetes-specific information, making debugging more efficient. The key advantage is that it eliminates the need to connect to your cluster via a terminal, install and run kubectl commands, or manually copy and paste information into a browser. Botkube offers an efficient and user-friendly solution to the challenges of resource scaling in Kubernetes.
+One example of this is the ability to [automate the process of creating GitHub issues](https://botkube.io/blog/build-a-github-issues-reporter-for-failing-kubernetes-apps-with-botkube-plugins) for failing Kubernetes resources such as jobs, deployments, statefulsets, and pods. This plugin can create [GitHub issues](https://docs.botkube.io/plugins/github-events/) that include Kubernetes-specific information, making debugging more efficient. The key advantage is that it eliminates the need to connect to your cluster via a terminal, install and run kubectl commands, or manually copy and paste information into a browser. Botkube offers an efficient and user-friendly solution to the challenges of resource scaling in Kubernetes.
 
 Task 3: Kubernetes Log Management
 ---------------------------------

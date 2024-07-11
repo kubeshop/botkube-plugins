@@ -9,12 +9,12 @@ info
 
 The Helm executor plugin allows you to run the `helm` command directly in the chat platform.
 
-Get started[​](#get-started "Direct link to Get started")
----------------------------------------------------------
+Get started[​](https://docs.botkube.io/plugins/helm/#get-started "Direct link to Get started")
+----------------------------------------------------------------------------------------------
 
 By default, just the read-only `helm` commands are supported. For enabling commands that require create, update or delete rules, you need to create specific (Cluster)Role and (Cluster)RoleBinding and reference it in the RBAC configuration. To learn more, refer to the [RBAC section](https://docs.botkube.io/features/rbac).
 
-### Enable the plugin[​](#enable-the-plugin "Direct link to Enable the plugin")
+### Enable the plugin[​](https://docs.botkube.io/plugins/helm/#enable-the-plugin "Direct link to Enable the plugin")
 
 You can enable the plugin as a part of Botkube instance configuration.
 
@@ -25,8 +25,8 @@ You can enable the plugin as a part of Botkube instance configuration.
 5.  Select the Helm plugin.
 6.  Click **Save** button.
 
-Usage[​](#usage "Direct link to Usage")
----------------------------------------
+Usage[​](https://docs.botkube.io/plugins/helm/#usage "Direct link to Usage")
+----------------------------------------------------------------------------
 
 To execute `helm` commands, send message in the following format in the channel where Botkube is already added:
 
@@ -34,8 +34,8 @@ To execute `helm` commands, send message in the following format in the channel 
 @Botkube helm [command] [flags]
 ```
 
-Supported commands[​](#supported-commands "Direct link to Supported commands")
-------------------------------------------------------------------------------
+Supported commands[​](https://docs.botkube.io/plugins/helm/#supported-commands "Direct link to Supported commands")
+-------------------------------------------------------------------------------------------------------------------
 
 The Helm executor plugin has the exact same syntax as the Helm CLI. However, not all commands and flags are supported. If an unsupported flag is specified, you will get a dedicated error, e.g:
 
@@ -48,7 +48,7 @@ Additionally, the following flag syntax is not supported:
 *   No whitespace between short flag name and its value. Instead of `-oyaml`, use `-o yaml`.
 *   Merging multiple short flags together. Instead of `-Aa`, use `-A -a`.
 
-### Read-only commands[​](#read-only-commands "Direct link to Read-only commands")
+### Read-only commands[​](https://docs.botkube.io/plugins/helm/#read-only-commands "Direct link to Read-only commands")
 
 List of the read-only commands:
 
@@ -58,9 +58,9 @@ List of the read-only commands:
 *   `@Botkube helm status` - displays the status of the named release.
 *   `@Botkube helm version` - shows the version of the Helm CLI used by this Botkube plugin.
 
-### Read-write commands[​](#read-write-commands "Direct link to Read-write commands")
+### Read-write commands[​](https://docs.botkube.io/plugins/helm/#read-write-commands "Direct link to Read-write commands")
 
-For the read-write commands the Botkube RBAC needs to be adjusted. For more information, see the [Get started](#get-started) section.
+For the read-write commands the Botkube RBAC needs to be adjusted. For more information, see the [Get started](https://docs.botkube.io/plugins/helm/#get-started) section.
 
 List of the read-write commands:
 
@@ -72,8 +72,8 @@ List of the read-write commands:
     *   By absolute URL: `helm install mynginx https://example.com/charts/nginx-1.2.3.tgz`
     *   By chart reference and repository URL: `helm install --repo https://example.com/charts/ mynginx nginx`
 
-Configuration[​](#configuration "Direct link to Configuration")
----------------------------------------------------------------
+Configuration[​](https://docs.botkube.io/plugins/helm/#configuration "Direct link to Configuration")
+----------------------------------------------------------------------------------------------------
 
 The plugin supports the following configuration:
 
@@ -81,7 +81,7 @@ The plugin supports the following configuration:
 # Configures the default Namespace for executing Botkube `helm` commands. If not set, uses 'default'.defaultNamespace: "default"# Allowed values are configmap, secret, memory.helmDriver: "secret"# Location for storing Helm configuration.helmConfigDir: "/tmp/helm/"# Location for storing Helm cache.helmCacheDir: "/tmp/helm/.cache"
 ```
 
-Merging strategy[​](#merging-strategy "Direct link to Merging strategy")
-------------------------------------------------------------------------
+Merging strategy[​](https://docs.botkube.io/plugins/helm/#merging-strategy "Direct link to Merging strategy")
+-------------------------------------------------------------------------------------------------------------
 
 For all collected `helm` executors bindings, configuration properties are overridden based on the order of the binding list for a given channel. The priority is given to the last binding specified on the list. Empty properties are omitted.

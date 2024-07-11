@@ -22,6 +22,11 @@ This document describes steps for running Botkube core locally together with a l
     For example, for Slack and example `echo` and `ticker` plugins, provide `appToken` and `botToken` and run the script:
     
     Create /tmp/config-values.yaml
+    
+    ```
+    cat << EOF > /tmp/config-values.yamlplugins:  repositories:    local-repo:      url: http://localhost:8080/plugins-index.yamlexecutors:  "plugins":    local-repo/echo:      enabled: true      config:        transformResponseToUpperCase: truesources:  "plugins":    local-repo/ticker:      enabled: true      config:        interval: 5scommunications:  default-group:    socketSlack:      enabled: true      channels:        default:          name: random          bindings:            executors:              - 'plugins'            sources:              - 'plugins'      appToken: "" # provide your token starting with xapp-1-      botToken: "" # provide your token starting with xoxb-settings:  clusterName: local-devEOF
+    ```
+    
 3.  In your plugin project directory, start a static plugin server:
     
     ```

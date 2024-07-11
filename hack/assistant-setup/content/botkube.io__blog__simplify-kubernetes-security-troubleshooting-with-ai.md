@@ -17,14 +17,12 @@ Learn how Botkube can streamline troubleshooting and help overcome common Kubern
 
 ### Table of Contents
 
-*   [What is Kubernetes Pod Security Admission (PSA)?](#what-is-kubernetes-pod-security-admission-psa-)
-*   [Common Challenges with Pod Security Policies](#common-challenges-with-pod-security-policies)
-*   [Getting Started with Kubernetes PSA Troubleshooting Example](#getting-started-with-kubernetes-psa-troubleshooting-example)
-*   [Enforce Pod Security Standards with Namespace Labels](#enforce-pod-security-standards-with-namespace-labels)
-*   [Summary](#summary)
-*   [Try Out Botkube for Kubernetes Security Best Practices Today](#try-out-botkube-for-kubernetes-security-best-practices-today)
-
-#### Start Using Botkube AI-Powered Assistant Today
+*   [What is Kubernetes Pod Security Admission (PSA)?](https://botkube.io/blog/simplify-kubernetes-security-troubleshooting-with-ai#what-is-kubernetes-pod-security-admission-psa-)
+*   [Common Challenges with Pod Security Policies](https://botkube.io/blog/simplify-kubernetes-security-troubleshooting-with-ai#common-challenges-with-pod-security-policies)
+*   [Getting Started with Kubernetes PSA Troubleshooting Example](https://botkube.io/blog/simplify-kubernetes-security-troubleshooting-with-ai#getting-started-with-kubernetes-psa-troubleshooting-example)
+*   [Enforce Pod Security Standards with Namespace Labels](https://botkube.io/blog/simplify-kubernetes-security-troubleshooting-with-ai#enforce-pod-security-standards-with-namespace-labels)
+*   [Summary](https://botkube.io/blog/simplify-kubernetes-security-troubleshooting-with-ai#summary)
+*   [Try Out Botkube for Kubernetes Security Best Practices Today](https://botkube.io/blog/simplify-kubernetes-security-troubleshooting-with-ai#try-out-botkube-for-kubernetes-security-best-practices-today)
 
 #### Start Using Botkube AI-Powered Assistant Today
 
@@ -93,7 +91,7 @@ Enforce Pod Security Standards with Namespace Labels
 
 *   Apply the Manifest: Use kubectl to create the namespace:
 
-`kubectl apply -f namespace.yaml`
+`kubectl apply -f namespace.yaml `
 
 Key points:
 

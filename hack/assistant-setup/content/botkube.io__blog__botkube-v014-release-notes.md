@@ -17,13 +17,13 @@ BotKube v0.14.0 addresses a number of community-suggested issues and adds some g
 
 ### Table of Contents
 
-*   [Dynamic notification setting changes](#dynamic-notification-setting-changes)
-*   [New Botkube Slack App](#new-botkube-slack-app)
-*   [Improved Help](#improved-help)
-*   [Persistent Settings](#persistent-settings)
-*   [Mattermost v7 Support](#mattermost-v7-support)
-*   [Bug Fixes](#bug-fixes)
-*   [Feedback - We’d Love to Hear From You](#feedback-we-d-love-to-hear-from-you)
+*   [Dynamic notification setting changes](https://botkube.io/blog/botkube-v014-release-notes#dynamic-notification-setting-changes)
+*   [New Botkube Slack App](https://botkube.io/blog/botkube-v014-release-notes#new-botkube-slack-app)
+*   [Improved Help](https://botkube.io/blog/botkube-v014-release-notes#improved-help)
+*   [Persistent Settings](https://botkube.io/blog/botkube-v014-release-notes#persistent-settings)
+*   [Mattermost v7 Support](https://botkube.io/blog/botkube-v014-release-notes#mattermost-v7-support)
+*   [Bug Fixes](https://botkube.io/blog/botkube-v014-release-notes#bug-fixes)
+*   [Feedback - We’d Love to Hear From You](https://botkube.io/blog/botkube-v014-release-notes#feedback-we-d-love-to-hear-from-you)
 
 #### Start Using Botkube AI-Powered Assistant Today
 

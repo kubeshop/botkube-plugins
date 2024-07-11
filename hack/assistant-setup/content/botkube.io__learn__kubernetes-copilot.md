@@ -31,3 +31,8 @@ Botkube's AI assistant achieves this by integrating with Botkube's monitoring an
 Botkube's AI assistant is one of the first examples of a true Kubernetes Copilot, but it's just the beginning. As AI technology continues to advance, we can expect to see an even more sophisticated Botkube copilot emerge, capable of handling increasingly complex tasks and providing even deeper insights into cluster health and performance.
 
 The ultimate goal of a Kubernetes Copilot is to make Kubernetes accessible to everyone, regardless of their level of expertise. By automating routine tasks, providing intelligent suggestions, and proactively addressing issues, these copilots have the potential to revolutionize the way we manage Kubernetes clusters. The future of Kubernetes management is not just about automation; it's about intelligent collaboration between humans and machines.
+
+Setup and Use Case Video
+------------------------
+
+Curious about how AI can streamline your Kubernetes management? Watch Botkube's Product Lead, Blair Rampling, as she demonstrates the innovative AI assistant that enables you to manage Kubernetes clusters directly from Microsoft Teams. This video is a must-watch for anyone looking to simplify Kubernetes workflows and enhance collaboration.

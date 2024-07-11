@@ -9,10 +9,10 @@ info
 
 The Botkube Flux executor plugin allows you to run the [`flux`](https://fluxcd.io/) CLI commands directly within the chat window of your chosen communication platform.
 
-Get started[​](#get-started "Direct link to Get started")
----------------------------------------------------------
+Get started[​](https://docs.botkube.io/plugins/flux/#get-started "Direct link to Get started")
+----------------------------------------------------------------------------------------------
 
-### 1\. Prepare elevated RBAC permissions[​](#1-prepare-elevated-rbac-permissions "Direct link to 1. Prepare elevated RBAC permissions")
+### 1\. Prepare elevated RBAC permissions[​](https://docs.botkube.io/plugins/flux/#1-prepare-elevated-rbac-permissions "Direct link to 1. Prepare elevated RBAC permissions")
 
 One of the plugin capabilities is the `flux diff` command. To use it, you need to update the Flux plugin RBAC configuration. This is necessary because the command performs a server-side dry run that requires patch permissions, as specified in the [Kubernetes documentation](https://kubernetes.io/docs/reference/using-api/api-concepts/#dry-run-authorization).
 
@@ -26,7 +26,7 @@ Next, use the `flux` group in the plugin RBAC configuration:
 
 ![Image 1: Flux RBAC](https://docs.botkube.io/assets/images/flux-rbac-bfe6d7c972bcfd611669afd75a3bab20.png)
 
-### 2\. Enable the plugin[​](#2-enable-the-plugin "Direct link to 2. Enable the plugin")
+### 2\. Enable the plugin[​](https://docs.botkube.io/plugins/flux/#2-enable-the-plugin "Direct link to 2. Enable the plugin")
 
 You can enable the plugin as a part of Botkube instance configuration.
 
@@ -55,18 +55,18 @@ You can enable the plugin as a part of Botkube instance configuration.
 
 By default, the Flux plugin has read-only access. To perform actions like creating or deleting Flux-related sources, you'll need to customize the [RBAC](https://docs.botkube.io/features/rbac).
 
-Usage[​](#usage "Direct link to Usage")
----------------------------------------
+Usage[​](https://docs.botkube.io/plugins/flux/#usage "Direct link to Usage")
+----------------------------------------------------------------------------
 
 To execute the `flux` CLI commands, send a message in the channel where Botkube is present. For example:
 
-### Interactive Usage[​](#interactive-usage "Direct link to Interactive Usage")
+### Interactive Usage[​](https://docs.botkube.io/plugins/flux/#interactive-usage "Direct link to Interactive Usage")
 
 The Flux plugin supports interactivity (tables, etc.) to simplify running Flux CLI commands e.g. from mobile devices.
 
 ![Image 2: flux-interactivity](https://docs.botkube.io/assets/images/flux-interactivity-36eaec2696dd56fe8924ef36f42a7ac1.gif)
 
-### Simplified Kustomization Diffing Flow[​](#simplified-kustomization-diffing-flow "Direct link to Simplified Kustomization Diffing Flow")
+### Simplified Kustomization Diffing Flow[​](https://docs.botkube.io/plugins/flux/#simplified-kustomization-diffing-flow "Direct link to Simplified Kustomization Diffing Flow")
 
 With the Botkube Flux executor, you can execute a single command to perform a diff between a specific pull request and the cluster state. For instance:
 
@@ -90,7 +90,7 @@ The diff results are posted on the Slack channel, making it easy for team member
 *   Approving the pull request.
 *   Viewing the pull request.
 
-### GitHub automation[​](#github-automation "Direct link to GitHub automation")
+### GitHub automation[​](https://docs.botkube.io/plugins/flux/#github-automation "Direct link to GitHub automation")
 
 To enhance your workflow's efficiency, you can use the [GitHub Events](https://docs.botkube.io/plugins/github-events) source for automatic notification of pull request events, complete with an integrated `flux diff` button.
 
@@ -100,8 +100,8 @@ github:  auth:    accessToken: "ghp_" # GitHub PATrepositories:  - name: { owner
 
 Don't forget to bind the plugin to one of the channels.
 
-Configuration[​](#configuration "Direct link to Configuration")
----------------------------------------------------------------
+Configuration[​](https://docs.botkube.io/plugins/flux/#configuration "Direct link to Configuration")
+----------------------------------------------------------------------------------------------------
 
 The plugin supports the following configuration:
 

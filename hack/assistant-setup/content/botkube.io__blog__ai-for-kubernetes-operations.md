@@ -17,16 +17,14 @@ Optimizing Kubernetes Management with Botkube's AI Insights
 
 ### Table of Contents
 
-*   [Strategy 1: Automated Incident Reporting](#strategy-1-automated-incident-reporting)
-*   [Strategy 2: Optimize Resource Allocation](#strategy-2-optimize-resource-allocation)
-*   [Strategy 3: Enhance Cluster Diagnostics](#strategy-3-enhance-cluster-diagnostics-)
-*   [Strategy 4: Enable Proactive Anomaly Detection](#strategy-4-enable-proactive-anomaly-detection)
-*   [Bonus Strategy: Simplify Application Lifecycle Management](#bonus-strategy-simplify-application-lifecycle-management)
-*   [Getting Started with Botkube’s AI Assistant](#getting-started-with-botkube-s-ai-assistant)
+*   [Strategy 1: Automated Incident Reporting](https://botkube.io/blog/ai-for-kubernetes-operations#strategy-1-automated-incident-reporting)
+*   [Strategy 2: Optimize Resource Allocation](https://botkube.io/blog/ai-for-kubernetes-operations#strategy-2-optimize-resource-allocation)
+*   [Strategy 3: Enhance Cluster Diagnostics](https://botkube.io/blog/ai-for-kubernetes-operations#strategy-3-enhance-cluster-diagnostics-)
+*   [Strategy 4: Enable Proactive Anomaly Detection](https://botkube.io/blog/ai-for-kubernetes-operations#strategy-4-enable-proactive-anomaly-detection)
+*   [Bonus Strategy: Simplify Application Lifecycle Management](https://botkube.io/blog/ai-for-kubernetes-operations#bonus-strategy-simplify-application-lifecycle-management)
+*   [Getting Started with Botkube’s AI Assistant](https://botkube.io/blog/ai-for-kubernetes-operations#getting-started-with-botkube-s-ai-assistant)
 
 #### Start Using Botkube AI-Powered Assistant Today
-
-#### Get Started with Botkube Today!
 
 Kubernetes has transformed how we deploy and manage applications with unparalleled scalability and efficiency. But, mastering Kubernetes cluster management requires a high level of expertise to ensure everything runs smoothly, securely, and reliably. In recent years, new tools have been developed to make managing Kubernetes easier for engineering teams. AI assistants like GitHub’s Copilot are enhancing developer experiences, leading to the adoption of AIOps (Artificial Intelligence for IT Operations), including Kubernetes AI assistants.This shift emphasizes the need for automation, real-time monitoring, and intelligent problem-solving in managing Kubernetes.
 

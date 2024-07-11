@@ -2,7 +2,7 @@ Title: Maximize Your DevOps Teams Efficiency with Botkube + Microsoft Teams
 
 URL Source: https://botkube.io/blog/maximize-your-devops-teams-efficiency-with-botkube-and-microsoft-teams
 
-Published Time: Nov 29, 2023
+Published Time: May 20, 2024
 
 Markdown Content:
 ![Image 1](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6408ed63e5b48fed17e54625_SE6Pjp9PW9TaOwePHJXRaxaLQgYdT2HX_5PYASmvIx8.jpeg)
@@ -17,15 +17,13 @@ Get Botkube up and running with Microsoft Teams in less than 5 mins with this wa
 
 ### Table of Contents
 
-*   [Introduction](#introduction)
-*   [Benefits of Using Botkube and Microsoft Teams](#benefits-of-using-botkube-and-microsoft-teams)
-*   [Tutorial Guide](#tutorial-guide-)
-*   [Conclusion](#conclusion-)
-*   [Get Started with Botkube](#get-started-with-botkube)
+*   [Introduction](https://botkube.io/blog/maximize-your-devops-teams-efficiency-with-botkube-and-microsoft-teams#introduction)
+*   [Benefits of Using Botkube and Microsoft Teams](https://botkube.io/blog/maximize-your-devops-teams-efficiency-with-botkube-and-microsoft-teams#benefits-of-using-botkube-and-microsoft-teams)
+*   [Tutorial Guide](https://botkube.io/blog/maximize-your-devops-teams-efficiency-with-botkube-and-microsoft-teams#tutorial-guide-)
+*   [Conclusion](https://botkube.io/blog/maximize-your-devops-teams-efficiency-with-botkube-and-microsoft-teams#conclusion-)
+*   [Get Started with Botkube](https://botkube.io/blog/maximize-your-devops-teams-efficiency-with-botkube-and-microsoft-teams#get-started-with-botkube)
 
 #### Start Using Botkube AI-Powered Assistant Today
-
-#### Get Started with Botkube Today!
 
 Introduction
 ------------
@@ -48,7 +46,7 @@ In this tutorial, we will guide you through the step-by-step process of configur
 
 ### Prerequisites
 
-*   [Botkube Cloud](http://app.botkube.io/) account
+*   [Botkube Cloud](https://app.botkube.io/) account
 *   Access to a Kubernetes cluster
 *   Microsoft Teams account with administrator privileges
 
@@ -101,39 +99,45 @@ _\*\* A few steps are one-time operations requiring administrative privileges. O
 
 ‍
 
-        5. Next, Navigate to the chat window and a welcome message should appear
-    
-        6. Navigate to the chat window and select <strong>Connect to Botkube Cloud</strong>
-    
+```
+    5. Next, Navigate to the chat window and a welcome message should appear
+
+    6. Navigate to the chat window and select <strong>Connect to Botkube Cloud</strong>
+```
 
 ![Image 10: Bot message in Teams](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65678f7db157112561870666_ZfA2XrAwSEqm7yLkbUMoOEL_3sIULsNu2rHAaerMIvhOyKO79bjSFvausKcnNF_rxPc8rq0rFAl2VGRNct3Gb0aJimPt3pYbJInhW0-Z6ffQWq3_gPAbiJbHQHMhefcBbAbROu95icJakohqR-patiY.png)
 
-     7. This will take you to the Botkube Cloud dashboard. Your Teams channel will appear. Select the <strong>Connect </strong>Button.
-    
+```
+ 7. This will take you to the Botkube Cloud dashboard. Your Teams channel will appear. Select the <strong>Connect </strong>Button.
+```
 
 ![Image 11: One last button to click](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/656eefd26cc09bfeec2845b3_Screen%20Shot%202023-12-05%20at%201.38.28%20AM.png)
 
 ![Image 12: k8s connected to Microsoft Teams](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65678f7d165a59345b2b698b__rEh9UH04sSf8XxhQi_3JhGSjynIaVLwD--bRFqQa3v2Rqrahxpnna3yryM1a4omthQ-Fize-gyhNgRAXDTl-DYQXkJ1LUhp1OvRWNwn62jwfra7qa806TPcVm13W3pbeA52XN47_MlPkUVEvvyb6KA.png)
 
-      8. All of your Teams information will appear in the dashboard. Select the channels you want to use with Botkube. 
-    
+```
+  8. All of your Teams information will appear in the dashboard. Select the channels you want to use with Botkube. 
+```
 
 ![Image 13: Customize alerts coming into Teams from Kubernetes](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65678f7ead44d850b34e7f35_nSgmglbxW-mAFvthFI-1q0c0dcMg2m2wejlA2__CmM-vyDDeyLjUh84vTLufTx77jaJ-ifWWa1bzkFpn7bPK0KbehAARBOg2Zle9HbNUk3SXAP9-jcNbNXFypsfgSPY75R2BLLwmDi9nUFUY88StBNg.png)
 
-     10. Connect your preferred plugins 
-    
+```
+ 10. Connect your preferred plugins 
+```
 
 ![Image 14: Add more cloud native plugins](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65678f7ddec01b0e38f3eb6d_pVkuqIiFGr5zQ8lNXQcSMQXQhDbPx5rZ6m0OptpyWKHIfpzzTwn1UbTR44-HU_YM2NOBfoOhvapjYfohK0AUjF5dsvV_8JGnujLfhEzupnaCMLJoD4pzbAE6aHZemjv1Rzzi3rsu8HoFbqrSxbu1TVI.png)
 
-     11. Review and select your preferred Botkube defaults. 
-    
+```
+ 11. Review and select your preferred Botkube defaults. 
+```
 
 ![Image 15: Save the new instance](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/65678f7d6f8e75cab928022a_PVwnI51Br_JjDcyKQsNjixKmrtTDW10Ug0gHIUJMFxDo51P-_aRrStZiIrK-Pmqxg3DnFwrtTRZqhHUGhZv2d37pHnWMmUvx9p5o4FnQe8M-YkkM8wVZk7_P3-tUs0umUmnfE37H4QbtR8E-yg36w2A.png)
 
-        12. Select <strong>Apply changes</strong>
-    
-        13. Congratulations! You have successfully deployed Botkube for Microsoft Teams!
-    
+```
+    12. Select <strong>Apply changes</strong>
+
+    13. Congratulations! You have successfully deployed Botkube for Microsoft Teams!
+```
 
 Conclusion
 ----------

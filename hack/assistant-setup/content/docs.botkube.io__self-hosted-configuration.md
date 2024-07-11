@@ -7,13 +7,13 @@ info
 
 This document is applicable only for self-hosted installations. For Botkube Cloud installations, the Botkube Agent configuration is managed via the [Botkube Cloud dashboard](https://app.botkube.io/).
 
-Overview[​](#overview "Direct link to Overview")
-------------------------------------------------
+Overview[​](https://docs.botkube.io/self-hosted-configuration/#overview "Direct link to Overview")
+--------------------------------------------------------------------------------------------------
 
 Botkube self-hosted installation allows you to specify [source](https://docs.botkube.io/self-hosted-configuration/source), [executor](https://docs.botkube.io/self-hosted-configuration/executor), [communication](https://docs.botkube.io/self-hosted-configuration/communication), and [general](https://docs.botkube.io/self-hosted-configuration/general) Botkube settings as a part of YAML configuration. Check the related documents for more detailed explanation.
 
-Configuration source[​](#configuration-source "Direct link to Configuration source")
-------------------------------------------------------------------------------------
+Configuration source[​](https://docs.botkube.io/self-hosted-configuration/#configuration-source "Direct link to Configuration source")
+--------------------------------------------------------------------------------------------------------------------------------------
 
 The configuration settings are read from two sources:
 
@@ -23,22 +23,22 @@ The configuration settings are read from two sources:
     export BOTKUBE_CONFIG_PATHS="global.yaml,team-b-specific.yaml"# or./botkube --config "global.yaml,team-b-specific.yaml"
     ```
     
-    You can split individual settings into multiple configuration files. The priority will be given to the last (right-most) file specified. Files with `_` name prefix are always read as the last ones. See the [merging strategy](#merging-strategy) section for more details.
+    You can split individual settings into multiple configuration files. The priority will be given to the last (right-most) file specified. Files with `_` name prefix are always read as the last ones. See the [merging strategy](https://docs.botkube.io/self-hosted-configuration/#merging-strategy) section for more details.
     
     note
     
     For Helm installation, Botkube uses `_runtime_state.yaml` and `_startup_state.yaml` files to store its internal state. Remember to keep these files in the `BOTKUBE_CONFIG_PATHS` environment variable.
     
-*   the exported [environment variables](#environment-variables) that overrides the configuration specified in the files.
+*   the exported [environment variables](https://docs.botkube.io/self-hosted-configuration/#environment-variables) that overrides the configuration specified in the files.
     
 
-Helm install options[​](#helm-install-options "Direct link to Helm install options")
-------------------------------------------------------------------------------------
+Helm install options[​](https://docs.botkube.io/self-hosted-configuration/#helm-install-options "Direct link to Helm install options")
+--------------------------------------------------------------------------------------------------------------------------------------
 
 Advanced Helm install options are documented [here](https://docs.botkube.io/self-hosted-configuration/helm-chart-parameters).
 
-Updating the configuration[​](#updating-the-configuration "Direct link to Updating the configuration")
-------------------------------------------------------------------------------------------------------
+Updating the configuration[​](https://docs.botkube.io/self-hosted-configuration/#updating-the-configuration "Direct link to Updating the configuration")
+--------------------------------------------------------------------------------------------------------------------------------------------------------
 
 To update Botkube configuration, you can either:
 
@@ -57,7 +57,7 @@ botkube install -f /tmp/values.yaml
 
 As both Helm release upgrade and some of the `@Botkube` commands modify the same configuration, it is merged during command execution. Whenever you specify a new value in the `/tmp/values.yaml` file, it will override the existing value in the configuration.
 
-### Preventing overrides by default Helm chart values[​](#preventing-overrides-by-default-helm-chart-values "Direct link to Preventing overrides by default Helm chart values")
+### Preventing overrides by default Helm chart values[​](https://docs.botkube.io/self-hosted-configuration/#preventing-overrides-by-default-helm-chart-values "Direct link to Preventing overrides by default Helm chart values")
 
 Keep in mind that even if you don't specify custom values in the `/tmp/values.yaml` file, Helm can override the existing values with the default ones.
 
@@ -93,8 +93,8 @@ The following properties need such `null` value during upgrade, if you want to k
 
 To learn more, read the [Deleting a default key](https://helm.sh/docs/chart_template_guide/values_files/#deleting-a-default-key) paragraph in Helm documentation.
 
-Environment variables[​](#environment-variables "Direct link to Environment variables")
----------------------------------------------------------------------------------------
+Environment variables[​](https://docs.botkube.io/self-hosted-configuration/#environment-variables "Direct link to Environment variables")
+-----------------------------------------------------------------------------------------------------------------------------------------
 
 The individual communication settings can be specified via environment variables. They take priority and override the configuration specified in the file.
 
@@ -110,8 +110,8 @@ is mapped to the `BOTKUBE_SETTINGS_KUBECTL_DEFAULT__NAMESPACE` environment varia
 
 This is a useful feature that allows you to store the overall configuration in a file, where sensitive data, such as tokens, can be put in environment variables. See the [**Tokens from Vault via CSI driver**](https://docs.botkube.io/self-hosted-configuration/communication/vault-csi/) tutorial for an example use-case.
 
-Merging strategy[​](#merging-strategy "Direct link to Merging strategy")
-------------------------------------------------------------------------
+Merging strategy[​](https://docs.botkube.io/self-hosted-configuration/#merging-strategy "Direct link to Merging strategy")
+--------------------------------------------------------------------------------------------------------------------------
 
 Botkube allows you to split individual settings into multiple configuration files. The following rules apply:
 

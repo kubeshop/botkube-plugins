@@ -17,15 +17,13 @@ People have been using ChatGPT and AI for many uses over the past year. But have
 
 ### Table of Contents
 
-*   [Using ChatGPT with Kubernetes](#using-chatgpt-with-kubernetes)
-*   [How Botkube Makes ChatGPT for Kubernetes Even Better](#how-botkube-makes-chatgpt-for-kubernetes-even-better)
-*   [Common Use Cases with ChatGPT and Botkube](#common-use-cases-with-chatgpt-and-botkube)
-*   [Is ChatGPT Safe to Use in Kubernetes?](#is-chatgpt-safe-to-use-in-kubernetes-)
-*   [Get Started with Botkube’s Doctor Plugin](#get-started-with-botkube-s-doctor-plugin)
+*   [Using ChatGPT with Kubernetes](https://botkube.io/blog/use-chatgpt-to-troubleshoot-kubernetes-errors-with-botkubes-doctor#using-chatgpt-with-kubernetes)
+*   [How Botkube Makes ChatGPT for Kubernetes Even Better](https://botkube.io/blog/use-chatgpt-to-troubleshoot-kubernetes-errors-with-botkubes-doctor#how-botkube-makes-chatgpt-for-kubernetes-even-better)
+*   [Common Use Cases with ChatGPT and Botkube](https://botkube.io/blog/use-chatgpt-to-troubleshoot-kubernetes-errors-with-botkubes-doctor#common-use-cases-with-chatgpt-and-botkube)
+*   [Is ChatGPT Safe to Use in Kubernetes?](https://botkube.io/blog/use-chatgpt-to-troubleshoot-kubernetes-errors-with-botkubes-doctor#is-chatgpt-safe-to-use-in-kubernetes-)
+*   [Get Started with Botkube’s Doctor Plugin](https://botkube.io/blog/use-chatgpt-to-troubleshoot-kubernetes-errors-with-botkubes-doctor#get-started-with-botkube-s-doctor-plugin)
 
 #### Start Using Botkube AI-Powered Assistant Today
-
-#### Get Started with Botkube Today!
 
 Artificial Intelligence (AI) and its counterpart, GPT (generative pre-trained transformer), have been making incredible progress over the past year. Large Language Models power tools like ChatGPT to answer almost any question using the collective knowledge stored over years on the Internet.
 

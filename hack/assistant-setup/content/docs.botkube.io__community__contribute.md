@@ -15,17 +15,17 @@ Botkube is [MIT Licensed](https://github.com/kubeshop/botkube/blob/main/LICENSE)
 
 We gratefully welcome improvements to [documentation](https://docs.botkube.io/ "Go to documentation site") as well as to code.
 
-Contributing to documentation[​](#contributing-to-documentation "Direct link to Contributing to documentation")
----------------------------------------------------------------------------------------------------------------
+Contributing to documentation[​](https://docs.botkube.io/community/contribute/#contributing-to-documentation "Direct link to Contributing to documentation")
+------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Follow the [botkube-docs/CONTRIBUTING.md](https://github.com/kubeshop/botkube-docs/blob/main/CONTRIBUTING.md) file to learn how to contribute to documentation.
 
-Build and run Botkube from source code[​](#build-and-run-botkube-from-source-code "Direct link to Build and run Botkube from source code")
-------------------------------------------------------------------------------------------------------------------------------------------
+Build and run Botkube from source code[​](https://docs.botkube.io/community/contribute/#build-and-run-botkube-from-source-code "Direct link to Build and run Botkube from source code")
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 This section describes how to build and run Botkube from source code.
 
-### Prerequisite[​](#prerequisite "Direct link to Prerequisite")
+### Prerequisite[​](https://docs.botkube.io/community/contribute/#prerequisite "Direct link to Prerequisite")
 
 *   [Go](https://go.dev/), at least 1.18
     
@@ -44,7 +44,7 @@ This section describes how to build and run Botkube from source code.
     ```
     
 
-### Build and install on Kubernetes[​](#build-and-install-on-kubernetes "Direct link to Build and install on Kubernetes")
+### Build and install on Kubernetes[​](https://docs.botkube.io/community/contribute/#build-and-install-on-kubernetes "Direct link to Build and install on Kubernetes")
 
 1.  Build Botkube and create a new container image tagged as `ghcr.io/kubeshop/botkube:v9.99.9-dev`. Choose one option:
     
@@ -87,7 +87,7 @@ This section describes how to build and run Botkube from source code.
     Check [values.yaml](https://github.com/kubeshop/botkube/blob/main/helm/botkube/values.yaml) for default options.
     
 
-### Build and run locally[​](#build-and-run-locally "Direct link to Build and run locally")
+### Build and run locally[​](https://docs.botkube.io/community/contribute/#build-and-run-locally "Direct link to Build and run locally")
 
 For faster development, you can also build and run Botkube outside K8s cluster.
 
@@ -126,7 +126,7 @@ For faster development, you can also build and run Botkube outside K8s cluster.
 6.  Run Botkube agent binary:
     
 
-#### Develop Botkube plugins[​](#develop-botkube-plugins "Direct link to Develop Botkube plugins")
+#### Develop Botkube plugins[​](https://docs.botkube.io/community/contribute/#develop-botkube-plugins "Direct link to Develop Botkube plugins")
 
 **Prerequisite**
 
@@ -160,8 +160,8 @@ For faster development, you can also build and run Botkube outside K8s cluster.
     > **Note** To build specific plugin binaries, use `PLUGIN_TARGETS`. For example `PLUGIN_TARGETS="x, kubectl" make build-plugins-single`.
     
 
-Making A Change[​](#making-a-change "Direct link to Making A Change")
----------------------------------------------------------------------
+Making A Change[​](https://docs.botkube.io/community/contribute/#making-a-change "Direct link to Making A Change")
+------------------------------------------------------------------------------------------------------------------
 
 *   Before making any significant changes, please [open an issue](https://github.com/kubeshop/botkube/issues). Discussing your proposed changes ahead of time will make the contribution process smooth for everyone.
     
@@ -178,11 +178,11 @@ Making A Change[​](#making-a-change "Direct link to Making A Change")
     This will run the `golangci-lint` tool to lint the Go code.
     
 
-### Run the e2e tests[​](#run-the-e2e-tests "Direct link to Run the e2e tests")
+### Run the e2e tests[​](https://docs.botkube.io/community/contribute/#run-the-e2e-tests "Direct link to Run the e2e tests")
 
 Here [are the details you need](https://github.com/kubeshop/botkube/blob/main/test/README.md) to set up and run the e2e tests.
 
-### Create a Pull Request[​](#create-a-pull-request "Direct link to Create a Pull Request")
+### Create a Pull Request[​](https://docs.botkube.io/community/contribute/#create-a-pull-request "Direct link to Create a Pull Request")
 
 *   Make sure your pull request has [good commit messages](https://chris.beams.io/posts/git-commit/):
     
@@ -196,8 +196,8 @@ Here [are the details you need](https://github.com/kubeshop/botkube/blob/main/te
 *   Try to squash unimportant commits and rebase your changes on to the `main` branch, this will make sure we have clean log of changes.
     
 
-Support Channels[​](#support-channels "Direct link to Support Channels")
-------------------------------------------------------------------------
+Support Channels[​](https://docs.botkube.io/community/contribute/#support-channels "Direct link to Support Channels")
+---------------------------------------------------------------------------------------------------------------------
 
 Join the Botkube-related discussion on Slack!
 
@@ -207,12 +207,12 @@ To report bug or feature, use [GitHub issues](https://github.com/kubeshop/botkub
 
 [Elasticsearch notifier development](https://docs.botkube.io/community/contribute/elasticsearch-develop)
 
-*   [Contributing to documentation](#contributing-to-documentation)
-*   [Build and run Botkube from source code](#build-and-run-botkube-from-source-code)
-    *   [Prerequisite](#prerequisite)
-    *   [Build and install on Kubernetes](#build-and-install-on-kubernetes)
-    *   [Build and run locally](#build-and-run-locally)
-*   [Making A Change](#making-a-change)
-    *   [Run the e2e tests](#run-the-e2e-tests)
-    *   [Create a Pull Request](#create-a-pull-request)
-*   [Support Channels](#support-channels)
+*   [Contributing to documentation](https://docs.botkube.io/community/contribute/#contributing-to-documentation)
+*   [Build and run Botkube from source code](https://docs.botkube.io/community/contribute/#build-and-run-botkube-from-source-code)
+    *   [Prerequisite](https://docs.botkube.io/community/contribute/#prerequisite)
+    *   [Build and install on Kubernetes](https://docs.botkube.io/community/contribute/#build-and-install-on-kubernetes)
+    *   [Build and run locally](https://docs.botkube.io/community/contribute/#build-and-run-locally)
+*   [Making A Change](https://docs.botkube.io/community/contribute/#making-a-change)
+    *   [Run the e2e tests](https://docs.botkube.io/community/contribute/#run-the-e2e-tests)
+    *   [Create a Pull Request](https://docs.botkube.io/community/contribute/#create-a-pull-request)
+*   [Support Channels](https://docs.botkube.io/community/contribute/#support-channels)

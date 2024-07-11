@@ -17,13 +17,13 @@ The new Botkube Slack app provides more great interactive features and better se
 
 ### Table of Contents
 
-*   [Installing the Slack App in your workspace](#installing-the-slack-app-in-your-workspace)
-*   [Botkube Slack App Tokens](#botkube-slack-app-tokens)
-*   [Invite Botkube to a channel](#invite-botkube-to-a-channel)
-*   [Installing Botkube](#installing-botkube)
-*   [Explore the New Slack App](#explore-the-new-slack-app)
-*   [What Could Go Wrong?](#what-could-go-wrong-)
-*   [Feedback - We’d Love to Hear From You](#feedback-we-d-love-to-hear-from-you)
+*   [Installing the Slack App in your workspace](https://botkube.io/blog/botkube-socket-slack-getting-started#installing-the-slack-app-in-your-workspace)
+*   [Botkube Slack App Tokens](https://botkube.io/blog/botkube-socket-slack-getting-started#botkube-slack-app-tokens)
+*   [Invite Botkube to a channel](https://botkube.io/blog/botkube-socket-slack-getting-started#invite-botkube-to-a-channel)
+*   [Installing Botkube](https://botkube.io/blog/botkube-socket-slack-getting-started#installing-botkube)
+*   [Explore the New Slack App](https://botkube.io/blog/botkube-socket-slack-getting-started#explore-the-new-slack-app)
+*   [What Could Go Wrong?](https://botkube.io/blog/botkube-socket-slack-getting-started#what-could-go-wrong-)
+*   [Feedback - We’d Love to Hear From You](https://botkube.io/blog/botkube-socket-slack-getting-started#feedback-we-d-love-to-hear-from-you)
 
 #### Start Using Botkube AI-Powered Assistant Today
 
@@ -59,31 +59,33 @@ Let's go through the initial steps for installing the socket-based Slack app its
 4.  You can find the latest app manifests [in the Botkube documentation](https://docs.botkube.io/installation/slack/#create-slack-app). There are three different YAML manifests available. The manifests vary based on whether you want to use Botkube in a public Slack channel, a private channel, or both. This is one of the new improved security features that limits the scope of the token that Botkube uses. This is an example of the manifest for both public and private channels:
     
 
-    display_information:
-     name: Botkube
-     description: Botkube
-     background_color: "#a653a6"
-    features:
-     bot_user:
-       display_name: Botkube
-       always_online: false
-    oauth_config:
-     scopes:
-       bot:
-         - channels:read
-         - groups:read
-         - app_mentions:read
-         - chat:write
-         - files:write
-    settings:
-     event_subscriptions:
-       bot_events:
-         - app_mention
-     interactivity:
-       is_enabled: true
-     org_deploy_enabled: false
-     socket_mode_enabled: true
-     token_rotation_enabled: false
+```
+display_information:
+ name: Botkube
+ description: Botkube
+ background_color: "#a653a6"
+features:
+ bot_user:
+   display_name: Botkube
+   always_online: false
+oauth_config:
+ scopes:
+   bot:
+     - channels:read
+     - groups:read
+     - app_mentions:read
+     - chat:write
+     - files:write
+settings:
+ event_subscriptions:
+   bot_events:
+     - app_mention
+ interactivity:
+   is_enabled: true
+ org_deploy_enabled: false
+ socket_mode_enabled: true
+ token_rotation_enabled: false
+```
 
 If you are using Botkube with multiple Kubernetes clusters as mentioned in the earlier caveat, set the name and description fields to something specific to the cluster this app will manage. This will make it clear in Slack itself which bot maps to which cluster. Paste this YAML into the app manifest dialog and click Next.
 
@@ -169,22 +171,23 @@ Now that those five environment variables are set, make sure you have the Botkub
 
 Now you can simply run the helm install command shown here, or copy from the [documentation](https://docs.botkube.io/installation/slack/#install-botkube-backend-in-kubernetes-cluster). Note that this installs version v0.16.0 of Botkube which is the latest version as of this article:
 
-    helm install --version v0.16.0 botkube --namespace botkube --create-namespace \
-    
-    --set communications.default-group.socketSlack.enabled=true \
-    
-    --set communications.default-group.socketSlack.channels.default.name=${SLACK_CHANNEL_NAME} \
-    
-    --set communications.default-group.socketSlack.appToken=${SLACK_API_APP_TOKEN} \
-    
-    --set communications.default-group.socketSlack.botToken=${SLACK_API_BOT_TOKEN} \
-    
-    --set settings.clusterName=${CLUSTER_NAME} \
-    
-    --set executors.kubectl-read-only.kubectl.enabled=${ALLOW_KUBECTL} \
-    
-    botkube/botkube
-    
+```
+helm install --version v0.16.0 botkube --namespace botkube --create-namespace \
+
+--set communications.default-group.socketSlack.enabled=true \
+
+--set communications.default-group.socketSlack.channels.default.name=${SLACK_CHANNEL_NAME} \
+
+--set communications.default-group.socketSlack.appToken=${SLACK_API_APP_TOKEN} \
+
+--set communications.default-group.socketSlack.botToken=${SLACK_API_BOT_TOKEN} \
+
+--set settings.clusterName=${CLUSTER_NAME} \
+
+--set executors.kubectl-read-only.kubectl.enabled=${ALLOW_KUBECTL} \
+
+botkube/botkube
+```
 
 If everything goes according to plans, you will see Botkube start up in the Slack channel and print the initial interactive help menu.
 

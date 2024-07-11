@@ -3,29 +3,97 @@ Title: Slack | Botkube
 URL Source: https://docs.botkube.io/installation/socketslack
 
 Markdown Content:
-Botkube App for Slack Versions[​](#botkube-app-for-slack-versions "Direct link to Botkube App for Slack Versions")
-------------------------------------------------------------------------------------------------------------------
+Slack | Botkube
+===============
+       
 
-In order to connect with Slack, Botkube requires an application for Slack. There are two versions of the Botkube App for Slack available:
+[Skip to main content](https://docs.botkube.io/installation/socketslack#__docusaurus_skipToContent_fallback)
 
-### Botkube Cloud App for Slack[​](#botkube-cloud-app-for-slack "Direct link to Botkube Cloud App for Slack")
+**New to Botkube?** Get started fast (and free!) with the [Botkube Cloud Web App](https://app.botkube.io/).
 
-The Botkube Cloud App for Slack offers several advanced features:
+[![Image 1: Botkube Logo](https://docs.botkube.io/images/botkube-black.svg)![Image 2: Botkube Logo](https://docs.botkube.io/images/botkube-white.svg) **Botkube**](https://docs.botkube.io/)[Documentation](https://docs.botkube.io/)[Community](https://docs.botkube.io/community/contribute/)
 
-*   One-click installation into your Slack workspace
-*   Multi-cluster executor support with a single App for Slack
-*   Manage Slack channels directly from the Botkube web app and ensure the Botkube bot is invited to the correct channels
+[1.12](https://docs.botkube.io/)
 
-The Botkube Cloud App for Slack uses Botkube's cloud services to manage channels and route executor commands. Events and alerts are sent directly from your cluster to your Slack workspace for reliable, fast notifications.
+*   [Unreleased 🚧](https://docs.botkube.io/next/installation/socketslack)
+*   [1.12](https://docs.botkube.io/installation/socketslack)
+*   [1.11](https://docs.botkube.io/1.11/installation/socketslack)
+*   [1.10](https://docs.botkube.io/1.10/installation/socketslack)
+*   [1.9](https://docs.botkube.io/1.9/installation/socketslack)
+*   [1.8](https://docs.botkube.io/1.8/installation/socketslack)
+*   [1.7](https://docs.botkube.io/1.7/installation/socketslack)
+*   * * *
+    
+*   [All versions](https://docs.botkube.io/versions)
 
-You can directly try Botkube Cloud App for Slack for free by creating an account in the [Botkube Web App](https://app.botkube.io/). Follow the [Cloud app for Slack tutorial](https://docs.botkube.io/installation/slack/cloud-slack) to learn more.
+[GitHub](https://github.com/kubeshop/botkube)[Slack](https://join.botkube.io/)
 
-### Botkube App for Socket Slack[​](#botkube-app-for-socket-slack "Direct link to Botkube App for Socket Slack")
+Search
 
-The Socket-mode app works with the open-source Botkube Agent. The Botkube App for Socket-mode Slack has the following caveats:
+*   [Installation](https://docs.botkube.io/)
+    
+    *   [Slack](https://docs.botkube.io/installation/socketslack)
+    *   [Slack](https://docs.botkube.io/installation/slack/)
+        
+    *   [Mattermost](https://docs.botkube.io/installation/mattermost/)
+        
+    *   [Discord](https://docs.botkube.io/installation/discord/)
+        
+    *   [Microsoft Teams](https://docs.botkube.io/installation/teams/)
+    *   [Elasticsearch](https://docs.botkube.io/installation/elasticsearch/)
+        
+    *   [PagerDuty](https://docs.botkube.io/installation/pagerduty/)
+    *   [Outgoing webhook](https://docs.botkube.io/installation/webhook/)
+        
+*   [Tutorials and examples](https://docs.botkube.io/examples-and-tutorials/)
+    
+*   [Features](https://docs.botkube.io/features/event-notifications)
+    
+*   [Plugins](https://docs.botkube.io/plugins/)
+    
+*   [CLI](https://docs.botkube.io/cli/getting-started)
+    
+*   [Self-hosted Configuration](https://docs.botkube.io/self-hosted-configuration/)
+    
+*   [Troubleshooting](https://docs.botkube.io/troubleshooting/common-problems)
+    
+*   [Architecture](https://docs.botkube.io/architecture/)
+    
 
-*   Must be installed manually into your Slack workspace using the provided configuration
-*   Slack channels must be managed manually, and you need to ensure the Botkube bot is invited to any channel you want to use with Botkube
-*   When using executor plugins (e.g. kubectl) in a multi-cluster environment, each cluster needs to have a dedicated Botkube bot for Slack in order to route commands to the correct cluster.
+*   [](https://docs.botkube.io/)
+*   [Installation](https://docs.botkube.io/)
+*   Slack
 
-Follow the [instruction](https://docs.botkube.io/installation/slack/socket-slack) for more details.
+Version: 1.12
+
+Slack
+=====
+
+Redirecting to the new location of Slack installation... If you are not redirected in a few seconds, please click [here](https://docs.botkube.io/installation/slack/).
+
+[Edit this page](https://github.com/kubeshop/botkube-docs/edit/main/versioned_docs/version-1.12/installation/socketslack.mdx)
+
+[Previous Installation](https://docs.botkube.io/)[Next Slack](https://docs.botkube.io/installation/slack/)
+
+Community
+
+*   [Contribute](https://docs.botkube.io/community/contribute)
+*   [GitHub](https://github.com/kubeshop/botkube)
+*   [Community Slack](https://join.botkube.io/)
+*   [Support](https://docs.botkube.io/support)
+
+Legal
+
+*   [License](https://docs.botkube.io/license)
+*   [Privacy & Legal](https://botkube.io/privacy-policy)
+*   [Telemetry](https://docs.botkube.io/telemetry)
+
+Learn
+
+*   [Installation](https://docs.botkube.io/)
+
+Social
+
+*   [Twitter](https://twitter.com/Botkube_io)
+
+Copyright © 2024 Kubeshop, Inc. Built with Docusaurus.

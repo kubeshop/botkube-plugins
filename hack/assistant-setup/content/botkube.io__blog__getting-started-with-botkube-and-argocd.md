@@ -17,20 +17,18 @@ Learn how to set up Botkube with ArgoCD plugins in this step-by-step tutorial.
 
 ### Table of Contents
 
-*   [Prerequisites](#prerequisites)
-*   [Install the ArgoCD Plugin into a new instance](#install-the-argocd-plugin-into-a-new-instance-)
-*   [Using the ArgoCD Plugin in Action](#using-the-argocd-plugin-in-action)
-*   [Conclusion](#conclusion)
-*   [Sign up now!](#sign-up-now-)
-*   [Feedback](#feedback)
+*   [Prerequisites](https://botkube.io/blog/getting-started-with-botkube-and-argocd#prerequisites)
+*   [Install the ArgoCD Plugin into a new instance](https://botkube.io/blog/getting-started-with-botkube-and-argocd#install-the-argocd-plugin-into-a-new-instance-)
+*   [Using the ArgoCD Plugin in Action](https://botkube.io/blog/getting-started-with-botkube-and-argocd#using-the-argocd-plugin-in-action)
+*   [Conclusion](https://botkube.io/blog/getting-started-with-botkube-and-argocd#conclusion)
+*   [Sign up now!](https://botkube.io/blog/getting-started-with-botkube-and-argocd#sign-up-now-)
+*   [Feedback](https://botkube.io/blog/getting-started-with-botkube-and-argocd#feedback)
 
 #### Start Using Botkube AI-Powered Assistant Today
 
-#### Start Receiving Kubernetes Notifications Now
-
 Navigating through the complexity of scaling operations and collaborative workflows with GitOps tools like ArgoCD can pose significant challenges. As teams scale, real-time updates and troubleshooting efficiency become paramount.
 
-Enter [Botkube](http://botkube.io/), a Kubernetes collaborative troubleshooting solution designed to seamlessly integrate with widely-used collaboration platforms such as [Slack, Microsoft Teams, Discord, and Mattermost](http://botkube.io/integrations). Botkube doesn't just simplify Kubernetes monitoring; it also optimizes GitOps workflows through enhanced automation, real-time collaboration, and centralized knowledge management.
+Enter [Botkube](https://botkube.io/), a Kubernetes collaborative troubleshooting solution designed to seamlessly integrate with widely-used collaboration platforms such as [Slack, Microsoft Teams, Discord, and Mattermost](https://botkube.io/integrations). Botkube doesn't just simplify Kubernetes monitoring; it also optimizes GitOps workflows through enhanced automation, real-time collaboration, and centralized knowledge management.
 
 Learn more about Botkube’s move towards [GitOps](https://botkube.io/blog/enhancing-gitops-workflows-with-botkube) and the new ArgoCD Plugin– the second installment in the Botkube GitOps plugin series in our [release announcement](https://botkube.io/blog/argo-cd-botkube-integration).
 
@@ -44,7 +42,7 @@ Before you begin, make sure you have the following prerequisites in place:
 *   Basic familiarity with Kubernetes and its components
 *   Access to a Kubernetes cluster with Helm installed
 *   Access to Slack workspace
-*   A [Botkube Cloud Account](http://app.botkube.io/)
+*   A [Botkube Cloud Account](https://app.botkube.io/)
 *   [Argo CD](https://argoproj.github.io/cd/) must be installed on your Kubernetes cluster
 *   [Install the Argo CD CLI](https://argo-cd.readthedocs.io/en/stable/?_gl=1*10c1kh8*_ga*NDc0Nzg3NTU3LjE2OTU2NTg1MzI.*_ga_5Z1VTPDL73*MTY5NTkxNTMyMC4yLjEuMTY5NTkxNTM0NC4wLjAuMA..#getting-started) on your local machine
 
@@ -85,10 +83,11 @@ Install the ArgoCD Plugin into a new instance
 
 ![Image 3: Adding Argo CD API Keys](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6516ed347d480ce1978008ad_ISJShwJ0wGBlQUqSnpW1Zt-9vzEKnLzwFnLMlxGIX0WI25KZ7tWnyapg0LSixCOslONWZfHErb-qmr_MvlqlWTDK3VxGnPKsZfDCnNKGJNAy90orbvT3HHXdkgm-D3JeArzT4pea8mUOExvfS7QY0rY.png)
 
-      3. Configure the plugin with your Botkube instance
-    
-      4. Insert your resources from your ArgoCD UI
-    
+```
+  3. Configure the plugin with your Botkube instance
+
+  4. Insert your resources from your ArgoCD UI
+```
 
 *   Fill in your “Name” and “Namespace”
 *   Make sure your BaseURl matches the one found on your ArgoCD UI
@@ -110,8 +109,9 @@ Install the ArgoCD Plugin into a new instance
 
 7\. Make your selection and click the create button.
 
-      8. You are now ready to start playing with your Botkube plugin.
-    
+```
+  8. You are now ready to start playing with your Botkube plugin.
+```
 
 Using the ArgoCD Plugin in Action
 ---------------------------------
@@ -134,7 +134,7 @@ Botkube significantly simplifies the ArgoCD troubleshooting process by offering 
 Sign up now!
 ------------
 
-Get started with Botkube! Whether you're a seasoned Kubernetes pro or just getting started, Botkube can help supercharge your troubleshooting process. [Sign up now for free](http://app.botkube.io/) and [join the community of users on Slack](https://join.botkube.io/) who are already benefiting from the power of Botkube.
+Get started with Botkube! Whether you're a seasoned Kubernetes pro or just getting started, Botkube can help supercharge your troubleshooting process. [Sign up now for free](https://app.botkube.io/) and [join the community of users on Slack](https://join.botkube.io/) who are already benefiting from the power of Botkube.
 
 Feedback
 --------

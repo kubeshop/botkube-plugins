@@ -29,7 +29,7 @@ Respond promptly to Kubernetes issues with Botkube's automated alerts. Accelerat
 
 Begin by configuring Botkube and connecting it to Microsoft Teams. This requires users to obtain a Microsoft Teams webhook for Kubernetes to facilitate communication to Teams. We aim to simplify this experience for users.
 
-Create a free [Botkube Cloud account](http://app.botkube.io/) to begin. We will connect the K8s cluster in the next step. Account creation is simple with multiple social logins like Google and GitHub. Users must verify their email to activate their account.
+Create a free [Botkube Cloud account](https://app.botkube.io/) to begin. We will connect the K8s cluster in the next step. Account creation is simple with multiple social logins like Google and GitHub. Users must verify their email to activate their account.
 
 ![Image 1: Botkube Cloud Signup for K8s Monitoring](https://cdn.prod.website-files.com/634fabb21508d6c9db9bc46f/6566137f5fe7417be4f8a6fb_8Xa41Loqa_HXzlMcoEYZ_e2uDlGkXcTbQAAfLafcZCxXv5IbXkl0r_L7PUUDfGK3c05R7fPv8rFcR3d4whLL1Tt57FnkxIGJd77Y8UBIP_vWiBIFPlZ4dTYjN8QR05x71GsKEv-gxvk7i1bbX_vJAuU.png)
 

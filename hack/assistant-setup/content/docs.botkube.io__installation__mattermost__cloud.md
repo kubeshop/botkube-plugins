@@ -10,13 +10,13 @@ Markdown Content:
 
 Version: 1.12
 
-Prerequisites[​](#prerequisites "Direct link to Prerequisites")
----------------------------------------------------------------
+Prerequisites[​](https://docs.botkube.io/installation/mattermost/cloud/#prerequisites "Direct link to Prerequisites")
+---------------------------------------------------------------------------------------------------------------------
 
 *   Botkube Cloud account which you can create [here](https://app.botkube.io/) for free.
 
-Create a Botkube Cloud Instance with Mattermost[​](#create-a-botkube-cloud-instance-with-mattermost "Direct link to Create a Botkube Cloud Instance with Mattermost")
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Create a Botkube Cloud Instance with Mattermost[​](https://docs.botkube.io/installation/mattermost/cloud/#create-a-botkube-cloud-instance-with-mattermost "Direct link to Create a Botkube Cloud Instance with Mattermost")
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Follow the steps below to install Botkube in your Mattermost instance.
 
@@ -73,15 +73,15 @@ Follow the steps below to install Botkube in your Mattermost instance.
 
 ![Image 9: Summary](https://docs.botkube.io/assets/images/mm_summary-bfdc3ff0af6735b41a17d7219fd6b6f0.png)
 
-Clean up[​](#clean-up "Direct link to Clean up")
-------------------------------------------------
+Clean up[​](https://docs.botkube.io/installation/mattermost/cloud/#clean-up "Direct link to Clean up")
+------------------------------------------------------------------------------------------------------
 
-### Remove Botkube from Mattermost Team[​](#remove-botkube-from-mattermost-team "Direct link to Remove Botkube from Mattermost Team")
+### Remove Botkube from Mattermost Team[​](https://docs.botkube.io/installation/mattermost/cloud/#remove-botkube-from-mattermost-team "Direct link to Remove Botkube from Mattermost Team")
 
 *   Deactivate or remove Botkube user from Mattermost Team. Login as System Admin, in the Menu proceed to System console -> Users -> botkube -> Deactivate.
 *   Archive Channel created for Botkube communication if required.
 
-### Remove Botkube from Kubernetes cluster[​](#remove-botkube-from-kubernetes-cluster "Direct link to Remove Botkube from Kubernetes cluster")
+### Remove Botkube from Kubernetes cluster[​](https://docs.botkube.io/installation/mattermost/cloud/#remove-botkube-from-kubernetes-cluster "Direct link to Remove Botkube from Kubernetes cluster")
 
 1.  Go to Botkube Cloud instances page and click `Manage` button of the instance you want to remove.
     

@@ -11,10 +11,10 @@ ArgoCD source plugin sends events from ArgoCD to configured communication platfo
 
 The ArgoCD source plugin is hosted by the Botkube Cloud plugin repository and requires active Botkube Cloud account.
 
-Get started[​](#get-started "Direct link to Get started")
----------------------------------------------------------
+Get started[​](https://docs.botkube.io/plugins/argocd/#get-started "Direct link to Get started")
+------------------------------------------------------------------------------------------------
 
-### 1\. Prepare elevated RBAC permissions[​](#1-prepare-elevated-rbac-permissions "Direct link to 1. Prepare elevated RBAC permissions")
+### 1\. Prepare elevated RBAC permissions[​](https://docs.botkube.io/plugins/argocd/#1-prepare-elevated-rbac-permissions "Direct link to 1. Prepare elevated RBAC permissions")
 
 ArgoCD plugin requires specific RBAC permissions. First, create RBAC resources on your cluster:
 
@@ -26,13 +26,13 @@ Next, use the `argocd` static group name in the plugin RBAC configuration:
 
 ![Image 1: ArgoCD RBAC](https://docs.botkube.io/assets/images/argocd-rbac-71831f5dfa99aade0bbccbcb140488fd.png)
 
-### 2\. Enable the plugin[​](#2-enable-the-plugin "Direct link to 2. Enable the plugin")
+### 2\. Enable the plugin[​](https://docs.botkube.io/plugins/argocd/#2-enable-the-plugin "Direct link to 2. Enable the plugin")
 
 note
 
 In order to enable the plugin, ArgoCD has to be already installed on the cluster and all watched Applications need to be created.
 
-Also, remember to create RBAC resources for the plugin. See the [Prepare elevated RBAC permissions](#1-prepare-elevated-rbac-permissions) section.
+Also, remember to create RBAC resources for the plugin. See the [Prepare elevated RBAC permissions](https://docs.botkube.io/plugins/argocd/#1-prepare-elevated-rbac-permissions) section.
 
 You can enable the plugin as a part of Botkube instance configuration.
 
@@ -56,8 +56,8 @@ defaultSubscriptions:  applications:    - name: guestbook      namespace: argocd
 
 1.  Click **Save**.
 
-Usage[​](#usage "Direct link to Usage")
----------------------------------------
+Usage[​](https://docs.botkube.io/plugins/argocd/#usage "Direct link to Usage")
+------------------------------------------------------------------------------
 
 Botkube allows you to consume ArgoCD events on your Kubernetes cluster.
 
@@ -65,8 +65,8 @@ Once it is enabled, the ArgoCD plugin will configure ArgoCD notifications so tha
 
 ![Image 2: ArgoCD events](https://docs.botkube.io/assets/images/argocd-events-e6eabb1f581e9822020d55461539bfcd.png)
 
-Interactive events[​](#interactive-events "Direct link to Interactive events")
-------------------------------------------------------------------------------
+Interactive events[​](https://docs.botkube.io/plugins/argocd/#interactive-events "Direct link to Interactive events")
+---------------------------------------------------------------------------------------------------------------------
 
 For platforms that support interactivity, such as Slack and Microsoft Teams, Botkube sends interactive messages for ArgoCD events, that allow you to perform actions on the event. By default, the following actions are supported:
 
@@ -76,10 +76,10 @@ For platforms that support interactivity, such as Slack and Microsoft Teams, Bot
 *   View the Application in the ArgoCD UI
 *   Open the source repository in the browser
 
-Interactive buttons and commands can be configured. See the [Configuration](#configuration-syntax) section for more details.
+Interactive buttons and commands can be configured. See the [Configuration](https://docs.botkube.io/plugins/argocd/#configuration-syntax) section for more details.
 
-Cleanup[​](#cleanup "Direct link to Cleanup")
----------------------------------------------
+Cleanup[​](https://docs.botkube.io/plugins/argocd/#cleanup "Direct link to Cleanup")
+------------------------------------------------------------------------------------
 
 When you disable or remove the plugin, it won't revert all changes made during the plugin startup. To clean up all ArgoCD follow the manual steps:
 
@@ -95,10 +95,10 @@ When you disable or remove the plugin, it won't revert all changes made during t
     The annotation key pattern is `notifications.argoproj.io/subscribe.{trigger-name}.{webhook-name}`. For example, the annotation `notifications.argoproj.io/subscribe.b-5cc4c004df01230f72.b-efc0: ""` was created by Botkube and it should be deleted if the plugin is disabled.
     
 
-Configuration Syntax[​](#configuration-syntax "Direct link to Configuration Syntax")
-------------------------------------------------------------------------------------
+Configuration Syntax[​](https://docs.botkube.io/plugins/argocd/#configuration-syntax "Direct link to Configuration Syntax")
+---------------------------------------------------------------------------------------------------------------------------
 
-### Basic configuration[​](#basic-configuration "Direct link to Basic configuration")
+### Basic configuration[​](https://docs.botkube.io/plugins/argocd/#basic-configuration "Direct link to Basic configuration")
 
 This section lists all basic configuration options for the ArgoCD source plugin. The ArgoCD notification config is created automatically during plugin startup and uses triggers and templates based on the [ArgoCD Notification Catalog](https://argo-cd.readthedocs.io/en/stable/operator-manual/notifications/catalog/).
 
@@ -106,7 +106,7 @@ This section lists all basic configuration options for the ArgoCD source plugin.
 defaultSubscriptions:  # Provide application name and namespace to subscribe to all events for a given application.  applications:    - name: "guestbook"      namespace: "argocd"argoCD:  # ArgoCD UI base URL. It is used for generating links in the incoming events.  uiBaseUrl: http://localhost:8080  # ArgoCD Notifications ConfigMap reference.  notificationsConfigMap:    name: argocd-notifications-cm    namespace: argocd
 ```
 
-### Advanced configuration[​](#advanced-configuration "Direct link to Advanced configuration")
+### Advanced configuration[​](https://docs.botkube.io/plugins/argocd/#advanced-configuration "Direct link to Advanced configuration")
 
 The basic configuration should be sufficient for most users. However, you can customize all triggers, templates, webhook registration and more. For advanced properties, see the full default configuration below:
 

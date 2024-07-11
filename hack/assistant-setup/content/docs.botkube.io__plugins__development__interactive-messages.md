@@ -9,14 +9,14 @@ In this guide, we describe how interactivity applies to messages, and show you h
 
 ![Image 1: demo](https://docs.botkube.io/assets/images/demo-msg-aa0290bb67438a1f83c756f4b50842df.gif)
 
-Primitives[​](#primitives "Direct link to Primitives")
-------------------------------------------------------
+Primitives[​](https://docs.botkube.io/plugins/development/interactive-messages/#primitives "Direct link to Primitives")
+-----------------------------------------------------------------------------------------------------------------------
 
 You can construct and return interactive messages containing buttons, dropdowns, input text, and more complex formatting. For that reason, we introduced a generic `api.Messages` model.
 
-*   [Buttons](#buttons)
-*   [Dropdowns](#dropdowns)
-*   [Input text](#input-text-fields)
+*   [Buttons](https://docs.botkube.io/plugins/development/interactive-messages/#buttons)
+*   [Dropdowns](https://docs.botkube.io/plugins/development/interactive-messages/#dropdowns)
+*   [Input text](https://docs.botkube.io/plugins/development/interactive-messages/#input-text-fields)
 
 For all primitives you need to attach the proper command that will be executed by Botkube. The pattern is:
 
@@ -28,7 +28,7 @@ The `api.MessageBotNamePlaceholder` constant, is our cross-platform placeholder 
 
 The `<plugin_name>` and `<args>` should be replaced based on your needs. You replace `<plugin_name>` with your own plugin name, or other plugin name, like `kubectl`. However, if you use other plugin name, a given command won't work if plugin is not enabled.
 
-### Buttons[​](#buttons "Direct link to Buttons")
+### Buttons[​](https://docs.botkube.io/plugins/development/interactive-messages/#buttons "Direct link to Buttons")
 
 You can define a list of buttons under `Section` object. To construct a given button you can use our helper `api.NewMessageButtonBuilder` builder. For example:
 
@@ -42,7 +42,7 @@ If you use only `ForCommandWithoutDesc`, all buttons are render in the same line
 
 Otherwise, each button is rendered in new line with the description on the left side and button on the right side. ![Image 3: btns-inline](https://docs.botkube.io/assets/images/btns-inline-a7f68fcaac17c49eb65ef94a16ede58e.png)
 
-### Dropdowns[​](#dropdowns "Direct link to Dropdowns")
+### Dropdowns[​](https://docs.botkube.io/plugins/development/interactive-messages/#dropdowns "Direct link to Dropdowns")
 
 You can define dropdowns under `Section` object. You can split options into groups. Optionally, you can define the initial option. It must be included also under `OptionsGroups`.
 
@@ -52,7 +52,7 @@ cmdPrefix := func(cmd string) string {	return fmt.Sprintf("%s %s %s", api.Messag
 
 When user select a given option, Botkube runs an associated command and appends selected option at the end. For **BAR** it's `msg selects two-gropus BAR`. If there is a plugin named `msg` and it is enabled on a given channel, it will be called by Botkube with a given command string. As a result, you can parse input command and return proper output.
 
-### Input text fields[​](#input-text-fields "Direct link to Input text fields")
+### Input text fields[​](https://docs.botkube.io/plugins/development/interactive-messages/#input-text-fields "Direct link to Input text fields")
 
 ```
 msg := api.Message{	PlaintextInputs: []api.LabelInput{		{			Command:          fmt.Sprintf("%s %s input-text", api.MessageBotNamePlaceholder, pluginName),			DispatchedAction: api.DispatchInputActionOnEnter,			Placeholder:      "String pattern to filter by",			Text:             "Filter output",		},	},}
@@ -60,8 +60,8 @@ msg := api.Message{	PlaintextInputs: []api.LabelInput{		{			Command:          fm
 
 When user types an input string and clicks enter, Botkube runs an associated command and appends input text in quotes. For example, for input **"text"** it's `msg input-text "test"`. If there is a plugin named `msg` and it is enabled on a given channel, it will be called by Botkube with a given command string. As a result, you can parse input command and return proper output.
 
-Message visibility[​](#message-visibility "Direct link to Message visibility")
-------------------------------------------------------------------------------
+Message visibility[​](https://docs.botkube.io/plugins/development/interactive-messages/#message-visibility "Direct link to Message visibility")
+-----------------------------------------------------------------------------------------------------------------------------------------------
 
 If the interactivity is enabled, you can change the default message visibility options:
 

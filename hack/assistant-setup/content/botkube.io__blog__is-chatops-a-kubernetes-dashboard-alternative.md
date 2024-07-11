@@ -17,9 +17,9 @@ Can ChatOps replace the age old monitoring dashboards that DevOps teams still bu
 
 ### Table of Contents
 
-*   [Comparing Kubernetes Dashboards to Chatbots for Kubernetes](#comparing-kubernetes-dashboards-to-chatbots-for-kubernetes)
-*   [Use Cases for Chat Operations in Kubernetes](#use-cases-for-chat-operations-in-kubernetes)
-*   [Conclusions](#conclusions)
+*   [Comparing Kubernetes Dashboards to Chatbots for Kubernetes](https://botkube.io/blog/is-chatops-a-kubernetes-dashboard-alternative#comparing-kubernetes-dashboards-to-chatbots-for-kubernetes)
+*   [Use Cases for Chat Operations in Kubernetes](https://botkube.io/blog/is-chatops-a-kubernetes-dashboard-alternative#use-cases-for-chat-operations-in-kubernetes)
+*   [Conclusions](https://botkube.io/blog/is-chatops-a-kubernetes-dashboard-alternative#conclusions)
 
 #### Start Using Botkube AI-Powered Assistant Today
 

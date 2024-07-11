@@ -17,20 +17,18 @@ Learn how to simplify DevOps tasks directly within your favorite communication p
 
 ### Table of Contents
 
-*   [Real-time Kubernetes Monitoring with Prometheus](#real-time-kubernetes-monitoring-with-prometheus)
-*   [Receive Real Time ArgoCD Notifications in Slack](#receive-real-time-argocd-notifications-in-slack)
-*   [Kubernetes Insights with Botkube’s ChatGPT Assistant](#kubernetes-insights-with-botkube-s-chatgpt-assistant)
-*   [Kubernetes Troubleshooting Automations](#kubernetes-troubleshooting-automations)
-*   [Executor Plugin](#executor-plugin-)
-*   [Conclusion](#conclusion)
+*   [Real-time Kubernetes Monitoring with Prometheus](https://botkube.io/blog/five-essential-kubernetes-tasks#real-time-kubernetes-monitoring-with-prometheus)
+*   [Receive Real Time ArgoCD Notifications in Slack](https://botkube.io/blog/five-essential-kubernetes-tasks#receive-real-time-argocd-notifications-in-slack)
+*   [Kubernetes Insights with Botkube’s ChatGPT Assistant](https://botkube.io/blog/five-essential-kubernetes-tasks#kubernetes-insights-with-botkube-s-chatgpt-assistant)
+*   [Kubernetes Troubleshooting Automations](https://botkube.io/blog/five-essential-kubernetes-tasks#kubernetes-troubleshooting-automations)
+*   [Executor Plugin](https://botkube.io/blog/five-essential-kubernetes-tasks#executor-plugin-)
+*   [Conclusion](https://botkube.io/blog/five-essential-kubernetes-tasks#conclusion)
 
 #### Start Using Botkube AI-Powered Assistant Today
 
-#### Manage your Kubernetes Clusters Directly in Slack and Microsoft Teams
-
 If you're curious about the exciting possibilities of using Kubernetes in your chat platform, you've come to the right place. With Botkube you can complete all your collaborative Kubernetes troubleshooting and monitoring tasks right from your chat window! In this blog post, we'll explore five exciting ways to get the most out of Botkube. Whether you're a beginner or an experienced Kubernetes user, you'll learn how to simplify DevOps tasks, empower your teams, and enhance your Kubernetes experience.
 
-[Botkube](http://app.botkube.io/) is a collaborative Kubernetes troubleshooting and monitoring tool designed for both DevOps experts and developers who may not be Kubernetes experts. Botkube helps teams quickly respond to issues by sending timely alerts about what's happening in their Kubernetes environments. It's not just about alerts though; Botkube also lets teams automate responses, run Kubernetes commands, and follow Kubernetes best practices. Plus, it integrates with popular communication platforms like Slack, Microsoft Teams, Discord, and Mattermost, making it a valuable asset for any team working with Kubernetes.
+[Botkube](https://app.botkube.io/) is a collaborative Kubernetes troubleshooting and monitoring tool designed for both DevOps experts and developers who may not be Kubernetes experts. Botkube helps teams quickly respond to issues by sending timely alerts about what's happening in their Kubernetes environments. It's not just about alerts though; Botkube also lets teams automate responses, run Kubernetes commands, and follow Kubernetes best practices. Plus, it integrates with popular communication platforms like Slack, Microsoft Teams, Discord, and Mattermost, making it a valuable asset for any team working with Kubernetes.
 
 Real-time Kubernetes Monitoring with Prometheus
 -----------------------------------------------

@@ -7,8 +7,8 @@ A plugin repository is a place where you store your plugin binaries. This reposi
 
 This document describes how to set up such repository. If you use or plan to use GitHub you can adapt the [template repository](https://docs.botkube.io/plugins/development/quick-start) that has batteries included to start developing and hosting Botkube plugins right away.
 
-Index file[​](#index-file "Direct link to Index file")
-------------------------------------------------------
+Index file[​](https://docs.botkube.io/plugins/development/repo/#index-file "Direct link to Index file")
+-------------------------------------------------------------------------------------------------------
 
 Your plugin repository must contain at least one index file and one plugin binary. Depending on your needs and preferences, you can create one or more index files to categorize your plugins. You can host both the executor and source plugins in a single repository. You can also include them in the same index file.
 
@@ -20,7 +20,7 @@ entries:  - name: { plugin_name }    type: { plugin_type } # executor or source 
 
 It is not required to host a plugin or dependency binary on the same server as the index file.
 
-### Generate index file[​](#generate-index-file "Direct link to Generate index file")
+### Generate index file[​](https://docs.botkube.io/plugins/development/repo/#generate-index-file "Direct link to Generate index file")
 
 You can create the index file by yourself our use our tool to generate it automatically based on the directory with plugins binaries. The binaries must be named according to the following pattern:
 
@@ -47,15 +47,15 @@ You can create the index file by yourself our use our tool to generate it automa
     
     info
     
-    Replace the `-url-base-path` flag with the base path of your HTTP server. See [Hosting plugins](#host-plugins) for some examples.
+    Replace the `-url-base-path` flag with the base path of your HTTP server. See [Hosting plugins](https://docs.botkube.io/plugins/development/repo/#host-plugins) for some examples.
     
 
-Host plugins[​](#host-plugins "Direct link to Host plugins")
-------------------------------------------------------------
+Host plugins[​](https://docs.botkube.io/plugins/development/repo/#host-plugins "Direct link to Host plugins")
+-------------------------------------------------------------------------------------------------------------
 
 This section describes example ways for serving Botkube plugins.
 
-### GitHub releases[​](#github-releases "Direct link to GitHub releases")
+### GitHub releases[​](https://docs.botkube.io/plugins/development/repo/#github-releases "Direct link to GitHub releases")
 
 A GitHub release allows you to upload additional assets that are later accessible with a predictable URL. When you generate the index file, specify the `-url-base-path` flag as `https://github.com/{owner}/{repo}/releases/download/{release_tag}`, for example, `https://github.com/kubeshop/botkube/releases/download/v1.0.0`.
 
@@ -65,11 +65,11 @@ Once the plugin binaries are built and the index file is generated, you can crea
 gh release create v1.0.0 \ ./dist/source_* \ ./dist/executor_* \ ./plugins-index.yaml
 ```
 
-#### Automation[​](#automation "Direct link to Automation")
+#### Automation[​](https://docs.botkube.io/plugins/development/repo/#automation "Direct link to Automation")
 
 You can use [GitHub Actions](https://docs.github.com/en/actions) to publish Botkube plugins automatically each time a new tag is pushed. See the [`release` workflow](https://github.com/kubeshop/botkube-plugins-template/blob/main/.github/workflows/release.yml) on the `botkube-plugins-template` repository for the out-of-the-box solution, which you can use and modify if needed.
 
-### GitHub pages[​](#github-pages "Direct link to GitHub pages")
+### GitHub pages[​](https://docs.botkube.io/plugins/development/repo/#github-pages "Direct link to GitHub pages")
 
 GitHub allows you to serve static pages via GitHub Pages. When you generate the index file, specify the `-url-base-path` flag as `https://{user}.github.io/{repository}`, for example, `https://kubeshop.github.io/botkube-plugins`.
 
@@ -115,11 +115,11 @@ GitHub allows you to serve static pages via GitHub Pages. When you generate the 
 
 In such setup, you can use your default branch to store your plugins code, and the `gh-pages` branch as a plugin repository.
 
-#### Automation[​](#automation-1 "Direct link to Automation")
+#### Automation[​](https://docs.botkube.io/plugins/development/repo/#automation-1 "Direct link to Automation")
 
 You can use [GitHub Actions](https://docs.github.com/en/actions) to publish Botkube plugins automatically each time a new tag is pushed. See the [`pages-release` workflow](https://github.com/kubeshop/botkube-plugins-template/blob/main/.github/workflows/pages-release.yml) on the `botkube-plugins-template` repository for the out-of-the-box solution, which you can use and modify if needed.
 
-### Use hosted plugins[​](#use-hosted-plugins "Direct link to Use hosted plugins")
+### Use hosted plugins[​](https://docs.botkube.io/plugins/development/repo/#use-hosted-plugins "Direct link to Use hosted plugins")
 
 To use the plugins that you published, add your repository under `plugins` in the [values.yaml](https://github.com/kubeshop/botkube/blob/main/helm/botkube/values.yaml) file for a given Botkube deployment. For example:
 

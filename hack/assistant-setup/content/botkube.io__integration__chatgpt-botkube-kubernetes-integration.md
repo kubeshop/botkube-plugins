@@ -1,4 +1,4 @@
-Title: ChatGPT & Botkube Kubernetes Integration
+Title: Empower Kubernetes Management with ChatGPT
 
 URL Source: https://botkube.io/integration/chatgpt-botkube-kubernetes-integration
 
