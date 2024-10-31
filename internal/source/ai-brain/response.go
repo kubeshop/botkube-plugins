@@ -8,14 +8,12 @@ import (
 	"time"
 
 	"github.com/kubeshop/botkube/pkg/api"
-	"github.com/sashabaranov/go-openai"
 )
 
 const (
-	teamsMessageIDSubstr  = "thread.tacv2"
-	reportResponseBtnName = "🚩Report response"
-	maxPromptLen          = 500
-	aiContentWarning      = "AI-generated content may be incorrect."
+	teamsMessageIDSubstr = "thread.tacv2"
+	maxPromptLen         = 500
+	aiContentWarning     = "AI-generated content may be incorrect."
 )
 
 var (
@@ -108,10 +106,9 @@ func msgNoAIAnswer(messageID string) api.Message {
 	}
 }
 
-func msgAIAnswer(run openai.Run, payload *Payload, response string, toolCalls map[string]struct{}, isLastMessage bool) api.Message {
+func msgAIAnswer(payload *Payload, response string, toolCalls map[string]struct{}) api.Message {
 	var (
 		msgID        = payload.MessageID
-		btnBldr      = api.NewMessageButtonBuilder()
 		usedToolsMsg = printUsedTools(toolCalls)
 	)
 
@@ -127,17 +124,6 @@ func msgAIAnswer(run openai.Run, payload *Payload, response string, toolCalls ma
 				// which doesn't support most of the markdown elements.
 				Plaintext: markdownToTeams(response, usedToolsMsg),
 			},
-		}
-
-		if isLastMessage {
-			// add Report button
-			teamsRes.Sections = []api.Section{
-				{
-					Buttons: api.Buttons{
-						btnBldr.ForCommandWithoutDesc(reportResponseBtnName, reportCmd(run, payload)),
-					},
-				},
-			}
 		}
 
 		return teamsRes
@@ -158,14 +144,6 @@ func msgAIAnswer(run openai.Run, payload *Payload, response string, toolCalls ma
 					},
 					Context: []api.ContextItem{
 						{Text: markdownToSlack(usedToolsMsg)},
-					},
-				},
-				{
-					Style: api.SectionStyle{
-						Divider: api.DividerStyleTopNone,
-					},
-					Buttons: api.Buttons{
-						btnBldr.ForCommandWithItalicDesc(reportResponseBtnName, aiContentWarning, reportCmd(run, payload)),
 					},
 				},
 			},
@@ -214,17 +192,6 @@ func markdownToTeams(text, additionalFooterMessage string) string {
 	return text
 }
 
-func reportCmd(run openai.Run, payload *Payload) string {
-	cmd := strings.Builder{}
-	cmd.WriteString(`cloud report analytics --bk-cmd-header="Report invalid AI response" -t=ai-invalid-response `)
-	cmd.WriteString(fmt.Sprintf("-f=MESSAGE_ID=%q ", payload.MessageID))
-	cmd.WriteString(fmt.Sprintf("-f=INSTANCE_ID=%q ", instanceID()))
-	cmd.WriteString(fmt.Sprintf("-f=RUN_ID=%q ", run.ID))
-	cmd.WriteString(fmt.Sprintf("-f=THREAD_ID=%q ", run.ThreadID))
-	cmd.WriteString(fmt.Sprintf("-f=PROMPT=%q", ellipticalTruncate(payload.Prompt, maxPromptLen)))
-
-	return cmd.String()
-}
 func ellipticalTruncate(s string, max int) string {
 	if len(s) <= max {
 		return s

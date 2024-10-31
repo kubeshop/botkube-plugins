@@ -8,8 +8,6 @@ import (
 	"sync"
 	"time"
 
-	"github.com/kubeshop/botkube-cloud-plugins/internal/auth"
-
 	"github.com/avast/retry-go/v4"
 	"github.com/kubeshop/botkube/pkg/api"
 	"github.com/kubeshop/botkube/pkg/api/source"
@@ -62,7 +60,7 @@ func NewSource(version string) source.Source {
 		pluginVersion: version,
 		cfgs:          sync.Map{},
 	}
-	return auth.NewProtectedSource(src)
+	return src
 }
 
 type subscription struct {

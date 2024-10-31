@@ -6,8 +6,6 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/kubeshop/botkube-cloud-plugins/internal/auth"
-
 	"github.com/kubeshop/botkube/pkg/api"
 	"github.com/kubeshop/botkube/pkg/api/source"
 	"github.com/kubeshop/botkube/pkg/loggerx"
@@ -42,7 +40,7 @@ func NewSource(version string) source.Source {
 	src := &Source{
 		pluginVersion: version,
 	}
-	return auth.NewProtectedSource(src)
+	return src
 }
 
 // Stream streams Keptn events

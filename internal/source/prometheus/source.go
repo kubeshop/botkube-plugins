@@ -6,8 +6,6 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/kubeshop/botkube-cloud-plugins/internal/auth"
-
 	"github.com/kubeshop/botkube/pkg/api"
 	"github.com/kubeshop/botkube/pkg/api/source"
 	"github.com/kubeshop/botkube/pkg/loggerx"
@@ -44,7 +42,7 @@ func NewSource(version string) source.Source {
 		pluginVersion: version,
 		startedAt:     time.Now(),
 	}
-	return auth.NewProtectedSource(src)
+	return src
 }
 
 // Stream streams prometheus alerts

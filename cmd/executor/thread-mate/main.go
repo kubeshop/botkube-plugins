@@ -11,7 +11,7 @@ import (
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/tools/clientcmd"
 
-	thmate "github.com/kubeshop/botkube-cloud-plugins/internal/executor/thread-mate"
+	thmate "github.com/kubeshop/botkube-plugins/internal/executor/thread-mate"
 	"github.com/kubeshop/botkube/pkg/api"
 	"github.com/kubeshop/botkube/pkg/api/executor"
 	pluginx "github.com/kubeshop/botkube/pkg/plugin"

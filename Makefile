@@ -12,7 +12,12 @@ build-plugins-single: ## Builds specified plugins in binary format only for curr
 
 build-plugins-archives: ## Builds all plugins for all defined platforms in form of archives
 	goreleaser release -f .goreleaser.plugin.yaml --clean --snapshot
-.PHONY: build-plugins
+.PHONY: build-plugins-archives
+
+publish-plugins: ## Builds all plugins for all defined platforms in form of archives
+	goreleaser release -f .goreleaser.plugin.yaml
+.PHONY: publish-plugins
+
 
 ##############
 # Generating #

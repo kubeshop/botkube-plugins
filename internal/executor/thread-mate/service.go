@@ -67,6 +67,7 @@ func New(cfg Config, cfgDumper *ConfigMapDumper) *ThreadMate {
 				next: uint32(rand.Int31n(int32(len(assignees)))), // randomize the first next person on each start
 			},
 		},
+		//nolint:gosec
 		membersLen:            uint32(len(assignees)),
 		lastProcessedActivity: sync.Map{},
 		cfgDumper:             cfgDumper,

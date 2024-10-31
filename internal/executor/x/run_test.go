@@ -11,9 +11,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/kubeshop/botkube-cloud-plugins/internal/executor/x/getter"
-	"github.com/kubeshop/botkube-cloud-plugins/internal/executor/x/state"
-	"github.com/kubeshop/botkube-cloud-plugins/internal/executor/x/template"
+	"github.com/kubeshop/botkube-plugins/internal/executor/x/getter"
+	"github.com/kubeshop/botkube-plugins/internal/executor/x/state"
+	"github.com/kubeshop/botkube-plugins/internal/executor/x/template"
 	"github.com/kubeshop/botkube/pkg/api"
 	"github.com/kubeshop/botkube/pkg/config"
 	"github.com/kubeshop/botkube/pkg/loggerx"

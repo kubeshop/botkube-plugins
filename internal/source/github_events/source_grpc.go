@@ -5,8 +5,7 @@ import (
 	_ "embed"
 	"fmt"
 
-	"github.com/kubeshop/botkube-cloud-plugins/internal/auth"
-	"github.com/kubeshop/botkube-cloud-plugins/internal/source/github_events/gh"
+	"github.com/kubeshop/botkube-plugins/internal/source/github_events/gh"
 
 	"github.com/kubeshop/botkube/pkg/api"
 	"github.com/kubeshop/botkube/pkg/api/source"
@@ -39,7 +38,7 @@ func NewSource(version string) source.Source {
 	src := &Source{
 		pluginVersion: version,
 	}
-	return auth.NewProtectedSource(src)
+	return src
 }
 
 // Stream streams GitHub events.

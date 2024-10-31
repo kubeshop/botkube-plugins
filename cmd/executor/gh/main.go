@@ -7,8 +7,6 @@ import (
 	"fmt"
 	"text/template"
 
-	"github.com/kubeshop/botkube-cloud-plugins/internal/auth"
-
 	"github.com/hashicorp/go-plugin"
 
 	"github.com/kubeshop/botkube/pkg/api"
@@ -163,7 +161,7 @@ var depsDownloadLinks = map[string]api.Dependency{
 func main() {
 	executor.Serve(map[string]plugin.Plugin{
 		pluginName: &executor.Plugin{
-			Executor: auth.NewProtectedExecutor(&GHExecutor{}),
+			Executor: &GHExecutor{},
 		},
 	})
 }

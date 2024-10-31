@@ -16,24 +16,6 @@
           "text": "ℹ️ *Sources used:* Botkube agent configuration | Botkube agent status | Botkube and custom content search | kubectl get | kubectl logs"
         }
       ]
-    },
-    {
-      "style": {
-        "divider": "none"
-      },
-      "body": {},
-      "buttons": [
-        {
-          "description": "AI-generated content may be incorrect.",
-          "descriptionStyle": "italic",
-          "name": "🚩Report response",
-          "command": "{{BotName}} cloud report analytics --bk-cmd-header=\"Report invalid AI response\" -t=ai-invalid-response -f=MESSAGE_ID=\"42.42\" -f=INSTANCE_ID=\"\" -f=RUN_ID=\"\" -f=THREAD_ID=\"\" -f=PROMPT=\"This is a test\""
-        }
-      ],
-      "multiSelect": {
-        "description": {}
-      },
-      "selects": {}
     }
   ],
   "parentActivityId": "42.42"
