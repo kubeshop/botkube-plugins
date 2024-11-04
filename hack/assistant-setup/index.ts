@@ -4,21 +4,10 @@ import { setupTools } from "./tools";
 import dedent from "dedent";
 
 type Config = {
-  projectID: string;
   assistantID: string;
+  apiKey: string;
 };
 
-const devConfig = {
-  projectID: "proj_TyOoSEIuWk2xZEFYWr0EYb2m",
-  assistantID: "asst_apOFPPk94dLSD5kd0ZbS5ZSR",
-};
-
-const prodConfig = {
-  projectID: "proj_eMSaZmIdTYamRviubosCTGKt",
-  assistantID: "asst_CKNlRasSOUW7PsM0MCnTM88Z",
-};
-
-const orgID = "org-Tmr8Y7f3doO5hvZGNUtCK1bX";
 const model = "gpt-4o";
 
 const temperature = 0.1;
@@ -47,34 +36,25 @@ const instructions = dedent`
 
 async function main() {
   let cfg: Config = {
-    projectID: undefined,
-    assistantID: "",
+    assistantID: process.env["OPENAI_ASSISTANT_ID"],
+    apiKey: process.env["OPENAI_API_KEY"],
   };
-  const assistantEnv = process.env["ASSISTANT_ENV"];
-  if (!assistantEnv) {
+  if (!cfg.assistantID || !cfg.apiKey) {
     throw new Error(
-      `Missing ASSISTANT_ENV environment variable; use 'dev' or 'prod'`,
+      `Missing configuration. Set OPENAI_API_KEY and OPENAI_ASSISTANT_ID environment variables.`,
     );
   }
-  switch (assistantEnv) {
-    case "dev":
-      cfg = devConfig;
-      break;
-    case "prod":
-      cfg = prodConfig;
-      break;
-    default:
-      throw new Error(
-        `Unknown ASSISTANT_ENV '${assistantEnv}'; use 'dev' or 'prod'`,
-      );
-  }
 
-  console.log(`Using ${assistantEnv} assistant`);
+  const orgID = process.env["OPENAI_ORG_ID"];
+  const projID = process.env["OPENAI_PROJECT_ID"];
+
   const client = new OpenAI({
-    apiKey: process.env["OPENAI_API_KEY"],
     organization: orgID,
-    project: cfg.projectID,
+    project: projID,
   });
+  console.log(
+    `Using org ID ${orgID}, project ID ${projID} and assistant ID ${cfg.assistantID}...`,
+  );
 
   console.log(`Getting assistant data for ID ${cfg.assistantID}...`);
   const assistant = await client.beta.assistants.retrieve(cfg.assistantID);

@@ -4,8 +4,8 @@
   "description": "Calls AI engine with incoming webhook prompts and streams the response.",
   "type": "object",
   "properties": {
-    "openAICloudServiceURL": {
-      "title": "OpenAI Cloud Service URL",
+    "openAIBaseURL": {
+      "title": "OpenAI Service URL",
       "type": "string"
     },
     "openAIAssistantId": {
@@ -79,6 +79,6 @@
     }
   },
   "required": [
-    "openAICloudServiceURL"
+    "openAIBaseURL"
   ]
 }

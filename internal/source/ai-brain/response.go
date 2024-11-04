@@ -146,6 +146,16 @@ func msgAIAnswer(payload *Payload, response string, toolCalls map[string]struct{
 						{Text: markdownToSlack(usedToolsMsg)},
 					},
 				},
+				{
+					Style: api.SectionStyle{
+						Divider: api.DividerStyleTopNone,
+					},
+					Context: []api.ContextItem{
+						{
+							Text: fmt.Sprintf("_%s_", aiContentWarning),
+						},
+					},
+				},
 			},
 		}
 	}

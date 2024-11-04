@@ -119,7 +119,7 @@ func newAssistant(cfg *Config, log logrus.FieldLogger, out chan source.Event, ku
 	}
 
 	config := openai.DefaultConfig("")
-	config.BaseURL = cfg.OpenAICloudServiceURL
+	config.BaseURL = cfg.OpenAIBaseURL
 	config.AssistantVersion = "v2"
 
 	return &assistant{
