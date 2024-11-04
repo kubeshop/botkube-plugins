@@ -30,9 +30,6 @@ func (c *Config) Validate() error {
 	if c.OpenAIAssistantID == "" {
 		issues = multierror.Append(issues, errors.New("the Open AI Assistant ID cannot be empty"))
 	}
-	if c.OpenAIBaseURL == "" {
-		issues = multierror.Append(issues, errors.New("the Open AI Cloud Service URL cannot be empty"))
-	}
 	return issues.ErrorOrNil()
 }
 
