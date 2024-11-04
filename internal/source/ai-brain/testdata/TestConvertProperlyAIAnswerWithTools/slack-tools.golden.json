@@ -16,6 +16,21 @@
           "text": "ℹ️ *Sources used:* Botkube agent configuration | Botkube agent status | Botkube and custom content search | kubectl get | kubectl logs"
         }
       ]
+    },
+    {
+      "style": {
+        "divider": "none"
+      },
+      "body": {},
+      "multiSelect": {
+        "description": {}
+      },
+      "selects": {},
+      "context": [
+        {
+          "text": "_AI-generated content may be incorrect._"
+        }
+      ]
     }
   ],
   "parentActivityId": "42.42"
