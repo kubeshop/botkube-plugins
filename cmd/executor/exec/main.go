@@ -5,17 +5,15 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/kubeshop/botkube-cloud-plugins/internal/auth"
-
 	"github.com/MakeNowJust/heredoc"
 	"github.com/alexflint/go-arg"
 	"github.com/hashicorp/go-plugin"
 	"github.com/sirupsen/logrus"
 
-	"github.com/kubeshop/botkube-cloud-plugins/internal/executor/x"
-	"github.com/kubeshop/botkube-cloud-plugins/internal/executor/x/getter"
-	"github.com/kubeshop/botkube-cloud-plugins/internal/executor/x/output"
-	"github.com/kubeshop/botkube-cloud-plugins/internal/executor/x/state"
+	"github.com/kubeshop/botkube-plugins/internal/executor/x"
+	"github.com/kubeshop/botkube-plugins/internal/executor/x/getter"
+	"github.com/kubeshop/botkube-plugins/internal/executor/x/output"
+	"github.com/kubeshop/botkube-plugins/internal/executor/x/state"
 	"github.com/kubeshop/botkube/pkg/api"
 	"github.com/kubeshop/botkube/pkg/api/executor"
 	"github.com/kubeshop/botkube/pkg/formatx"
@@ -204,7 +202,7 @@ func (i *XExecutor) getKubeconfig(ctx context.Context, log logrus.FieldLogger, i
 func main() {
 	executor.Serve(map[string]plugin.Plugin{
 		pluginName: &executor.Plugin{
-			Executor: auth.NewProtectedExecutor(&XExecutor{}),
+			Executor: &XExecutor{},
 		},
 	})
 }

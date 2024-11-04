@@ -13,7 +13,7 @@ import (
 	"github.com/google/go-querystring/query"
 	"github.com/sirupsen/logrus"
 
-	"github.com/kubeshop/botkube-cloud-plugins/internal/source/github_events/templates"
+	"github.com/kubeshop/botkube-plugins/internal/source/github_events/templates"
 	"github.com/kubeshop/botkube/pkg/api/source"
 )
 

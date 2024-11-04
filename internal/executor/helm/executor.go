@@ -6,8 +6,6 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/kubeshop/botkube-cloud-plugins/internal/auth"
-
 	"github.com/alexflint/go-arg"
 	"github.com/kubeshop/botkube/pkg/api"
 	"github.com/kubeshop/botkube/pkg/api/executor"
@@ -61,7 +59,7 @@ func NewExecutor(ver string) executor.Executor {
 		pluginVersion:  ver,
 		executeCommand: pluginx.ExecuteCommand,
 	}
-	return auth.NewProtectedExecutor(exec)
+	return exec
 }
 
 // Metadata returns details about Helm plugin.

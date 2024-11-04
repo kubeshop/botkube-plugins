@@ -3,7 +3,7 @@ package main
 import (
 	"github.com/hashicorp/go-plugin"
 
-	"github.com/kubeshop/botkube-cloud-plugins/internal/source/prometheus"
+	"github.com/kubeshop/botkube-plugins/internal/source/prometheus"
 	"github.com/kubeshop/botkube/pkg/api/source"
 )
 

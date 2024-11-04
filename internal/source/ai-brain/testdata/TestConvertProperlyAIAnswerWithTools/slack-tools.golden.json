@@ -22,18 +22,15 @@
         "divider": "none"
       },
       "body": {},
-      "buttons": [
-        {
-          "description": "AI-generated content may be incorrect.",
-          "descriptionStyle": "italic",
-          "name": "🚩Report response",
-          "command": "{{BotName}} cloud report analytics --bk-cmd-header=\"Report invalid AI response\" -t=ai-invalid-response -f=MESSAGE_ID=\"42.42\" -f=INSTANCE_ID=\"\" -f=RUN_ID=\"\" -f=THREAD_ID=\"\" -f=PROMPT=\"This is a test\""
-        }
-      ],
       "multiSelect": {
         "description": {}
       },
-      "selects": {}
+      "selects": {},
+      "context": [
+        {
+          "text": "_AI-generated content may be incorrect._"
+        }
+      ]
     }
   ],
   "parentActivityId": "42.42"

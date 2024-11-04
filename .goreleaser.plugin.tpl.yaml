@@ -32,3 +32,11 @@ archives:
 
 snapshot:
   name_template: 'v{{ .Version }}'
+
+release:
+  # If set to true, will not auto-publish the release.
+  draft: true
+  prerelease: auto
+
+changelog:
+  skip: false

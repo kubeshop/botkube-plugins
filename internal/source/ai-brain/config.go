@@ -16,7 +16,7 @@ const assistantID = "asst_eMM9QaWLi6cajHE4PdG1yU53"
 // Config holds source configuration.
 type Config struct {
 	Log                    config.Logger `yaml:"log"`
-	OpenAICloudServiceURL  string        `yaml:"openAICloudServiceURL"`
+	OpenAIBaseURL          string        `yaml:"openAIBaseURL"`
 	OpenAIAssistantID      string        `yaml:"openAIAssistantId"`
 	HoneycombAPIKey        string        `yaml:"honeycombAPIKey"`
 	HoneycombSampleRate    int           `yaml:"honeycombSampleRate"`
@@ -29,9 +29,6 @@ func (c *Config) Validate() error {
 	issues := multierror.New()
 	if c.OpenAIAssistantID == "" {
 		issues = multierror.Append(issues, errors.New("the Open AI Assistant ID cannot be empty"))
-	}
-	if c.OpenAICloudServiceURL == "" {
-		issues = multierror.Append(issues, errors.New("the Open AI Cloud Service URL cannot be empty"))
 	}
 	return issues.ErrorOrNil()
 }

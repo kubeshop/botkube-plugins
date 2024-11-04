@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/kubeshop/botkube-cloud-plugins/internal/remote"
+	cfginternal "github.com/kubeshop/botkube-plugins/internal/config"
 	"github.com/kubeshop/botkube/pkg/config"
 	"github.com/kubeshop/botkube/pkg/httpx"
 	"github.com/kubeshop/botkube/pkg/ptr"
@@ -22,7 +22,6 @@ const (
 // BotkubeRunner is a runner that executes Botkube related commands.
 type BotkubeRunner struct {
 	tracer           trace.Tracer
-	deployCli        *remote.DeploymentClient
 	httpCli          *http.Client
 	rawStartupConfig string
 	startupConfig    *ConfigWithDetails
@@ -37,15 +36,9 @@ type ConfigWithDetails struct {
 
 // NewBotkubeRunner creates new runner instance.
 func NewBotkubeRunner(tracer trace.Tracer) (*BotkubeRunner, error) {
-	cfg, ok := remote.GetConfig()
-	if !ok {
-		return nil, fmt.Errorf("cannot get Botkube cloud related environment variables")
-	}
-
 	r := &BotkubeRunner{
-		tracer:    tracer,
-		deployCli: remote.NewDeploymentClient(cfg),
-		httpCli:   httpx.NewHTTPClient(),
+		tracer:  tracer,
+		httpCli: httpx.NewHTTPClient(),
 	}
 
 	err := r.initStartupConfig()
@@ -116,15 +109,12 @@ func (r *BotkubeRunner) initStartupConfig() error {
 	return nil
 }
 func (r *BotkubeRunner) fetchConfig(ctx context.Context) (string, *ConfigWithDetails, error) {
-	out, err := r.deployCli.GetConfig(ctx)
+	files, _, err := cfginternal.NewEnvProvider().Configs(ctx)
 	if err != nil {
-		return "", nil, fmt.Errorf("while getting Botkube configuration: %w", err)
+		return "", nil, fmt.Errorf("while loading app configuration: %w", err)
 	}
-
 	// Load with defaults to make sure Agent's ENVs are also taken into account
-	cfg, details, err := config.LoadWithDefaults([][]byte{
-		[]byte(out.YAMLConfig),
-	})
+	cfg, details, err := config.LoadWithDefaults(files)
 	if err != nil {
 		return "", nil, fmt.Errorf("while merging app configuration: %w", err)
 	}

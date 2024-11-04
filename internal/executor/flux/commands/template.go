@@ -7,7 +7,7 @@ import (
 
 	"gopkg.in/yaml.v3"
 
-	"github.com/kubeshop/botkube-cloud-plugins/internal/executor/x/template"
+	"github.com/kubeshop/botkube-plugins/internal/executor/x/template"
 )
 
 //go:embed store

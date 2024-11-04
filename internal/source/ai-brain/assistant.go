@@ -5,8 +5,6 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"net/http"
-	"os"
 	"strings"
 	"time"
 
@@ -14,9 +12,7 @@ import (
 
 	"github.com/kubeshop/botkube/pkg/ptr"
 
-	"github.com/kubeshop/botkube-cloud-plugins/internal/otelx"
-	"github.com/kubeshop/botkube-cloud-plugins/internal/remote"
-	"go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp"
+	"github.com/kubeshop/botkube-plugins/internal/otelx"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/codes"
@@ -123,10 +119,7 @@ func newAssistant(cfg *Config, log logrus.FieldLogger, out chan source.Event, ku
 	}
 
 	config := openai.DefaultConfig("")
-	config.HTTPClient = &http.Client{
-		Transport: newAPIKeySecuredTransport(),
-	}
-	config.BaseURL = cfg.OpenAICloudServiceURL
+	config.BaseURL = cfg.OpenAIBaseURL
 	config.AssistantVersion = "v2"
 
 	return &assistant{
@@ -297,8 +290,7 @@ func (i *assistant) createNewThread(ctx context.Context, p *Payload) (openai.Thr
 
 	threadReq := openai.ThreadRequest{
 		Metadata: map[string]any{
-			"messageId":  p.MessageID,
-			"instanceId": os.Getenv(remote.ProviderIdentifierEnvKey),
+			"messageId": p.MessageID,
 		},
 		Messages: []openai.ThreadMessage{
 			{
@@ -377,10 +369,9 @@ func (i *assistant) handleStatusCompleted(ctx context.Context, run openai.Run, p
 
 		msgs := strings.Split(textValue, msgSplitPattern)
 		isMultiMessage := len(msgs) > 1
-		for j, msg := range msgs {
-			isLastMessage := j == len(msgs)-1
+		for _, msg := range msgs {
 			i.out <- source.Event{
-				Message: msgAIAnswer(run, p, msg, toolCalls, isLastMessage),
+				Message: msgAIAnswer(p, msg, toolCalls),
 			}
 
 			if isMultiMessage {
@@ -502,23 +493,4 @@ func (i *assistant) listToolCalls(ctx context.Context, threadID, runID string) (
 	i.log.WithField("count", len(runSteps)).Debug("Finished paginating assistant run steps")
 
 	return getFriendlyToolCallsFromRunSteps(runSteps), nil
-}
-
-type apiKeySecuredTransport struct {
-	transport http.RoundTripper
-}
-
-func newAPIKeySecuredTransport() *apiKeySecuredTransport {
-	return &apiKeySecuredTransport{
-		transport: otelhttp.NewTransport(http.DefaultTransport),
-	}
-}
-
-func (t *apiKeySecuredTransport) RoundTrip(req *http.Request) (*http.Response, error) {
-	req.Header.Set("X-API-Key", os.Getenv(remote.ProviderAPIKeyEnvKey))
-	return t.transport.RoundTrip(req)
-}
-
-func instanceID() string {
-	return os.Getenv(remote.ProviderIdentifierEnvKey)
 }

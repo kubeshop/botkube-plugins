@@ -7,7 +7,7 @@ import (
 	"github.com/allegro/bigcache/v3"
 	"github.com/hashicorp/go-plugin"
 
-	"github.com/kubeshop/botkube-cloud-plugins/internal/executor/flux"
+	"github.com/kubeshop/botkube-plugins/internal/executor/flux"
 	"github.com/kubeshop/botkube/pkg/api/executor"
 	"github.com/kubeshop/botkube/pkg/loggerx"
 )

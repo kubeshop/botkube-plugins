@@ -23,17 +23,17 @@ func TestConvertProperlyAIAnswer(t *testing.T) {
 	require.NoError(t, err)
 
 	// Slack
-	out := msgAIAnswer(openai.Run{}, &Payload{
+	out := msgAIAnswer(&Payload{
 		MessageID: "42.42",
 		Prompt:    "This is a test",
-	}, string(md), nil, true)
+	}, string(md), nil)
 	assertGolden(t, out.Sections[0].Base.Body.Plaintext, "slack.golden.md")
 
 	// Teams
-	out = msgAIAnswer(openai.Run{}, &Payload{
+	out = msgAIAnswer(&Payload{
 		MessageID: "19:d25cbf7cbfa74d22b42a2918452e1153@thread.tacv2",
 		Prompt:    "This is a test",
-	}, string(md), nil, true)
+	}, string(md), nil)
 	assertGolden(t, out.BaseBody.Plaintext, "teams.golden.md")
 }
 
@@ -97,37 +97,37 @@ func TestConvertProperlyAIAnswerWithTools(t *testing.T) {
 	convertedToolCalls := getFriendlyToolCallsFromRunSteps(toolCalls)
 
 	// Slack
-	out := msgAIAnswer(openai.Run{}, &Payload{
+	out := msgAIAnswer(&Payload{
 		MessageID: "42.42",
 		Prompt:    "This is a test",
-	}, string(md), convertedToolCalls, true)
+	}, string(md), convertedToolCalls)
 
 	outBytes, err := json.MarshalIndent(out, "", "  ")
 	require.NoError(t, err)
 	assertGolden(t, string(outBytes), "slack-tools.golden.json")
 
 	// Teams
-	out = msgAIAnswer(openai.Run{}, &Payload{
+	out = msgAIAnswer(&Payload{
 		MessageID: "19:d25cbf7cbfa74d22b42a2918452e1153@thread.tacv2",
 		Prompt:    "This is a test",
-	}, string(md), convertedToolCalls, true)
+	}, string(md), convertedToolCalls)
 	outBytes, err = json.MarshalIndent(out, "", "  ")
 	require.NoError(t, err)
 	assertGolden(t, string(outBytes), "teams-tools.golden.json")
 
-	out = msgAIAnswer(openai.Run{}, &Payload{
+	out = msgAIAnswer(&Payload{
 		MessageID: "19:d25cbf7cbfa74d22b42a2918452e1153@thread.tacv2",
 		Prompt:    "This is a test two",
-	}, string(md), convertedToolCalls, false)
+	}, string(md), convertedToolCalls)
 	outBytes, err = json.MarshalIndent(out, "", "  ")
 	require.NoError(t, err)
 	assertGolden(t, string(outBytes), "teams-tools-no-report.golden.json")
 
 	// Discord and others
-	out = msgAIAnswer(openai.Run{}, &Payload{
+	out = msgAIAnswer(&Payload{
 		MessageID: "",
 		Prompt:    "This is a test",
-	}, string(md), convertedToolCalls, true)
+	}, string(md), convertedToolCalls)
 	outBytes, err = json.MarshalIndent(out, "", "  ")
 	require.NoError(t, err)
 	assertGolden(t, string(outBytes), "discord-tools.golden.json")

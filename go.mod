@@ -1,4 +1,4 @@
-module github.com/kubeshop/botkube-cloud-plugins
+module github.com/kubeshop/botkube-plugins
 
 go 1.21
 
@@ -20,7 +20,6 @@ require (
 	github.com/gregjones/httpcache v0.0.0-20190611155906-901d90724c79
 	github.com/hashicorp/go-getter v1.7.3
 	github.com/hashicorp/go-plugin v1.4.10
-	github.com/hasura/go-graphql-client v0.8.1
 	github.com/honeycombio/honeycomb-opentelemetry-go v0.9.0
 	github.com/honeycombio/otel-config-go v1.13.1
 	github.com/huandu/xstrings v1.4.0
@@ -34,7 +33,6 @@ require (
 	github.com/slack-go/slack v0.12.2
 	github.com/spf13/pflag v1.0.5
 	github.com/stretchr/testify v1.9.0
-	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.45.0
 	go.opentelemetry.io/otel v1.21.0
 	go.opentelemetry.io/otel/trace v1.21.0
 	golang.org/x/exp v0.0.0-20230713183714-613f0c0eb8a1
@@ -112,6 +110,7 @@ require (
 	github.com/hashicorp/go-safetemp v1.0.0 // indirect
 	github.com/hashicorp/go-version v1.6.0 // indirect
 	github.com/hashicorp/yamux v0.1.1 // indirect
+	github.com/hasura/go-graphql-client v0.8.1 // indirect
 	github.com/imdario/mergo v0.3.16 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/jmespath/go-jmespath v0.4.0 // indirect
@@ -170,6 +169,7 @@ require (
 	github.com/yusufpapurcu/wmi v1.2.3 // indirect
 	go.opencensus.io v0.24.0 // indirect
 	go.opentelemetry.io/contrib/instrumentation/host v0.46.1 // indirect
+	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.45.0 // indirect
 	go.opentelemetry.io/contrib/instrumentation/runtime v0.46.1 // indirect
 	go.opentelemetry.io/contrib/propagators/b3 v1.21.1 // indirect
 	go.opentelemetry.io/contrib/propagators/ot v1.21.1 // indirect

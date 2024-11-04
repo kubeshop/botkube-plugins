@@ -1,6 +1,6 @@
-# Botkube Cloud Plugins
+# Botkube Plugins
 
-This repository shows Botkube Cloud plugins.
+This repository contains additional Botkube plugins.
 
 ## Requirements
 
@@ -31,12 +31,12 @@ This repository shows Botkube Cloud plugins.
    export BOTKUBE_PLUGINS_CACHE__DIR="/tmp/plugins"
    ```
 
-3. Add a `cloud-plugins` entry for your Agent plugins repository:
+3. Add a `additional-plugins` entry for your Agent plugins repository:
 
    ```yaml
    plugins:
      repositories:
-       cloud-plugins:
+       additional-plugins:
          url: http://localhost:3010/botkube.yaml
    ```
 

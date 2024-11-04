@@ -24,11 +24,13 @@ npm install
 
 ```sh
 export OPENAI_API_KEY=... # your Open AI API key
-export ASSISTANT_ENV=dev # dev or prod
+export OPENAI_ASSISTANT_ID=... # your Open AI Assistant ID
+
+export OPENAI_PROJECT_ID=... # Optional: your Open AI Project ID
+export OPENAI_ORG_ID=... # Optional: your Open AI Organization ID
+
 npm run start
 ```
-
-To use your own assistant, modify the `devConfig` in the `index.ts` file.
 
 ## Development
 
