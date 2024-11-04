@@ -38,12 +38,5 @@ release:
   draft: true
   prerelease: auto
 
-  # Add extra pre-existing files to the release.
-  # Prerequisites:
-  # - build plugin binaries
-  # - build plugin index.yaml
-  extra_files:
-    - glob: ./dist/*.tar.gz
-
 changelog:
   skip: false
