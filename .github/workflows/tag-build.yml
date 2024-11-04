@@ -4,9 +4,12 @@ on:
   push:
     tags:
       - '*'
+    branches: # FIXME to delete
+      - open-cloud-plugins # FIXME to delete
 
 env:
   BUCKET_NAME: botkube-cloud-plugins
+  VERSION: "v1.14.0" # FIXME to delete
   GITHUB_TOKEN: ${{ secrets.RELEASE_GH_DEV_ACCOUNT_PAT }}
 
 jobs:
@@ -14,7 +17,7 @@ jobs:
     name: Release plugins
     timeout-minutes: 60
     runs-on: ubuntu-latest
-    if: startsWith(github.ref, 'refs/tags/v')
+#    if: startsWith(github.ref, 'refs/tags/v') # FIXME to uncomment
 
     steps:
       - name: Checkout
