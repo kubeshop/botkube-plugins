@@ -118,7 +118,7 @@ func newAssistant(cfg *Config, log logrus.FieldLogger, out chan source.Event, ku
 		return nil, fmt.Errorf("while creating Botkube runner: %w", err)
 	}
 
-	config := openai.DefaultConfig("")
+	config := openai.DefaultConfig(cfg.OpenAIAPIToken)
 	config.BaseURL = cfg.OpenAIBaseURL
 	config.AssistantVersion = "v2"
 

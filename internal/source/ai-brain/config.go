@@ -17,7 +17,8 @@ const assistantID = "asst_eMM9QaWLi6cajHE4PdG1yU53"
 type Config struct {
 	Log                    config.Logger `yaml:"log"`
 	OpenAIBaseURL          string        `yaml:"openAIBaseURL"`
-	OpenAIAssistantID      string        `yaml:"openAIAssistantId"`
+	OpenAIAssistantID      string        `yaml:"openAIAssistantID"`
+	OpenAIAPIToken         string        `yaml:"openAIAPIToken"`
 	HoneycombAPIKey        string        `yaml:"honeycombAPIKey"`
 	HoneycombSampleRate    int           `yaml:"honeycombSampleRate"`
 	VectorStoreIDForThread string        `yaml:"vectorStoreIDForThread"`
@@ -29,6 +30,9 @@ func (c *Config) Validate() error {
 	issues := multierror.New()
 	if c.OpenAIAssistantID == "" {
 		issues = multierror.Append(issues, errors.New("the Open AI Assistant ID cannot be empty"))
+	}
+	if c.OpenAIAPIToken == "" {
+		issues = multierror.Append(issues, errors.New("the Open AI API token cannot be empty"))
 	}
 	return issues.ErrorOrNil()
 }
