@@ -118,9 +118,20 @@ func newAssistant(cfg *Config, log logrus.FieldLogger, out chan source.Event, ku
 		return nil, fmt.Errorf("while creating Botkube runner: %w", err)
 	}
 
-	config := openai.DefaultConfig(cfg.OpenAIAPIToken)
-	config.BaseURL = cfg.OpenAIBaseURL
-	config.AssistantVersion = "v2"
+	var config openai.ClientConfig
+
+	switch strings.ToLower(cfg.OpenAIAPIType) {
+	case "anthropic":
+		config = openai.DefaultAnthropicConfig(cfg.OpenAIAPIToken, cfg.OpenAIBaseURL)
+	case "azure":
+		config = openai.DefaultAzureConfig(cfg.OpenAIAPIToken, cfg.OpenAIBaseURL)
+	default:
+		config = openai.DefaultConfig(cfg.OpenAIAPIToken)
+
+		if cfg.OpenAIBaseURL != "" {
+			config.BaseURL = cfg.OpenAIBaseURL
+		}
+	}
 
 	return &assistant{
 		log:          log,
@@ -331,7 +342,7 @@ func (i *assistant) handleStatusCompleted(ctx context.Context, run openai.Run, p
 	defer span.End()
 
 	limit := 1
-	msgList, err := i.openaiClient.ListMessage(ctx, run.ThreadID, &limit, nil, nil, nil)
+	msgList, err := i.openaiClient.ListMessage(ctx, run.ThreadID, &limit, nil, nil, nil, nil)
 	if err != nil {
 		err = fmt.Errorf("while getting assistant messages response: %w", err)
 		span.RecordError(err)

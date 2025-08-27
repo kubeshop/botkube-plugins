@@ -8,6 +8,16 @@
       "title": "OpenAI Service URL",
       "type": "string"
     },
+    "openAIAPIType": {
+      "type": "string",
+      "enum": ["openai", "anthropic", "azure"],
+      "default": "openai",
+      "description": "Type of OpenAI-compatible API to use"
+    },
+    "openAIAPIToken": {
+      "type": "string",
+      "description": "OpenAI API Token"
+    },
     "openAIAssistantId": {
       "type": "string",
       "title": "OpenAI Assistant Id",
